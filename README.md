@@ -18,6 +18,12 @@
 
 </div>
 
+<p align="center">
+  <a href="https://huggingface.co/spaces/GameAnything/GameAnything"><img src="assets/trailer.webp" alt="GameAnything trailer (click to watch the full video on the project page)" width="100%"></a>
+  <br>
+  <b>🎬 <a href="https://huggingface.co/spaces/GameAnything/GameAnything">Watch the full 2-minute trailer on the project page</a></b>
+</p>
+
 <p align="center"><img src="assets/teaser.jpg" alt="GameAnything-Bench: multimodal references in, playable game extensions out" width="100%"></p>
 
 GameAnything-Bench is the benchmark of *GameAnything: From Any Inspirations to Playable Game Worlds*. A coding agent gets a
