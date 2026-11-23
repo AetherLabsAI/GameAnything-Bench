@@ -1,0 +1,10 @@
+{
+  "Name": "NegSeedPrice",
+  "Author": "gab",
+  "Version": "1.0.0",
+  "Description": "gab negative mod: Parsnip Seeds cost twice as much",
+  "UniqueID": "gab.neg.SeedPrice",
+  "EntryDll": "NegSeedPrice.dll",
+  "MinimumApiVersion": "4.0.0",
+  "UpdateKeys": []
+}

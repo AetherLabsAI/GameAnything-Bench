@@ -1,0 +1,199 @@
+# GameAnything-Bench scoring material: never shown to agents during a trial.
+task_id: T-IO-24b71e5192
+source_inventory:
+- 'img01: a plan drawing on a sign (caption ''DERİNKUYU YERALTI ŞEHRİ''): an irregular network of chambers of many sizes joined by long, winding,
+  narrow tunnels, spread wide across the sheet; a long shaded rectangular hall at top left, a hatched rectangular room left of centre, a chain
+  of small rooms running down the left side; small tree-like symbols along the top edge and at the right'
+- 'img02: looking down into a deep, narrow, round vertical shaft cut in the rock, its bottom lost in darkness; seen from a landing with metal
+  railings and stairs; cables hang into it; a dark side opening in the wall above the shaft'
+- 'img03: a large round stone disc with a hole in its centre, standing upright in a recess beside a low, narrow passage, separated from it by
+  a rock pillar; sign ''SÜRGÜ KAPI / STONE DOOR'' and a red arrow; a person crouches to squeeze through the passage'
+- 'img04: looking down from an upper level into a carved chamber: a round hole in the floor with a metal staircase going down to the level below,
+  a grille over a further opening, doorways cut into the walls above, rough boulders, a railing'
+- 'img05: a wide, low-ceilinged hall carved in pale soft rock, ceiling blackened with soot, rock pillars left standing; several doorways and round
+  openings lead into side rooms and further spaces, some higher up via steps; a grating over an opening in the floor; small electric lights and
+  cables'
+- 'img06: a narrow, low doorway opening onto a steep tunnel barely one person wide with carved steps, lit warm orange further along; a crack in
+  the rock beside it; a cable along the wall'
+instructions_meta:
+  requirement_groups:
+    traversal and routes:
+    - FP1
+    - FP2
+    layout and spatial relations:
+    - CR1
+    - CR2
+    - CR3
+    - CR4
+    landmarks and features:
+    - CR5
+    - CR6
+    - VP2
+    look and material character:
+    - VP1
+    - VP3
+  explicit_requirements:
+  - type: keep
+    text: I definitely want to keep that deep vertical shaft that drops far down into the dark.
+    covers:
+    - CR5
+    - VP2
+rubric:
+  content_realization:
+  - id: CR1
+    item: 'The place is an underground complex: its rooms and passages lie enclosed in the rock below the surface, not as a building on the surface'
+    anchors:
+      '1': the whole complex lies below the surface, its spaces enclosed in rock
+      '0.5': only partly underground (e.g. rooms standing above ground with only some spaces below the surface)
+      '0': no underground place, or a surface building
+    evidence:
+    - img03
+    - img04
+    - img05
+    - img06
+  - id: CR2
+    item: The complex has several levels stacked one below another, joined by vertical routes such as openings in the floor and steep stepped
+      tunnels
+    anchors:
+      '1': several stacked levels with vertical connections (floor openings, steep stepped passages) between them
+      '0.5': only two levels, or levels present but not connected to one another inside the complex
+      '0': a single level
+    evidence:
+    - 'img04: the round hole in the floor down to the level below'
+    - 'img06: the steep stepped tunnel'
+    - img02
+  - id: CR3
+    item: The layout is a sprawling, irregular network of chambers of different sizes joined by branching tunnels, with chambers opening onto
+      further spaces through several openings
+    anchors:
+      '1': many chambers of varied size joined by tunnels that branch, chambers with more than one way on
+      '0.5': several rooms and tunnels, but in a regular grid, a single chain, or with each room a dead end
+      '0': one room or one straight corridor
+    evidence:
+    - img01
+    - 'img05: doorways and openings into side rooms and further spaces'
+  - id: CR4
+    item: 'The connecting tunnels are tight: clearly narrower and lower than the chambers they join'
+    anchors:
+      '1': tunnels clearly narrower and lower than the chambers, about one person wide
+      '0.5': tunnels somewhat narrower, or narrow only in places
+      '0': tunnels as wide and high as the chambers, or no tunnels
+    evidence:
+    - 'img06: a tunnel barely one person wide'
+    - 'img03: the low passage a person crouches through'
+    - img01
+  - id: CR5
+    item: A deep, narrow vertical shaft descends through the rock far below the level it is entered from
+    anchors:
+      '1': a narrow vertical shaft much deeper than one level, descending far down
+      '0.5': a shaft or pit no deeper than about one level, or a wide open drop rather than a shaft
+      '0': no shaft
+    evidence:
+    - img02
+  - id: CR6
+    item: A large round stone disc stands beside a passage opening as a door that could close that passage
+    anchors:
+      '1': a large round stone disc placed right beside a passage it could close
+      '0.5': a door of another shape at a passage, or a round disc not tied to a passage
+      '0': no stone door
+    evidence:
+    - 'img03: the disc beside the passage and the ''STONE DOOR'' sign'
+  functions_playability:
+  - id: FP1
+    item: 'The player can move through the complex as a network: from chamber to chamber through the connecting tunnels, choosing between branching
+      routes, and reach every part of it and get back'
+    anchors:
+      '1': every chamber and branch can be reached through the tunnels, with different branches to choose between, and the player can get back
+        from each
+      '0.5': traversable, but only along one fixed path, or some chambers cannot be reached or not left again
+      '0': the underground space cannot be traversed
+    evidence:
+    - img01
+    - img05
+    - img06
+  - id: FP2
+    item: The player can go down and back up between the stacked levels through the vertical connections
+    anchors:
+      '1': every level reachable going down and the way back up possible from the deepest one
+      '0.5': some vertical movement, but descent without a way back up or some levels unreachable
+      '0': no movement between levels
+    evidence:
+    - img04
+    - img06
+    - img02
+  visual_presentation:
+  - id: VP1
+    cat: style
+    item: 'Rock-hewn look: walls, ceilings and openings look dug out of solid rock rather than built'
+    anchors:
+      '1': surfaces and openings read as carved out of the rock
+      '0.5': underground, but walls read as built blocks or a generic dark cave
+      '0': no underground look
+    evidence:
+    - img03
+    - img04
+    - img05
+    - img06
+  - id: VP2
+    cat: spatial
+    item: Seen from its top, the shaft looks like a narrow round well dropping far below the viewer into darkness
+    anchors:
+      '1': from the top the shaft visibly drops far down, its bottom fading into the dark
+      '0.5': a shaft whose depth does not read from the top (bottom plainly visible close by)
+      '0': no shaft visible
+    evidence:
+    - img02
+  - id: VP3
+    cat: spatial
+    item: The chambers look like wide, low-ceilinged halls with pillars of rock left standing inside them
+    anchors:
+      '1': chambers read as wide and low, with rock pillars left standing in the space
+      '0.5': wide, low chambers without pillars, or pillars in tall, hall-like rooms
+      '0': chambers that are neither wide and low nor pillared, or no chambers
+    evidence:
+    - 'img05: the wide, low hall with rock pillars left standing'
+    - 'img03: the rock pillar beside the passage'
+    - img04
+play_suggestions:
+  FP1:
+  - 'walk from one chamber to as many others as you can: are there branches, dead ends and alternative routes?'
+  - count whether the chambers are joined by tunnels or simply adjoin each other
+  - check that every chamber can be reached and left again
+  FP2:
+  - go down as far as possible, noting each level
+  - from the deepest level, try to return to the top
+  robustness:
+  - try to get stuck in a narrow tunnel or on the stairs
+  - 'jump or fall into the shaft: what happens, and can you get out?'
+  - leave the complex (if possible) and come back in
+  - if the stone door can be moved, close it and check whether the passage is blocked
+v4_map:
+  U1: CR1 (underground location only; the carved, rock-hewn look is scored in VP1)
+  U2: CR2
+  U3: CR3
+  U4: CR5
+  U5: CR6
+  FP1: FP1 (network existence part moved to CR3; reach-every-part-and-back from the fine instruction added)
+  FP2: FP2 (existence of stacked levels moved to CR2)
+  VP1: VP1
+  VP2: CR2, CR3 (wall openings -> CR3, floor openings -> CR2)
+  VP3: VP2 (depth as seen; existence of the shaft in CR5)
+  VP4: CR4
+  VP5: CR6
+  VP6: 'removed: editing (modify requirement moved to editing_seed.yaml)'
+  new: 'VP3 (added in the v4 size fix: the look of the chambers, img05)'
+provenance:
+  source_yaml: T-IO-24b71e5192.yaml
+  source_sha256: f4e6ddb00fa81904a05bd65a222fb500187ec25787e02b3c33d2c8763df1f2e1
+  size_waiver: null
+  size_max: null
+  sources:
+  - refs:
+    - img01
+    - img02
+    - img03
+    - img04
+    - img05
+    - img06
+    bundle: 24b71e5192
+    title: 卡帕多细亚地下城（代林库尤与卡伊马克勒）

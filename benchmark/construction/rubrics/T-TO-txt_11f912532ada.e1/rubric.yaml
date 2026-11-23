@@ -1,0 +1,249 @@
+# GameAnything-Bench scoring material: never shown to agents during a trial.
+task_id: T-TO-txt_11f912532ada.e1
+source_inventory:
+- 'c19.p001-c19.p004: Hartley''s diary, 30 September; he comes home to find the others reading the assembled diaries; Mrs. Fenwick asks to see
+  the patient Pelham, who first swallows his flies and spiders, then lets her in'
+- 'c19.p005-c19.p018: Pelham talks to Mrs. Fenwick like a sane gentleman, explains his old belief that eating live things prolongs life, tells
+  her not to stay, and bids her a strange farewell'
+- 'c19.p019-c19.p023: Hartley meets Van Doorne at the station; Van Doorne praises Edith but rules that after tonight she must leave the work to
+  the men; he learns that the house Valerian bought is next door'
+- 'c19.p024-c19.p030: Edith gives Van Doorne her personal record of the day; all records are now complete and a council is set for nine o''clock'
+- 'c19.p031-c19.p034: Edith''s journal; the council in Hartley''s study, with Van Doorne at the head and Edith as secretary'
+- 'c19.p035: Van Doorne on vampires: real, strengthened rather than spent by each attack, strong as twenty men, cunning, commanding the dead,
+  weather and lesser beasts, able to change form, grow or shrink and vanish; failure would make the hunters like him'
+- 'c19.p036-c19.p041: each member pledges to the fight and they join hands over a crucifix'
+- 'c19.p042-c19.p043: the hunters'' strengths (combination, science, freedom by day and night, an unselfish cause); Van Doorne turns to the vampire''s
+  limitations'
+- 'c19.p044: the lore in detail: he lives on blood and grows younger with it; no shadow or reflection; wolf, bat, mist round himself, moonlit
+  dust, slipping through a hairbreadth gap; sees in the dark; but he cannot enter a home first unless invited, his power ceases at day, away from
+  his resting place he can change only at noon, sunrise or sunset, he crosses running water only at slack or flood tide, garlic takes his power,
+  sacred objects keep him at a distance, a wild rose on his coffin keeps him in it'
+- 'c19.p045: found in his home he can be confined to his coffin and destroyed; the history of Voivode Valerian; he can rest only in earth tied
+  to holy memories'
+- 'c19.p046-c19.p052: Calloway leaves; Van Doorne starts the plan (fifty boxes of earth delivered to Ashdown, some removed); a shot through the
+  window: Calloway fired at a big bat on the sill, which flew off'
+- 'c19.p053-c19.p055: the plan: trace every box, then kill him in his lair or sterilise the earth so he has no refuge; engage him in man form
+  between noon and sunset when he is weakest; Edith is excluded from now on'
+- 'c19.p056-c19.p059: Calloway urges an immediate visit to the house; the men leave for Ashdown and Edith is sent to bed'
+- 'c19.p060-c19.p071: Hartley''s diary, 1 October 4 a.m.; Pelham urgently asks to be released at once, argues his sanity courteously to each visitor;
+  Hartley refuses'
+- 'c19.p072-c19.p083: Pelham pleads for others'' sake but will not give his reason, then begs on his knees; Hartley sends him to bed; he asks
+  to be remembered as having tried'
+- 'c20.p001-c20.p006: Gerald''s journal, 5 a.m.; the men discuss Pelham (he calls the Count master, so freeing him is judged dangerous); Ravenscar
+  fetches a silver whistle against rats'
+- 'c20.p007-c20.p008: at the porch of the house Van Doorne arms each man: crucifix, garlic wreath, revolver and knife for mundane enemies, a small
+  electric lamp, a piece of Sacred Wafer; he warns that the enemy cannot be hurt by strength, so they must guard against his touch'
+- 'c20.p009-c20.p012: they open the door with skeleton keys, enter, light lamps; dusty house, a feeling of presence; a bunch of labelled keys
+  on the hall table'
+- 'c20.p013-c20.p014: Gerald leads them to the chapel with a copied map; a foul, earthy, bloody stench inside'
+- 'c20.p015-c20.p017: they count the bulky earth chests: twenty-nine of fifty left; Ravenscar thinks he sees a face in the passage, but it is
+  only shadows'
+- 'c20.p018-c20.p021: rats swarm in thousands; Ravenscar opens the outer door and whistles up three terriers, which stop and howl at the threshold;
+  carried inside, a dog attacks and the rats flee; the rest of the house is searched without result'
+- 'c20.p022-c20.p023: at dawn they lock up; Van Doorne sums up: the count of missing boxes is known, and the Count''s beasts are not subject to
+  his spiritual power, since they flee from little dogs'
+- 'c20.p024-c20.p026: home, Pelham moaning; Gerald finds Edith asleep and pale, resolves to keep the work from her; later: twenty-one boxes removed,
+  to be traced through the carriers'
+- 'c20.p027-c20.p036: Hartley''s diary, 1 October; Van Doorne visits Pelham, who now insults him and is sullen; the others follow up the clues
+  on the boxes'
+- 'c20.p037-c20.p041: Edith''s journal; she is hurt to be kept in the dark, blames herself for Rosalind; the night before she heard dogs and Pelham,
+  and saw a thin white mist creep across the lawn and up against the house'
+- 'c20.p042: her dream: fog pours into the room through the joins of the door, gathers into a pillar with a red eye, then two red eyes and a white
+  face bending over her'
+- 'c20.p043: 2 October; she is weak and spiritless; Pelham asks to see her and blesses her; she takes a sleeping draught from Hartley and worries
+  that she cannot wake'
+instructions_meta:
+  requirement_groups:
+    adversary powers and limits:
+    - CR1
+    - FP1
+    - FP2
+    - VP2
+    protection against him:
+    - CR2
+    - FP3
+    hunt and endgame:
+    - CR3
+    - FP4
+    - FP5
+    play space and readable state:
+    - CR4
+    - VP1
+  explicit_requirements:
+  - type: specify
+    text: He shouldn't be able to enter anyone's home the first time unless someone who lives there invites him in, but once invited he can come
+      and go as he likes.
+    covers:
+    - CR4
+    - FP1
+rubric:
+  content_realization:
+  - id: CR1
+    item: The vampire adversary is in the game with a man form and at least one changed form he can take
+    anchors:
+      '1': a vampire adversary is present, and besides his man form at least one other form of his exists in the game
+      '0.5': a vampire adversary is present, but only in a single form
+      '0': no vampire adversary
+    evidence:
+    - c19.p035
+    - c19.p044
+  - id: CR2
+    item: The game contains wards the player can carry against the vampire, distinct from ordinary weapons
+    anchors:
+      '1': wards against him exist as things the player can carry, set apart from ordinary weapons
+      '0.5': protective things against him exist, but only fixed in the world or not told apart from weapons
+      '0': no wards
+    evidence:
+    - c19.p044
+    - c20.p008
+  - id: CR3
+    item: 'His refuges are a finite, countable set of resting places: a lair holds some of them as distinct objects, and the others have been
+      moved to other places'
+    anchors:
+      '1': a lair with distinct, countable refuges, and further refuges placed elsewhere, so the set is not all in one place (exact numbers not
+        required)
+      '0.5': refuges exist, but all sit in one place, or they cannot be told apart and counted
+      '0': no refuges
+    evidence:
+    - c19.p047
+    - c19.p053
+    - - c20.p013
+      - c20.p017
+    - c20.p026
+  - id: CR4
+    item: 'The play space contains the places his invitation rule acts on: homes with residents who can invite him'
+    anchors:
+      '1': at least one home with a resident who can invite him in the play space
+      '0.5': homes exist, but without anyone living there who could invite him
+      '0': no homes in the play space
+    evidence:
+    - c19.p044
+  functions_playability:
+  - id: FP1
+    item: 'Invitation threshold: the vampire cannot enter a dwelling until someone who lives there invites him; once invited he can enter it freely
+      from then on'
+    anchors:
+      '1': an uninvited vampire is stopped at the threshold of a home; after an invitation by a resident he enters that home, also on later visits
+      '0.5': a threshold block exists, but the invitation does not lift it, or it must be repeated every time, or it applies only in scripted
+        moments
+      '0': no entry rule; he enters anywhere
+    evidence:
+    - c19.p044
+  - id: FP2
+    item: 'A day cycle governs his power: by day his power ceases, and away from his resting place he can change form only at sunrise, noon and
+      sunset; the player can use the day to act against him'
+    anchors:
+      '1': time passes in play, his power drops by day, outside his resting place he cannot change form except at sunrise, noon and sunset, and
+        acting by day is a real advantage for the player
+      '0.5': a day/night cycle exists, but it only changes his strength, without the limit on form change, or the form-change moments are fixed
+        but not sunrise, noon and sunset, or it does not affect what the player can do
+      '0': no time-of-day effect on him
+    evidence:
+    - c19.p044
+    - c19.p053
+  - id: FP3
+    item: 'Protection comes from wards, not force: he overpowers anyone in direct contact, physical force can at most hold him and cannot hurt
+      him, while carried wards take his power or keep him at a distance'
+    anchors:
+      '1': in direct contact he clearly overpowers the player, far beyond an ordinary enemy; plain force does not harm him; holding a ward visibly
+        keeps him off or takes his power, so the player must rely on wards rather than fighting him directly
+      '0.5': wards act on him only weakly or inconsistently, or plain force can still hurt him, or he is no stronger in contact than an ordinary
+        enemy
+      '0': wards have no effect on him, and he is beaten by plain fighting
+    evidence:
+    - c19.p035
+    - c19.p044
+    - c20.p008
+  - id: FP4
+    item: 'Hunt for his refuges: the player traces and finds his resting places through play, and the game shows how many are found and how many
+      are still to trace'
+    anchors:
+      '1': refuges are found through play, including ones away from the lair, and readable progress (found / neutralised / remaining) updates
+        as the hunt goes on
+      '0.5': refuges can be found, but progress is not shown or does not update
+      '0': refuges cannot be found through play
+    evidence:
+    - c19.p053
+    - - c20.p015
+      - c20.p017
+    - c20.p026
+  - id: FP5
+    item: 'Neutralising refuges leads to the end: a neutralised refuge no longer shelters him, and the hunt is won by destroying him at a resting
+      place or by confronting him once he is left without refuge and weak'
+    anchors:
+      '1': refuges can be neutralised, a neutralised refuge no longer shelters him, and a reachable win follows from catching him at a refuge
+        or facing him when denied refuge and weakened
+      '0.5': refuges can be destroyed but this has no effect on him, or the win is not tied to them
+      '0': no way to beat him
+    evidence:
+    - c19.p045
+    - c19.p053
+  visual_presentation:
+  - id: VP1
+    cat: style
+    item: The current phase of the day cycle that governs the vampire is visibly readable in the play space, including the change from one phase
+      to the next
+    anchors:
+      '1': the rule-relevant time phase and its transitions are visible in the play space
+      '0.5': a change of time exists but is hard to see
+      '0': no visible time of day
+    evidence:
+    - c20.p007
+    - c20.p022
+  - id: VP2
+    cat: style
+    item: His changed forms look clearly different from his man form, so the player can see which form he is in now
+    anchors:
+      '1': his changed form is clearly told apart from his man form at a glance
+      '0.5': the forms differ, but are hard to tell apart in play
+      '0': the forms look the same, or the change is only stated, not shown
+    evidence:
+    - c19.p044
+play_suggestions:
+  FP1:
+  - try to bring the vampire into a home before and after a resident invites him
+  - after an invitation, leave and check whether he can come back uninvited
+  FP2:
+  - watch his abilities across a full night and day
+  - check whether he can change form outside his resting place between sunrise, noon and sunset, and what happens at each of them
+  FP3:
+  - face him with and without a ward
+  - let him reach you in close contact without a ward
+  - attack him by plain force
+  FP4:
+  - count the refuges at the first site and check how the game shows the missing ones
+  - find a refuge away from the first site
+  FP5:
+  - neutralise one refuge and check that he can no longer use it
+  - catch him at a refuge, or deny all refuges and face him by day, and check that the hunt ends
+  robustness:
+  - 'let him win: is there a clear loss and a way to continue?'
+  - invite him by mistake and check that the rule holds afterwards
+  - wait through several day cycles without acting
+v4_map:
+  U1: 'FP1 | dropped: mechanism already scored by FP1; homes with residents in CR4'
+  U2: 'FP2 | dropped: mechanism already scored by FP2'
+  U3: CR2, FP3 | existence of wards to CR2, effect scored by FP3
+  U4: 'FP5 | dropped: behaviour already scored by FP5 (destroy at refuge, deny refuge)'
+  U5: CR1, FP3 | his form in CR1; superhuman strength and immunity to force scored by FP3
+  U6: CR3
+  FP1: FP1
+  FP2: FP2
+  FP3: FP3 | existence of wards split off to CR2
+  FP4: CR3, FP4 | finite, dispersed set of refuges split off to CR3
+  FP5: FP5
+  FP6: 'dropped: user modification (running water absolute barrier) moved to the Editing task, see editing_seed.yaml'
+  VP1: 'CR3 | spatial: which places exist (lair with countable refuges)'
+  VP2: VP1
+  VP3: VP2 | existence of a changed form split off to CR1
+provenance:
+  source_yaml: T-TO-txt_11f912532ada.e1.yaml
+  source_sha256: 76dd4f5a0efc931faa35865b089c33b8ffb22f8ff84068f595fc6d8c31cf5978
+  size_waiver: null
+  size_max: null
+  sources:
+  - ref: t01
+    title: Dracula
+    author: Bram Stoker
+    text_id: txt_11f912532ada
+    excerpt_id: e1

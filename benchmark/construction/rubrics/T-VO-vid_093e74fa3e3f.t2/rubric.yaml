@@ -1,0 +1,257 @@
+# GameAnything-Bench scoring material: never shown to agents during a trial.
+task_id: T-VO-vid_093e74fa3e3f.t2
+source_inventory:
+- '02:01.3-02:01.9 she (a young woman with a braided platinum updo, teal-blue gown, black long sleeves) strides toward the camera, hands near her
+  hips, in front of a mound of frosty ice'
+- '02:02.0-02:02.5 close shot: a spray of ice particles; she throws her arms wide with a light-blue frosty staircase and curled, lacy railings
+  behind her'
+- '02:03.0-02:04.5 a long lattice-railed bridge runs diagonally away across a dark snowy slope over a drop, with her on it; its leading end is a
+  rush of foaming ice'
+- '02:05.0 the steps of the staircase seen from behind, her skirt on them, lattice railing at the right'
+- '02:06.0 the bridge seen ahead of her with no person on it, growing toward a dark far side; 02:07.0 the bridge''s leading end bursts into a spray
+  of ice with her far behind; 02:08.0 a big icy splash of snow and ice at the end'
+- '02:09.0-02:09.9 she stands at the far end on a flat snowy landing with arms spread; snow sparkle trails swirl in the night sky; the two bridge
+  railings stand behind her'
+- '02:10.0-02:15.9 she walks a few steps, then stops; close shots of her face, she looks around and sings; no ice magic; the bridge stays behind her'
+- '02:16.0 close-up of her face looking up; 02:17.0 low shot of her foot on the ice, a small snowflake pattern with a glow where it lands: she stamps'
+- '02:18.0-02:21.0 a huge glowing snowflake pattern spreads outward across the ice from her foot, first seen under her feet, then from above as
+  a big pale-blue snowflake of light that fills the frame with her at its centre'
+- '02:22.0-02:27.4 after the stamp she turns, takes a step and gestures, singing, several close angles; at 02:27.4 she raises both arms and looks
+  up; the camera does not hold a pose'
+- '02:27.5 the cut to a far view of an ice palace being built follows (next section, not in the excerpt)'
+- 'visuals: dark blue night on a snowy mountain, white-blue glowing ice, snow sparkle trails; she is the only character; no HUD or on-screen text'
+- 'audio: the song ''Let It Go'' sung by a female voice over orchestral music throughout (no speech in the transcript for this range); no separate
+  sound effects annotated'
+- 'not shown: where she comes from or where she goes after the excerpt; any other person; the palace (outside the range)'
+instructions_meta:
+  requirement_groups:
+    protagonist and her power:
+    - CR1
+    - VP4
+    setting and the way across:
+    - CR2
+    - CR3
+    - VP2
+    crossing interaction:
+    - FP1
+    - VP1
+    climactic act:
+    - CR4
+    - FP2
+    - VP3
+    order of the beats:
+    - FP3
+    - FP4
+    - FP5
+  explicit_requirements:
+  - type: specify
+    text: I want to play as the woman in the video herself, and the ice should answer me, so that it is my own walking and my own deliberate action
+      that make it appear, never something that just happens on its own.
+    covers:
+    - CR1
+    - FP1
+    - FP2
+    - VP4
+rubric:
+  content_realization:
+  - id: CR1
+    item: 'The protagonist: the player character is the clip''s lone woman with ice magic, and she is the source of every ice structure in the scene'
+    anchors:
+      '1': the player character is presented as that woman, and the game makes clear that the ice structures come from her power
+      '0.5': the player character is someone else (a generic hero) while the ice still appears, or she is the player but the ice is not tied to
+        her (it is simply part of the map or caused by something else)
+      '0': no such protagonist and no link between the player and the ice
+    evidence:
+    - - '02:01.3'
+      - '02:02.5'
+    - - '02:09.0'
+      - '02:09.9'
+    - - '02:17.0'
+      - '02:21.0'
+  - id: CR2
+    item: 'The place: a snowy mountain at night where a deep chasm cuts the way, with an ice stairway on the near side and a flat open landing on
+      the far side'
+    anchors:
+      '1': a night snow-mountain area with a chasm that cannot be crossed on foot, the stair side before it and an open landing beyond it, arranged
+        as one route
+      '0.5': a chasm or gap exists but one side (the stair approach or the far landing) is missing, or the parts are not on one route
+      '0': no chasm separating two sides
+    evidence:
+    - - '02:02.0'
+      - '02:05.0'
+    - - '02:06.0'
+      - '02:09.9'
+  - id: CR3
+    item: 'The bridge of her ice spans the whole chasm: it is the only way across and it connects the near side to the far landing'
+    anchors:
+      '1': an ice bridge made by her joins the two sides over the full width of the chasm, and there is no other way across
+      '0.5': a bridge that covers only part of the gap, or a bridge while the chasm can also be walked around
+      '0': no bridge over the chasm
+    evidence:
+    - - '02:03.0'
+      - '02:09.0'
+  - id: CR4
+    item: 'The climax is an act of a different kind: one stamp of her foot on the landing makes a snowflake pattern spread out in all directions from
+      her own spot, not forward like the bridge'
+    anchors:
+      '1': the climactic event is her stamp (or an equivalent single deliberate act by her) on the far landing, and its result radiates from where
+        she stands
+      '0.5': a snowflake or ice pattern appears on the landing but not from her spot or not as her act (it is triggered elsewhere, or spreads
+        in one direction like a second path)
+      '0': no climactic ice event after the crossing
+    evidence:
+    - - '02:16.0'
+      - '02:21.0'
+  functions_playability:
+  - id: FP1
+    item: 'The bridge follows her steps: the chasm cannot be crossed at first, and walking forward makes the next stretch of bridge appear in front
+      of the player in time with the walk'
+    anchors:
+      '1': the chasm blocks the way until the player walks out, then it becomes walkable stretch by stretch as the player advances, never later
+        than the next step
+      '0.5': the bridge appears but all at once, or the player has to wait at each stretch
+      '0': no bridge, or a bridge that is there from the start
+    evidence:
+    - - '02:02.0'
+      - '02:09.0'
+  - id: FP2
+    item: 'The stamp: a deliberate player action on the far landing makes the pattern spread outward from the player''s spot until it is complete'
+    anchors:
+      '1': the player triggers it, it spreads from the player's spot outward (in rings or in all directions) and ends complete
+      '0.5': it happens automatically on arrival, or appears at once without spreading, or does not complete
+      '0': no stamp effect can be triggered
+    evidence:
+    - - '02:16.0'
+      - '02:21.0'
+  - id: FP3
+    item: 'The order holds in play: the stamp becomes possible only after the crossing, and the closing beat comes only after the stamp, with no step
+      that can be skipped and no dead end'
+    anchors:
+      '1': the scene enforces crossing, then the stamp, then the closing beat, and the player can always go on through the steps
+      '0.5': the order is only suggested and one step can be skipped, or a step can block progress
+      '0': no order between the beats
+    evidence:
+    - - '02:01.3'
+      - '02:27.4'
+  - id: FP4
+    item: 'The pause: after the crossing, the far landing is a calm interval without ice magic where the player can walk a few steps before the stamp'
+    anchors:
+      '1': a landing with free space where the player can walk around and nothing happens until the player performs the stamp
+      '0.5': the landing is too small to walk on, or the player is forced into the stamp at once
+      '0': no landing beat between the crossing and the stamp
+    evidence:
+    - - '02:09.0'
+      - '02:16.0'
+  - id: FP5
+    item: 'The aftermath: when the pattern is complete the scene does not end at once; there is a short closing beat in which the player can turn
+      and move'
+    anchors:
+      '1': a closing beat of a few seconds after the pattern completes in which the player can turn and move
+      '0.5': a cut-short beat (under about 2 seconds) or one in which the player is locked in place
+      '0': the scene ends the instant the pattern completes
+    evidence:
+    - - '02:22.0'
+      - '02:27.4'
+  visual_presentation:
+  - id: VP1
+    cat: key_moment
+    keyframes:
+    - '02:03.5'
+    - '02:07.0'
+    - '02:08.0'
+    item: 'The bridge growing: a long ice deck with a lattice railing and a burst of ice at its leading end'
+    anchors:
+      '1': a recognisable lattice-railed ice bridge with a visible burst of ice or sparkles where it is being added
+      '0.5': a bridge without the lattice look, or without any burst at the leading end
+      '0': none
+    evidence:
+    - - '02:03.0'
+      - '02:08.0'
+  - id: VP2
+    cat: style
+    keyframes:
+    - '02:02.0'
+    - '02:05.0'
+    - '02:09.5'
+    item: 'The setting''s look: a dark blue night over snow, white-blue glowing ice structures (the frosty stair with ornate curled railings) and drifting
+      snow sparkle trails'
+    anchors:
+      '1': a dark blue night snowscape where the ice stair with ornate railings and the other ice structures glow white-blue, with sparkle trails
+        in the air
+      '0.5': a night snow scene with plain ice (no ornate railings) or without the glow and sparkle
+      '0': not a night snowscape, or no ice look
+    evidence:
+    - - '02:01.3'
+      - '02:05.0'
+    - - '02:09.0'
+      - '02:09.9'
+  - id: VP3
+    cat: key_moment
+    keyframes:
+    - '02:18.4'
+    - '02:19.4'
+    - '02:20.4'
+    item: 'The stamp''s snowflake: a large, luminous, clearly snowflake-shaped pattern on the ice with the player at its centre'
+    anchors:
+      '1': a big, clearly snowflake-shaped glowing pattern around the player
+      '0.5': a glow or ring without the snowflake shape
+      '0': none
+    evidence:
+    - - '02:17.0'
+      - '02:21.0'
+  - id: VP4
+    cat: style
+    keyframes:
+    - '02:02.0'
+    - '02:09.5'
+    item: 'The player character is recognisably Elsa as she appears in this excerpt: teal-blue gown, black long sleeves, braided platinum updo'
+    anchors:
+      '1': the player sprite (and portrait, if shown) clearly reads as her by the gown colour, the black sleeves and the updo
+      '0.5': a female figure with one or two of these features, or the look only in a portrait while the sprite stays generic
+      '0': a generic or unrelated hero
+    evidence:
+    - - '02:01.3'
+      - '02:02.5'
+    - - '02:09.0'
+      - '02:09.9'
+play_suggestions:
+  FP1:
+  - 'walk onto the bridge start: does the next stretch appear before the next step?'
+  - 'walk back and forth: does the bridge stay?'
+  - try to cross the chasm beside the bridge
+  FP2:
+  - 'stand on the landing without acting: does anything happen?'
+  - 'perform the action from a distance, then from the spot: is the pattern centred on the player and complete?'
+  FP3:
+  - try to reach the landing or trigger the stamp by another route
+  - trigger the stamp twice
+  FP4:
+  - stand on the landing for 30 s and walk around it
+  FP5:
+  - 'watch for 10 s after the pattern completes; try to turn and move'
+  robustness:
+  - save on the bridge and reload
+  - leave the map at the far end and come back
+  - walk the bridge again after the stamp
+v4_map:
+  U1: CR1 (her as the source of the ice); timing part -> FP1
+  U2: FP3 (order), FP4 (pause), FP5 (aftermath)
+  U3: CR3 (bridge spans the gap), CR2 (the gap and the two sides)
+  U4: CR4
+  U5: FP5
+  F1: FP1
+  F2: FP2
+  F3: FP3
+  F4: FP4
+  F5: FP5
+  V1: VP1
+  V2: VP2 (merged with the night / ice / sparkle look)
+  V3: VP3
+  V4: VP4 (identity); the open-armed tableau pose dropped (choreography, rules v3.4); railings and sparkle trails -> VP2
+  quality Q1-Q3 and regression contract: 'dropped: not authored per task in rubric v4 (Host Preservation is measured separately)'
+  authored closure (far-ridge silhouette, quest-log mark): 'not scored (pilot adaptation, not in the clip)'
+provenance:
+  source_yaml: v2g2_original/film.yaml, film.rubric.yaml, film.contract.yaml (flare__film, 2026-10-25)
+  size_waiver: null
+  size_max: null
+  sources: []

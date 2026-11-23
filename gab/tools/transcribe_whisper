@@ -1,0 +1,14 @@
+#!/usr/bin/env python3
+"""transcribe <audio or video file> -> timestamped transcript on stdout (offline Whisper via faster-whisper, CPU int8).
+Default `transcribe_cmd`; a site may point gab.local.json at its own Whisper setup instead. Model: $GAB_WHISPER_MODEL
+(default large-v3-turbo), language auto-detected, VAD on."""
+import os, sys
+
+try:
+    from faster_whisper import WhisperModel
+except ImportError:
+    sys.exit("transcribe: faster-whisper is not installed (pip install faster-whisper)")
+m = WhisperModel(os.environ.get("GAB_WHISPER_MODEL", "large-v3-turbo"), device="cpu", compute_type="int8")
+segs, info = m.transcribe(sys.argv[1], vad_filter=True, beam_size=5)
+print(f"# language {info.language} ({info.language_probability:.2f})")
+for s in segs: print(f"[{s.start:7.2f} -> {s.end:7.2f}] {s.text.strip()}")

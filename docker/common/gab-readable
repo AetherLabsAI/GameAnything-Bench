@@ -1,0 +1,23 @@
+#!/bin/sh
+# The last step of every RUN in docker/*/Dockerfile: whatever the builder's umask was, every file and folder the player needs is
+# readable (and every folder / executable enterable) by any uid: the player is uid 1000, or another uid with docker run --user.
+# Why: some image builders run every RUN under `umask 077` (to keep their own registry config private), which leaves
+# folders such as /opt/gameanything or /game mode 700 root. A local build from a checkout made with umask 077 has the same
+# problem through COPY (cp keeps the 600 of the sources). Only the entries that lack a bit are touched (no layer bloat).
+#   GAB_READABLE_PRIVATE="<path> ..."   paths to leave as they are (none today: nothing under these folders is meant to be private)
+#   GAB_READABLE_ROOTS="<dir> ..."      the folders to walk (default below; the tests pass a scratch tree)
+set -eu
+umask 022
+PRIVATE=${GAB_READABLE_PRIVATE:-}
+ROOTS=${GAB_READABLE_ROOTS:-/opt/gab /opt/gab-agent /usr/local/bin /home/player}
+n=0
+for p in $ROOTS; do
+  [ -e "$p" ] || continue
+  set --                                            # the prune list: the build's own source copy (removed after this) + PRIVATE
+  for q in /tmp/gab-layer $PRIVATE; do set -- "$@" -o -path "$q"; done
+  shift
+  c=$(find "$p" \( "$@" \) -prune -o ! -type l \( \( -type d ! -perm -o=rx \) -o \( ! -type d ! -perm -o=r \) \
+        -o \( -type f -perm -u=x ! -perm -o=x \) \) -print -exec chmod go+rX {} + | wc -l)
+  n=$((n + c))
+done
+echo "[gab-readable] $n entries made readable for every uid"

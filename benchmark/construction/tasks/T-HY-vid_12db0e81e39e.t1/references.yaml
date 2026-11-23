@@ -1,0 +1,30 @@
+# Reference material: fetched from the HF dataset into $GAB_MEDIA_DIR/<task>/ by `gab media fetch` (sha256 checked).
+# The agent gets the files only (no title, author, caption or source): this file is never shown to it.
+task_id: T-HY-vid_12db0e81e39e.t1
+refs:
+- id: c01
+  kind: video
+  file: clip_01.mp4
+  video_id: vid_12db0e81e39e
+  source:
+    title: The Legend of Zelda： Ocarina of Time – Overview Trailer – Nintendo Switch 2 [8v8eDMh1o3g]
+    url: https://www.youtube.com/watch?v=8v8eDMh1o3g
+    channel: null
+    youtube_id: 8v8eDMh1o3g
+  range:
+    start: 62.0
+    end: 80.0
+    text: 1:02.00-1:20.00
+  duration_s: 18.0
+  size_bytes: 6887627
+  format: mp4 H.264 720p, AAC audio
+  hf_path: media/T-HY-vid_12db0e81e39e.t1/clip_01.mp4
+  sha256: 6fb9f9bedb09bd524c71945573364ab8121b219492d39a71e15fbc2aceb2bfe2
+  rights_note: null
+- id: img01
+  kind: image
+  file: img01.jpg
+  format: jpg
+  hf_path: media/T-HY-vid_12db0e81e39e.t1/img01.jpg
+  sha256: 9ca54c6c46d7c043babc93c3b74c8ead5cc7297fceea2d7ecfa9afac8ee38cc1
+  size_bytes: 870364

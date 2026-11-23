@@ -1,0 +1,5 @@
+# optional: how a fresh start of your mod begins (all keys optional)
+mode: game            # game: in a city | menu: the main menu
+map: Green Plains     # a new city on this map (a stock map, or one of mod/maps/*.crp by its map name)
+city: GAB City        # the new city's name
+# save: MySave        # instead of map: load mod/saves/MySave.crp

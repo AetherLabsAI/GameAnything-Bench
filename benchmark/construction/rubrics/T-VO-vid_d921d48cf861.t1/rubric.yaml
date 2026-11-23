@@ -1,0 +1,237 @@
+# GameAnything-Bench scoring material: never shown to agents during a trial.
+task_id: T-VO-vid_d921d48cf861.t1
+source_inventory:
+- '00:22.0-00:23.5 end of the airdrop: close-up of a red car falling through the sky, then the frame whites out in cloud'
+- '00:24.0-00:26.5 white ''INDIA'' emblem (lotus ornaments) over a descending aerial view: misty mountain peaks, then a colourful village with
+  stalls and awnings along a road, purple / teal coloured-powder clouds and paint on the road'
+- 00:27.0 carved stone archway corridor with lit pillars, leading to a large stone elephant-headed statue
+- 00:27.5 cave with a waterfall falling through an opening, light shafts, a plank road inside the cave
+- 00:28.0-00:29.0 palm-jungle dirt road with sunbeams, camera flying along it
+- '00:29.5-00:30.0 aerial: carved stone temple towers on a cliff above a river, a bridge and a road with bunting beyond'
+- 00:30.5 dirt road with pink / teal feather flags (Asphalt 'A' logo), palms, mountains and a white palace with a minaret in the distance
+- 00:31.0-00:32.0 dirt road under coloured triangle bunting, purple banners, a wooden grandstand; a dark green car, then an orange car and a dark
+  car pass, teal / purple paint marks on the road
+- 00:32.5-00:34.0 orange supercar seen from behind kicking up dust on a jungle road; front views of an orange-black hypercar at speed with motion
+  blur
+- '00:34.5 close-up: a long orange flame from the exhaust of a silver car'
+- 00:35.0-00:36.5 silver Mercedes-AMG touring car on a red-girder bridge in low sun, blue flame at the exhaust, speed blur
+- 00:37.0 a car sliding across a road above the village with an orange fireball / explosion behind it, bunting in view
+- 00:37.5 green car with a bright blue exhaust trail on a wide road beside a curved blue / green / pink ramp wall
+- 00:38.0-00:38.5 black car with exhaust flame drifting past a waterfall at a rock arch, a red car behind
+- 00:39.0-00:40.5 a car with blue headlights drives through the heavy spray of a waterfall over a wet stone road
+- 00:41.0-00:42.0 a pack of three or more cars (red, green, orange) racing past the waterfall, spray and dust
+- 00:42.5-00:44.0 red muscle car, close tracking camera, on a winding palm-lined road
+- 00:44.5-00:45.5 silver car drifting through a rocky bend with tyre smoke; curved skid marks on the dirt
+- '00:46.0-00:47.0 blurred canyon / cave section: tight bends with red-white curbs seen from above through a rock arch, several small cars'
+- 00:47.5-00:49.0 blurred close pass; a dark car drifting with white tyre smoke; cars in a pack in a rock cutting, a red and a black car side
+  by side drifting
+- 00:49.5 orange-yellow car head-on in a rocky cutting
+- 00:50.0-00:50.5 blurred cave; a car airborne / tumbling amid dust and debris (a crash)
+- 00:51.0-00:51.5 cars in a dark tunnel with lamps, sparks and flying debris; a red car passing
+- 00:52.0 tunnel / underpass with smoke and debris on the road ahead
+- 'camera throughout: cinematic, tilted, close-tracking; heavy motion blur; very fast cuts'
+- 'not visible: no HUD, no speedometer, no position / lap / timer, no start or finish line in use, no controller input, no item pickups or weapons'
+- 'audio: pilot-style voice-over 00:21.3-00:25.3 ''Enjoy the view down there, and welcome to India.'' (offline Whisper); music and engine sound
+  are not documented in the material'
+instructions_meta:
+  requirement_groups:
+    car control at speed:
+    - FP5
+    driving techniques and their look:
+    - FP2
+    - FP3
+    - FP4
+    - VP1
+    racing against rivals:
+    - CR1
+    - FP1
+    the course:
+    - CR2
+    - FP6
+    - VP2
+  explicit_requirements:
+  - type: specify
+    text: Boost and drift should work together like in the clip, so I can keep my nitro going while I slide through a corner.
+    covers:
+    - FP4
+rubric:
+  content_realization:
+  - id: CR1
+    item: The player races in a field of rival cars, and the cars are fast road supercars / touring cars
+    anchors:
+      '1': several rival cars are on the course with the player, and the player's car and the rivals read as road supercars / touring cars
+      '0.5': rival cars exist but the vehicles are generic karts or other vehicles with nothing of a road supercar, or only one rival
+      '0': no rival cars on the course
+    evidence:
+    - - '00:31.0'
+      - '00:32.0'
+    - - '00:41.0'
+      - '00:42.0'
+    - - '00:47.5'
+      - '00:49.0'
+  - id: CR2
+    item: The course mixes open fast stretches with sections of tight bends
+    anchors:
+      '1': the driven route has both open fast stretches (straights, a bridge or similar) and a section of tight bends
+      '0.5': the route is uniform (all straights or all gentle curves)
+      '0': no course, or a plain featureless loop
+    evidence:
+    - - '00:35.0'
+      - '00:37.5'
+    - - '00:44.5'
+      - '00:49.0'
+  functions_playability:
+  - id: FP1
+    item: Rival cars race the course at competitive pace, so track position is contested in normal play
+    anchors:
+      '1': rivals keep a competitive pace along the course and the player's position against them changes in normal play (passing and being passed)
+      '0.5': rivals are trivially slow, stop, or leave the course, so position is never contested
+      '0': rivals do not race (they stand still or do not move along the course)
+    evidence:
+    - - '00:31.0'
+      - '00:32.0'
+    - - '00:41.0'
+      - '00:42.0'
+    - - '00:47.5'
+      - '00:49.0'
+  - id: FP2
+    item: 'Boost: the player can enter a boost state that gives a clearly felt burst of speed over normal driving'
+    anchors:
+      '1': the player can trigger boost and the car clearly speeds up while it is active
+      '0.5': a speed gain exists but is barely noticeable or not under player control
+      '0': no boost
+    evidence:
+    - - '00:34.5'
+      - '00:38.0'
+  - id: FP3
+    item: 'Drift: the player can start and control a sideways slide while cornering at speed, and take tight bends without stopping'
+    anchors:
+      '1': a controllable sideways slide through bends at speed with a clean exit
+      '0.5': a slide exists but is uncontrollable or purely cosmetic (no change in handling)
+      '0': no drift; cars only grip-turn
+    evidence:
+    - - '00:44.5'
+      - '00:45.5'
+    - - '00:47.5'
+      - '00:49.0'
+  - id: FP4
+    item: 'Boost and drift combine: the player can keep boosting while sliding through a bend, so the boost carries through and out of the drift'
+    anchors:
+      '1': boost stays active (or can be triggered) during a drift, and the car keeps the boost's extra speed through the slide and on the exit
+      '0.5': both can be active together only briefly or inconsistently, or the boost effect shows during the drift without its speed
+      '0': starting a drift always ends or blocks the boost, or one of the two techniques is missing
+    evidence:
+    - - '00:38.0'
+      - '00:38.5'
+    - - '00:48.5'
+      - '00:49.0'
+  - id: FP5
+    item: 'Driving at speed: acceleration, steering and braking respond reliably, so the car can be held on the road at high speed before boost
+      or drift are used'
+    anchors:
+      '1': responsive acceleration, steering and braking; the car stays on the road at speed under normal control
+      '0.5': the car drives but control is sluggish, twitchy or it leaves the road easily under normal driving
+      '0': the car cannot be driven
+    evidence:
+    - - '00:31.0'
+      - '00:49.0'
+  - id: FP6
+    item: 'The course is reliably drivable at speed end to end, and its sections call for the techniques: boost pays off on the open stretches,
+      drift in the tight bends'
+    anchors:
+      '1': the whole route can be driven at speed with no dead ends or stuck spots; boosting gains most on the open stretches and the tight bends
+        are taken best by drifting
+      '0.5': drivable but with spots where the car gets stuck or falls off under normal driving, or the sections make no difference to which technique
+        pays off
+      '0': no drivable course
+    evidence:
+    - - '00:34.5'
+      - '00:37.5'
+    - - '00:44.5'
+      - '00:49.0'
+  visual_presentation:
+  - id: VP1
+    cat: key_moment
+    keyframes:
+    - '00:34.5'
+    - '00:37.5'
+    - '00:45.0'
+    item: 'Technique looks: each technique reads on screen while active: boosting shows a flame / glowing blue exhaust trail with a sense of speed
+      (blur, speed streaks), drifting leaves tyre smoke and / or skid marks'
+    anchors:
+      '1': a distinct exhaust flame or trail plus a speed effect while boosting, and visible tyre smoke or skid marks while drifting, both readable
+        from a screenshot
+      '0.5': only one technique has a distinct look, or the looks are faint, incomplete (flame without speed effect or vice versa) or also show
+        in normal driving / grip turns so the technique cannot be told from them
+      '0': boosting and drifting both look the same as normal driving
+    evidence:
+    - - '00:34.5'
+      - '00:38.0'
+    - - '00:44.5'
+      - '00:45.5'
+    - - '00:47.5'
+      - '00:49.0'
+  - id: VP2
+    cat: style
+    keyframes:
+    - '00:27.0'
+    - '00:28.5'
+    - '00:29.5'
+    item: 'Setting: the course runs through palm jungle with carved stone temples along it'
+    anchors:
+      '1': palm jungle lines the course and carved stone temple structures are visible from the road
+      '0.5': only one of the two (jungle without stone temples, or temples without jungle), or either only as a token prop
+      '0': neither palm jungle nor stone temples; a generic or unrelated setting
+    evidence:
+    - - '00:27.0'
+      - '00:30.0'
+    - - '00:42.5'
+      - '00:44.0'
+play_suggestions:
+  CR1:
+  - 'look at the starting field and along the course: how many rival cars, and do they read as road supercars?'
+  FP1:
+  - 'drive a full lap at moderate pace: do rivals pass you? then drive well: can you pass them?'
+  - 'watch a rival in a tight section: does it stay on the road?'
+  FP2:
+  - time a straight with and without boost
+  - 'hold / spam the boost input: does it run out or stay on forever? (not scored: the clip shows no duration or limit)'
+  FP3:
+  - take the same tight bend with and without drifting; compare exit speed and line
+  - 'drift and release: is the slide controllable? (its smoke / skid-mark look is VP1)'
+  FP4:
+  - 'start a boost, then drift through a bend: does the boost stay on and keep its speed?'
+  - 'start a drift, then trigger boost mid-slide: does it fire?'
+  FP5:
+  - accelerate from standstill to full speed on a straight, then brake hard
+  - 'weave left and right at full speed: does the car stay on the road under normal steering?'
+  FP6:
+  - drive the whole route; note straights vs tight bends
+  - 'try to get stuck: drive into walls, off the edge, backwards'
+  robustness:
+  - 'check whether a race start, finish and standings exist (not scored: the clip shows none)'
+  - 'bump and ram rivals at full speed: do cars interact physically, can one be wrecked and does it recover? (not scored: the clip shows a crash
+    but not its cause or aftermath)'
+  - restart a race after finishing or crashing
+  - 'stand still for a while: do rivals keep racing and does the game stay consistent?'
+v4_map:
+  U1: 'dropped: boost already scored by FP2 (function) and VP1 (look)'
+  U2: 'dropped: drift already scored by FP3 (function) and VP1 (look)'
+  U4: CR1
+  U5: FP4
+  U6: FP6
+  FP1: CR1 (rivals exist) + FP1 (competitive pace)
+  FP2: FP2
+  FP3: FP3 (controllable slide) + VP1 (tyre smoke / skid-mark look, merged with the boost look)
+  FP4: FP5
+  FP5: CR2 (straights and tight bends exist) + FP6 (drivable, sections reward techniques)
+  VP1: 'VP2 (jungle + stone temples only, restored by human review; festival bunting dropped: peripheral)'
+  VP2: 'dropped: peripheral (the waterfall and the rocky / cave enclosure are course scenery; the tight bends themselves are scored in CR2)'
+  VP3: VP1 (boost look, merged with the drift look)
+  VP4: 'removed: night race (user modification), moved to the Editing seed (editing_seed.yaml)'
+provenance:
+  source_yaml: T-VO-vid_d921d48cf861.t1.yaml
+  source_sha256: f9da26bc7a87b82c358f1abc61248924340b701b68c5e060bc57477cce863683
+  size_waiver: null
+  size_max: null
+  sources: []

@@ -1,0 +1,14 @@
+# GameAnything-Bench task T-VO-vid_edd0d2153684.t1 (public part). Instruction: instruction_fine.md.
+task_id: T-VO-vid_edd0d2153684.t1
+version: '0.2'
+category: mechanics_behavior
+modality: video
+domain: sports
+track: commercial
+target_game: minecraft
+references:
+- c01
+provenance:
+  pipeline: reference_curation ga_author (v3 draft -> crosscheck -> reconcile -> instruct -> explicit) -> restructure_v4
+  rules_version: v4
+  review_status: pending

@@ -1,0 +1,202 @@
+# GameAnything-Bench scoring material: never shown to agents during a trial.
+task_id: T-IO-7ecf78daed
+source_inventory:
+- 'img01: indoor flat-belt conveyors on aluminium frames; a straight belt in front runs into a curved belt section that turns the line round onto
+  a second straight belt running back alongside; drive pulley and motor at the joint; a worker at a desk behind'
+- 'img02: warehouse conveyor system on blue steel frames: an inclined belt conveyor runs up (or down) into a curved roller section with guard
+  rails, which continues in S-bends; a second roller curve on a lower level underneath; gear motor on the frame; a cardboard carton at the right'
+- 'img03: labelled schematic: (1) ''Feeding of unsorted material'' drops a mix of rounded and angular pieces onto a belt; (2) ''Electromagnetic
+  sensor'' (red block) under the belt before its end; at the belt end a flap linked to a control box deflects the pieces; dashed paths send them
+  into one of two bins of (3) ''Separation chamber'': the near bin holds rounded pieces, the far bin angular pieces; arrows lead out of each bin'
+- 'img04: rendered vertical lift: a tall column with a motor at the top and a carriage with a short roller platform carrying a box near the bottom,
+  guided up the column'
+- 'img05: hand-drawn bucket elevator schematic (German labels): a chain (Kette) loop between a lower station (Untere Station) and an upper drive
+  station (Obere Station, Antrieb); buckets (Becher) go up full on the left side, over the top wheel and down empty on the right; material enters
+  low at the left (Material-Eintrag) and leaves through an outlet high on the right (Material-Abwurf); circled ''Schlote''; material pooled at
+  the bottom'
+- 'img06: outdoor agricultural machinery show: orange mobile inclined troughed belt conveyors on wheels, a yellow inclined belt conveyor at the
+  right, a red machine with a vertical stack of crates and a yellow inclined belt behind; people standing, grass and paving'
+instructions_meta:
+  requirement_groups:
+    transport line:
+    - CR1
+    - FP1
+    - FP4
+    intake and feed:
+    - CR2
+    - FP5
+    automatic sorting:
+    - CR2
+    - CR3
+    - FP2
+    level change:
+    - CR4
+    - FP3
+    readable line and outputs:
+    - VP1
+    - VP2
+  explicit_requirements:
+  - type: keep
+    text: I really want that lift where the carriers go up the column loaded, drop their load off at the top and come back down empty.
+    covers:
+    - CR4
+    - FP3
+rubric:
+  content_realization:
+  - id: CR1
+    item: The game contains a conveyor line of joined segments in which straight runs are linked by curved sections that turn the line onto a
+      new heading
+    anchors:
+      '1': a connected line of conveyor segments with at least one curved section joining two straight runs that head in different directions
+      '0.5': a connected conveyor line exists but only as straight runs, or the curve is not joined to the runs it should link
+      '0': no conveyor line
+    evidence:
+    - 'img01: the curved belt turning the line back alongside itself'
+    - 'img02: roller curves and S-bends after the inclined belt'
+  - id: CR2
+    item: The game contains a sorting station in which an intake feeds unsorted items onto a belt, a detector sits on the belt before its end,
+      and the split happens at the belt end
+    anchors:
+      '1': intake, belt, detector and end-of-belt split all present in this order
+      '0.5': a sorting station exists but the detector is missing or placed after the split, or the split sits mid-belt instead of at its end
+      '0': no sorting station
+    evidence:
+    - 'img03: (1) the feed of unsorted material onto the belt, (2) the sensor before the belt end, the flap at the belt end'
+  - id: CR3
+    item: The game contains two kinds of items that differ in a property of the item itself, with one separate output per kind at the sorter
+    anchors:
+      '1': two (or more) item kinds that can be told apart by a property of their own, and a separate output at the sorter for each kind
+      '0.5': distinguishable kinds exist but without a separate output for each kind, or kinds that differ only by a label or marking rather than
+        a property of their own
+      '0': no distinct item kinds for sorting
+    evidence:
+    - 'img03: rounded and angular pieces in the unsorted feed, the two bins of (3), one per shape'
+  - id: CR4
+    item: 'The game contains a vertical lift: carriers on a column that runs from a low loading point to an outlet at a higher level'
+    anchors:
+      '1': a vertical column with carriers on it, a loading point at its foot and an outlet at the top on a higher level
+      '0.5': a lift column exists but without separate carriers, or without a loading point below or an outlet above, or the level change is only
+        an inclined belt
+      '0': no lift between levels
+    evidence:
+    - 'img04: the carriage with a roller platform on the column'
+    - 'img05: the bucket loop between the lower station with Material-Eintrag and the upper station with Material-Abwurf'
+  functions_playability:
+  - id: FP1
+    item: 'A working transport line: items put in at the start move by themselves across connected segments and arrive at the end'
+    anchors:
+      '1': items travel unaided across joined segments and reach the end, repeatably
+      '0.5': items move but stall at joints or must be pushed along
+      '0': no moving transport
+    evidence:
+    - img01
+    - img02
+  - id: FP2
+    item: 'Automatic sorting: each item of a mixed feed of two kinds is read by the detector on its way, and that reading sends it to the output
+      for its kind'
+    anchors:
+      '1': the kinds fed in mixed each end up in their own separate output by the detector's reading, without the player sorting by hand
+      '0.5': a split exists but is manual, random or often wrong
+      '0': no automatic sorting
+    evidence:
+    - 'img03: the sensor before the belt end and the two-way split at the belt end into the two bins of (3)'
+  - id: FP3
+    item: 'Level change by the lift: carriers take items in low, go up the column loaded, give the items off at the higher level and come back
+      down empty'
+    anchors:
+      '1': items are raised by the carriers and leave the lift at the higher level, and the carriers return down empty to load again
+      '0.5': items are raised but do not get off at the top, or the carriers do not return to load again, or items must be carried up by hand
+      '0': no working level change
+    evidence:
+    - img04
+    - 'img05: buckets rising full on one side, Material-Abwurf at the top, buckets going down empty on the other'
+  - id: FP4
+    item: 'Turns in the line: items are carried round a bend and continue on a segment heading in another direction'
+    anchors:
+      '1': items follow the line through bends and keep moving on the new heading without falling off or stopping
+      '0.5': bends exist but items stall, fall off or must be helped round
+      '0': no change of direction
+    evidence:
+    - img01
+    - img02
+  - id: FP5
+    item: 'Continuous feed: material put in at the intake is handled as a steady stream, item after item, not only one at a time'
+    anchors:
+      '1': a stream of items fed in one after another is carried through without jamming or losing items
+      '0.5': single items work but a stream jams, overlaps or drops items
+      '0': only one item can be handled at a time
+    evidence:
+    - img03
+    - img05
+  visual_presentation:
+  - id: VP1
+    cat: spatial
+    item: 'The conveyor line reads as a track: the path the items follow through the play space can be traced by eye'
+    anchors:
+      '1': a visible conveyor route whose path the items follow can be traced
+      '0.5': conveyors visible but the route cannot be followed
+      '0': no visible conveyor line
+    evidence:
+    - img01
+    - img02
+    - img06
+  - id: VP2
+    cat: presentation
+    item: 'The sorting result is readable: the player can see the separate outputs and which kind collects in each'
+    anchors:
+      '1': outputs set apart and their contents distinguishable by kind
+      '0.5': outputs exist but which kind went where cannot be seen
+      '0': not visible
+    evidence:
+    - img03
+play_suggestions:
+  FP1:
+  - drop several items at the start of a route across several joined segments and watch whether all reach the end
+  - place items mid-route and at a joint between segments
+  FP2:
+  - 'feed a mix of the two kinds in random order: does every item land in its own output?'
+  - feed only one kind, then a fast mixed burst of both
+  FP3:
+  - 'send items into the lifting unit: do they come off at the higher level?'
+  - 'put material into the low intake repeatedly: does it arrive at the top without help?'
+  - 'watch a carrier after it unloads: does it go back down empty and load again?'
+  FP4:
+  - 'send items along a route with one or more bends: do they stay on and carry on in the new direction?'
+  - put an item right at a bend and see whether it moves on
+  FP5:
+  - 'feed items one after another in quick succession at the intake: do they all come through?'
+  - keep feeding for a while and check that nothing jams or goes missing
+  robustness:
+  - if the stages are connected, run the whole line from input to outputs and check the counts in each output against what was fed
+  - overload the input with many items at once
+  - break or remove one segment mid-line and see what happens to the flow
+  - leave and come back while items are in transit
+v4_map:
+  U1: CR1 (curved sections exist); behaviour already scored by FP4
+  U2: CR2 (split at belt end) + CR3 (separate outputs, one per kind); onward outflow dropped as peripheral
+  U3: CR4 (lift, loading point, outlet); loaded-up / empty-down cycle moved into FP3
+  U4: CR3 (kinds told apart by an item property)
+  U5: CR2 (detector before the split) + FP2 (reading decides the route)
+  FP1: FP1
+  FP2: FP2 (reworded to the detection-decides-route rule from U5; merged with v3 FP6 into automatic sorting)
+  FP3: FP3 (carrier cycle added from U3 and the keep requirement; existence part to CR4)
+  FP4: FP4 (existence of curves in CR1)
+  FP5: FP5
+  FP6: 'FP2 (merged: automatic sorting; existence of the kinds and outputs in CR3)'
+  VP1: VP1
+  VP2: VP2
+provenance:
+  source_yaml: T-IO-7ecf78daed.yaml
+  source_sha256: f16ed1caa9f4416f7334b9f9c8734a6b2e5b873ff25b080e30dc306de574e600
+  size_waiver: null
+  size_max: null
+  sources:
+  - refs:
+    - img01
+    - img02
+    - img03
+    - img04
+    - img05
+    - img06
+    bundle: 7ecf78daed
+    title: 传送带分拣：识别、分流到不同出口

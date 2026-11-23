@@ -1,0 +1,17 @@
+#!/bin/bash
+# vglrun for GameAnything-Bench containers. With a GPU (docker run --gpus, i.e. /dev/nvidia* or a DRI render node, and
+# GAB_GPU != 0) this is VirtualGL's vglrun (adapters call `vglrun -d egl ...`). Without one, VirtualGL's options are dropped and
+# the program runs on Mesa software OpenGL (llvmpipe) on the X display it was given, so the same adapter works on a CPU-only Docker.
+if [ "${GAB_GPU:-auto}" != 0 ] && { ls /dev/nvidia0 >/dev/null 2>&1 || ls /dev/dri/renderD* >/dev/null 2>&1; } && [ -x /opt/VirtualGL/bin/vglrun ]; then
+  exec /opt/VirtualGL/bin/vglrun "$@"
+fi
+while [ $# -gt 0 ]; do
+  case $1 in
+    -d|-c|-q|-fps|-np|-gamma|-tr|-v|-ms|-trapx11|-sp|-st|-nodl|+sync|-sync|+tr|-ld|+v|+np|+sp|+tr|+wm|-wm|+xcb|-xcb|+ocl|-ocl|+pr|-pr)
+      case $1 in -d|-c|-q|-fps|-gamma|-st|-ms|-ld) shift 2;; *) shift;; esac;;
+    --) shift; break;;
+    *) break;;
+  esac
+done
+export LIBGL_ALWAYS_SOFTWARE=1
+exec "$@"

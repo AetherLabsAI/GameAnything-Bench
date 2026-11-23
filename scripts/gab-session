@@ -1,0 +1,23 @@
+#!/usr/bin/env bash
+# gab-session: start a shell whose environment holds your model API keys, typed in now (hidden input). Keys are never
+# written to a file, a command line or shell history; `gab` commands started from this shell inherit them and keep
+# running after you log out (the key then lives only in those processes' memory). Exit the shell to drop the keys.
+#
+#   scripts/gab-session                      # asks for the default keys (empty answer = skip)
+#   scripts/gab-session OPENROUTER_API_KEY   # asks only for the keys named
+#
+# CLAUDE_CODE_OAUTH_TOKEN = YOUR OWN Claude subscription token for `gab run --agent claude --agent-in-container`: run
+# `claude setup-token` in your own terminal (it prints the long-lived token once), then type / paste it here. Never paste it
+# into a chat, a file or a command line. gab's host proxy adds it to the model requests; it never enters a container.
+set -euo pipefail
+keys=("$@"); [ ${#keys[@]} -gt 0 ] || keys=(OPENROUTER_API_KEY MESHY_API_KEY CLAUDE_CODE_OAUTH_TOKEN)
+[ -t 0 ] || { echo "gab-session: needs a terminal (keys are typed, never piped from a file)" >&2; exit 1; }
+for k in "${keys[@]}"; do
+  [[ $k =~ ^[A-Z_][A-Z0-9_]*$ ]] || { echo "bad variable name: $k" >&2; exit 1; }
+  read -rsp "$k (empty = skip): " v; echo
+  if [ -n "$v" ]; then export "$k=$v"; echo "  $k set (${#v} chars)"; fi
+  unset v
+done
+export HISTFILE=/dev/null          # no history file in this shell (nothing typed here should be kept)
+echo "gab-session: keys are in this shell only; 'exit' drops them."
+PS1="(gab-session) ${PS1:-\\u@\\h:\\w\\$ }" exec bash --norc -i

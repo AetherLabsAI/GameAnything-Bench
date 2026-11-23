@@ -1,0 +1,598 @@
+{
+ "version": "1.1.1 (github ExOK/Celeste64 tag v1.1.1, Foster 0.1.18, probe build)",
+ "mods": [],
+ "src": null,
+ "started": "2026-10-30 04:51:39",
+ "fps": {
+  "updates_per_s": 60.6,
+  "_frames": 300
+ },
+ "boot": {
+  "version": "v.1.1.1",
+  "levels": [
+   {
+    "id": "0_FORSAKEN_CITY",
+    "name": "Forsaken City",
+    "map": "1",
+    "strawberries": 30
+   }
+  ],
+  "maps": [
+   "1",
+   "1-1",
+   "1-10",
+   "1-2",
+   "1-3",
+   "1-4",
+   "1-5",
+   "1-6",
+   "1-7",
+   "1-8",
+   "1-9",
+   "Palette"
+  ],
+  "n_textures": 114,
+  "n_models": 33,
+  "n_subtextures": 31,
+  "n_shaders": 3,
+  "n_fonts": 1,
+  "languages": [
+   "english"
+  ],
+  "_frames": 0
+ },
+ "hub": {
+  "scenes": [
+   "Titlescreen",
+   "Overworld",
+   "World"
+  ],
+  "entered": true,
+  "map": "1",
+  "level_id": "0_FORSAKEN_CITY",
+  "player_state": "Normal",
+  "_frames": 500
+ },
+ "maps": {
+  "maps": {
+   "1": {
+    "loaded": true,
+    "player": true,
+    "counts": {
+     "Badeline": 1,
+     "BreakBlock": 15,
+     "Cassette": 10,
+     "Checkpoint": 10,
+     "DeathBlock": 5,
+     "Decoration": 1,
+     "DoubleDashPuzzleBlock": 1,
+     "EndingArea": 1,
+     "FallingBlock": 68,
+     "Feather": 13,
+     "FixedCamera": 1,
+     "FloatingDecoration": 5,
+     "FloatyBlock": 22,
+     "Granny": 1,
+     "IntroCar": 2,
+     "MovingBlock": 3,
+     "Player": 1,
+     "Refill": 8,
+     "Signpost": 5,
+     "Solid": 440,
+     "SpikeBlock": 98,
+     "Spring": 6,
+     "StaticProp": 100,
+     "Strawberry": 20,
+     "Theo": 1,
+     "TrafficBlock": 9
+    },
+    "checkpoints": [
+     "After Tutorial",
+     "Baddy Island",
+     "East Tower",
+     "Feather Platform",
+     "Freeway",
+     "Freeway Feather",
+     "Rooftop",
+     "Tower",
+     "Tower Entrance",
+     "Tutorial"
+    ],
+    "player_alive": true,
+    "player_state": "Normal"
+   },
+   "1-1": {
+    "loaded": true,
+    "player": true,
+    "counts": {
+     "Cassette": 1,
+     "DeathBlock": 1,
+     "Decoration": 1,
+     "Player": 1,
+     "Solid": 4,
+     "SpikeBlock": 6,
+     "StaticProp": 11,
+     "Strawberry": 1,
+     "TrafficBlock": 5
+    },
+    "checkpoints": [],
+    "player_alive": true,
+    "player_state": "StrawbReveal"
+   },
+   "1-10": {
+    "loaded": true,
+    "player": true,
+    "counts": {
+     "BreakBlock": 1,
+     "Cassette": 1,
+     "DeathBlock": 1,
+     "Decoration": 1,
+     "FallingBlock": 1,
+     "MovingBlock": 2,
+     "Player": 1,
+     "Refill": 6,
+     "Solid": 12,
+     "SpikeBlock": 58,
+     "Spring": 1,
+     "StaticProp": 9,
+     "Strawberry": 1,
+     "TrafficBlock": 1
+    },
+    "checkpoints": [],
+    "player_alive": true,
+    "player_state": "StrawbReveal"
+   },
+   "1-2": {
+    "loaded": true,
+    "player": true,
+    "counts": {
+     "Cassette": 1,
+     "DeathBlock": 1,
+     "Decoration": 1,
+     "FallingBlock": 23,
+     "Player": 1,
+     "Refill": 5,
+     "Solid": 1,
+     "Spring": 3,
+     "StaticProp": 5,
+     "Strawberry": 1
+    },
+    "checkpoints": [],
+    "player_alive": true,
+    "player_state": "StrawbReveal"
+   },
+   "1-3": {
+    "loaded": true,
+    "player": true,
+    "counts": {
+     "Cassette": 1,
+     "Coin": 4,
+     "DeathBlock": 1,
+     "Decoration": 1,
+     "GateBlock": 1,
+     "Player": 1,
+     "Solid": 8,
+     "SpikeBlock": 8,
+     "StaticProp": 5,
+     "Strawberry": 1
+    },
+    "checkpoints": [],
+    "player_alive": true,
+    "player_state": "StrawbReveal"
+   },
+   "1-4": {
+    "loaded": true,
+    "player": true,
+    "counts": {
+     "Cassette": 1,
+     "DeathBlock": 2,
+     "Decoration": 1,
+     "Player": 1,
+     "Solid": 5,
+     "SpikeBlock": 33,
+     "StaticProp": 3,
+     "Strawberry": 1,
+     "TrafficBlock": 5
+    },
+    "checkpoints": [],
+    "player_alive": true,
+    "player_state": "StrawbReveal"
+   },
+   "1-5": {
+    "loaded": true,
+    "player": true,
+    "counts": {
+     "Cassette": 1,
+     "DeathBlock": 1,
+     "Decoration": 1,
+     "FallingBlock": 5,
+     "Player": 1,
+     "Refill": 8,
+     "Solid": 7,
+     "SpikeBlock": 32,
+     "StaticProp": 5,
+     "Strawberry": 1
+    },
+    "checkpoints": [],
+    "player_alive": true,
+    "player_state": "StrawbReveal"
+   },
+   "1-6": {
+    "loaded": true,
+    "player": true,
+    "counts": {
+     "Cassette": 1,
+     "CassetteBlock": 24,
+     "DeathBlock": 1,
+     "Decoration": 1,
+     "FloatingDecoration": 4,
+     "Player": 1,
+     "Solid": 6,
+     "StaticProp": 17,
+     "Strawberry": 1
+    },
+    "checkpoints": [],
+    "player_alive": true,
+    "player_state": "StrawbReveal"
+   },
+   "1-7": {
+    "loaded": true,
+    "player": true,
+    "counts": {
+     "Cassette": 1,
+     "Coin": 10,
+     "DeathBlock": 1,
+     "Decoration": 1,
+     "FallingBlock": 47,
+     "GateBlock": 1,
+     "Player": 1,
+     "Solid": 6,
+     "StaticProp": 11,
+     "Strawberry": 1
+    },
+    "checkpoints": [],
+    "player_alive": true,
+    "player_state": "StrawbReveal"
+   },
+   "1-8": {
+    "loaded": true,
+    "player": true,
+    "counts": {
+     "Cassette": 1,
+     "Checkpoint": 1,
+     "Coin": 4,
+     "DeathBlock": 1,
+     "Decoration": 1,
+     "Feather": 9,
+     "GateBlock": 1,
+     "Player": 1,
+     "Solid": 18,
+     "SpikeBlock": 188,
+     "StaticProp": 9,
+     "Strawberry": 1
+    },
+    "checkpoints": [
+     "01"
+    ],
+    "player_alive": true,
+    "player_state": "StrawbReveal"
+   },
+   "1-9": {
+    "loaded": true,
+    "player": true,
+    "counts": {
+     "Cassette": 1,
+     "Coin": 4,
+     "DeathBlock": 2,
+     "Decoration": 1,
+     "FallingBlock": 1,
+     "GateBlock": 4,
+     "Player": 1,
+     "Refill": 1,
+     "Solid": 12,
+     "SpikeBlock": 22,
+     "StaticProp": 17,
+     "Strawberry": 1
+    },
+    "checkpoints": [],
+    "player_alive": true,
+    "player_state": "StrawbReveal"
+   }
+  },
+  "_frames": 1474
+ },
+ "move": {
+  "run_top_speed": 64,
+  "run_frames_to_95pct": 9,
+  "run_dist_1s": 59.36,
+  "stop_frames": 6,
+  "stop_dist": 3.11,
+  "jump_height": 23.25,
+  "jump_air_frames": 48,
+  "hop_height": 7.5,
+  "run_jump_dist": 52.95,
+  "fall_terminal": -120,
+  "fall_frames_150": 80,
+  "_frames": 491
+ },
+ "dash": {
+  "dashes_start": 1,
+  "dash_frames": 15,
+  "dash_speed": 140,
+  "dash_dist": 32.81,
+  "dashes_after_ground_dash": 1,
+  "dashes_after_rest": 1,
+  "air_dashes_after_dash": 0,
+  "second_air_dash_state": "no dash",
+  "state_before_second": "Normal",
+  "landed": true,
+  "refill_frames_after_landing": 0,
+  "_frames": 170
+ },
+ "climb": {
+  "grabbed": true,
+  "climb_rise_0_5s": 20,
+  "still_climbing": true,
+  "hang_drift": 0,
+  "hang_state": "Climbing",
+  "kick_away_speed": 83.2,
+  "kick_up_speed": 90,
+  "_frames": 128
+ },
+ "camera": {
+  "rest_dist": 100.9,
+  "rest_pitch_dz": 54.9,
+  "rotate_0_5s_deg": 114,
+  "run_max_dist": 112.7,
+  "after_run_dist": 101.4,
+  "_frames": 378
+ },
+ "interact": {
+  "strawberry": {
+   "id": "1/0",
+   "states": [
+    "StrawbGet",
+    "Normal"
+   ],
+   "count_gain": 1,
+   "recorded": true
+  },
+  "refill": {
+   "dashes_after": 1,
+   "cooldown_s": 4
+  },
+  "spring": {
+   "launch_speed": 160,
+   "rise": 66
+  },
+  "feather": {
+   "states": [
+    "Normal",
+    "FeatherStart",
+    "Feather",
+    "Normal"
+   ]
+  },
+  "checkpoint": {
+   "name": "After Tutorial",
+   "entry_checkpoint": "After Tutorial",
+   "saved_checkpoint": "After Tutorial"
+  },
+  "_frames": 525
+ },
+ "hazards": {
+  "spawn": [
+   0,
+   -89.6,
+   25.6
+  ],
+  "pit": {
+   "killed": true,
+   "respawned": true,
+   "respawn_s": 1.2,
+   "entry_reason": "Respawned",
+   "respawn_dist_from_spawn": 0,
+   "state_after": "Normal",
+   "deaths_gain": 1
+  },
+  "deathblock": {
+   "killed": true,
+   "respawned": true,
+   "respawn_s": 1.2,
+   "entry_reason": "Respawned",
+   "respawn_dist_from_spawn": 0,
+   "state_after": "Normal",
+   "deaths_gain": 1
+  },
+  "spikes": {
+   "killed": true,
+   "respawned": true,
+   "respawn_s": 1.2,
+   "entry_reason": "Respawned",
+   "respawn_dist_from_spawn": 0,
+   "state_after": "Normal",
+   "deaths_gain": 1
+  },
+  "checkpoint_respawn": {
+   "name": "After Tutorial",
+   "entry_checkpoint": "After Tutorial",
+   "respawn_dist_from_checkpoint": 0
+  },
+  "_frames": 606
+ },
+ "npc": {
+  "npcs": [
+   {
+    "npc": "Badeline#0",
+    "reachable": true,
+    "talked": true,
+    "n_lines": 24,
+    "first_line": "Hey.",
+    "ended": true,
+    "state_after": "Normal"
+   },
+   {
+    "npc": "Granny#1",
+    "reachable": true,
+    "talked": true,
+    "n_lines": 12,
+    "first_line": "It's so cold out here\nI can see my farts.",
+    "ended": true,
+    "state_after": "Normal"
+   },
+   {
+    "npc": "Signpost#2",
+    "reachable": true,
+    "talked": true,
+    "n_lines": 6,
+    "first_line": "Secret Sign\nDo NOT read",
+    "ended": true,
+    "state_after": "Normal"
+   },
+   {
+    "npc": "Signpost#3",
+    "reachable": true,
+    "talked": true,
+    "n_lines": 7,
+    "first_line": "Secret Sign\nDo NOT read",
+    "ended": true,
+    "state_after": "Normal"
+   },
+   {
+    "npc": "Signpost#4",
+    "reachable": true,
+    "talked": true,
+    "n_lines": 0,
+    "first_line": null,
+    "ended": false,
+    "state_after": "Cutscene"
+   },
+   {
+    "npc": "Signpost#5",
+    "reachable": true,
+    "talked": true,
+    "n_lines": 13,
+    "first_line": "Celeste 64: Fragments of the Mountain",
+    "ended": true,
+    "state_after": "Normal"
+   },
+   {
+    "npc": "Signpost#6",
+    "reachable": true,
+    "talked": true,
+    "n_lines": 6,
+    "first_line": "Lonely Sign\nPlease read",
+    "ended": true,
+    "state_after": "Normal"
+   },
+   {
+    "npc": "Theo#7",
+    "reachable": true,
+    "talked": true,
+    "n_lines": 13,
+    "first_line": "Strawberry!!",
+    "ended": true,
+    "state_after": "Normal"
+   }
+  ],
+  "_frames": 4615
+ },
+ "cassette": {
+  "cassette_maps": [
+   "1-1",
+   "1-10",
+   "1-2",
+   "1-3",
+   "1-4",
+   "1-5",
+   "1-6",
+   "1-7",
+   "1-8",
+   "1-9"
+  ],
+  "states": [
+   "Normal",
+   "Cassette",
+   "StrawbReveal"
+  ],
+  "entered_map": "1-1",
+  "submap": true,
+  "_frames": 320
+ },
+ "perf": {
+  "update_ms_median": 0.44,
+  "render_ms_median": 17.959,
+  "update_ms_p95": 0.779,
+  "render_ms_p95": 56.677,
+  "fps": 59.8,
+  "_frames": 674
+ },
+ "_runs": [
+  {
+   "group": [
+    "fps",
+    "boot",
+    "hub",
+    "maps",
+    "move",
+    "dash",
+    "climb",
+    "camera",
+    "interact",
+    "hazards",
+    "npc",
+    "cassette",
+    "perf"
+   ],
+   "done": true,
+   "exit": "0",
+   "fatal": null
+  },
+  {
+   "group": [
+    "save"
+   ],
+   "done": true,
+   "exit": "0",
+   "fatal": null
+  },
+  {
+   "group": [
+    "saveload"
+   ],
+   "done": true,
+   "exit": "0",
+   "fatal": null
+  }
+ ],
+ "save": {
+  "paused": true,
+  "back_to": "Overworld",
+  "file_written": true,
+  "file_level": "0_FORSAKEN_CITY",
+  "file_strawberries": [
+   "1/0"
+  ],
+  "file_checkpoint": "After Tutorial",
+  "expected_strawberry": "1/0",
+  "expected_checkpoint": "After Tutorial",
+  "_frames": 336,
+  "reload": {
+   "level": "0_FORSAKEN_CITY",
+   "strawberries": [
+    "1/0"
+   ],
+   "checkpoint": "After Tutorial",
+   "resume_checkpoint": "After Tutorial",
+   "resume_dist": 8,
+   "strawberry_hidden": true,
+   "_frames": 110
+  }
+ },
+ "_wall_s": 200.8,
+ "alive_at_end": true,
+ "log_errors": 0,
+ "_error_lines": [],
+ "_error_log_file": null,
+ "_instance": "/home/player/oss-celeste64/inst/aa1"
+}

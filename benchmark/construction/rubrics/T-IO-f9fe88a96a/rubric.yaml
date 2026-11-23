@@ -1,0 +1,224 @@
+# GameAnything-Bench scoring material: never shown to agents during a trial.
+task_id: T-IO-f9fe88a96a
+source_inventory:
+- 'img01: watercolour on a beige album page; a black-haired naked child bursts out of a huge split pink-and-green peach with leaves, arms raised;
+  red seal at lower left'
+- 'img02: woodblock two-page spread; left page: a monkey, a white dog and a pheasant on a grassy slope with mountains behind, looking toward the
+  right page; right page: a young man in an orange patterned robe with two swords tips a container from which small objects fall (a coral branch,
+  knotted ornaments, a ball and others); a straw cape, a hat and a tied bundle lie at lower right; the characters for ''Momotaro'' (with kana)
+  are legible beside him'
+- 'img03: woodblock print; the young hero in red and striped clothes with a sword walks left, followed in a line by a monkey in a red vest, a
+  dog with a red scarf and a pheasant carrying a banner reading ''日本一'' on a pole topped by a peach; calligraphy at upper left beginning with
+  ''Momotaro'', artist signature and seal at right'
+- 'img04: woodblock book cover titled ''Momotaro''; at a stone archway crowned by a carved demon face, a moustached warrior in blue and yellow
+  forces the big studded wooden gate with a heavy pole; behind him armed animal-headed warriors (pheasant, dog, monkey) in clothes with spears
+  and a banner with a peach emblem; two horned demons peer over the high brick wall; mountains and pines behind'
+- 'img05: painted two-panel page; left: a red-faced horned demon in a brown robe bows to the ground, with a heap of treasure (a pink bag, jewels,
+  a hat) behind him; right: the hero sits on a rock holding a fan and a sword, peach-patterned trousers, a red ''日本一'' banner behind him; sea
+  waves and pine branches in the background of both panels'
+- 'img06: woodblock book cover with a mirrored red title ''MOMOTARO'' and a library stamp, labels and binding threads; on a mountain path with
+  pines and chrysanthemums, the hero binds the arms of a kneeling, hairy demon in striped clothes with a cord while a clothed monkey holds the
+  demon down; an armoured pheasant warrior stands behind'
+- 'note: the bundle mixes artists and versions: the hero is drawn as a child (img01), a youth (img02, img03, img05, img06) and a moustached man
+  (img04); the animals are natural animals (img02, img03) or clothed, armed animal warriors (img04, img06); the hero''s name ''Momotaro'' is legible
+  in img02, img03, img04 and img06; no image shows a home-coming'
+instructions_meta:
+  requirement_groups:
+    story progression and opening:
+    - CR1
+    - CR4
+    - FP1
+    - VP1
+    characters and party:
+    - CR2
+    - FP2
+    key setting and its challenge:
+    - CR3
+    - FP3
+    - VP2
+    climax and ending:
+    - CR5
+    - FP4
+    - VP3
+  explicit_requirements:
+  - type: keep
+    text: I want the hero's companions to be a dog, a monkey and a pheasant, just like in the pictures.
+    covers:
+    - CR2
+  - type: specify
+    text: 'The ending should work like in the pictures: once beaten, the enemies submit to the hero and hand their treasure over to him.'
+    covers:
+    - CR5
+rubric:
+  content_realization:
+  - id: CR1
+    item: The story opens with the hero's birth from a giant peach, given as the origin of the protagonist the player plays
+    anchors:
+      '1': a birth from a giant peach is shown or told and is presented as the origin of the player's protagonist
+      '0.5': a peach birth shown or told, but not linked to the protagonist
+      '0': no peach birth
+    evidence:
+    - img01
+  - id: CR2
+    item: 'The hero''s party: a dog, a monkey and a pheasant who follow him as his companions'
+    anchors:
+      '1': all three animal companions of these kinds, recognisable as such, following the hero as his party
+      '0.5': animal companions with the kinds partly wrong, missing or not recognisable, or the three animals without being the hero's party
+      '0': no animal companions
+    evidence:
+    - img02
+    - img03
+    - img04
+    - img06
+  - id: CR3
+    item: The antagonists are demons who hold a walled stronghold with a gate, the party's destination
+    anchors:
+      '1': demons as the enemy, holding a stronghold closed off by a wall and entered through a gate, which the party heads for
+      '0.5': demon enemies without a walled stronghold, or a stronghold not held by demons
+      '0': no demons or no stronghold
+    evidence:
+    - img04
+    - img05
+    - img06
+  - id: CR4
+    item: 'The story''s events come in the reference''s order: the peach birth, the gathering of the companions, the assault on the demons'' stronghold,
+      the demons'' defeat'
+    anchors:
+      '1': all four events present in this order
+      '0.5': most events present, with one missing or out of order
+      '0': no recognisable sequence of these events
+    evidence:
+    - img01
+    - img02
+    - img03
+    - img04
+    - img05
+    - img06
+  - id: CR5
+    item: 'The ending: the defeated demons submit to the hero and their treasure passes to him'
+    anchors:
+      '1': the defeated demons submit to the hero and hand their treasure over to him
+      '0.5': the demons defeated, but without the submission or without the treasure
+      '0': no such ending, or another outcome
+    evidence:
+    - img05
+    - img06
+  functions_playability:
+  - id: FP1
+    item: The story plays as a progression from its start to the demons' defeat, each stage opening the next
+    anchors:
+      '1': a coherent start-to-end playthrough in which the companions must be gained before the stronghold and the stronghold overcome before
+        the final confrontation
+      '0.5': the stages can be skipped or played out of order, or the progression has no clear start or end
+      '0': no playable story progression
+    evidence:
+    - img01
+    - img02
+    - img03
+    - img04
+    - img05
+  - id: FP2
+    item: The animals join the hero's party in play before the assault and then fight beside him in the later progression
+    anchors:
+      '1': the animals join the party in play before the stronghold, and afterwards accompany the hero and take part in the fights
+      '0.5': the companions are present from the start, or they join but play no further part
+      '0': the companions never join or act in play
+    evidence:
+    - img02
+    - img03
+    - img04
+    - img06
+  - id: FP3
+    item: The party must overcome the demons' defended stronghold before the final confrontation, with the companions taking part
+    anchors:
+      '1': the stronghold is a barrier that has to be overcome against its demon defenders, with the companions involved
+      '0.5': the stronghold is simply entered with no obstacle, or the hero overcomes it alone
+      '0': the stronghold cannot be reached or plays no part
+    evidence:
+    - img04
+  - id: FP4
+    item: A decisive confrontation with the demons has to be won, and winning it leads to a set-apart ending
+    anchors:
+      '1': a final confrontation that has to be won, followed by a distinct ending that resolves the story
+      '0.5': a final fight without an ending that resolves it, or an ending reached without a confrontation
+      '0': no climax or ending
+    evidence:
+    - img05
+    - img06
+  visual_presentation:
+  - id: VP1
+    cat: key_moment
+    item: 'The birth: a child emerging from a huge split peach'
+    anchors:
+      '1': a recognisable child-out-of-a-giant-peach moment
+      '0.5': a peach and a child, but the emergence cannot be recognised
+      '0': none
+    evidence:
+    - img01
+  - id: VP2
+    cat: spatial
+    item: 'The stronghold looks like a fortress: a high masonry wall with a massive wooden gate under a stone arch'
+    anchors:
+      '1': 'the wall and gate read as a fortress front: high masonry with a massive, heavy gate as its entrance'
+      '0.5': a wall or gate that looks ordinary (a fence, a house door) rather than a fortress
+      '0': none
+    evidence:
+    - img04
+  - id: VP3
+    cat: key_moment
+    item: 'The submission: a defeated horned demon bows before the hero, with the treasure laid out'
+    anchors:
+      '1': a recognisable horned demon visibly submitting to the hero, with the treasure visible
+      '0.5': a defeated enemy without the demon look, the submission or the treasure
+      '0': none
+    evidence:
+    - img05
+play_suggestions:
+  FP1:
+  - try to reach the stronghold or the final confrontation before gathering any companions
+  - play from the start to the end and note each story stage reached, in order
+  FP2:
+  - after each companion joins, check whether it stays with the hero and takes part later
+  - 'walk past a companion without engaging with it: can the story still go on?'
+  FP3:
+  - try to get into the stronghold without overcoming its defence
+  - check whether the companions take part in the assault
+  FP4:
+  - 'lose the final confrontation: what happens, and can you try again?'
+  - 'win it: is there a distinct ending with the demons'' submission and the treasure?'
+  robustness:
+  - 'leave in the middle of the journey and come back: are the companions and progress kept?'
+  - 'go back to earlier places after the stronghold: does the story state stay consistent?'
+  - stand idle or walk away during the final confrontation
+v4_map:
+  U1: CR1
+  U2: CR2
+  U3: CR3
+  U4: 'dropped: mechanism already scored by FP2 / FP3 (companions fight beside the hero)'
+  U5: CR2 (leader-follower relation merged into the party item)
+  U6: CR4
+  U7: CR5
+  FP1: FP1 (gating kept; the stage list itself moved to CR4)
+  FP2: FP2 (existence of the companions split off to CR2)
+  FP3: FP3 (existence of the stronghold split off to CR3)
+  FP4: FP4 (submission and treasure content split off to CR5)
+  VP1: VP1
+  VP2: 'dropped: duplicate of CR2 (the three kinds and their recognisability are scored there; the images share no look of the party beyond the
+    kinds)'
+  VP3: VP2 (look only; the walled, gated stronghold as a place and its demon holders moved to CR3)
+  VP4: VP3
+provenance:
+  source_yaml: T-IO-f9fe88a96a.yaml
+  source_sha256: 1180f495ca8e73fe310ae72faa3b459db5a1a706216464460f02d7cfc2dc1028
+  size_waiver: null
+  size_max: null
+  sources:
+  - refs:
+    - img01
+    - img02
+    - img03
+    - img04
+    - img05
+    - img06
+    bundle: f9fe88a96a
+    title: 桃太郎：出发、收伙伴、渡海、打鬼王、带宝回家

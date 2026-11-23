@@ -1,0 +1,213 @@
+# GameAnything-Bench scoring material: never shown to agents during a trial.
+task_id: T-IO-cfbd550833
+source_inventory:
+- 'img01: close-up of a hand holding a baseplate compass with a sighting mirror on a folded topographic map (contour lines, water, trails, place
+  names); an area is outlined by hand in black marker'
+- 'img02: a magenta control description sheet: header with event name, classes (M12 / N12), course length 2,6 km and climb 50 m; a start row (triangle);
+  rows 1-7, each with the order number, a control code (37, 38, 46, 45, 42, 41, 100) and symbols for the feature and the control''s position on
+  it; a bottom row: 70 m from the last control to the finish (circle, dashed line, arrow, double circle)'
+- 'img03: a control on leaf litter in a forest: an orange-and-white flag hung from a metal stand, a plate with the number 2 (and ''144 MHz''),
+  a clamp punch, an electronic unit marked 2 and a radio box at the foot'
+- 'img04: a child in a bike helmet, holding a map, registers at a small box mounted on a wooden wayside cross in a beech forest; a bicycle at
+  the right edge'
+- 'img05: a small orange-and-white control flag on a short stand in a cleared, muddy woodland area with wheel ruts and tree stumps'
+- 'img06: a runner with a start-number bib and a map in hand climbs concrete stairs in an urban park; an orange-and-white flag with a registration
+  unit hangs on the stair railing; other runners on the paths below; a city skyline behind'
+instructions_meta:
+  requirement_groups:
+    course structure and result:
+    - CR1
+    - FP1
+    - FP4
+    check-in at the points:
+    - CR2
+    - FP2
+    navigation:
+    - CR3
+    - FP3
+    points and terrain:
+    - CR4
+    - VP1
+    - VP2
+    course information display:
+    - VP3
+  explicit_requirements:
+  - type: keep
+    text: Keep the check-in at each control, so the player has to register right at the control itself to prove they actually got there.
+    covers:
+    - CR2
+    - FP2
+  - type: specify
+    text: The controls have to be taken in a fixed order, from the start through each one in turn, with the finish coming only after the last
+      one.
+    covers:
+    - CR1
+    - FP1
+rubric:
+  content_realization:
+  - id: CR1
+    item: The game contains a course made of a start, a set of controls with a given order, and a finish placed after the last control
+    anchors:
+      '1': a start, several controls with a defined order, and a finish that follows the last control are all present
+      '0.5': controls and a start or finish are present, but no order is defined among the controls (or the start / finish is missing)
+      '0': 'no course: no controls, or no start and no finish'
+    evidence:
+    - 'img02: start triangle, rows 1-7 in order, finish double circle after the last control'
+  - id: CR2
+    item: Each control is a fixed, marked point that carries its own identifier and a means of registering the visit at the control itself
+    anchors:
+      '1': every control is a fixed marked point with its own identifier and a registration means at the point
+      '0.5': controls are marked points, but without individual identifiers, or registration is not tied to the control itself
+      '0': no distinct controls
+    evidence:
+    - 'img03: flag, number plate 2, punch and electronic unit at the stand'
+    - img04
+    - 'img06: flag with a registration unit on the railing'
+  - id: CR3
+    item: The game provides a topographic map of the play terrain itself, showing the terrain features by which the controls are found
+    anchors:
+      '1': a map that matches the actual play terrain and shows enough of its features (e.g. relief, water, paths, vegetation) to locate the controls
+        by them
+      '0.5': a map is present, but only as a plain overview or route map without the terrain's features, or not matching the terrain
+      '0': no map
+    evidence:
+    - 'img01: contour lines, water and trails on the folded map'
+    - img04
+    - img06
+  - id: CR4
+    item: Each control stands at an identifiable terrain feature, and the course information gives for each control its identifier and that feature,
+      matching the control found there
+    anchors:
+      '1': every control sits at a distinct terrain feature, and the course information names for each control an identifier and a feature that
+        match the control on the ground
+      '0.5': the course information gives identifiers but no features (or they do not match the controls), or the controls are not placed at identifiable
+        features
+      '0': neither feature placement nor course information for the controls
+    evidence:
+    - 'img02: per row the control code and the feature symbols'
+    - img03
+    - img04
+    - img06
+  functions_playability:
+  - id: FP1
+    item: 'Taking the controls in order: the player must take the controls in the set order, and the finish counts only after the last control'
+    anchors:
+      '1': the control order is enforced (a skipped or out-of-order control is refused or makes the course incomplete), and the finish counts
+        only once the last control has been taken
+      '0.5': the order is enforced only in part (e.g. a skipped control is noticed but controls taken out of order are accepted, or the finish
+        counts before the last control)
+      '0': the controls can be taken in any order, or skipped, without effect
+    evidence:
+    - 'img02: rows 1-7 numbered in order, the finish row after the last control'
+  - id: FP2
+    item: 'Registering at a control: the player performs a check-in at the control and gets feedback that it counted; only registered controls
+      count toward the course'
+    anchors:
+      '1': an explicit registration at each control with feedback, and the record of registrations decides completion
+      '0.5': controls are ticked off, but without feedback, or the record does not affect the result
+      '0': no registration at controls
+    evidence:
+    - img03
+    - img04
+    - img06
+  - id: FP3
+    item: 'Navigation is the challenge: the player finds each control by consulting the map while moving and orienting it to the terrain'
+    anchors:
+      '1': the player needs and can use the map to find the controls, with a way to orient it to the terrain
+      '0.5': the map is not needed (the way to each control is shown directly, or the controls lie along one obvious corridor), or it cannot be
+        oriented
+      '0': the map cannot be consulted in play; controls are found only by wandering or by direct guidance
+    evidence:
+    - img01
+    - img04
+    - img06
+  - id: FP4
+    item: 'Finishing the run: reaching the finish ends the run with a clear result that tells a complete course from an incomplete one'
+    anchors:
+      '1': reaching the finish ends the run, and the result shown says whether the course was completed
+      '0.5': the run ends at the finish, but the result is unclear or does not tell a complete from an incomplete course
+      '0': the run has no end at the finish, or cannot be finished
+    evidence:
+    - 'img02: the finish row (double circle) closes the course'
+  visual_presentation:
+  - id: VP1
+    cat: spatial
+    item: The play space looks like a navigable outdoor terrain with distinguishable features
+    anchors:
+      '1': an outdoor terrain whose features (woodland, open ground, paths, relief) are visibly distinct
+      '0.5': outdoor terrain, but largely featureless or uniform
+      '0': no recognisable outdoor terrain
+    evidence:
+    - img03
+    - img04
+    - img05
+    - img06
+  - id: VP2
+    cat: style
+    item: Controls are marked conspicuously, so a control stands out from the terrain once the player is near it
+    anchors:
+      '1': control markers clearly visible against the terrain
+      '0.5': markers present but easy to miss against the terrain
+      '0': controls not visibly marked
+    evidence:
+    - img03
+    - img05
+    - img06
+  - id: VP3
+    cat: presentation
+    item: 'The course information is readable to the player during play: the sequence of controls and the identity of the next one'
+    anchors:
+      '1': the control sequence and the next control's identity are readable when needed during play
+      '0.5': only the next control or only the sequence is readable
+      '0': the course information is not shown
+    evidence:
+    - img02
+    - img06
+play_suggestions:
+  FP1:
+  - 'skip a control, or take two in the wrong order: is the out-of-order control refused or the course marked incomplete?'
+  - 'go to the finish before the last control: does it count?'
+  - 'if several controls are visible, go to a wrong one: is it recognisable as wrong?'
+  FP2:
+  - 'reach a control and pass it without registering: does it count?'
+  - 'register at a control twice: is it counted once, with feedback?'
+  FP3:
+  - 'try to find the next control using only the map: is it possible?'
+  - turn around and check whether the map can be oriented (any means)
+  - 'leave the path and head straight across the terrain to the next control: does the map still guide you?'
+  - check whether the controls are spread over the terrain or simply follow one road / track
+  FP4:
+  - 'run the course in order to the finish: is the end and the result clear?'
+  - 'finish with a control missing: does the result say the course is incomplete?'
+  robustness:
+  - 'leave the course area or get lost far off route: can you recover and continue?'
+  - stand still at the start for a long time, then play
+  - 'finish, then restart the course: is the record reset?'
+v4_map:
+  U1: CR1 (course existence) | order enforcement scored by FP1, end and result by FP4
+  U2: FP2 (registration as proof) + CR2 (registration means at the control)
+  U3: FP3 (navigation by map) + CR3 (the map exists)
+  U4: CR3 (relief / water / paths now examples, not a checklist)
+  U5: CR4
+  FP1: CR1 (start / ordered controls / finish exist) + FP1 (order enforced) + FP4 (finish ends the run, result)
+  FP2: FP2 (registration existence part to CR2)
+  FP3: FP3 (map existence part to CR3)
+  FP4: CR4 (placement at features and identifier-description match)
+  VP1: VP1 (look of the terrain) | 'controls spread through it, not one corridor' -> FP3 anchor 0.5 (the map is not needed)
+  VP2: VP2
+  VP3: VP3
+provenance:
+  source_yaml: T-IO-cfbd550833.yaml
+  source_sha256: a7a1de6c85c67627eb344dff396f355a39005b914f4c6ffae0bf3f36c1206bb1
+  size_waiver: null
+  size_max: null
+  sources:
+  - refs:
+    - img01
+    - img02
+    - img03
+    - img04
+    - img05
+    - img06
+    bundle: cfbd550833
+    title: 定向越野：地图、检查点打卡、按顺序找点

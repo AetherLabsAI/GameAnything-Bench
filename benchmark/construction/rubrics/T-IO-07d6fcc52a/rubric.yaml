@@ -1,0 +1,201 @@
+# GameAnything-Bench scoring material: never shown to agents during a trial.
+task_id: T-IO-07d6fcc52a
+source_inventory:
+- 'img01: hand-coloured woodcut; a large wooden ship with a timber-framed house-like superstructure stands on land beside water, unfinished; workers
+  hammer, plane, carry and climb ladders on and around it; in front two men hew and plane a beam on trestles among wood chips; on the right an
+  old bearded man in a long robe and hat walks with a staff, overseeing; a bird carrying a green sprig flies at the top right; legible label ''ARCHA
+  NOE'' on the gable, smaller Latin labels on the compartments (partly legible)'
+- 'img02: the same woodcut (other colouring) as the upper half of a printed book page (header ''Secunda etas mundi'', ''Folium XI''); below, columns
+  of Latin blackletter text and a rainbow arching between two clouds with zodiac signs under it; two handwritten notes in circles at the bottom'
+- 'img03: black-and-white woodcut; a long house-like ark with a pitched roof and small windows floats on wavy flood water; dark clouds and falling
+  rain; a drowned building shows at the left edge, reeds at the right; a bird with a sprig in its beak flies at the top right; ''PAULI 280'' printed
+  at the bottom'
+- 'img05: illuminated manuscript page with Arabic-script text panels above and below; a red sailing ship with a large white sail and pennants
+  rides grey waves under a swirling storm sky; a haloed (flame nimbus) man in a blue robe sits enthroned at the stern holding the steering oar;
+  about eight men in turbans and robes on deck, some pulling ropes; a row of arched openings along the hull with small figures (possibly animals)
+  in them'
+- 'img06: engraving; the house-like ark rests on top of a mountain labelled ''ARMENIA / The Mountains of ARARAT''; a tree grows out of the ark
+  from a medallion ''NOAH'' with branches to medallions ''Japhet'' and ''Cham'' and labels ''EUROPE'', ''ASIA'', ''AFRICA''; deer, goats and cattle
+  walk away from the ark down the slopes; on the left people carry loads, push a wheelbarrow and put up buildings'
+instructions_meta:
+  requirement_groups:
+    opening phase and its milestone:
+    - CR1
+    - CR3
+    - FP1
+    - VP1
+    central turning point and changed world:
+    - CR2
+    - CR4
+    - FP2
+    - VP2
+    ending and final setting:
+    - CR5
+    - FP3
+    - VP3
+  explicit_requirements:
+  - type: keep
+    text: I want to keep the huge boat with a house built on top that takes both people and animals on board.
+    covers:
+    - CR2
+    - FP2
+  - type: specify
+    text: 'The voyage should end like in the pictures: the boat comes to rest on land and everyone aboard gets off to start a new life there.'
+    covers:
+    - CR5
+    - FP3
+rubric:
+  content_realization:
+  - id: CR1
+    item: 'The game contains the patriarch as the central character who leads the whole undertaking: he oversees the building of the vessel and
+      is its master on the voyage'
+    anchors:
+      '1': one leader character present who directs the building and leads the voyage
+      '0.5': a leader character present in only one of the two phases, or not set apart from the other people
+      '0': no leader character
+    evidence:
+    - 'img01: the old bearded man with a staff overseeing the work'
+    - img02
+    - 'img05: the haloed man enthroned at the stern holding the steering oar'
+  - id: CR2
+    item: 'The game contains the ark: a huge vessel with a house-like structure built on top, which takes both people and animals on board'
+    anchors:
+      '1': a very large vessel with a house on its deck, with both people and animals aboard
+      '0.5': the vessel present but without the house on top, or only people (or only animals) aboard
+      '0': no such vessel, or an ordinary small boat
+    evidence:
+    - 'img01: the ship with the timber-framed superstructure'
+    - 'img03: the long house-like ark'
+    - 'img05: figures in the arched openings along the hull'
+    - img06
+  - id: CR3
+    item: The story places the building of the vessel on dry land before the flood, as the preparation that lets those aboard survive it
+    anchors:
+      '1': the vessel is built on land first, and the flood that follows is survived because of it
+      '0.5': building and flood both present but their order or their link is unclear (e.g. the vessel is built at sea, or survival does not depend
+        on it)
+      '0': no building on land before the flood, or the order reversed
+    evidence:
+    - img01
+    - img02
+    - img03
+  - id: CR4
+    item: The game's world is struck by a great flood that covers the inhabited land
+    anchors:
+      '1': a flood arrives and the land where people lived is under water
+      '0.5': a storm or high water appears but the land stays largely dry
+      '0': no flood
+    evidence:
+    - 'img03: the drowned building at the left edge under rain'
+    - 'img05: the ship on storm waves'
+  - id: CR5
+    item: The voyage ends with the vessel come to rest on a mountain, and the people and animals aboard leave it to begin a new life on the land
+    anchors:
+      '1': the vessel aground on high ground, people and animals leaving it, and a new start on land shown
+      '0.5': the vessel lands but not on high ground, or the people and animals do not leave it, or no new start
+      '0': no landing
+    evidence:
+    - 'img06: the ark on the mountain top, animals walking down the slopes, people putting up buildings'
+  functions_playability:
+  - id: FP1
+    item: 'A building phase on dry land: the player works toward completing the vessel, and its completion is the milestone that lets the story
+      move on to the flood'
+    anchors:
+      '1': building the vessel is a goal with visible progress, and finishing it gates the next phase
+      '0.5': the vessel can be built but nothing depends on finishing it, or it is given ready-made with only a token step
+      '0': no building phase
+    evidence:
+    - img01
+    - img02
+  - id: FP2
+    item: 'During the flood the vessel is the refuge: it floats and carries the player and its passengers through the water, and being aboard
+      is what lets them survive'
+    anchors:
+      '1': the vessel floats and moves through the flood with the player and passengers aboard, and staying aboard matters (off it the player
+        is in danger or cannot go on)
+      '0.5': the vessel floats but being aboard has no consequence, or the passengers are not carried with it
+      '0': the vessel does not float or carry anyone through the flood
+    evidence:
+    - img03
+    - img05
+  - id: FP3
+    item: 'The ending is reached through play: when the voyage ends the vessel comes to rest, its passengers can get off, and the story reaches
+      a clear close'
+    anchors:
+      '1': playing on leads to the landing, the passengers disembark, and the experience clearly ends or turns into a new start
+      '0.5': the landing is reached but nothing follows, or the experience stops without a clear close
+      '0': the ending cannot be reached in play
+    evidence:
+    - img06
+  visual_presentation:
+  - id: VP1
+    cat: key_moment
+    item: 'The building scene: a large unfinished vessel standing on land, with people working on it'
+    anchors:
+      '1': a recognisable construction site of a big ship on land
+      '0.5': a ship and some work shown, but not recognisable as a vessel under construction on land
+      '0': none
+    evidence:
+    - img01
+    - img02
+  - id: VP2
+    cat: spatial
+    item: 'The flood scene looks like the pictures: the house-topped vessel riding rough waves under a dark, stormy sky'
+    anchors:
+      '1': the vessel seen on heaving water under dark storm clouds or rain, reading as the storm-swept flood of the images
+      '0.5': the vessel on water, but calm or bright, reading as an ordinary voyage
+      '0': none
+    evidence:
+    - 'img03: the ark on wavy water under dark clouds and rain'
+    - 'img05: the ship on grey waves under a swirling storm sky'
+  - id: VP3
+    cat: key_moment
+    item: 'The landing scene looks like img06: the house-like ark perched high on a mountain summit, standing out above slopes that lead down
+      to the new land'
+    anchors:
+      '1': the ark seen resting on a summit, dominating the view, with the slopes below it readable
+      '0.5': the ark on high ground but not readable as perched on a summit (hidden, seen only up close, or among other terrain)
+      '0': none
+    evidence:
+    - img06
+play_suggestions:
+  FP1:
+  - 'try to start the flood or set sail before the vessel is finished: is it blocked or does it fail?'
+  - check that building progress is visible and that completing it triggers the next phase
+  FP2:
+  - 'after the flood starts, try to stay on or go back to land: what happens?'
+  - check that the vessel actually floats and moves with the player and passengers aboard
+  FP3:
+  - 'reach the landing: do people and animals leave the vessel onto land?'
+  - check that the experience ends or clearly turns into a new start rather than just stopping
+  - note how the end of the voyage is signalled (e.g. a bird bringing a branch, as in img03); not scored
+  robustness:
+  - jump off the vessel in mid-flood and see whether the game recovers sensibly
+  - leave and reload in the middle of the voyage
+  - skip or rush every phase as fast as possible and see whether the order still holds
+v4_map:
+  U1: CR1
+  U2: CR2
+  U3: CR4 (flood covers the land); the refuge behaviour stays in FP2
+  U4: CR3
+  U5: CR5
+  FP1: FP1
+  FP2: FP2 (refuge behaviour); flood existence split off to CR4
+  FP3: FP3 (ending reached in play); landing and disembarking content split off to CR5
+  VP1: VP1
+  VP2: VP2 (refocused on the flood scene's look; submerged land scored in CR4)
+  VP3: VP3 (look of the mountaintop landing scene); the landing place and the animals leaving are scored in CR5
+provenance:
+  source_yaml: T-IO-07d6fcc52a.yaml
+  source_sha256: 7251431c4773df95c9966390d1f3907187f972dd524acbacc1e9e29019fbe301
+  size_waiver: null
+  size_max: null
+  sources:
+  - refs:
+    - img01
+    - img02
+    - img03
+    - img05
+    - img06
+    bundle: 07d6fcc52a
+    title: 诺亚方舟：造船、动物登船、洪水、放鸽子、靠岸

@@ -1,0 +1,23 @@
+# Reference material: fetched from the HF dataset into $GAB_MEDIA_DIR/<task>/ by `gab media fetch` (sha256 checked).
+# The agent gets the files only (no title, author, caption or source): this file is never shown to it.
+task_id: T-VO-vid_093e74fa3e3f.t2
+refs:
+- id: c01
+  kind: video
+  file: clip_01.mp4
+  video_id: vid_093e74fa3e3f
+  source:
+    title: Disney's Frozen "Let It Go" Sequence Performed by Idina Menzel [moSFlvxnbgk]
+    url: https://www.youtube.com/watch?v=moSFlvxnbgk
+    channel: null
+    youtube_id: moSFlvxnbgk
+  range:
+    start: 121.3
+    end: 147.5
+    text: 2:01.30-2:27.50
+  duration_s: 26.2
+  size_bytes: 12049720
+  format: mp4 H.264 720p, AAC audio
+  hf_path: media/T-VO-vid_093e74fa3e3f.t2/clip_01.mp4
+  sha256: 8edb162bda73acb7e1e2b8dfdf0d78f3b8e9bc64a5893208220a24a1b73bbc0e
+  rights_note: null

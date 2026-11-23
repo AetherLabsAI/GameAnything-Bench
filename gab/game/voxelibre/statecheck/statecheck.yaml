@@ -1,0 +1,19 @@
+# STATE_SPEC self-check (gab selfcheck voxelibre --state): format in gab/setup/selfcheck.py state_check
+vanilla:
+  steps:
+    - {do: wait, seconds: 3}
+  engine: [pos.x, pos.y, hp, hp_max, food, time_of_day, day, wielded, screen, n_mods]
+  mod_allow: []
+mod:
+  dir: testmod
+  steps:
+    - {do: wait, seconds: 6}
+  expect:
+    - "mod: gab_quest_stage"
+    - "mod: stage_two"
+    - "mod: visited_shrine"
+    - "mod: gabtest:beacon"
+    - "mod: beacon_alpha"
+    - "mod: marker_meta_ok"
+    - "screen_text: GAB TEST HUD"
+    - "screen_text: the beacon is near"

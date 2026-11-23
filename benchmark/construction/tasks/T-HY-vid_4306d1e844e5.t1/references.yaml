@@ -1,0 +1,79 @@
+# Reference material: fetched from the HF dataset into $GAB_MEDIA_DIR/<task>/ by `gab media fetch` (sha256 checked).
+# The agent gets the files only (no title, author, caption or source): this file is never shown to it.
+task_id: T-HY-vid_4306d1e844e5.t1
+refs:
+- id: c01
+  kind: video
+  file: clip_01.mp4
+  video_id: vid_4306d1e844e5
+  source:
+    title: Egypt in 8K ULTRA HD - Civilization start from 6,000 BC [a-Wy0RHFJrE]
+    url: https://www.youtube.com/watch?v=a-Wy0RHFJrE
+    channel: null
+    youtube_id: a-Wy0RHFJrE
+  range:
+    start: 43.5
+    end: 77.4
+    text: 0:43.50-1:17.40
+  duration_s: 33.9
+  size_bytes: 3011946
+  format: mp4 H.264 720p, AAC audio
+  hf_path: media/T-HY-vid_4306d1e844e5.t1/clip_01.mp4
+  sha256: 9b0d26044762204ecb2364fe3f7153eea08b7c3773c6ef935cc55923070c2b98
+  rights_note: null
+- id: img01
+  kind: image
+  file: img01.jpg
+  format: jpg
+  hf_path: media/T-HY-vid_4306d1e844e5.t1/img01.jpg
+  sha256: 964e719a23823335bbb711809ca4c09b40af0e1eb7c4cdaba9d03ea0d9ced906
+  size_bytes: 400848
+- id: img02
+  kind: image
+  file: img02.jpg
+  format: jpg
+  hf_path: media/T-HY-vid_4306d1e844e5.t1/img02.jpg
+  sha256: 7e741385cf7ee79bc0955e657d7c725997ca60e19594c3d5774a226d2ef28748
+  size_bytes: 618193
+- id: img03
+  kind: image
+  file: img03.jpg
+  format: jpg
+  hf_path: media/T-HY-vid_4306d1e844e5.t1/img03.jpg
+  sha256: 003850853ad6feb7d2b643dce08dd51d4c41dcecdc418eab445e41647f6aa65f
+  size_bytes: 421759
+- id: img04
+  kind: image
+  file: img04.jpg
+  format: jpg
+  hf_path: media/T-HY-vid_4306d1e844e5.t1/img04.jpg
+  sha256: 232771a7b298933fc7862b1be68c2c7f0ec8e231edb08100c1b04026f0197e1d
+  size_bytes: 327752
+- id: img05
+  kind: image
+  file: img05.jpg
+  format: jpg
+  hf_path: media/T-HY-vid_4306d1e844e5.t1/img05.jpg
+  sha256: 6df26687d63b787c8f4f3a749a2eebae01c0486921f5ecb946048ca037a2e385
+  size_bytes: 703304
+- id: img06
+  kind: image
+  file: img06.jpg
+  format: jpg
+  hf_path: media/T-HY-vid_4306d1e844e5.t1/img06.jpg
+  sha256: 612fff1ccae4f6aa6cd4231035581d50d4f670eddab3c2918502346da478700b
+  size_bytes: 545333
+- id: img07
+  kind: image
+  file: img07.jpg
+  format: jpg
+  hf_path: media/T-HY-vid_4306d1e844e5.t1/img07.jpg
+  sha256: 6f91f0558e2d8c450f3027946039095e4e78a8f690ad0a8d574af833046088fc
+  size_bytes: 860223
+- id: img08
+  kind: image
+  file: img08.jpg
+  format: jpg
+  hf_path: media/T-HY-vid_4306d1e844e5.t1/img08.jpg
+  sha256: 50d945ffeee7c0aaefa602500d79810c5e8d9dcb39179934217674358055e1f7
+  size_bytes: 745139

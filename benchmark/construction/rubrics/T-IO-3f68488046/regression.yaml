@@ -1,0 +1,21 @@
+# GameAnything-Bench scoring material: never shown to agents during a trial.
+task_id: T-IO-3f68488046
+game: stardew_valley
+status: pending
+picks:
+- SD-INVENTORY
+- SD-TOOLS
+- SD-SHOP
+- SD-MENU
+- SD-HEALTH-STAMINA
+changed: []
+kept_borderline:
+- id: SD-INVENTORY
+  note: Smoker and gear may be given at start, but this is added content only.
+- id: SD-SHOP
+  note: Gear might be sold in shops, but the vanilla shop stays unchanged.
+summary: Beekeeping system with smoker, protective gear and honey loop
+task_checks: []
+note: 'policy (A): excluded only when the instruction explicitly requires the change; plausible side effects stay tested; adding
+  new content is never a reason to exclude. Proposed by claude-sonnet-5-5 via `gab task picks` 2026-11-06; a maintainer checks (set status: checked).
+  The evaluator tests the pool''s always items (unless in changed) + picks.'

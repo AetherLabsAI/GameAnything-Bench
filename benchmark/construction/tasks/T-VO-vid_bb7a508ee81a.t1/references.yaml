@@ -1,0 +1,24 @@
+# Reference material: fetched from the HF dataset into $GAB_MEDIA_DIR/<task>/ by `gab media fetch` (sha256 checked).
+# The agent gets the files only (no title, author, caption or source): this file is never shown to it.
+task_id: T-VO-vid_bb7a508ee81a.t1
+refs:
+- id: c01
+  kind: video
+  file: clip_01.mp4
+  video_id: vid_bb7a508ee81a
+  source:
+    title: 03 - Chicago, USA 🇺🇸 - by drone [4K]
+    url: null
+    channel: null
+    youtube_id: null
+  range:
+    start: 0.0
+    end: 41.0
+    text: 0:00.00-0:41.00
+  duration_s: 41.0
+  size_bytes: 6918395
+  format: mp4 H.264 720p, AAC audio
+  hf_path: media/T-VO-vid_bb7a508ee81a.t1/clip_01.mp4
+  sha256: 0c8a7038d385756301e135abc3636374f055c6c8668b16265b5ae1333527b2fc
+  rights_note: Third-party drone footage of a real city, with a faint corner watermark. Use as a private reference only and do not redistribute
+    frames. Built content should be an original district and not a copy of real buildings or logos.

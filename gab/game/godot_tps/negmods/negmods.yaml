@@ -1,0 +1,7 @@
+# negative mods for `gab selfcheck godot-tps` (copied from the pool verification 2026-10-30,
+# the verification logs); each is one mod (files laid over the project) and must fail
+# exactly its expected pool items vs a fresh vanilla instance (GT-SETTINGS reads every edited constant, so it fails with the
+# gameplay item: expected correlation, pool header).
+jump7: {expect_fail: [GT-SETTINGS, GT-JUMP], quick_probes: [settings, jump]}
+robothp2: {expect_fail: [GT-SETTINGS, GT-ROBOT-DAMAGE], quick_probes: [settings, shoot]}
+menu_nosettings: {expect_fail: [GT-MENU], quick_probes: [render]}

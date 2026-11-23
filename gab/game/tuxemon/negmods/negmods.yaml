@@ -1,0 +1,9 @@
+# negative mods for `gab selfcheck tuxemon` (from the game's pool verification)
+# each must fail exactly its expected pool items (vs a fresh vanilla instance)
+neg_door: {expect_fail: [TX-WARP], quick_probes: [warp]}
+neg_bullet: {expect_fail: [TX-BATTLE, TX-DATA], quick_probes: [battle, db]}
+neg_price: {expect_fail: [TX-SHOP, TX-DATA], quick_probes: [shop, db]}
+# 2026-11-06: a mod that replaces the opening (as 19 of 43 round-1 deliverables do) fails only TX-NEWGAME and TX-MAPS (its own
+# bedroom events); with the bullet change too, the stock-start probes still catch TX-BATTLE / TX-DATA
+neg_opening: {expect_fail: [TX-NEWGAME, TX-MAPS], quick_probes: [new_game, maps]}
+neg_opening_bullet: {expect_fail: [TX-NEWGAME, TX-MAPS, TX-BATTLE, TX-DATA], quick_probes: [new_game, maps, battle, db]}

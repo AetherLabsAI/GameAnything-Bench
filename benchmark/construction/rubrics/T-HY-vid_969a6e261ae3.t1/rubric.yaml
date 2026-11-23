@@ -1,0 +1,324 @@
+# GameAnything-Bench scoring material: never shown to agents during a trial.
+task_id: T-HY-vid_969a6e261ae3.t1
+source_inventory:
+- 'clip 00:02.5-00:03.4: a man carrying bundles and two girls (an older one in yellow and orange, a small one in pink) walk up a sunken earthen
+  path between wooded banks toward a red roof'
+- 'clip 00:03.4-00:05.0: an old house in a meadow of tall grass and yellow flowers: a tall weathered wooden wing with a steep red roof joined
+  to a lower Japanese tiled-roof wing; the two girls run toward it'
+- 'clip 00:05.0-00:06.0: the older girl leans out of a round window in a plaster wall, a washtub below'
+- 'clip 00:06.0-00:08.5: the yard: the girls run past a roofed hand-pump well beside a wooden side building with a balcony and a round window;
+  the small girl tumbles in the grass'
+- 'clip 00:08.5-00:09.9: both girls peer down / climb a dark narrow wooden staircase, seen from below'
+- 'clip 00:10.0-00:11.3: on a dark plank floor a small black fuzzy ball with two eyes floats beside the small girl, who stares wide-eyed'
+- 'clip 00:11.5-00:12.4: the small girl in a straw hat crouches by a wall, looking back'
+- 'clip 00:12.5-00:13.9: a small blue rabbit-eared creature carrying a sack and a smaller white one walk along a grassy dirt path'
+- 'clip 00:14.0-00:15.9: overlay ''FROM ACADEMY AWARD-WINNING DIRECTOR HAYAO MIYAZAKI'' over an enormous tree with massive roots; the tiny girl
+  clambers over the roots'
+- 'clip 00:16.0-00:16.9: the girl in a sunny clearing at the edge of a huge grey furry body seen from behind'
+- 'clip 00:17.0-00:18.9: overlay ''ONE OF THE MOST BELOVED FILMS OF ALL TIME'' over a green, ferny tunnel of tree trunks and leaves'
+- 'clip 00:19.0-00:20.4: a huge round grey creature with a pale chevron-marked belly lies asleep in a ferny hollow; the girl climbs up onto its
+  belly'
+- 'clip 00:20.5-00:22.9: the girl sits on its belly while the creature opens an enormous toothy mouth (a yawn) right beside her'
+- 'clip 00:23.0-00:24.4: the girl laughs and grins, delighted, not afraid'
+- 'clip 00:24.5-00:25.9: close shot of the giant''s face with a wide toothy grin, whiskers and pointed ears; the small white and blue creatures
+  in the foreground (montage, possibly another moment)'
+- 'audio: trailer music only; no usable speech'
+- 'text p001: 1950s Japan; professor Tatsuo Kusakabe and daughters Satsuki (~10) and Mei (~4) move into an old house near the hospital where the
+  mother Yasuko is recovering; the house is inhabited by small dark dust-like house spirits (susuwatari), seen when moving from bright places
+  to dark ones, who leave to find another empty house; Mei finds two small spirits who lead her into the hollow of a large camphor tree; she befriends
+  a larger spirit whose roars she reads as ''Totoro'' and takes for the troll from her picture book; she falls asleep on him but is on the ground
+  when Satsuki finds her; she cannot show her family the tree despite many attempts; Tatsuo comforts her that Totoro will reveal himself when
+  he wants to'
+- 'img01: the red-roofed old house with its tiled wing, the two girls running toward it through tall grass and flowers'
+- 'img02: the two girls in a bright doorway looking into a dark kitchen with a hand pump, its walls and floor covered in black soot balls'
+- 'img03: the small girl swats at a swarm of black fuzzy soot balls on a dark wooden wall; some cling to her'
+- 'img04: the small girl crawls through a tunnel of bent trees after a small white creature and a blue one carrying a sack'
+- 'img05: top view into a lush green hollow of ferns and flowers; the small girl lies on the belly of the huge sleeping grey creature'
+- 'img06: close view of the girl lying on the giant''s belly, touching its nose; it looks at her calmly'
+instructions_meta:
+  requirement_groups:
+    story progression and ending:
+    - CR5
+    - FP1
+    - FP5
+    world rules and travel:
+    - CR2
+    - CR3
+    - FP2
+    - FP3
+    central encounter:
+    - CR4
+    - FP4
+    - VP4
+    settings and characters:
+    - CR1
+    - VP1
+    - VP2
+    - VP3
+  explicit_requirements:
+  - type: keep
+    text: I definitely want the huge grey forest spirit asleep in the hollow of the giant tree, with the little girl climbing up onto his belly
+      without being scared of him.
+    covers:
+    - CR4
+    - FP4
+    - VP4
+  - type: specify
+    text: And afterwards the girl should never manage to lead her family back to that tree, no matter how often she tries, until her father tells
+      her the spirit will show himself when he wants to.
+    covers:
+    - FP5
+rubric:
+  content_realization:
+  - id: CR1
+    item: The main characters are a father and his two daughters, an older girl and a much younger one, and it is the younger girl who meets the
+      forest spirits
+    anchors:
+      '1': a father with two daughters of clearly different ages, and the younger one as the one who finds the spirits
+      '0.5': the family is there but the girls' age relation is missing, or the encounter is given to the older girl or to both
+      '0': missing or wrong cast
+    evidence:
+    - - '00:02.5'
+      - '00:03.4'
+    - - '00:10.0'
+      - '00:11.3'
+    - - '00:19.0'
+      - '00:24.4'
+    - p001
+    - img04
+  - id: CR2
+    item: The old house is inhabited by small dark house spirits that live in its dark parts
+    anchors:
+      '1': a crowd of small dark spirits found inside the old house, in its dark rooms, as the house's own inhabitants
+      '0.5': dark spirits exist, but not tied to the house (met elsewhere), or only as a single generic monster
+      '0': missing
+    evidence:
+    - p001
+    - - '00:08.5'
+      - '00:11.3'
+    - img02
+    - img03
+  - id: CR3
+    cross: true
+    item: The two small spirits who guide the younger girl to the hollow of the large tree (text) are the small white and blue creatures the clip
+      and the images show
+    anchors:
+      '1': two small guide spirits to the hollow, one small white and one blue, recognisable as the clip's / images' creatures
+      '0.5': guides to the hollow exist but do not look like the white and blue creatures, or white and blue creatures appear but are not the
+        guides
+      '0': missing
+    evidence:
+    - - '00:12.5'
+      - '00:13.9'
+    - - '00:14.0'
+      - '00:15.9'
+    - p001
+    - img04
+  - id: CR4
+    item: Totoro, a forest spirit many times the girl's size, sleeps in the hollow of the large tree
+    anchors:
+      '1': a giant spirit, far larger than the girl, asleep in the large tree's hollow
+      '0.5': a giant creature exists, but not in the tree's hollow or not asleep there, or not clearly larger than the girl
+      '0': missing
+    evidence:
+    - - '00:19.0'
+      - '00:25.9'
+    - p001
+    - img05
+    - img06
+  - id: CR5
+    item: The girl falls asleep on top of Totoro, but when her sister finds her she is lying on the ground and Totoro is gone
+    anchors:
+      '1': she falls asleep on him, then is found by her sister on the ground without him
+      '0.5': only one of the two halves, or someone other than the sister finds her
+      '0': missing
+    evidence:
+    - p001
+    - img05
+    - img06
+  functions_playability:
+  - id: FP1
+    item: 'The story progresses in the text''s order, each stage opening only after the one before: arrival at the old house, the soot spirits
+      there, following the small spirits to the tree''s hollow, the meeting with the giant spirit, and the aftermath'
+    anchors:
+      '1': the stages come in this order and a later stage cannot be reached before the earlier ones (a coherent start-to-end progression)
+      '0.5': a progression exists but stages come out of order or can be skipped
+      '0': no recognisable progression
+    evidence:
+    - p001
+  - id: FP2
+    item: 'The house spirits work by the story''s rule: they appear to the player on going from a bright place into a dark part of the house'
+    anchors:
+      '1': the spirits show up (or are only visible) when the player enters the dark from the light
+      '0.5': the spirits appear in the dark parts of the house, but not tied to the move from bright to dark (e.g. always visible there)
+      '0': their appearance follows no light-dark rule, or they never appear in play
+    evidence:
+    - p001
+    - - '00:08.5'
+      - '00:11.3'
+    - img02
+  - id: FP3
+    item: 'The way to the giant spirit is found by following the small spirits: they lead the player from the home area into the forest and to
+      the hollow'
+    anchors:
+      '1': the small spirits move ahead as guides and following them is how the player reaches the hollow
+      '0.5': the small spirits appear but do not lead, or the hollow is reached without them
+      '0': no way to reach the hollow through play
+    evidence:
+    - p001
+    - - '00:12.5'
+      - '00:15.9'
+    - img04
+  - id: FP4
+    item: 'The meeting with the giant spirit is a gentle encounter the player takes part in: the girl climbs up onto the sleeping giant''s belly,
+      unafraid, and he does not threaten her'
+    anchors:
+      '1': in play the girl approaches the sleeping giant and gets up onto his belly (climbing, sitting or lying on it), as a calm, friendly payoff
+        moment
+      '0.5': friendly close contact without getting onto him, or the meeting is only seen from a distance or as a passive cutscene, or it plays
+        as danger
+      '0': no meeting
+    evidence:
+    - - '00:16.0'
+      - '00:24.4'
+    - p001
+    - img05
+    - img06
+  - id: FP5
+    item: 'After the meeting the tree cannot be found again: the girl''s attempts to show her family the tree fail, until the father''s reassurance
+      that the spirit will show himself when he wants to closes the story'
+    anchors:
+      '1': a later attempt to return to / show the tree fails, however often it is tried, and the father's reassurance gives a closing end
+      '0.5': an end exists but the hollow stays freely revisitable with Totoro there, or the attempts fail but no closing reassurance comes
+      '0': no ending; play stops after the meeting or loops
+    evidence:
+    - p001
+  visual_presentation:
+  - id: VP1
+    cat: style
+    keyframes:
+    - '00:03.5'
+    - '00:04.0'
+    item: 'The old house: a weathered wooden house with a steep red roof joined to a lower tiled-roof wing, standing in overgrown grass and flowers
+      at the edge of woods'
+    anchors:
+      '1': a recognisably old, two-part house with the red-roofed wing in an overgrown, flowering yard
+      '0.5': an old rural house, but neither the red-roofed wing nor the overgrown yard is recognisable
+      '0': no distinct house
+    evidence:
+    - - '00:03.4'
+      - '00:08.5'
+    - img01
+  - id: VP2
+    cat: key_moment
+    keyframes:
+    - '00:10.0'
+    - '00:10.5'
+    item: 'The soot spirits: small black fuzzy balls with eyes, seen in the dim wooden interior, sometimes swarming over walls and floor'
+    anchors:
+      '1': black fuzzy spirits with eyes against a dark wooden interior
+      '0.5': dark creatures shown, but not as fuzzy soot balls, or not in a dark interior
+      '0': not shown
+    evidence:
+    - - '00:10.0'
+      - '00:11.3'
+    - img02
+    - img03
+  - id: VP3
+    cat: spatial
+    keyframes:
+    - '00:14.5'
+    - '00:19.0'
+    item: 'The giant tree and its hollow: an enormous tree with massive roots, and inside it a lush, enclosed green hollow of ferns and flowers'
+    anchors:
+      '1': a huge rooted tree with a lush, enclosed green hollow
+      '0.5': a forest spot, but no big tree or no enclosed hollow
+      '0': no distinct place
+    evidence:
+    - - '00:14.0'
+      - '00:20.4'
+    - img05
+  - id: VP4
+    cat: key_moment
+    keyframes:
+    - '00:20.0'
+    - '00:22.0'
+    - '00:25.0'
+    item: 'The giant''s look in the meeting: a huge round grey spirit with a pale belly, pointed ears, whiskers and a wide toothy mouth'
+    anchors:
+      '1': a giant recognisable as this one (round grey body, pale belly, pointed ears, whiskers, wide mouth)
+      '0.5': a large grey creature, but most of these features are missing, so it is not recognisable as this one
+      '0': not shown
+    evidence:
+    - - '00:19.0'
+      - '00:25.9'
+    - img05
+    - img06
+play_suggestions:
+  FP1:
+  - 'play from the start: note the order of arrival, soot spirits, guides, hollow, meeting and ending'
+  - 'try to reach the forest or the hollow before the house stage: is it gated or does the order break?'
+  FP2:
+  - walk from a sunlit room or the yard into a dark room or staircase and watch for the spirits
+  - 'stay in bright rooms only: do the spirits still appear?'
+  FP3:
+  - 'find the small spirits and follow them: do they lead to the hollow?'
+  - ignore them and look for the hollow on your own
+  FP4:
+  - approach the sleeping giant and try to climb onto his belly
+  - interact with him repeatedly and check that nothing in the meeting reads as a fight or danger
+  FP5:
+  - after the meeting, try to go back to the hollow several times and to bring another character there
+  - check that the story reaches a clear end with the reassurance
+  robustness:
+  - save and reload in the middle of the forest stage
+  - 'skip or rush dialogue at each stage: does the progression still hold?'
+  - leave the area during the guide stage and come back
+hybrid:
+  modality: video+text+image
+  roles:
+    video: the look of the old house and its dark interior, the soot spirit, the two small spirits, the giant tree and its hollow, and the younger
+      girl climbing onto the huge sleeping spirit
+    text: the characters and their relations, the reason for the move, the soot spirits' rule (seen when going from bright to dark), the order
+      of events from the move to the meeting with Totoro, and the aftermath (waking on the ground, the tree cannot be shown to the family)
+    images: stills of the house, the soot spirits swarming the dark interior, the girl following the two small spirits through the forest, and
+      the hollow with the girl on the sleeping giant
+  cross_reference_requirement: The text gives the characters and their roles (the house spirits, the two small guiding spirits, the giant spirit
+    in the tree hollow), the soot spirits' rule, the order of events and the aftermath; the clip and the images give how these spirits and places
+    look (the small white and blue creatures, the old red-roofed house and its dark interior, the giant tree and its ferny hollow). A game must
+    stage the text's roles and sequence with the spirits and places as the clip and images show them.
+v4_map:
+  U1: CR1
+  U2: 'dropped: peripheral (the mother in hospital as the reason for the move is one clause of the text and nothing later depends on it; the move
+    itself stays as FP1''s first stage and VP1''s house)'
+  U3: CR2, FP2 (existence of the house spirits to CR2; the bright-to-dark rule already scored by FP2)
+  U4: CR3 (cross kept)
+  U5: CR4, FP4 (size and place to CR4; gentleness and the unafraid contact to FP4)
+  U6: CR5
+  U7: FP5 (failed attempts and the father's words merged into the ending item)
+  FP1: FP1
+  FP2: FP2 (the spirits' existence split off to CR2)
+  FP3: FP3 (the guides' existence and look moved to CR3)
+  FP4: FP4 (now requires getting onto the belly, per the explicit requirement)
+  FP5: FP5, CR5 (waking on the ground without Totoro moved to CR5)
+  VP1: VP1
+  VP2: VP2
+  VP3: VP3 (look of the tree and hollow only; the giant sleeping in it is in CR4)
+  VP4: VP4 (the giant's look only; scale to CR4, the girl on his belly to FP4)
+provenance:
+  source_yaml: T-HY-vid_969a6e261ae3.t1.yaml
+  source_sha256: 5d335567588c4ae352cffa496b2c0c357e644e458fbbd4b1e5f3f00469263442
+  size_waiver: null
+  size_max: null
+  sources:
+  - ref: t01
+    text: /Volumes/USB-500G/gameanything_local/hf/curation/hybrid_texts/T-HY-vid_969a6e261ae3.t1/final.md
+  - refs:
+    - img01
+    - img02
+    - img03
+    - img04
+    - img05
+    - img06
+    images:
+    - hybrid/q19_ref1

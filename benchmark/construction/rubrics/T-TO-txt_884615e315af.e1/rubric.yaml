@@ -1,0 +1,243 @@
+# GameAnything-Bench scoring material: never shown to agents during a trial.
+task_id: T-TO-txt_884615e315af.e1
+source_inventory:
+- 'c04.p005-c04.p013: broad agreement that people keep streaming from the country into overcrowded cities; quoted voices (London as a tumour draining
+  the rural districts, ''get the people back to the land'', squalid town housing, the rural exodus)'
+- 'c04.p014-c04.p022: press of all parties and trade-union leaders sound the same warning about the drift from the country'
+- 'c04.p023: all agree on the problem; restoring the people to the land is called a master-key to many other social problems'
+- 'c04.p024: the causes of city growth are summed up as ''attractions''; each city is a magnet, each person a needle; only a stronger magnet can
+  redistribute the people'
+- 'c04.p025: the false choice between town life and country life; a third alternative combines the advantages of both; the diagram of ''The Three
+  Magnets'' is announced'
+- 'c04.p026-c04.p027: illustration placeholder ''The Three Magnets, No. 1'' (the picture itself is not delivered)'
+- 'c04.p028: the Town magnet: wages, work, amusement and lit streets, against high rents, long hours, the ''isolation of crowds'', lost sunlight,
+  soot and slums'
+- 'c04.p029: the Country magnet: beauty, fresh air and low rents, against dullness, lack of capital and work, closed land, poor water and drainage'
+- 'c04.p030: the two magnets must be made one; town and country ''must be married''; the work will show how to build a Town-country magnet'
+- 'c04.p031-c04.p033: what Town-country promises (society with nature, higher wages with lower rents, healthy homes and gardens); many such magnets
+  would turn the tide of migration; fuller description to follow'
+- 'c05.p001: footnote: country schoolchildren share one basin of dirty water for washing and drinking'
+- 'c06.p001-c06.p003: epigraphs (Blake; Ruskin: limited towns with clean streets within, open country without, a belt of garden and orchard round
+  them, fresh air a few minutes'' walk from anywhere)'
+- 'c06.p004-c06.p005: an agricultural estate of 6,000 acres is bought and held in trust for the people of Garden City; ground rents fund the public
+  works; the aims (better work and wages, healthier surroundings, a market for the farmers at their doors)'
+- 'c06.p006-c06.p008: illustration placeholder ''No. 2 Garden City''; the town covers 1,000 acres near the centre of the estate, circular, about
+  three-quarters of a mile from centre to edge; the description is ''merely suggestive'''
+- 'c06.p009-c06.p011: six wide boulevards run from centre to circumference and divide the town into six equal wards; at the centre a watered circular
+  garden ringed by the large public buildings (town hall, concert hall, theatre, library, museum, gallery, hospital) in their own grounds; illustration
+  placeholder ''No. 3 Ward and Centre'''
+- 'c06.p012-c06.p013: a large public park with recreation grounds around the centre, encircled by the ''Crystal Palace'', a wide glass arcade
+  opening onto the park (cut only by the boulevards): wet-weather resort, shopping for manufactured goods, a Winter Garden; within 600 yards of
+  every dweller'
+- 'c06.p014: walking outward: tree-lined Fifth Avenue, rings of houses facing the circular avenues or fronting the radial roads; population about
+  30,000 in town and 2,000 on the farms; building lots; very varied architecture, some common gardens and co-operative kitchens; the municipality
+  controls only street line and sanitation'
+- 'c06.p015: ''Grand Avenue'': a 420-foot-wide green belt over three miles long that divides the outer town into two belts, a park of its own
+  within 240 yards of everyone, holding school sites with playgrounds and gardens and church sites; in one ward the houses facing it are set in
+  crescents'
+- 'c06.p016: the outer ring: factories, warehouses, dairies, markets, coal and timber yards, all fronting the circle railway round the whole town,
+  with sidings to a main line through the estate; goods go directly between buildings and trucks, sparing cartage and the town roads; all machinery
+  electric, so no smoke'
+- 'c06.p017-c06.p018: town refuse goes to the farmland of the estate (large farms, small holdings, allotments, cow pastures); farming methods
+  compete by the rent occupiers offer; the rents are common property spent on improvements'
+- 'c06.p019-c06.p020: the town, with a store in each ward, is the farmers'' natural market but they may sell anywhere; manufacturers and private
+  suppliers keep their freedom; no rigid municipal monopoly'
+- 'c06.p021: charitable and philanthropic institutions dotted about the estate on land let at a pepper-corn rent'
+instructions_meta:
+  requirement_groups:
+    overall layout and surroundings:
+    - CR1
+    - CR6
+    - FP1
+    street network and routes:
+    - CR2
+    - FP2
+    landmarks and public buildings:
+    - CR3
+    - CR4
+    - VP1
+    open spaces and overall look:
+    - CR5
+    - FP3
+    - VP2
+    - VP3
+  explicit_requirements:
+  - type: keep
+    text: I really want to keep the long glass arcade that runs all the way round the central park and opens right onto it.
+    covers:
+    - CR4
+    - VP1
+  - type: specify
+    text: 'The plan should work like in the text: rings around a central garden, cut by boulevards running from the centre out to the edge that
+      split the town into equal wards.'
+    covers:
+    - CR2
+    - FP2
+rubric:
+  content_realization:
+  - id: CR1
+    item: The town is a compact, roughly circular town standing in the middle of its own open farmland, which surrounds it on every side as part
+      of the same place
+    anchors:
+      '1': a compact, centred town with open farmland (fields, farms, pastures) directly around it on all sides and continuous with it
+      '0.5': farmland on only some sides or only as a distant backdrop, or farmland around a sprawling town with no compact centred form
+      '0': no farmland around the town, or the place is an ordinary sprawling city or a village
+    evidence:
+    - c04.p025
+    - - c04.p030
+      - c04.p031
+    - c06.p005
+    - c06.p008
+    - c06.p017
+  - id: CR2
+    item: 'The town is laid out on a radial-concentric plan: ring roads around a central garden, cut by radial boulevards from the centre to the
+      edge into equal wards'
+    anchors:
+      '1': concentric ring roads around a central garden, crossed by radial boulevards from the centre to the edge that divide the town into equal
+        wedge-shaped wards (the exact number is not required)
+      '0.5': only the rings or only the radial boulevards / wards, or the wards clearly unequal
+      '0': a grid or an unplanned street pattern
+    evidence:
+    - c06.p009
+    - c06.p014
+  - id: CR3
+    item: At the heart of the town lies a circular garden ringed by the large public buildings, each standing in its own grounds
+    anchors:
+      '1': a central garden surrounded by several large civic buildings (the text's full list is not required)
+      '0.5': a central garden or some public buildings at the centre, but not the garden ringed by the buildings
+      '0': no distinct civic centre
+    evidence:
+    - c06.p009
+  - id: CR4
+    item: Around the civic centre lies the Central Park, and a long arcade (the Crystal Palace) runs all the way round the park, broken only by
+      the boulevards, and opens onto it
+    anchors:
+      '1': a park around the centre with an arcade following its whole outer edge and opening onto the park
+      '0.5': a park and an arcade exist, but the arcade does not ring the park or is closed off from it
+      '0': no park around the centre, or no such arcade
+    evidence:
+    - - c06.p012
+      - c06.p013
+  - id: CR5
+    item: Further out, the Grand Avenue, a broad green belt running all round the town, splits the outer town into an inner and an outer belt
+      of housing
+    anchors:
+      '1': a ring-shaped green belt / park between the Central Park and the town edge, with housing belts on both sides of it
+      '0.5': a wide green avenue or park strip that does not ring the town, or that does not lie between two housing belts
+      '0': missing
+    evidence:
+    - c06.p015
+  - id: CR6
+    item: On the town's outermost ring, factories, warehouses and yards front a circle railway that runs round the whole town
+    anchors:
+      '1': an industrial ring at the town edge with a railway encircling the whole town along it
+      '0.5': industry at the edge or a railway, but the railway does not encircle the town or the industry does not front it
+      '0': neither an industrial edge nor a circle railway
+    evidence:
+    - c06.p016
+  functions_playability:
+  - id: FP1
+    item: 'Town and country form one walkable place: the player can go on foot from the civic centre out through the town and past its edge into
+      the surrounding farmland'
+    anchors:
+      '1': a continuous walk from the centre through the town's rings to open farmland beyond the edge
+      '0.5': 'the walk is broken: the farmland cannot be entered on foot, or the centre cannot be reached'
+      '0': no continuous walkable route through the town
+    evidence:
+    - - c06.p012
+      - c06.p017
+    - c06.p003
+  - id: FP2
+    item: 'The radial boulevards work as through routes: from any ward the player can follow a boulevard straight in to the centre and out to
+      the town edge, crossing the ring roads on the way'
+    anchors:
+      '1': following a boulevard from a ward leads without detours to the centre and out to the edge, and the ring roads connect to it where they
+        cross
+      '0.5': the boulevards lead only one way (to the centre or to the edge), are broken and need long detours, or the ring roads do not connect
+        with them
+      '0': no connected route between the wards, the centre and the edge
+    evidence:
+    - c06.p009
+    - c06.p014
+  - id: FP3
+    item: 'Green space is close to every home: from any housing area the Central Park with its arcade and the Grand Avenue belt are reached in
+      a short walk'
+    anchors:
+      '1': from housing at the edge as well as near the centre, the Grand Avenue is reached in a few moments and the park / arcade in a short
+        walk
+      '0.5': the green spaces are far from some housing or reachable only by long detours
+      '0': the green spaces cannot be reached on foot from the housing
+    evidence:
+    - c06.p013
+    - c06.p015
+    - c06.p003
+  visual_presentation:
+  - id: VP1
+    cat: style
+    item: 'The Crystal Palace looks like a glass arcade: a long, visibly glazed building, not an ordinary row of shops'
+    anchors:
+      '1': the arcade visibly reads as a glazed, glass-roofed or glass-walled structure
+      '0.5': some glass elements, but the arcade mostly reads as an ordinary opaque building
+      '0': no glass character
+    evidence:
+    - - c06.p012
+      - c06.p013
+  - id: VP2
+    cat: spatial
+    item: The Grand Avenue looks like a broad park, far wider than any other street
+    anchors:
+      '1': a green, park-like belt visibly much wider than the boulevards and other roads
+      '0.5': a green strip no wider than an ordinary road, or a wide belt that is bare rather than park-like
+      '0': no visibly broad, green Grand Avenue
+    evidence:
+    - c06.p015
+  - id: VP3
+    cat: style
+    item: 'The town looks like a garden town: greenery runs through its streets and housing areas, not only its parks'
+    anchors:
+      '1': greenery visibly pervades the streets and the housing areas across the town
+      '0.5': greenery only in the parks / green belt, with the streets and housing areas bare
+      '0': no green character outside the parks, or no green spaces at all
+    evidence:
+    - c06.p014
+    - c04.p031
+    - c06.p003
+play_suggestions:
+  FP1:
+  - 'start at the central garden and walk straight outward: note each ring you pass and whether you can step off the town''s edge into fields'
+  - 'walk back in from the farmland: is the way into the town obvious?'
+  FP2:
+  - from two different wards, find the boulevard and follow it to the centre
+  - at the town's edge, follow a ring road to the next boulevard
+  FP3:
+  - start at a house at the very edge and time the walk to the Grand Avenue and to the park / arcade
+  - repeat from a house near the centre
+  robustness:
+  - walk from the park into the arcade and out again
+  - 'walk along the railway ring at the edge: is it blocked off sensibly, or can the player fall out of the world?'
+  - 'wander deep into the farmland: is there a sensible boundary and a way back?'
+v4_map:
+  U1: CR1
+  U2: CR2
+  U3: CR4
+  U4: CR5
+  U5: 'CR6 (existence and layout only; the freight-off-roads mechanism dropped: peripheral (an operating detail, not the place''s layout))'
+  FP1: FP1
+  FP2: CR2, FP2 (existence of the radial plan to CR2; routing behaviour stays FP2)
+  FP3: FP3
+  VP1: CR1, CR6 (town-in-farmland and industrial / railway edge are arrangement, not look)
+  VP2: CR3 (which places exist at the centre and how they are arranged)
+  VP3: CR4, VP1 (ring round the park and opening onto it to CR4; glass look only stays VP1)
+  VP4: CR5, VP2 (ring form and position between housing belts to CR5; width and park look only stay VP2)
+  VP5: VP3
+provenance:
+  source_yaml: T-TO-txt_884615e315af.e1.yaml
+  source_sha256: 05387898c5b5caef28b0ef505c9df5c1eec7de09b2c4c03eb2c916485655f559
+  size_waiver: null
+  size_max: null
+  sources:
+  - ref: t01
+    title: Garden Cities of To-Morrow
+    author: Sir Ebenezer Howard
+    text_id: txt_884615e315af
+    excerpt_id: e1

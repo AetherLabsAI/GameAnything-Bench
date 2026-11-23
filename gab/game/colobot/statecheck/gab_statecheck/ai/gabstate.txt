@@ -1,0 +1,10 @@
+extern void object::GabState()
+{
+	// the state check: a program variable, an object made at runtime, a HUD message
+	int gab_quest_stage = 2;
+	string gab_marker = "stage_two";
+	point p = position; p.x = p.x + 6;
+	produce(p, 0, PowerCell, "", 0.42);
+	message("GAB TEST HUD: the beacon is near");
+	while (true) { wait(1); }
+}

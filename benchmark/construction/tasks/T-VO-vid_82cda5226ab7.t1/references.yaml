@@ -1,0 +1,24 @@
+# Reference material: fetched from the HF dataset into $GAB_MEDIA_DIR/<task>/ by `gab media fetch` (sha256 checked).
+# The agent gets the files only (no title, author, caption or source): this file is never shown to it.
+task_id: T-VO-vid_82cda5226ab7.t1
+refs:
+- id: c01
+  kind: video
+  file: clip_01.mp4
+  video_id: vid_82cda5226ab7
+  source:
+    title: 'Silver to Australia! 🇦🇺 ｜ Men''s Canoe Sprint K4 ｜ #Paris2024 Highlights [TkFLWosVC1s]'
+    url: https://www.youtube.com/watch?v=TkFLWosVC1s
+    channel: null
+    youtube_id: TkFLWosVC1s
+  range:
+    start: 0.0
+    end: 85.6
+    text: 0:00.00-1:25.60
+  duration_s: 85.6
+  size_bytes: 22384862
+  format: mp4 H.264 720p, AAC audio
+  hf_path: media/T-VO-vid_82cda5226ab7.t1/clip_01.mp4
+  sha256: 5ceca4d5e64686eb4911389130191c3453d8c411f84ad4b08ce835ee8cc306aa
+  rights_note: 'Copyrighted Olympic broadcast footage (Olympic Games, IOC and broadcaster marks, Omega timing logos on screen): private reference
+    use only, do not redistribute. Rebuild the mechanics with original assets and avoid Olympic marks, national branding and real athlete likenesses.'

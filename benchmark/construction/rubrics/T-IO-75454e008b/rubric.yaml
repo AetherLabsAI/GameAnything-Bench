@@ -1,0 +1,220 @@
+# GameAnything-Bench scoring material: never shown to agents during a trial.
+task_id: T-IO-75454e008b
+source_inventory:
+- 'img01: from high at the head of the valley, looking down a long, deep, steep-walled green valley between grey rocky mountains; a large waterfall
+  pours down the rock wall on the left; a road zigzags down the slope in a stack of hairpin bends beside the falls, crosses the stream below them
+  and continues along the valley floor; cloudy sky'
+- 'img02: near-vertical view down onto the switchbacks: many tight hairpins stacked one above another on a steep green-and-rock slope, cars and
+  buses on the road; the road crosses the white-water stream on a bridge at the foot of a gorge; the stream and further hairpins continue down
+  the valley'
+- 'img03: from the top, overcast: a waterfall cascades down a dark rock wall on the left; a sharp pointed rocky peak rises above; the road climbs
+  the steep slope next to the falls in hairpin bends; the green valley opens out to the right and below; a few small huts on the upper slope'
+- 'img04: at road level on the high ground: an empty asphalt road with a centre line, lined by rough stone blocks; bare grey rock slabs, brown
+  grass and snow patches; a sharply pointed, snow-streaked peak and a second peak in cloud behind'
+- 'img05: a viewing platform at the cliff edge at the top: angular rust-coloured steel and concrete walkways projecting over the drop, visitors
+  looking down; below, the hairpins on the slope and the deep green valley stretching away between steep mountain walls'
+- 'img06: view down the valley to its far end: steep forested and rocky walls on both sides, flat green fields and farms on the valley floor,
+  a winding road, a small town by water and further mountain ranges in the distance; a bend of road in the lower left foreground'
+instructions_meta:
+  requirement_groups:
+    route and finish:
+    - FP1
+    road layout and driving:
+    - CR1
+    - FP2
+    landmarks along the route:
+    - CR2
+    - CR5
+    - FP3
+    - VP3
+    - VP4
+    landscape and terrain:
+    - CR3
+    - CR4
+    - VP1
+    - VP2
+  explicit_requirements:
+  - type: keep
+    text: Keep the big waterfall pouring down the rock wall right beside the hairpin climb.
+    covers:
+    - CR2
+    - VP4
+  - type: specify
+    text: At the top, put a viewing platform on the cliff edge that looks down over the hairpins and the valley.
+    covers:
+    - CR5
+    - VP3
+rubric:
+  content_realization:
+  - id: CR1
+    item: The road climbs one steep wall as a stack of tight hairpin bends, legs lying one above another
+    anchors:
+      '1': a road going up a single steep slope through repeated tight hairpins stacked one above another
+      '0.5': a winding or mountain road exists, but not as stacked hairpins up one steep wall (wide bends, scattered turns, gentle slope)
+      '0': no such climb; the road is straight, gently winding or on flat ground
+    evidence:
+    - img01
+    - img02
+    - img03
+    - img05
+  - id: CR2
+    item: A large waterfall pours down the steep rock wall right beside the hairpin climb
+    anchors:
+      '1': a large waterfall falling down the rock wall next to the hairpin road
+      '0.5': a waterfall exists, but small or away from the hairpins, or only a stream / water without a fall
+      '0': no waterfall
+    evidence:
+    - img01
+    - img02
+    - img03
+  - id: CR3
+    item: Below the climb lies a deep, long valley with steep walls
+    anchors:
+      '1': a deep valley with steep walls on both sides extending far away below the climb
+      '0.5': low ground or mountains exist below, but not a deep, long, steep-walled valley
+      '0': no valley below the climb
+    evidence:
+    - img01
+    - img05
+    - img06
+  - id: CR4
+    item: 'The place is vertical: the switchback climb links the valley floor far below to high ground at the top'
+    anchors:
+      '1': a large height difference between a low valley floor and a high top, joined by the switchback climb
+      '0.5': the climb exists, but one end (the valley floor or the high ground at the top) is missing, or the height difference is slight
+      '0': no height difference; the place is essentially flat
+    evidence:
+    - img01
+    - img03
+    - img04
+    - img06
+  - id: CR5
+    item: At the top of the climb, a viewing platform stands on the cliff edge, over the drop
+    anchors:
+      '1': a viewing platform at the top of the climb, standing on or projecting over the edge of the drop
+      '0.5': a viewpoint or platform exists, but not at the top or set back from the edge
+      '0': no viewing platform
+    evidence:
+    - img05
+  functions_playability:
+  - id: FP1
+    item: The switchback road can be travelled as one continuous route between the valley floor and the top, with a clear start, a goal and an
+      end
+    anchors:
+      '1': a continuous drivable route from the valley floor to the top (or the reverse) through the switchbacks, with a start and a recognisable
+        goal / end
+      '0.5': the road can be driven, but it is broken, only a short section, or has no goal or end
+      '0': no traversable route through the place
+    evidence:
+    - img01
+    - img02
+    - img03
+  - id: FP2
+    item: Travelling the route means negotiating a succession of tight hairpins that nearly reverse the direction of travel, while staying on
+      the road
+    anchors:
+      '1': the route passes through successive hairpins that turn almost back on themselves, and the player has to negotiate each to stay on the
+        road
+      '0.5': the road bends, but the turns are wide or isolated, not a succession of near-reversals
+      '0': no hairpin turns in play
+    evidence:
+    - img01
+    - img02
+  - id: FP3
+    item: 'The landmarks lie along the route: travelling it passes beside the waterfall and arrives at the viewpoint on the edge at the top'
+    anchors:
+      '1': both the waterfall and the top viewpoint are reached or passed on the route
+      '0.5': one of them is on the route, the other missing or unreachable
+      '0': neither is reachable from the route
+    evidence:
+    - img01
+    - img03
+    - img05
+  visual_presentation:
+  - id: VP1
+    cat: style
+    item: 'The valley below looks green: a green floor between steep walls, seen stretching far into the distance'
+    anchors:
+      '1': a green valley floor between steep walls, visible below and far into the distance
+      '0.5': a valley is visible, but not green, or not seen stretching away into the distance
+      '0': not shown
+    evidence:
+    - img01
+    - img05
+    - img06
+  - id: VP2
+    cat: style
+    item: The top looks bare and rocky under sharp pointed peaks, distinct from the green valley
+    anchors:
+      '1': a bare rocky high area with sharply pointed peaks above it, clearly distinct from the green valley
+      '0.5': high ground exists but looks like the valley (green, rounded), or the pointed peaks are missing
+      '0': not shown
+    evidence:
+    - img03
+    - img04
+  - id: VP3
+    cat: spatial
+    item: 'The view down from the viewing platform looks like img05: the stacked hairpins on the slope below and the deep valley stretching away
+      beyond'
+    anchors:
+      '1': from the platform, the stacked hairpins are seen below and the valley stretching away between its walls, together in one downward view
+        as in img05
+      '0.5': the platform gives a view, but of only one of them (the hairpins or the valley), or not downward over them
+      '0': no such view
+    evidence:
+    - img05
+  - id: VP4
+    cat: key_moment
+    item: 'The waterfall and the switchback climb seen together look like the place''s signature view in img01 / img03: a tall fall down a dark
+      rock wall beside hairpins stacked up the steep slope'
+    anchors:
+      '1': one view shows the large fall on the rock wall and the stacked zigzag road beside it, recognisable as the scene of img01 / img03
+      '0.5': both exist, but they are never seen together, or the fall or the zigzag does not look like the reference's (a thin trickle, a flat
+        ribbon, a few loose bends)
+      '0': not shown
+    evidence:
+    - img01
+    - img03
+play_suggestions:
+  FP1:
+  - 'drive from the start to the end without stopping: is the route continuous through all the switchbacks?'
+  - check that the start is low in the valley and the end high at the top (or the reverse), and that reaching it is recognised
+  FP2:
+  - 'take a hairpin at full speed: what happens?'
+  - count roughly how many sharp reversals the climb has and whether they come one after another up the slope
+  FP3:
+  - note where the waterfall comes into view and whether the route passes beside it
+  - 'at the top, stop at the viewpoint: can you reach it and look down on the road and the valley?'
+  robustness:
+  - 'try to cut straight down the slope between hairpin legs: is the result sensible (blocked, penalised or reset)?'
+  - 'drive off the edge or into the waterfall: does the game recover?'
+  - drive the route in the reverse direction
+v4_map:
+  U1: CR1
+  U2: CR3
+  U3: CR2
+  U4: CR4
+  U5: CR5
+  FP1: FP1
+  FP2: FP2
+  FP3: FP3
+  VP1: CR1 + VP4 (arrangement of the stacked hairpins on one slope is content, merged with U1; their look beside the falls is VP4)
+  VP2: CR2 + VP4 (waterfall beside the switchbacks is existence and position, merged with U3; the look of the combined scene is VP4)
+  VP3: CR3 + VP1 (existence of the deep valley to CR3; its green look stays VP1)
+  VP4: VP2 (look of the top; its existence as high ground is in CR4)
+  VP5: CR5 + VP3 (platform on the edge to CR5; the view down over the hairpins and the valley stays VP3 only)
+provenance:
+  source_yaml: T-IO-75454e008b.yaml
+  source_sha256: d0787a0a310922ece4deafe8138674b0ed8f72733445feaadafbf987b04819d6
+  size_waiver: null
+  size_max: null
+  sources:
+  - refs:
+    - img01
+    - img02
+    - img03
+    - img04
+    - img05
+    - img06
+    bundle: 75454e008b
+    title: 挪威 Trollstigen 发夹弯山路

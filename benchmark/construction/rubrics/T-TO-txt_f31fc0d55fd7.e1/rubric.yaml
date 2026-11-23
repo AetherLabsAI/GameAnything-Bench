@@ -1,0 +1,257 @@
+# GameAnything-Bench scoring material: never shown to agents during a trial.
+task_id: T-TO-txt_f31fc0d55fd7.e1
+source_inventory:
+- 'c08.p001-c08.p004: the interior is hard to describe without sketches; first impressions: small, low rooms (ceiling within reach, heads strike
+  the lintel or kamoi), structural posts and ties in plain sight, plain rectangular rooms whose only recesses are the tokonoma and its companion
+  bay in the best room, set in the side at right angles to the verandah; the tokonoma (bay nearest the verandah) holds a hanging picture and,
+  on a slightly raised floor, a vase; the companion bay has a small closet and shelves behind sliding screens (fig. 96, guest-room)'
+- 'c08.p005: movable partitions of paper-covered wooden frames run in grooves under cross-beams between corner posts; most inner and much of the
+  outer walling are such screens; the outer ones (white paper) give a subdued diffused light and can be removed to open the whole front to air
+  and sun; the inner ones have thick, plain or painted paper'
+- 'c08.p006-c08.p007: hardly any swinging doors; wood left unpainted and unpolished, natural surfaces, bark and curious grain kept; rough floors
+  fully covered by thick straw mats'
+- 'c08.p008: plan of a Tokio house (fig. 97): sizes and plan legend; kitchen and bath floors slope to a gutter that drains spilled water out;
+  closets for the night storm-shutters; vestibule, hall, seven rooms besides the kitchen, nine closets; no bedsteads, bedding is laid on the mats
+  in any room and stowed in closets by day; the bare floor can sleep many guests'
+- 'c08.p009: no outbuildings or cellar: lifting kitchen planks reveals the fuel store; the vestibule has an earth floor, with a strip of liftable
+  boards hiding clogs and umbrellas'
+- 'c08.p010-c08.p014: fig. 97 legend (parlor or guest-room, sitting, dining, library, study, servants'' room, bed-room, kitchen, hall, vestibule,
+  closets, tokonoma, shrine, privy); dining room and library six mats, parlor eight, sitting room four and a half; these three border the verandah;
+  cost, land and tax; digression on the cheap, simple furnishing of a family house'
+- 'c08.p015-c08.p020: plans vary as much as at home; plan fig. 98 (seven rooms, kitchen, hall, bath, side-entrances, waiting-room); the visitor''s
+  impression: emptiness of the rooms, tinted walls in harmony with the wood, screens with faint ink drawings, clean mats, natural wood ceiling,
+  the recesses, a room-wide lintel with lattice above; the smell of the wood; contrast with cluttered American rooms'
+- 'c08.p021-c08.p022: digression against ornate Western furniture; mats about three by six feet give the room sizes; rooms are small but look
+  roomy for lack of furniture; the three rooms along the verandah facing the garden are easily thrown into one long room'
+- 'c08.p023: construction shown openly (board ceiling, corner and middle posts, ties, rafters under wide eaves on an unhewn beam); a perfect summer
+  house, chilly in winter; charcoal braziers for warmth; winter parties with rooms open to a snowy garden'
+- 'c08.p024-c08.p029: houses of nobles, samurai and peasants; plan of part of a Daimio''s residence (fig. 99): a reception suite with a raised
+  dais room (jo-dan) over a lower room (ge-dan), bordered by a matted passage (iri-kawa) before the verandah; how the lord receives New Year callers;
+  plan legend'
+- 'c08.p030-c08.p036: the mats (tatami): bound straw two inches thick, covered with matting, long edges bound in black linen (fig. 100); mat-making
+  as a trade; rooms are planned for a set number of mats, so the count gives the size; usual counts and layouts, six and eight mats most common
+  (fig. 101)'
+- 'c08.p037: four mat corners never meet, laid as a spiral; noble houses have patterned borders; the floor beneath is rough; shoes are never worn
+  on the mats, clogs are left outside on stepping-stones or the earth floor of the entrance; damp mats are stacked outside to dry and beaten;
+  fleas'
+- 'c08.p038-c08.p043: the mats serve as seat, bed and table; the kneeling posture and bows (fig. 102); meals on trays on the floor; bedding laid
+  out at night and stowed in a closet in the morning; mat prices'
+- 'c08.p044-c08.p047: the kamoi as a room-wide lintel with two deep grooves above and two shallow floor grooves below; screens are lifted out
+  to turn a suite of rooms into one, and slide past each other to open any width; section through verandah and guest-room (fig. 103); fusuma between
+  rooms, shoji on the outer sides next to the verandah in place of windows'
+- 'c08.p048-c08.p051: fusuma covered both sides with thick, often richly painted paper (kara-kami), panoramas, gold leaf in castles, plain or
+  textured papers, sketches left by visiting artists; a shoji panel set into a fusuma to light a back room; summer reed screens (yoshi-do, fig.
+  104)'
+- 'c08.p052-c08.p065: a sturdier fusuma in a permanent partition acts as the door from the hall to the other rooms (fig. 105); cedar sliding panels
+  in the vestibule; the recessed pulls (hikite) and their many designs and materials, old corded forms (figs. 106-110)'
+- 'c08.p066-c08.p072: shoji: a lattice of thin bars, a low wooden panel, white paper on the outside, a soft diffused light inside, a finger recess
+  as pull; holes patched with blossom-shaped paper; sprung frames straightened with bamboo strips (fig. 111); ornamental lattices; a low strip
+  of glass at the eye level of people seated on the mats (fig. 112)'
+- 'c08.p073-c08.p079: transition to typical rooms; the guest-room of fig. 96 seen through an opened partition: tokonoma (a clear recess with a
+  picture, once the bed-place) and chigai-dana (closet and shelves behind sliding doors); the natural-wood post between them (toko-bashira, fig.
+  113); ceiling and floor levels of the two bays; polished plank floors, a mat in large tokonoma of Daimio houses'
+- 'c08.p080-c08.p082: beams across both bays below the ceiling, plastered walls, ornamental nail heads (figs. 114-117); an ornamental opening
+  in the dividing partition; staggered shelves, a top shelf behind sliding doors and a little floor closet in the chigai-dana'
+- 'c08.p083-c08.p084: two-sided symmetry is avoided everywhere (two same-size rooms, one with recesses, one with a closet; ceiling strips and
+  mats laid in opposite ways; the two bays unlike in every detail); digression on symmetrical American rooms'
+- 'c08.p085-c08.p088: the recesses vary endlessly; usually side by side at right angles to the verandah with the tokonoma next to it, sometimes
+  at right angles in a corner, or a tokonoma alone or across a whole side; a mat in front of each; the guest of honor sits before the tokonoma,
+  the next guest before the chigai-dana; names of shelf forms (fig. 118); objects kept on the shelves and cupboard; the sword-rack placed in the
+  tokonoma for distinguished guests; lacquer in noble houses'
+- 'c08.p089-c08.p098: a high-ranking gentleman''s room with a large matted tokonoma and the small chigai-dana next to the verandah (fig. 119);
+  tokonoma depth and its objects in proportion to the room; a very deep tokonoma in a Tokio hall; a corner arrangement with a circular window,
+  a ventilation window, cupboards and a wave frieze (fig. 120); the many decorative features of a seemingly plain room'
+- 'c08.p099-c08.p103: figs. 122-123 captions; a tokonoma shielded by a partition with a large circular bamboo-framed window (fig. 121); the writing-place
+  recess with low shelf, cupboards, window and writing things (fig. 122)'
+- 'c08.p104-c08.p113: a tokonoma along almost a whole side with a reduced corner cupboard (fig. 123); a small room with a tokonoma facing the
+  verandah and no companion recess (fig. 124); a plain tea-lover''s room with a corner tokonoma (fig. 125); a potter''s upper room in Kioto with
+  a twisted post, gold-paper doors and cedar ceiling panels (fig. 126)'
+- 'c08.p114-c08.p122: an upper room whose whole end forms one recess containing both bays (fig. 127); a poor country house''s plain recesses with
+  a shipwreck plank shelf (fig. 128); summary: endless variety, but the tokonoma always holds a hanging scroll and an object on its floor, the
+  chigai-dana shelves and closets; corner of a guest-room (fig. 129)'
+- 'c08.p123-c08.p125: cross-ties and ornamental nails at the corner; in two-storey houses the recesses may face the balcony, with a window in
+  the chigai-dana onto a view; the other rooms are smaller, have no such recesses, and are plain rectangles bounded by fusuma or permanent partitions'
+instructions_meta:
+  requirement_groups:
+    walkable interior:
+    - FP1
+    partitions between rooms:
+    - CR5
+    - FP2
+    room layout and floors:
+    - CR1
+    - CR3
+    - CR4
+    - VP1
+    room features and interior style:
+    - CR2
+    - VP2
+    - VP3
+  explicit_requirements:
+  - type: keep
+    text: I want the guest room to keep its two recesses, an open alcove with a hanging scroll and an object on its floor next to a bay of shelves
+      and closets.
+    covers:
+    - CR2
+  - type: specify
+    text: The player should come in through an earth-floored vestibule that leads to the hall and from there into the matted rooms.
+    covers:
+    - CR1
+    - FP1
+rubric:
+  content_realization:
+  - id: CR1
+    item: The house has a vestibule with an earth floor, which leads to the hall and from the hall into the matted rooms
+    anchors:
+      '1': an earth-floored entrance distinct from the matted interior, connected through a hall to the rooms
+      '0.5': an entrance exists, but without the earth floor in contrast to the matted rooms, or with no hall between it and the rooms
+      '0': no distinct entrance; the map starts inside a room
+    evidence:
+    - c08.p008
+    - c08.p009
+    - c08.p037
+    - c08.p052
+  - id: CR2
+    item: 'The guest room has two recesses side by side: the tokonoma, an open alcove holding a hanging scroll and an object on its floor, and
+      a companion bay of shelves and closets'
+    anchors:
+      '1': 'both recesses in the guest room, told apart: a display alcove with a scroll and an object on its floor, and a bay of shelves and closets'
+      '0.5': an alcove or recesses exist, but the two bays are not told apart, or they are not in the guest room
+      '0': no recesses
+    evidence:
+    - c08.p002
+    - c08.p074
+    - c08.p082
+    - c08.p120
+    - c08.p125
+  - id: CR3
+    item: The rooms are floored with mats of one standard rectangular size, and each room's size is a whole (or half) number of those mats
+    anchors:
+      '1': every main room covered by same-size mats, room sizes following the mat module (rooms of different mat counts allowed)
+      '0.5': matted floors, but the rooms do not follow a common mat size
+      '0': no matted floors
+    evidence:
+    - c08.p007
+    - c08.p012
+    - c08.p022
+    - c08.p034
+  - id: CR4
+    item: The main rooms, the guest room among them, lie side by side along a verandah that faces a garden
+    anchors:
+      '1': a row of main rooms, including the guest room, opening onto a verandah with a garden beyond
+      '0.5': a verandah or a garden exists, but not along the row of main rooms, or the guest room is not on it
+      '0': no verandah and no garden
+    evidence:
+    - c08.p012
+    - c08.p022
+    - c08.p047
+  - id: CR5
+    item: The walls between the rooms, and the verandah side of the main rooms, are sliding paper screens rather than solid walls
+    anchors:
+      '1': rooms divided by sliding screens, with screens also forming the verandah side of the main rooms
+      '0.5': sliding screens present, but most rooms still divided by solid walls, or the verandah side solid
+      '0': only solid walls and ordinary doors
+    evidence:
+    - c08.p005
+    - c08.p006
+    - c08.p047
+    - c08.p125
+  functions_playability:
+  - id: FP1
+    item: The player enters the house from outside and can walk through it as one connected interior, reaching the matted rooms, the guest room
+      and the verandah
+    anchors:
+      '1': a connected interior entered from outside, where the matted rooms, the guest room and the verandah can all be reached (any route)
+      '0.5': the interior can be explored, but it cannot be entered from outside, or the guest room or the verandah cannot be reached, or rooms
+        are disconnected
+      '0': no walkable interior
+    evidence:
+    - c08.p008
+    - c08.p009
+    - c08.p012
+    - c08.p022
+    - c08.p052
+  - id: FP2
+    item: 'The sliding partitions work as the walls between rooms: the player can open or remove them, so adjoining rooms open into one larger
+      space'
+    anchors:
+      '1': partitions that the player slides or removes, visibly merging rooms into one space
+      '0.5': screens that open only like ordinary doors, never merging rooms into one space
+      '0': partitions are static scenery
+    evidence:
+    - c08.p044
+    - c08.p005
+    - c08.p022
+  visual_presentation:
+  - id: VP1
+    cat: style
+    item: 'The room floors look like thick straw mats: woven matting with bound edges, clearly unlike the earth floor of the entrance or ordinary
+      boards'
+    anchors:
+      '1': floors recognisable as woven straw mats, their bound edges showing between the mats
+      '0.5': straw-coloured or woven floors, but not recognisable as separate mats
+      '0': ordinary floors (boards, stone, carpet)
+    evidence:
+    - c08.p007
+    - c08.p017
+    - c08.p030
+  - id: VP2
+    cat: style
+    item: A plain, uncluttered interior of natural, unpainted wood, with posts and beams left in plain sight
+    anchors:
+      '1': sparsely furnished rooms with an exposed natural wood structure
+      '0.5': wood present, but painted over, the structure hidden, or the rooms cluttered like a generic interior
+      '0': a generic interior
+    evidence:
+    - c08.p002
+    - c08.p006
+    - c08.p017
+    - c08.p022
+    - c08.p023
+  - id: VP3
+    cat: style
+    item: 'The partitions look like paper-covered wooden frames: light, translucent white paper screens on the verandah side, opaque paper screens
+      between rooms'
+    anchors:
+      '1': screens recognisable as paper on light wooden frames, the outer ones bright and translucent, the inner ones opaque
+      '0.5': paper screens recognisable, but outer and inner alike
+      '0': partitions look like ordinary walls or doors
+    evidence:
+    - c08.p005
+    - c08.p047
+    - c08.p048
+    - c08.p066
+play_suggestions:
+  FP1:
+  - 'start outside and enter: is there an earth-floored entrance before the matted rooms?'
+  - walk from the entrance to the guest room and out to the verandah
+  FP2:
+  - 'open and close the screens between two rooms, then remove them: do the rooms become one space?'
+  - 'open the screens along the verandah rooms one after another: do they form one long room?'
+  robustness:
+  - try to walk through closed screens or out of the house through walls
+  - remove and replace several screens in a row, then reload or leave and return
+  - walk on the verandah and around the guest room recesses for clipping or stuck spots
+v4_map:
+  U1: FP2 (mechanism already scored there); existence of sliding partitions -> CR5
+  U2: CR3
+  U3: CR2
+  U4: CR4
+  U5: CR1
+  FP1: FP1 (reachability); existence of entrance, hall, rooms, verandah -> CR1, CR4
+  FP2: FP2
+  VP1: CR4 (rooms in a row along verandah and garden); paper-screen look -> VP3
+  VP2: 'CR2 | dropped: same property as CR2 (two distinct recesses), merged there'
+  VP3: VP1 (look of the straw mats only; uniform mat grid and mat-module sizing moved to CR3)
+  VP4: VP2 (paper-screen part moved to VP3)
+provenance:
+  source_yaml: T-TO-txt_f31fc0d55fd7.e1.yaml
+  source_sha256: 4c60431a7d4451d96525771608790169c3e923b67ee66ee8999d894fb0b03a15
+  size_waiver: null
+  size_max: null
+  sources:
+  - ref: t01
+    title: Japanese Homes and Their Surroundings
+    author: Edward Sylvester Morse
+    text_id: txt_f31fc0d55fd7
+    excerpt_id: e1

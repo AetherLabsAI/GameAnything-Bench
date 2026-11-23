@@ -1,0 +1,215 @@
+# Bench filter of the GameAnything seed, applied by scripts/memory_seed.py after the privacy scan.
+# Keep only lessons about the game itself and its modding / building / testing that hold inside the bench containers,
+# consistent with gab/game/<game>/devkit/README.md; drop what relies on GameAnything platform tooling (gameanything native,
+# mc cmd / mc-run / mc-shot, vh-game / vh-build, cs + the m2w command mod and its onload.txt / water.txt / surface.txt,
+# JuiceFS, the play page, lab scripts and paths) or contradicts the devkit. Kept entries are translated to English (keys
+# symptom / cause / fix, as in the seed files); `adapted` = the text was changed beyond translation to fit the bench.
+# Every entry that passes the privacy scan must be listed here (keep or drop).
+
+games/minecraft.md:
+  minecraft-002: {drop: "about Gradle build/libs and GameAnything's `native install`; the bench builds with javac + `game build` (no Gradle)"}
+  minecraft-003:
+    symptom: "Many names changed in 26.3: Blocks.RED_WOOL / PINK_STAINED_GLASS do not exist, ServerPlayer.hurtMarked is gone, TextDisplay.getText/setText are private."
+    cause: "26.3 is a new, unobfuscated version (Mojang's own names); most older tutorials and remembered APIs are outdated."
+    fix: "Look the real code up in the decompiled sources (path in `game info`) or with javap before writing it; coloured blocks via Blocks.WOOL.pick(DyeColor.X)-style calls."
+    adapted: "the lab path /lab/mc-sources replaced by the devkit's `game info` sources / javap"
+  minecraft-004: {drop: "says there is no superflat option; the bench start.yaml has world_type: flat (contradicts the devkit), and mc reset / mc-run are GameAnything lab tools"}
+  minecraft-005:
+    symptom: "Scripted characters end up buried in the ground, standing on roofs or well covers, or vanish on bridges."
+    cause: "Blocks written directly while building do not update the heightmap, so it returns the water or dirt below; MOTION_BLOCKING also misses custom leaves without collision."
+    fix: "Find standing height by scanning down from above for the first solid surface (skipping leaves); use fixed heights for pavilions, bridges and upper floors; load the chunk first (getChunk), an unloaded chunk reads as air."
+  minecraft-007:
+    symptom: "A second boat built from block_display parts never showed up: one boat fell apart, the other stayed at spawn."
+    cause: "The parts of both boats used the same tag, so the per-tick `tp @e[tag=..,limit=1]` moved only one of them."
+    fix: "Tag parts as <part><instance id>; find anything assembled from block_display (boats, figures) by a unique tag or a fixed UUID."
+  minecraft-008:
+    symptom: "Flower beds, hedges, stairs and walls are pitch black although the same commands lit them before; flat plants render as black silhouettes."
+    cause: "Light blocks placed while building sometimes do not get their lighting computed; placing a light block where one already is changes nothing."
+    fix: "About 30 s after building, force-load those chunks, remove every light block and place it again; give flat decorative blocks a lightLevel."
+  minecraft-009:
+    symptom: "Block states fail to parse; display entities made of grass, ferns or oak leaves render black; pink blocks float in the air."
+    cause: "26.3 needs block_state:{id:\"..\",properties:{..}} (the old \"name[k=v]\" form is rejected); biome-tinted blocks render black in displays; unsupported decoration blocks look like they float."
+    fix: "Use the new format; for greenery in displays use untinted blocks (azalea leaves, moss, flowers); after decorating, look through the camera for floating blocks."
+  minecraft-010:
+    symptom: "The client dies while loading a model; the log says `PartDefinition parent is null`."
+    cause: "In the model json a child part comes before its parent."
+    fix: "Sort parts by their parent chain in the script that writes the model; check the sign of arm / limb rotations on one posed screenshot first (a negative right-arm yRot turns inwards; the wrong sign gives a T-pose)."
+  minecraft-011:
+    symptom: "Subtitles cover the characters in the middle of the screen; a scene's lines keep showing after the camera has left for another room; long lines are cut off."
+    cause: "The title channel is in the screen centre; the scene did not stop when the player left; a 1280 px wide window fits only about 34 Latin characters (16 CJK) per line."
+    fix: "Show text in your own HUD element or the action bar along the bottom; stop the scene and clear its text about 1.5 s after the player leaves its range; split lines to the window width. Never have the mod write to chat."
+  minecraft-012: {drop: "about JuiceFS host-to-container delays and the lab's build.done marker; the bench builds with `game build`"}
+  minecraft-013: {drop: "about GameAnything's `mc cmd` reading stdin; the bench tool is `game cmd`"}
+  minecraft-014:
+    symptom: "Commands that spawn butterflies or plaques flood the chat, which then shows in screenshots and recordings."
+    cause: "The server console command source ignores withSuppressedOutput()."
+    fix: "Run them with a CommandSourceStack built from CommandSource.NULL; while capturing, turn off the send_command_feedback and command_block_output game rules."
+  minecraft-015:
+    symptom: "The review said a hall was unchanged or showed a 'black panel', yet the changes were there: the camera stood inside a solid block of an old gate, a railing or a bookshelf."
+    cause: "A spectator camera inside a block fills the screen with that block; structures left from an earlier version block the view of new ones."
+    fix: "When a review disagrees with what you saw, first check the block at the camera position and along the line of sight (`game query block` / `game query blocks`); keep pillars out of 2 blocks and trees out of 13 blocks around fixed camera spots."
+    adapted: "GameAnything's `mc blocks` replaced by the devkit's `game query`; the registered-camera clause left out"
+  minecraft-016:
+    symptom: "Aerial shots show only sky and fog, distant areas show bare pillars; after interior changes the screenshot still shows the old state; 12 shots after a long teleport are all the first frame."
+    cause: "The client rebuilds chunk meshes slowly (blocks 30-60 s, display entities at once); far chunks are not rendered yet."
+    fix: "Wait at least 12 s after a long teleport and over 30 s after large block changes; take distant views last, with longer waits."
+  minecraft-022:
+    symptom: "block_display entities spawned by a command are all air (invisible), and the command reports no error."
+    cause: "26.3 block_state must be {id:\"minecraft:x\",properties:{k:\"v\"}}; {Name:\"minecraft:x\"} is read as air."
+    fix: "Always use id / properties when summoning block_display; after spawning, check once with `data get entity @e[tag=..,limit=1] block_state` that it is not minecraft:air."
+  minecraft-023:
+    symptom: "Characters spawned with fixed UUIDs (hash of a name): on the second tour some appear and some do not."
+    cause: "Entities with the same UUID left in unloaded chunks by the previous tour collide with the new ones, which are dropped; kill only reaches loaded entities."
+    fix: "Spawn with random UUIDs (keep a table from id to UUID); at the start of a tour forceload the scene's chunks, then kill; give all characters a common tag for cleanup."
+  minecraft-024:
+    symptom: "Posable humanoid figures with outfits are tedious to build from block_display parts and hard to re-dress."
+    cause: "26.3 has a vanilla minecraft:mannequin entity."
+    fix: "Use a mannequin with dyed leather helmet / chestplate / leggings / boots in its equipment (dyed_color as an integer RGB); pose crouching (sitting) or swimming (lying), immovable:1b, hide_description:1b, CustomName as a name tag; move it each tick with teleportTo from Java."
+    adapted: "the online-skin clause (profile name fetched over the network) left out: the bench game is offline"
+  minecraft-025:
+    symptom: "The green Glowing outline shows through walls and hills; an aerial shot of the island has a cluster of green dots."
+    cause: "Glowing outlines are not occluded by blocks."
+    fix: "Turn the outline on only for the scenes that need it (data merge ... Glowing:1b) and off for the rest and before still screenshots."
+  minecraft-026: {drop: "about the GameAnything lab's shared sandbox seats (VGL, lab-display.sh, docker-rt exec quotas)"}
+  minecraft-027: {drop: "repeats minecraft-008 / minecraft-016 and relies on GameAnything's mc-shot and a project command"}
+
+games/cities_skylines.md:
+  cities_skylines-001:
+    symptom: "Replacing an installed mod's DLL while the game runs (in a city or the main menu) does not reload it, even after a minute."
+    cause: "The Linux version does not hot-reload mods (Unity / Mono keeps the loaded assembly)."
+    fix: "After C# changes the game has to restart (`game start` / `game reset`, a city load takes minutes): batch C# changes and test them together."
+    adapted: "GameAnything's install / `cmd` replaced by the devkit's `game start` / `game reset`"
+  cities_skylines-003: {drop: "about switching mods on in userGameState.cgs with GameAnything's install; the bench enables the mods itself"}
+  cities_skylines-004: {drop: "about JuiceFS and GameAnything's --same-fs-tmp / `cs install`"}
+  cities_skylines-006:
+    symptom: "Parked cars, benches and shop props disappear right after being placed."
+    cause: "The simulation deletes props and trees that sit on road or pedestrian-path segments (whichever was built first)."
+    fix: "Put props on grass and show paving another way; check with a screenshot that they are still there after the simulation has run."
+  cities_skylines-007: {drop: "about the surface / pave commands of GameAnything's m2w mod"}
+  cities_skylines-008:
+    symptom: "Things built in the running city are gone after the game restarts."
+    cause: "What is built at runtime lives only in the running city; every start of the bench is fresh."
+    fix: "Have the mod build everything when the level loads (terrain, water, roads, props, models, tints); before handing in, check from a clean `game reset` that the mod alone rebuilds it all."
+    adapted: "GameAnything's onload.txt replaced by building in the mod on level load"
+  cities_skylines-009: {drop: "the fix relies on the water.txt command of GameAnything's m2w mod; rewriting it needs an untested API"}
+  cities_skylines-010:
+    symptom: "The result of something the mod just did does not show in Player.log."
+    cause: "The game writes Player.log buffered; the last lines can arrive minutes late."
+    fix: "For immediate feedback keep your status in static fields of your assembly (shown under mod in `game state`) or write your own log file; read Player.log (`game log`) for compiler errors and exceptions."
+    adapted: "GameAnything's m2w.log / `cs log` replaced by the devkit's state and log"
+  cities_skylines-011:
+    symptom: "Generated building models look hollow and broken from an oblique angle."
+    cause: "The meshes are single-sided and their back faces are culled."
+    fix: "Make meshes double-sided or add back faces before importing; check with screenshots from the angles the experience uses."
+  cities_skylines-017:
+    symptom: "On Linux, Chinese text on buttons and labels is blank; a font in the user font folder does not help, and a whole 8 MB CJK OTF froze the game at start."
+    cause: "Unity 5.6 lists only system fonts (8 DejaVu fonts) and does not scan the user font folder."
+    fix: "Do not rely on fonts: pre-render the text to images (e.g. PIL with a Noto font), ship them with the mod and draw the images when no CJK system font exists."
+  cities_skylines-018: {drop: "about the GameAnything lab pod's memory limit and its restart scripts (entrypoint.sh, steam-then-game.sh, cs install)"}
+  cities_skylines-019: {drop: "about one project's cliff_cove overlay in GameAnything's m2w models.txt"}
+  cities_skylines-020: {drop: "about the order of terrain / water commands of GameAnything's m2w mod"}
+  cities_skylines-021: {drop: "about GameAnything's `cs stop` / `cs install` and the legal disclaimer; the bench handles the disclaimer itself"}
+  cities_skylines-022:
+    symptom: "Tufts of grass grow through custom flat paths / paving (drawn only near the camera); raising them 0.45 m or making the decoration colour transparent does not help."
+    cause: "The blades are TerrainProperties grass / fertile decorations, drawn from the terrain regardless of models on top."
+    fix: "From the mod, after the level loads, set m_useGrassDecorations and m_useFertileDecorations of the loaded TerrainProperties to false; lawns look the same from afar."
+    adapted: "GameAnything's onload.txt `field` command replaced by setting the fields from the mod"
+  cities_skylines-023:
+    symptom: "After planting about 3500 trees an IndexOutOfRange in TreeInstance.PopulateGroupData pops up."
+    cause: "Too many trees in one render group."
+    fix: "Keep one area to about 1300 trees with at least 6.5 m spacing (check on a grid); start with fewer and add."
+  cities_skylines-024: {drop: "macOS native reload with GameAnything tooling; the general point is cities_skylines-001"}
+
+games/stardew_valley.md:
+  stardew-001:
+    symptom: "A `bin/Release/net6.0` folder was installed into Mods: the game starts normally but the mod is not loaded and the log shows no error."
+    cause: "SMAPI only loads folders with a manifest.json whose EntryDll names an existing DLL, and silently skips the rest."
+    fix: "Keep manifest.json's EntryDll equal to <AssemblyName>.dll and let `game build` build and install the mod folder; do not copy bin folders by hand."
+    adapted: "GameAnything's `native build` / `install` replaced by the devkit's `game build`"
+  stardew-003:
+    symptom: "Chinese song titles in a jukebox list show as boxes in the recording."
+    cause: "The game runs in English, whose fonts have no Chinese glyphs; only the Chinese game uses a Chinese font."
+    fix: "Give menu and title texts an English / pinyin name as well, shown in the English game; check recordings for boxes."
+  stardew-004:
+    symptom: "An NPC's 'laugh' sounded like a pig and synthesized applause was not recognizable as applause."
+    cause: "The agent synthesized the sounds in code and handed them in without anyone listening."
+    fix: "Prefer the game's own sounds; for new audio use provided files; say in the hand-in that a sound was not listened to."
+    adapted: "the asking-the-user clause left out"
+  stardew-005:
+    symptom: "Looping background music breaks every ~83 s."
+    cause: "The last 6.6 s of the wav file were silence, leaving a gap at each loop."
+    fix: "Check leading / trailing silence with ffmpeg silencedetect; trim it or loop from where the sound is."
+    adapted: "the asking-the-user clause left out"
+  stardew-006:
+    symptom: "An NPC at a table 'sits in the air'."
+    cause: "The sprite was switched to a sitting pose, but no chair furniture was placed at the table; a review of thumbnails only missed it."
+    fix: "Always put a chair (game furniture or your own) under a sitting character and check front / back overlap; review full-size images."
+  stardew-007:
+    symptom: "Scenes looked crude and out of proportion (huge furniture, characters showing only their heads); rejected twice."
+    cause: "The scene was made as a separate framed picture with a background stretched to the screen, not at the game's tile scale."
+    fix: "Build it as a real small game location (the game's tiles and furniture, characters at game scale); this passed on the third try."
+  stardew-009:
+    symptom: "The next morning another mod clothing item had vanished from the wardrobe (the save was changed)."
+    cause: "The daily outfit code first called 'remove all mod clothing' and then made a new set."
+    fix: "Remove / replace items by their specific id, never clear a whole category; list any logic that changes the save in the hand-in."
+    adapted: "showing the logic to the user replaced by listing it in the hand-in"
+  stardew-010:
+    symptom: "The agent moved farm buildings, cleared debris at the door and maxed out friendship on its own initiative."
+    cause: "Nothing said 'do not touch what is already in the save'."
+    fix: "Do not change existing objects or values of the save that the request does not ask for; if you must, list it in the hand-in; put debug shortcuts behind a switch that is off by default."
+    adapted: "the brief / DEVIATIONS wording replaced by the hand-in"
+  stardew-011:
+    symptom: "A visiting NPC pops into existence at 10:00 and vanishes at 17:00; a spouse NPC is called home at 13:00 by the vanilla schedule."
+    cause: "The NPC was warped directly; the vanilla schedule overrides the mod's plan at fixed times."
+    fix: "Let NPCs walk in and out through map entrances; to change a vanilla schedule, patch it and verify it in a replay."
+  stardew-012:
+    symptom: "Temporary event characters left in the save cause errors once the mod is removed."
+    cause: "Temporary NPCs were added to a location and not removed before saving."
+    fix: "Remove temporary NPCs before the game saves and check after every replay that none is left; provide a cleanup before uninstalling."
+    adapted: "GameAnything's stray_npcs state field left out"
+
+games/terraria.md:
+  terraria-002: {drop: "first start of a fresh tModLoader with GameAnything backup / install; the bench makes the start world and player itself"}
+
+games/valheim.md:
+  valheim-001: {drop: "macOS Steam launch options with GameAnything's native launcher; the bench runs Linux in its sandbox"}
+  valheim-002:
+    symptom: "A plugin built for .NET 5+ (or loaded without its symbols by a hot-reloader) does not load."
+    cause: "BepInEx on the game's Mono loads .NET Framework 4.x / netstandard plugins only."
+    fix: "Target net462 (as the devkit template does); do not keep the same plugin in two plugin folders; call harmony.UnpatchSelf() in OnDestroy."
+    adapted: "the ScriptEngine hot-reload part (not in the bench) reduced to the target framework rule"
+  valheim-003:
+    symptom: "Added items disappear after entering the world."
+    cause: "The game rebuilds ZNetScene / ObjectDB every time a world is entered."
+    fix: "Register them in Postfix patches of ZNetScene.Awake and ObjectDB.Awake."
+    adapted: "the lab's PrefabKit.cs example left out"
+  valheim-004:
+    symptom: "A plugin project fails with CS0012 for a Unity type (e.g. FontStyle)."
+    cause: "The project does not reference the Unity module that defines the type (here UnityEngine.TextRenderingModule)."
+    fix: "Start from the devkit template and add a <Reference> with a HintPath into the game's managed assemblies for every Unity module you use."
+    adapted: "the lab's vh-build / HelloMod example generalised"
+
+roles/builder.md:
+  builder-001: {drop: "about encoding videos in the GameAnything sandbox; bench agents hand in traces, not videos"}
+  builder-002: {drop: "about the GameAnything lab's 120 s docker exec limit and its wait tools (vh-game wait, cs)"}
+  builder-003:
+    symptom: "`pkill -f` / `pgrep -f` matched the agent's own shell (exit 144) or killed other games and services."
+    cause: "-f matches the whole command line, including the command itself."
+    fix: "List PIDs in a separate call first (ps -eo pid,comm,args, excluding bash / sh / awk), then kill those exact numbers; start and stop the game only with `game start` / `game stop`."
+    adapted: "the lab tools replaced by the devkit's `game start` / `game stop`"
+  builder-005: {drop: "about JuiceFS between the GameAnything host and its containers"}
+  builder-008:
+    symptom: "A development agent hit its time limit and was stopped; its last message was empty and nothing was handed in."
+    cause: "It did not wrap up before the limit."
+    fix: "Well before the time is up, have the hand-in complete (mod, traces, shots, ACCESS.md) and the mod source buildable offline."
+    adapted: "RESULT / NOTES / DEVIATIONS replaced by the bench hand-in"
+  builder-009:
+    symptom: "One problem was changed back and forth dozens of times (the same camera spot kept being blocked by pillars and trees)."
+    cause: "Parameters were tuned in one direction only, without changing the approach."
+    fix: "After the same failure three times, stop, write down the known cause and change direction (e.g. remove what is in the way instead of moving the camera again)."
+  builder-011: {drop: "about recording a delivery video from the start; bench traces are replayed from a fresh start by the harness"}
+  builder-018: {drop: "about image caching on GameAnything's web pages and cards"}
+  builder-022:
+    symptom: "Real-world rules of a theme were written from memory and were wrong (a 10-point review scale where the real one has 6 points)."
+    cause: "The official description was not checked."
+    fix: "Check real-world rules (rating scales, procedures, terms) against the official description before writing them; when converting, keep the original difficulty."

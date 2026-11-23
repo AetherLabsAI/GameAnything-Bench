@@ -1,0 +1,25 @@
+# STATE_SPEC self-check (gab selfcheck stardew_valley --state): format in gab/setup/selfcheck.py state_check.
+# A fresh start is already in game (the start save: spring 1, farmhouse, in bed); the farmer steps out of bed to the left.
+vanilla:
+  steps:
+    - {do: wait, seconds: 2}
+    - {do: hold, keys: [a], seconds: 0.4}
+    - {do: wait, seconds: 1}
+  engine: [screen, location, location_name, tile.x, tile.y, facing, health, max_health, stamina, max_stamina, money, date.year, date.season,
+           date.day, time, weather, inventory, held, skills.farming, paused, player, farm, quests]
+  mod_allow: []
+mod:
+  dir: statemod
+  steps:
+    - {do: wait, seconds: 2}
+    - {do: hold, keys: [a], seconds: 0.4}
+    - {do: wait, seconds: 1}
+  expect:
+    - "mod: GAB State Check"
+    - "mod: gab.statecheck/beacon"
+    - "mod: GabStateCheck_BeaconLit"
+    - "mod: GabBeaconKeeper"
+    - "mod: gab.statecheck/marker"
+    - "mod: GabStateCheck_Lantern"
+    - "screen_text: GAB HUD: the beacon keeper waits nearby"
+    - "screen_text: GAB quest: talk to the beacon keeper"

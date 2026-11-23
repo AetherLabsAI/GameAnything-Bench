@@ -1,0 +1,228 @@
+# GameAnything-Bench scoring material: never shown to agents during a trial.
+task_id: T-TO-txt_772670af5456.e2
+source_inventory:
+- 'c44.p001: Sunday rest at home; the elder boys report that the maize and potato plantations need a few days'' work'
+- 'c44.p002: next morning Fritz and Jack have taken the cart wheels to fetch pine trunks for fountain pipes; the father lays out the colonnade
+  on the ground (a straight line in front of the rock that forms the house front, divided into equal spaces, the two ends kept for two pavilions);
+  at Tent House the water must come a long way over uneven ground in buried pipes, bamboo is rejected for its knots, Fritz will make the pipes;
+  twelve bamboo columns are set up'
+- 'c44.p003-c44.p004: evening reading from the captain''s library keeps the mother unaware; Ernest asks to join the work; his straw bonnet'
+- 'c44.p005-c44.p007: in a hollow of the rocks near Tent House the boys have a forge and hammer an iron bar to a point for an auger; they want
+  bellows'
+- 'c44.p008 (first part): kangaroo-skin bellows on boards; the iron twisted into a screw auger with a cross handle; trunks bored from both ends;
+  iron joints made and the pipes buried in trenches, with Ernest''s surveying help'
+- 'c44.p008 (middle): the colonnade is roofed: an arched plank on the columns, bamboos sloping back to the rock fixed with iron cramps, clay and
+  gum making a glossy striped roof; the floor raised a foot and paved with stones from the rock cutting; many days of work while the mother still
+  cannot walk; Ernest secretly makes a new bonnet'
+- 'c44.p008 (end): the pavilions, pagoda-like, square on four columns, higher than the gallery, with pointed parasol roofs; a fountain in the
+  middle of each, breast-high basins of turtle shell'
+- 'c44.p009 (first part): the pipe decorated with shells, water falling through an urn-shaped volute into the basin and led out by a small channel;
+  the work shields the dwelling from the heat; ''The Franciade'' written on the middle arch, ''Fritzia'' and ''Jackia'' over the pavilions; Ernest
+  is not named'
+- 'c44.p009 (middle): Fritz and Ernest make long excursions and bring game, natural curiosities and new plants (guajaraba, date-palm)'
+- 'c44.p009 (end): the father tends the garden at Tent House; the dwelling lies among picturesque rocks and trees, facing the Bay of Safety; the
+  garden is behind'
+- 'c45.p001-c45.p003: the rope ladder is missing; the father and Jack walk into the garden along the foot of the rocks, past the cold forge, and
+  hear knocking inside the rock; the father fears an earthquake, Jack guesses people'
+- 'c45.p004: stones fall out and Fritz and Ernest appear; inside is a round grotto with a vaulted roof split by a narrow crevice for light and
+  air, two gourd lamps, the rope ladder hanging from the opening at the top; nothing showed it from outside; Ernest presents it as a resting place
+  for his mother on her way to the garden, the Grotto Ernestine'
+- 'c45.p005-c45.p006: Jack jokes about a dwelling for the first to marry; the father asks how they found it'
+- 'c45.p007: Fritz''s account: the path is too narrow for a tent and the sun-heated rock is like a stove; chasing a small antelope they climb
+  a ravine near Tent House to the rock summit with a wide view; a crevice opens into a white-floored cavity; its floor seems level with the path
+  to the garden; they choose to work from inside (cooler, rubble for benches, secrecy)'
+- 'c45.p008: they haul the rope ladder up, check the depth and the level, test the air with candles and a fire, make iron tools at the forge,
+  rig gourd lamps, go down and work until they hear the voices outside'
+- 'c45.p009-c45.p011: the father approves and keeps the name; the mother will prefer Tent House to Falcon''s Nest and its winding staircase; the
+  opening is enlarged, Jack builds benches from the rubble inside and two seats outside; the ladder is taken back; Falcon''s Nest to be only a
+  pleasure-house; a plan to keep cattle there'
+- 'c46.p001: the grotto finished: a few stalactites, a salt block made into an altar on four pillars with a citron-wood vase of erica; Ernest''s
+  character, the bonnet and verses; the boys prepare flowers and a cold dinner on a table in the middle of the Franciade'
+- 'c46.p002-c46.p004: the day of the visit; the mother comes down the staircase of her aerial dwelling; an osier carriage drawn by the cow and
+  the young bull, Francis driving, the sons as escort; the new bonnet; they reach Family Bridge'
+- 'c46.p005-c46.p009: the father proposes to cross over to Tent House; she worries about heat and food and expects no water there; Jack and Fritz
+  ride ahead; arrival before the colonnade'
+- 'c46.p010-c46.p013: the mother is speechless; Francis shows the Franciade and its inscription; Jack toasts her with water from the fountain
+  in his pavilion, then Fritz receives her in the other; she drinks the fountain water and is served the dinner'
+- 'c46.p014-c46.p016: Ernest''s song; the family''s happiness on the island'
+- 'c46.p017: she decides to live at Tent House, near her kitchen and stores, walking in the colonnade; Falcon''s Nest is kept as it is; plans
+  to fetch the cart, utensils and poultry'
+- 'c46.p018-c46.p022: after a rest the sons carry her in a litter straight to the grotto; a sung verse; Ernest''s inscription on the salt block'
+- 'c46.p023-c46.p024: she rests on a moss-covered bench; the father presents the garden, the embankment, the pond (for watering) and the shady
+  arbour with her tools and two gourd watering-pans; she returns to Tent House and lists her gifts'
+instructions_meta:
+  requirement_groups:
+    main dwelling front:
+    - CR1
+    - CR2
+    - FP1
+    - VP3
+    landmark structures and their features:
+    - CR3
+    - VP1
+    routes and connections:
+    - FP2
+    enterable interiors:
+    - CR4
+    - VP2
+    outlying grounds:
+    - CR5
+  explicit_requirements:
+  - type: keep
+    text: I really want the round cave chamber inside the cliff that gets its light and air through a narrow crack in its vaulted roof.
+    covers:
+    - CR4
+    - VP2
+rubric:
+  content_realization:
+  - id: CR1
+    item: Tent House is a dwelling set into a rock face, the rock forming its front
+    anchors:
+      '1': the dwelling is built into / against a cliff whose rock face is its front
+      '0.5': a dwelling stands near rocks but free of them, or the rock face is only a backdrop beside it
+      '0': no dwelling, or no rock face at it
+    evidence:
+    - c44.p002
+    - c44.p008
+    - c44.p009
+  - id: CR2
+    item: A roofed colonnade (the Franciade) runs along the rock front of the house, with a pavilion at each of its two ends
+    anchors:
+      '1': a roofed gallery along the house's rock front, and one pavilion at each end of it
+      '0.5': colonnade and pavilions exist, but the arrangement is wrong (gallery away from the rock front, unroofed, pavilions placed elsewhere
+        or only one)
+      '0': no colonnade
+    evidence:
+    - c44.p002
+    - c44.p008
+    - c44.p009
+    - c46.p009
+    - - c46.p011
+      - c46.p012
+  - id: CR3
+    item: A fountain with flowing water stands in the middle of each pavilion
+    anchors:
+      '1': a fountain with visibly flowing water at the centre of each pavilion
+      '0.5': a fountain in only one pavilion, or without water
+      '0': no fountains
+    evidence:
+    - c44.p008
+    - c44.p009
+    - c46.p011
+    - c46.p013
+  - id: CR4
+    item: The Grotto Ernestine is a chamber inside the cliff whose vaulted roof is split by a narrow crevice open to the sky
+    anchors:
+      '1': an enclosed chamber within the rock mass, with a narrow crack in its vaulted roof that opens to the outside and lets daylight in
+      '0.5': a cave in the cliff, but without the roof crevice, or a shallow niche / built room rather than a chamber inside the rock
+      '0': no grotto
+    evidence:
+    - c45.p004
+    - c45.p007
+    - c45.p010
+  - id: CR5
+    item: The garden has a pond and a shady arbour
+    anchors:
+      '1': a garden in which both a pond and a shaded arbour are recognisable
+      '0.5': a garden with only one of them
+      '0': no recognisable garden
+    evidence:
+    - c46.p023
+    - c46.p024
+  functions_playability:
+  - id: FP1
+    item: The player can walk the colonnade along the house front from one end to the other and enter the pavilion at each end
+    anchors:
+      '1': a continuous walkable gallery along the house front with an enterable pavilion at each end
+      '0.5': the gallery cannot be walked through without leaving it, or a pavilion cannot be entered from it
+      '0': no colonnade to move through
+    evidence:
+    - c44.p002
+    - c44.p008
+    - - c46.p009
+      - c46.p013
+    - c46.p017
+  - id: FP2
+    item: The player can walk from the house along the foot of the rocks to the garden, entering the grotto from that route on the way
+    anchors:
+      '1': the player can go from the house along the rock foot, into the grotto from the path, on to the garden, and back
+      '0.5': the grotto or the garden is not reached from this route on foot (a detour, a teleport, entry only from above) or the grotto cannot
+        be entered
+      '0': the grotto or the garden cannot be reached
+    evidence:
+    - c45.p001
+    - c45.p004
+    - c45.p007
+    - c45.p011
+    - c46.p018
+    - c46.p023
+  visual_presentation:
+  - id: VP1
+    cat: style
+    item: The pavilions rise higher than the gallery and end in pointed roofs
+    anchors:
+      '1': pavilions clearly taller than the gallery, with pointed roofs
+      '0.5': pavilions distinct from the gallery, but flat-roofed or no taller than it
+      '0': no distinct pavilions
+    evidence:
+    - c44.p008
+  - id: VP2
+    cat: style
+    item: The grotto's interior reads as a rounded natural rock chamber, not a built room
+    anchors:
+      '1': inside, rounded, irregular natural-rock walls curving up into the roof
+      '0.5': a cave interior, but built-looking
+      '0': no grotto interior
+    evidence:
+    - c45.p004
+    - c45.p010
+  - id: VP3
+    cat: spatial
+    item: The gallery reads as one straight row of evenly spaced columns whose roof slopes back to the rock face
+    anchors:
+      '1': a straight line of regularly spaced columns in front of the rock, the roof leaning from them back onto the rock face
+      '0.5': a roofed gallery, but the columns are irregular or not in one line, or the roof stands free of the rock (flat slab or ridge roof
+        not joining the cliff)
+      '0': no gallery with columns
+    evidence:
+    - c44.p002
+    - c44.p008
+play_suggestions:
+  FP1:
+  - walk the whole colonnade from one pavilion to the other without leaving it
+  - enter each pavilion from the gallery and stand at its fountain
+  FP2:
+  - 'start at the house front and follow the foot of the rocks to the garden: is the grotto entrance on the way?'
+  - enter the grotto from the path and come back out the same way
+  - walk back from the garden to the house
+  robustness:
+  - 'try to walk along the top of the rock face or through the rock: is the cliff solid?'
+  - 'leave the site and come back: are the landmarks where they were?'
+  - 'look for the grotto from outside before entering: does the opening sit in the cliff beside the path?'
+v4_map:
+  U1: CR1
+  U2: CR2
+  U3: 'dropped: not checkable in the built game (the game has no heat to shelter from, so ''shields from the heat'' has no observable effect);
+    the sheltering roof itself is in CR2 / VP3'
+  U4: CR4
+  U5: 'dropped: duplicate of FP2 (human review: the house - path - grotto - garden route is scored in FP2 only)'
+  FP1: FP1 (existence of colonnade and pavilions moved to CR2)
+  FP2: FP2 (also scores the existence and order of house, path, grotto, garden; the separate CR item was dropped in human review as a duplicate)
+  VP1: CR2 (spatial arrangement of rock front, gallery and end pavilions)
+  VP2: VP1
+  VP3: CR3
+  VP4: VP2 (chamber existence, vaulted roof, roof crevice and daylight moved to CR4; VP2 keeps the rounded natural-rock look)
+  VP5: CR5
+  VP6: 'dropped: scored only the modify requirement (stone colonnade), moved to the Editing seed (editing_seed.yaml)'
+  new: 'VP3 (look of the gallery: straight row of evenly spaced columns, roof sloping back to the rock; added for the scene VP minimum)'
+provenance:
+  source_yaml: T-TO-txt_772670af5456.e2.yaml
+  source_sha256: 591235bf1bd694aa4faade40abeea706a6ab29ef47d508a3541001551a230ead
+  size_waiver: null
+  size_max: null
+  sources:
+  - ref: t01
+    title: The Swiss Family Robinson; or Adventures in a Desert Island
+    author: Johann David Wyss
+    text_id: txt_772670af5456
+    excerpt_id: e2

@@ -1,0 +1,216 @@
+# GameAnything-Bench scoring material: never shown to agents during a trial.
+task_id: T-IO-2c9843ed0d
+source_inventory:
+- 'img01: typed memo ''To: H. R. Haldeman / From: Bill Safire / July 18, 1969'', headed ''IN EVENT OF MOON DISASTER'': a statement for the case
+  that the two men who went to the Moon (Neil Armstrong and Edwin Aldrin) stay there with no hope of recovery; they will be mourned by families,
+  nation and world; ''others will follow, and surely find their way home''; instructions that the President phone the ''widows-to-be'' and that
+  a clergyman commend their souls as at a burial at sea once NASA ends communications'
+- 'img02: black-and-white TV studio: three men in armchairs (two in patterned short-sleeve shirts, one in a polo shirt) before a dark curtain
+  with a US flag and an ''APOLLO 11'' eagle-over-the-Moon emblem, small spacecraft models on a low table; a fourth man seated left; TV cameras
+  and crew in the foreground (a crew press appearance)'
+- 'img03: colour composite (watermark ''Created by: Cristian Ibarra Santillan''): a legged, gold-foil and grey lunar lander hovering just above
+  a grey cratered plain on a downward engine plume, blowing up dust, under a black sky'
+- 'img04: pavement of terrazzo star plaques (James Stewart, Kirk Douglas, Edward R Murrow, Wendy Barrie) around a round plaque ''NEIL A. ARMSTRONG
+  / EDWIN E. ALDRIN JR. / MICHAEL COLLINS / 7/20/69 / APOLLO XI'' with a TV emblem'
+- 'img05: museum display (''Reliquias do Mundo'', Portuguese placard: a piece of the inner lining, ''KAPTON FOIL'', of the craft that took man
+  to the Moon; Armstrong stepped on the Moon on 20 July 1969). Framed: rocket launch from the pad (two photos), three-man crew portrait in white
+  spacesuits, mission emblem, a capsule floating in the ocean with a raft and swimmers (recovery), a suited astronaut on the lunar surface, astronaut
+  beside a flag and the lander, Earth above the lunar horizon, the lander''s upper stage flying above the Moon; an English panel: on July 20,
+  1969 Armstrong became the first human to set foot on the Moon; after 21 1/2 hours he and Aldrin left in the Lunar Module ''Eagle'' and rejoined
+  Michael Collins in the Command Module ''Columbia'' for the trip back to Earth; a gold foil swatch ''removed from the heat shield after splashdown'';
+  date stamp 22-AGO-14'
+- 'img06: dimly lit museum case: an open handwritten ''Test Supervisor''s Log Book, Apollo 11, July 16-24, 1969'' (entries on water in the spacecraft,
+  inspections by IBM and Douglas, a hatch problem); faint caption: one of four log books of the testing exercises, a programme rushed to meet
+  a 1969 deadline for a Moon landing'
+instructions_meta:
+  requirement_groups:
+    story progression and ending:
+    - CR3
+    - FP1
+    - FP4
+    characters, roles and goal:
+    - CR1
+    - CR2
+    - CR4
+    playable key situations:
+    - FP2
+    - FP3
+    settings and key moments:
+    - VP1
+    - VP2
+    - VP3
+    character appearance:
+    - VP4
+  explicit_requirements:
+  - type: keep
+    text: I want to play as one of the two crew members who go down to the surface while the third one stays behind in orbit.
+    covers:
+    - CR1
+    - FP2
+rubric:
+  content_realization:
+  - id: CR1
+    item: 'The game''s main characters are a crew of three with split roles: two go down to the Moon''s surface, one stays aboard the craft orbiting
+      the Moon'
+    anchors:
+      '1': three crew and the two-down / one-in-orbit split
+      '0.5': a three-person crew or two moonwalkers, without the split of roles
+      '0': missing, or a single hero
+    evidence:
+    - img01
+    - img02
+    - img04
+    - img05
+  - id: CR2
+    item: 'The game has distinct craft: a separate lander that carries the two down to the surface and back up, and the orbiting craft that waits
+      for them and brings the crew home'
+    anchors:
+      '1': a separate lander for the surface leg, distinct from the orbiting craft that brings the crew home
+      '0.5': one generic spaceship does everything, or the lander's or the return craft's role is missing
+      '0': missing
+    evidence:
+    - img03
+    - img05
+  - id: CR3
+    item: 'The game contains the story''s stages in their order: launch from Earth, landing on the Moon, the walk on the surface, lift-off and
+      rejoining the orbiting crewmate, return to Earth'
+    anchors:
+      '1': all five stages present in this order
+      '0.5': most stages in order, or one stage missing or misplaced
+      '0': missing or scrambled
+    evidence:
+    - img03
+    - img05
+  - id: CR4
+    item: 'The game presents the mission''s goal: to be the first humans to set foot on the Moon and come back'
+    anchors:
+      '1': first footsteps on the Moon AND the return given as the goal
+      '0.5': only one of the two halves
+      '0': no goal given
+    evidence:
+    - img01
+    - img05
+  functions_playability:
+  - id: FP1
+    item: 'Play carries the player from one stage of the story to the next: finishing a stage through play leads into the following one, through
+      to the end'
+    anchors:
+      '1': the player advances through the stages by playing them, without breaks, to the end
+      '0.5': the stages are reached mostly by cutscenes, menus or skips rather than by play, or the progression stalls or breaks between stages
+      '0': no progression; a single sandbox or a single scene
+    evidence:
+    - img03
+    - img05
+  - id: FP2
+    item: 'The surface excursion: playing as one of the two surface crew, the player leaves the lander, spends playable time on the Moon''s surface,
+      and must get back to the lander to leave'
+    anchors:
+      '1': playable time on the surface and a required return to the lander to leave
+      '0.5': the surface can be walked but the return to the lander does not matter, or the surface is only shown
+      '0': no surface play
+    evidence:
+    - img05
+  - id: FP3
+    item: Lift-off from the Moon and rejoining the orbiting craft is a step the player goes through, and the return home depends on it
+    anchors:
+      '1': a lift-off / rejoin step the player takes part in, required before the return home
+      '0.5': the step is only told or shown (text, cutscene), or present but not tied to the return
+      '0': the crew simply returns, no such step
+    evidence:
+    - img01
+    - img05
+  - id: FP4
+    item: Completing the return to Earth ends the game with a clear success payoff that sets the mission apart as accomplished
+    anchors:
+      '1': reaching home triggers an ending that clearly marks the mission as accomplished
+      '0.5': the game stops at the return without a payoff, or the ending is not set apart from ordinary play
+      '0': no ending
+    evidence:
+    - img04
+    - img05
+  visual_presentation:
+  - id: VP1
+    cat: spatial
+    item: 'The lunar setting: a barren, cratered plain under a black sky'
+    anchors:
+      '1': a barren cratered plain and a black sky together
+      '0.5': a barren ground, but generic (no craters, or a blue or bright sky)
+      '0': no lunar setting
+    evidence:
+    - img03
+    - img05
+  - id: VP2
+    cat: key_moment
+    item: 'The launch: a rocket rising from its pad on fire and billowing smoke'
+    anchors:
+      '1': a recognisable rocket lift-off with flame and smoke
+      '0.5': a launch shown without the rocket's look, or only implied
+      '0': none
+    evidence:
+    - img05
+  - id: VP3
+    cat: key_moment
+    item: 'The lander over the surface: a legged craft flying just above the ground on its engine plume'
+    anchors:
+      '1': a legged lander on an engine plume close over the surface
+      '0.5': a generic ship landing or taking off, without the lander's look or the plume
+      '0': none
+    evidence:
+    - img03
+    - img05
+  - id: VP4
+    cat: style
+    item: 'The surface crew look like the reference''s astronauts: pressure suits with helmet and backpack'
+    anchors:
+      '1': suited astronauts with helmet and backpack
+      '0.5': suited figures lacking the helmet or the backpack
+      '0': ordinary clothing
+    evidence:
+    - img05
+play_suggestions:
+  FP1:
+  - play from the start and note how each stage leads into the next
+  - note which transitions are played and which are only cut to or skipped
+  FP2:
+  - walk away from the lander and try to leave without returning to it
+  - note what there is to do on the surface (unscored)
+  FP3:
+  - 'fail the lift-off or the rejoin on purpose, if the game lets you: what happens? (unscored)'
+  - try to skip the step and go straight home
+  FP4:
+  - 'finish the game: does reaching home trigger an ending that clearly marks success?'
+  robustness:
+  - wander far across the surface away from the lander and come back
+  - after a failure ending, can you retry or restart?
+  - 'stand idle in each stage: does the story stall sensibly or break?'
+v4_map:
+  U1: CR1
+  U2: CR2
+  U3: FP3 (dependency in FP3; the no-rescue consequence was in CR5, dropped in review 2026-11-05)
+  U4: CR3
+  U5: CR4
+  U6: 'dropped: peripheral (reviewer 2026-11-05: the public-stakes item was too abstract; was CR5)'
+  FP1: FP1, CR3 (stage order split off to CR3; playing the surface / lift-off is FP2 / FP3; FP1 keeps only the play-driven transitions between
+    stages)
+  FP2: FP2 (crew roles / lander existence covered by CR1, CR2)
+  FP3: FP3 (orbiting craft existence covered by CR2)
+  FP4: FP4 (the return as a stage is CR3; FP4 keeps the triggered success payoff)
+  VP1: VP1
+  VP2: VP2
+  VP3: VP3
+  VP4: VP4
+provenance:
+  source_yaml: T-IO-2c9843ed0d.yaml
+  source_sha256: b96a3fc86e111a2259cb30f95e7735d6cfbad01127992892553db705000b1e37
+  size_waiver: null
+  size_max: null
+  sources:
+  - refs:
+    - img01
+    - img02
+    - img03
+    - img04
+    - img05
+    - img06
+    bundle: 2c9843ed0d
+    title: 阿波罗 11 号：发射、登月舱、月球轨道、月面行走

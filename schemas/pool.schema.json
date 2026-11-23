@@ -1,0 +1,78 @@
+{
+ "$schema": "https://json-schema.org/draft/2020-12/schema",
+ "title": "games/<game>/pool.yaml",
+ "type": "object",
+ "required": [
+  "game",
+  "version",
+  "always",
+  "pool"
+ ],
+ "properties": {
+  "game": {
+   "type": "string"
+  },
+  "version": {
+   "type": "string"
+  },
+  "default_picks": {
+   "type": "array",
+   "items": {
+    "type": "string"
+   }
+  },
+  "always": {
+   "type": "array",
+   "items": {
+    "$ref": "#/$defs/item"
+   }
+  },
+  "pool": {
+   "type": "array",
+   "items": {
+    "$ref": "#/$defs/item"
+   }
+  },
+  "gate": {
+   "type": "array",
+   "items": {
+    "type": "string"
+   },
+   "minItems": 2,
+   "description": "gate items (2026-11-06): the log_errors (STABLE) item + the host-present item(s); see gab/eval/regression.py"
+  }
+ },
+ "$defs": {
+  "item": {
+   "type": "object",
+   "required": [
+    "id",
+    "capability",
+    "probe",
+    "status"
+   ],
+   "properties": {
+    "id": {
+     "type": "string"
+    },
+    "capability": {
+     "type": "string"
+    },
+    "probe": {
+     "type": "string"
+    },
+    "status": {
+     "enum": [
+      "ready",
+      "blocked",
+      "draft",
+      "unverified"
+     ]
+    },
+    "note": {
+     "type": "string"
+    }
+   }
+  }
+ }
+}

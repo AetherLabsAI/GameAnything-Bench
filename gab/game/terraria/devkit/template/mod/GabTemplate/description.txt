@@ -1,0 +1,1 @@
+A template mod: a chat line on entering the world, a banner drawn over the game, and a new sword with a recipe.

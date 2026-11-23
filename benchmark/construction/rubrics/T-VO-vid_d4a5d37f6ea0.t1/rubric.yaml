@@ -1,0 +1,256 @@
+# GameAnything-Bench scoring material: never shown to agents during a trial.
+task_id: T-VO-vid_d4a5d37f6ea0.t1
+source_inventory:
+- '00:10-00:14 dusk downtown skyline, blue-to-orange sky: a dense cluster of high-rises of clearly different heights (glass and stone towers,
+  a few crowned / spire-topped towers rising above the rest, one tall slender spire tower at the left edge), lit windows coming on, low mid-rises
+  and a building signed ''ON WILSHIRE'' in front, faint mountains on the horizon; the drone moves slowly so the towers shift against each other
+  (parallax)'
+- '00:14-00:20.9 daytime park lake: multi-jet fountain in the middle, white pedal boats moored at a boathouse on the left shore, a few small boats
+  out on the water, grass banks lined with tall palms, green plant islands near the shore, houses on low hills around it, the downtown skyline
+  small and distant on the horizon across the water; the drone flies forward over the lake'
+- 00:21-00:22.9 daytime, raised view down a straight street of low commercial buildings, parking lots and a crosswalk (store sign 'CORNER'), the
+  street leading straight to the downtown towers, which fill the horizon
+- '00:23-00:26.9 night freeway interchange: time-lapse / long-exposure light trails (cyan, white, red) on many lanes, a curving elevated ramp
+  looping over the mainline, a lit office block behind, palm silhouettes'
+- '00:27-00:32.7 hazy daytime downtown: towers directly beside a sunken freeway with a looping ramp, a green rooftop / plaza and low office blocks
+  between road and towers; the drone moves toward the towers'
+- '00:32.7-00:43.9 pink-purple dusk: a long bridge (viaduct) carried by a repeated series of white arches with hanging cables, the arches lit
+  from below, a pedestrian railing, dense car traffic with headlights on the deck, power pylons and the downtown skyline in silhouette behind;
+  the drone first moves along the arches (arches occlude and reveal the skyline, 00:33-00:39), then rises to show the whole viaduct with its arches
+  receding toward downtown (00:39.5-00:43.5)'
+- '00:44-00:50.5 top-down daytime multilevel interchange: curved elevated ramps crossing over a sunken multi-lane freeway at different heights,
+  long shadows of the ramps, many cars in both directions, tree-covered slopes between the roads, houses and a pink-roofed building at the edges;
+  the camera turns / drifts'
+- '00:51-00:58.5 top-down night downtown: rectangular blocks, intersections with zebra crosswalks, warm-lit streets, rooftops with rooftop gardens
+  and a rooftop pool, few cars; the drone moves along a street'
+- '00:58.6-01:05.9 late-day coast (second clip): a wide sand beach along the sea, mountains across the bay, a palm park with green lawns between
+  beach and town, low colorful buildings (pink, teal, white) and a larger hotel-like block, parking; the drone moves slowly forward and down'
+- '01:06.1-01:16.6 top-down suburb: near-identical single-family houses with tile roofs (terracotta and grey, some solar panels), many backyard
+  pools, curving streets and a cul-de-sac, few cars, dry vegetation strips behind the lots; the drone drifts across'
+- 01:17.1-01:24.1 low flight down a straight avenue lined on both sides with very tall fan palms, yellow center line, moderate traffic in both
+  directions, mid-rise apartment buildings, a red-roofed building and a yellow-flowering tree ahead / beside
+- '01:24.6-01:31.0 oblique view in golden light over a hillside neighborhood: larger houses with pools, winding roads following the slope, hedges
+  and dense trees'
+- 'presentation throughout: hard cuts between shots (a montage of separate places, no continuous route, no stated geography between shots); drone-logo
+  watermark top-right; no captions or titles inside the range'
+- 'audio: music only, no speech (transcript empty in the range)'
+instructions_meta:
+  requirement_groups:
+    road network and driving:
+    - CR3
+    - FP1
+    - VP3
+    traffic and lighting:
+    - FP2
+    - FP3
+    landmarks and views:
+    - CR1
+    - CR2
+    - CR5
+    - VP1
+    districts and visual style:
+    - CR4
+    - CR6
+    - VP2
+  explicit_requirements:
+  - type: keep
+    text: I want that long bridge carried by a row of white arches that light up at dusk.
+    covers:
+    - CR2
+    - FP3
+    - VP1
+rubric:
+  content_realization:
+  - id: CR1
+    item: Downtown is a tight cluster of high-rises of clearly different heights, with a few taller crowned / spire-topped towers standing above
+      the rest
+    anchors:
+      '1': a dense tower cluster with varied heights and a few standout tallest towers
+      '0.5': high-rises present but of uniform height, or scattered rather than clustered
+      '0': no downtown tower cluster
+    evidence:
+    - - 00:10
+      - 00:14
+    - - 00:27
+      - 00:32
+  - id: CR2
+    item: The landmark bridge is a long viaduct carried by a repeated series of white arches (with hanging cables)
+    anchors:
+      '1': a long bridge carried by a repeated series of arches along its length
+      '0.5': a long bridge without the repeated arch series (a generic beam or single-span bridge)
+      '0': no long bridge
+    evidence:
+    - - 00:32
+      - 00:44
+  - id: CR3
+    item: 'Freeways cross at a grade-separated multilevel interchange: curving elevated ramps pass over the multi-lane mainline at different heights'
+    anchors:
+      '1': an interchange with curving ramps at more than one height above the freeway
+      '0.5': an interchange that is flat (roads cross at grade) or only a single straight overpass
+      '0': no freeway interchange
+    evidence:
+    - - 00:23
+      - 00:27
+    - - 00:44
+      - 00:50
+  - id: CR4
+    item: 'The residential districts: a flat suburb of near-identical single-family houses with backyard pools along curving streets and cul-de-sacs,
+      and a hillside area of larger houses on winding roads among dense trees'
+    anchors:
+      '1': a suburb of uniform houses with backyard pools on curving streets, AND the hillside variant on winding roads
+      '0.5': houses without the pools or the curving street pattern, or only one of the two variants
+      '0': no residential district, or only apartment blocks
+    evidence:
+    - - 01:06
+      - 01:17
+    - - 01:24
+      - 01:31
+  - id: CR5
+    item: A park lake with a central fountain and a palm-lined grass shore lies away from downtown, and the downtown tower cluster is seen on
+      the horizon across the water
+    anchors:
+      '1': a lake with a fountain and palm shore, from which the tower cluster is visible across the water
+      '0.5': the lake exists but the towers are never visible from it, or the lake lacks the fountain / palm shore
+      '0': no lake park
+    evidence:
+    - - 00:14
+      - 00:21
+  - id: CR6
+    item: 'The coastal edge: a wide sand beach along the sea, with a palm park strip between the beach and the low-rise town'
+    anchors:
+      '1': beach, palm park strip and low town in that order from the water
+      '0.5': a beach next to the city without the palm park strip, or with a high-rise waterfront
+      '0': no coast
+    evidence:
+    - - '00:58.6'
+      - 01:06
+  functions_playability:
+  - id: FP1
+    item: 'A drivable road hierarchy: the player drives the interchange''s elevated ramps over the mainline, and the built areas (downtown blocks,
+      suburban and hillside streets) are reached on streets the player actually drives'
+    anchors:
+      '1': the player drives the elevated ramps over the freeway, and the streets of the built areas are drivable
+      '0.5': the ramps cannot be driven, or some built areas are backdrop only with no drivable street
+      '0': no drivable road network
+    evidence:
+    - - 00:23
+      - 00:32
+    - - 00:44
+      - 00:50
+    - - 00:51
+      - 00:58
+    - - 01:06
+      - 01:17
+  - id: FP2
+    item: 'Traffic behaves as in the reference while the player drives through the place: heavy, continuous flow of moving vehicles on the freeways
+      / interchange and the bridge, light traffic in the residential streets, and the flow keeps moving rather than freezing'
+    anchors:
+      '1': visibly denser moving traffic on the major roads than in residential streets, and it keeps moving during sustained play
+      '0.5': traffic exists but is uniform across road types, or it stops / freezes on the major roads
+      '0': no moving traffic
+    evidence:
+    - - 00:23
+      - 00:27
+    - - 00:37
+      - 00:50
+    - - 01:06
+      - 01:24
+  - id: FP3
+    item: 'The city has a day state and a dusk / night state, and in the dark state the city lights up: lit streets, lit windows in the towers
+      and the bridge''s arches lit from below'
+    anchors:
+      '1': the player can see (or switch to) both day and dusk / night, and at night streets, tower windows and the bridge's arches are lit
+      '0.5': both states exist but the night lighting is partial (e.g. streets only, towers or arches dark)
+      '0': a single fixed lighting state
+    evidence:
+    - - 00:10
+      - 00:14
+    - - 00:23
+      - 00:27
+    - - '00:32.7'
+      - 00:44
+    - - 00:51
+      - 00:58
+  visual_presentation:
+  - id: VP1
+    cat: key_moment
+    keyframes:
+    - '00:37.0'
+    - '00:41.5'
+    item: 'The arch bridge at dusk: the row of arches along the long viaduct, with the downtown skyline behind it under a pink-purple sky'
+    anchors:
+      '1': the arch row reads together with the skyline behind it in a dusk scene
+      '0.5': the arched bridge is never seen together with the skyline, or never at dusk
+      '0': no dusk view of an arched bridge
+    evidence:
+    - - 00:32
+      - 00:44
+  - id: VP2
+    cat: style
+    keyframes:
+    - '01:08.1'
+    - '01:19.1'
+    - '01:26.6'
+    item: 'The Southern California residential look: very tall fan palms lining a straight avenue, terracotta / tile roofs, turquoise backyard
+      pools and green yards under warm sun'
+    anchors:
+      '1': palm-lined avenue and tile-roof houses with pools give a clearly warm, Southern-California-like look
+      '0.5': some of these traits (e.g. palms) but the residential areas read as a generic temperate suburb
+      '0': none of these traits
+    evidence:
+    - - 01:06
+      - 01:17
+    - - 01:17
+      - 01:24
+    - - 01:24
+      - 01:31
+  - id: VP3
+    cat: spatial
+    keyframes:
+    - '00:45.0'
+    - '00:48.5'
+    item: 'The look of the freeway interchange by day: the elevated ramps sweep in smooth, wide curves over the sunken freeway, layered above
+      one another so that from above they read as one interlaced knot of roads'
+    anchors:
+      '1': the interchange reads as smooth curved ramps sweeping over the freeway in visible layers
+      '0.5': the ramps are there but look like blocky or straight segments, or the layering over the freeway is never visible
+      '0': no visible interchange
+    evidence:
+    - - 00:44
+      - 00:50
+play_suggestions:
+  FP1:
+  - 'drive the interchange: can the kart take the elevated ramps over the freeway?'
+  - look for built areas that are only backdrop with no drivable street
+  - 'drive from a residential street toward downtown: which roads lead there? (unscored context)'
+  FP2:
+  - compare vehicle density on a freeway, the bridge and a suburban street during the same race
+  - 'keep driving for several laps: does the freeway / bridge traffic stay moving?'
+  FP3:
+  - 'look for a dusk / night version of the place (or a day-night switch): are streets, tower windows and the bridge''s arches lit?'
+  - compare the same spot by day and at night
+  robustness:
+  - 'finish a race and restart it: is the place the same?'
+  - 'drive off the intended route, into corners and off ramps: does the kart get stuck, fall through, or get rescued back onto the road?'
+  - 'race several laps with AI karts: does the track and its traffic stay intact?'
+v4_map:
+  U1: 'dropped: mechanism paired with FP2, which scores the traffic contrast'
+  U2: CR1
+  U3: CR2 (arch lighting at dusk scored in FP3)
+  U4: CR4
+  U5: 'CR5 (lake view), VP1 (skyline behind bridge); straight-street view dropped: peripheral (2 s shot)'
+  FP1: CR3 (interchange exists), FP1 (driving the ramps and built areas)
+  FP2: FP2
+  FP3: FP3 (now also the bridge's arch lighting)
+  VP1: CR5
+  VP2: VP1 (arch existence in CR2, arch lighting in FP3)
+  VP3: 'CR3 (structure: ramps at several heights), VP3 (the look of the curved, layered ramps; wooded slopes and edge houses dropped as detail)'
+  VP4: CR6 (mountains and building colours dropped as detail)
+  VP5: VP2
+  VP6: 'removed: editing request (rainy night), moved to editing_seed.yaml'
+provenance:
+  source_yaml: T-VO-vid_d4a5d37f6ea0.t1.yaml
+  source_sha256: fa4ee144d730d712647dbe795f2ccc7164c2a66a7014c99a919b24ec230d41de
+  size_waiver: null
+  size_max: null
+  sources: []

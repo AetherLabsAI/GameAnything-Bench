@@ -1,0 +1,245 @@
+# GameAnything-Bench scoring material: never shown to agents during a trial.
+task_id: T-VO-vid_edd0d2153684.t1
+source_inventory:
+- '00:32-00:36 low ice-level camera at center ice: the ''MILANO CORTINA 2026'' logo and Olympic rings painted on white ice; a referee in black-and-white
+  stripes stands at center; players in red (Canada) and white-with-red (Czechia, #23) skate into position; boards in teal / green / yellow with
+  a packed crowd behind; Olympic rings watermark top-right'
+- '00:36-00:38.5 overhead camera: Czechia #23 and Canada #97 crouch facing each other at the center faceoff dot, sticks on the ice; the referee
+  bends over between them; the other skaters wait outside the center circle'
+- '00:38.5-00:41 the puck is dropped; the two centers contest it, #97 goes down on the ice, a scrum with Canada #17 and others follows and the
+  puck moves out of the circle'
+- '00:41.5-00:46 high side camera: open play through the neutral zone (blue lines, red center line, center circle with the logo); score bug appears
+  top-left at 00:43 (two rows: ''CZE'' with flag and 0, Canada with flag below; period ''1ST'' and a game clock)'
+- '00:46.5-00:57 a top banner shows Canadian forward lines with player photos and names, changing during play: ''... McDAVID / WILSON'' (00:47),
+  ''... MacKINNON / SUZUKI'' (00:50), ''... CROSBY / STONE'' (00:53.5), ''... HORVAT / REINHART'' (00:56.5)'
+- '00:50-00:54 Canada in the Czech zone: Czech goalie in front of the red-framed net with a blue crease; Canada #97 near the net; Czech skaters
+  defend in front'
+- 00:54.5-00:56.5 play moves back up the ice past the center circle; linesman at the boards
+- '00:57-00:59.5 boards-level camera: puck battle along the boards between Canada #17 and Czechia #23; Czech and Canadian flags and banners behind
+  the glass'
+- '01:00-01:02.5 Canada #97 carries the puck from the right circle toward the Czech net; Czech goalie (#1) moves across the crease; Czech defenders
+  close in; fan banners behind the net'
+- '01:03-01:06 (dissolve at 01:03, closer angle) #97 handles the puck in front of the net and shoots / dekes; the Czech goalie drops into a butterfly
+  and blocks; a Czech defender reaches with his stick'
+- '01:06.5-01:16.5 wide view: the puck leaves the zone; open play through the neutral zone over the center logo; possession changes between the
+  teams (commentary: ''intercepted''); Czech players carry and pass, Canada skaters chase'
+- '01:17-01:19.5 Canada attack on the Czech net: players crowd the crease, scramble in front of the goalie; at 01:19-01:19.5 Canada #43 and #17
+  raise arms and sticks'
+- '01:20-01:21 close view: the Czech goalie #1 sits / kneels in the crease, then stands with head down by the net'
+- '01:21.5-01:23.5 Canada players celebrate along the boards (hugs; #20 ''HARLEY'', #89); the Czech goalie (''DOSTAL'', #1) skates past in the
+  foreground'
+- 01:24-01:28 Canadian fans in red wave Canada flags and cheer
+- 01:28.5-01:30 close-up of the Czech goalie in his mask, standing still
+- 'HUD: the score bug stays top-left from 00:43 to the end; at contact-sheet resolution it reads 0-0 during play; an update after the goal cannot
+  be read'
+- 'audio (offline Whisper, weak): 01:02 ''So both goaltenders tested early.''; 01:04 ''The work by Tom Wilson, though, on the four.''; 01:06 ''Third.'';
+  01:07 ''Axe is intercepted.''; 01:14 ''Hand side with that quick release.''; no other audio is documented in the material (no crowd or whistle
+  cues confirmed)'
+- 'not visible: the puck crossing the goal line; a whistle or stoppage signal; the restart after the goal; a line change at the bench; the end
+  of a period or of the match; penalties, offside or icing calls; who scored'
+instructions_meta:
+  requirement_groups:
+    start of play and puck play:
+    - FP1
+    - FP2
+    teams and goaltending:
+    - CR1
+    - CR2
+    - FP3
+    - FP4
+    scoring and match progression:
+    - FP5
+    - FP6
+    match interface:
+    - VP2
+    rink and goal moment:
+    - CR3
+    - VP1
+  explicit_requirements:
+  - type: specify
+    text: The match should run like in the clip, on a game clock by periods with the score display showing both teams' goals, the period and the
+      time, not played to a set number of goals.
+    covers:
+    - FP6
+    - VP2
+rubric:
+  content_realization:
+  - id: CR1
+    item: Two opposing teams are on the ice together, told apart at a glance by their colours, each made up of several stick-carrying skaters
+    anchors:
+      '1': two teams clearly distinguished by colour, each with several skaters with sticks
+      '0.5': two teams present but hard to tell apart, or a side has only a single skater
+      '0': no opposing team in the game
+    evidence:
+    - - 00:32
+      - 00:41
+    - - 00:50
+      - 00:54
+  - id: CR2
+    item: 'The goalie is a distinct role on each team: visibly set apart from the skaters by bulkier protective gear, and stationed at its own
+      net in the crease in front of it'
+    anchors:
+      '1': each team's goalie looks clearly different from the skaters (padded, bulkier gear) and is placed at its own net in the crease
+      '0.5': a goalie stands at the net but looks like an ordinary skater, or it looks distinct but is not tied to the net / crease, or only one
+        team has a goalie
+      '0': no goalie role
+    evidence:
+    - - 00:50
+      - 00:54
+    - - 01:00
+      - 01:06
+    - - 01:20
+      - 01:21
+  - id: CR3
+    item: 'The rink: an enclosed ice surface with a net and a painted crease at each end, a center faceoff circle and lines dividing it into zones'
+    anchors:
+      '1': an enclosed ice surface with a creased net at both ends, a center faceoff circle and zone lines
+      '0.5': an enclosed ice surface with nets at both ends, but missing the center circle or the zone lines, or nets without a crease
+      '0': no recognisable rink, or nets not at opposite ends
+    evidence:
+    - - '00:41.5'
+      - 00:57
+    - - '01:06.5'
+      - '01:16.5'
+  functions_playability:
+  - id: FP1
+    item: 'Faceoff start: play begins with the puck dropped between two opposing players at the center of the rink, with the other players kept
+      back, and neither side has possession until one wins it'
+    anchors:
+      '1': a center faceoff that both sides can win, with the others held back until the drop
+      '0.5': the puck appears at center but one side is simply given it, or the others are not held back
+      '0': play starts with no faceoff
+    evidence:
+    - - 00:32
+      - 00:41
+  - id: FP2
+    item: 'Skating and puck play in open play: the player''s skater moves around the rink, carries, passes and shoots the puck, and the puck can
+      be stolen or intercepted by opponents in continuous play'
+    anchors:
+      '1': carry, pass and shoot all work and possession changes through steals / interceptions without turns or pauses
+      '0.5': the puck can be moved but possession never changes by play (no steals), or passing or shooting is missing
+      '0': no controllable puck play
+    evidence:
+    - - '00:41.5'
+      - 00:57
+    - - '01:06.5'
+      - '01:16.5'
+  - id: FP3
+    item: 'Active opponents: the opposing skaters pursue the puck, defend their own net and attack the other one'
+    anchors:
+      '1': opponents visibly challenge for the puck, defend their net and mount attacks on the player's net
+      '0.5': opponents present but passive (never attack, or never challenge for the puck)
+      '0': opponents never act
+    evidence:
+    - - 00:50
+      - 00:54
+    - - '01:06.5'
+      - '01:19.5'
+  - id: FP4
+    item: 'Goalie defence: the goalie can block shots, so a shot on target can be saved but the goalie can also be beaten, and a saved puck can
+      stay loose for a rebound'
+    anchors:
+      '1': the goalie visibly saves some valid shots yet can be beaten, and saved pucks can remain playable near the net
+      '0.5': the goalie blocks everything or nothing, or a save always ends the play
+      '0': the goalie never blocks a shot
+    evidence:
+    - - 01:00
+      - 01:06
+    - - 01:17
+      - 01:20
+  - id: FP5
+    item: 'Goal: a puck fully in the net counts one goal for the attacking side in the match score, and play stops after the goal'
+    anchors:
+      '1': goals detected reliably, credited to the right side in the score, and play stops after each goal
+      '0.5': goals counted but play does not stop, or credit goes to the wrong side or is unreliable
+      '0': no goal detection
+    evidence:
+    - - 01:17
+      - 01:30
+  - id: FP6
+    item: 'Timed match: a game clock runs during play within a period structure, so the match progresses by time and periods rather than to a
+      target score'
+    anchors:
+      '1': a running clock during play and a visible period structure
+      '0.5': a clock exists but does not run during play, or there is no period structure
+      '0': no time structure
+    evidence:
+    - - 00:43
+      - 01:30
+  visual_presentation:
+  - id: VP1
+    cat: key_moment
+    keyframes:
+    - '01:19.0'
+    - '01:22.5'
+    - '01:24.5'
+    item: 'The goal moment is set apart and recognisable: the scoring team visibly celebrates together, in clear contrast to the beaten goalie
+      at the net'
+    anchors:
+      '1': a set-apart goal moment where the scorers' celebration and the beaten goalie are both visible
+      '0.5': a goal shown only as a message or sound, or a celebration without the contrast to the conceding side
+      '0': no visible goal moment
+    evidence:
+    - - 01:17
+      - 01:30
+  - id: VP2
+    cat: presentation
+    keyframes:
+    - '00:47.0'
+    item: 'Match state on screen: a compact, always-visible score display naming both teams with their goals, the period and the game clock'
+    anchors:
+      '1': both teams' goals, the period and the clock readable at any time during play
+      '0.5': score shown but period or clock missing, or shown only on demand
+      '0': no on-screen match state
+    evidence:
+    - - 00:43
+      - 01:30
+play_suggestions:
+  FP1:
+  - 'start a match and watch the first drop: can either side win it?'
+  - try to skate into the circle or touch the puck before the drop
+  FP2:
+  - carry the puck past an opponent and see whether it tries to take it
+  - pass to a teammate and shoot from the slot
+  - 'lose the puck on purpose: does the opponent pick it up and go the other way?'
+  FP3:
+  - 'stand still in your own zone for a while: do opponents attack your net?'
+  - count the skaters and goalie on each side
+  FP4:
+  - 'take ten shots from different angles: does the goalie stop some and let some in?'
+  - shoot straight at the goalie and look for a rebound
+  FP5:
+  - 'score a goal: does play stop and does the right team''s score go up?'
+  - after a goal, see how play resumes (a fair restart such as a center faceoff is expected but unscored)
+  - push the puck into the net from behind or under the goal frame; shoot into your own net
+  FP6:
+  - check whether the clock keeps running during open play
+  - 'play until time runs out: does the period / match end with a result? (unscored)'
+  robustness:
+  - leave the rink or skate into the crowd area during play
+  - trap the puck against the boards or a corner
+  - disconnect or reload in the middle of a match and come back
+  - try a second match after the first ends
+v4_map:
+  U1: 'dropped: faceoff mechanism already scored by FP1'
+  U2: 'dropped: goal mechanism scored by FP5, goal reactions by VP1'
+  U3: 'dropped: clock / period structure scored by FP6 and VP2'
+  U5: CR2
+  U6: 'CR1 (on-ice officials dropped: peripheral, the faceoff works without a visible referee)'
+  U7: 'dropped: possession changes and attack / defence scored by FP2 and FP3'
+  FP1: FP1
+  FP2: FP2
+  FP3: CR1, FP3
+  FP4: FP4, CR2
+  FP5: FP5
+  FP6: FP6
+  VP1: CR3
+  VP2: VP1
+  VP3: VP2
+  VP4: 'dropped: editing (outdoor-setting modify requirement, moved to editing_seed.yaml)'
+provenance:
+  source_yaml: T-VO-vid_edd0d2153684.t1.yaml
+  source_sha256: 3c8372a546fbd0718a21c59e109d3abc7bafd21dbe6c25ac1e34f54929f96eeb
+  size_waiver: null
+  size_max: null
+  sources: []

@@ -1,0 +1,45 @@
+{
+  // Content Patcher format (docs: https://github.com/Pathoschild/StardewMods/blob/develop/ContentPatcher/docs/author-guide.md)
+  "Format": "2.9.0",
+  "Changes": [
+    // 1. change a vanilla item: Parsnip ((O)24) sells for more and has a new description
+    {
+      "LogName": "parsnip",
+      "Action": "EditData",
+      "Target": "Data/Objects",
+      "Fields": {
+        "24": { "Price": 60, "Description": "A spring tuber. This one was grown with care." }
+      }
+    },
+    // 2. Lewis's Monday line replaced (Entries adds a key or replaces an existing one; "Mon" exists in vanilla)
+    {
+      "LogName": "lewis line",
+      "Action": "EditData",
+      "Target": "Characters/Dialogue/Lewis",
+      "Entries": {
+        "Mon": "Good morning! I heard the parsnips are especially fine this year.$h"
+      }
+    },
+    // 3. a letter in the mailbox on the first morning: the mail text + a trigger action that sends it
+    {
+      "LogName": "welcome letter",
+      "Action": "EditData",
+      "Target": "Data/Mail",
+      "Entries": {
+        "{{ModId}}_Welcome": "Dear @,^Welcome to the valley! Bring me a parsnip some time.^   -Lewis[#]A welcome letter"
+      }
+    },
+    {
+      "LogName": "send letter",
+      "Action": "EditData",
+      "Target": "Data/TriggerActions",
+      "Entries": {
+        "{{ModId}}_SendWelcome": {
+          "Id": "{{ModId}}_SendWelcome",
+          "Trigger": "DayStarted",
+          "Actions": [ "AddMail Current {{ModId}}_Welcome now" ]
+        }
+      }
+    }
+  ]
+}

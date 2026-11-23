@@ -1,0 +1,269 @@
+# GameAnything-Bench scoring material: never shown to agents during a trial.
+task_id: T-VO-vid_336b94aa6d51.t2
+source_inventory:
+- 'HUD in the gameplay shots: team scorebug at lower left (league logo, two team abbreviations with runs, small count / out dots); in the behind-home-plate
+  batting shots also a batter card at lower right; ''At Bat'' and ''Cut4'' tags on the outfield wall'
+- '00:02.1-00:02.6 behind-home-plate view of a ballpark: striped green grass, red-brown dirt infield and base paths, white foul lines, a dark-green outfield
+  wall with ads; the batter in a white uniform stands in the right-hand box with the bat up, catcher and umpire behind; the pitcher small on the mound
+  far ahead'
+- '00:03.1-00:06.1 cuts: an elevated view of the infield with a yellow ring marker on the grass near third base and small fielders; a view along the
+  outfield with a yellow ring; a view of the dark-green outfield wall with a large scoreboard; a small base-diamond widget in the lower centre'
+- '00:07.1 behind-home-plate view again: a different batter in white waits in the box; 00:07.6-00:08.6 the batter swings and the text ''STRIKE''
+  with ''92 MPH'' under it appears in the upper middle of the screen above the batter (whether the swing misses is not shown: no ball is visible)'
+- '00:08.6-00:09.0 another batting shot (other stadium): a batter in white with a red helmet in the box (end of the first clip)'
+- '00:14.2 behind-home-plate batting shot (another stadium, HOU vs NYY): a batter mid-swing; 00:14.7 elevated view behind the plate, the batter leaves
+  the box toward first, catcher and umpire at the plate'
+- '00:15.2-00:16.7 a high view of the infield: a fielder under a green ring on the ground runs on the dirt near second base, other fielders and an
+  umpire stand around, runner(s) moving'
+- '00:17.2-00:18.2 two players meet on the infield dirt near second base, the ring-marked fielder at the bag; ''OUT'' text floats above the play'
+- '00:18.7-00:19.7 the view pans right: a runner and a fielder with a glove meet beside first base, an umpire at the base line; ''OUT'' text above
+  again (second out of the same play); whether these are tags, force plays or throws is not clear'
+- '00:20.2-00:21.0 another game (BAL vs BOS), elevated infield view: a fielder under a green ring dives across the grass and lies prone'
+- '00:21.2-00:21.7 another game (STL vs CHC), a view along the first-base line from the stands: a ring-marked fielder with the ball, a runner running
+  toward home'
+- '00:22.2 the runner slides head-first toward home plate, the catcher in a blue uniform reaches down with the ball, the ring now under the catcher,
+  the umpire crouches behind; 00:22.7-00:23.2 the tag lands, the text ''OUT'' shows above the plate'
+- '00:23.7-00:25.0 a new batting shot (NYM vs KC): a batter in the box, the pitcher in the wind-up on the mound; 00:24.2-00:24.7 the pitch in flight,
+  a yellow ring cursor in the hitting zone at the bat head as the batter swings'
+- 'not visible: a batted ball after contact, a SAFE call, the control inputs, a readable change of the out count; the plays are 1-6 s fragments from
+  different games'
+- 'audio (transcript): voice-over 00:03.5 ''The fun, fast-paced baseball game returns'' / 00:06.0 ''with over 1,100 MLB players, enhanced graphics''
+  / 00:15.8 ''Take control of your season and play the games you want'' / 00:18.8 ''or send [likely: sim] to the crucial ones'' / 00:20.6 ''RBI 16
+  is coming this spring to consoles, PC and Mac'' / 00:24.6 ''and mobile devices''; no crowd or play sounds annotated'
+instructions_meta:
+  requirement_groups:
+    at-bat:
+    - FP1
+    fielding and outs:
+    - CR3
+    - FP3
+    - FP4
+    - FP5
+    - FP6
+    calls on screen:
+    - FP2
+    - VP2
+    ballpark:
+    - CR1
+    - VP1
+    players:
+    - CR2
+    - VP3
+  explicit_requirements:
+  - type: specify
+    text: It should play in real time, so I swing the bat myself as the pitch comes in and run my fielder down to the play myself, not through menus
+      or turns.
+    covers:
+    - FP1
+    - FP3
+  - type: specify
+    text: Like in the clip, my fielder should be able to dive across the ground to get to a play he can't reach on foot.
+    covers:
+    - FP6
+rubric:
+  content_realization:
+  - id: CR1
+    item: 'The play space is a ballpark: a batter''s box at home plate facing a pitcher''s mound, bases around the infield joined by base paths in order,
+      and an outfield closed by a wall'
+    anchors:
+      '1': home plate with the batter's box, the mound ahead of it, bases laid out as a diamond with base paths between them, and an outfield with a
+        wall beyond
+      '0.5': bases exist but not as a diamond joined by base paths, or the batter's box / mound or the outfield wall is missing
+      '0': no bases or no recognisable ballpark layout
+    evidence:
+    - - '00:02.1'
+      - '00:08.6'
+    - - '00:14.7'
+      - '00:16.7'
+  - id: CR2
+    item: 'The game has the people of a baseball play: the player''s character as a ballplayer with a bat in the box, a pitcher on the mound, runners
+      on the base paths, and fielders including a catcher at home plate, with the two sides told apart'
+    anchors:
+      '1': the player's character reads as a ballplayer with a bat, and pitcher, runners and fielders with a catcher are all present, the runners'
+        side clearly different from the fielders' side
+      '0.5': one role is missing (e.g. no pitcher or no catcher), or the player's character is a generic hero without a bat, or the two sides cannot
+        be told apart
+      '0': no distinct batting and fielding sides
+    evidence:
+    - - '00:02.1'
+      - '00:08.6'
+    - - '00:17.2'
+      - '00:19.7'
+    - - '00:21.7'
+      - '00:23.2'
+  - id: CR3
+    item: While fielding, the one fielder the player controls carries a clearly visible marker on the ground under him (in the clip a ring)
+    anchors:
+      '1': a clearly visible marker attached to the controlled fielder throughout the fielding play, on him only
+      '0.5': a marker exists but is hard to see, is not attached to the character, or is on several fielders at once
+      '0': no marker for the controlled fielder
+    evidence:
+    - - '00:15.7'
+      - '00:18.2'
+    - - '00:20.2'
+      - '00:21.0'
+    - - '00:21.2'
+      - '00:22.7'
+  functions_playability:
+  - id: FP1
+    item: 'Batting in real time: the pitcher throws a pitch that travels toward the plate, and the player swings the bat from the box on demand at the
+      moment they choose'
+    anchors:
+      '1': pitches are thrown toward the batter and a visible bat swing happens on the player's input while the pitch comes in
+      '0.5': a swing exists but no pitch is thrown at the batter, or the swing is not on demand (automatic, or chosen from a menu or turn)
+      '0': no player swing
+    evidence:
+    - - '00:07.1'
+      - '00:08.6'
+    - - '00:23.7'
+      - '00:24.7'
+  - id: FP2
+    item: 'The strike call: after a missed swing the game calls STRIKE together with the speed of that pitch in mph'
+    anchors:
+      '1': after a miss a STRIKE call with a speed number in mph appears
+      '0.5': the call shows without a speed number, or it also shows after a hit
+      '0': no strike call
+    evidence:
+    - - '00:07.6'
+      - '00:08.6'
+  - id: FP3
+    item: 'Fielding in real time: the player steers the marked fielder freely across the field to the play while the runners keep running'
+    anchors:
+      '1': the player moves the marked fielder in real time to wherever the play is, while runners move along the base paths at the same time
+      '0.5': the fielder can only move to fixed spots, or the play pauses / goes by turns while the fielder moves
+      '0': the player cannot move a fielder
+    evidence:
+    - - '00:15.2'
+      - '00:18.2'
+    - - '00:21.2'
+      - '00:22.7'
+  - id: FP4
+    item: 'Outs are races: a runner is out when the player''s fielder completes the play on him before he reaches the base, and the out is called (OUT);
+      a runner who gets to the base first is not out'
+    anchors:
+      '1': the result follows who gets there first, in both directions (an early play gives a called OUT, a late one leaves the runner on the base)
+      '0.5': outs happen but are not tied to who arrives first (automatic, random, or always out once reached), or outs are made but never called
+      '0': the player cannot make outs
+    evidence:
+    - - '00:17.2'
+      - '00:19.7'
+  - id: FP5
+    item: 'Outs at different places: a runner can be put out at an infield base on the way and at home plate, where a runner trying to score is out
+      only if the play beats him to the plate'
+    anchors:
+      '1': outs work at an infield base and at home plate, and at the plate the result is a race with the scoring runner
+      '0.5': outs work at only one of the two places, or the out at the plate is automatic
+      '0': no outs at bases or at the plate
+    evidence:
+    - - '00:17.2'
+      - '00:19.7'
+    - - '00:21.7'
+      - '00:23.2'
+  - id: FP6
+    item: 'The dive: during fielding the controlled fielder can dive low across the ground on demand to reach a play he cannot reach on foot'
+    anchors:
+      '1': an on-demand dive that carries the fielder a clear distance low across the ground and can still complete the play (e.g. put a runner out)
+        at its end
+      '0.5': a dive animation or a short lunge that hardly carries the fielder, or a dive that cannot complete the play
+      '0': no dive
+    evidence:
+    - - '00:20.2'
+      - '00:21.0'
+  visual_presentation:
+  - id: VP1
+    cat: spatial
+    keyframes:
+    - '00:02.1'
+    - '00:05.1'
+    - '00:15.7'
+    item: 'The ballpark looks like the clip''s: striped green grass, a red-brown dirt infield and base paths with white lines, and a dark-green outfield
+      wall with a scoreboard'
+    anchors:
+      '1': grass and dirt zones are distinct with marked lines, the grass reads as a mown field, and a dark wall with a scoreboard closes the outfield
+      '0.5': a field with bases but no distinct grass / dirt zones or lines, or no wall or scoreboard
+      '0': no ballpark look (bases on plain ground or a stock dungeon / outdoor map)
+    evidence:
+    - - '00:02.1'
+      - '00:08.6'
+    - - '00:14.7'
+      - '00:16.7'
+  - id: VP2
+    cat: presentation
+    keyframes:
+    - '00:08.1'
+    - '00:18.2'
+    - '00:23.2'
+    item: 'The calls are shown big and readable the moment they happen: a plain white STRIKE with the pitch speed under it over the batting view, and
+      OUT floating over the play where it happened'
+    anchors:
+      '1': both calls appear at once as large, high-contrast game text at the place of the action
+      '0.5': only one of the two calls is presented this way, or the text is small, low-contrast, late, or only in a log or menu
+      '0': no on-screen calls
+    evidence:
+    - - '00:07.6'
+      - '00:08.6'
+    - - '00:17.7'
+      - '00:19.7'
+    - - '00:22.7'
+      - '00:23.2'
+  - id: VP3
+    cat: key_moment
+    keyframes:
+    - '00:22.2'
+    - '00:22.7'
+    item: 'The play at the plate looks like the clip''s: the runner slides in toward home plate and the catcher, in the other side''s uniform colour,
+      reaches down to tag him'
+    anchors:
+      '1': a visible slide of the runner into the plate and a catcher in the other uniform colour tagging him there
+      '0.5': a runner and a fielder meet at the plate without a slide, or without a catcher told apart from the runner
+      '0': no visible play at the plate
+    evidence:
+    - - '00:21.7'
+      - '00:23.2'
+play_suggestions:
+  FP1:
+  - swing at 5 pitches, early, on time and late
+  - 'robustness, not scored: swing 10 times in a row: is there a cooldown?'
+  FP2:
+  - swing and miss 5 times and read the text
+  - 'robustness, not scored: does the number change between pitches? is a call shown after a hit?'
+  FP3:
+  - 'in the field, run the marked fielder to several places: does he go where steered while the runners keep running?'
+  FP4:
+  - tag the first runner at once, then wait and try the second only as he reaches the base
+  - do all runners follow the base paths and stop when put out?
+  FP5:
+  - make an out at an infield base and another at the plate
+  - 'counter-case: do not move: does the runner score or get called safe?'
+  FP6:
+  - use the dive from 4 tiles away and from 1 tile away
+  - 'authored flow, not scored: hit a ball and note what happens next; miss a ball and note what happens next'
+  robustness:
+  - check health, gold, inventory and position before and after a play
+  - leave the ballpark mid-play and return
+  - swing while a runner is passing
+  - play 3 plays in a row
+  - 'authored flow, not scored: does the game return to the batter''s box after the play?'
+v4_map:
+  U1: CR1 (diamond, box, mound), CR2 (batting and fielding sides)
+  U2: 'FP2 | dropped: mechanism already scored by FP2 (paired U/F)'
+  U3: CR3 (marker), FP3 (moving the fielder to the play)
+  U4: 'FP4 | dropped: mechanism already scored by FP4 (paired U/F)'
+  U5: FP5 (race at the plate), VP3 (look of the slide and tag)
+  F1: FP1 (real-time emphasis of the pilot made explicit)
+  F2: FP2
+  F3: FP4 (OUT call look moved to VP2)
+  F4: FP5
+  F5: FP6
+  F6: CR3
+  V1: CR1 (layout), CR2 (player's character as a ballplayer with a bat, two sides told apart), VP1 (look of grass, dirt, lines, wall, scoreboard)
+  V2: VP2
+  V3: 'VP3 (umpire dropped: peripheral, the call is made by the game text)'
+  new: 'FP3 (real-time steering of the fielder, split from U3 / F3 to carry the pilot''s real-time emphasis)'
+  not scored (pilot authored): 'chase-and-tag as the form of the out, the hit leading into the fielding phase, the return to the batter''s box, hit vs
+    miss results of the swing'
+provenance:
+  source_yaml: v2g2_original/sports.rubric.yaml (flare__sports, 2026-10-25)
+  size_waiver: null
+  size_max: null
+  sources: []

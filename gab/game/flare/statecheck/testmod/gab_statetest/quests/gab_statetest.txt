@@ -1,0 +1,5 @@
+name=GAB Beacon
+
+[quest]
+requires_status=gab_beacon_lit
+quest_text=GAB quest: talk to the beacon keeper.

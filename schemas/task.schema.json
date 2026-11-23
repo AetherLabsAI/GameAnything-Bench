@@ -1,0 +1,81 @@
+{
+ "$schema": "https://json-schema.org/draft/2020-12/schema",
+ "title": "task.yaml (public, rubric v4)",
+ "type": "object",
+ "additionalProperties": false,
+ "required": [
+  "task_id",
+  "version",
+  "category",
+  "modality",
+  "domain",
+  "track",
+  "target_game",
+  "references",
+  "provenance"
+ ],
+ "properties": {
+  "task_id": {
+   "type": "string",
+   "pattern": "^T-(VO|TO|IO|HY)-[\\w]+(\\.[te]\\d+)?$"
+  },
+  "version": {
+   "type": "string"
+  },
+  "category": {
+   "enum": [
+    "scene_world",
+    "mechanics_behavior",
+    "narrative_event"
+   ]
+  },
+  "modality": {
+   "enum": [
+    "video",
+    "text",
+    "image",
+    "video+text",
+    "video+image",
+    "video+text+image"
+   ]
+  },
+  "domain": {
+   "type": "string"
+  },
+  "track": {
+   "enum": [
+    "core",
+    "commercial"
+   ]
+  },
+  "target_game": {
+   "type": "string"
+  },
+  "references": {
+   "type": "array",
+   "minItems": 1,
+   "items": {
+    "type": "string"
+   }
+  },
+  "provenance": {
+   "type": "object",
+   "required": [
+    "pipeline",
+    "rules_version",
+    "review_status"
+   ],
+   "properties": {
+    "pipeline": {
+     "type": "string"
+    },
+    "rules_version": {
+     "type": "string"
+    },
+    "review_status": {
+     "type": "string"
+    }
+   }
+  }
+ }
+}

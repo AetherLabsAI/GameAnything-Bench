@@ -1,0 +1,19 @@
+# STATE_SPEC self-check (gab selfcheck cities_skylines --state): format in gab/setup/selfcheck.py state_check. NOT RUN YET (2026-11-05: the
+# game is not installed anywhere): the paths below are what GABState is written to answer. A fresh start loads the start city
+# directly (start.yaml mode game, the default); the test mod acts on entering the city.
+vanilla:
+  steps:
+    - {do: wait, seconds: 5}
+    - {do: key, keys: "space"}            # unpause / pause: the simulation clock is part of the state
+    - {do: wait, seconds: 3}
+  engine: [status, city, map, date, paused, speed, money, population, demand.residential, counts.segments, camera.x, camera.size,
+           time_of_day.hour, transport.lines, mods]
+  mod_allow: []
+mod:
+  dir: testmod
+  steps:
+    - {do: wait, seconds: 8}
+  expect:
+    - "mod: stage_two"
+    - "mod: GAB District"
+    - "screen_text: GAB HUD: the district is founded"

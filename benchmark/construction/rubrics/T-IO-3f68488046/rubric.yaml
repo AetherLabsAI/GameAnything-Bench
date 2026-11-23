@@ -1,0 +1,187 @@
+# GameAnything-Bench scoring material: never shown to agents during a trial.
+task_id: T-IO-3f68488046
+source_inventory:
+- 'img01: a large outdoor apiary of many small box hives (dark lids, some covered with sacking) set out in loose rows on bare sandy ground at
+  the edge of a vast field of yellow flowers; several people work at the hives, some sitting at open boxes, some wearing veiled hats; bees visible
+  as dots in the sky; tree line and power pylons on the horizon'
+- 'img02: close-up of stacked wooden hive fronts painted different colours (brown, blue, yellow, green, blue), each with slatted vents, a small
+  entrance board and, on the upper row, a distinct symbol plate (sun, checkerboard, cross)'
+- 'img03: a metal smoker puffing smoke on top of an open hive (mesh cover); behind it a beekeeper in a veiled hat and suit lifts a frame of comb
+  out of a hive while many bees fly around; a row of white hives with bricks on the lids; flowering plants and trees around'
+- 'img04: woodland apiary: a row of white hives with red-edged lids on grass under large trees, sunlight streaming through; a beekeeper in a veiled
+  hat and light suit works at an opened hive'
+- 'img05: close-up: a gloved hand holds a wooden frame of honeycomb covered with bees, a hive tool in the other hand; the comb has pale capped
+  cells, open glistening cells and darker cells'
+- 'img06: indoor showroom of beekeeping equipment: many stainless-steel drum honey extractors (hand-cranked and motorised, frame cages visible
+  through clear lids), settling tanks, uncapping trays, stacks of hive boxes in white, wood and colours; a wall sign with a honey-drop logo'
+instructions_meta:
+  requirement_groups:
+    hives and their setting:
+    - CR1
+    - FP1
+    - VP1
+    working and harvesting a hive:
+    - CR3
+    - FP2
+    - VP2
+    dealing with the bees:
+    - CR2
+    - FP3
+    the production loop to honey:
+    - CR4
+    - FP4
+  explicit_requirements:
+  - type: specify
+    text: When I open a hive, I should have to calm the bees with smoke from a smoker and wear protective gear, like the beekeepers in the pictures.
+    covers:
+    - CR2
+    - FP3
+rubric:
+  content_realization:
+  - id: CR1
+    item: 'The game contains an apiary: several separate hives set out together right beside flowering plants'
+    anchors:
+      '1': several distinct hives stand together as one apiary, with flowering plants next to them
+      '0.5': hives exist but only one, or flowering plants exist only apart from the hives
+      '0': no hives
+    evidence:
+    - 'img01: rows of box hives at the edge of the flowering field'
+    - 'img03: hives among flowering plants'
+    - 'img04: a row of hives'
+  - id: CR2
+    item: 'The game contains the beekeeper''s equipment for dealing with the bees: a smoker and protective gear'
+    anchors:
+      '1': both a smoker (or an own equivalent that makes smoke) and protective gear exist as things the player has or uses
+      '0.5': only one of the two exists
+      '0': neither exists
+    evidence:
+    - 'img03: the smoker on the open hive, the beekeeper in veiled hat and suit'
+    - 'img04: veiled hat and suit'
+    - 'img05: the gloved hand'
+    - 'img01: veiled hats'
+  - id: CR3
+    item: The hive holds removable frames of honeycomb inside it
+    anchors:
+      '1': frames (or an own equivalent) of honeycomb exist as the contents of a hive
+      '0.5': honeycomb or honey exists, but not as frames belonging inside a hive
+      '0': no comb or frames anywhere
+    evidence:
+    - 'img03: a frame of comb lifted out of a hive'
+    - 'img05: the frame of honeycomb in the gloved hand'
+  - id: CR4
+    item: The game contains honey extraction equipment where harvested frames are processed
+    anchors:
+      '1': a dedicated extractor (or an own equivalent processing station) for frames or comb exists apart from the hives
+      '0.5': some processing station exists, but nothing ties it to frames or comb
+      '0': no processing equipment
+    evidence:
+    - 'img06: the drum extractors with frame cages visible through the lids'
+    - img05
+  functions_playability:
+  - id: FP1
+    item: Each hive is opened and harvested on its own
+    anchors:
+      '1': working one hive changes only that hive; the others keep their own state
+      '0.5': several hives exist but act as one (working one works all)
+      '0': hives cannot be worked at all
+    evidence:
+    - img01
+    - img04
+    - img02
+  - id: FP2
+    item: 'Harvesting is an action at the hive: the player opens it and takes out its contents, with clear feedback of what was gained'
+    anchors:
+      '1': an explicit open-and-take action at the hive (frames, comb or an own equivalent) that shows the gain
+      '0.5': honey collected by a generic pick-up with no opening of the hive, or no feedback
+      '0': no harvest
+    evidence:
+    - img03
+    - img05
+  - id: FP3
+    item: Bees are present at an opened hive, and working it requires the player both to calm them with smoke from a smoker and to wear protective
+      gear
+    anchors:
+      '1': 'working an open hive needs both: the player uses smoke on the bees and wears protective gear, and the hive cannot be worked as intended
+        without them'
+      '0.5': only one of the two is part of working the hive, or both exist but play no part in it
+      '0': neither smoke nor protection plays any part in opening a hive
+    evidence:
+    - 'img03: the smoker on the open hive, the veiled beekeeper'
+    - img04
+    - 'img05: the gloved hand'
+  - id: FP4
+    item: 'A production chain from hive to honey: harvested frames are processed in a separate extraction step into honey the player obtains'
+    anchors:
+      '1': frames or comb must be processed with equipment before honey results, and the honey is obtained
+      '0.5': honey comes straight from the hive with no processing step, or the step exists but yields nothing usable
+      '0': no honey product
+    evidence:
+    - img06
+    - img05
+  visual_presentation:
+  - id: VP1
+    cat: spatial
+    item: 'The hives look like the reference''s: box hives with lids, standing in rows'
+    anchors:
+      '1': the hives read as box-shaped hive bodies with lids, lined up in rows
+      '0.5': hives shown, but not recognisable as box hives, or not in rows
+      '0': no recognisable box-hive look
+    evidence:
+    - img01
+    - img04
+    - 'img03: the row of white hives'
+  - id: VP2
+    cat: key_moment
+    item: 'Working a hive looks like the reference''s: a box hive opened at the top and a wooden frame of honeycomb held up out of it'
+    anchors:
+      '1': an opened box hive and a frame recognisably filled with comb seen together in the working moment
+      '0.5': the moment is shown, but the hive does not read as opened or the frame does not read as comb
+      '0': no visible hive-working moment
+    evidence:
+    - img03
+    - img05
+play_suggestions:
+  FP1:
+  - 'set up or find two hives; harvest one: does the other keep its own state?'
+  FP2:
+  - 'open a hive and harvest: is it an action at the hive and is the gain shown?'
+  - try to harvest a hive that was just harvested
+  FP3:
+  - 'try to open and work a hive without smoke, then without protective gear, then with both: is each one required?'
+  FP4:
+  - 'follow one harvest from hive to honey: is there a processing step, and where does the honey end up?'
+  - try to get honey without the processing step
+  robustness:
+  - 'harvest repeatedly over time: do the hives refill, and does the loop continue?'
+  - leave a hive untended for a long time and come back
+  - open and close a hive without harvesting
+  - 'compare a hive next to flowers with one far from any: is production different? (unscored)'
+v4_map:
+  U1: CR3, FP2
+  U2: CR2, FP3
+  U3: CR4, FP4
+  U4: 'dropped: detail (cell states carry no readable rule; the comb frame stays in CR3)'
+  U5: CR1
+  FP1: CR1, FP1
+  FP2: FP2
+  FP3: CR2, FP3
+  FP4: CR4, FP4
+  FP5: CR1
+  FP6: 'dropped: editing request (beeswax modify requirement, moved to editing_seed.yaml)'
+  VP1: CR1, VP1
+  VP2: VP2
+provenance:
+  source_yaml: T-IO-3f68488046.yaml
+  source_sha256: 834c6c48eda9bfcd6787dbb454cb76bd4df9046284c26d677f08e1d41b43b894
+  size_waiver: null
+  size_max: null
+  sources:
+  - refs:
+    - img01
+    - img02
+    - img03
+    - img04
+    - img05
+    - img06
+    bundle: 3f68488046
+    title: 养蜂取蜜：蜂箱、巢框、摇蜜、装瓶

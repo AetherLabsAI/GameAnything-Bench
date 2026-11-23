@@ -1,0 +1,257 @@
+# GameAnything-Bench scoring material: never shown to agents during a trial.
+task_id: T-VO-vid_bb7a508ee81a.t1
+source_inventory:
+- '00:00-00:09.5 slow drone push along a river at mid height: dark glass and bronze-glass towers on the left bank with a riverside road (car lights)
+  and a tree-lined lower walk; a round-topped glass tower and a dark glass tower edge on the right bank; a slim, stepped blue-glass tower stands
+  far ahead at the end of the river view; a low flat bridge crosses the water in the middle distance, further bridges beyond; small white boats
+  on the water'
+- 00:00.5-00:05.0 title overlay 'CHICAGO' with small 'USA' and a thin red underline, centred over the river; it writes on and fades out
+- 00:00-00:05 dim, desaturated grey sky; from about 00:05.5 the sky is bright cream and the towers catch warm low sunlight (light grading brightens
+  over the shot)
+- from about 00:06 a faint 'DRONE ...' watermark in the bottom-right corner (present in most later shots; not content)
+- 00:10-00:17.5 close drone pass beside a slim white ornate tower with clock faces near the top, between a dark green curved-base glass tower
+  (left) and a white grid-facade glass tower (behind right); an ornate stone roof below right; a dense district of brick and concrete mid-rises
+  and scattered high-rises spreads behind to the horizon; from 00:15.5 the sun flares over the right tower
+- '00:18-00:21.3 high oblique view over the river: green water, a low red-painted bridge crossing it, two cylindrical towers with stacked ring-shaped
+  floors standing on the bank, a brown grid-facade tower casting a dark shadow, a curved blue-glass tower filling the right edge; several more
+  bridges in a row upriver; trees with yellow leaves on the bank'
+- 00:21.5-00:25.3 high view straight down a narrow street canyon between an orange-brick building (left) and a grey-brown building (right), both
+  with regular punched windows; a long straight road with cars and street lamps; an elevated structure crosses the street at the far end, with
+  trees and taller buildings beyond
+- 00:25.5-00:32.8 camera tilted steeply down between a cream stone high-rise (left) and a dark red high-rise (right), an ornate stone facade at
+  the right; below, an elevated track comes down the street from the top of the frame and curves into a junction above a street intersection;
+  a white / silver train with lit windows sits on the curve; crosswalks and cars on the street under the tracks
+- '00:33-00:40.9 straight-down top view: the top edge of a red-roofed / red grid building at the top; a street with an elevated double track running
+  horizontally across the frame, a white train moving left to right along it toward the junction; at the right the tracks curve down into the
+  junction over a crossing street; below the track a surface parking lot with rows of parked cars between a brown building (lower left) and a
+  tan rooftop (lower right); crosswalks'
+- cuts at about 00:10, 00:21.4 and 00:25.4; 00:32.8-00:33 cut to the top view; clip ends at 00:41
+- 'audio: music only, no speech (per the curated annotation; loudness jumps line up with the cuts)'
+- 'not visible: no people at readable size, no street names or landmark names besides the title overlay, no night or weather change, no lakefront
+  in this range'
+instructions_meta:
+  requirement_groups:
+    exploration and vantage points:
+    - FP1
+    routes and connections:
+    - CR4
+    - CR5
+    - FP2
+    - FP3
+    one coherent district:
+    - FP4
+    landmarks and spatial composition:
+    - CR1
+    - CR2
+    - CR3
+    - VP1
+    - VP3
+    materials and light:
+    - VP2
+  explicit_requirements:
+  - type: keep
+    text: I definitely want those two standout buildings in there, the slim white clock tower and the pair of round towers with floors stacked
+      like rings.
+    covers:
+    - CR2
+    - CR3
+  - type: specify
+    text: 'And the river should be the backbone of the place, like in the clip: towers lining both banks right up to the water, with that tall
+      slim glass tower closing off the view at the far end of the river.'
+    covers:
+    - CR1
+    - VP3
+rubric:
+  content_realization:
+  - id: CR1
+    item: 'The river is the backbone of the district: a straight, narrow river channel runs through it, walled by towers standing in continuous
+      rows along the water on both banks (a riverside road or walk may run between the towers and the water), crossed by low bridges at intervals,
+      with a tall slim glass tower closing the far end of the river view'
+    anchors:
+      '1': a straight river through the district with towers lining both banks in continuous rows along the water (a riverside road or walk in
+        between is fine), more than one low bridge across it, and a tall slim tower terminating the view along it
+      '0.5': a river with towers, but one bank open (no continuous row of towers along the river), only one bridge, or no tower closing the far
+        end
+      '0': no river, or open water / a lake shore instead of a channel between towers
+    evidence:
+    - - 00:00
+      - '00:09.5'
+    - - 00:18
+      - '00:21.3'
+  - id: CR2
+    item: The game contains the slim white ornate clock tower, with clock faces near its top, standing among taller glass towers above a dense
+      district of lower blocks
+    anchors:
+      '1': a slim white tower with clock faces near the top, set among glass towers with lower blocks around
+      '0.5': a slim white tower without clock faces, or a clock tower that is not slim / not set among glass towers
+      '0': no such tower; only generic skyscrapers
+    evidence:
+    - - 00:10
+      - '00:17.5'
+  - id: CR3
+    item: The game contains a pair of cylindrical towers with stacked ring-shaped floors, standing on the river bank next to a bridge
+    anchors:
+      '1': two round towers with ring-like stacked floors, on the bank by the river near a bridge
+      '0.5': only one such tower, round towers without the ring-stacked floors, or the pair placed away from the river
+      '0': no cylindrical towers
+    evidence:
+    - - 00:18
+      - '00:21.3'
+  - id: CR4
+    item: A narrow, straight street runs between tall brick buildings and leads to the elevated railway, which crosses it at its far end
+    anchors:
+      '1': a long straight narrow street between tall buildings with the raised rail crossing at its end
+      '0.5': the street exists but is wide or open, or it does not end at the rail crossing
+      '0': no such street
+    evidence:
+    - - '00:21.5'
+      - '00:25.3'
+  - id: CR5
+    item: 'An elevated railway is raised one level above the streets: its track runs along a street and curves into a junction above a street
+      intersection, with the streets continuing underneath'
+    anchors:
+      '1': a raised track along a street that curves over an intersection, with streets passing beneath it
+      '0.5': an elevated track that runs only straight (no curve / junction at an intersection), or one that is not clearly above a street
+      '0': no railway, or a railway at ground level / underground
+    evidence:
+    - - '00:21.5'
+      - '00:25.3'
+    - - '00:25.5'
+      - '00:32.8'
+    - - 00:33
+      - '00:40.9'
+  functions_playability:
+  - id: FP1
+    item: 'Free exploration at several heights: the player can drive through the district at street / bank level and also reach high vantage points
+      (ramps or raised roads up to rooftops or similar) from which the river, the towers and the rail junction can be overlooked'
+    anchors:
+      '1': driving through streets and along the river at ground level, and a high point that can be driven to with a view over the district
+      '0.5': only one of the two levels is reachable
+      '0': the player cannot drive through the built place
+    evidence:
+    - - 00:00
+      - '00:40.9'
+  - id: FP2
+    item: 'The river divides and the bridges connect: the water separates the two banks, and the bridges are usable crossings that join the streets
+      on either side'
+    anchors:
+      '1': bridges can be driven across and link streets on both banks, and the river cannot simply be driven over elsewhere
+      '0.5': bridges are decorative, blocked or lead nowhere, or the water does not separate the banks
+      '0': no bridge can be crossed
+    evidence:
+    - - 00:00
+      - '00:09.5'
+    - - 00:18
+      - '00:21.3'
+  - id: FP3
+    item: 'The streets stay open under the elevated railway: the player can drive along the street beneath the track and through the intersection
+      under its curve without the structure blocking the way'
+    anchors:
+      '1': the street below the track and the intersection under the curve can be driven through end to end
+      '0.5': the street beneath is partly blocked by supports or the structure, or only part of it can be driven
+      '0': the space under the track cannot be driven, or there is no street beneath it
+    evidence:
+    - - '00:21.5'
+      - '00:25.3'
+    - - '00:25.5'
+      - '00:32.8'
+    - - 00:33
+      - '00:40.9'
+  - id: FP4
+    item: 'One coherent district: the river corridor, the landmark-tower area, the brick street canyon and the rail junction are parts of one
+      navigable place that the player can travel between through the district'
+    anchors:
+      '1': all shown areas present and reachable from each other by moving through the district
+      '0.5': the areas exist but some are disconnected islands with no route to the rest
+      '0': only one area built, or unrelated fragments
+    evidence:
+    - - 00:00
+      - '00:40.9'
+  visual_presentation:
+  - id: VP1
+    cat: spatial
+    keyframes:
+    - '00:23.0'
+    item: 'The street reads as a deep canyon: tall, continuous brick and stone walls with regular punched windows close in on both sides of the
+      narrow road'
+    anchors:
+      '1': a narrow road between tall continuous walls with regular windows, reading as a canyon
+      '0.5': buildings line the street but are low, gapped or plain, so it does not read as a canyon
+      '0': nothing comparable
+    evidence:
+    - - '00:21.5'
+      - '00:25.3'
+  - id: VP2
+    cat: style
+    keyframes:
+    - '00:06.0'
+    - '00:16.0'
+    - '00:24.0'
+    item: 'Material and light palette: blue-green glass towers set against red / orange brick and cream stone blocks, green river water, under
+      warm, low golden sunlight'
+    anchors:
+      '1': glass-versus-brick/stone contrast and a warm low-sun look both present
+      '0.5': one of the two (material contrast or warm light)
+      '0': uniform materials and flat or night lighting
+    evidence:
+    - - '00:05.5'
+      - '00:09.5'
+    - - '00:15.5'
+      - '00:17.5'
+    - - 00:18
+      - '00:25.3'
+  - id: VP3
+    cat: spatial
+    keyframes:
+    - '00:03.0'
+    - '00:19.5'
+    item: 'The view along the river reads as an enclosed corridor of water: tower walls rise high above the narrow channel on both sides and recede
+      in depth toward the far end'
+    anchors:
+      '1': looking along the river, high tower walls on both banks close in on the channel and recede toward the far end, so the view reads as
+        a deep corridor
+      '0.5': buildings line the river but are low, sparse or widely gapped, so the view reads as an open waterfront
+      '0': nothing comparable
+    evidence:
+    - - 00:00
+      - '00:09.5'
+    - - 00:18
+      - '00:21.3'
+play_suggestions:
+  FP1:
+  - drive along a riverbank and down the brick street at ground level
+  - 'drive up to a high point next to the river: can the river, the clock tower and the rail curve be overlooked from up there?'
+  FP2:
+  - cross every bridge from one bank to the other
+  - 'try to cross the river away from a bridge: is the water a real divide?'
+  FP3:
+  - drive the street beneath the track from end to end, including the intersection under the curve
+  - 'look up while driving under the track: is it raised and unbroken the whole way?'
+  FP4:
+  - drive from the river view to the clock tower, then to the street canyon and on to the rail junction without being reset or teleported
+  - 'follow the district edges: are there holes, floating pieces or abrupt void at the seams?'
+  robustness:
+  - 'restart the track and drive the place again: is it still intact?'
+  - 'drive the routes in both directions: is the place still readable'
+  - 'drive under the elevated track at the curve and along any part of it that can be reached: does anything break or block?'
+v4_map:
+  U1: 'CR1 (riverside road, tree-lined walk and boats dropped: peripheral)'
+  U2: CR2, CR3
+  U3: CR1, CR3
+  U4: 'CR4, CR5 (parking lot dropped: peripheral, incidental beside the rail junction)'
+  U5: CR5, FP2, FP3
+  FP1: FP1
+  FP2: FP2
+  FP3: CR5, FP3
+  FP4: FP4
+  VP1: CR1, VP3
+  VP2: 'dropped: duplicate (the landmark silhouettes are the same forms scored in CR2, CR3)'
+  VP3: CR4, VP1
+  VP4: 'CR5 (parking lot dropped: peripheral, incidental beside the rail junction)'
+  VP5: VP2
+provenance:
+  source_yaml: T-VO-vid_bb7a508ee81a.t1.yaml
+  source_sha256: 478c4070125c7ae34930e1df93e2dba0ab39bd1dba988f4b4142b94f4ba808e2
+  size_waiver: null
+  size_max: null
+  sources: []

@@ -1,0 +1,24 @@
+# Reference material: fetched from the HF dataset into $GAB_MEDIA_DIR/<task>/ by `gab media fetch` (sha256 checked).
+# The agent gets the files only (no title, author, caption or source): this file is never shown to it.
+task_id: T-VO-vid_8bc291e1212c.t1
+refs:
+- id: c01
+  kind: video
+  file: clip_01.mp4
+  video_id: vid_8bc291e1212c
+  source:
+    title: 04 - Super Mario Sprinters! – Teaser Trailer ｜ Nintendo Switch 2
+    url: null
+    channel: null
+    youtube_id: null
+  range:
+    start: 11.9
+    end: 58.2
+    text: 0:11.90-0:58.20
+  duration_s: 46.3
+  size_bytes: 10084267
+  format: mp4 H.264 720p, AAC audio
+  hf_path: media/T-VO-vid_8bc291e1212c.t1/clip_01.mp4
+  sha256: 00a1fd808877834957695236cd590cb6c8d4a2f69765a2a50a022877a67cca1e
+  rights_note: Trailer footage of an existing game with Nintendo characters and logos. Use as a private reference only; do not redistribute clips
+    or reproduce characters, names or levels in the built content.

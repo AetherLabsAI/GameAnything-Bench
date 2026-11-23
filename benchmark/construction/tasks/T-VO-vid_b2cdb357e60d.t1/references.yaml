@@ -1,0 +1,24 @@
+# Reference material: fetched from the HF dataset into $GAB_MEDIA_DIR/<task>/ by `gab media fetch` (sha256 checked).
+# The agent gets the files only (no title, author, caption or source): this file is never shown to it.
+task_id: T-VO-vid_b2cdb357e60d.t1
+refs:
+- id: c01
+  kind: video
+  file: clip_01.mp4
+  video_id: vid_b2cdb357e60d
+  source:
+    title: 08 - Mick Fanning in Full Flow 🔥
+    url: null
+    channel: null
+    youtube_id: null
+  range:
+    start: 20.0
+    end: 40.0
+    text: 0:20.00-0:40.00
+  duration_s: 20.0
+  size_bytes: 7617598
+  format: mp4 H.264 720p, AAC audio
+  hf_path: media/T-VO-vid_b2cdb357e60d.t1/clip_01.mp4
+  sha256: 58c56aa0563b4577f08a819dd0f75147120ac00f78f856a7d81719e433219347
+  rights_note: Real-world sports footage that may be copyrighted by its producer or the athlete. The title names a real surfer. Use as a private
+    reference only and do not redistribute frames. Do not reproduce the athlete's likeness in the game.

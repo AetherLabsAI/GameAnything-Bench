@@ -1,0 +1,65 @@
+# Reference material: fetched from the HF dataset into $GAB_MEDIA_DIR/<task>/ by `gab media fetch` (sha256 checked).
+# The agent gets the files only (no title, author, caption or source): this file is never shown to it.
+task_id: T-HY-vid_22c94960e3ee.t1
+refs:
+- id: c01
+  kind: video
+  file: clip_01.mp4
+  video_id: vid_22c94960e3ee
+  source:
+    title: '03 - Get Your Scuba Dinosaur Wetsuit Hood🤿🦖#scubahood #divinghood #divehood'
+    url: null
+    channel: null
+    youtube_id: null
+  range:
+    start: 0.0
+    end: 32.3
+    text: 0:00.00-0:32.30
+  duration_s: 32.3
+  size_bytes: 7289076
+  format: mp4 H.264 720p, AAC audio
+  hf_path: media/T-HY-vid_22c94960e3ee.t1/clip_01.mp4
+  sha256: e233a6a35b4479bcfbfac645d3a5f0daa18759614be516ad0f5a6b6e036754d9
+  rights_note: null
+- id: img01
+  kind: image
+  file: img01.jpg
+  format: jpg
+  hf_path: media/T-HY-vid_22c94960e3ee.t1/img01.jpg
+  sha256: 87454ab8e358e7cbca1eb6a954d293fcf6edc0f62e878b38989aeb402fc5a688
+  size_bytes: 325472
+- id: img02
+  kind: image
+  file: img02.jpg
+  format: jpg
+  hf_path: media/T-HY-vid_22c94960e3ee.t1/img02.jpg
+  sha256: cdbe6e7267cdf30087dd50f119fbb5059c559ac600d3f6ee4f001570e6fd2b11
+  size_bytes: 286164
+- id: img03
+  kind: image
+  file: img03.jpg
+  format: jpg
+  hf_path: media/T-HY-vid_22c94960e3ee.t1/img03.jpg
+  sha256: 790bd75549930d877b7a36a549eb43cf495adffbe3bc9351442282bdc2c2e954
+  size_bytes: 208695
+- id: img04
+  kind: image
+  file: img04.jpg
+  format: jpg
+  hf_path: media/T-HY-vid_22c94960e3ee.t1/img04.jpg
+  sha256: d05a010402c4368efa7290d5b854898524855cb12642df41a232612198a7dab8
+  size_bytes: 81261
+- id: img05
+  kind: image
+  file: img05.jpg
+  format: jpg
+  hf_path: media/T-HY-vid_22c94960e3ee.t1/img05.jpg
+  sha256: 568a3ef5ff5fc5a0227c1176056ea2c31f62fce7842e1ec39b4a81b8e44d4f69
+  size_bytes: 137376
+- id: img06
+  kind: image
+  file: img06.jpg
+  format: jpg
+  hf_path: media/T-HY-vid_22c94960e3ee.t1/img06.jpg
+  sha256: 7a777a1ff217f5ee54b14ca2b740659ba6242705fa3939185d215008028d477b
+  size_bytes: 355117

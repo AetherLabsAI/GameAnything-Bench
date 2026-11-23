@@ -1,0 +1,1602 @@
+[
+ {
+  "edit_task_id": "E-T-HY-vid_01f55d4c784a.t1.AP",
+  "parent_task": "T-HY-vid_01f55d4c784a.t1",
+  "game": "Minecraft",
+  "game_id": "minecraft",
+  "track": "commercial",
+  "modality": "hybrid",
+  "parent_category": "mechanics_behavior",
+  "edit_class": "appearance",
+  "edit_class_code": "AP",
+  "subtype": "local_style",
+  "scope": "group",
+  "reference_dependence": "R1",
+  "instruction": "Turn every shooter into a small wooden ballista on a stone mount that fires iron bolts. Keep everything else as it is.",
+  "checkpoint": {
+   "key": "T-HY-vid_01f55d4c784a.t1",
+   "made_by": "Claude Code + Claude Fable 5.2",
+   "refine_rounds": 0
+  }
+ },
+ {
+  "edit_task_id": "E-T-HY-vid_01f55d4c784a.t1.CS",
+  "parent_task": "T-HY-vid_01f55d4c784a.t1",
+  "game": "Minecraft",
+  "game_id": "minecraft",
+  "track": "commercial",
+  "modality": "hybrid",
+  "parent_category": "mechanics_behavior",
+  "edit_class": "content_structure",
+  "edit_class_code": "CS",
+  "subtype": "replace",
+  "scope": "group",
+  "reference_dependence": "R1",
+  "instruction": "Replace the visibly armoured enemy with a wheeled siege ram that rolls down the lanes in its place. Keep everything else as it is.",
+  "checkpoint": {
+   "key": "T-HY-vid_01f55d4c784a.t1",
+   "made_by": "Claude Code + Claude Fable 5.2",
+   "refine_rounds": 0
+  }
+ },
+ {
+  "edit_task_id": "E-T-HY-vid_22c94960e3ee.t1.BF",
+  "parent_task": "T-HY-vid_22c94960e3ee.t1",
+  "game": "Minecraft",
+  "game_id": "minecraft",
+  "track": "commercial",
+  "modality": "hybrid",
+  "parent_category": "scene_world",
+  "edit_class": "behavior_flow",
+  "edit_class_code": "BF",
+  "subtype": "new_rule",
+  "scope": "single",
+  "reference_dependence": "R1",
+  "instruction": "When I dash into the dense fish school at full speed, make it burst apart away from me and re-form a few seconds later. Keep everything else as it is.",
+  "checkpoint": {
+   "key": "T-HY-vid_22c94960e3ee.t1",
+   "made_by": "Claude Code + Claude Fable 5.2",
+   "refine_rounds": 0
+  }
+ },
+ {
+  "edit_task_id": "E-T-HY-vid_22c94960e3ee.t1.CS",
+  "parent_task": "T-HY-vid_22c94960e3ee.t1",
+  "game": "Minecraft",
+  "game_id": "minecraft",
+  "track": "commercial",
+  "modality": "hybrid",
+  "parent_category": "scene_world",
+  "edit_class": "content_structure",
+  "edit_class_code": "CS",
+  "subtype": "add",
+  "scope": "group",
+  "reference_dependence": "R0",
+  "instruction": "Add a pod of several dolphins to the site's open water that moves as a group, and let me swim up to them and alongside them. Keep everything else as it is.",
+  "checkpoint": {
+   "key": "T-HY-vid_22c94960e3ee.t1",
+   "made_by": "Claude Code + Claude Fable 5.2",
+   "refine_rounds": 0
+  }
+ },
+ {
+  "edit_task_id": "E-T-HY-vid_2ab7e1862b31.t1.AP",
+  "parent_task": "T-HY-vid_2ab7e1862b31.t1",
+  "game": "Xonotic",
+  "game_id": "xonotic",
+  "track": "open",
+  "modality": "hybrid",
+  "parent_category": "scene_world",
+  "edit_class": "appearance",
+  "edit_class_code": "AP",
+  "subtype": "local_style",
+  "scope": "single",
+  "reference_dependence": "R0",
+  "instruction": "Turn the elevated railway bridge over the avenue into a heavy old brick viaduct, with massive piers and one big rounded arch over the road. Keep everything else as it is.",
+  "checkpoint": {
+   "key": "T-HY-vid_2ab7e1862b31.t1",
+   "made_by": "Claude Code + Claude Fable 5.2",
+   "refine_rounds": 0
+  }
+ },
+ {
+  "edit_task_id": "E-T-HY-vid_2ab7e1862b31.t1.BF",
+  "parent_task": "T-HY-vid_2ab7e1862b31.t1",
+  "game": "Xonotic",
+  "game_id": "xonotic",
+  "track": "open",
+  "modality": "hybrid",
+  "parent_category": "scene_world",
+  "edit_class": "behavior_flow",
+  "edit_class_code": "BF",
+  "subtype": "parameter",
+  "scope": "single",
+  "reference_dependence": "R1",
+  "instruction": "Make the wet road of the wide avenue slippery, so I keep sliding after I stop running and drift wide on sharp turns. Keep everything else as it is.",
+  "checkpoint": {
+   "key": "T-HY-vid_2ab7e1862b31.t1",
+   "made_by": "Claude Code + Claude Fable 5.2",
+   "refine_rounds": 0
+  }
+ },
+ {
+  "edit_task_id": "E-T-HY-vid_2ab7e1862b31.t1.CS",
+  "parent_task": "T-HY-vid_2ab7e1862b31.t1",
+  "game": "Xonotic",
+  "game_id": "xonotic",
+  "track": "open",
+  "modality": "hybrid",
+  "parent_category": "scene_world",
+  "edit_class": "content_structure",
+  "edit_class_code": "CS",
+  "subtype": "add",
+  "scope": "single",
+  "reference_dependence": "R1",
+  "instruction": "Add a small station on the wide rail corridor, with its entrance on one of the narrow side streets and a platform beside the tracks that I can walk onto. Keep everything else as it is.",
+  "checkpoint": {
+   "key": "T-HY-vid_2ab7e1862b31.t1",
+   "made_by": "Claude Code + Claude Fable 5.2",
+   "refine_rounds": 0
+  }
+ },
+ {
+  "edit_task_id": "E-T-HY-vid_b5be7373833d.t1.AP",
+  "parent_task": "T-HY-vid_b5be7373833d.t1",
+  "game": "Stardew Valley",
+  "game_id": "stardew_valley",
+  "track": "commercial",
+  "modality": "hybrid",
+  "parent_category": "narrative_event",
+  "edit_class": "appearance",
+  "edit_class_code": "AP",
+  "subtype": "local_style",
+  "scope": "single",
+  "reference_dependence": "R1",
+  "instruction": "Make the whole globe of the geographer's world look made of paper, with its ground one vast hand-inked map and rolled charts and book towers rising from it. Keep everything else as it is.",
+  "checkpoint": {
+   "key": "T-HY-vid_b5be7373833d.t1",
+   "made_by": "Claude Code + Claude Fable 5.2",
+   "refine_rounds": 0
+  }
+ },
+ {
+  "edit_task_id": "E-T-HY-vid_b5be7373833d.t1.BF",
+  "parent_task": "T-HY-vid_b5be7373833d.t1",
+  "game": "Stardew Valley",
+  "game_id": "stardew_valley",
+  "track": "commercial",
+  "modality": "hybrid",
+  "parent_category": "narrative_event",
+  "edit_class": "behavior_flow",
+  "edit_class_code": "BF",
+  "subtype": "new_rule",
+  "scope": "single",
+  "reference_dependence": "R1",
+  "instruction": "Let me leave the king's world only after I get him to issue an order that can be obeyed. I should be able to ask him for orders, and he refuses any that cannot be obeyed; trying to leave without an order should turn me back. Keep everything else as it is.",
+  "checkpoint": {
+   "key": "T-HY-vid_b5be7373833d.t1",
+   "made_by": "Claude Code + Claude Fable 5.2",
+   "refine_rounds": 0
+  }
+ },
+ {
+  "edit_task_id": "E-T-HY-vid_b5be7373833d.t1.CS",
+  "parent_task": "T-HY-vid_b5be7373833d.t1",
+  "game": "Stardew Valley",
+  "game_id": "stardew_valley",
+  "track": "commercial",
+  "modality": "hybrid",
+  "parent_category": "narrative_event",
+  "edit_class": "content_structure",
+  "edit_class_code": "CS",
+  "subtype": "remove",
+  "scope": "single",
+  "reference_dependence": "R0",
+  "instruction": "Remove the businessman and his bare rocky planet from the journey, so it goes straight from the world before his to the world after it. Keep everything else as it is.",
+  "checkpoint": {
+   "key": "T-HY-vid_b5be7373833d.t1",
+   "made_by": "Claude Code + Claude Fable 5.2",
+   "refine_rounds": 0
+  }
+ },
+ {
+  "edit_task_id": "E-T-HY-vid_c68b71958bb2.t1.BF",
+  "parent_task": "T-HY-vid_c68b71958bb2.t1",
+  "game": "Stardew Valley",
+  "game_id": "stardew_valley",
+  "track": "commercial",
+  "modality": "hybrid",
+  "parent_category": "narrative_event",
+  "edit_class": "behavior_flow",
+  "edit_class_code": "BF",
+  "subtype": "event_narrative",
+  "scope": "single",
+  "reference_dependence": "R1",
+  "instruction": "When the sisters arrive at the castle as beggars, let me choose at the door whether to take them in or turn them away. Taking them in leads to their repentance, and turning them away leads to a different, clearly closed ending. Keep everything else as it is.",
+  "checkpoint": {
+   "key": "T-HY-vid_c68b71958bb2.t1",
+   "made_by": "Claude Code + Claude Fable 5.2",
+   "refine_rounds": 0
+  }
+ },
+ {
+  "edit_task_id": "E-T-HY-vid_c68b71958bb2.t1.CS",
+  "parent_task": "T-HY-vid_c68b71958bb2.t1",
+  "game": "Stardew Valley",
+  "game_id": "stardew_valley",
+  "track": "commercial",
+  "modality": "hybrid",
+  "parent_category": "narrative_event",
+  "edit_class": "content_structure",
+  "edit_class_code": "CS",
+  "subtype": "replace",
+  "scope": "single",
+  "reference_dependence": "R0",
+  "instruction": "Replace my magic animal, the goat, with a cow that fills the goat's whole role in the story. Keep everything else as it is.",
+  "checkpoint": {
+   "key": "T-HY-vid_c68b71958bb2.t1",
+   "made_by": "Claude Code + Claude Fable 5.2",
+   "refine_rounds": 0
+  }
+ },
+ {
+  "edit_task_id": "E-T-HY-vid_d12eba90e638.t1.AP",
+  "parent_task": "T-HY-vid_d12eba90e638.t1",
+  "game": "Godot TPS",
+  "game_id": "godot-tps",
+  "track": "open",
+  "modality": "hybrid",
+  "parent_category": "mechanics_behavior",
+  "edit_class": "appearance",
+  "edit_class_code": "AP",
+  "subtype": "local_style",
+  "scope": "single",
+  "reference_dependence": "R1",
+  "instruction": "Give the opponent a double-ended energy blade like the dark fighter's in the video, with a glowing beam coming out of each end of the hilt. Keep everything else as it is.",
+  "checkpoint": {
+   "key": "T-HY-vid_d12eba90e638.t1",
+   "made_by": "Claude Code + Claude Fable 5.2",
+   "refine_rounds": 0
+  }
+ },
+ {
+  "edit_task_id": "E-T-HY-vid_d12eba90e638.t1.BF",
+  "parent_task": "T-HY-vid_d12eba90e638.t1",
+  "game": "Godot TPS",
+  "game_id": "godot-tps",
+  "track": "open",
+  "modality": "hybrid",
+  "parent_category": "mechanics_behavior",
+  "edit_class": "behavior_flow",
+  "edit_class_code": "BF",
+  "subtype": "parameter",
+  "scope": "single",
+  "reference_dependence": "R1",
+  "instruction": "Make a landed point thrust count as two hits toward the bout instead of one, for either fighter. Keep everything else as it is.",
+  "checkpoint": {
+   "key": "T-HY-vid_d12eba90e638.t1",
+   "made_by": "Claude Code + Claude Fable 5.2",
+   "refine_rounds": 0
+  }
+ },
+ {
+  "edit_task_id": "E-T-HY-vid_d12eba90e638.t1.CS",
+  "parent_task": "T-HY-vid_d12eba90e638.t1",
+  "game": "Godot TPS",
+  "game_id": "godot-tps",
+  "track": "open",
+  "modality": "hybrid",
+  "parent_category": "mechanics_behavior",
+  "edit_class": "content_structure",
+  "edit_class_code": "CS",
+  "subtype": "add",
+  "scope": "group",
+  "reference_dependence": "R1",
+  "instruction": "Add two tall light columns at the sides of the duelling floor, one in each fighter's blade colour. Each column has five segments and lights one more every time that fighter scores a hit. Keep everything else as it is.",
+  "checkpoint": {
+   "key": "T-HY-vid_d12eba90e638.t1",
+   "made_by": "Claude Code + Claude Fable 5.2",
+   "refine_rounds": 0
+  }
+ },
+ {
+  "edit_task_id": "E-T-IO-1a6ba80e63.AP",
+  "parent_task": "T-IO-1a6ba80e63",
+  "game": "VoxeLibre",
+  "game_id": "voxelibre",
+  "track": "open",
+  "modality": "image",
+  "parent_category": "scene_world",
+  "edit_class": "appearance",
+  "edit_class_code": "AP",
+  "subtype": "local_style",
+  "scope": "single",
+  "reference_dependence": "R0",
+  "instruction": "Rebuild the church with the pointed steeple out of rough grey fieldstone, with a dark slate roof and a slate-clad spire. Keep everything else as it is.",
+  "checkpoint": {
+   "key": "T-IO-1a6ba80e63",
+   "made_by": "Claude Code + Claude Fable 5.2",
+   "refine_rounds": 0
+  }
+ },
+ {
+  "edit_task_id": "E-T-IO-1a6ba80e63.BF",
+  "parent_task": "T-IO-1a6ba80e63",
+  "game": "VoxeLibre",
+  "game_id": "voxelibre",
+  "track": "open",
+  "modality": "image",
+  "parent_category": "scene_world",
+  "edit_class": "behavior_flow",
+  "edit_class_code": "BF",
+  "subtype": "new_rule",
+  "scope": "single",
+  "reference_dependence": "R0",
+  "instruction": "Let me climb the tallest dark cypress tree beside the village like a ladder, all the way to its top, without changing how it looks. Keep everything else as it is.",
+  "checkpoint": {
+   "key": "T-IO-1a6ba80e63",
+   "made_by": "Claude Code + Claude Fable 5.2",
+   "refine_rounds": 0
+  }
+ },
+ {
+  "edit_task_id": "E-T-IO-1a6ba80e63.CS",
+  "parent_task": "T-IO-1a6ba80e63",
+  "game": "VoxeLibre",
+  "game_id": "voxelibre",
+  "track": "open",
+  "modality": "image",
+  "parent_category": "scene_world",
+  "edit_class": "content_structure",
+  "edit_class_code": "CS",
+  "subtype": "space_connectivity",
+  "scope": "single",
+  "reference_dependence": "R0",
+  "instruction": "I want a footpath that leads from the village up the line of hills behind it to the highest point of those hills, one I can actually walk all the way up. Keep everything else as it is.",
+  "checkpoint": {
+   "key": "T-IO-1a6ba80e63",
+   "made_by": "Claude Code + Claude Fable 5.2",
+   "refine_rounds": 0
+  }
+ },
+ {
+  "edit_task_id": "E-T-IO-43b34cf1fa.AP",
+  "parent_task": "T-IO-43b34cf1fa",
+  "game": "VoxeLibre",
+  "game_id": "voxelibre",
+  "track": "open",
+  "modality": "image",
+  "parent_category": "mechanics_behavior",
+  "edit_class": "appearance",
+  "edit_class_code": "AP",
+  "subtype": "local_style",
+  "scope": "group",
+  "reference_dependence": "R1",
+  "instruction": "Make every railcar that runs on the rail network look like a small vintage steam engine: a black boiler with a tall smokestack at the front, an open driver's cab at the back, and red-painted wheels. Keep everything else as it is.",
+  "checkpoint": {
+   "key": "T-IO-43b34cf1fa",
+   "made_by": "Claude Code + Claude Fable 5.2",
+   "refine_rounds": 0
+  }
+ },
+ {
+  "edit_task_id": "E-T-IO-43b34cf1fa.BF",
+  "parent_task": "T-IO-43b34cf1fa",
+  "game": "VoxeLibre",
+  "game_id": "voxelibre",
+  "track": "open",
+  "modality": "image",
+  "parent_category": "mechanics_behavior",
+  "edit_class": "behavior_flow",
+  "edit_class_code": "BF",
+  "subtype": "new_rule",
+  "scope": "group",
+  "reference_dependence": "R0",
+  "instruction": "When a train has passed a green signal, I want that signal to go back to red by itself so it holds the next train until I clear it again. Keep everything else as it is.",
+  "checkpoint": {
+   "key": "T-IO-43b34cf1fa@dsv41flash-opencode-s0-r1",
+   "made_by": "OpenCode + DeepSeek V4.1 Flash",
+   "refine_rounds": 1
+  }
+ },
+ {
+  "edit_task_id": "E-T-IO-43b34cf1fa.CS",
+  "parent_task": "T-IO-43b34cf1fa",
+  "game": "VoxeLibre",
+  "game_id": "voxelibre",
+  "track": "open",
+  "modality": "image",
+  "parent_category": "mechanics_behavior",
+  "edit_class": "content_structure",
+  "edit_class_code": "CS",
+  "subtype": "add",
+  "scope": "single",
+  "reference_dependence": "R1",
+  "instruction": "Add a small halt with its own platform beside the single line out on the far side of the loop, away from the existing station, where a train can be brought to a stop alongside it and I can step off onto the platform. Keep everything else as it is.",
+  "checkpoint": {
+   "key": "T-IO-43b34cf1fa",
+   "made_by": "Claude Code + Claude Fable 5.2",
+   "refine_rounds": 0
+  }
+ },
+ {
+  "edit_task_id": "E-T-IO-6911566349.BF",
+  "parent_task": "T-IO-6911566349",
+  "game": "Godot TPS",
+  "game_id": "godot-tps",
+  "track": "open",
+  "modality": "image",
+  "parent_category": "scene_world",
+  "edit_class": "behavior_flow",
+  "edit_class_code": "BF",
+  "subtype": "new_rule",
+  "scope": "group",
+  "reference_dependence": "R1",
+  "instruction": "Close each shopfront along the covered walkway with a roll-down shutter that rolls up when I walk up to that shop and rolls back down after I move on. Keep everything else as it is.",
+  "checkpoint": {
+   "key": "T-IO-6911566349",
+   "made_by": "Claude Code + Claude Fable 5.2",
+   "refine_rounds": 0
+  }
+ },
+ {
+  "edit_task_id": "E-T-IO-6911566349.CS",
+  "parent_task": "T-IO-6911566349",
+  "game": "Godot TPS",
+  "game_id": "godot-tps",
+  "track": "open",
+  "modality": "image",
+  "parent_category": "scene_world",
+  "edit_class": "content_structure",
+  "edit_class_code": "CS",
+  "subtype": "add",
+  "scope": "single",
+  "reference_dependence": "R0",
+  "instruction": "Put a small clock tower on an island in the middle of the junction where the two streets meet, with clear road around it so I pass it when turning from one street into the other. Keep everything else as it is.",
+  "checkpoint": {
+   "key": "T-IO-6911566349",
+   "made_by": "Claude Code + Claude Fable 5.2",
+   "refine_rounds": 0
+  }
+ },
+ {
+  "edit_task_id": "E-T-IO-6c75b47b0a.AP",
+  "parent_task": "T-IO-6c75b47b0a",
+  "game": "VoxeLibre",
+  "game_id": "voxelibre",
+  "track": "open",
+  "modality": "image",
+  "parent_category": "mechanics_behavior",
+  "edit_class": "appearance",
+  "edit_class_code": "AP",
+  "subtype": "local_style",
+  "scope": "single",
+  "reference_dependence": "R0",
+  "instruction": "Hang red lanterns at intervals along the whole boundary of the mounted ball ground, where riders on horseback chase the ball. They should stay unlit by day and glow at night, lighting the ground along the edges. Keep everything else as it is.",
+  "checkpoint": {
+   "key": "T-IO-6c75b47b0a",
+   "made_by": "Claude Code + Claude Fable 5.2",
+   "refine_rounds": 0
+  }
+ },
+ {
+  "edit_task_id": "E-T-IO-6c75b47b0a.CS",
+  "parent_task": "T-IO-6c75b47b0a",
+  "game": "VoxeLibre",
+  "game_id": "voxelibre",
+  "track": "open",
+  "modality": "image",
+  "parent_category": "mechanics_behavior",
+  "edit_class": "content_structure",
+  "edit_class_code": "CS",
+  "subtype": "add",
+  "scope": "single",
+  "reference_dependence": "R1",
+  "instruction": "Add one more hole to the club-and-hole course, with a marker like the others, out on the open ground farther from the lanes than any of the existing holes. A ball struck into it should count just like the other holes. Keep everything else as it is.",
+  "checkpoint": {
+   "key": "T-IO-6c75b47b0a",
+   "made_by": "Claude Code + Claude Fable 5.2",
+   "refine_rounds": 0
+  }
+ },
+ {
+  "edit_task_id": "E-T-IO-7ecf78daed.AP",
+  "parent_task": "T-IO-7ecf78daed",
+  "game": "VoxeLibre",
+  "game_id": "voxelibre",
+  "track": "open",
+  "modality": "image",
+  "parent_category": "mechanics_behavior",
+  "edit_class": "appearance",
+  "edit_class_code": "AP",
+  "subtype": "local_style",
+  "scope": "single",
+  "reference_dependence": "R1",
+  "instruction": "Rebuild the lift column as an open steel lattice tower, with a boxed motor housing on top and a framed loading platform at its foot, so I can watch the carriers moving up and down inside the frame. Keep everything else as it is.",
+  "checkpoint": {
+   "key": "T-IO-7ecf78daed",
+   "made_by": "Claude Code + Claude Fable 5.2",
+   "refine_rounds": 0
+  }
+ },
+ {
+  "edit_task_id": "E-T-IO-7ecf78daed.BF",
+  "parent_task": "T-IO-7ecf78daed",
+  "game": "VoxeLibre",
+  "game_id": "voxelibre",
+  "track": "open",
+  "modality": "image",
+  "parent_category": "mechanics_behavior",
+  "edit_class": "behavior_flow",
+  "edit_class_code": "BF",
+  "subtype": "new_rule",
+  "scope": "single",
+  "reference_dependence": "R0",
+  "instruction": "Put a lever beside the transport line that stops its belts so the items stay where they are, and switching it back makes them carry on along the route. Keep everything else as it is.",
+  "checkpoint": {
+   "key": "T-IO-7ecf78daed",
+   "made_by": "Claude Code + Claude Fable 5.2",
+   "refine_rounds": 0
+  }
+ },
+ {
+  "edit_task_id": "E-T-IO-7ecf78daed.CS",
+  "parent_task": "T-IO-7ecf78daed",
+  "game": "VoxeLibre",
+  "game_id": "voxelibre",
+  "track": "open",
+  "modality": "image",
+  "parent_category": "mechanics_behavior",
+  "edit_class": "content_structure",
+  "edit_class_code": "CS",
+  "subtype": "add",
+  "scope": "group",
+  "reference_dependence": "R1",
+  "instruction": "Add a fifth kind of item to the mixed feed (a visibly different item, not raw iron, raw gold, coal or parcels) and give the sorting line a new output with its own bin, so each of the five kinds ends up in its own bin. Keep everything else as it is.",
+  "checkpoint": {
+   "key": "T-IO-7ecf78daed",
+   "made_by": "Claude Code + Claude Fable 5.2",
+   "refine_rounds": 0
+  }
+ },
+ {
+  "edit_task_id": "E-T-IO-83e0f0a96c.AP",
+  "parent_task": "T-IO-83e0f0a96c",
+  "game": "Godot TPS",
+  "game_id": "godot-tps",
+  "track": "open",
+  "modality": "image",
+  "parent_category": "scene_world",
+  "edit_class": "appearance",
+  "edit_class_code": "AP",
+  "subtype": "local_style",
+  "scope": "single",
+  "reference_dependence": "R0",
+  "instruction": "Make the bar counter against the back wall look like an old saloon bar: dark carved wood with a marble top, a brass foot rail along the front, and a mirrored back shelf holding the bottles. Keep everything else as it is.",
+  "checkpoint": {
+   "key": "T-IO-83e0f0a96c",
+   "made_by": "Claude Code + Claude Fable 5.2",
+   "refine_rounds": 0
+  }
+ },
+ {
+  "edit_task_id": "E-T-IO-83e0f0a96c.BF",
+  "parent_task": "T-IO-83e0f0a96c",
+  "game": "Godot TPS",
+  "game_id": "godot-tps",
+  "track": "open",
+  "modality": "image",
+  "parent_category": "scene_world",
+  "edit_class": "behavior_flow",
+  "edit_class_code": "BF",
+  "subtype": "new_rule",
+  "scope": "group",
+  "reference_dependence": "R1",
+  "instruction": "Let me knock the balls on the big green billiard table around: they should roll across the cloth, bounce off the cushions and hit each other, without ever leaving the table. Keep everything else as it is.",
+  "checkpoint": {
+   "key": "T-IO-83e0f0a96c@dsv41flash-opencode-s0-r1",
+   "made_by": "OpenCode + DeepSeek V4.1 Flash",
+   "refine_rounds": 1
+  }
+ },
+ {
+  "edit_task_id": "E-T-IO-83e0f0a96c.CS",
+  "parent_task": "T-IO-83e0f0a96c",
+  "game": "Godot TPS",
+  "game_id": "godot-tps",
+  "track": "open",
+  "modality": "image",
+  "parent_category": "scene_world",
+  "edit_class": "content_structure",
+  "edit_class_code": "CS",
+  "subtype": "replace",
+  "scope": "single",
+  "reference_dependence": "R0",
+  "instruction": "I'd like the doorway beside the bar to open onto a small walled courtyard under the night sky instead of the lit back room, so I can step outside and come back into the café. Move the HANGAR door from the back room into the courtyard wall. Keep everything else as it is.",
+  "checkpoint": {
+   "key": "T-IO-83e0f0a96c",
+   "made_by": "Claude Code + Claude Fable 5.2",
+   "refine_rounds": 0
+  }
+ },
+ {
+  "edit_task_id": "E-T-IO-bd15cf5893.AP",
+  "parent_task": "T-IO-bd15cf5893",
+  "game": "Xonotic",
+  "game_id": "xonotic",
+  "track": "open",
+  "modality": "image",
+  "parent_category": "scene_world",
+  "edit_class": "appearance",
+  "edit_class_code": "AP",
+  "subtype": "local_style",
+  "scope": "single",
+  "reference_dependence": "R0",
+  "instruction": "Make the palace at the end of the fort white marble instead of stone, balconies and screened windows included, keeping their carved form and the palace's storeys; the mirror hall inside stays as it is. The fort walls stay in their stone. Keep everything else as it is.",
+  "checkpoint": {
+   "key": "T-IO-bd15cf5893",
+   "made_by": "Claude Code + Claude Fable 5.2",
+   "refine_rounds": 0
+  }
+ },
+ {
+  "edit_task_id": "E-T-IO-bd15cf5893.BF",
+  "parent_task": "T-IO-bd15cf5893",
+  "game": "Xonotic",
+  "game_id": "xonotic",
+  "track": "open",
+  "modality": "image",
+  "parent_category": "scene_world",
+  "edit_class": "behavior_flow",
+  "edit_class_code": "BF",
+  "subtype": "new_rule",
+  "scope": "single",
+  "reference_dependence": "R0",
+  "instruction": "Shut the last gateway on the climb into the fort with a heavy gate that opens when I walk up to it and closes again a few seconds after I've passed. Keep everything else as it is.",
+  "checkpoint": {
+   "key": "T-IO-bd15cf5893",
+   "made_by": "Claude Code + Claude Fable 5.2",
+   "refine_rounds": 0
+  }
+ },
+ {
+  "edit_task_id": "E-T-IO-bd15cf5893.CS",
+  "parent_task": "T-IO-bd15cf5893",
+  "game": "Xonotic",
+  "game_id": "xonotic",
+  "track": "open",
+  "modality": "image",
+  "parent_category": "scene_world",
+  "edit_class": "content_structure",
+  "edit_class_code": "CS",
+  "subtype": "add",
+  "scope": "single",
+  "reference_dependence": "R2",
+  "instruction": "Put a small open-sided stone pavilion with a domed roof on top of one of the round bastions along the open walled ground, about halfway between the white temple at the tip and the palace, and let me walk up onto the bastion and stand under it. Keep everything else as it is.",
+  "checkpoint": {
+   "key": "T-IO-bd15cf5893",
+   "made_by": "Claude Code + Claude Fable 5.2",
+   "refine_rounds": 0
+  }
+ },
+ {
+  "edit_task_id": "E-T-IO-c020afada8.AP",
+  "parent_task": "T-IO-c020afada8",
+  "game": "Tanks of Freedom II",
+  "game_id": "tof2",
+  "track": "open",
+  "modality": "image",
+  "parent_category": "scene_world",
+  "edit_class": "appearance",
+  "edit_class_code": "AP",
+  "subtype": "local_style",
+  "scope": "group",
+  "reference_dependence": "R1",
+  "instruction": "Right now each gate of the town is an open passage between two small towers. Rebuild every gate as one squat stone gatehouse block that spans the passage, with an arched, roofed-over passage the road runs through. Keep everything else as it is.",
+  "checkpoint": {
+   "key": "T-IO-c020afada8",
+   "made_by": "Claude Code + Claude Fable 5.2",
+   "refine_rounds": 0
+  }
+ },
+ {
+  "edit_task_id": "E-T-IO-c020afada8.CS",
+  "parent_task": "T-IO-c020afada8",
+  "game": "Tanks of Freedom II",
+  "game_id": "tof2",
+  "track": "open",
+  "modality": "image",
+  "parent_category": "scene_world",
+  "edit_class": "content_structure",
+  "edit_class_code": "CS",
+  "subtype": "add",
+  "scope": "single",
+  "reference_dependence": "R1",
+  "instruction": "I'd like a large cathedral with two front towers on one edge of the big open square in the middle of the town, clearly larger than the houses and than the two churches already in the town. Keep everything else as it is.",
+  "checkpoint": {
+   "key": "T-IO-c020afada8",
+   "made_by": "Claude Code + Claude Fable 5.2",
+   "refine_rounds": 0
+  }
+ },
+ {
+  "edit_task_id": "E-T-IO-de407dbd4c.AP",
+  "parent_task": "T-IO-de407dbd4c",
+  "game": "Celeste 64",
+  "game_id": "celeste64",
+  "track": "open",
+  "modality": "image",
+  "parent_category": "scene_world",
+  "edit_class": "appearance",
+  "edit_class_code": "AP",
+  "subtype": "local_style",
+  "scope": "group",
+  "reference_dependence": "R1",
+  "instruction": "Give the beehive huts of the monastery a thick cap of green turf over their domed tops, leaving the stacked flat stones showing on the lower walls and around the doorways. Keep everything else as it is.",
+  "checkpoint": {
+   "key": "T-IO-de407dbd4c",
+   "made_by": "Claude Code + Claude Fable 5.2",
+   "refine_rounds": 0
+  }
+ },
+ {
+  "edit_task_id": "E-T-IO-de407dbd4c.BF",
+  "parent_task": "T-IO-de407dbd4c",
+  "game": "Celeste 64",
+  "game_id": "celeste64",
+  "track": "open",
+  "modality": "image",
+  "parent_category": "scene_world",
+  "edit_class": "behavior_flow",
+  "edit_class_code": "BF",
+  "subtype": "new_rule",
+  "scope": "single",
+  "reference_dependence": "R0",
+  "instruction": "Falling off the stone-stepped path always sends me all the way back to the landing. Add resting spots along the stairway up to the monastery so that a fall sends me back to the last one I reached instead. Keep everything else as it is.",
+  "checkpoint": {
+   "key": "T-IO-de407dbd4c@sonnet55-claudecode-s0-r1",
+   "made_by": "Claude Code + Claude Sonnet 5.5",
+   "refine_rounds": 1
+  }
+ },
+ {
+  "edit_task_id": "E-T-IO-de407dbd4c.CS",
+  "parent_task": "T-IO-de407dbd4c",
+  "game": "Celeste 64",
+  "game_id": "celeste64",
+  "track": "open",
+  "modality": "image",
+  "parent_category": "scene_world",
+  "edit_class": "content_structure",
+  "edit_class_code": "CS",
+  "subtype": "add",
+  "scope": "single",
+  "reference_dependence": "R1",
+  "instruction": "Add a lighthouse on the cliffs on the far side of the island from the monastery, reached by its own path that leaves from the landing and runs along the side of the rock. Keep everything else as it is.",
+  "checkpoint": {
+   "key": "T-IO-de407dbd4c@sonnet55-claudecode-s0-r1",
+   "made_by": "Claude Code + Claude Sonnet 5.5",
+   "refine_rounds": 1
+  }
+ },
+ {
+  "edit_task_id": "E-T-TO-txt_11f912532ada.e3.AP",
+  "parent_task": "T-TO-txt_11f912532ada.e3",
+  "game": "Xonotic",
+  "game_id": "xonotic",
+  "track": "open",
+  "modality": "text",
+  "parent_category": "scene_world",
+  "edit_class": "appearance",
+  "edit_class_code": "AP",
+  "subtype": "local_style",
+  "scope": "single",
+  "reference_dependence": "R0",
+  "instruction": "Turn the long flight of steps from the town up to the church into a weathered timber stairway, with wooden treads, handrails on both sides and small wooden landings along the way. Keep everything else as it is.",
+  "checkpoint": {
+   "key": "T-TO-txt_11f912532ada.e3",
+   "made_by": "Claude Code + Claude Fable 5.2",
+   "refine_rounds": 0
+  }
+ },
+ {
+  "edit_task_id": "E-T-TO-txt_11f912532ada.e3.BF",
+  "parent_task": "T-TO-txt_11f912532ada.e3",
+  "game": "Xonotic",
+  "game_id": "xonotic",
+  "track": "open",
+  "modality": "text",
+  "parent_category": "scene_world",
+  "edit_class": "behavior_flow",
+  "edit_class_code": "BF",
+  "subtype": "new_rule",
+  "scope": "single",
+  "reference_dependence": "R1",
+  "instruction": "If I fall off the churchyard cliff toward the harbour, put me back unhurt at the foot of the long flight of steps in the town. Keep everything else as it is.",
+  "checkpoint": {
+   "key": "T-TO-txt_11f912532ada.e3",
+   "made_by": "Claude Code + Claude Fable 5.2",
+   "refine_rounds": 0
+  }
+ },
+ {
+  "edit_task_id": "E-T-TO-txt_11f912532ada.e3.CS",
+  "parent_task": "T-TO-txt_11f912532ada.e3",
+  "game": "Xonotic",
+  "game_id": "xonotic",
+  "track": "open",
+  "modality": "text",
+  "parent_category": "scene_world",
+  "edit_class": "content_structure",
+  "edit_class_code": "CS",
+  "subtype": "add",
+  "scope": "single",
+  "reference_dependence": "R2",
+  "instruction": "Extend the existing reef so that it starts right behind the lighthouse at the end of the pier below the churchyard cliff, and make it walkable all the way from that lighthouse out to the bell buoy at its far end. Keep everything else as it is.",
+  "checkpoint": {
+   "key": "T-TO-txt_11f912532ada.e3",
+   "made_by": "Claude Code + Claude Fable 5.2",
+   "refine_rounds": 0
+  }
+ },
+ {
+  "edit_task_id": "E-T-TO-txt_27babbacad50.e1.AP",
+  "parent_task": "T-TO-txt_27babbacad50.e1",
+  "game": "Minecraft",
+  "game_id": "minecraft",
+  "track": "commercial",
+  "modality": "text",
+  "parent_category": "scene_world",
+  "edit_class": "appearance",
+  "edit_class_code": "AP",
+  "subtype": "local_style",
+  "scope": "single",
+  "reference_dependence": "R0",
+  "instruction": "At night I'd like the palace to come alive: make its windows glow and light the main court and the second court with lanterns. By day the windows should look plain and the lanterns should be unlit. Keep everything else as it is.",
+  "checkpoint": {
+   "key": "T-TO-txt_27babbacad50.e1",
+   "made_by": "Claude Code + Claude Fable 5.2",
+   "refine_rounds": 0
+  }
+ },
+ {
+  "edit_task_id": "E-T-TO-txt_27babbacad50.e1.BF",
+  "parent_task": "T-TO-txt_27babbacad50.e1",
+  "game": "Minecraft",
+  "game_id": "minecraft",
+  "track": "commercial",
+  "modality": "text",
+  "parent_category": "scene_world",
+  "edit_class": "behavior_flow",
+  "edit_class_code": "BF",
+  "subtype": "new_rule",
+  "scope": "single",
+  "reference_dependence": "R0",
+  "instruction": "Make the iron gates on the town square start out shut, and have them open only once I ring a bell beside them. After that they should stay open. Keep everything else as it is.",
+  "checkpoint": {
+   "key": "T-TO-txt_27babbacad50.e1",
+   "made_by": "Claude Code + Claude Fable 5.2",
+   "refine_rounds": 0
+  }
+ },
+ {
+  "edit_task_id": "E-T-TO-txt_6469bcc4c8d9.e1.AP",
+  "parent_task": "T-TO-txt_6469bcc4c8d9.e1",
+  "game": "SuperTuxKart",
+  "game_id": "supertuxkart",
+  "track": "open",
+  "modality": "text",
+  "parent_category": "scene_world",
+  "edit_class": "appearance",
+  "edit_class_code": "AP",
+  "subtype": "local_style",
+  "scope": "group",
+  "reference_dependence": "R0",
+  "instruction": "Put the orchard in the big open square into full spring blossom, with every tree covered in white and pale-pink flowers and fallen petals lying on the ground beneath them. Keep everything else as it is.",
+  "checkpoint": {
+   "key": "T-TO-txt_6469bcc4c8d9.e1",
+   "made_by": "Claude Code + Claude Fable 5.2",
+   "refine_rounds": 0
+  }
+ },
+ {
+  "edit_task_id": "E-T-TO-txt_6469bcc4c8d9.e1.BF",
+  "parent_task": "T-TO-txt_6469bcc4c8d9.e1",
+  "game": "SuperTuxKart",
+  "game_id": "supertuxkart",
+  "track": "open",
+  "modality": "text",
+  "parent_category": "scene_world",
+  "edit_class": "behavior_flow",
+  "edit_class_code": "BF",
+  "subtype": "parameter",
+  "scope": "single",
+  "reference_dependence": "R0",
+  "instruction": "In the wood of big trees between the Hammersmith market and Piccadilly, make the forest floor off the road slow the kart down heavily, while the road through the wood stays full speed. Keep everything else as it is.",
+  "checkpoint": {
+   "key": "T-TO-txt_6469bcc4c8d9.e1",
+   "made_by": "Claude Code + Claude Fable 5.2",
+   "refine_rounds": 0
+  }
+ },
+ {
+  "edit_task_id": "E-T-TO-txt_6469bcc4c8d9.e1.CS",
+  "parent_task": "T-TO-txt_6469bcc4c8d9.e1",
+  "game": "SuperTuxKart",
+  "game_id": "supertuxkart",
+  "track": "open",
+  "modality": "text",
+  "parent_category": "scene_world",
+  "edit_class": "content_structure",
+  "edit_class_code": "CS",
+  "subtype": "remove",
+  "scope": "single",
+  "reference_dependence": "R1",
+  "instruction": "Remove the theatre at the Hammersmith market, the one facing the great hall across the main road, and turn the ground where it stood into open meadow and garden blending with the surroundings, leaving the nearby houses and the great hall as they are. Keep everything else as it is.",
+  "checkpoint": {
+   "key": "T-TO-txt_6469bcc4c8d9.e1",
+   "made_by": "Claude Code + Claude Fable 5.2",
+   "refine_rounds": 0
+  }
+ },
+ {
+  "edit_task_id": "E-T-TO-txt_6b6b5b7ebb21.e1.AP",
+  "parent_task": "T-TO-txt_6b6b5b7ebb21.e1",
+  "game": "Celeste 64",
+  "game_id": "celeste64",
+  "track": "open",
+  "modality": "text",
+  "parent_category": "scene_world",
+  "edit_class": "appearance",
+  "edit_class_code": "AP",
+  "subtype": "local_style",
+  "scope": "group",
+  "reference_dependence": "R0",
+  "instruction": "I'd like every house in the coastal town to stand raised on wooden stilts, with a ladder up to its doorway, and the cultivated plots still around them. Keep everything else as it is.",
+  "checkpoint": {
+   "key": "T-TO-txt_6b6b5b7ebb21.e1",
+   "made_by": "Claude Code + Claude Fable 5.2",
+   "refine_rounds": 0
+  }
+ },
+ {
+  "edit_task_id": "E-T-TO-txt_6b6b5b7ebb21.e1.BF",
+  "parent_task": "T-TO-txt_6b6b5b7ebb21.e1",
+  "game": "Celeste 64",
+  "game_id": "celeste64",
+  "track": "open",
+  "modality": "text",
+  "parent_category": "scene_world",
+  "edit_class": "behavior_flow",
+  "edit_class_code": "BF",
+  "subtype": "new_rule",
+  "scope": "single",
+  "reference_dependence": "R1",
+  "instruction": "Make the hot crust of the rise from the crater floor up to the brink break open into steaming holes. If I step into one, I should fall through and end up back at the foot of the rise. Keep everything else as it is.",
+  "checkpoint": {
+   "key": "T-TO-txt_6b6b5b7ebb21.e1",
+   "made_by": "Claude Code + Claude Fable 5.2",
+   "refine_rounds": 0
+  }
+ },
+ {
+  "edit_task_id": "E-T-TO-txt_78542cb1c0a7.e1.AP",
+  "parent_task": "T-TO-txt_78542cb1c0a7.e1",
+  "game": "Godot TPS",
+  "game_id": "godot-tps",
+  "track": "open",
+  "modality": "text",
+  "parent_category": "scene_world",
+  "edit_class": "appearance",
+  "edit_class_code": "AP",
+  "subtype": "local_style",
+  "scope": "single",
+  "reference_dependence": "R0",
+  "instruction": "Rebuild the tall pagoda on the shrine approach as a weathered grey granite tower, with every storey and every tier of roof made of stone instead of painted timber. Keep everything else as it is.",
+  "checkpoint": {
+   "key": "T-TO-txt_78542cb1c0a7.e1",
+   "made_by": "Claude Code + Claude Fable 5.2",
+   "refine_rounds": 0
+  }
+ },
+ {
+  "edit_task_id": "E-T-TO-txt_78542cb1c0a7.e1.BF",
+  "parent_task": "T-TO-txt_78542cb1c0a7.e1",
+  "game": "Godot TPS",
+  "game_id": "godot-tps",
+  "track": "open",
+  "modality": "text",
+  "parent_category": "scene_world",
+  "edit_class": "behavior_flow",
+  "edit_class_code": "BF",
+  "subtype": "new_rule",
+  "scope": "single",
+  "reference_dependence": "R1",
+  "instruction": "Keep the way out of the courts to the long stair up to Iyéyasu's tomb shut until I've reached the innermost chapel in the gilded enclosure, and open it once I have. Until then the travel keys to the stone gallery and the tomb should not take me there either. Keep everything else as it is.",
+  "checkpoint": {
+   "key": "T-TO-txt_78542cb1c0a7.e1",
+   "made_by": "Claude Code + Claude Fable 5.2",
+   "refine_rounds": 0
+  }
+ },
+ {
+  "edit_task_id": "E-T-VO-vid_0885d9e061b2.t1.AP",
+  "parent_task": "T-VO-vid_0885d9e061b2.t1",
+  "game": "VoxeLibre",
+  "game_id": "voxelibre",
+  "track": "open",
+  "modality": "video",
+  "parent_category": "scene_world",
+  "edit_class": "appearance",
+  "edit_class_code": "AP",
+  "subtype": "local_style",
+  "scope": "single",
+  "reference_dependence": "R1",
+  "instruction": "Make the footbridge in the dome look like an old timber-and-rope jungle bridge draped in vines. Keep everything else as it is.",
+  "checkpoint": {
+   "key": "T-VO-vid_0885d9e061b2.t1",
+   "made_by": "Claude Code + Claude Fable 5.2",
+   "refine_rounds": 0
+  }
+ },
+ {
+  "edit_task_id": "E-T-VO-vid_0885d9e061b2.t1.BF",
+  "parent_task": "T-VO-vid_0885d9e061b2.t1",
+  "game": "VoxeLibre",
+  "game_id": "voxelibre",
+  "track": "open",
+  "modality": "video",
+  "parent_category": "scene_world",
+  "edit_class": "behavior_flow",
+  "edit_class_code": "BF",
+  "subtype": "new_rule",
+  "scope": "single",
+  "reference_dependence": "R1",
+  "instruction": "Let me board the little train, ride it along its track past the bottom of the falls, and get off again. Keep everything else as it is.",
+  "checkpoint": {
+   "key": "T-VO-vid_0885d9e061b2.t1",
+   "made_by": "Claude Code + Claude Fable 5.2",
+   "refine_rounds": 0
+  }
+ },
+ {
+  "edit_task_id": "E-T-VO-vid_36189d888e0a.t1.AP",
+  "parent_task": "T-VO-vid_36189d888e0a.t1",
+  "game": "VoxeLibre",
+  "game_id": "voxelibre",
+  "track": "open",
+  "modality": "video",
+  "parent_category": "scene_world",
+  "edit_class": "appearance",
+  "edit_class_code": "AP",
+  "subtype": "local_style",
+  "scope": "group",
+  "reference_dependence": "R0",
+  "instruction": "At night, light up the windows of the dark glass skyscrapers so the skyline glows behind the old roofs, while by day they stay dark blue glass. Keep everything else as it is.",
+  "checkpoint": {
+   "key": "T-VO-vid_36189d888e0a.t1",
+   "made_by": "Claude Code + Claude Fable 5.2",
+   "refine_rounds": 0
+  }
+ },
+ {
+  "edit_task_id": "E-T-VO-vid_36189d888e0a.t1.BF",
+  "parent_task": "T-VO-vid_36189d888e0a.t1",
+  "game": "VoxeLibre",
+  "game_id": "voxelibre",
+  "track": "open",
+  "modality": "video",
+  "parent_category": "scene_world",
+  "edit_class": "behavior_flow",
+  "edit_class_code": "BF",
+  "subtype": "new_rule",
+  "scope": "group",
+  "reference_dependence": "R0",
+  "instruction": "Make the gates in the palace's red walls shut at nightfall so the walls can't be passed, and open again at dawn. Keep everything else as it is.",
+  "checkpoint": {
+   "key": "T-VO-vid_36189d888e0a.t1",
+   "made_by": "Claude Code + Claude Fable 5.2",
+   "refine_rounds": 0
+  }
+ },
+ {
+  "edit_task_id": "E-T-VO-vid_36189d888e0a.t1.CS",
+  "parent_task": "T-VO-vid_36189d888e0a.t1",
+  "game": "VoxeLibre",
+  "game_id": "voxelibre",
+  "track": "open",
+  "modality": "video",
+  "parent_category": "scene_world",
+  "edit_class": "content_structure",
+  "edit_class_code": "CS",
+  "subtype": "add",
+  "scope": "single",
+  "reference_dependence": "R2",
+  "instruction": "Add a teahouse on one of the lanes between the courtyard houses, with a black-and-gold signboard, red lanterns and a stone lion by a door I can walk through into the teahouse. Keep everything else as it is.",
+  "checkpoint": {
+   "key": "T-VO-vid_36189d888e0a.t1",
+   "made_by": "Claude Code + Claude Fable 5.2",
+   "refine_rounds": 0
+  }
+ },
+ {
+  "edit_task_id": "E-T-VO-vid_3a02ca02cf88.t1.AP",
+  "parent_task": "T-VO-vid_3a02ca02cf88.t1",
+  "game": "Celeste 64",
+  "game_id": "celeste64",
+  "track": "open",
+  "modality": "video",
+  "parent_category": "mechanics_behavior",
+  "edit_class": "appearance",
+  "edit_class_code": "AP",
+  "subtype": "local_style",
+  "scope": "group",
+  "reference_dependence": "R0",
+  "instruction": "Turn every parked car standing on the tracks — the parked passenger train you reach by the ramp, the red boxcars and the tank car — into old wooden plank wagons with iron bands, riveted wheels and weathered board roofs. Keep everything else as it is.",
+  "checkpoint": {
+   "key": "T-VO-vid_3a02ca02cf88.t1",
+   "made_by": "Claude Code + Claude Fable 5.2",
+   "refine_rounds": 0
+  }
+ },
+ {
+  "edit_task_id": "E-T-VO-vid_3a02ca02cf88.t1.BF",
+  "parent_task": "T-VO-vid_3a02ca02cf88.t1",
+  "game": "Celeste 64",
+  "game_id": "celeste64",
+  "track": "open",
+  "modality": "video",
+  "parent_category": "mechanics_behavior",
+  "edit_class": "behavior_flow",
+  "edit_class_code": "BF",
+  "subtype": "new_rule",
+  "scope": "single",
+  "reference_dependence": "R1",
+  "instruction": "The wall of trains that creeps up behind me only shoves me onward when it reaches me. Make it catch me instead: if it catches up with me I should lose the run and restart from the start station, with the wall back behind me. Keep everything else as it is.",
+  "checkpoint": {
+   "key": "T-VO-vid_3a02ca02cf88.t1@dsv41flash-opencode-s0-r1",
+   "made_by": "OpenCode + DeepSeek V4.1 Flash",
+   "refine_rounds": 1
+  }
+ },
+ {
+  "edit_task_id": "E-T-VO-vid_3a02ca02cf88.t1.CS",
+  "parent_task": "T-VO-vid_3a02ca02cf88.t1",
+  "game": "Celeste 64",
+  "game_id": "celeste64",
+  "track": "open",
+  "modality": "video",
+  "parent_category": "mechanics_behavior",
+  "edit_class": "content_structure",
+  "edit_class_code": "CS",
+  "subtype": "add",
+  "scope": "single",
+  "reference_dependence": "R0",
+  "instruction": "Add a pedestrian footbridge partway along the course that spans all the tracks, so I can climb up from the tracks, run across it above the trains and come back down onto the tracks on the far side to keep running. Keep everything else as it is.",
+  "checkpoint": {
+   "key": "T-VO-vid_3a02ca02cf88.t1",
+   "made_by": "Claude Code + Claude Fable 5.2",
+   "refine_rounds": 0
+  }
+ },
+ {
+  "edit_task_id": "E-T-VO-vid_4c7cbea650bf.t1.AP",
+  "parent_task": "T-VO-vid_4c7cbea650bf.t1",
+  "game": "Godot TPS",
+  "game_id": "godot-tps",
+  "track": "open",
+  "modality": "video",
+  "parent_category": "mechanics_behavior",
+  "edit_class": "appearance",
+  "edit_class_code": "AP",
+  "subtype": "local_style",
+  "scope": "single",
+  "reference_dependence": "R0",
+  "instruction": "Turn the sunken bowl into a wooden bowl: plywood walls and floor with visible board seams, and a round steel pipe coping running along its edge. Keep everything else as it is.",
+  "checkpoint": {
+   "key": "T-VO-vid_4c7cbea650bf.t1",
+   "made_by": "Claude Code + Claude Fable 5.2",
+   "refine_rounds": 0
+  }
+ },
+ {
+  "edit_task_id": "E-T-VO-vid_4c7cbea650bf.t1.BF",
+  "parent_task": "T-VO-vid_4c7cbea650bf.t1",
+  "game": "Godot TPS",
+  "game_id": "godot-tps",
+  "track": "open",
+  "modality": "video",
+  "parent_category": "mechanics_behavior",
+  "edit_class": "behavior_flow",
+  "edit_class_code": "BF",
+  "subtype": "new_rule",
+  "scope": "single",
+  "reference_dependence": "R1",
+  "instruction": "Before my second and third runs, tell me my current place and the run score I need to take first place, or that I'm already leading. Keep everything else as it is.",
+  "checkpoint": {
+   "key": "T-VO-vid_4c7cbea650bf.t1",
+   "made_by": "Claude Code + Claude Fable 5.2",
+   "refine_rounds": 0
+  }
+ },
+ {
+  "edit_task_id": "E-T-VO-vid_4c7cbea650bf.t1.CS",
+  "parent_task": "T-VO-vid_4c7cbea650bf.t1",
+  "game": "Godot TPS",
+  "game_id": "godot-tps",
+  "track": "open",
+  "modality": "video",
+  "parent_category": "mechanics_behavior",
+  "edit_class": "content_structure",
+  "edit_class_code": "CS",
+  "subtype": "replace",
+  "scope": "single",
+  "reference_dependence": "R0",
+  "instruction": "Replace one of the raised boxes at the bowl rim with a kicker ramp in the same spot, aimed so it launches me out over the bowl and back down into it. Keep everything else as it is.",
+  "checkpoint": {
+   "key": "T-VO-vid_4c7cbea650bf.t1",
+   "made_by": "Claude Code + Claude Fable 5.2",
+   "refine_rounds": 0
+  }
+ },
+ {
+  "edit_task_id": "E-T-VO-vid_502243ca1a9b.t1.AP",
+  "parent_task": "T-VO-vid_502243ca1a9b.t1",
+  "game": "Tanks of Freedom II",
+  "game_id": "tof2",
+  "track": "open",
+  "modality": "video",
+  "parent_category": "scene_world",
+  "edit_class": "appearance",
+  "edit_class_code": "AP",
+  "subtype": "local_style",
+  "scope": "single",
+  "reference_dependence": "R0",
+  "instruction": "Turn the two tall towers of the two-tower bridge into open, dark iron lattice towers made of riveted steel framework instead of turreted stone. Keep everything else as it is.",
+  "checkpoint": {
+   "key": "T-VO-vid_502243ca1a9b.t1",
+   "made_by": "Claude Code + Claude Fable 5.2",
+   "refine_rounds": 0
+  }
+ },
+ {
+  "edit_task_id": "E-T-VO-vid_502243ca1a9b.t1.BF",
+  "parent_task": "T-VO-vid_502243ca1a9b.t1",
+  "game": "Tanks of Freedom II",
+  "game_id": "tof2",
+  "track": "open",
+  "modality": "video",
+  "parent_category": "scene_world",
+  "edit_class": "behavior_flow",
+  "edit_class_code": "BF",
+  "subtype": "new_rule",
+  "scope": "single",
+  "reference_dependence": "R1",
+  "instruction": "Right now Big Ben strikes at the end of every turn. Make it strike only every third turn (turns 3, 6, 9 …), and on those turns show an on-screen message announcing that Big Ben is ringing. Keep everything else as it is.",
+  "checkpoint": {
+   "key": "T-VO-vid_502243ca1a9b.t1",
+   "made_by": "Claude Code + Claude Fable 5.2",
+   "refine_rounds": 0
+  }
+ },
+ {
+  "edit_task_id": "E-T-VO-vid_6d84fc825226.t1.AP",
+  "parent_task": "T-VO-vid_6d84fc825226.t1",
+  "game": "Minecraft",
+  "game_id": "minecraft",
+  "track": "commercial",
+  "modality": "video",
+  "parent_category": "scene_world",
+  "edit_class": "appearance",
+  "edit_class_code": "AP",
+  "subtype": "local_style",
+  "scope": "single",
+  "reference_dependence": "R0",
+  "instruction": "Make the elliptical amphitheatre look as it did when it was new: its outer ring complete and unbroken all the way round, every tier of arches standing, the stone fresh and whole instead of ruined. Keep everything else as it is.",
+  "checkpoint": {
+   "key": "T-VO-vid_6d84fc825226.t1",
+   "made_by": "Claude Code + Claude Fable 5.2",
+   "refine_rounds": 0
+  }
+ },
+ {
+  "edit_task_id": "E-T-VO-vid_6d84fc825226.t1.BF",
+  "parent_task": "T-VO-vid_6d84fc825226.t1",
+  "game": "Minecraft",
+  "game_id": "minecraft",
+  "track": "commercial",
+  "modality": "video",
+  "parent_category": "scene_world",
+  "edit_class": "behavior_flow",
+  "edit_class_code": "BF",
+  "subtype": "new_rule",
+  "scope": "single",
+  "reference_dependence": "R1",
+  "instruction": "Put some coins at the edge of the fountain squeezed into the tight alleys, and make tossing one into its basin carry me to the lion-head fountain in front of the temple. Keep everything else as it is.",
+  "checkpoint": {
+   "key": "T-VO-vid_6d84fc825226.t1",
+   "made_by": "Claude Code + Claude Fable 5.2",
+   "refine_rounds": 0
+  }
+ },
+ {
+  "edit_task_id": "E-T-VO-vid_6d84fc825226.t1.CS",
+  "parent_task": "T-VO-vid_6d84fc825226.t1",
+  "game": "Minecraft",
+  "game_id": "minecraft",
+  "track": "commercial",
+  "modality": "video",
+  "parent_category": "scene_world",
+  "edit_class": "content_structure",
+  "edit_class_code": "CS",
+  "subtype": "replace",
+  "scope": "single",
+  "reference_dependence": "R0",
+  "instruction": "Replace the lion-head fountain in front of the temple with a tall stone obelisk on a stepped base, so the obelisk becomes the centrepiece of the temple square. Keep everything else as it is.",
+  "checkpoint": {
+   "key": "T-VO-vid_6d84fc825226.t1",
+   "made_by": "Claude Code + Claude Fable 5.2",
+   "refine_rounds": 0
+  }
+ },
+ {
+  "edit_task_id": "E-T-VO-vid_7cbfa34ef827.t1.BF",
+  "parent_task": "T-VO-vid_7cbfa34ef827.t1",
+  "game": "Stardew Valley",
+  "game_id": "stardew_valley",
+  "track": "commercial",
+  "modality": "video",
+  "parent_category": "narrative_event",
+  "edit_class": "behavior_flow",
+  "edit_class_code": "BF",
+  "subtype": "parameter",
+  "scope": "single",
+  "reference_dependence": "R0",
+  "instruction": "Have the fairy godmother give the goal at ten at night, so there are only two hours left before midnight. Keep everything else as it is.",
+  "checkpoint": {
+   "key": "T-VO-vid_7cbfa34ef827.t1",
+   "made_by": "Claude Code + Claude Fable 5.2",
+   "refine_rounds": 0
+  }
+ },
+ {
+  "edit_task_id": "E-T-VO-vid_7cbfa34ef827.t1.CS",
+  "parent_task": "T-VO-vid_7cbfa34ef827.t1",
+  "game": "Stardew Valley",
+  "game_id": "stardew_valley",
+  "track": "commercial",
+  "modality": "video",
+  "parent_category": "narrative_event",
+  "edit_class": "content_structure",
+  "edit_class_code": "CS",
+  "subtype": "replace",
+  "scope": "single",
+  "reference_dependence": "R1",
+  "instruction": "Have Cinderella wait in a clearing of the sunlit forest instead of in her garden, so the slipper fitting happens there, still before midnight. Keep everything else as it is.",
+  "checkpoint": {
+   "key": "T-VO-vid_7cbfa34ef827.t1",
+   "made_by": "Claude Code + Claude Fable 5.2",
+   "refine_rounds": 0
+  }
+ },
+ {
+  "edit_task_id": "E-T-VO-vid_822a0bfacf16.t1.AP",
+  "parent_task": "T-VO-vid_822a0bfacf16.t1",
+  "game": "VoxeLibre",
+  "game_id": "voxelibre",
+  "track": "open",
+  "modality": "video",
+  "parent_category": "scene_world",
+  "edit_class": "appearance",
+  "edit_class_code": "AP",
+  "subtype": "local_style",
+  "scope": "group",
+  "reference_dependence": "R0",
+  "instruction": "Give every building in the town of low pale buildings down in the valley a pitched roof of red-brown clay tiles above its pale walls. Keep everything else as it is.",
+  "checkpoint": {
+   "key": "T-VO-vid_822a0bfacf16.t1",
+   "made_by": "Claude Code + Claude Fable 5.2",
+   "refine_rounds": 0
+  }
+ },
+ {
+  "edit_task_id": "E-T-VO-vid_822a0bfacf16.t1.BF",
+  "parent_task": "T-VO-vid_822a0bfacf16.t1",
+  "game": "VoxeLibre",
+  "game_id": "voxelibre",
+  "track": "open",
+  "modality": "video",
+  "parent_category": "scene_world",
+  "edit_class": "behavior_flow",
+  "edit_class_code": "BF",
+  "subtype": "new_rule",
+  "scope": "group",
+  "reference_dependence": "R1",
+  "instruction": "Let me sit on the floor cushions along the railing of the lookout terrace: using a cushion should seat me on it, facing out over the railing toward the valley and balloons, until I stand up again. Keep everything else as it is.",
+  "checkpoint": {
+   "key": "T-VO-vid_822a0bfacf16.t1@dsv41flash-opencode-s0-r1",
+   "made_by": "OpenCode + DeepSeek V4.1 Flash",
+   "refine_rounds": 1
+  }
+ },
+ {
+  "edit_task_id": "E-T-VO-vid_822a0bfacf16.t1.CS",
+  "parent_task": "T-VO-vid_822a0bfacf16.t1",
+  "game": "VoxeLibre",
+  "game_id": "voxelibre",
+  "track": "open",
+  "modality": "video",
+  "parent_category": "scene_world",
+  "edit_class": "content_structure",
+  "edit_class_code": "CS",
+  "subtype": "space_connectivity",
+  "scope": "single",
+  "reference_dependence": "R1",
+  "instruction": "I'd like to walk from the lookout terrace down into the town below. Add a carved stone stairway that runs down the rock face from the terrace and ends among the town's buildings, so I can go down and come back up. Keep everything else as it is.",
+  "checkpoint": {
+   "key": "T-VO-vid_822a0bfacf16.t1",
+   "made_by": "Claude Code + Claude Fable 5.2",
+   "refine_rounds": 0
+  }
+ },
+ {
+  "edit_task_id": "E-T-VO-vid_bb7a508ee81a.t1.AP",
+  "parent_task": "T-VO-vid_bb7a508ee81a.t1",
+  "game": "SuperTuxKart",
+  "game_id": "supertuxkart",
+  "track": "open",
+  "modality": "video",
+  "parent_category": "scene_world",
+  "edit_class": "appearance",
+  "edit_class_code": "AP",
+  "subtype": "local_style",
+  "scope": "single",
+  "reference_dependence": "R0",
+  "instruction": "Rebuild the slim white clock tower in dark red brick and crown it with a pointed, weathered green copper spire, so it's still slim and keeps its clock faces near the top. Keep everything else as it is.",
+  "checkpoint": {
+   "key": "T-VO-vid_bb7a508ee81a.t1",
+   "made_by": "Claude Code + Claude Fable 5.2",
+   "refine_rounds": 0
+  }
+ },
+ {
+  "edit_task_id": "E-T-VO-vid_bb7a508ee81a.t1.BF",
+  "parent_task": "T-VO-vid_bb7a508ee81a.t1",
+  "game": "SuperTuxKart",
+  "game_id": "supertuxkart",
+  "track": "open",
+  "modality": "video",
+  "parent_category": "scene_world",
+  "edit_class": "behavior_flow",
+  "edit_class_code": "BF",
+  "subtype": "new_rule",
+  "scope": "single",
+  "reference_dependence": "R1",
+  "instruction": "Take out the railings along both river banks so I can drive straight off the bank into the water, and whenever my kart ends up in the river, set it back down on the bank beneath the tall slim glass tower at the far end of the river, ready to drive on into the district. Keep everything else as it is.",
+  "checkpoint": {
+   "key": "T-VO-vid_bb7a508ee81a.t1",
+   "made_by": "Claude Code + Claude Fable 5.2",
+   "refine_rounds": 0
+  }
+ },
+ {
+  "edit_task_id": "E-T-VO-vid_bb7a508ee81a.t1.CS",
+  "parent_task": "T-VO-vid_bb7a508ee81a.t1",
+  "game": "SuperTuxKart",
+  "game_id": "supertuxkart",
+  "track": "open",
+  "modality": "video",
+  "parent_category": "scene_world",
+  "edit_class": "content_structure",
+  "edit_class_code": "CS",
+  "subtype": "remove",
+  "scope": "single",
+  "reference_dependence": "R0",
+  "instruction": "Take away the bridge next to the pair of round towers so the river runs open there and the streets that led to it just end at the bank. Keep everything else as it is.",
+  "checkpoint": {
+   "key": "T-VO-vid_bb7a508ee81a.t1",
+   "made_by": "Claude Code + Claude Fable 5.2",
+   "refine_rounds": 0
+  }
+ },
+ {
+  "edit_task_id": "E-T-VO-vid_d921d48cf861.t1.BF",
+  "parent_task": "T-VO-vid_d921d48cf861.t1",
+  "game": "SuperTuxKart",
+  "game_id": "supertuxkart",
+  "track": "open",
+  "modality": "video",
+  "parent_category": "mechanics_behavior",
+  "edit_class": "behavior_flow",
+  "edit_class_code": "BF",
+  "subtype": "new_rule",
+  "scope": "single",
+  "reference_dependence": "R0",
+  "instruction": "When I hit the brake during a boost, I want the nitro burst to end right away, with the speed burst and the exhaust flame stopping together. Keep everything else as it is.",
+  "checkpoint": {
+   "key": "T-VO-vid_d921d48cf861.t1",
+   "made_by": "Claude Code + Claude Fable 5.2",
+   "refine_rounds": 0
+  }
+ },
+ {
+  "edit_task_id": "E-T-VO-vid_d921d48cf861.t1.CS",
+  "parent_task": "T-VO-vid_d921d48cf861.t1",
+  "game": "SuperTuxKart",
+  "game_id": "supertuxkart",
+  "track": "open",
+  "modality": "video",
+  "parent_category": "mechanics_behavior",
+  "edit_class": "content_structure",
+  "edit_class_code": "CS",
+  "subtype": "add",
+  "scope": "single",
+  "reference_dependence": "R1",
+  "instruction": "On one of the open fast stretches of the course, have part of the road run through a dark rock tunnel lit by lamps along its walls before it comes back out into the jungle. Keep everything else as it is.",
+  "checkpoint": {
+   "key": "T-VO-vid_d921d48cf861.t1",
+   "made_by": "Claude Code + Claude Fable 5.2",
+   "refine_rounds": 0
+  }
+ },
+ {
+  "edit_task_id": "E-T-VO-vid_ea7efae4bfa5.t1.AP",
+  "parent_task": "T-VO-vid_ea7efae4bfa5.t1",
+  "game": "VoxeLibre",
+  "game_id": "voxelibre",
+  "track": "open",
+  "modality": "video",
+  "parent_category": "mechanics_behavior",
+  "edit_class": "appearance",
+  "edit_class_code": "AP",
+  "subtype": "local_style",
+  "scope": "single",
+  "reference_dependence": "R0",
+  "instruction": "Make the long wall out of clear blue glacier ice instead of white snow. Keep everything else as it is.",
+  "checkpoint": {
+   "key": "T-VO-vid_ea7efae4bfa5.t1",
+   "made_by": "Claude Code + Claude Fable 5.2",
+   "refine_rounds": 0
+  }
+ },
+ {
+  "edit_task_id": "E-T-VO-vid_ea7efae4bfa5.t1.BF",
+  "parent_task": "T-VO-vid_ea7efae4bfa5.t1",
+  "game": "VoxeLibre",
+  "game_id": "voxelibre",
+  "track": "open",
+  "modality": "video",
+  "parent_category": "mechanics_behavior",
+  "edit_class": "behavior_flow",
+  "edit_class_code": "BF",
+  "subtype": "parameter",
+  "scope": "single",
+  "reference_dependence": "R1",
+  "instruction": "Make the rider stay on top of the tall block on the board for at least five seconds before the run counts as finished. Keep everything else as it is.",
+  "checkpoint": {
+   "key": "T-VO-vid_ea7efae4bfa5.t1",
+   "made_by": "Claude Code + Claude Fable 5.2",
+   "refine_rounds": 0
+  }
+ },
+ {
+  "edit_task_id": "E-T-VO-vid_ea7efae4bfa5.t1.CS",
+  "parent_task": "T-VO-vid_ea7efae4bfa5.t1",
+  "game": "VoxeLibre",
+  "game_id": "voxelibre",
+  "track": "open",
+  "modality": "video",
+  "parent_category": "mechanics_behavior",
+  "edit_class": "content_structure",
+  "edit_class_code": "CS",
+  "subtype": "remove",
+  "scope": "group",
+  "reference_dependence": "R0",
+  "instruction": "Take away the onlookers watching the end of the run, so nobody is standing around the finish. Finishing on top of the tall block should still clearly count as a completed run. Keep everything else as it is.",
+  "checkpoint": {
+   "key": "T-VO-vid_ea7efae4bfa5.t1",
+   "made_by": "Claude Code + Claude Fable 5.2",
+   "refine_rounds": 0
+  }
+ }
+]

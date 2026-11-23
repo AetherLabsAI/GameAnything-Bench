@@ -1,0 +1,4 @@
+displayName = NegSlime
+author = GameAnything-Bench negative check
+version = 0.1
+side = Both

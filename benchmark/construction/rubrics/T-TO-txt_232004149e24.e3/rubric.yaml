@@ -1,0 +1,217 @@
+# GameAnything-Bench scoring material: never shown to agents during a trial.
+task_id: T-TO-txt_232004149e24.e3
+source_inventory:
+- 'c11.p001-c11.p006: the Timid Panther wakes after the poppy field; the party walks back to the road of yellow brick and turns toward the Jade
+  City'
+- 'c11.p007-c11.p010: the road is smooth and paved; the countryside has green-painted fences and farmhouses; people in emerald-green clothes and
+  peaked hats keep away for fear of the Panther; Hannah concludes this is the Land of Zorn'
+- 'c11.p011-c11.p017: Hannah knocks at a farmhouse; the woman lets them in once told the Panther is tame; a man with a hurt leg and two children'
+- 'c11.p018-c11.p038: the farmer says Zorn never lets anyone into his presence, sits in the Throne Room of his Palace, and can take any form;
+  the companions name their wishes (brains, a heart, courage, the way back to Iowa)'
+- 'c11.p039-c11.p040: supper and the night at the farmhouse'
+- 'c11.p041-c11.p045: next morning a green glow in the sky ahead grows brighter; in the afternoon the high, thick, bright-green wall around the
+  City; a big emerald-studded gate at the end of the road; a bell beside it; the gate opens into a high arched room whose walls glisten with emeralds'
+- 'c11.p046-c11.p054: the Guardian of the Gates, a small green man with a large green box, warns that Zorn is terrible to idle visitors; everyone,
+  residents included, must wear spectacles or the City''s brightness would blind them; they are locked on and he has the only key'
+- 'c11.p055-c11.p057: he fits green-glassed spectacles on all of them and locks them at the back of the head; then he takes a golden key from
+  the wall and opens a second gate into the streets'
+- 'c12.p001-c12.p003: the streets: houses of green marble studded with emeralds, green marble pavement with rows of emeralds in the joints, green
+  window glass, a green-tinted sky and green sun rays; green-clad, green-skinned people; shops where everything sold is green; no horses or animals,
+  goods moved in small green pushcarts'
+- 'c12.p004-c12.p012: the Palace of Zorn stands exactly in the middle of the City; a green-bearded soldier at the door takes them into a green
+  room to wait; he speaks to Zorn behind a screen; Zorn will receive each of them alone, one a day'
+- 'c12.p013-c12.p017: a green girl leads Hannah through passages and up stairs to a green room at the front of the Palace (fountain, books, wardrobe
+  of dresses); the companions spend the night in their own rooms'
+- 'c12.p018-c12.p023: next morning Hannah is taken to a great hall where courtiers wait outside the Throne Room every morning without ever seeing
+  Zorn; the soldier tells why Zorn agreed (the silver shoes, the mark on her forehead); a bell gives the signal and she goes in alone through
+  a little door'
+- 'c12.p024-c12.p025: the Throne Room: a big round room with a high arched roof, walls, ceiling and floor covered with emeralds, a great light
+  in the centre of the roof; a green marble throne in the middle holding an enormous bodiless Head'
+- 'c12.p026-c12.p051: the Head asks about the silver shoes and the mark, then demands she kill the Wicked Witch of the West before he sends her
+  home; Hannah leaves in tears'
+- 'c12.p052-c12.p065: the Strawman''s audience: Zorn as a lovely winged Lady makes the same demand in return for brains'
+- 'c12.p066-c12.p077: the Tin Chopper''s audience: Zorn as a terrible five-eyed, five-armed Beast demands the same for a heart'
+- 'c12.p078-c12.p087: the Panther''s plan; his audience: Zorn as a Ball of Fire demands proof of the Witch''s death for courage; the heat drives
+  him out'
+- 'c12.p088-c12.p101: the friends decide to go to the land of the Marlings to seek the Witch; preparations in the Palace (axe on a green grindstone,
+  fresh straw, a basket of food); they wake to a green cock in the Palace yard'
+instructions_meta:
+  requirement_groups:
+    entering the city:
+    - CR1
+    - CR2
+    - FP1
+    - VP1
+    streets and route to the central landmark:
+    - CR3
+    - CR4
+    - FP2
+    landmark interior:
+    - CR5
+    - FP3
+    - VP3
+    overall look and character:
+    - VP2
+  explicit_requirements:
+  - type: keep
+    text: I definitely want the palace to stand right in the middle of the city.
+    covers:
+    - CR4
+rubric:
+  content_realization:
+  - id: CR1
+    item: A high wall encloses the whole City, and the road that leads to it ends at a big gate in that wall, through which the City is entered
+    anchors:
+      '1': a wall rings the City all round and the approach road arrives at a gate in it that is the way in
+      '0.5': a wall or a gate exists, but the wall does not enclose the City or the road does not lead to the gate
+      '0': no enclosing wall and no gate
+    evidence:
+    - - c11.p043
+      - c11.p044
+    - c11.p006
+  - id: CR2
+    item: Between the outer gate and the streets lies a gatekeeping point that holds the green spectacles, with a second gate beyond it opening
+      into the streets
+    anchors:
+      '1': inside the outer gate there is a checkpoint with the green spectacles, and a second gate past it leads into the streets
+      '0.5': a checkpoint or a second gate exists, but the green spectacles are missing (or the checkpoint is not between the gates and the streets)
+      '0': the gate opens straight onto the streets with no checkpoint and no spectacles
+    evidence:
+    - - c11.p045
+      - c11.p055
+    - c11.p057
+  - id: CR3
+    item: Inside the walls, streets lined with houses fill the City between the inner gate and the Palace
+    anchors:
+      '1': a street network lined with houses runs inside the walls and connects the inner gate with the Palace
+      '0.5': streets or houses exist, but sparsely, or they do not connect the gate with the Palace
+      '0': no streets inside the walls (an empty enclosure or a lone building)
+    evidence:
+    - c11.p057
+    - - c12.p001
+      - c12.p004
+  - id: CR4
+    item: The Palace of Zorn, a big building set apart from the houses, stands exactly in the middle of the City
+    anchors:
+      '1': a large, distinct Palace stands at the centre of the walled City
+      '0.5': a distinct Palace exists inside the City but not at its centre
+      '0': no distinct Palace, or it stands outside the walls or by the gate
+    evidence:
+    - c12.p004
+  - id: CR5
+    item: Inside the Palace is the Throne Room, a big round room with a high arched roof and the throne standing in its middle
+    anchors:
+      '1': the Palace holds a big round, high-roofed Throne Room with the throne at its centre
+      '0.5': a throne room exists inside the Palace but is not round, or the throne is not in the middle
+      '0': no Throne Room inside the Palace
+    evidence:
+    - c11.p024
+    - c12.p008
+    - - c12.p024
+      - c12.p025
+  functions_playability:
+  - id: FP1
+    item: Passing the gate where the road arrives takes the player through the checkpoint, where the green spectacles are put on and stay on,
+      before the way into the streets opens
+    anchors:
+      '1': entering at the gate goes through a gatekeeping step at which the spectacles are fitted and cannot be taken off in the City, and only
+        then does the City open
+      '0.5': the City is entered at the gate through the checkpoint, but the spectacles are not required before the streets open, or can simply
+        be taken off
+      '0': the City can be entered without the checkpoint, or there is no way in
+    evidence:
+    - - c11.p052
+      - c11.p057
+  - id: FP2
+    item: Inside the walls the player can walk through the streets from the gate to the Palace
+    anchors:
+      '1': the player can walk on foot along the streets from the inner gate all the way to the Palace
+      '0.5': the streets can be walked, but the route to the Palace is blocked or broken
+      '0': the City cannot be moved through on foot (only shown, or blocked)
+    evidence:
+    - c11.p057
+    - - c12.p001
+      - c12.p004
+  - id: FP3
+    item: The Palace can be entered and the Throne Room reached inside it
+    anchors:
+      '1': from the entrance the player can go inside the Palace and reach the Throne Room
+      '0.5': the Palace can be entered but the Throne Room is not reachable
+      '0': the Palace is a closed facade
+    evidence:
+    - - c12.p004
+      - c12.p008
+    - - c12.p018
+      - c12.p024
+  visual_presentation:
+  - id: VP1
+    cat: style
+    item: The City is seen as a ring of high, bright-green wall with a gate that glitters with emeralds where the road arrives
+    anchors:
+      '1': the wall reads as high and bright green around the City, and the gate is set with glittering emeralds
+      '0.5': the wall and gate are there, but the wall is not green, or the gate is plain
+      '0': the wall and gate look like an ordinary wall and gate (no green, no emeralds)
+    evidence:
+    - - c11.p043
+      - c11.p044
+  - id: VP2
+    cat: style
+    item: The City is green throughout, its buildings and pavement set with sparkling emeralds
+    anchors:
+      '1': the City reads as one green, gem-glittering place, streets and buildings alike
+      '0.5': green is prominent, but large parts look ordinary or the gem sparkle is absent
+      '0': the City does not look green
+    evidence:
+    - - c12.p001
+      - c12.p003
+    - c12.p007
+  - id: VP3
+    cat: style
+    item: The Throne Room is covered with emeralds on walls, ceiling and floor, made to sparkle by a great light in the centre of its roof
+    anchors:
+      '1': the room glitters with emeralds all over, lit by a bright light at the centre of its roof
+      '0.5': the room is green or gem-covered, but without the central roof light, or only partly covered
+      '0': the Throne Room looks like an ordinary room
+    evidence:
+    - - c12.p024
+      - c12.p025
+play_suggestions:
+  FP1:
+  - 'approach along the road and pass the gate: is there a gatekeeping step with the spectacles, and does the City open only after it?'
+  - inside the City, try to take the spectacles off
+  - 'leave through the gate and come back in: is the checkpoint still in the way in?'
+  FP2:
+  - 'from the inner gate, walk to the Palace: is it reachable on foot through the streets?'
+  - check that the streets can actually be walked, not only shown in a cutscene
+  FP3:
+  - 'enter the Palace and look for the Throne Room: can it be reached?'
+  - 'walk around inside the Palace: does it hold up as a space, not a single door to a cutscene?'
+  robustness:
+  - leave the City through the gate and come back in
+  - walk into the wall and Palace corners at speed
+  - look for unreachable or unfinished areas between gate and Palace
+v4_map:
+  U1: CR2, FP1
+  U2: VP2
+  U3: CR1
+  U4: CR4
+  U5: CR5, VP3
+  FP1: CR2, FP1
+  FP2: CR3, FP2
+  FP3: CR5, FP3
+  VP1: CR1, VP1
+  VP2: CR4
+  VP3: VP2
+  VP4: CR5
+  VP5: 'dropped: editing request (night setting), moved to editing_seed.yaml'
+provenance:
+  source_yaml: T-TO-txt_232004149e24.e3.yaml
+  source_sha256: e19d9c3e41d5af640b47c4631e331aee32d8477acab2e07d0f82044d4b81a286
+  size_waiver: null
+  size_max: null
+  sources:
+  - ref: t01
+    title: The Wonderful Wizard of Oz
+    author: L. Frank Baum
+    text_id: txt_232004149e24
+    excerpt_id: e3

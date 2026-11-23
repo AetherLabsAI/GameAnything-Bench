@@ -1,0 +1,18 @@
+# GameAnything-Bench scoring material: never shown to agents during a trial.
+task_id: T-IO-8cc92362dd
+game: minecraft
+status: pending
+picks:
+- MC-JOIN-STATE
+- MC-JOIN-INVENTORY
+- MC-COMBAT
+- MC-INVENTORY
+- MC-DEATH
+- MC-PERF
+changed: []
+kept_borderline: []
+summary: Playable narrative of a boy, a giant and the woman in blue.
+task_checks: []
+note: 'policy (A): excluded only when the instruction explicitly requires the change; plausible side effects stay tested; adding
+  new content is never a reason to exclude. Proposed by claude-sonnet-5-5 via `gab task picks` 2026-11-06; a maintainer checks (set status: checked).
+  The evaluator tests the pool''s always items (unless in changed) + picks.'

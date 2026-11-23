@@ -1,0 +1,186 @@
+# GameAnything-Bench scoring material: never shown to agents during a trial.
+task_id: T-IO-c020afada8
+source_inventory:
+- 'img01: straight-down aerial view of a walled town. The town is an octagon of red-roofed blocks on a regular street grid with a large open square
+  at its centre. A star-shaped bastioned inner wall surrounds it, then a bright-green grassed ditch, then pointed outer works between the bastions
+  and an outer zigzag line. Roads come in from the open country and cross the belt to gates in the middle of the north, south, east and west sides,
+  lining up with the streets that lead to the square. Outside the belt are a ring road with a roundabout, a sports field, woods, fields and a
+  modern housing estate (bottom right)'
+- 'img02: oblique aerial view of the same town. Dense houses with red-tile roofs, the central square edged with trees and used for parking, a
+  church next to the square, and long buildings lining the inner wall. In the foreground, low masonry-faced walls with angled bastions stand in
+  dry, grassy ditches, and a road on the right crosses the belt to a gate. Woods and farmland lie beyond'
+- 'img03: oblique aerial view in autumn light. The tree-lined central square sits in the street grid. Layered low walls, ditches and pointed outer
+  works are partly wooded. A road crosses the belt to a gate at the bottom centre, and dense woods surround the fortifications'
+- 'img04: distant low-angle view. The compact walled town is ringed by its green belt of angled earthworks and woods and stands on a flat plain
+  of fields. A larger open town lies to the right, and hills are on the horizon under a blue sky'
+- 'img05: high straight-down view. The star-shaped fortress is at the centre of a flat grid of farm fields. Roads radiate from its gates to roundabouts,
+  a modern town spreads to the south, and lakes and a solar farm lie around it'
+- 'img06: a DIFFERENT, much smaller fort seen from the air. A free-standing dry-stone wall with six star points encloses a grassy yard with a
+  round thatched hut at the centre. It has a wooden gate on the right and sits on a grassy hillside, with a group of people posing by the hut'
+instructions_meta:
+  requirement_groups:
+    approach and entry:
+    - CR3
+    - FP1
+    - VP3
+    town interior:
+    - CR4
+    - FP2
+    - VP2
+    fortification layout:
+    - CR1
+    - CR2
+    fortification look:
+    - VP1
+  explicit_requirements:
+  - type: keep
+    text: I want the town to keep its star shape, with pointed bastions sticking out at the corners of the wall.
+    covers:
+    - CR1
+  - type: specify
+    text: Inside, lay the streets out as a regular grid around a big open square in the middle, with the main streets running straight from that
+      square out to the gates.
+    covers:
+    - CR4
+rubric:
+  content_realization:
+  - id: CR1
+    item: The town is enclosed by a wall with a regular, symmetric star-shaped outline, with pointed bastions projecting at its corners
+    anchors:
+      '1': a recognisable regular star / bastioned polygon enclosing the town, with pointed bastions at the corners; the number of points is not
+        required
+      '0.5': a walled or polygonal enclosure, but without pointed bastions or clearly irregular
+      '0': no enclosing wall, or a round / shapeless one
+    evidence:
+    - img01
+    - img05
+  - id: CR2
+    item: 'The defences form concentric layers around the town: the inner bastioned wall, then a ditch, then detached pointed outer works, together
+      a belt that is wide compared with the town'
+    anchors:
+      '1': several defensive rings around the town (main wall, ditch and outer works beyond it), forming a wide belt between town and country
+      '0.5': a wall and a ditch, but a single ring with no outer works, or the belt is a thin line
+      '0': only one wall or no defensive ring
+    evidence:
+    - img01
+    - img02
+    - img03
+  - id: CR3
+    item: The town has a few gates on several of its sides, each reached by a road from the surrounding country that crosses the defensive belt
+    anchors:
+      '1': gate passages on more than one side, each with a road crossing the ditch and outer works from outside
+      '0.5': only one gate, or gates without a road crossing the belt to them
+      '0': no gates or no crossing of the defences
+    evidence:
+    - img01
+    - img02
+    - img03
+    - img05
+  - id: CR4
+    item: Inside the walls, a regular grid of blocks is centred on a large open square, and the main streets run straight from the square to the
+      gates
+    anchors:
+      '1': grid plan, a large open central square, and main streets lining up from the square to the gates
+      '0.5': a grid or a central square, but not their relation to each other or to the gates
+      '0': no recognisable street layout, or an irregular one with no central square
+    evidence:
+    - img01
+    - img02
+    - img05
+  functions_playability:
+  - id: FP1
+    item: 'Getting in: from the open country outside, units can reach the town along a route that crosses the fortification belt to a gate passage,
+      and the walls and ditches stop or clearly hinder passage elsewhere'
+    anchors:
+      '1': the town is entered from outside through gate crossings of the belt, and the defences constrain movement elsewhere
+      '0.5': the town can be entered, but the defences do not affect movement (they can be crossed anywhere freely), or there is no outside to
+        come from
+      '0': no way to move between the outside and the town
+    evidence:
+    - img01
+    - img02
+    - img05
+  - id: FP2
+    item: 'Inside the walls: units can move through the street grid and reach the central square from the gates'
+    anchors:
+      '1': the town interior is traversable, and the central square is reachable from the gates along the streets
+      '0.5': the interior can be traversed only in part, or the square cannot be reached
+      '0': the town is a backdrop that units cannot enter
+    evidence:
+    - img01
+    - img02
+    - img03
+  visual_presentation:
+  - id: VP1
+    cat: style
+    item: 'The fortifications look low and spread out: angular, grass-covered earthworks with walls and broad ditches'
+    anchors:
+      '1': low, grassed, angular earthworks and ditches
+      '0.5': fortifications present, but without the low, grassed earthwork look (e.g. tall castle walls)
+      '0': no fortification look
+    evidence:
+    - img02
+    - img03
+    - img04
+  - id: VP2
+    cat: spatial
+    item: The town inside the walls looks densely built up, the blocks packed with houses, so that the open central square stands out
+    anchors:
+      '1': tightly packed buildings fill the blocks and the open square reads clearly against them
+      '0.5': buildings inside, but sparse or scattered so the interior does not read as a dense town
+      '0': the enclosure is empty or unrecognisable
+    evidence:
+    - img01
+    - img02
+    - img03
+  - id: VP3
+    cat: spatial
+    item: The compact fortress stands apart in flat, open country, with fields and woods around the green defensive belt
+    anchors:
+      '1': a compact fortress set apart in flat open surroundings of fields and woods framing its belt
+      '0.5': surroundings present but generic or not open (e.g. mountains, desert), or the town merges into them (e.g. a continuous city)
+      '0': 'no visible surroundings: the town fills the whole map or floats in a void'
+    evidence:
+    - img01
+    - img03
+    - img04
+    - img05
+play_suggestions:
+  FP1:
+  - 'start outside the fortress and try to reach the town by the shortest straight line across the walls: is the way blocked or hindered?'
+  - 'follow a road to a gate and enter: does the route cross the ditch / outer works?'
+  - 'try each side of the town: are there several gates, not only one?'
+  FP2:
+  - from each gate you can find, travel to the central square along the streets
+  - 'walk around inside along the wall: is the interior continuous?'
+  robustness:
+  - try to leave the map edge or climb onto the walls between gates
+  - enter and leave the town several times through different gates
+v4_map:
+  U1: CR3, FP1
+  U2: CR1
+  U3: VP1
+  U4: CR2
+  U5: CR4
+  FP1: FP1, CR3
+  FP2: FP2
+  VP1: CR1
+  VP2: CR2
+  VP3: CR4, VP2
+  VP4: VP1
+  VP5: VP3, CR3
+provenance:
+  source_yaml: T-IO-c020afada8.yaml
+  source_sha256: 40573c93e9b6428c4af7c4b06eff3e520660f5e1bb67e2c377163a3f3fd2070f
+  size_waiver: null
+  size_max: null
+  sources:
+  - refs:
+    - img01
+    - img02
+    - img03
+    - img04
+    - img05
+    - img06
+    bundle: c020afada8
+    title: 新布里萨克星形要塞城：棱堡、护城壕与方格街区

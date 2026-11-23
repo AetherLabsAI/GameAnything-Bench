@@ -1,0 +1,18 @@
+# GameAnything-Bench scoring material: never shown to agents during a trial.
+task_id: T-TO-txt_27babbacad50.e1
+game: minecraft
+status: pending
+picks:
+- MC-MOVE
+- MC-BUILD
+- MC-DAYNIGHT
+- MC-JOIN-STATE
+- MC-SAVE
+- MC-PERF
+changed: []
+kept_borderline: []
+summary: Walkable palace grounds with gates, courts, gardens and a canal with two arms.
+task_checks: []
+note: 'policy (A): excluded only when the instruction explicitly requires the change; plausible side effects stay tested; adding
+  new content is never a reason to exclude. Proposed by claude-sonnet-5-5 via `gab task picks` 2026-11-06; a maintainer checks (set status: checked).
+  The evaluator tests the pool''s always items (unless in changed) + picks.'

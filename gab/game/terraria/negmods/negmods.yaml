@@ -1,0 +1,7 @@
+# negative mods for `gab selfcheck terraria` (sources from the pool verification 2026-10-30,
+# the verification logs; built by the adapter with tModLoader's packer)
+# each must fail exactly its expected pool items (vs a fresh vanilla instance); every probe comes from one ~3.5 min session
+NegFall: {expect_fail: [TR-MOVE], quick_probes: [move]}
+NegRecipe: {expect_fail: [TR-CRAFT], quick_probes: ["craft,content"]}
+NegSlime: {expect_fail: [TR-CONTENT, TR-COMBAT], quick_probes: [content, combat]}
+NegOres: {expect_fail: [TR-WORLDGEN], quick_probes: [worldgen]}

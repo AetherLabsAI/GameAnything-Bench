@@ -1,0 +1,44 @@
+# Reference material: fetched from the HF dataset into $GAB_MEDIA_DIR/<task>/ by `gab media fetch` (sha256 checked).
+# The agent gets the files only (no title, author, caption or source): this file is never shown to it.
+task_id: T-VO-vid_36189d888e0a.t1
+refs:
+- id: c01
+  kind: video
+  file: clip_01.mp4
+  video_id: vid_36189d888e0a
+  source:
+    title: 09 - BRF 2019： 1-minute promotional video 'Beijing 2019' released
+    url: null
+    channel: null
+    youtube_id: null
+  range:
+    start: 0.0
+    end: 12.4
+    text: 0:00.00-0:12.40
+  duration_s: 12.4
+  size_bytes: 3940189
+  format: mp4 H.264 720p, AAC audio
+  hf_path: media/T-VO-vid_36189d888e0a.t1/clip_01.mp4
+  sha256: 446c6126fbac695fb4c728758d81faa977516b3e07829e753c5c9dc7affe44c4
+  rights_note: 'Broadcaster promo (CGTN watermark and ''Beijing 2019'' badge on every frame) of a real city. It is copyrighted footage of real
+    places and people: use as private reference only, do not redistribute or embed the frames in the built game.'
+- id: c02
+  kind: video
+  file: clip_02.mp4
+  video_id: vid_36189d888e0a
+  source:
+    title: 09 - BRF 2019： 1-minute promotional video 'Beijing 2019' released
+    url: null
+    channel: null
+    youtube_id: null
+  range:
+    start: 12.4
+    end: 28.2
+    text: 0:12.40-0:28.20
+  duration_s: 15.8
+  size_bytes: 3817259
+  format: mp4 H.264 720p, AAC audio
+  hf_path: media/T-VO-vid_36189d888e0a.t1/clip_02.mp4
+  sha256: 6103ee272602d48b412c9dccdb15a52e5eeffba6d51390596c78ac2907acf9d9
+  rights_note: 'Broadcaster promo (CGTN watermark and ''Beijing 2019'' badge on every frame) of a real city. It is copyrighted footage of real
+    places and people: use as private reference only, do not redistribute or embed the frames in the built game.'

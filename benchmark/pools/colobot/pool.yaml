@@ -1,0 +1,69 @@
+# Copied from the original pool_colobot.yaml (2026-10-30) + game / version / default_picks for gab.
+# default_picks: used for a task whose regression.yaml has no checked picks yet; cheap, uncorrelated probes
+# (no keyboard probe: those are serialized per sandbox; no ALIENS: random; LEVELS covers level loading).
+# Base-capability pool, Colobot: Gold Edition (v0.2, verified in game 2026-10-30, Colobot: Gold Edition 0.2.1-alpha =
+# Ubuntu noble package colobot 0.2.1-1build3; upstream publishes no Linux binaries)
+# Same rules as pool_minecraft.yaml: atomic base capabilities a task's change could break. Pass = same result as a vanilla
+# instance. Per task the drafter picks the 4-6 relevant ones and may add 0-2 task-specific items; a maintainer checks. Avoid
+# correlated picks: CB-ALIENS follows the stock alien script ai/antics.txt, CB-STOCK-PROGRAM the stock example ai/tcell1.txt;
+# a mod that edits levels/missions/chapter001/{planet,terrain}.txt changes the ground of every probe level (they include it).
+# Mod surface: Colobot data mods (a directory overlaying the data dir: levels/**/scene.txt, ai/*.txt CBOT programs, help/,
+# models/, textures/, sounds/), installed in <savedir>/mods/<name> and enabled in colobot.ini after the probe mod.
+# Probes: gab/game/colobot/probes.py (CBProbes); `probe: x.y` = field y of probe x (fields joined with +).
+# Runtime: every probe is one short game run (the test sandboxes, the seat's display, Mesa llvmpipe, 800x600, no sound) started with
+#   -runscene challenges9NN: a probe level from the data mod "gaprobe" whose bots run CBOT probe programs (move/turn/goto/
+#   grab/drop/build/factory/research/jet/aim/fire, radar, energyCell, shieldLevel, abstime) that write key=value lines to
+#   <savedir>/files/ (CBOT file class). Keyboard items (astronaut, quicksave F5) press real keys with xdotool.
+#   GPU (vglrun on the shared H100) is NOT used: under load Colobot ran at a few fps and its physics broke.
+# A/A calibration 2026-10-30 (4 rounds, final pair aa9/aa10 run in parallel with the 3 negatives; results/compare_*.txt):
+#   all 15 ready items agree. Positions, energies, distances, CBOT results, stock-level loads, save/resume identical; durations
+#   vary by <=5% (wheeled move(10) 2.38-2.56 s, factory 25.06-25.30 s, build 13.96-14.09 s, research 9.00-9.23 s; tol 15% /
+#   abs), converter cube 12.6-14.8 s (tol 20% or 2 s), stock tcell1 cell x 28.8-29.1 (tol 0.6 m), astronaut jet rise
+#   14.1-14.5 m / forward 37.8-37.9 m (tol 25% / 15%). The alien fight is random (ant AI uses rand(): first hit 2.2-3.7 s,
+#   ant killed after 5.6-7.1 s) -> only the outcome (attacked / ant destroyed) is compared.
+#   Fixes found by A/A: GPU path dropped (llvmpipe), keyboard runs hold a seat lock (focus), alien results come from an observer
+#   out of the ant's reach, the produced cube's grab is diagnostic only, save probe re-run after a double-launch bug.
+# Negative checks 2026-10-30 (deliberately breaking data mods in negative_mods/), vs vanilla aa9:
+#   neg_ants (ai/antics.txt: ants never attack) -> CB-ALIENS fails (attacked true -> false), 14 others pass;
+#   neg_level (missions chapter 2 level 1 includes a missing file) -> CB-LEVELS (missions201 does not load) + CB-STABLE
+#   (2 [ERROR] lines) fail, 13 others pass; neg_tcell1 (ai/tcell1.txt turns -90 instead of 90) -> CB-STOCK-PROGRAM fails
+#   (cell at y 11.5 -> 8.5), 14 others pass.
+
+game: colobot
+version: Colobot Gold Edition 0.2.1-alpha (Ubuntu noble colobot 0.2.1-1build3)
+default_picks:
+- CB-BOTS
+- CB-CBOT
+- CB-STOCK-PROGRAM
+- CB-RESOURCES
+- CB-LEVELS
+
+# gate (gab/eval/regression.py): the STABLE item (no real crash / hang, no new fatal error kind) + the host-present
+# item(s): the stock content they reach must still be there on the modded game (numbers NOT compared with vanilla; only a mod that
+# removes / replaces the host game wholesale fails). Scores are 0 unless the gate passes. Not chosen per task.
+gate: [CB-STABLE, CB-LEVELS, CB-BOTS]
+
+always:
+  - {id: CB-STABLE, capability: "no crash, every probe run finishes, and no more [ERROR] lines in the game logs than vanilla, over all probe runs of the evaluation", probe: log_errors, status: ready}
+
+pool:
+  # bots and physics
+  - {id: CB-BOTS, capability: "stock bots of the 4 chassis (wheeled, tracked, legged, winged grabber) drive: move(10), turn(90), move(-5) and goto() take the vanilla time, distance and energy", probe: motion, status: ready}
+  - {id: CB-FLIGHT, capability: "a winged bot flies with vanilla physics: jet(1) climbs ~10 m in 2 s, hovers, flies a 20 m goto at 15 m altitude and lands; jet temperature and energy as vanilla", probe: flight, status: ready}
+  - {id: CB-ASTRONAUT, capability: "the astronaut (player) is controllable with the real keys: the jetpack (Shift, 2 s) lifts him ~14 m, and forward (Up, 3 s, while hovering) carries him ~38 m, as in vanilla", probe: astronaut, status: ready}
+  - {id: CB-ENERGY, capability: "power cells drain and recharge: a bot drives to a power station and its 20% cell is recharged there as fast as vanilla", probe: energy, status: ready}
+  # programming
+  - {id: CB-CBOT, capability: "the CBOT language and API behave as vanilla: arithmetic, math functions, strings, arrays, recursion, classes, switch/loops, categories, radar/radarall, own state", probe: cbot_lang, status: ready}
+  - {id: CB-STOCK-PROGRAM, capability: "stock programs run: grab/turn/drop on a titanium cube, and the stock example program ai/tcell1.txt moves its power cell to the vanilla place", probe: stock_program, status: ready}
+  # base and economy
+  - {id: CB-RESOURCES, capability: "titanium ore -> titanium cube: a grabber carries ore into a converter, the cube comes out after the vanilla time and can be grabbed", probe: convert, status: ready}
+  - {id: CB-FACTORY, capability: "the bot factory builds a shooter from a titanium cube (factory()) in the vanilla time; the new bot has no power cell (as documented)", probe: factory, status: ready}
+  - {id: CB-BUILD, capability: "a builder bot builds a power station from a titanium cube (build()) in the vanilla time and energy", probe: build, status: ready}
+  - {id: CB-RESEARCH, capability: "the research center, given a power cell, researches tracked bots (research()) in the vanilla time", probe: research, status: ready}
+  # aliens and missions
+  - {id: CB-ALIENS, capability: "alien ants (stock patrol program ai/antics.txt) attack a nearby bot, and a shooter bot destroys the ant (outcome only: the ant AI is random)", probe: aliens, status: ready}
+  - {id: CB-MISSION-GOAL, capability: "a level goal (EndMissionTake: a titanium cube on the goal area) completes the mission when it is reached, as in vanilla", probe: mission, status: ready}
+  - {id: CB-LEVELS, capability: "stock levels load and run: missions chapters 1-3, exercise, challenge, free game, code battle and Colobot Plus level 1 each load without a level error and keep running", probe: stock_levels, status: ready}
+  - {id: CB-SAVE, capability: "quicksave (F5) mid-mission and loading that save in a new game process restore the mission: the running program resumes at the saved step with the same state", probe: save_load, status: ready}
+  # not probed
+  - {id: CB-CAMERA, capability: "camera modes switch and follow", probe: none, status: blocked, why: "camera state is not readable from CBOT, saves or logs; only screenshot comparison would be possible, too noisy to tell a broken camera from a texture change"}

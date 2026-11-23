@@ -1,0 +1,25 @@
+# Reference material: fetched from the HF dataset into $GAB_MEDIA_DIR/<task>/ by `gab media fetch` (sha256 checked).
+# The agent gets the files only (no title, author, caption or source): this file is never shown to it.
+task_id: T-VO-vid_c3c33e2729dd.t1
+refs:
+- id: c01
+  kind: video
+  file: clip_01.mp4
+  video_id: vid_c3c33e2729dd
+  source:
+    title: '🇺🇸 Breezy Victory! 🎿 ｜ Top 3 Fastest Women''s Downhill Runs ｜ #MilanoCortina2026 Top Moments [7jGELumh6Ug]'
+    url: https://www.youtube.com/watch?v=7jGELumh6Ug
+    channel: null
+    youtube_id: 7jGELumh6Ug
+  range:
+    start: 159.0
+    end: 237.0
+    text: 2:39.00-3:57.00
+  duration_s: 78.0
+  size_bytes: 16057909
+  format: mp4 H.264 720p, AAC audio
+  hf_path: media/T-VO-vid_c3c33e2729dd.t1/clip_01.mp4
+  sha256: 165662b5eee9ec0e15bf41644de31e1c170b6f17eaf5e4c02a1d44211c24e253
+  rights_note: Broadcast footage of an Olympic event with Olympic rings, sponsor marks and a real athlete's name and likeness. Use as a private
+    reference only; do not redistribute frames or embed the footage in benchmark deliverables. The built game content should use generic art,
+    and no Olympic marks or the athlete's likeness.

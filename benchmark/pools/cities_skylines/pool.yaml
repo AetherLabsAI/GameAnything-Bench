@@ -1,0 +1,69 @@
+# Copied from the original pool_cities_skylines.yaml (v0.2-pending, 2026-10-30) + game / version / default_picks
+# for gab, + CS-DAYNIGHT and CS-TRANSPORT (2026-11-05: the Cities tasks ask for lighting over the time of day and bus lines that stop
+# and carry passengers).
+# STATUS: selfcheck 20261115-111521 verified CS-STABLE/CONTENT/ROADS/ZONING/TRAFFIC/ECONOMY/POPULATION/INFOVIEWS/SAVE/PERF/DAYNIGHT -> ready; CS-SIM, CS-SERVICES, CS-CAMERA, CS-TRANSPORT stay unverified (noisy, dropped from gate / default picks, not used).
+# Earlier (before the selfcheck above) every item was `status: unverified`. `gab selfcheck cities_skylines` runs the unverified items too (A/A on two fresh vanilla sessions +
+#   the negative mods NegRoadCost / NegWind / NegNight / NegBus); flip an item to `ready` only after it agrees in the A/A and its
+#   negative mod fails it, and set the tolerances in gab/game/cities_skylines/probes.py TOL from the A/A sessions (they are first
+#   guesses).
+# What was verified in game on 2026-10-30 (before the port): the private user folder + CSProbe load, CSProbe stops at the
+#   Paradox Legal Disclaimer without clicking it, and with the private game folder the disclaimer no longer shows and the new city
+#   starts loading; the pod restarted during that first city load, so no probe result exists.
+# gab port: gab/game/cities_skylines/probes.py (= probes_cities_skylines.py on a gab Seat + groups daynight / transport), bridge/CSProbe,
+#   bridge/csp.sh (root / game folder / display as parameters; the private game folder's colossal.cgs is COPIED from the Steam folder,
+#   gab writes no legal key), bridge/cs-start.sh, bridge/cgs.py. probes.groups_of() adds the groups a group needs (zoning / services
+#   need roads; growth needs roads + zoning + services; transport needs the grown city; save needs growth) and maps perf -> sim,
+#   saveload -> save. transport runs in its own game start on the probe-city fixture (probes.py header): picking CS-TRANSPORT costs
+#   ~5-6 min, not a regrown city. growth / transport try to run the simulation faster than speed 3 (CSProbe FastSim, untested).
+# CS-DAYNIGHT, CS-TRANSPORT and the default picks:. `gab run` skips Cities until items are ready
+#   (gab/run/sched.py unverified_pool; --allow-unverified overrides).
+# Changes for gab: the save marker run2 compares with is written by the save group (was: the end of growth), so the city as saved
+#   (with the transport line) is what loads back. CS-PERF is unchanged (speed-3 simulation frames/s from the sim group).
+# default_picks: used for a task whose regression.yaml has no checked picks yet (all 10 Cities tasks on 2026-11-05); every item comes
+#   from the same session (run1 ~15-25 min + run2 ~3 min, estimated).
+
+game: cities_skylines
+version: "Cities: Skylines 1 (Steam 255710, Linux, 1.21.x expected), stock map Green Plains"
+default_picks:
+- CS-ROADS
+- CS-TRAFFIC
+- CS-POPULATION
+- CS-SAVE
+- CS-PERF
+
+# Base-capability pool, Cities: Skylines (same rules as pool_minecraft.yaml: atomic base capabilities a task's change could break; pass =
+# same result as a vanilla instance; per task the drafter picks the 4-6 relevant ones and may add 0-2 task-specific items; a maintainer checks).
+# Avoid correlated picks: CS-CONTENT flags any changed stock prefab (incl. road construction cost, so it moves with CS-ROADS cost
+# changes); CS-POPULATION, CS-TRAFFIC and CS-ECONOMY come from the same growth run; CS-TRANSPORT runs in the grown city.
+# Mod surface: C# mods (ICities; a project built against Cities_Data/Managed, a DLL, or Source/*.cs the game compiles), assets and maps.
+# Probes: the bridge mod CSProbe (inactive unless its probe.cfg exists). `probe: x.y` = field y of probe x (fields joined with +);
+#   `a,b` = all of these must pass.
+# Runtime: a PRIVATE user folder per session (XDG_DATA_HOME / XDG_CONFIG_HOME / TMPDIR under <root>/gab/probe-<label>/), a PRIVATE game
+#   folder (Cities.x64 copied, the rest linked: the game reads its "colossal" settings -- the legal acceptance, TelemetryConsent -- from
+#   its executable's folder), a private display per seat, VirtualGL. One session = run1 (new city on Green Plains, the groups, autosave
+#   "gaprobe") -> run2 (load it, compare).
+
+# gate (gab/eval/regression.py): the STABLE item (no real crash / hang, no new fatal error kind) + the host-present
+# item(s): the stock content they reach must still be there on the modded game (numbers NOT compared with vanilla; only a mod that
+# removes / replaces the host game wholesale fails). Scores are 0 unless the gate passes. Not chosen per task.
+# cities_skylines: gate UNVERIFIED (every CS item is unverified until `gab selfcheck cities_skylines` runs on a sandbox)
+gate: [CS-STABLE, CS-ROADS]   # CS-SIM dropped from the gate (noisy in A/A: ratio_3_to_1 2 vs 4); CS-PERF still catches a stalled simulation
+
+always:
+  - {id: CS-STABLE, capability: "no crash or hang in the two game starts, and no more exception / error lines in Player.log than vanilla", probe: log_errors, status: ready}
+
+pool:
+  - {id: CS-CONTENT, capability: "every stock building, network and vehicle prefab keeps its class, size, cost, maintenance, lanes and speeds (additions allowed); default tax rates and start money", probe: content, status: ready}
+  - {id: CS-SIM, capability: "the simulation runs at the three speeds in vanilla proportion (speed 2 / 3 vs 1), the game time per simulation frame is unchanged, pause stops the clock", probe: sim, status: unverified}
+  - {id: CS-ROADS, capability: "the road tool's routine builds a Basic Road from the highway end with 4 junctions and 8 side roads (vanilla segments, nodes, cost, zone blocks); a road is upgraded to Medium Road and bulldozed", probe: roads, status: ready}
+  - {id: CS-ZONING, capability: "zoning the blocks along the new roads (residential / commercial / industrial) sets the vanilla number of cells; demand as vanilla", probe: zoning, status: ready}
+  - {id: CS-SERVICES, capability: "wind turbines + a power line, a water tower + pipes and a landfill are placed; after the growth run the electricity, water and garbage capacities are vanilla and the zoned buildings are supplied", probe: "services,growth.power_capacity+water_capacity+garbage_capacity+no_power+no_water", status: unverified}
+  - {id: CS-TRAFFIC, capability: "vehicles and citizens appear and move (peak vehicle and citizen instance counts in the growth run), no building lacks a road connection", probe: growth.max_vehicles+max_citizen_instances+no_road, status: ready}
+  - {id: CS-ECONOMY, capability: "money over the growth run (cash change, income) as vanilla", probe: growth.cash_change+income_acc, status: ready}
+  - {id: CS-POPULATION, capability: "the zoned area grows buildings and people move in over 42 in-game days (population, households, buildings per zone, none abandoned)", probe: growth.population+households+zoned_buildings+res_buildings+com_buildings+ind_buildings+abandoned, status: ready}
+  - {id: CS-CAMERA, capability: "the camera controller reaches a set position, zoom and angle; free camera mode hides the UI and the UI comes back", probe: camera, status: unverified}
+  - {id: CS-INFOVIEWS, capability: "the info views (electricity, water, garbage, traffic, density, happiness, pollution, health, education, wind, transport, land value, crime, ...) open", probe: infoviews, status: ready}
+  - {id: CS-SAVE, capability: "an autosave of the grown city loads back with the same roads, buildings, population and money", probe: saveload, status: ready}
+  - {id: CS-PERF, capability: "simulation frames per second at speed 3 not much lower than vanilla (>= 60%)", probe: perf, status: ready}
+  - {id: CS-DAYNIGHT, capability: "the day / night cycle is on and runs at the vanilla rate (game hours per simulation frame); at noon it is day and at midnight night, with the vanilla sun / moon light and ambient light", probe: daynight, status: ready, note: "new 2026-11-05; time set through SimulationManager.m_dayTimeOffsetFrames (reflection); negative NegNight"}
+  - {id: CS-TRANSPORT, capability: "a Bus Depot beside a road and a bus line with 4 stops along the main road (the transport tool's routines) in the grown city: the line is complete, buses run on it and carry passengers over ~12 in-game days (bus count, passengers on board, vanilla bounds)", probe: transport, status: unverified, note: "new 2026-11-05; runs on the probe-city fixture (a vanilla city grown once per game build + CSProbe version, cached; vanilla and mod runs use the same one, compare() checks its hash), not on a regrown city; CreateLine / AddStop by reflection, the depot tries both road sides and four facings until it has road access; compare() answers could-not-test while the vanilla run has no bus; negative NegBus"}

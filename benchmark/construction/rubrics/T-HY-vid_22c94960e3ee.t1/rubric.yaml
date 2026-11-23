@@ -1,0 +1,268 @@
+# GameAnything-Bench scoring material: never shown to agents during a trial.
+task_id: T-HY-vid_22c94960e3ee.t1
+source_inventory:
+- 'clip 00:00-00:02.3: surface, selfie shots of a diver in a green dinosaur-shaped hood, mask and vest on a dive boat, open sea and a green tropical
+  coast behind; numbers 1, 2, 3 overlaid on successive shots (an edit countdown); other divers seated on the boat; a second boat on the water;
+  logo watermark top-left throughout'
+- 'clip 00:02.5-00:06.5: underwater, a dense school of silvery fish fills the frame in purple-blue water, sunlit surface above; the hooded diver
+  beside it, exhaled bubbles rising'
+- 'clip 00:07-00:09.5: two divers swim down a rocky coral reef slope in bright cyan water, the bright surface visible above, bubble trails'
+- 'clip 00:10-00:13: the hooded diver with a silver tank in open purple-blue water; a large dark fin or flipper of an unidentified animal at the
+  right edge'
+- 'clip 00:13.5-00:15.5: a diver with red mask in blue water; a steep coral-covered wall on the left, other divers further down along it, bubbles'
+- 'clip 00:16-00:20.5: a diver in red shorts descends head-first over the deck of a rusted, growth-encrusted wreck with an open framework of beams
+  and openings, and goes down into its interior; bubbles rising'
+- 'clip 00:21-00:26: near the surface over coral, the hooded diver with a selfie stick swims right beside a large sea turtle; sunlit, rippled
+  surface above'
+- 'clip 00:26.5-00:32: a diver in a white hood and red shorts kneels on the sand bottom next to the wreck''s encrusted hull in deep blue water,
+  holding a small device, exhaling large bubbles'
+- 'audio: music only, no speech'
+- 'img01: dive-site map ''Wreck of the SAS Pietermaritzburg'': a long ship hull drawn lying on a sand bottom, reef patches with depth contours
+  some 100 m to the east, compass rose, legend (pinnacle, swim-through, cave, gully, overhang, wall; reef depth 0-39 m; sand bottom; kelp forest)'
+- 'img02: dive-site map ''SAS Bloemfontein wreck'': one long hull outline on sand, bow (1, 50 m), quarterdeck (3) and stern (2, 56 m, sand) marked;
+  compass, depth legend'
+- 'img03: dive-site map ''MV Daeyang Family wreck'': a broken-up wreck as a large irregular area of hull plating at 11-18 m, with engine block,
+  pump, boiler, scattered structural plating and fragments, and a lifeboat lying apart; compass, legend'
+- 'img04: line drawing of the wreck ''E.M. Clark'' lying on the seabed in side view: a long hull with deck structures, debris and broken parts
+  on the sand along it; two small views of the bow and stern ends above'
+- 'img05: photo, a diver with tank and fins swims over a slope densely overgrown with coral and soft growth, in green-blue water'
+- 'img06: photo, a hawksbill-type sea turtle swims over dim, encrusted wreck structure and beams in blue water'
+instructions_meta:
+  requirement_groups:
+    free underwater exploration:
+    - FP1
+    site layout and landmark access:
+    - CR1
+    - CR2
+    - CR3
+    - CR4
+    - FP2
+    landmark look:
+    - VP2
+    marine life encounters:
+    - CR5
+    - FP3
+    - VP3
+    underwater light and atmosphere:
+    - VP1
+  explicit_requirements:
+  - type: keep
+    text: I definitely want to keep the dense fish school that surrounds you and the big sea turtle you can swim right up next to.
+    covers:
+    - CR5
+    - FP3
+    - VP3
+rubric:
+  content_realization:
+  - id: CR1
+    item: The site has a coral reef zone formed as a coral-covered slope and a steep wall that drops away into open blue water
+    anchors:
+      '1': a coral-covered reef with both a slope and a steep wall falling away into open water
+      '0.5': a coral-covered bottom, but flat or with only a gentle slope, no wall
+      '0': no reef zone
+    evidence:
+    - - '00:07.0'
+      - '00:09.5'
+    - - '00:13.5'
+      - '00:15.5'
+    - img05
+  - id: CR2
+    item: The wreck is one whole ship lying lengthwise on the bottom with a readable bow end, intact or broken up along its length
+    anchors:
+      '1': a ship-length wreck lying along the bottom with a recognisable bow end (an intact hull or a broken-up one both count)
+      '0.5': wreckage on the bottom without a readable one-ship shape or bow end
+      '0': no wreck
+    evidence:
+    - img01
+    - img02
+    - img03
+    - img04
+  - id: CR3
+    cross: true
+    item: 'The site is laid out as two zones: the reef of the clip, and apart from it an open sand bottom on which the wreck lies on its own,
+      as the images place it'
+    anchors:
+      '1': a reef zone and, separated from it, open sand with the wreck lying alone on it
+      '0.5': reef and wreck both present, but the wreck sits on or inside the reef, or has no open sand around it
+      '0': reef or wreck missing, so no two-zone layout
+    evidence:
+    - - '00:07.0'
+      - '00:09.5'
+    - - '00:13.5'
+      - '00:15.5'
+    - - '00:26.5'
+      - '00:32.0'
+    - img01
+    - img02
+  - id: CR4
+    item: The wreck has an open framework of beams with openings that lead into an interior space
+    anchors:
+      '1': open beams and openings in the wreck with a hollow interior behind them
+      '0.5': openings or gaps on the surface, but no interior space behind them
+      '0': a solid, closed wreck shape (or no wreck)
+    evidence:
+    - - '00:16.0'
+      - '00:20.5'
+    - img06
+  - id: CR5
+    item: 'The site''s signature life is there: a school of fish and a sea turtle'
+    anchors:
+      '1': both a fish school (many fish swimming together) and a sea turtle are in the site
+      '0.5': only one of the two, or fish only as scattered single ones
+      '0': neither
+    evidence:
+    - - '00:02.5'
+      - '00:06.5'
+    - - '00:21.0'
+      - '00:26.0'
+    - img06
+  functions_playability:
+  - id: FP1
+    item: The player can swim freely through the site in three dimensions, from the surface down to the seabed, and reach the reef, the open water
+      and the wreck
+    anchors:
+      '1': free swimming up, down and around, with the reef, open water and wreck all reachable by swimming
+      '0.5': the area can be swum, but a main part is unreachable or the movement is restricted (e.g. a fixed path, no descent)
+      '0': the site cannot be explored by swimming
+    evidence:
+    - - '00:02.5'
+      - '00:09.5'
+    - - '00:13.5'
+      - '00:20.5'
+    - - '00:26.5'
+      - '00:32.0'
+  - id: FP2
+    item: The player can swim from the reef across to the wreck, go down into it through its openings, swim through the interior and get out again
+    anchors:
+      '1': the wreck is reached by swimming from the reef, entered through an opening, swum through inside and left again
+      '0.5': the wreck is reachable but cannot be entered, or the interior is entered but cannot be swum through or left
+      '0': no reachable wreck
+    evidence:
+    - - '00:16.0'
+      - '00:20.5'
+    - - '00:26.5'
+      - '00:32.0'
+  - id: FP3
+    item: 'Kept at the user''s request (keep): the player can swim into the fish school so that it is around them, and swim right up next to the
+      sea turtle'
+    anchors:
+      '1': the player can swim into the school and have fish around them, the school staying together (it may part around the player and close
+        again), and can come right up beside the turtle
+      '0.5': only one of the two can be reached up close (e.g. the school breaks up for good or keeps swimming off out of reach as the player
+        approaches, or the turtle is penned, flees or is unreachable)
+      '0': neither the school nor the turtle can be reached by swimming (or neither exists)
+    evidence:
+    - - '00:02.5'
+      - '00:06.5'
+    - - '00:21.0'
+      - '00:26.0'
+  visual_presentation:
+  - id: VP1
+    cat: style
+    keyframes:
+    - '00:08.0'
+    - '00:22.5'
+    - '00:29.0'
+    item: 'Underwater light: bright cyan water under a sunlit surface in the shallows, deep blue in open water and at depth around the wreck'
+    anchors:
+      '1': a visible change from bright shallow water to deep blue at depth
+      '0.5': underwater with one uniform water colour
+      '0': not underwater-looking
+    evidence:
+    - - '00:07.0'
+      - '00:09.5'
+    - - '00:21.0'
+      - '00:26.0'
+    - - '00:26.5'
+      - '00:32.0'
+  - id: VP2
+    cat: style
+    keyframes:
+    - '00:17.0'
+    - '00:20.0'
+    - '00:27.0'
+    item: 'The wreck looks old and sunken: rusted, weathered metal covered with marine growth'
+    anchors:
+      '1': a wreck that reads as rusted and encrusted with growth
+      '0.5': a recognisable ship, but clean and new-looking, with no growth or rust
+      '0': no recognisable wreck
+    evidence:
+    - - '00:16.0'
+      - '00:20.5'
+    - - '00:26.5'
+      - '00:29.5'
+    - img06
+  - id: VP3
+    cat: key_moment
+    keyframes:
+    - '00:03.0'
+    - '00:05.0'
+    - '00:23.0'
+    item: 'Encounters with the site''s life look as in the clip: a fish school dense enough to fill the view around the player, and a large sea
+      turtle seen up close'
+    anchors:
+      '1': the school fills the view around the player and the turtle looks large at close range
+      '0.5': one of the two looks right, or both look sparse or small
+      '0': neither encounter looks like the clip
+    evidence:
+    - - '00:02.5'
+      - '00:06.5'
+    - - '00:21.0'
+      - '00:26.0'
+    - img06
+play_suggestions:
+  FP1:
+  - 'start the game and swim straight down: can you reach the seabed?'
+  - swim from the reef across open water to the wreck and back
+  - try to swim up to the surface from the deepest point
+  FP2:
+  - 'find the wreck from the reef without directions: is it on open sand?'
+  - look for an opening in the wreck and swim inside; can you get out again?
+  - swim along the whole hull from one end to the other
+  FP3:
+  - 'swim into the fish school: does it stay together around you (parting and closing again is fine) or scatter for good?'
+  - 'swim right up beside the turtle: does it stay reachable, and does it move?'
+  robustness:
+  - 'stay underwater for a long time: is there drowning or an air rule, and is it fair?'
+  - 'swim far beyond the site: is there a bound or does the world continue sensibly?'
+  - 'get stuck inside the wreck on purpose: can you find the way out?'
+hybrid:
+  modality: video+image
+  roles:
+    video: 'the look and the space of the dive site as it is swum through: sunlit shallows and deep blue water, a coral reef slope and wall, a
+      dense fish school, a sea turtle near the surface, and an encrusted, open-framed wreck on sand that a diver enters head-first'
+    images: 'the layout of a wreck site: dive-site maps and a drawing of different wrecks that agree on one ship lying lengthwise on its own on
+      a flat bottom, bow at one end (intact in img01, img02, img04, broken up into plating and parts in img03), with reef patches well apart from
+      it on img01; two photos show a diver over an overgrown reef and a turtle swimming over wreck structure'
+  cross_reference_requirement: The wreck must lie as the images lay it out (one ship lying lengthwise on open sand, apart from the reef) while
+    looking and being enterable like the clip's encrusted, open-framed wreck; the clip's reef zone and the images' separate sand-and-wreck zone
+    together make the site's layout.
+v4_map:
+  U1: 'dropped: mechanism already scored by FP1 (3D swimming) and FP2 (entering the wreck)'
+  U2: CR4, VP2 | openings and interior to CR4; rusted, overgrown look already VP2
+  U3: CR2
+  U4: CR5 | presence to CR5; density and size already VP3
+  U5: CR1, CR3 | reef form to CR1; two-zone layout (cross) to CR3
+  FP1: FP1, FP3 | swimming the site stays FP1; the play suggestion about reaching the school and the turtle to FP3
+  FP2: CR3, CR4, FP2 | placement on open sand to CR3; openings to CR4; entering stays FP2
+  FP3: 'removed: user modification (dolphins), moved to the Editing task (editing_seed.yaml)'
+  VP1: VP1
+  VP2: VP2, CR4 | open beams and openings moved to CR4
+  VP3: CR2 | which wreck shape exists (one ship, bow end) is content
+  VP4: CR1 | which reef forms exist (slope, wall) is content
+  VP5: CR5, FP3, VP3 | presence to CR5; being reached up close (all around the player, right beside the turtle) to FP3; the look stays VP3
+provenance:
+  source_yaml: T-HY-vid_22c94960e3ee.t1.yaml
+  source_sha256: 56dbf1048ab148d00dfa188e87b88c3db24efb967f811f636c1e145cceddcea5
+  size_waiver: null
+  size_max: null
+  sources:
+  - refs:
+    - img01
+    - img02
+    - img03
+    - img04
+    - img05
+    - img06
+    images:
+    - hybrid/q08_ref0

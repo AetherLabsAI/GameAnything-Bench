@@ -1,0 +1,272 @@
+# GameAnything-Bench scoring material: never shown to agents during a trial.
+task_id: T-VO-vid_d23381b77428.t2
+source_inventory:
+- '00:59.0-00:59.5 close-up: double wooden doors with frosted glass lettered ''DEPARTMENT OF FAMILY REUNIONS''; a skeleton guard in a purple-blue
+  uniform and cap pushes both doors open with bony hands'
+- '01:00.0-01:01.5 the doors open onto a grand hall: glass skylight, chandeliers, stained-glass windows, wooden counters along the sides, black-and-white
+  checkered floor, crowds of skeletons in colourful clothes walking; orange text overlay ''INVITE YOU ON A JOURNEY'''
+- '01:02.0-01:02.5 close-up: the boy (a living human: brown skin, black hair, red hoodie) looks startled; beside him a skeleton woman in a blue-striped
+  shawl with painted skull face; a green lamp blurred behind'
+- 01:03.0-01:04.5 a skeleton woman with a black hair bun, painted eye make-up and a purple ruffled dress leans forward and speaks sharply, hands
+  on her knees, in a wood-panelled office
+- '01:05.0-01:05.5 wide shot of an office with tall arched night windows, shelves and paper piles: a group of skeletons stands together (the woman
+  in purple, a short skeleton with a moustache, a woman in a red shawl, tall skeletons in brown aprons, a small figure with a green visor)'
+- 01:06.0-01:07.0 a skeleton clerk with a green eyeshade visor and white shirt sits at a desk reading a clipboard; on the desk a typewriter, a
+  black rotary phone, a tall stack of papers, a green banker's lamp and a plate of sweet bread; at 01:07.0 he looks up and gestures with an open
+  hand
+- 01:07.5-01:09.0 black card, orange text 'THAT CONNECTS US ALL'; it dissolves into an altar with candles and orange marigold petals
+- '01:09.5 the boy''s hand holds an old photograph over the altar: a woman, a small girl and a man in a pale suit holding a guitar'
+- '01:10.0-01:10.5 close-up of the photo: the little girl and the man in a pale embroidered suit; the man''s head is torn off the photo; his guitar
+  has a skull-shaped headstock'
+- 01:11.0-01:11.5 the boy looks at a small bright glowing object held out toward him, a skeleton hand blurred in the foreground
+- 01:12.0 the skeleton woman in purple holds up a small glowing golden object (a petal-like glowing light) between her fingers toward the boy
+- '01:12.5 close-up: the boy''s finger reaches toward the glowing object held by skeleton fingers; the outcome is not shown'
+- 01:13.0 black frame; 01:13.5 fade-in on a dark plaza with a neon sign
+- '01:14.0-01:14.5 wide shot: a stone plaza with a wide path of orange marigold petals, lanterns and crowds of skeletons, leading to a station-like
+  building with teal domes and a pink neon arch ''BIENVENIDOS''; a lit tower city rises behind'
+- '01:15.0-01:15.5 a skeleton officer in a teal uniform and cap stands behind a counter window under a wrought-iron arch, papers pinned on the
+  wall behind, and gestures to the arrivals; foreground: a skeleton in a straw hat and a woman in pink'
+- '01:16.0-01:19.0 reverse shot over the officer''s shoulder: a counter with a black rotary phone; facing him the family group (woman in a striped
+  shawl, short moustached skeleton in a sombrero, a woman in teal, tall skeletons in brown aprons); the moustached skeleton speaks (01:17.5);
+  at 01:18.5-01:19.0 the boy, hood up, appears among them between the skeletons'
+- '01:19.5-01:20.2 close-up: the boy, wide-eyed, held by the shoulders by aproned skeletons standing behind him'
+- 'text overlays inside the range: ''INVITE YOU ON A JOURNEY'' (01:00.0-01:01.5), ''THAT CONNECTS US ALL'' (01:07.5-01:09.0); no on-screen game
+  UI (film footage)'
+- 'speech (Whisper, timing approximate, speakers not verified unless noted): ''What is going on?'' (01:03.1-01:05.0, over the woman in purple
+  speaking); ''Remind me how I know you.'' (01:05.1-01:06.4, over the family group); ''They''re your family.'' (01:06.6-01:07.3, over the clerk
+  gesturing; speaker not verified); ''We have to get you back home.'' (01:08.1-01:12.3, over the photo and the glowing object); ''Welcome.'' (01:14.0-01:14.6,
+  over the plaza); ''Anything to declare?'' (01:15.3-01:16.4, the officer); ''As a matter of fact, yes.'' (01:16.6-01:18.9, from the family side,
+  as the boy appears)'
+- 'audio otherwise: trailer score / effects under the dialogue are not described in the material and are not scored'
+- 'not shown: how the boy got there, what the glowing object does, what the officer does after the answer; the order of the office and the checkpoint
+  scenes in the story is not established (montage)'
+instructions_meta:
+  requirement_groups:
+    opening and progression:
+    - CR1
+    - FP1
+    - FP4
+    character encounters:
+    - CR2
+    - FP2
+    turning-point interaction:
+    - CR6
+    - FP3
+    key moments and places:
+    - CR3
+    - CR4
+    - CR5
+    - VP1
+    - VP2
+    cast and style:
+    - VP3
+  explicit_requirements:
+  - type: specify
+    text: The skeletons I keep running into should turn out to be my own family, even though I don't recognise any of them at first.
+    covers:
+    - CR2
+rubric:
+  content_realization:
+  - id: CR1
+    item: 'The story''s premise: the player character is a living boy stranded among the skeleton dead who has to get back home'
+    anchors:
+      '1': the game establishes the player as a living one stranded in the land of the dead and makes returning him home the goal that follows
+        from it
+      '0.5': 'only one of the two is established: the player is a living one among the dead but there is no go-home goal, or there is a go-home
+        goal but the player is not a living one among the dead'
+      '0': 'the premise is missing: neither the player as a living one among the dead nor a go-home goal'
+    evidence:
+    - - 01:02
+      - 01:03
+    - - 01:08
+      - 01:13
+    - - 01:18
+      - 01:20
+  - id: CR2
+    item: A group of skeletons the player meets turns out to be the player's own family, whom the player does not recognise at first
+    anchors:
+      '1': a skeleton group is identified in the game as the player's family, after the player first meets them as strangers
+      '0.5': the skeletons are called his family without the first non-recognition, or they stay unknown strangers whose kinship is only hinted
+      '0': missing, or the skeletons are strangers or enemies
+    evidence:
+    - - 01:02
+      - 01:08
+    - - 01:16
+      - 01:20
+  - id: CR3
+    item: The land of the dead has a Department of Family Reunions, a grand hall of the dead with an office where a skeleton clerk handles the
+      family's paperwork
+    anchors:
+      '1': a place recognisable as the family-reunions department of the dead, with a clerk at work on papers in an office
+      '0.5': an official building or a clerk, but not recognisable as a family-reunions office
+      '0': missing
+    evidence:
+    - - 00:59
+      - 01:01
+    - - 01:05
+      - 01:07
+  - id: CR4
+    item: 'An arrival checkpoint: a marigold-petal path crosses a plaza of the dead to a welcome station, where a uniformed skeleton officer at
+      a counter controls the arrivals'
+    anchors:
+      '1': plaza, petal path and welcome station connected in one layout, with an officer's counter where arrivals are checked
+      '0.5': the counter with an officer or the plaza alone, or the two not connected
+      '0': missing
+    evidence:
+    - - 01:13
+      - 01:16
+    - - 01:16
+      - 01:19
+  - id: CR5
+    item: An old family photo from the family altar ties the player to the family's past; in it a guitar player's identity is missing, so who
+      he is stays a mystery
+    anchors:
+      '1': a family photo found at a family altar is part of the story, linking the player to the family, with the guitar player's identity unknown
+      '0.5': a photo without the altar / family link, or without the unknown guitar player
+      '0': missing
+    evidence:
+    - - 01:07
+      - 01:11
+  - id: CR6
+    item: 'Turning point at the arrival checkpoint: asked by the officer what they have to declare, the family answers yes and brings the living
+      boy forward, the one who does not belong among the dead (no outcome is shown)'
+    anchors:
+      '1': at the checkpoint, the question of what is declared leads to the family presenting the living player as the one out of place among
+        the dead
+      '0.5': the checkpoint questioning without the player being presented, or the player presented without the declaration question
+      '0': missing
+    evidence:
+    - - 01:15
+      - 01:20
+  functions_playability:
+  - id: FP1
+    item: 'A clear start: the experience opens with the player arriving in a place of the dead (for example at the doors of an official building,
+      as in the clip), so where the player is and what to do first are clear'
+    anchors:
+      '1': the opening makes clear where the player is and points clearly to a first step that starts the story
+      '0.5': an opening exists but it is unclear where the player is or what to do first
+      '0': no recognisable start
+    evidence:
+    - - 00:59
+      - 01:02
+  - id: FP2
+    item: 'Story through encounters: the player meets the family and the officials of the dead as encounters the player reaches and triggers,
+      and each acknowledges the player and moves the story on'
+    anchors:
+      '1': encounters with the family and with officials are reachable, are started by the player and give clear feedback that moves the story
+        on
+      '0.5': encounters are present but are only scenery, or triggering them changes nothing
+      '0': no story encounters
+    evidence:
+    - - 01:02
+      - 01:08
+    - - 01:15
+      - 01:20
+  - id: FP3
+    item: 'A gate the player must pass: reaching the officials of the dead starts a check of the arrivals in which the player, a living one among
+      the dead, is at issue; the player can respond, and the officials react so play continues'
+    anchors:
+      '1': reaching the officials starts the check, the player as a living one is what is at issue, the player can respond, and the officials
+        react in some way so play continues
+      '0.5': the check exists but the player cannot respond, or the response has no reaction, or it has nothing to do with the player being alive
+      '0': no such gate
+    evidence:
+    - - 01:15
+      - 01:20
+  - id: FP4
+    item: 'A coherent journey: the go-home goal frames the encounters, which form one play-through with clear milestones, feedback at each step
+      and no dead end; the order between scenes is the agent''s choice'
+    anchors:
+      '1': the chosen steps are all reachable in one play-through in a sensible order toward the goal, with feedback at each step, and the player
+        can go on or reach an end afterwards
+      '0.5': the steps exist but are disconnected, or one step blocks progress
+      '0': isolated scenes with no progression
+    evidence:
+    - - 00:59
+      - 01:20
+  visual_presentation:
+  - id: VP1
+    cat: key_moment
+    keyframes:
+    - '00:59.0'
+    - '01:00.5'
+    item: 'Entering the dead''s bureaucracy: official doors open onto a grand hall crowded with skeleton people'
+    anchors:
+      '1': doors open onto a large, grand hall visibly crowded with skeleton people
+      '0.5': the hall or the doors without the reveal of one through the other, or the hall reads as empty or generic
+      '0': none
+    evidence:
+    - - 00:59
+      - 01:02
+  - id: VP2
+    cat: key_moment
+    keyframes:
+    - '01:09.5'
+    - '01:10.5'
+    item: 'The torn family photo: the old photo from the family altar, with the guitar player''s face torn off'
+    anchors:
+      '1': the family photo is shown to the player with one figure's face visibly torn off
+      '0.5': a family photo without the tear, or the tear not readable
+      '0': none
+    evidence:
+    - - 01:09
+      - 01:11
+  - id: VP3
+    cat: style
+    keyframes:
+    - '01:05.0'
+    - '01:06.5'
+    - '01:18.5'
+    item: 'The living among the dead: a cast of individual, festively decorated skeleton people, with the living boy clearly standing out among
+      them'
+    anchors:
+      '1': varied skeleton NPCs with decorated skulls and a visibly different living player character
+      '0.5': skeletons all alike / undecorated, or the player character indistinguishable from them
+      '0': no skeleton cast
+    evidence:
+    - - 01:02
+      - 01:07
+    - - 01:16
+      - 01:20
+play_suggestions:
+  FP1:
+  - 'start a new game: is it clear where you are and what to do first?'
+  - 'wander away from the start first: is there still a pointer to the first step?'
+  FP2:
+  - 'trigger every encounter you find (relatives, officials): does each acknowledge you and move the story on?'
+  - 'accept and refuse anything offered to you, if there is an offer: is either choice handled?'
+  - 'skip an encounter and go on: does the story still make sense or is it blocked?'
+  FP3:
+  - 'approach the officials alone and with the party: does the check start?'
+  - 'try each response: do the officials react differently, and can you continue?'
+  FP4:
+  - 'play from start to end without help: note each step and whether it leads toward the go-home goal'
+  - do the steps in a different order where possible
+  robustness:
+  - 'talk to the officer or the clerk repeatedly: do lines loop sensibly?'
+  - leave an area mid-conversation and come back
+  - 'save and reload after an encounter that changes the story: is the state kept?'
+  - 'walk around and behind the counter and the desk: any stuck spots?'
+v4_map:
+  U1: CR3, CR4 (reunion paperwork -> CR3; arrival checkpoint -> CR4)
+  U2: CR1
+  U3: CR1 (living boy), CR3 (clerk), CR4 (officer)
+  U4: CR3, CR4
+  U5: CR2
+  U6: CR5
+  U7: CR6
+  FP1: FP1 (living-outsider existence part -> CR1)
+  FP2: FP2
+  FP3: FP3
+  FP4: FP4 (goal-stated part -> CR1)
+  VP1: VP1 (department label -> CR3)
+  VP2: VP2
+  VP3: CR4
+  VP4: VP3
+  VP5: 'dropped: editing (daytime modify requirement, moved to editing_seed.yaml)'
+provenance:
+  source_yaml: T-VO-vid_d23381b77428.t2.yaml
+  source_sha256: 3ca8d215261d2b3cec17150db5b1b7f79ec8e6234d852df10c0fdbb2cbb95042
+  size_waiver: null
+  size_max: null
+  sources: []

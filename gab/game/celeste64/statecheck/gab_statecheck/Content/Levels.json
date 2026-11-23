@@ -1,0 +1,18 @@
+[
+	{
+		"ID": "GAB_STATECHECK",
+		"Name": "Gab State Check",
+		"Label": "gab state self-check level",
+		"Strawberries": 0,
+		"Preview": "Postcards/ForsakenCity",
+		"Map": "gab_statecheck"
+	},
+	{
+		"ID": "0_FORSAKEN_CITY",
+		"Name": "Forsaken City",
+		"Label": "Created for the 6th anniversary\nby the Celeste Team",
+		"Strawberries": 30,
+		"Preview": "Postcards/ForsakenCity",
+		"Map": "1"
+	}
+]

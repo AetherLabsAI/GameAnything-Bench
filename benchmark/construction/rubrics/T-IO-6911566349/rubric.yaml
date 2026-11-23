@@ -1,0 +1,204 @@
+# GameAnything-Bench scoring material: never shown to agents during a trial.
+task_id: T-IO-6911566349
+source_inventory:
+- 'img01: daytime street view along one side of a road: an unbroken row of two-storey shophouses, each bay a different colour (white, cream, yellow,
+  orange); ground floors set back behind square pillars forming a covered walkway a step above the road; tall shuttered / louvred upper windows;
+  dense signboards, horizontal and vertical, in Chinese characters and Latin script; roll-down shutters and collapsible gates on some shops; scooters
+  and a car parked at the kerb'
+- 'img02: a street junction in warm low sun: a two-storey corner shophouse with a gable roof and wooden-shuttered upper windows, a corrugated
+  awning and an open coffee shop on the ground floor facing both streets; a row of shophouses continues down the left-hand street; older grey
+  shophouses on the right; a modern tower block behind; no-entry signs, a lane arrow, a cyclist and pedestrians'
+- 'img03: inside the covered walkway: a long straight passage under the upper floor, a receding run of arches on pillars to the street side, heavy
+  timber doors and grilled windows on the shop side, hanging lanterns, a patterned encaustic-tile floor; parked cars on the street to the right'
+- 'img04: an ornate pink two-storey shophouse row seen from below against a deep blue sky: decorated parapet with balustrades, arched upper windows
+  with small metal awnings, a wide stationery-shop signboard, pillared arcade on the ground floor; parked cars; a yellow row continues beyond'
+- 'img05: close front view of plainer shophouse bays in bright sun: cream and pink facades, upper floors with long louvred window bands and air-conditioner
+  units, black and blue signboards with gold / white Chinese and Latin lettering, a vertical Chinese sign, a green folding gate closing a shop,
+  the walkway a step above the street'
+- 'img06: the same bays as img05 seen at an angle along the street: the row of two-storey units with louvred upper windows, signboards and a vertical
+  sign, the green folding gate, plants in pots at the walkway edge, parked cars and two people on the road'
+instructions_meta:
+  requirement_groups:
+    street and building row:
+    - CR1
+    - CR2
+    - FP1
+    covered walkway route:
+    - CR3
+    - FP2
+    - VP1
+    junction and corner building:
+    - CR4
+    - CR5
+    - FP3
+    facade colours and signage:
+    - VP2
+    - VP3
+  explicit_requirements:
+  - type: specify
+    text: The building rows should run unbroken along the streets and meet at a junction, with a corner building that fronts onto both streets.
+    covers:
+    - CR2
+    - CR4
+    - CR5
+rubric:
+  content_realization:
+  - id: CR1
+    item: 'The buildings are shophouses: narrow two-storey terraced units, each with a shop on the ground floor and a windowed upper floor above
+      it'
+    anchors:
+      '1': narrow terraced units, each a ground-floor shop below a windowed upper floor
+      '0.5': low-rise buildings or shops, but not the shop-below / floor-above terraced unit
+      '0': no such units (e.g. detached houses, towers, generic blocks)
+    evidence:
+    - img01
+    - img04
+    - img05
+    - img06
+  - id: CR2
+    item: The shophouses stand side by side as an unbroken row that lines the street and forms its edge
+    anchors:
+      '1': a continuous built frontage of joined units along the street
+      '0.5': buildings along the street, but as separate blocks with gaps or only a short stretch
+      '0': no row of buildings lining a street
+    evidence:
+    - img01
+    - img02
+    - img04
+    - img06
+  - id: CR3
+    item: The ground floors are set back under the upper floors behind a line of pillars, forming one covered walkway along the row between the
+      shopfronts, which open onto it, and the road
+    anchors:
+      '1': a covered, pillared walkway under the upper floors, continuous from unit to unit, with the shopfronts on one side and the road on the
+        other
+      '0.5': arcades or porches on single units, or a covered front that does not lie between the shops and the road
+      '0': no covered walkway
+    evidence:
+    - img01
+    - img03
+    - img04
+    - img06
+  - id: CR4
+    item: Two shophouse streets meet at a junction, the rows of buildings continuing along both
+    anchors:
+      '1': a junction of at least two streets, each lined by shophouse rows
+      '0.5': a junction exists, but only one of the streets is lined by shophouses
+      '0': a single street, no junction
+    evidence:
+    - img02
+  - id: CR5
+    item: A corner shophouse stands at the junction with its front facing onto both streets
+    anchors:
+      '1': a corner shophouse whose front (shop and upper floor) turns to face both streets
+      '0.5': a building at the corner, but it reads as an ordinary row unit or turns a blank side to one street
+      '0': no building at the corner
+    evidence:
+    - img02
+  functions_playability:
+  - id: FP1
+    item: The player can walk along the shophouse street from end to end, the frontage bounding the street space
+    anchors:
+      '1': the street can be walked its whole length, the building row acting as its edge
+      '0.5': the street can be entered, but is too short to move along or the frontage does not bound it (the player walks through or between
+        the buildings)
+      '0': no walkable street
+    evidence:
+    - img01
+    - img04
+    - img06
+  - id: FP2
+    item: 'The covered walkway is a usable route: the player can enter it from the street and walk along it under the upper floors past one shop
+      after another'
+    anchors:
+      '1': the walkway can be entered from the street and walked continuously along several units
+      '0.5': a covered front exists but is blocked, decorative only, or only one unit long
+      '0': no walkway
+    evidence:
+    - img01
+    - img03
+    - img06
+  - id: FP3
+    item: The streets connect at the junction, so the player can turn the corner from one shophouse street into another
+    anchors:
+      '1': the player can walk from one street round the corner into the other and continue along it
+      '0.5': a junction is visible but the second street cannot be entered
+      '0': a single dead-end street
+    evidence:
+    - img02
+  visual_presentation:
+  - id: VP1
+    cat: key_moment
+    item: 'Inside the walkway: a long covered passage seen as a receding run of arches or pillars'
+    anchors:
+      '1': a covered passage whose arches / pillars recede in a row along its length
+      '0.5': a covered space, but without the receding colonnade
+      '0': none
+    evidence:
+    - img03
+  - id: VP2
+    cat: style
+    item: 'The row is a patchwork of facades: neighbouring units painted in different colours'
+    anchors:
+      '1': neighbouring units in clearly different colours along the row
+      '0.5': some colour variation, but most of the row reads as one colour
+      '0': a uniform, single-colour row
+    evidence:
+    - img01
+    - img04
+    - img05
+    - img06
+  - id: VP3
+    cat: style
+    item: 'Shop signage covers the fronts: many signboards with Chinese characters and Latin lettering'
+    anchors:
+      '1': dense signboards along the row, with both Chinese characters and Latin lettering
+      '0.5': a few signs, or signs in one script only
+      '0': no signage
+    evidence:
+    - img01
+    - img05
+    - img06
+play_suggestions:
+  FP1:
+  - 'walk the whole street end to end: does the row stay continuous, or are there gaps and floating blocks?'
+  - try to leave the street sideways through the frontage
+  FP2:
+  - enter the walkway from the road and walk it past several shops without leaving it
+  - check that the pillars and the upper floor are overhead, not a flat facade decal
+  FP3:
+  - walk to the junction and turn into the other street; can you continue along it?
+  robustness:
+  - 'run against pillars, steps and kerbs at speed: does the player get stuck or fall through?'
+  - jump onto awnings, parked vehicles and signboards
+  - 'walk past the last building at each street end: is there a sensible boundary?'
+v4_map:
+  U1: CR1
+  U2: 'dropped: duplicate of VP5 (now VP3), signage scored once as facade look'
+  U3: CR3
+  U4: CR2, CR4, CR5
+  U5: 'CR3 (merged: shops opening onto the walkway; confirmed by v4 check); route use scored by FP2'
+  FP1: CR2 (continuous row), FP1 (walking the street)
+  FP2: FP2
+  FP3: CR4 (junction exists), FP3 (turning the corner)
+  VP1: 'dropped: row form now CR1 + CR2; facade look kept in VP2, VP3'
+  VP2: VP1
+  VP3: 'CR5 (spatial: which building stands where and faces what)'
+  VP4: VP2
+  VP5: VP3
+  VP6: 'dropped: modify requirement (night setting) moved to editing_seed.yaml'
+provenance:
+  source_yaml: T-IO-6911566349.yaml
+  source_sha256: 88e931bd7e8182399d49de436862586e2197a302954cd4c2f006b63d36150d6f
+  size_waiver: null
+  size_max: null
+  sources:
+  - refs:
+    - img01
+    - img02
+    - img03
+    - img04
+    - img05
+    - img06
+    bundle: '6911566349'
+    title: 骑楼商业街：白天立面、五脚基走廊、夜里霓虹

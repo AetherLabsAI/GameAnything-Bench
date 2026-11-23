@@ -1,0 +1,257 @@
+# GameAnything-Bench scoring material: never shown to agents during a trial.
+task_id: T-TO-txt_61059729ca86.e2
+source_inventory:
+- 'c03.p001-c03.p004: morning chores aboard the We''re Here; more schooners have crept up overnight; Dan explains that the Fleet follows Disko
+  because he knows the cod; Disko studies the fish and wants to draw away and make his berth alone'
+- 'c03.p005-c03.p011: Dan asks leave to go out in a dory; Harvey is given fisherman''s clothes; Troop warns them not to visit around the Fleet;
+  the boys board the little dory Hattie S. astern'
+- 'c03.p012-c03.p023: Harvey rows badly with the heavy sea-oars; Dan tells him to row short, since a cramped oar can turn the dory over; the dory''s
+  gear (small anchor, water jugs, roding, horn, maul, gaff, gob-stick, hand-lines on reels); no sail, dories are pulled; the oar loom kicks Harvey
+  under the chin'
+- 'c03.p024-c03.p029: Manuel, a mile away, signals the depth by arm (thirty fathom); the boys bait and heave out their lines and drift, not anchoring
+  until sure of good ground; Dan lands a cod and unhooks it with the gob-stick'
+- 'c03.p030-c03.p036: Harvey''s hook brings up strawberry-bottom growth; touching it stings like nettles: only fish should be touched with bare
+  fingers; talk of wages'
+- 'c03.p037-c03.p043: Harvey hooks a big halibut, gives it line according to its strength, and the boys need twenty minutes to gaff and land it;
+  Dan reads the signs: the fish are running smaller and smaller, and everything on the Banks is signs, read right or wrong'
+- 'c03.p044-c03.p057: a pistol shot and a basket run up in the rigging call all the dories back; on the way they free Penn''s fouled anchor; Penn
+  has lost two anchors this trip and will be given a kelleg (a stone instead of an anchor, a mark of shame the whole fleet recognises) if he loses
+  another'
+- 'c03.p058-c03.p068: while rowing back Dan tells Penn''s story (the Johnstown flood, his lost memory, Uncle Salters taking him in and bringing
+  him to fish)'
+- 'c03.p069-c03.p076: back at the schooner Troop orders dressing down; Dan names the schooners that have edged up and wait on Disko; Disko says
+  they are too crowded and will leave the others to ''bait big an'' catch small''; the catch is small and level; he is waiting on the weather'
+- 'c03.p077-c03.p086: the Bank fog drops suddenly; dressing down stops, the anchor is weighed, sails are set and the schooner slips away into
+  the fog; Tom Platt and Disko recall the war'
+- 'c03.p087-c03.p094: sailing in the fog; Disko steers so waves drench Uncle Salters until he agrees to set the staysail; Salters takes Penn below
+  to play checkers'
+- 'c03.p095-c03.p118: Long Jack teaches Harvey the ropes on the cluttered deck; Harvey explains how to reef the foresail; Long Jack calls ropes
+  and Harvey must lay his hand on each at the run, enforced with a rope''s end; the crew approve'
+- 'c03.p119-c03.p130: in thick fog Tom Platt arms the deep-sea lead with tallow and casts it; ''your dipsey lead''s all the eye you''re like to
+  hev''; sixty fathom, then a quarter hour later fifty, and Disko judges they are over the nick of Green Bank'
+- 'c03.p131-c03.p141: the boys fish from the rail and land a big cod at once; the cod are covered with sea-lice, a sign they are herded by the
+  thousand and hungry, biting even on a bare hook; the anchor goes down and all hands fish from the bulwarks; boat-fishing works only until dressing
+  down begins, as heads and offal scare the fish; hauling over the freeboard is harder than from a dory'
+- 'c03.p142-c03.p152: Penn and Uncle Salters have missed the fishing over checkers, so Disko makes them clean up; the boys must bait trawl while
+  the catch is dressed down'
+- 'c03.p153-c03.p159: the boys bait the trawl tubs with cod offal; each tub holds a long line with a hook every few feet, baited and coiled so
+  it runs clear when shot from the dory; Harvey cuts his fingers; Dan explains trawling is one of Disko''s experiments'
+- 'c03.p160-c03.p167: Tom Platt and Long Jack take the tubs and buoys out in a loaded dory at dusk into a rough sea, threatening the boys if the
+  trawl is snarled; Harvey rings the bell steadily so the dory can find its way back; it returns and is hoisted aboard: ''nary snarl'''
+- 'c03.p168-c03.p173: supper; Harvey falls asleep; Penn pities Harvey''s parents; Manuel praises him; thick weather and rising wind at night;
+  the men take turns watching the wheel and the anchor'
+instructions_meta:
+  requirement_groups:
+    fishing operations:
+    - CR2
+    - FP1
+    - VP2
+    catching and keeping fish:
+    - FP2
+    finding where to fish:
+    - CR3
+    - FP3
+    - FP4
+    work with the catch:
+    - CR4
+    - FP5
+    sea play space and conditions:
+    - CR1
+    - VP1
+  explicit_requirements:
+  - type: keep
+    text: I really want the ship's signals to its boats, a recall I can spot from my boat out on the water and a sound I can row home by when
+      I can't see the ship.
+    covers:
+    - CR2
+    - FP1
+    - VP2
+  - type: specify
+    text: 'In fog, finding the fishing ground should work like in the text: you keep sounding the depth with a lead, and when the depth changes
+      from one cast to the next you know you''re over the ground, so you anchor and fish there.'
+    covers:
+    - CR3
+    - FP4
+rubric:
+  content_realization:
+  - id: CR1
+    item: 'The game contains a mother vessel on open sea that is the base of its own small boats: it lies at its berth while the boats put out
+      from it and fish at a distance around it'
+    anchors:
+      '1': a mother vessel at its berth on open water and its own small boats, which start from it and are found fishing visibly apart from it
+      '0.5': the vessel and small boats both exist, but the boats are not tied to the vessel as their base, or are never found apart from it
+      '0': no mother vessel with small boats; all fishing is done from one craft
+    evidence:
+    - c03.p002
+    - c03.p010
+    - - c03.p024
+      - c03.p025
+    - c03.p046
+    - c03.p069
+    - c03.p098
+  - id: CR2
+    item: 'The vessel has two signals to its boats: a recall that calls all boats back, and a sound signal for a boat that cannot see the vessel'
+    anchors:
+      '1': both a recall signal and a sound signal from the vessel to its boats exist in the game
+      '0.5': only one of the two signals exists
+      '0': no signal from the vessel to its boats
+    evidence:
+    - - c03.p044
+      - c03.p045
+    - - c03.p163
+      - c03.p166
+  - id: CR3
+    item: The game has a sounding lead for measuring the depth, and a fishing ground set apart from the surrounding sea by its depth
+    anchors:
+      '1': a sounding lead is present as the vessel's depth-measuring tool, and a fishing ground lies at a depth different from the water around
+        it
+      '0.5': the lead is present but no ground is set apart by depth, or a ground differs in depth but there is no lead
+      '0': no sounding lead and no depth-defined ground
+    evidence:
+    - - c03.p120
+      - c03.p130
+  - id: CR4
+    item: The catch is gathered aboard the vessel and dressed down there as a work stage of its own
+    anchors:
+      '1': the landed catch is gathered aboard and dressed down (cleaned / processed) as a distinct activity
+      '0.5': the catch is gathered aboard, but nothing is done with it beyond storing it
+      '0': no handling of the catch aboard the vessel
+    evidence:
+    - c03.p070
+    - c03.p074
+    - c03.p077
+    - c03.p151
+  functions_playability:
+  - id: FP1
+    item: 'The player can take a small boat out from the vessel, fish away from it and get back aboard, and the vessel''s signals work in play:
+      the recall brings the boats back and the sound lets a boat out of sight find the vessel'
+    anchors:
+      '1': a playable out-and-back loop between the vessel and a small boat, with the recall and the sound signal both usable to get back
+      '0.5': the out-and-back loop works, but the signals have no use in play, or only one of them does
+      '0': the small boat cannot go out from the vessel and return to it, or cannot be controlled
+    evidence:
+    - - c03.p010
+      - c03.p027
+    - - c03.p044
+      - c03.p045
+    - - c03.p069
+      - c03.p070
+    - - c03.p163
+      - c03.p166
+  - id: FP2
+    item: 'Fishing works as play: the player hooks and lands fish by their own action, and the catch is kept and accumulates as the result of
+      the outing'
+    anchors:
+      '1': fish are caught by the player's action and the catch is kept as progress
+      '0.5': fish can be caught, but the catch is not kept or does not accumulate
+      '0': no working fishing
+    evidence:
+    - - c03.p026
+      - c03.p029
+    - c03.p074
+    - c03.p141
+  - id: FP3
+    item: 'Fishing grounds differ and the catch shows it: on poor ground fish come small or few, and moving the vessel to another berth can change
+      the catch'
+    anchors:
+      '1': catch size or rate depends on where the vessel is, the player can read this from the catch, and moving changes it
+      '0.5': grounds differ but nothing in the catch shows it, or the vessel cannot be moved to a new berth
+      '0': the catch is the same everywhere
+    evidence:
+    - c03.p043
+    - - c03.p074
+      - c03.p078
+    - - c03.p133
+      - c03.p138
+  - id: FP4
+    item: 'When the player cannot see far, the fishing ground is found by sounding: each cast of the lead reports the depth where the vessel is,
+      a change of depth from one cast to the next shows the vessel is over the ground, and the vessel can anchor there and fish'
+    anchors:
+      '1': repeated casts give position-dependent depths, the change of depth marks the ground, and anchoring there and fishing yields fish
+      '0.5': soundings can be cast but the depth does not depend on position or does not mark the ground, or the ground is found but the vessel
+        cannot anchor and fish there
+      '0': soundings do not work in play
+    evidence:
+    - c03.p077
+    - - c03.p119
+      - c03.p136
+  - id: FP5
+    item: 'Dressing down drives the fish from the vessel''s side: once it starts, fishing from the side stops yielding fish'
+    anchors:
+      '1': fishing from the vessel's side yields fish before dressing down and stops yielding while or after it runs, as a consequence of the
+        dressing down itself (e.g. its waste in the water), not of an unrelated timer or switch
+      '0.5': the catch from the side only drops during dressing down, or the effect holds inconsistently
+      '0': dressing down has no effect on fishing from the side, or there is no fishing from the vessel's side
+    evidence:
+    - - c03.p136
+      - c03.p141
+  visual_presentation:
+  - id: VP1
+    cat: key_moment
+    item: 'The fog: under it, sight shrinks to a short distance around the vessel'
+    anchors:
+      '1': dense fog in which little beyond the vessel is visible
+      '0.5': fog shown only as a tint that does not limit sight
+      '0': no fog
+    evidence:
+    - - c03.p077
+      - c03.p078
+    - c03.p119
+    - c03.p132
+    - c03.p162
+  - id: VP2
+    cat: presentation
+    item: 'The vessel''s recall is visible from out on the water: a player in a small boat away from the vessel can see that it has signalled
+      the boats back'
+    anchors:
+      '1': a recall signal shown on the vessel that stays noticeable while the player is operating away from it
+      '0.5': a recall exists but is only readable close to the vessel or only through a menu / text message unrelated to the vessel
+      '0': no visible recall
+    evidence:
+    - - c03.p044
+      - c03.p045
+play_suggestions:
+  FP1:
+  - 'row out well away from the vessel, then trigger or wait for the recall: is it noticeable and can you get back?'
+  - 'go out in fog or at dusk: can you find the vessel again by its signal?'
+  FP2:
+  - 'land several fish in one outing: does the catch add up?'
+  - check that the catch is kept after returning to the vessel
+  FP3:
+  - 'fish the same place for a while, then move the vessel: does the size or rate of the catch change?'
+  - can you tell poor ground from good ground by the catch alone?
+  FP4:
+  - 'sound repeatedly while moving in fog: does the depth change with position?'
+  - 'when the depth changes, anchor and fish there; then anchor and fish somewhere else: is the ground better?'
+  FP5:
+  - 'fish from the vessel''s side, start dressing down, keep fishing: does the catch stop?'
+  - is the stop tied to the dressing down (e.g. its waste), not to a fixed time?
+  robustness:
+  - 'capsize or lose the small boat, or stay out very long: is the result sensible and can play continue?'
+  - move the vessel while boats are out
+  - sound and fish in clear weather as well as in fog
+v4_map:
+  U1: CR2 (signals exist); the working of the signals stays in FP1
+  U2: 'dropped: mechanism already scored by FP3 (catch as sign, move berth)'
+  U3: CR3 (lead and depth-defined ground exist); sounding, the depth change marking the ground, anchoring and fishing there in FP4
+  U4: CR4 (dressing down exists); its link to deck fishing, with dressing down as the cause, in FP5
+  U5: CR1
+  FP1: FP1 (behaviour); existence split to CR1 (vessel and boats) and CR2 (signals)
+  FP2: FP2
+  FP3: FP3
+  FP4: FP4 (behaviour, now including anchoring at the ground); existence split to CR3
+  FP5: FP5 (effect on deck fishing); existence of dressing down split to CR4
+  VP1: CR1 (spatial arrangement of vessel and boats)
+  VP2: VP1
+  VP3: VP2
+provenance:
+  source_yaml: T-TO-txt_61059729ca86.e2.yaml
+  source_sha256: fc19cc62061977f72b15aa21f04c9f516169d42f18f41034e8c352773f13d0de
+  size_waiver: null
+  size_max: null
+  sources:
+  - ref: t01
+    title: Captains Courageous
+    author: Rudyard Kipling
+    text_id: txt_61059729ca86
+    excerpt_id: e2

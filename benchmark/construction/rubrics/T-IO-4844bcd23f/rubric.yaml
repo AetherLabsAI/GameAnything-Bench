@@ -1,0 +1,224 @@
+# GameAnything-Bench scoring material: never shown to agents during a trial.
+task_id: T-IO-4844bcd23f
+source_inventory:
+- 'img01: daytime, a country dirt road through heath and fields (farmhouses, a pond, a windmill on a hill); an upright donkey in a blue coat,
+  red waistcoat and breeches, leaning on a walking stick, a brass trumpet at his hip, looks down at a dog in a green coat sitting at the roadside
+  with a brass horn, who looks up at him with open mouth'
+- 'img02: daytime, a farmyard gate before a thatched red-brick farmhouse; a rooster stands on top of the gatepost; below, the donkey (open mouth,
+  one hand raised) calls up to it, with a cat in a red jacket holding a flute-like pipe and the dog with his horn standing beside him: four animals
+  now, the rooster being addressed'
+- 'img03: night (moon behind trees), the side of a thatched house at the edge of dark woods with one brightly lit window; the donkey peers in
+  through the window, the dog and the rooster (a plain, unclothed bird) wait close by, the cat stands back on the path'
+- 'img04: inside, a kitchen / living room with sausages hanging from the ceiling, jars on a shelf and a table set with food; the four animals,
+  stacked on one another (donkey, dog, cat, rooster on top), burst in through the window, glass flying, donkey and dog blowing their instruments,
+  rooster with wings spread; three rough men (pointed or broad hats, sashes, a knife in one belt) flee in panic, one on his knees with hands over
+  his ears'
+- 'img05: night in the woods by a campfire; men like those from the house (the bearded one in pointed hat and red cape with arms crossed, one
+  sitting with a musket, one crouching with a sword) listen to a wide-eyed young man who points back into the dark'
+- 'img06: daytime, the same kind of kitchen (sausages from the ceiling, window, table set with cups, jug and food, a kettle, the door open to
+  green trees); the four animals in the room playing music: donkey on trumpet, dog on horn, cat on the pipe, the rooster perched on a stool'
+- 'every image: a caption strip at the bottom, legible: ''Brüder Grimm  Die Bremer Stadtmusikanten  O. Herrfurth pinx'', and the painter''s signature
+  in a corner; no other text'
+instructions_meta:
+  requirement_groups:
+    characters and party:
+    - CR1
+    - CR2
+    - FP1
+    - VP1
+    story progression and settings:
+    - CR3
+    - CR4
+    - FP2
+    turning point:
+    - FP3
+    - VP2
+    resolution and ending:
+    - CR5
+    - CR6
+    - FP4
+    - VP3
+  explicit_requirements:
+  - type: specify
+    text: After the scare, the men should hide out in the dark woods, too frightened to ever take the house back.
+    covers:
+    - CR5
+    - FP4
+rubric:
+  content_realization:
+  - id: CR1
+    item: The game contains the donkey, the dog, the cat and the rooster as the story's main characters, forming a band of travelling musicians
+    anchors:
+      '1': all four animals are present as main characters (played or met), each a distinct character, and the game presents them as a band of
+        musicians
+      '0.5': animal main characters present, but not as a band of musicians, or one of the four missing or replaced
+      '0': missing, or the main characters are not these animals
+    evidence:
+    - img01
+    - img02
+    - img04
+    - img06
+  - id: CR2
+    item: 'The band forms around the donkey: he sets out first and the others join him one after another on the road, before the house'
+    anchors:
+      '1': the donkey is the starting / central figure and the companions join him at separate points of the journey, all before the house is
+        reached
+      '0.5': the band forms during the journey, but not around the donkey, or all join at once
+      '0': the four are together from the start, or the band never forms
+    evidence:
+    - img01
+    - img02
+    - img03
+  - id: CR3
+    item: The settings run from the open country road of the journey to a lone house at the edge of dark woods, which the band reaches at night
+    anchors:
+      '1': an open rural road / countryside for the journey that leads to a separate lone house beside dark woods, reached at night
+      '0.5': both settings exist but are not connected as journey -> house, or the house is neither by woods nor reached at night
+      '0': only one setting, or neither
+    evidence:
+    - img01
+    - img02
+    - img03
+  - id: CR4
+    item: The house is occupied by a group of menacing men, the story's antagonists
+    anchors:
+      '1': a hostile group of men holds the house when the band arrives
+      '0.5': people are in the house but not shown as hostile, or only one man
+      '0': the house is empty, or no antagonists
+    evidence:
+    - img04
+    - img05
+  - id: CR5
+    item: After the scare the men hide out in the dark woods, still frightened
+    anchors:
+      '1': after the scare the game shows the men in the dark woods, away from the house, visibly or explicitly still afraid
+      '0.5': the men are shown away from the house, but not in the woods or not as afraid, or the woods scene comes before the scare
+      '0': the men simply vanish, with no hideout shown
+    evidence:
+    - img05
+  - id: CR6
+    item: 'The outcome: after the night of the scare the animals have made the house their own home'
+    anchors:
+      '1': the band is shown settled in the house as the result of the scare, after that night
+      '0.5': the animals are in the house at the end, but not as their home / result of the scare
+      '0': missing
+    evidence:
+    - img06
+    - img04
+  functions_playability:
+  - id: FP1
+    item: 'Gathering the band: the travelling party grows as other animals join through encounters on the way, and they stay with the party'
+    anchors:
+      '1': each companion joins through an encounter the player has during the journey and travels with the party afterwards
+      '0.5': companions join, but not through an encounter (e.g. simply granted), or they drop out of the party again
+      '0': no companions can join
+    evidence:
+    - img01
+    - img02
+    - img03
+  - id: FP2
+    item: 'Finding the house: the player reaches the house as the goal of the journey and discovers that the men hold it before the turning point'
+    anchors:
+      '1': the house is reached as a goal of the journey, and the player learns that the men occupy it before triggering the turning point
+      '0.5': the house is reachable, but the men are met without any discovery step, or the house is not tied to the journey
+      '0': the house cannot be reached as a goal
+    evidence:
+    - img03
+    - img04
+  - id: FP3
+    item: 'The scare: the gathered band, acting together, frightens the men out of the house by fright (a sudden noisy appearance), not by force'
+    anchors:
+      '1': a turning point the player triggers in which the band together, with noise / a sudden appearance, frightens the men into fleeing
+      '0.5': the men are removed, but by an ordinary fight, by the donkey alone, or by a cutscene the band plays no part in
+      '0': the men are never driven out
+    evidence:
+    - img04
+  - id: FP4
+    item: 'Resolution: after the scare the house stays the band''s (the men do not come back) and the story reaches a clear end or a settled state
+      from which play continues'
+    anchors:
+      '1': after the scare the men never retake the house in play, and a recognisable ending is reached
+      '0.5': the scare happens but nothing follows, or the men return with no consequence, or no clear end
+      '0': no resolution can be reached
+    evidence:
+    - img05
+    - img06
+  visual_presentation:
+  - id: VP1
+    cat: style
+    item: The band looks like a group of human-like animal musicians, each clearly recognisable as its animal
+    anchors:
+      '1': the animals are recognisable and shown as human-like musicians
+      '0.5': the animals are recognisable but shown as plain animals with no musician look
+      '0': the band is not recognisable
+    evidence:
+    - img01
+    - img02
+    - img06
+  - id: VP2
+    cat: key_moment
+    item: The scare looks like the whole band appearing at once before the men, who are visibly terrified
+    anchors:
+      '1': the band seen together in one sudden appearance and the men visibly terrified in the same moment
+      '0.5': the band appears or the men look terrified, but not both in one recognisable moment
+      '0': no such moment shown
+    evidence:
+    - img04
+  - id: VP3
+    cat: key_moment
+    item: The ending looks like the band together inside the house, playing music
+    anchors:
+      '1': the closing picture shows the band together indoors in the house, making music
+      '0.5': the band shown at the end, but not together indoors or not as musicians
+      '0': no ending shown
+    evidence:
+    - img06
+play_suggestions:
+  FP1:
+  - 'start a new game: who is in the party at first, and how does each companion join?'
+  - 'try to skip an encounter and go on: can you reach the house without the companions?'
+  FP2:
+  - 'follow the journey to the house: do you learn that the men hold it before acting?'
+  - 'walk straight in without looking: what happens?'
+  FP3:
+  - trigger the turning point with the full band and note what drives the men out
+  - 'try it with only the donkey or part of the band: does it still work?'
+  FP4:
+  - 'after the scare, wait or leave and come back: do the men return?'
+  - 'play to the end: is there a recognisable ending with the animals in the house?'
+  robustness:
+  - 'talk to the same companion twice: does it join twice or break the party?'
+  - save and reload between the scare and the ending
+  - wander away from the route mid-journey and come back
+v4_map:
+  U1: CR1
+  U2: CR4
+  U3: CR2
+  U4: FP2
+  U5: FP3
+  U6: CR5, FP4
+  U7: CR6
+  FP1: FP1
+  FP2: CR4, FP2
+  FP3: FP3
+  FP4: CR6, FP4
+  VP1: VP1
+  VP2: CR3
+  VP3: VP2
+  VP4: VP3
+  VP5: 'removed: editing (winter modify request, moved to editing_seed.yaml)'
+provenance:
+  source_yaml: T-IO-4844bcd23f.yaml
+  source_sha256: 2d4664cd8596a5aea054aa6e136db0e316af41a06e5a6c268fdfedfb01adbd88
+  size_waiver: null
+  size_max: null
+  sources:
+  - refs:
+    - img01
+    - img02
+    - img03
+    - img04
+    - img05
+    - img06
+    bundle: 4844bcd23f
+    title: 不来梅的音乐家：四只动物结伴、夜探强盗屋、吓跑强盗

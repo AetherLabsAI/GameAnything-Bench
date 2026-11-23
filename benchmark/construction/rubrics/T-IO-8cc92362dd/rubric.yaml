@@ -1,0 +1,241 @@
+# GameAnything-Bench scoring material: never shown to agents during a trial.
+task_id: T-IO-8cc92362dd
+source_inventory:
+- 'img01: a cottage yard; a boy leading a spotted cow, his mother waving at the cottage door (background); in the foreground the boy, the cow
+  on a rope, and a man in a red hood holding out a hat full of coloured beans; geese by a wooden fence. Verse panel: a poor widow and her idle
+  son have only a cow left, which must be sold for bread; Jack exchanges her for beans; his angry mother flings the beans away; next morning...'
+- 'img02: Jack climbing a huge leafy, flowering beanstalk above the rooftops; lower right, the mother in the doorway flinging beans in anger while
+  Jack watches; upper right, a boy looking out of a window; sunset behind. Verse panel: the beans have sprouted so high the top is lost in the
+  sky; Jack climbs despite his mother; after hours he reaches desert lands and bleak air, hungry, and meets a tattered, half-blind old woman'
+- 'img03: Jack, barefoot, ragged and leaning on a stick, before a tall woman in blue with keys at her belt, at the column of a grand stone building
+  with an arch and balustrade; behind, a barren stony plain at sunset with a stone trilithon, a seated figure in a pointed hat and a crouching
+  figure. Verse panel: the woman, a Fairy, tells Jack that a giant killed his father by stealth and took his riches; the giant lives in this land;
+  all is Jack''s and he must claim it; she directs him to the giant''s house'
+- 'img04: (double page) inside the giant''s house: the giant asleep in a big chair beside a table with a goblet and flask, legs stretched over
+  a tiger-skin rug; golden eggs on the floor; Jack running off with a hen in his arms toward an open door and a staircase. Verse panel: the giant''s
+  wife lets Jack in, feeds him and hides him; the giant smells fresh meat and eats; a hen lays a golden egg when he shouts ''Lay!''; when the
+  giant falls asleep Jack seizes the hen and runs'
+- 'img05: Jack on the beanstalk carrying a golden harp shaped like a winged woman; two enormous hands reach down through the leaves from above;
+  moon behind. Verse panel: Jack has taken bags of gold and silver home, then climbs again for another prize; from hiding he sees a golden harp
+  playing by the sleeping giant, grabs it and runs; the harp cries ''Master, master, stop this man!''; the giant is too tipsy to stop him'
+- 'img06: back on the ground among sunflowers: Jack holding an axe looks at the huge giant lying face-down at the foot of the cut beanstalk, his
+  legs still up in the stalk; two old women (one in a pointed hat with a staff, one in a red cloak) watch. Verse panel: Jack hurries down the
+  stalk with the harp on his back, the giant scrambles after him; Jack cuts the stalk with an axe and the giant breaks his neck; Jack settles
+  down at home, climbs no more beanstalks and is respected in the town'
+instructions_meta:
+  requirement_groups:
+    story progression and ending:
+    - CR1
+    - CR6
+    - FP1
+    characters and their roles:
+    - CR3
+    - CR4
+    places and the passage between them:
+    - CR2
+    - FP2
+    - VP1
+    key moments:
+    - CR5
+    - FP4
+    - VP2
+    climax and its resolution:
+    - FP3
+    - VP3
+  explicit_requirements:
+  - type: specify
+    text: The woman in blue should tell the boy that the giant killed his father and stole his riches, so taking the treasure back is his right.
+    covers:
+    - CR3
+rubric:
+  content_realization:
+  - id: CR1
+    item: The story opens at Jack's poor home, where the family's last cow, which has to be sold out of need, is traded for beans
+    anchors:
+      '1': the game shows the home and the cow traded for beans, with the need to sell it (poverty) made clear
+      '0.5': the beans are gained for the cow, but without the poverty that forces the sale, or the beans come another way
+      '0': missing, or the story opens differently
+    evidence:
+    - img01
+  - id: CR2
+    item: The beans grow into a giant beanstalk beside Jack's home that reaches up to a separate, barren land above, where the rest of the adventure
+      takes place
+    anchors:
+      '1': a beanstalk grown from the beans, rooted by the home, whose top leads to a distinct upper land that is bleak and barren (not just a
+        platform over the home area, not a copy of the home ground)
+      '0.5': a tall stalk or a land above exists, but the stalk does not grow from the beans or is not at the home, or the land above is not a
+        separate place or not barren
+      '0': no beanstalk, or no land above
+    evidence:
+    - img01
+    - img02
+    - img03
+    - img06
+  - id: CR3
+    item: In the land above, a woman in blue (a fairy) tells Jack that the giant killed his father and stole his riches, so the giant's treasure
+      is Jack's by right to take back, which gives him his goal
+    anchors:
+      '1': the woman in blue meets Jack above and reveals both the murder of his father and the stolen riches as the reason the treasure is his
+        to reclaim
+      '0.5': a helper directs Jack to the giant without the stolen-inheritance motive, or the motive is given without the helper
+      '0': missing; Jack simply goes to rob the giant
+    evidence:
+    - img03
+  - id: CR4
+    item: The antagonist is a huge, dangerous (man-eating) giant who lives in his house in the land above and holds the treasures
+    anchors:
+      '1': a giant far larger than Jack, presented as a deadly threat, living in a house in the upper land where the treasures are
+      '0.5': a giant is present but about Jack's size, or not a threat, or not in a house in the upper land
+      '0': no giant, or the giant is a friendly or neutral figure
+    evidence:
+    - img03
+    - img04
+    - img05
+  - id: CR5
+    item: 'Jack takes the giant''s treasures by stealth while the giant sleeps, on repeated trips up the stalk: the hen that lays golden eggs
+      on an earlier trip, the golden harp on the last'
+    anchors:
+      '1': more than one raid, each made while the giant sleeps, with the golden-egg hen taken before the golden harp, both recognisable as such
+      '0.5': a stealthy theft is present but as a single trip, with the treasures in the wrong order, or with generic treasures
+      '0': missing, or Jack fights or bargains with the giant for the treasure
+    evidence:
+    - img04
+    - img05
+  - id: CR6
+    item: 'The climax follows by cause and leads to the ending: the harp cries out to its master, which sets the giant chasing Jack; the giant
+      dies in the fall from the cut stalk, and Jack then settles at home for good'
+    anchors:
+      '1': the harp's alarm starts the giant's pursuit, the giant dies from the fall, and the story ends with Jack back at home to stay
+      '0.5': the giant's fall is present, but nothing (or something else) triggers the chase, or the ending at home is missing
+      '0': missing, or the giant is defeated another way
+    evidence:
+    - img05
+    - img06
+  functions_playability:
+  - id: FP1
+    item: 'The story is played as a progression of its key situations in order: the beans gained for the cow start it, reaching the land above
+      and reclaiming the giant''s treasures form its middle, and the giant''s defeat leads to a clear ending'
+    anchors:
+      '1': the situations follow each other in the story's order, each opened by the previous one, from the beans to a clear ending after the
+        giant's defeat
+      '0.5': several situations are present but out of order, freely skippable, or the game has no clear ending
+      '0': no story progression; an open sandbox with story elements placed in it
+    evidence:
+    - img01
+    - img03
+    - img04
+    - img05
+    - img06
+  - id: FP2
+    item: 'The beanstalk is the playable connection between the home ground and the giant''s land: the player climbs it up and comes back down
+      it'
+    anchors:
+      '1': the player climbs the stalk to reach the upper land and uses it again to return
+      '0.5': the upper land is reached by teleport, cutscene or a trivial short climb, or the way back is not by the stalk
+      '0': the stalk cannot be used to travel between the two places
+    evidence:
+    - img02
+    - img05
+    - img06
+  - id: FP3
+    item: 'The climax is a chase the player resolves: the giant pursues the player down the stalk and the player cuts the stalk so that the giant
+      falls'
+    anchors:
+      '1': a pursuit by the giant down the stalk, ended by the player's own act of cutting the stalk, after which the giant is defeated
+      '0.5': the stalk is cut or the giant falls in a cutscene without player action, or there is no pursuit
+      '0': no climax with the giant
+    evidence:
+    - img05
+    - img06
+  - id: FP4
+    item: 'The player carries out the raids in person: in the giant''s house the player gets to each treasure, takes it by their own action and
+      carries it away'
+    anchors:
+      '1': on each raid the player reaches the treasure, takes it themselves and gets away with it
+      '0.5': only one treasure is taken by the player, the other is handed over in a cutscene or message, or taking happens automatically on arrival
+      '0': the player never takes a treasure; the thefts happen only in cutscenes or text
+    evidence:
+    - img04
+    - img05
+  visual_presentation:
+  - id: VP1
+    cat: spatial
+    item: The beanstalk reads as a giant leafy plant towering far above the houses toward the sky
+    anchors:
+      '1': a recognisably plant-like, leafy stalk rising far above the houses of the home ground
+      '0.5': a tall structure that does not read as a plant, or a plant that barely rises above the houses
+      '0': none
+    evidence:
+    - img02
+    - img05
+    - img06
+  - id: VP2
+    cat: key_moment
+    item: 'Jack''s escape with a treasure: Jack seen carrying the hen or the harp away with the giant right there, asleep beside him or reaching
+      after him'
+    anchors:
+      '1': a visible moment of Jack carrying a treasure off with the giant in the same view (asleep in his house or reaching after him on the
+        stalk)
+      '0.5': the treasure is taken without being seen carried (it only appears in the inventory or a message), or the giant is not in view
+      '0': none
+    evidence:
+    - img04
+    - img05
+  - id: VP3
+    cat: key_moment
+    item: The giant lying fallen at the foot of the cut beanstalk
+    anchors:
+      '1': the giant's body down on the ground at the foot of the felled stalk
+      '0.5': the giant's defeat is only stated in text, or he simply disappears
+      '0': none
+    evidence:
+    - img06
+play_suggestions:
+  FP1:
+  - 'play from the start: what is the first goal, and what opens the next situation?'
+  - 'try to reach the giant''s land or the giant''s house before getting the beans: is it possible, and does the story still make sense?'
+  - 'walk up to the giant while he is awake: is he a threat?'
+  - 'finish the game: is there an ending scene or message after the giant falls?'
+  FP2:
+  - 'climb the stalk all the way: how long, and can you fall?'
+  - 'after a theft, go back down the stalk: does the game carry the treasure home?'
+  FP3:
+  - 'take the last treasure and climb down: does the giant follow?'
+  - 'cut the stalk too early, or never cut it: what happens to the giant?'
+  FP4:
+  - 'enter the giant''s house: can you get to the hen, and later the harp, and take it yourself?'
+  - 'take a treasure and leave the house: does the game register it and open the next step?'
+  robustness:
+  - 'die or get caught by the giant: can you continue or retry from a sensible point?'
+  - 'leave the story path (wander off, dig around the stalk) and come back: does progression still work?'
+  - 'repeat a finished step (climb again after the ending): no broken state'
+v4_map:
+  U1: CR1
+  U2: CR2 (climbing itself scored in FP2)
+  U3: CR4
+  U4: CR3
+  U5: CR5 (the player's own taking of the treasures scored in FP4)
+  U6: CR6 (chase and cutting the stalk scored in FP3)
+  FP1: FP1
+  FP2: FP2 (existence of stalk and upper land moved to CR2)
+  FP3: FP3 (harp's alarm and ending moved to CR6)
+  VP1: CR2 (rooted at home, leads up) + VP1 (plant-like look)
+  VP2: CR2 (separate, barren upper land) + CR4 (giant's house)
+  VP3: VP2 (look of the escape with a treasure); giant's size in CR4, recognisable treasures in CR5
+  VP4: VP3 (giant's size left to CR4)
+  VP5: 'dropped: editing (the requested winter look of the home ground; moved to editing_seed.yaml)'
+provenance:
+  source_yaml: T-IO-8cc92362dd.yaml
+  source_sha256: fd1cc2e4bf79f81ba4cb0419f121bce1dd7d6a9a1fb711981b8fe81a95b9564a
+  size_waiver: null
+  size_max: null
+  sources:
+  - refs:
+    - img01
+    - img02
+    - img03
+    - img04
+    - img05
+    - img06
+    bundle: 8cc92362dd
+    title: 杰克与豆茎：换豆、爬豆茎、巨人城堡、砍豆茎（克兰插图）

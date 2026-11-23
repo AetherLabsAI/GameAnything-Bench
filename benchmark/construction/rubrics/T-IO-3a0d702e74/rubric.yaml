@@ -1,0 +1,232 @@
+# GameAnything-Bench scoring material: never shown to agents during a trial.
+task_id: T-IO-3a0d702e74
+source_inventory:
+- 'img01: an adult rabbit in a long patterned dress (the mother figure) stands in a meadow with one paw raised toward four young rabbits gathered
+  in front of her, three of them in jackets (two red, one blue); the blue-jacketed one stands at the right edge; hills and trees behind, daisies
+  in the grass'
+- 'img02: the blue-jacketed young rabbit, wide-eyed and mouth open, pushes hard against a square wire-mesh fence that bulges around him; leafy
+  plants grow behind the mesh; illustrator''s signature bottom right'
+- 'img03: the blue-jacketed rabbit, in black shoes, leans relaxed against a tree trunk with his legs crossed, eating a carrot; a heap of carrots
+  and white radishes lies on the grass at his feet; open lawn and sky behind'
+- 'img04: a white rabbit (no jacket visible), terrified with eyes wide and mouth open, leaps across a wooden board or sill; flower pots with red
+  geraniums tumble and fall around him; dark background'
+- 'img05: a white rabbit hidden inside a large green watering can, only his ears, eye and part of his face showing at the top; water drops splash
+  out around him'
+- 'img06: the blue-jacketed rabbit in black shoes strides along, smiling, on a plain white background (vignette, no setting)'
+- 'not shown in any image: who or what frightens the rabbit (no pursuer, person or animal appears in img02, img04 or img05); no text inside the
+  images except the signature in img02'
+instructions_meta:
+  requirement_groups:
+    protagonist and story opening:
+    - CR1
+    - VP1
+    garden and its boundary:
+    - CR2
+    - FP1
+    garden feast:
+    - CR4
+    - FP2
+    - VP2
+    danger, flight and hiding:
+    - CR5
+    - FP3
+    - VP3
+    order of the story and its ending:
+    - CR3
+    - FP4
+    look of the settings:
+    - VP4
+  explicit_requirements:
+  - type: specify
+    text: Getting past the fence should be the only way he gets to the food he then feasts on.
+    covers:
+    - FP1
+rubric:
+  content_realization:
+  - id: CR1
+    item: 'The game contains the rabbit family of the opening: a mother rabbit with several young rabbits, the protagonist being one of her young
+      and the only one who goes on into the events that follow'
+    anchors:
+      '1': a mother rabbit and several young rabbits shown together as a family, the protagonist one of the young, and only he goes on into the
+        later events
+      '0.5': the protagonist and a family are present, but he is not one of the young, or the mother or the siblings are missing, or the siblings
+        go along with him
+      '0': no family, or a different protagonist
+    evidence:
+    - img01
+    - img02
+  - id: CR2
+    item: 'The game contains two distinct settings: the open meadow where the story opens and a cultivated garden of growing plants closed off
+      from it by a fence or similar boundary'
+    anchors:
+      '1': an open meadow / home area and a separate cultivated garden, with a boundary between them that he must pass to get from one to the
+        other
+      '0.5': a garden exists, but not set apart from where the story opens, or no boundary closes it off
+      '0': no garden setting
+    evidence:
+    - img01
+    - img02
+    - img03
+  - id: CR3
+    item: 'The game contains the story in the reference''s order: the family opening, the trespass into the garden, the feast, a sudden danger
+      he flees and hides from, and an ending with him safe and in good spirits'
+    anchors:
+      '1': all five stages present in this order, the ending showing him safe and cheerful
+      '0.5': most stages in order, but one stage missing or misplaced, or the ending not showing him safe
+      '0': the stages missing or largely out of order
+    evidence:
+    - img01
+    - img02
+    - img03
+    - img04
+    - img05
+    - img06
+  - id: CR4
+    item: The game contains garden vegetables that are the food of the protagonist's feast
+    anchors:
+      '1': vegetables belonging to the garden present as the food he feasts on
+      '0.5': food present, but not from the garden (e.g. found elsewhere) or not vegetables
+      '0': no food for a feast
+    evidence:
+    - img02
+    - img03
+  - id: CR5
+    item: The game contains a danger in the garden that turns the protagonist from carefree to terrified, and a place in the garden where he can
+      hide from it
+    anchors:
+      '1': a danger that frightens him (any source is fine) and a hiding place inside the garden
+      '0.5': a danger without a hiding place, or a hiding place with no danger, or both outside the garden
+      '0': no danger
+    evidence:
+    - img04
+    - img05
+  functions_playability:
+  - id: FP1
+    item: Getting past the garden fence is a required step and the only way to reach the garden food
+    anchors:
+      '1': the food cannot be reached before or without getting past the fence, and getting past it works
+      '0.5': the fence exists but can be bypassed (around it, or the player is placed inside), or the food is reachable from outside
+      '0': no barrier to the food
+    evidence:
+    - img02
+    - img03
+  - id: FP2
+    item: Inside the garden the player can take and eat the food, as the goal of getting in
+    anchors:
+      '1': garden food can be taken and eaten by the player, with visible feedback, as the goal of the trespass
+      '0.5': food present but only decorative, or eating it is not tied to getting into the garden
+      '0': no food can be eaten
+    evidence:
+    - img03
+  - id: FP3
+    item: The danger must be escaped, and hiding is a working way to evade it
+    anchors:
+      '1': the danger threatens the player, fleeing works, and hiding actually takes the player out of danger
+      '0.5': a danger exists but hiding does nothing, or the danger has no effect on the player
+      '0': no danger to escape
+    evidence:
+    - img04
+    - img05
+  - id: FP4
+    item: Escaping the danger brings the story to a clear, reachable end
+    anchors:
+      '1': after the escape the story reaches a recognisable end
+      '0.5': the game continues after the escape but the story has no recognisable end
+      '0': no end can be reached
+    evidence:
+    - img06
+  visual_presentation:
+  - id: VP1
+    cat: style
+    item: The protagonist looks like a young rabbit who walks upright and wears clothes, recognisable as the same character throughout
+    anchors:
+      '1': an upright, clothed young rabbit, consistent across scenes
+      '0.5': a rabbit, but not clothed or upright, or not recognisably the same character
+      '0': not a rabbit
+    evidence:
+    - img01
+    - img03
+    - img06
+  - id: VP2
+    cat: key_moment
+    item: 'The feast: the rabbit clearly enjoying plentiful garden food'
+    anchors:
+      '1': a recognisable moment of the rabbit contentedly eating an abundance of garden food
+      '0.5': eating shown, but neither contented nor plentiful, or food without the eating
+      '0': none
+    evidence:
+    - img03
+  - id: VP3
+    cat: key_moment
+    item: 'Hiding: the frightened rabbit visibly concealed in the garden, still readable to the viewer'
+    anchors:
+      '1': a recognisable moment of the frightened rabbit hidden in or behind something in the garden, still visible enough to read
+      '0.5': hiding shown only by the rabbit disappearing, or not readable as hiding
+      '0': none
+    evidence:
+    - img05
+  - id: VP4
+    cat: style
+    item: The settings look like the reference's open grassy meadow and a garden plot full of growing plants
+    anchors:
+      '1': the meadow reads as open grassland and the garden as a cultivated plot of growing plants
+      '0.5': one of the two settings looks right, but the meadow does not read as open grassland or the garden not as a cultivated plot of growing
+        plants
+      '0': neither the meadow nor the garden looks like the reference's
+    evidence:
+    - img01
+    - img02
+    - img03
+play_suggestions:
+  FP1:
+  - try to walk into the garden around or over its fence without getting past it as intended
+  - try to reach any garden food from outside the fence
+  FP2:
+  - 'eat several garden foods: is there feedback (count, animation, message)?'
+  - try to eat garden food before entering the garden
+  FP3:
+  - 'wait in the open when the danger comes: does it reach you and with what consequence?'
+  - 'hide while the danger is near: does it lose you?'
+  - 'try to flee without hiding: is that possible too?'
+  FP4:
+  - 'escape and reach the end: is it clear that the story is over and the protagonist is safe?'
+  - after the ending, can you replay or continue?
+  robustness:
+  - 'start a new game: is the protagonist first seen with the mother and the other young rabbits, and does only he set off?'
+  - 'get caught on purpose: is the result sensible and can you retry?'
+  - skip the feast and try to reach the end directly
+  - leave the garden and re-enter it mid-story
+  - 'stay hidden for a long time: does the game stay in a consistent state?'
+v4_map:
+  U1: CR1, VP1 (role as one of the young in CR1; upright clothed look in VP1)
+  U2: CR2
+  U3: CR1
+  U4: CR3
+  U5: FP1 (merged with the fence-required behaviour; explicit requirement)
+  U6: CR5
+  U7: 'CR5 (hiding place exists) | dropped: flight-and-hiding mechanism already scored by FP3'
+  FP1: CR1, CR3 (the family opening is content to find, not behaviour)
+  FP2: FP1
+  FP3: CR4, FP2 (garden food exists in CR4; taking and eating in FP2)
+  FP4: CR5, FP3 (danger and hiding place exist in CR5; escaping and hiding work in FP3)
+  FP5: FP4 (the safe, cheerful ending content goes to CR3)
+  VP1: VP1
+  VP2: CR2, VP4 (which places exist and how they are separated in CR2; the look of meadow and garden in VP4)
+  VP3: VP2
+  VP4: VP3
+  VP5: 'dropped: editing request (rainy day), moved to editing_seed.yaml'
+provenance:
+  source_yaml: T-IO-3a0d702e74.yaml
+  source_sha256: 49a7c6fea68dd18081bc6d3fc1738a5169e6175540580c1f20357eabdcb0f4c9
+  size_waiver: null
+  size_max: null
+  sources:
+  - refs:
+    - img01
+    - img02
+    - img03
+    - img04
+    - img05
+    - img06
+    bundle: 3a0d702e74
+    title: 彼得兔：钻进菜园、被追、躲进喷壶、丢外套逃回家

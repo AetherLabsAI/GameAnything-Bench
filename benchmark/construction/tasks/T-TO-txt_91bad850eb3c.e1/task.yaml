@@ -1,0 +1,15 @@
+# GameAnything-Bench task T-TO-txt_91bad850eb3c.e1 (public part). Instruction: instruction_fine.md.
+task_id: T-TO-txt_91bad850eb3c.e1
+version: '0.3'
+category: narrative_event
+modality: text
+domain: games
+track: commercial
+target_game: valheim
+references:
+- t01
+provenance:
+  pipeline: reference_curation ga_author (v3 draft -> crosscheck -> reconcile -> instruct -> explicit) -> restructure_v4
+  rules_version: v4
+  review_status: revised
+  revision: '0.3 (curator review): was T-HY-vid_2fb07a68a564.t1; video removed: a text-only task now (the escape from the underground sea and the sunlit-mountainside ending)'

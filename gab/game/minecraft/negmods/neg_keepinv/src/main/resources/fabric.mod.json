@@ -1,0 +1,2 @@
+{"schemaVersion": 1, "id": "gab_neg_keepinv", "version": "1.0.0", "name": "gab negative mod keepinv", "environment": "*",
+ "entrypoints": {"main": ["org.gab.neg.Neg_keepinv"]}, "depends": {"fabricloader": ">=0.19", "minecraft": "26.3", "fabric-api": "*"}}

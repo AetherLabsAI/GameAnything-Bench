@@ -1,0 +1,5 @@
+# optional: how a fresh start of your mod begins (all keys optional)
+mode: game          # game: in the start world with a new character | menu: the title screen
+seed: gabworld01    # the start world's seed (the world is generated with your plugins loaded)
+# world: MyWorld    # instead: your own world mod/worlds/MyWorld.fwl + MyWorld.db (saved from the dev game)
+# player: player    # the character's name

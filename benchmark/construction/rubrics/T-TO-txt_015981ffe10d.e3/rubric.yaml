@@ -1,0 +1,222 @@
+# GameAnything-Bench scoring material: never shown to agents during a trial.
+task_id: T-TO-txt_015981ffe10d.e3
+source_inventory:
+- 'c33.p001-c33.p005: Konrad steps out of a dark grotto and sees a sea; his uncle names it the Haldenwang Sea; a wide indented shore of fine sand
+  with small shells, waves and a breeze, a huge wall of cliffs rising about a hundred fathoms back from the water, its spurs forming capes and
+  promontories, a hazy horizon; the coast looks desert and wild'
+- 'c33.p006-c33.p008: the light is neither sun nor moon but a diffuse, trembling, bright white, cold glow of apparently electric origin, like
+  a permanent aurora; the ''sky'' is a vault of shifting cloud with deep shadows below and occasional bright rays between the clouds; the effect
+  is melancholy, the space felt as walled in by granite; an English captain''s hollow-earth theory is recalled'
+- 'c33.p009-c33.p013: the cavern''s width and length cannot be estimated (the shore widens out of sight, the horizon is dim), its height several
+  leagues, a cloud estimated at 12,000 feet; comparisons with the Guachara grotto and the Mammoth Cave (with a translator''s footnote); Konrad''s
+  awe and some fear'
+- 'c33.p014-c33.p020: the dense, salty air restores Konrad after forty-seven days in a narrow gallery; he leaves the grotto; his uncle proposes
+  a walk following the windings of the shore'
+- 'c33.p021-c33.p025: along the shore, on the left, huge piled rock pyramids with many waterfalls and clear streams, vapours of hot springs, streams
+  running down gentle slopes into the sea; among them the Sigurdbach, the stream that guided their journey, ends in the sea'
+- 'c33.p026-c33.p030: five hundred paces on, at the turn of a high promontory, a dense forest of umbrella-shaped growths that do not move in the
+  wind; up close, thousands of pale mushrooms thirty to forty feet high with caps as wide, packed so close that it is completely dark and chilly
+  beneath; they wander in it half an hour and come back out to the shore'
+- 'c33.p031-c33.p035: farther on, groups of tall trees with colourless foliage, giant forms of plants known from coal mines (lycopodiums, sigillaria,
+  tree ferns, lepidodendra); the uncle calls it the flora of the transition period, ''a conservatory'' and also ''a menagerie'''
+- 'c33.p036-c33.p047: dust and bones of extinct animals scattered on the ground, whole skeletons among them (mastodon jaw, deinotherium teeth,
+  megatherium femur; translator''s footnote); debate on how animals came to a granite cavern (subsidence of sedimentary soil); Konrad fears living
+  monsters in the forests or behind the crags, but no living creature appears on the barren strand'
+- 'c33.p048-c33.p051: Konrad rests at the end of a promontory beaten by spray, overlooking the whole bay; at its far end a small harbour lies
+  between pyramidal cliffs, its water calm and sheltered from the wind; deep silence on the naked rocks when the wind drops; questions about where
+  the sea ends and its opposite shore; after an hour they return along the shore to the grotto to sleep'
+- 'c34.p001-c34.p002: next morning Konrad bathes in the sea; Sigurd, the guide, cooks breakfast with water and fire, coffee'
+- 'c34.p003-c34.p019: the uncle leads them to the shore to observe high tide; the waves slowly encroach on the sand, ridges of foam show the sea
+  will rise about twelve feet; attributed to the sun and moon; talk of seas, continents and unknown fish in the earth''s interior, a plan to make
+  fishing lines'
+- 'c34.p020-c34.p033: the uncle''s readings: 350 leagues horizontally from Iceland, 35 leagues deep, compass deviation and an upward needle dip
+  (magnetic pole above them); Scotland overhead; the vault compared to bridges and cathedral arches, radius three leagues'
+- 'c34.p034-c34.p046: the uncle will not return to the surface: they will cross the sea, which must have a granite coast with fresh passages on
+  the far side (he guesses thirty or forty leagues), and set sail tomorrow on a raft; Sigurd is already hammering'
+- 'c34.p047-c34.p055: half an hour''s walk away, on the other side of the promontory that forms the little harbour, Sigurd is building a raft
+  on the sand from surturbrand (fossil northern conifers, a kind of lignite); a piece thrown into the sea sinks briefly and floats; by next evening
+  the raft (ten by five feet, planks bound with cords) is finished and floats when launched on the Haldenwang Sea'
+instructions_meta:
+  requirement_groups:
+    route and landmarks:
+    - CR2
+    - CR3
+    - CR4
+    - CR5
+    - CR6
+    - FP1
+    - VP2
+    - VP3
+    environment over time:
+    - FP2
+    sky and lighting:
+    - VP1
+    terrain and boundaries:
+    - CR1
+  explicit_requirements:
+  - type: keep
+    text: I definitely want that forest of giant mushrooms, as tall as trees, standing right on the shore.
+    covers:
+    - CR3
+    - VP2
+  - type: specify
+    text: 'Along the shore the landmarks should come in the same order as in the text: first the waterfalls and streams, then the mushroom forest
+      at the turn of a headland, then the forest of giant ancient plants, and the small sheltered harbour at the far end.'
+    covers:
+    - CR6
+rubric:
+  content_realization:
+  - id: CR1
+    item: 'The basic layout: a vast sea fills an enclosed cavern; on the near side a strip of sand runs between the water and the foot of a wall
+      of tall cliffs whose spurs run out as promontories, and the far shore of the sea is out of sight'
+    anchors:
+      '1': an underground sea inside a closed cavern, a sand shore between the water and a cliff wall with promontories, and no visible far shore
+      '0.5': an underground sea with a shore, but no cliff wall behind the beach, or the far side of the water clearly visible (a small lake)
+      '0': no underground sea, or the place is an open-air coast or a plain cave
+    evidence:
+    - - c33.p004
+      - c33.p005
+    - c33.p009
+    - c33.p049
+  - id: CR2
+    item: Waterfalls run down piled rock beside the shore and feed streams that flow into the sea
+    anchors:
+      '1': several waterfalls coming down rock masses next to the shore, with streams carrying their water down into the sea
+      '0.5': waterfalls or streams present, but only one isolated fall, or the water does not reach the sea
+      '0': no waterfalls or streams
+    evidence:
+    - - c33.p021
+      - c33.p022
+  - id: CR3
+    item: A forest of giant mushrooms as tall as trees stands on the shore
+    anchors:
+      '1': many mushrooms of tree height forming a forest on the shore, large enough to walk in among them
+      '0.5': mushrooms, but no taller than ordinary plants, only a few rather than a forest, or set away from the shore
+      '0': no mushroom forest
+    evidence:
+    - - c33.p026
+      - c33.p030
+  - id: CR4
+    item: A second forest of gigantic ancient plants stands along the shore, a separate place from the mushroom forest
+    anchors:
+      '1': a forest of giant plants that is clearly its own area, apart from the mushroom forest
+      '0.5': a second stand of plants, but small and ordinary-sized, or merged into the mushroom forest
+      '0': no second forest
+    evidence:
+    - - c33.p031
+      - c33.p033
+  - id: CR5
+    item: At the far end of the bay a small harbour of calm water lies between cliffs, sheltered from the wind and open to the sea
+    anchors:
+      '1': a small harbour at the far end of the bay, between cliffs, with clearly sheltering terrain and calm water
+      '0.5': a harbour-like spot, but exposed with no sheltering terrain, not between cliffs, or not at the end of the bay
+      '0': no harbour
+    evidence:
+    - c33.p048
+    - c34.p047
+  - id: CR6
+    item: 'Along one shore the landmarks are placed in this order: the waterfalls and streams, then the mushroom forest at the turn of a promontory,
+      then the forest of ancient plants, and the harbour at the far end'
+    anchors:
+      '1': the landmarks that are present are set along the same shore in this order, the mushroom forest beside a promontory and the harbour
+        last
+      '0.5': the landmarks that are present are not all along one shore, or two of them are swapped
+      '0': no ordered arrangement along the shore, or the order differs in more than one swap
+    evidence:
+    - - c33.p021
+      - c33.p022
+    - c33.p026
+    - c33.p031
+    - c33.p048
+    - c34.p047
+  functions_playability:
+  - id: FP1
+    item: The shore is a continuous walkable route between the sea and the cliffs that takes the player to each landmark
+    anchors:
+      '1': the player can walk the shore path from the waterfalls to the harbour without breaks and reach every landmark on the way
+      '0.5': the shore can be walked, but some landmark cannot be reached or the path is broken in places
+      '0': no traversable shore, or only a single static view
+    evidence:
+    - - c33.p020
+      - c33.p021
+    - c33.p026
+    - c33.p031
+    - c33.p048
+    - c34.p047
+  - id: FP2
+    item: 'The sea has a tide: over time the water line visibly moves up the sand of the shore'
+    anchors:
+      '1': while the player is on the shore, the water line advances up the sand (and may recede) in a way the player can see
+      '0.5': the water level changes but not over the shore (e.g. no visible effect on the beach), or only waves without any change of level
+      '0': the sea level never changes
+    evidence:
+    - - c34.p003
+      - c34.p008
+    - c34.p011
+  visual_presentation:
+  - id: VP1
+    cat: style
+    item: 'The cavern''s sky: a ceiling of clouds instead of an open sky, lit by an even, diffuse, cool white light that is not sunlight'
+    anchors:
+      '1': a cloud ceiling and a diffuse, cool white light filling the space
+      '0.5': a cloud ceiling or a diffuse cool light, but the other is missing, or the scene shows an ordinary open sky
+      '0': no distinct light or sky treatment, or a plain dark cave
+    evidence:
+    - - c33.p006
+      - c33.p007
+    - c33.p012
+  - id: VP2
+    cat: style
+    item: 'The mushroom forest looks like a forest of giant umbrellas: broad caps on thick stems standing close together'
+    anchors:
+      '1': giant mushrooms with wide umbrella-like caps, packed closely so that the caps form a roof over the ground
+      '0.5': mushrooms recognisable as such, but thinly scattered or with small caps that do not read as a canopy
+      '0': the forest does not read as mushrooms (e.g. ordinary trees re-coloured)
+    evidence:
+    - c33.p026
+    - c33.p029
+  - id: VP3
+    cat: style
+    item: 'The ancient forest looks primeval: giant plants of fern-like and club-moss-like forms, clearly unlike both ordinary trees and the mushrooms'
+    anchors:
+      '1': a forest whose plants look like giant primeval forms and is visibly different from the mushroom forest
+      '0.5': a second forest, but ordinary-looking or hard to tell apart from the mushroom forest
+      '0': no distinct look for the ancient forest
+    evidence:
+    - - c33.p031
+      - c33.p032
+play_suggestions:
+  FP1:
+  - 'walk the coast: do you pass the waterfalls and streams, the mushroom forest, the ancient forest and reach the harbour?'
+  - walk into the mushroom forest and out again to the shore
+  - walk the coast back the other way
+  FP2:
+  - 'stand on the beach and watch the water line for a while: does it move up the sand?'
+  - mark a spot near the water's edge and check later whether the water has reached it
+  robustness:
+  - try to walk through or climb the cliff wall, and walk out into the sea away from the shore
+  - leave the shore route and come back
+v4_map:
+  U1: CR1
+  U2: VP1
+  U3: CR3
+  U4: CR2, CR4, CR5, CR6
+  U5: 'dropped: mechanism already scored by FP2 (tide moving over the sand)'
+  FP1: CR6, FP1
+  FP2: FP2
+  VP1: VP1
+  VP2: CR1
+  VP3: CR3, VP2
+  VP4: CR4, VP3
+  VP5: CR5
+provenance:
+  source_yaml: T-TO-txt_015981ffe10d.e3.yaml
+  source_sha256: f88219e349e55cdb0a612b3bb7ca98c3da1a3028804f82a0ee2bf868b26e112f
+  size_waiver: null
+  size_max: null
+  sources:
+  - ref: t01
+    title: A Journey into the Interior of the Earth
+    author: Jules Verne
+    text_id: txt_015981ffe10d
+    excerpt_id: e3

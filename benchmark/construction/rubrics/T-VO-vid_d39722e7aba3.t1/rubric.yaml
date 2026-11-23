@@ -1,0 +1,297 @@
+# GameAnything-Bench scoring material: never shown to agents during a trial.
+task_id: T-VO-vid_d39722e7aba3.t1
+source_inventory:
+- '00:37.6 wide shot of a wet Manhattan avenue: traffic, traffic lights, tall buildings; a group of figures runs down the middle of the road between
+  cars'
+- '00:38.1-00:38.6 close-up: the red-caped man (high collar, dark blue tunic) runs past a shop front beside his companion (olive / green clothing)
+  and swings both hands in a casting gesture'
+- 00:39.1 the pair run along a sidewalk, away from camera, past a bike rack and a blue 'P' parking meter; a small orange glow appears ahead of
+  them
+- 00:39.6-00:41.1 a door-sized ring of orange sparks stands on the sidewalk / crosswalk ahead; the pair run toward it, silhouetted against it;
+  bikes, a yellow bin, a red 'don't walk' signal and a city bus in the background
+- 00:41.6-00:42.6 the pursuer (orange vest over dark shirt, grey ponytail, dark eye make-up) runs along the building wall and throws his arm out
+  with an open hand
+- 00:43.1 the pursuer, from behind, on the street; the spark ring is still standing far ahead in the street; the pair are not visible (whether
+  they passed through it is not shown)
+- '00:43.6-00:44.6 the whole street starts to tilt: buildings on the right lean and skew, the far end of the avenue curls up; the ring, cars,
+  a bus and pedestrians stay in place on the street'
+- 00:45.1-00:47.1 the street keeps rotating until it is sideways and then upside-down relative to the camera, the sky to the side; the ring, the
+  bus and cars stay attached to the turned street surface; small figures run near the ring
+- '00:47.6-00:51.1 inside a bus: an older passenger in a flat cap and glasses, holding a book, laughs; through the window the red-caped man and
+  the companion lean and tumble against the glass, the caped man waves his hands; the outside is turned'
+- '00:49.5-00:50.9 the only transcribed speech in range: ''That is hilarious.'' (matches the laughing passenger)'
+- '00:51.6-00:53.6 shot over the caped man''s and companion''s shoulders: the street is now a vertical wall to their side; pedestrians walk on
+  it sideways; then figures run along the building wall'
+- 00:54.1-00:55.1 the bus sideways against a building face; the caped man jumps over it, a figure stands on the bus; small fires / orange sparks
+  burst on the facade
+- '00:55.6-00:57.1 wide shot up a glass-and-stone facade: the pair run along it as if it were the ground, a small fire burning on the facade behind
+  them'
+- 00:57.6-00:59.1 the pair run toward camera across the facade (window grid as the floor); the street with parked cars hangs as a wall behind
+  them; the caped man swings his hands
+- 00:59.6-01:01.1 a figure jumps onto the facade; three pursuers (the orange-vest man, a dark-haired woman and a man in dark red) run across the
+  same facade after them
+- '01:01.6-01:02.4 low angle: the orange-vest pursuer leaps between tilted building slabs'
+- 01:02.4-01:04.4 the pursuer flies past tilted buildings; glass towers stretch, shear and warp into streaks
+- 01:05.4-01:07.4 the pair run down a slanted street / facade with cars and taxis on it; the caped man jumps
+- 01:08.4-01:09.4 a ring of orange fire hangs over the edge of a tilted building, then bursts into flame along it (who made it is not shown)
+- 01:10.4 the orange-vest pursuer, beside a man in dark red, pushes an open hand toward camera
+- 01:11.4-01:13.4 a glass skyscraper twists and peels into a curved ribbon, bending over a street with a fire truck and a lamp post
+- 01:14.4 the caped man leaps between building faces
+- 01:15.4-01:18.4 aerial view of Manhattan; at the far horizon the city curls up and over the water; a small figure falls toward the towers
+- 01:19.4-01:20.4 an elevated road with an iron railing and yellow taxis bends away at a steep angle between buildings
+- 01:21.4-01:26.4 a second, upside-down city hangs above the lower Manhattan skyline across the water, like a mirror image; a sideways tower in
+  the foreground
+- 01:27.4 the companion and the caped man fall / leap past a glass facade
+- 01:28.4-01:30.4 mirrored glass towers fold into one another; tiny figures on a tower roof
+- '01:31.4-01:37.4 slower beat: the caped man stands on a dark ledge facing a window-like opening onto a fragmented, kaleidoscopic city (pieces
+  of buildings hanging upside-down in the sky); the companion walks up beside him'
+- '01:38.4-01:40.4 close-up: the caped man, cut on the cheek, speaks / shouts; the companion looks at him (no transcript)'
+- 01:41.4-01:48.4 the pair jump off and fall down a deep canyon of towers seen from above; all buildings point toward a bright vanishing point;
+  cranes on the rooftops
+- '01:49.4-01:55.4 dark, blurred shots: the caped man and companion fall past walls and land in a dark scaffold shaft with metal ladders; the
+  companion crouches over the fallen caped man'
+- 01:56.4 near black
+- 01:57.4-01:58.4 two pursuers in dark red (a man and a woman with sunglasses) walk along a railed metal walkway under an ornate gothic arch
+- 01:59.4-02:00.4 a pursuer looks down; wide shot of tangled metal stairs and walkways with a subway-style platform edge (yellow safety strip),
+  a traffic light attached at an angle; figures on the walkways
+- 02:01.4-02:02.4 the caped man runs along a railed walkway toward camera beneath a gothic rose window and ribbed spires; traffic lights hang
+  from the structure
+- 02:03.4-02:04.4 the caped man looks back over his shoulder; the fragmented city fills the sky behind
+- '02:05.4-02:09.4 fast, tilted shots: the caped man runs and climbs down tilted fire-escape stairs and railings'
+- 02:10.4-02:11.4 figures run along a beam silhouetted against the fragmented sky
+- 02:12.4-02:16.4 zig-zag metal stairs and catwalks with pipes, a torn poster wall and a yellow taxi stuck at an angle; the caped man runs down
+  them and drops between levels
+- 'audio: the transcript has only ''That is hilarious.'' (00:49.5-00:50.9); the caped man speaks at 01:38-01:40 without a transcript; music and
+  effects are not available in the material'
+- 'not shown: whether anyone passes through the spark ring, what exactly triggers the street rotation or the fire ring, a capture or an end of
+  the chase'
+instructions_meta:
+  requirement_groups:
+    player ability and run goal:
+    - FP1
+    - VP1
+    changing world:
+    - CR2
+    - FP2
+    - FP5
+    movement through the changed space:
+    - CR3
+    - FP3
+    - VP2
+    pursuit:
+    - CR1
+    - FP4
+    play space look:
+    - VP3
+  explicit_requirements:
+  - type: keep
+    text: I definitely want to keep that glowing orange ring portal the player opens with a casting move just ahead of them, which stays where
+      it opened and is what they run toward.
+    covers:
+    - FP1
+    - VP1
+  - type: specify
+    text: 'Split the powers like in the clip: the pursuers are the ones who bend the world, so right after one of them pushes out an open hand
+      the city starts to twist, while the player''s side only opens the portal and runs.'
+    covers:
+    - CR1
+    - FP2
+rubric:
+  content_realization:
+  - id: CR1
+    item: 'Two sides with split powers: the player''s side has the portal and runs, while a group of pursuers is the side that bends the world'
+    anchors:
+      '1': pursuers exist as a side apart from the player, the world-bending power belongs to them and the portal to the player
+      '0.5': both sides exist, but the world bending belongs to neither side (a scripted event with no owner) or the player also bends the world
+      '0': no pursuing side, or the world bending is the player's power
+    evidence:
+    - - '00:38.1'
+      - '00:40.1'
+    - - '00:41.6'
+      - '00:44.6'
+    - - '00:59.6'
+      - '01:01.1'
+    - - '01:10.4'
+      - '01:13.4'
+  - id: CR2
+    item: 'The street that turns: the chase starts on a city street lined with building facades and carrying vehicles and street fixtures, the
+      section that later turns over so its facades become ground'
+    anchors:
+      '1': a recognisable city street with facades along it and vehicles / fixtures on it, the place where the run starts and the turn happens
+      '0.5': a street or a town area exists, but without facades along it that could become ground, or without vehicles / fixtures on it
+      '0': no city street play space
+    evidence:
+    - - '00:37.6'
+      - '00:41.1'
+    - - '00:43.6'
+      - '00:47.1'
+  - id: CR3
+    item: 'The route through the turned city: past the turn the chase goes on over city pieces left at the angle the change put them, starting
+      with the facade that became the floor, connected into one route'
+    anchors:
+      '1': after the turn the route continues across a turned facade and on over further turned city pieces, the parts connected so the chase
+        can go on
+      '0.5': a turned facade exists but the route ends there, or turned pieces exist but are not connected into a route
+      '0': no turned-city route after the street
+    evidence:
+    - - '00:51.6'
+      - '01:01.1'
+    - - '01:59.4'
+      - '02:02.4'
+    - - '02:12.4'
+      - '02:16.4'
+  functions_playability:
+  - id: FP1
+    item: 'Portal as the target of the run: a player action opens a visible ring-shaped portal ahead of the player, it stays where it opened,
+      and it serves as the destination the player runs toward'
+    anchors:
+      '1': the player opens the ring by an action, it appears ahead and stays put, and it works as a reachable destination on the route
+      '0.5': the ring exists but is placed by the game without a player action, moves with the player, or appears where it cannot serve as a destination
+        (behind the player, out of reach)
+      '0': no portal
+    evidence:
+    - - '00:38.1'
+      - '00:43.1'
+  - id: FP2
+    item: 'A pursuer turns the world over: right after a pursuer''s open-hand push, a street section rotates visibly in steps until its walls
+      lie where the ground was, and the objects on it (portal, vehicles, props) turn with it'
+    anchors:
+      '1': a pursuer's open-hand push is followed at once by a section rotating gradually while the player is in or near it, with its objects
+        staying attached
+      '0.5': the section rotates but the push does not set it off (a timer, a zone, nobody), or the change is an instant swap or teleport to a
+        pre-built tilted copy, or objects fall off / vanish
+      '0': no rotation of the world
+    evidence:
+    - - '00:41.6'
+      - '00:47.1'
+    - - '00:54.1'
+      - '00:54.6'
+  - id: FP3
+    item: 'Running on the former wall: after the turn the player can run along the building face as ground, with the former street as a wall,
+      without sliding off or being forced back to the old ground'
+    anchors:
+      '1': the player moves freely along the turned facade and can cross it from one end to the other
+      '0.5': the facade can be stood on only in places, or movement on it is broken (constant falling, stuck)
+      '0': the player cannot stand or move on the turned surface
+    evidence:
+    - - '00:51.6'
+      - '01:01.1'
+  - id: FP4
+    item: 'Pursuit across the changed world: the pursuers follow the player along the same route, including over turned surfaces and stairs, and
+      stay close behind so the chase keeps up its pressure'
+    anchors:
+      '1': pursuers follow the player's route through the changed spaces and stay close behind
+      '0.5': pursuers follow, but stay on the old ground, stop at the change, or fall far behind / lose the player at once
+      '0': the pursuers do not follow the player, or there are none
+    evidence:
+    - - '00:41.6'
+      - '00:43.1'
+    - - '00:59.6'
+      - '01:02.4'
+    - - '01:57.4'
+      - '02:04.4'
+  - id: FP5
+    item: 'The city keeps changing as the player moves: beyond the street turn, further parts of the world bend, twist or flare up while the player
+      passes, and the player has to get through the changed shapes'
+    anchors:
+      '1': further deformations happen during play and change the route the player takes
+      '0.5': deformations exist but only as fixed scenery, or happen out of the player's reach
+      '0': the world stays as built after the first turn
+    evidence:
+    - - '01:02.4'
+      - '01:04.4'
+    - - '01:08.4'
+      - '01:13.4'
+  visual_presentation:
+  - id: VP1
+    cat: key_moment
+    keyframes:
+    - '00:40.1'
+    - '00:41.1'
+    item: 'The portal moment: a bright orange ring of sparks, about door height, standing in a city street with the runners silhouetted against
+      it'
+    anchors:
+      '1': a glowing, sparking ring of door size in a street, readable with the player in front of it
+      '0.5': a portal is there but not ring-shaped, not glowing, or far off the street scale
+      '0': no visible portal
+    evidence:
+    - - '00:39.6'
+      - '00:41.1'
+  - id: VP2
+    cat: presentation
+    item: 'The new orientation is readable: while the player runs on a turned surface, the former ground with its vehicles and fixtures stays
+      in view as a wall or ceiling, so the player can see which way the world has turned'
+    anchors:
+      '1': the former street (with recognisable vehicles / fixtures) is clearly visible as a wall or ceiling from the turned surface
+      '0.5': the turn is only inferable from the sky or the camera, or the former ground is out of view most of the time
+      '0': the turned state cannot be told from an ordinary level
+    evidence:
+    - - '00:51.6'
+      - '00:53.6'
+    - - '00:57.6'
+      - '00:59.1'
+  - id: VP3
+    cat: style
+    keyframes:
+    - '00:54.6'
+    - '02:00.4'
+    - '02:16.4'
+    item: 'The look of the broken world: it is built from recognisable everyday city parts (vehicles, stairs, catwalks, traffic lights, platform
+      edges) shown at wrong angles, instead of generic rubble or abstract shapes'
+    anchors:
+      '1': the play space is visibly made of recognisable city objects set at odd angles
+      '0.5': tilted structures, but plain or generic, without recognisable city objects
+      '0': none
+    evidence:
+    - - '00:54.1'
+      - '00:55.1'
+    - - '01:59.4'
+      - '02:02.4'
+    - - '02:12.4'
+      - '02:16.4'
+play_suggestions:
+  FP1:
+  - 'open the portal while standing, while running, and facing a wall: where does it appear and does it stay put when you move away?'
+  - 'run into the portal: what happens?'
+  FP2:
+  - 'watch for the pursuer''s push, then watch the rotation from inside the section: does the push set it off, is it gradual, and do the vehicles
+    and props turn with it?'
+  - trigger the turn while standing on a vehicle or near the portal
+  FP3:
+  - after the turn, run the full length of the facade and jump on it
+  - 'walk to the edge where the facade meets the old street: do you fall, slide or stay?'
+  FP4:
+  - 'stop running and let the pursuers reach you: does being caught have a consequence?'
+  - 'take an unusual path (over a vehicle, down a side stair): do the pursuers follow?'
+  - 'count the pursuers: is it one or a group?'
+  FP5:
+  - 'stand still near a deforming building, then run past it: does it change your path?'
+  robustness:
+  - 'play the run from start to end without stopping: do the sections connect, and is there a clear end or continuation?'
+  - 'miss a drop or jump in a late section: can you still go on?'
+  - open many portals in a row
+  - trigger the turn twice or leave the section before it starts
+  - 'fall off the turned facade on purpose: is there a sensible recovery?'
+  - leave the game mid-run and come back
+v4_map:
+  U1: 'FP1 | dropped: mechanism already scored by FP1 (paired); look in VP1'
+  U2: 'FP2 | dropped: mechanism already scored by FP2 (paired)'
+  U3: 'FP3 | dropped: mechanism already scored by FP3 (paired)'
+  U4: 'FP5 | dropped: mechanism already scored by FP5 (paired)'
+  U5: CR1 (powers split by side), FP2 (push-then-change trigger)
+  U6: FP4, CR1 (pursuers exist as a side)
+  U7: CR3 (turned-city route), VP3 (look)
+  FP1: FP1
+  FP2: FP2 (+ pursuer push as the trigger, from U5), CR2 (the turning street with its objects exists)
+  FP3: FP3
+  FP4: FP4, CR1 (existence of the pursuers)
+  FP5: FP5
+  VP1: VP1
+  VP2: VP2
+  VP3: VP3, CR3 (which turned-city parts exist and connect)
+provenance:
+  source_yaml: T-VO-vid_d39722e7aba3.t1.yaml
+  source_sha256: fcf316aa19d940b8a6c09ecc7ba8c105fa6500524922343608cfd021bbdba5d5
+  size_waiver: null
+  size_max: null
+  sources: []

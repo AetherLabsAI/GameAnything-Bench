@@ -1,0 +1,254 @@
+# GameAnything-Bench scoring material: never shown to agents during a trial.
+task_id: T-VO-vid_4c7cbea650bf.t1
+source_inventory:
+- '00:42-00:44.5 a skater (pink helmet, white/green top, black shorts, pink knee pads) stands with her board upright in front of large Olympic
+  rings; lower-left standings panel ''FINAL'': 1 JPN HIRAKI C. 91.98, 2 GBR S. BROWN 91.60, 3 AUS A. TREW 90.11'
+- '00:45-00:46 wide shot of the park: concrete bowls and transitions, a hip / pyramid topped with a teal deck and an Olympic-rings sign, ''PARIS
+  2024'' painted on a wall, packed grandstands, rings sculpture on the deck; at 00:46 a countdown counter appears bottom right showing 44 (it
+  stays bottom right for the whole live run)'
+- 00:46.5-00:47 air over the hip with the rings sign (counter 44 -> 43)
+- 00:47.5-00:48.5 carving the bowl walls (counter 43 -> 42)
+- 00:49-00:49.5 air / invert at the bowl coping in front of photographers (counter 41)
+- 00:50-00:52.5 carving bowl transitions, pink coping visible (counter 40 -> 38)
+- 00:53-00:54 launch from the bowl lip beside a pink-edged teal box / deck, rotating in the air over the coping, crowd and rings behind (counter
+  37 -> 36)
+- 00:54.5 lands and rides away in the bowl (counter 36)
+- '00:55-00:59.5 no counter: slow-motion close-up replay of the aerial rotation above the coping with the ''PARIS 2024'' wall (board and body
+  rotating, then landing on the wall)'
+- 'the run is edited: the counter jumps from 36 (00:54.5) to 5 (01:00); most of the run is not shown'
+- 01:00-01:01.5 air off a ledge / box edge on the far deck near the crowd and umbrellas (counter 5 -> 4 -> 3)
+- 01:02-01:02.5 rolls out in the bowl, arms out (counter 3 -> 2)
+- 01:03-01:03.5 raises both arms, then one fist (counter 2 -> 1)
+- '01:04-01:07.5 no counter: a big air off a pink-edged box beside the bowl, sampled mid-air with board and body rotating, then dropping into
+  the transition; probably a replay of the final trick from another angle (the landing is not clearly sampled)'
+- '01:08-01:13 reaction on the deck: she looks surprised and smiles, hand over mouth; lower-third ''AUS Arisa TREW'', Run 1 35.53, Run 2 90.11,
+  Run 3 93.18, orange rank marker ''1'', OMEGA logo; a man in a white Australia shirt hugs and lifts her'
+- 01:13.5 cut to another skater in a black helmet and black top on the deck (next segment begins)
+- 'on-screen throughout: Olympic rings logo top right; teal / pink / sand colour scheme of the park'
+- 'audio (offline Whisper transcript, English narration): ''Australia''s Arisa Trew came into her final run in third place. The 14-year-old attempted
+  some of the most technical tricks of any skater. It included a body varial 540, where a skater turns 180 degrees on their board while completing
+  one and a half rotations. A clean run set up her final trick. Going all out with a highly difficult trick right at the end, the gamble was worth
+  it. True moved into gold medal position.'' Crowd / music under the narration cannot be verified from the frames'
+- 'not visible: no live trick score or points counter during the run, no fall, no judges, no explicit rule text; the scoring formula is not shown;
+  the counter is last seen at 1 (01:03.5), the moment it reaches zero is not shown; the end of the whole competition (final order after all skaters)
+  is not shown'
+instructions_meta:
+  requirement_groups:
+    run structure:
+    - FP1
+    riding and air tricks:
+    - FP2
+    - FP3
+    - VP2
+    scoring and competition standing:
+    - CR2
+    - FP4
+    - FP5
+    - FP6
+    result presentation:
+    - VP3
+    skate park:
+    - CR1
+    - VP1
+  explicit_requirements:
+  - type: keep
+    text: I want the on-screen countdown clock from the clip that ticks down while I ride and ends my run when it hits zero.
+    covers:
+    - FP1
+  - type: specify
+    text: Also, like in the clip, each skater gets three runs and only their best single run counts in the standings, not the total.
+    covers:
+    - FP5
+rubric:
+  content_realization:
+  - id: CR1
+    item: The skate park play space contains a sunken bowl with coping on its edge and curved transitions, a hip / pyramid topped by a deck, and
+      raised boxes / decks at the bowl rim, joined into one rideable park
+    anchors:
+      '1': bowl with coping, hip / pyramid with a deck, and rim boxes / decks all present and connected so the player can ride from one to the
+        other
+      '0.5': only one or two of these features, or the pieces stand apart without riding connections between them
+      '0': flat arena, a street course / rails only, or an unrelated map
+    evidence:
+    - - 00:45
+      - 00:54
+    - - 01:00
+      - 01:01
+  - id: CR2
+    item: The competition has other competitors, each with a best score, listed in a standings table ordered by score that the player can see
+      before a run
+    anchors:
+      '1': several other competitors with scores, in a standings list ordered by best score, viewable before the player's run
+      '0.5': competitors exist but the list is not ordered by score, or it is never shown before a run
+      '0': no other competitors or no standings list
+    evidence:
+    - - 00:42
+      - 00:44
+    - - 01:08
+      - 01:13
+  functions_playability:
+  - id: FP1
+    item: 'Timed run: a run starts with a visible countdown of a fixed, short length that governs the remaining run time; when the time runs out
+      the run is over, and riding after that does not change the run'
+    anchors:
+      '1': a countdown starts with the run, is visible while riding, and ends the run every time the time runs out
+      '0.5': a time limit exists but is not visible, varies, or the run does not reliably end when the time runs out
+      '0': no time limit; the run ends only by quitting or never
+    evidence:
+    - - 00:46
+      - 01:03
+  - id: FP2
+    item: 'Riding a line: the player can carve curved walls to gain or keep speed, launch off an edge into the air, land on the transition and
+      keep riding without stopping'
+    anchors:
+      '1': speed gained from transitions, launches off edges, and landings that continue the line
+      '0.5': movement and jumps exist, but speed does not come from the walls or every landing stops the player
+      '0': plain walking / running with no launch from obstacles
+    evidence:
+    - - 00:46
+      - 00:54
+    - - 01:00
+      - 01:02
+  - id: FP3
+    item: 'Air tricks: while airborne the player controls rotation tricks, and different tricks can be told apart'
+    anchors:
+      '1': the player chooses and performs different rotation tricks in the air, recognisably distinct from one another
+      '0.5': only one kind of trick, or tricks happen automatically without player control
+      '0': no tricks in the air
+    evidence:
+    - - 00:53
+      - 00:59
+    - - 01:04
+      - 01:07
+  - id: FP4
+    item: 'Run score: when the run ends, the player gets one run score that reflects what was performed (harder tricks and a clean run without
+      bails score higher)'
+    anchors:
+      '1': one overall score per run presented after the run, clearly higher for a run with hard, cleanly landed tricks than for an idle run or
+        one with failed / unlanded tricks
+      '0.5': a score exists but is not tied to the run end, or barely depends on what was performed
+      '0': no run score
+    evidence:
+    - - 00:46
+      - 01:09
+    - - 01:08
+      - 01:13
+  - id: FP5
+    item: 'Three runs, best counts: in one competition the player gets three runs, each scored on its own, and the best single run is what counts
+      in the standing'
+    anchors:
+      '1': three runs per competition, each keeping its own score, and the standing uses the best run score (a worse later run does not lower
+        it)
+      '0.5': several runs but not three, or the runs are scored but the standing uses their sum / average or the last run, or only a running total
+        is kept
+      '0': a single run only, or the run scores do not decide the standing at all
+    evidence:
+    - - 00:42
+      - 00:44
+    - - 01:08
+      - 01:13
+  - id: FP6
+    item: 'Standings update: after each completed run the player''s place among the competitors changes with the player''s best score (beating
+      a higher-ranked best moves the player above it), and the current placing is shown after the run'
+    anchors:
+      '1': the ranking changes correctly with the player's best score after each run, and the new placing is shown
+      '0.5': the ranking is static, ordered wrongly after a run, or the placing is not shown after the run
+      '0': the player's runs are never compared with the other competitors
+    evidence:
+    - - 00:42
+      - 00:44
+    - - 01:08
+      - 01:13
+  visual_presentation:
+  - id: VP1
+    cat: spatial
+    keyframes:
+    - '00:45.0'
+    - '00:46.5'
+    - '00:53.5'
+    item: 'Park look: the play space reads as a concrete bowl park, smooth curved walls dropping into the sunken bowl with the coping edge marked
+      in a contrasting colour, the hip and rim decks rising around it'
+    anchors:
+      '1': recognisably a concrete bowl park with curved walls and a visibly marked coping edge, the hip and decks seen around the bowl
+      '0.5': ramps / a bowl are there but look like generic blocks, or the coping edge is not visible
+      '0': does not look like a skate park
+    evidence:
+    - - 00:45
+      - 00:54
+  - id: VP2
+    cat: key_moment
+    keyframes:
+    - '00:53.5'
+    - '00:56.5'
+    - '00:57.5'
+    item: 'Aerial rotation above the coping: the rider high above the bowl edge, body and board visibly rotating in the air'
+    anchors:
+      '1': a recognisable rider (or avatar) shown airborne above an edge, visibly rotating
+      '0.5': a jump is shown but without visible rotation, or not above an edge
+      '0': no aerial moment
+    evidence:
+    - - 00:53
+      - 00:59
+  - id: VP3
+    cat: presentation
+    keyframes:
+    - '01:08.0'
+    - '01:09.5'
+    item: 'Result reveal: right after a run, one set-apart result display shows the player''s name with the scores of all runs side by side and
+      the current rank'
+    anchors:
+      '1': a distinct result display after the run with every run's score and the rank together
+      '0.5': only the latest score, or the rank without the run scores, or shown in a console / log line
+      '0': no result display
+    evidence:
+    - - 01:08
+      - 01:13
+play_suggestions:
+  FP1:
+  - 'start a run and stand still: does the countdown run and end the run when the time runs out?'
+  - 'keep riding and jumping as the time runs out: does anything still count?'
+  - 'start two runs: is the run length the same?'
+  FP2:
+  - 'ride down and up a curved wall repeatedly: does speed build or hold?'
+  - launch off the coping, a hip and a box edge; land on a slope and on flat ground
+  FP3:
+  - try each available trick input in the air
+  - 'start a trick too low to finish it: what happens?'
+  FP4:
+  - 'do one idle run and one run with several landed rotations: compare the scores'
+  - 'fail or land tricks sideways repeatedly in a run: is the score lower than a clean run?'
+  FP5:
+  - 'score a good run, then a deliberately bad run: does the standing keep the better one?'
+  - count the runs offered in one competition
+  FP6:
+  - check the standings before your first run
+  - 'beat the top score: do you move to first?'
+  - 'finish all runs: is a final placing shown? (expected of a game, not shown in the clip)'
+  robustness:
+  - 'quit or respawn in the middle of a run: is the run state sensible?'
+  - ride out of the park or onto the deck edges
+  - 'restart the competition after it ends: are old scores cleared?'
+  - 'fire weapons or use other default game actions during a run: do they break the run?'
+v4_map:
+  U1: 'dropped: mechanism already scored by FP1 (timed countdown run)'
+  U2: FP5
+  U3: 'dropped: one score after the run already scored by FP4'
+  U4: 'dropped: riding a linked line already scored by FP2'
+  U5: CR1
+  U6: CR2, FP6
+  U7: 'dropped: difficulty and clean run raising the score already scored by FP4'
+  FP1: FP1
+  FP2: FP2
+  FP3: FP3
+  FP4: FP4
+  FP5: FP5
+  FP6: CR2, FP6
+  VP1: CR1, VP1
+  VP2: VP2
+  VP3: VP3
+provenance:
+  source_yaml: T-VO-vid_4c7cbea650bf.t1.yaml
+  source_sha256: 2a66b27613731f5922a040b53bd05bfe23ec55a998706d5a0262013d3699ca08
+  size_waiver: null
+  size_max: null
+  sources: []

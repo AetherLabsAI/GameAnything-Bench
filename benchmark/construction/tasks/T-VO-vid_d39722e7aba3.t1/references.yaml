@@ -1,0 +1,44 @@
+# Reference material: fetched from the HF dataset into $GAB_MEDIA_DIR/<task>/ by `gab media fetch` (sha256 checked).
+# The agent gets the files only (no title, author, caption or source): this file is never shown to it.
+task_id: T-VO-vid_d39722e7aba3.t1
+refs:
+- id: c01
+  kind: video
+  file: clip_01.mp4
+  video_id: vid_d39722e7aba3
+  source:
+    title: DOCTOR STRANGE Clip - ＂Mirror Dimension＂ (2016) Benedict Cumberbatch [gup0iCRIvA0]
+    url: https://www.youtube.com/watch?v=gup0iCRIvA0
+    channel: null
+    youtube_id: gup0iCRIvA0
+  range:
+    start: 37.6
+    end: 62.4
+    text: 0:37.60-1:02.40
+  duration_s: 24.8
+  size_bytes: 4299941
+  format: mp4 H.264 720p, AAC audio
+  hf_path: media/T-VO-vid_d39722e7aba3.t1/clip_01.mp4
+  sha256: 8af5b28494afc25f611b26c19bdc7f22937d2a0973c4adb98be33d16ce1328d6
+  rights_note: Copyrighted film clip. Use as private reference only and do not redistribute. Do not reproduce characters, costumes or the film's
+    visual identity as assets. Transfer the mechanic, not the footage.
+- id: c02
+  kind: video
+  file: clip_02.mp4
+  video_id: vid_d39722e7aba3
+  source:
+    title: DOCTOR STRANGE Clip - ＂Mirror Dimension＂ (2016) Benedict Cumberbatch [gup0iCRIvA0]
+    url: https://www.youtube.com/watch?v=gup0iCRIvA0
+    channel: null
+    youtube_id: gup0iCRIvA0
+  range:
+    start: 62.4
+    end: 137.5
+    text: 1:02.40-2:17.50
+  duration_s: 75.1
+  size_bytes: 16479542
+  format: mp4 H.264 720p, AAC audio
+  hf_path: media/T-VO-vid_d39722e7aba3.t1/clip_02.mp4
+  sha256: bb466782a13f3faad7e001dc7062479decced0704f39684fa681d8ed87b57050
+  rights_note: Copyrighted film clip. Use as private reference only and do not redistribute. Do not reproduce characters, costumes or the film's
+    visual identity as assets. Transfer the mechanic, not the footage.

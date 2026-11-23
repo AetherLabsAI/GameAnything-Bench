@@ -1,0 +1,13 @@
+# STATE_SPEC self-check for SuperTuxKart (gab selfcheck supertuxkart --state; contract in gab/setup/selfcheck.py state_check)
+# vanilla: a fresh start = the main menu: the engine fields are there, `mod` is empty
+vanilla:
+  steps: [{do: wait, seconds: 3}]
+  engine: [screen, start, tracks_loaded, log_age_s, error_lines, source]
+  mod_allow: []
+# mod: gab_statecheck/ (one mod at mod/ itself): kart_characteristics.xml with engine power 950 -> 1400 (a tuning value),
+# one library object added to lighthouse's scene.xml (an entity on the track), lighthouse scripting.as onStart shows a
+# message; start.yaml = straight into a 1-lap race on lighthouse with 3 karts
+mod:
+  dir: gab_statecheck
+  steps: [{do: wait, seconds: 6}, {do: hold, keys: [Up], seconds: 2}]
+  expect: ["mod: gab_statecheck_candle", "mod: 1400", "engine: normal race", "engine: pos", "screen_text: GAB STATE CHECK"]

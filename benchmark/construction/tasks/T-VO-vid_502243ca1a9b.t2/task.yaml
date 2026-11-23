@@ -1,0 +1,15 @@
+# GameAnything-Bench task T-VO-vid_502243ca1a9b.t2 (public part). Instruction: instruction_fine.md.
+task_id: T-VO-vid_502243ca1a9b.t2
+version: '0.2'
+category: narrative_event
+modality: video
+domain: travel
+track: core
+target_game: flare
+references:
+- c01
+provenance:
+  pipeline: v2g2 pilot task flare__city -> converted to rubric
+    v4 (2026-11-09)
+  rules_version: v4
+  review_status: pending

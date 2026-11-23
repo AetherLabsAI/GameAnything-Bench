@@ -1,0 +1,225 @@
+# GameAnything-Bench scoring material: never shown to agents during a trial.
+task_id: T-VO-vid_c6749ac9ffcd.t1
+source_inventory:
+- '00:47-00:49 medium shot: three Minions stand behind a table with a large open book in a dark, cluttered lair; dozens of lit candles on the
+  table and shelves; a poster reading ''MONSTRAS'' with monster faces hangs behind them; the middle (one-eyed) Minion reads from the book'
+- '00:49.5-00:50 close-up of the book: the right page shows a menacing tentacle-faced, winged monster with red eyes; below it a line of text glows
+  green; the left page has circular diagrams'
+- '00:50.5-00:52 low shot from the book: the one-eyed Minion reads aloud, face lit green from the page; the two other Minions lean in at the sides'
+- '00:52.5-00:54 high wide shot: a huge hall packed with candles and clutter; the three Minions small at the book near the upper left; a chalk
+  circle in the middle of the floor starts to glow green and the glow grows'
+- 00:54.5-00:55 green smoke and lightning bolts burst up and fill the hall; a 'MINIONS MONSTERS'-style poster visible at the back
+- '00:55.5 medium shot: the three Minions at the book, papers flying, one with a sheet of paper stuck on its head'
+- '00:56-00:58 top-down shot: a green smoke cloud with lightning sweeps over the checkered floor beside the Minions; 00:58 a column of smoke rises
+  in front of the Minions'' silhouetted heads'
+- 00:58.5-01:00 the three Minions cheer with arms raised and mouths wide open while papers fly around them
+- 01:00.5-01:02.5 green smoke with debris blasts toward the camera; 01:02.5 a last green flash from the centre of the hall, seen from behind the
+  Minions
+- 01:03-01:04.5 the smoke clears into a low fog over the floor; a small green glow, then a tiny green figure stands in the middle of the hall;
+  the three Minions are seen from behind in the foreground
+- 01:05-01:05.5 the three Minions behind the book stare, hands raised, one with its mouth open
+- 01:06 cut back to the book's illustration of the large menacing tentacled monster
+- 01:06.5-01:07 the small creature stands alone on the chalk-marked floor (circle lines) among scattered papers and debris
+- '01:07.5-01:09.5 one Minion stands next to the creature and looks down at it, unimpressed; the creature: round green head, tentacles hanging
+  from its face like a beard, a small black tuft of hair, a white gown, reaching about to the Minion''s chest'
+- 01:10-01:11 the Minion squeezes the creature in a tight hug; the creature squirms and waves an arm
+- '01:11.5-01:14.5 wider shot: the Minion keeps hugging the creature at the left while the two others watch from the book at the right; the creature
+  pulls free and stands apart, the Minion stumbles'
+- 'audio (Whisper, partly unreliable): 00:44.6-00:48 ''How do you like it?'' (starts before the clip); 00:48-00:52 Minion gibberish read like
+  an incantation (''Miso soup con gomae'', ''Nate nobu daifuku''); 00:52-01:08.8 one long segment ''Noni pika monstra'' over the eruption (likely
+  music, shouting or hallucination); 01:08.8 ''What?''; 01:10.8 ''Tiny tiny babi'' (cooing during the hug); 01:12.8 ''Stop manhandling me you
+  big weirdo'' (an English protest while held, apparently by the creature); 01:14.8-01:18.8 ''So you need monsters for your movie'' (starts at
+  the very end, mostly after the clip)'
+- 'not visible: what the summoning is for (only hinted by the poster and the line after the clip), any spoken rule for the ritual, where the creature
+  goes afterwards; music and sound effects cannot be checked from the frames'
+instructions_meta:
+  requirement_groups:
+    characters:
+    - CR1
+    ritual place and event flow:
+    - CR2
+    - CR3
+    - FP3
+    ritual trigger:
+    - FP1
+    summoning event and its look:
+    - CR4
+    - FP2
+    - VP1
+    - VP2
+    aftermath between summoners and creature:
+    - CR5
+  explicit_requirements:
+  - type: keep
+    text: Keep the lair from the clip, a dark, cluttered room full of lit candles with the ritual circle chalked on the floor in the middle and
+      the book set apart at its edge.
+    covers:
+    - CR2
+  - type: specify
+    text: Just like in the clip, the summoners should be thrilled with what they summoned and fuss over it affectionately, while the creature
+      clearly doesn't want any of that.
+    covers:
+    - CR5
+rubric:
+  content_realization:
+  - id: CR1
+    item: 'The summoners: a group of Minions (or clearly Minion-like characters) who perform the ritual together at the book'
+    anchors:
+      '1': a group of Minion-like characters is present and is the one performing the summoning at the book
+      '0.5': Minion-like characters are present but not as the summoners, or the summoners are generic characters (a single NPC, unrelated villagers)
+      '0': no summoner characters
+    evidence:
+    - - 00:47
+      - 00:52
+  - id: CR2
+    item: 'The ritual place: a dark, cluttered lair full of lit candles, with a ritual circle marked on the floor in its open middle and the book
+      set apart at its edge, facing the circle'
+    anchors:
+      '1': a candle-filled, cluttered lair AND a floor circle in its middle AND the book placed apart from the circle
+      '0.5': a candle-lit room with a book but no floor circle, or a circle without the candle lair, or the book stands inside the circle
+      '0': no recognisable ritual room
+    evidence:
+    - - 00:47
+      - 00:54
+    - - 01:03
+      - 01:07
+  - id: CR3
+    item: 'The ritual unfolds in order: the incantation is read from the book -> the floor circle lights up -> an eruption of smoke and lightning
+      fills the room -> it clears -> the creature stands in the circle, where nothing stood before'
+    anchors:
+      '1': all beats in this order, with the creature revealed in the circle (not at the book) after the eruption clears
+      '0.5': the creature appears after some effect, but beats are missing or misordered, or it appears away from the circle
+      '0': no ritual sequence, or the creature is there before the ritual
+    evidence:
+    - - 00:48
+      - 00:54
+    - - 00:54
+      - 01:03
+    - - 01:03
+      - 01:07
+  - id: CR4
+    item: 'The summoned creature is a tiny, harmless-looking tentacle-faced creature, clearly smaller than its summoners: a small version of the
+      huge, menacing tentacled monster the book''s page depicts'
+    anchors:
+      '1': the book shows a fearsome tentacled monster AND the creature that appears is a small, unthreatening tentacle-faced one, smaller than
+        the summoners
+      '0.5': a small creature appears but the book's menacing monster is not shown (no contrast), or the creature lacks its tentacled face or
+        is not clearly smaller
+      '0': no creature, or it is large and threatening like the illustration
+    evidence:
+    - - 00:49
+      - 00:50
+    - - 01:03
+      - 01:12
+  - id: CR5
+    item: 'Summoners and creature after the summoning: the summoners are delighted with the result and treat the creature with affection, while
+      the creature is unwilling to accept that treatment'
+    anchors:
+      '1': a follow-up beat after the reveal shows the summoners' delight / affection AND the creature's unwillingness
+      '0.5': only one side (the summoners' affection, or the creature's unwillingness), or only cheering / a generic line
+      '0': no aftermath, or the creature is hostile to them or obeys blindly
+    evidence:
+    - - 00:58
+      - 01:00
+    - - 01:07
+      - 01:15
+  functions_playability:
+  - id: FP1
+    item: 'Ritual trigger: the summoning starts only when the player interacts with the monster book (reading / performing the incantation), at
+      the ritual place, not on its own'
+    anchors:
+      '1': the summoning begins as a direct result of the player's book interaction and does not start without it
+      '0.5': the book interaction starts it, but unreliably or not exclusively (it also starts on its own or from elsewhere)
+      '0': no player-triggered summoning, or it is triggered by something other than the book (a tile, any NPC, a timer)
+    evidence:
+    - - 00:47
+      - 00:54
+  - id: FP2
+    item: 'Summoning outcome: the ritual runs as an event that plays out and resolves on its own, after which a new creature exists in the game
+      that did not exist before'
+    anchors:
+      '1': after the event resolves, a newly created creature is present and stays present
+      '0.5': a creature results, but it was already in the world before, or pops in instantly without the event playing out
+      '0': no creature results from the ritual
+    evidence:
+    - - 00:52
+      - 01:07
+  - id: FP3
+    item: 'A coherent playable event: the player can find the ritual place and the book, the event runs from start to a clear conclusion, and
+      play continues afterwards without a soft-lock'
+    anchors:
+      '1': reachable start, a clear end, and control returns with the world in a consistent state
+      '0.5': the event completes but the start is hard to find, or control / state is inconsistent afterwards
+      '0': the event cannot be completed or the game stalls
+    evidence:
+    - - 00:47
+      - 01:15
+  visual_presentation:
+  - id: VP1
+    cat: key_moment
+    keyframes:
+    - '00:53.5'
+    - '00:54.5'
+    - '01:02.5'
+    item: 'The eruption: the ritual circle glows green and erupts into green smoke and lightning that fill the room'
+    anchors:
+      '1': a green glow at the circle and green smoke / lightning covering most of the room are clearly visible as the ritual's effect
+      '0.5': an effect plays but is small, local, or not green / not smoke-and-lightning
+      '0': no visible effect
+    evidence:
+    - - 00:52
+      - 01:03
+  - id: VP2
+    cat: style
+    keyframes:
+    - '00:47.0'
+    - '00:55.0'
+    - '01:04.0'
+    item: 'Light mood: a dark lair in warm candlelight that is flooded with saturated green during the ritual and returns to warm candlelight
+      with lingering fog afterwards'
+    anchors:
+      '1': warm candle-lit darkness, a clear shift to green during the ritual, and the return afterwards
+      '0.5': only one of the two moods, or the shift is barely visible
+      '0': neither
+    evidence:
+    - - 00:47
+      - 00:52
+    - - 00:54
+      - 01:03
+    - - 01:03
+      - 01:05
+play_suggestions:
+  FP1:
+  - 'walk around the ritual room and over the circle without touching the book: does anything start?'
+  - 'interact with the book: does the summoning start right away?'
+  FP2:
+  - 'watch the whole sequence: does it play out and resolve on its own?'
+  - 'check the game state before and after: is the creature new, and is it still there afterwards?'
+  FP3:
+  - 'start from where the player enters the area: is the way to the book clear?'
+  - 'after the event, keep playing: does control return and can you leave the room?'
+  robustness:
+  - 'interact with the book again after the summoning: is a second creature spawned or the event broken?'
+  - 'save and reload after the event: is the creature still there and the event not replayed?'
+  - try to walk into the circle while the eruption plays
+v4_map:
+  U1: FP1, CR3 | trigger scored by FP1; reading from the book is CR3's first beat
+  U2: CR4
+  U3: CR2
+  U7: CR1
+  U4: CR3
+  U5: CR4
+  U6: CR5
+  FP1: FP1
+  FP2: FP2, CR3 | appearing in the circle moved to CR3
+  FP3: CR5 | merged with U6, same aftermath property
+  FP4: FP3
+  VP1: CR2 | layout / arrangement is content, merged with U3
+  VP2: VP1
+  VP3: VP2
+provenance:
+  source_yaml: T-VO-vid_c6749ac9ffcd.t1.yaml
+  source_sha256: b024cc58fe36e861c3c898ac8901f7c2d91eda0c571004cf1b0552d8e0adc9db
+  size_waiver: null
+  size_max: null
+  sources: []

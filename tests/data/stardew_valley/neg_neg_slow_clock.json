@@ -1,0 +1,139 @@
+{
+ "player_start": {
+  "location": "FarmHouse",
+  "tile": [
+   9,
+   9
+  ],
+  "money": 500,
+  "health": 100,
+  "stamina": 270,
+  "items": [
+   [
+    "Axe",
+    1
+   ],
+   [
+    "Hoe",
+    1
+   ],
+   [
+    "Pickaxe",
+    1
+   ],
+   [
+    "Scythe",
+    1
+   ],
+   [
+    "Watering Can",
+    1
+   ]
+  ],
+  "day": "spring 1 y1",
+  "_s": 2.6
+ },
+ "menu_opens": {
+  "opens": "GameMenu",
+  "closes": true,
+  "_s": 5.7
+ },
+ "clock": {
+  "runs": true,
+  "steps": 3,
+  "sec_per_step": 14.6,
+  "_dbg": {
+   "intervals_ms": [
+    14580,
+    14628
+   ],
+   "paused": false,
+   "menu": null
+  },
+  "_s": 37.9
+ },
+ "walk": {
+  "east": 6,
+  "west": 6,
+  "rows": [
+   20,
+   20,
+   20
+  ],
+  "_s": 11.5
+ },
+ "farm_tools": {
+  "hoe_tills": true,
+  "can_waters": true,
+  "pickaxe_stone": true,
+  "scythe_weeds": true,
+  "axe_twig": true,
+  "stamina_cost": {
+   "hoe": 2,
+   "can": 2,
+   "pickaxe": 2,
+   "scythe": 0,
+   "axe": 2
+  },
+  "_s": 38.9
+ },
+ "warp_works": {
+  "to_busstop": true,
+  "busstop_tile": [
+   11,
+   23
+  ],
+  "to_farm": true,
+  "farm_tile": [
+   78,
+   17
+  ],
+  "_s": 22.2
+ },
+ "npc_talk": {
+  "dialogue": true,
+  "speaker": "Lewis",
+  "friendship_gain": 20,
+  "_dbg": {
+   "text": "So, how was your first night in the old cottage?",
+   "screen_text": "dialogue"
+  },
+  "_s": 13.0
+ },
+ "shop_buy": {
+  "shop": "SeedShop",
+  "n_items": 24,
+  "listed_price": 20,
+  "paid": 20,
+  "bought": 1,
+  "_s": 17.0
+ },
+ "sleep_next_day": {
+  "next_day": true,
+  "morning": true,
+  "location": "FarmHouse",
+  "screen": "in game",
+  "_dbg": {
+   "seconds": 5.5,
+   "time": 600,
+   "menu": null
+  },
+  "_s": 35.9
+ },
+ "save_reload": {
+  "same": true,
+  "diff": {},
+  "day": 2,
+  "location": "FarmHouse",
+  "_s": 19.9
+ },
+ "log_errors": {
+  "alive": true,
+  "crashed": [],
+  "errors": {
+   "game: Game.Initialize() caught exception initializing XACT.": 1,
+   "game: Oops! Steam achievements won't work because Steam isn't loaded. You can launch the game through Steam to fix that.": 1
+  },
+  "exceptions": 4
+ }
+}

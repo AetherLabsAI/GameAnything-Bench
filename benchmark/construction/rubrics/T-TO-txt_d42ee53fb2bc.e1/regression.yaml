@@ -1,0 +1,19 @@
+# GameAnything-Bench scoring material: never shown to agents during a trial.
+task_id: T-TO-txt_d42ee53fb2bc.e1
+game: stardew_valley
+status: pending
+picks:
+- SD-SLEEP
+- SD-CLOCK
+- SD-NPC
+- SD-SAVE
+- SD-MENU
+changed: []
+kept_borderline:
+- id: SD-SLEEP
+  note: Visions typically come at night during sleep, but the sleep cycle need not be altered.
+summary: Scrooge-like story where visions of the future can be changed
+task_checks: []
+note: 'policy (A): excluded only when the instruction explicitly requires the change; plausible side effects stay tested; adding
+  new content is never a reason to exclude. Proposed by claude-sonnet-5-5 via `gab task picks` 2026-11-06; a maintainer checks (set status: checked).
+  The evaluator tests the pool''s always items (unless in changed) + picks.'

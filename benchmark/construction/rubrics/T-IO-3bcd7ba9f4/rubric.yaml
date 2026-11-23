@@ -1,0 +1,185 @@
+# GameAnything-Bench scoring material: never shown to agents during a trial.
+task_id: T-IO-3bcd7ba9f4
+source_inventory:
+- 'img01: outdoor grass archery range by day; a row of target bosses on wooden A-frame stands, six in front with concentric ring faces (white,
+  black, blue, red, yellow centre), more plain bosses and smaller faces further back with small flags; trees behind; in the foreground a long
+  bench and a path / line across the grass parallel to the targets'
+- 'img02: range at night, lit by a floodlight; bare sandy ground; four tall white boards numbered 1, 2, 3, 4 (red circles, coloured marks on top)
+  standing side by side, a small reddish board between 2 and 3; a low fabric netting fence behind them; several arrows lying on the ground in
+  front of the boards'
+- 'img03: close-up of a target face: concentric rings white, black, blue, red, yellow; ring values 10, 9, 8, 7, 6, 5 printed to the right of the
+  centre; about six arrows (orange fletching) stuck in a tight group in the yellow centre; many old holes concentrated in the yellow and red'
+- 'img04: close-up of a ring face (blue, red, yellow) with many arrows stuck in it, mostly in the yellow and red, a few further out; a person
+  in a white shirt stands at the face reaching among the arrows (retrieving or checking them); one blurred arrow in the foreground'
+- 'img05: grey 3D rendering of a round target with concentric rings on a stand; arrows stuck at different distances from the centre: near the
+  centre, in middle rings, in the outer ring and at the rim'
+- 'img06: top-down view of grass; a small orange foam disc target with a blue centre lies flat on the ground; an arrow with yellow fletching has
+  gone through it at the blue centre (its point shows on the far side of the disc); a boot at the lower-left corner'
+instructions_meta:
+  requirement_groups:
+    aimed shooting:
+    - CR3
+    - FP1
+    shot scoring and readout:
+    - FP2
+    - VP2
+    arrow hits on the target face:
+    - CR2
+    - FP4
+    - VP1
+    range and target stations:
+    - CR1
+    continuing play:
+    - FP3
+  explicit_requirements:
+  - type: keep
+    text: I want to keep the round target faces with coloured rings around a bullseye, like in the pictures.
+    covers:
+    - CR2
+    - VP1
+  - type: specify
+    text: 'Scoring should work like in the pictures: each ring is worth more the closer it is to the centre, and an arrow scores the ring it lands
+      in.'
+    covers:
+    - CR2
+    - FP2
+rubric:
+  content_realization:
+  - id: CR1
+    item: 'The range: several separate stationary targets stand side by side, facing the place the player shoots from at a clear distance'
+    anchors:
+      '1': several side-by-side stationary targets, each a separate target, at a clear distance from where the player shoots
+      '0.5': targets present, but only a single one, or with no clear distance between them and the shooting position
+      '0': no range with targets
+    evidence:
+    - img01
+    - img02
+  - id: CR2
+    item: Each target has a round face divided into concentric scoring zones around a central bullseye
+    anchors:
+      '1': round target faces with several concentric zones around a distinct central bullseye
+      '0.5': round targets present, but with no zones, or with only a centre and one outer area
+      '0': no round target faces
+    evidence:
+    - img03
+    - img05
+  - id: CR3
+    item: 'Arrows are the projectile: the player''s shooting weapon fires visible arrows'
+    anchors:
+      '1': the player's weapon fires projectiles that are recognisably arrows
+      '0.5': the weapon fires a visible projectile that is not an arrow (e.g. a ball, a bolt of energy)
+      '0': no visible projectile (hitscan bullets or explosives only)
+    evidence:
+    - img03
+    - img04
+    - img05
+    - img06
+  functions_playability:
+  - id: FP1
+    item: 'Aimed shooting: the player aims and releases arrows from a distance, and they fly to where they were aimed, so the hit point depends
+      on the player''s skill'
+    anchors:
+      '1': the hit point follows the aim (shots aimed at the centre land there, shots aimed off-centre land off-centre)
+      '0.5': shooting works, but the hit point barely depends on the aim (auto-centre, random spread)
+      '0': no aimed shooting at the targets
+    evidence:
+    - img01
+    - img02
+    - img03
+  - id: FP2
+    item: 'Ring scoring of every shot: each hit is valued by the zone it lands in, the closer to the centre the higher'
+    anchors:
+      '1': each hit is valued by its zone with values rising toward the centre
+      '0.5': only hit / no hit counts, or the zones are not consistently valued by distance to the centre
+      '0': no scoring of shots
+    evidence:
+    - img03
+    - img05
+  - id: FP3
+    item: 'Target and station reuse: after the player has shot several times, the arrows built up on the target can be cleared and the player
+      goes on shooting at the same station'
+    anchors:
+      '1': after several arrows have hit and stayed, the face can be restored by retrieving the arrows, a clear-target action or automatic clearing
+        at the end of a round; afterwards the player can still shoot at the same station and the shots score normally
+      '0.5': the player can shoot repeatedly but there is no way to clear the built-up arrows, or the target can be cleared but afterwards shooting
+        or scoring no longer works normally
+      '0': 'no follow-up shots: only a single shot or a one-off demo'
+    evidence:
+    - img03
+    - img04
+  - id: FP4
+    item: 'Arrows persist where they hit: each arrow stays in the face at its hit point while the next arrows are shot, so the group builds up'
+    anchors:
+      '1': arrows stay visibly at their hit points and accumulate on the face as more are shot
+      '0.5': arrows stay only briefly or only the last arrow stays, or they stay but not at the point they hit
+      '0': arrows vanish on impact
+    evidence:
+    - img03
+    - img04
+    - img05
+  visual_presentation:
+  - id: VP1
+    cat: key_moment
+    item: 'The target face looks like the faces in the images: clearly distinct coloured rings around a bright central bullseye'
+    anchors:
+      '1': rings in clearly different colours, told apart at shooting distance, around a distinct bullseye
+      '0.5': rings present but in one colour or barely told apart, or a coloured face without a distinct bullseye
+      '0': no ring face visible
+    evidence:
+    - img01
+    - img03
+    - img04
+  - id: VP2
+    cat: presentation
+    item: The player can read what each shot scored
+    anchors:
+      '1': the shot's score can be read from a per-arrow score popup, a per-arrow record, or zone values on the face that can be clearly matched
+        to where this arrow landed
+      '0.5': only whether it hit or a running total is shown, or zone values are printed on the face but the zone this arrow landed in cannot
+        be made out
+      '0': no recognisable feedback on the shot's result
+    evidence:
+    - img03
+play_suggestions:
+  FP1:
+  - 'shoot several arrows at the exact centre, then several aimed deliberately wide: do the hit points follow the aim?'
+  FP2:
+  - 'land one arrow near the centre and one in an outer ring: is the centre shot worth more?'
+  - 'shoot completely past the target: does the shot score nothing?'
+  FP3:
+  - 'shoot several arrows at one target until they build up: can the stuck arrows be cleared (retrieving, a clear action or at round end), and
+    do shots at the same station still score normally afterwards?'
+  FP4:
+  - 'shoot several arrows in a row at one target: do the earlier ones stay where they hit while you shoot the next?'
+  robustness:
+  - shoot straight up or into the ground
+  - fire as fast as possible, and leave mid-play and come back
+  - 'shoot at a neighbouring target: does its hit score on that target?'
+v4_map:
+  U1: CR1, FP1 | stationary targets at a distance -> CR1; aimed ranged shooting already scored in FP1
+  U2: CR2, FP2 | concentric zones -> CR2; ring scoring rule already scored in FP2
+  U3: FP4 | arrows staying stuck is behaviour, already scored by old FP5
+  U4: CR1 | side-by-side separate targets -> range item
+  FP1: FP1, CR3 | arrows as projectile split off to CR3 (existence only); aiming and flight kept in FP1
+  FP2: FP2
+  FP3: FP3 | set structure dropped (not shown); repeated shooting with arrow removal kept
+  FP4: 'CR1 | dropped: per-target registration was padding, not shown; target existence kept in CR1'
+  FP5: FP4 | clearing clause removed (scored in FP3)
+  VP1: CR1 | spatial item about which targets exist and their arrangement moves to CR
+  VP2: VP1, CR2, FP4 | ring structure -> CR2; stuck arrows -> FP4; ring colouring look stays VP1
+  VP3: VP2
+provenance:
+  source_yaml: T-IO-3bcd7ba9f4.yaml
+  source_sha256: 673be71b6254023b7fb2431137cf6a7cfcb53e724d56a78b8682dfaac4195741
+  size_waiver: null
+  size_max: null
+  sources:
+  - refs:
+    - img01
+    - img02
+    - img03
+    - img04
+    - img05
+    - img06
+    bundle: 3bcd7ba9f4
+    title: 射箭场：距离线、编号靶位、环数计分、脱靶

@@ -1,0 +1,24 @@
+# Reference material: fetched from the HF dataset into $GAB_MEDIA_DIR/<task>/ by `gab media fetch` (sha256 checked).
+# The agent gets the files only (no title, author, caption or source): this file is never shown to it.
+task_id: T-VO-vid_c92c0366c64b.t1
+refs:
+- id: c01
+  kind: video
+  file: clip_01.mp4
+  video_id: vid_c92c0366c64b
+  source:
+    title: 05 - Burj Khalifa, Dubai - U.A.E. 🇦🇪 - by drone [4K]
+    url: null
+    channel: null
+    youtube_id: null
+  range:
+    start: 6.6
+    end: 51.1
+    text: 0:06.60-0:51.10
+  duration_s: 44.5
+  size_bytes: 17070647
+  format: mp4 H.264 720p, AAC audio
+  hf_path: media/T-VO-vid_c92c0366c64b.t1/clip_01.mp4
+  sha256: eaf61e47dcdf99f21365bf91949d1f2382a27f91ce863b39a1c29644cacf3942
+  rights_note: Third-party drone footage from a travel channel with a watermark, intro and end card. Use as a private reference only and do not
+    redistribute it. The real landmark and its design may carry architectural or trademark considerations.

@@ -1,0 +1,77 @@
+# Copied from the original pool_tuxemon.yaml (2026-10-30) + game / version / default_picks for gab.
+# default_picks: used for a task whose regression.yaml has no checked picks yet; cheap, uncorrelated probes
+# (no TX-DATA: it flags intended changes too; no TX-EVENTS next to TX-BATTLE: the story contains a trainer fight).
+# Probes: gab/game/tuxemon/probes.py (TXProbes) -- the line "Probes (origin): probes_tuxemon.py" below is the origin.
+# Base-capability pool, Tuxemon (v0.2, verified in game 2026-10-30, Tuxemon 0.4.35 = development-branch checkout, pygame-ce 2.5.7, Python 3.12)
+# Same rules as pool_minecraft.yaml: atomic base capabilities a task's change could break. Pass = same result as a vanilla
+# instance. Per task the drafter picks the 4-6 relevant ones and may add 0-2 task-specific items; a maintainer checks. Avoid
+# correlated picks: TX-DATA flags any change to a stock db entry (monster / technique / item / npc / economy ...), so a
+# balance mod fails TX-DATA together with TX-BATTLE / TX-SHOP; TX-EVENTS contains a trainer fight (it follows battle changes).
+# Mod surface: files under the game root, mostly mods/tuxemon/ (maps .tmx made in Tiled + .yaml event files, db/*.yaml for
+#   monsters, techniques, items, NPCs, economies, encounters, gfx/sprites, l18n .po dialog text), event actions /
+#   conditions in Python.
+# Probes (origin): probes_tuxemon.py (TXProbes); `probe: x` = probe x, `x+y` = both must pass.
+# Runtime: every probe is one fresh game process (real LocalPygameClient, SDL dummy video, fixed 1/60 s steps, frame clock
+#   instead of the wall clock, seeded RNG re-seeded before each fight / encounter walk) with real key events (arrows,
+#   return, escape) through the game's own input manager; setup uses the game's own event actions (teleport, add_monster,
+#   wild_encounter, set_money) like a map event. A mod is copied over a hard-link copy of the game root.
+# A/A calibration 2026-10-30: 5 fresh vanilla instances (aaA-aaE; aaD/aaE with the final probe code) -> every probe
+#   bit-identical in every pair (frame clock + seeded RNG make the game deterministic): same dialog lines, tiles, battle
+#   transcripts (wild fight 5 turns won, capture on the 1st ball, Billie's fight lost in 3 turns), encounter cataspike after
+#   14 grass steps, 265/268 stock maps load (3 sphalian_* maps fail in vanilla too: missing maps/tobedefined.yaml), 19 ERROR
+#   lines per suite, all from map loading (19 events skipped by the loader in vanilla). So no tolerances: exact compare,
+#   except TX-ENCOUNTER (only: an encounter happens within max(30, 3x vanilla) steps, monster from the stock table),
+#   TX-DATA / TX-MAPS (new entries / maps allowed) and TX-STABLE (no new error kind, count <= vanilla).
+# Negative checks 2026-10-30 (one deliberately breaking mod each, vs vanilla aaD):
+#   neg_door (downstairs front door leads to Paper Town 12,9 instead of 10,7) -> TX-WARP fails, the other 15 pass;
+#   neg_bullet (technique bullet power 1.25 -> 3.0) -> TX-BATTLE (Rockitten ends with 54 HP instead of 94) + TX-DATA fail;
+#   neg_price (Candy scoop Mega Potion price 500 -> 800) -> TX-SHOP (money 3500 -> 2600 after buying 3) + TX-DATA fail.
+# Known vanilla quirks (not regressions): `run_tuxemon.py --load N` and `--test-map` crash in this checkout (LoadMenuState
+#   takes no load_slot; config.skip_titlescreen has no setter) -> TX-SAVE loads through the title screen instead.
+# Stock start (2026-11-06): the devkit lets a mod change the opening (19 of 43 round-1 deliverables replace the bedroom's
+#   intro); when new_game does not end where vanilla's does, every probe that needs a game in progress starts from a stock state
+#   built with the game's own actions (probes.stock_start: the mod's opening played to the first control, then name A through
+#   the real rename_player input, vanilla party / bag / money / variables, a home map the mod leaves alone). TX-MOVE then walks
+#   the bedroom route only if the mod leaves the bedroom alone, plus two more stock routes (Paper Town, the rival's bedroom);
+#   TX-WARP runs each door / stairs leg alone on the legs whose maps the mod leaves alone; an item with nothing left to test is
+#   not applicable (excluded). TX-NEWGAME still runs the real opening. TX-STABLE counts a run as crashed only when there is no
+#   result or the exception came from the game's code, not from the probe script.
+# Not covered: multiplayer / network, the phone apps, daycare, crafting, evolution, night-time content, sound.
+# Evidence: the verification logs (reproduce.sh, aa/, negative/, negative_mods/, runlogs.tgz, screenshots/)
+
+game: tuxemon
+version: 0.4.35 (development checkout 2026-10-30, pygame-ce 2.5.7, Python 3.12)
+default_picks:
+- TX-MOVE
+- TX-WARP
+- TX-BATTLE
+- TX-MENU
+- TX-SAVE
+# gate (gab/eval/regression.py): the STABLE item (no real crash / hang, no new fatal error kind) + the host-present
+# item(s): the stock content they reach must still be there on the modded game (numbers NOT compared with vanilla; only a mod that
+# removes / replaces the host game wholesale fails). Scores are 0 unless the gate passes. Not chosen per task.
+gate: [TX-STABLE, TX-MOVE, TX-WARP]
+
+always:
+  - {id: TX-STABLE, capability: "no crash or hang, and no more ERROR / CRITICAL log lines (and no new kinds) than vanilla, over all probe runs of the evaluation", probe: log_errors, status: ready}
+
+pool:
+  # starting the game
+  - {id: TX-NEWGAME, capability: "a new Spyder campaign game starts from the campaign menu: pronoun menu, skip-intro question, the paper-scoop scene with name entry and the starter form, then the bedroom with control (same dialog lines, map, tile, money, variables)", probe: new_game, status: ready}
+  - {id: TX-CAMPAIGNS, capability: "the Xero and Waves of Chaos campaigns start: same first dialog lines and start map / tile", probe: campaigns, status: ready}
+  # world
+  - {id: TX-MOVE, capability: "grid walking with the arrow keys and collisions with walls / furniture on a stock map (bedroom route: same tile after every step)", probe: walk, status: ready}
+  - {id: TX-WARP, capability: "stairs and doors move the player between maps: bedroom stairs, house front door, mart door both ways, house door, stairs up (same arrival map, tile, facing)", probe: warp, status: ready}
+  - {id: TX-NPC, capability: "interacting (A button while facing) with an NPC (Silver in Paper Town), an object (the TV) and a sign shows the same dialog lines", probe: talk, status: ready}
+  - {id: TX-EVENTS, capability: "story map events run: walking into Dante's trigger row plays his cutscene, picking the Rockitten from the bin gives it and starts Billie's trainer fight, and the lose branch plays (same lines, variables, party)", probe: story, status: ready}
+  - {id: TX-ENCOUNTER, capability: "walking in route 1 tall grass starts a wild encounter with a monster from the route's stock encounter table", probe: encounter, status: ready}
+  - {id: TX-MAPS, capability: "every stock map that loads in vanilla still loads, with the same number of events and the same size (new maps allowed)", probe: maps, status: ready}
+  # monsters and battles
+  - {id: TX-BATTLE, capability: "a wild battle (Rockitten L20 vs Nut L4, FIGHT + first technique each turn) runs its turns and ends the same way: same techniques used, faint / win lines, exp gained, final HP", probe: battle, status: ready}
+  - {id: TX-CAPTURE, capability: "throwing Tuxeballs from the battle ITEM menu catches the wild monster the same way (same tries, monster joins the party, balls used)", probe: capture, status: ready}
+  - {id: TX-DATA, capability: "stock database entries unchanged: every vanilla monster, technique, item, NPC, economy, encounter, element ... entry is identical (new entries may be added)", probe: db, status: ready}
+  # items, shop, menus, saving
+  - {id: TX-ITEMS, capability: "using a Potion from the world menu's bag on a hurt monster heals it (same HP before / after, item used up)", probe: items, status: ready}
+  - {id: TX-SHOP, capability: "the Candy Town scoop shop opens from its assistant: same buy list and prices, buying 3 Mega Potions and selling a Potion change money and bag like vanilla", probe: shop, status: ready}
+  - {id: TX-MENU, capability: "the world menu opens with escape and its TUXEMON, BAG, PLAYER and OPTIONS screens open and close (same entries)", probe: menu, status: ready}
+  - {id: TX-SAVE, capability: "saving to slot 1 from the world menu and loading it from the title screen in a new process keeps map, tile, money, party, bag and variables", probe: save_load, status: ready}

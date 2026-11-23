@@ -1,0 +1,19 @@
+# GameAnything-Bench scoring material: never shown to agents during a trial.
+task_id: T-HY-vid_969a6e261ae3.t1
+game: stardew_valley
+status: pending
+picks:
+- SD-WARP
+- SD-LOCATION
+- SD-NPC
+- SD-WALK
+- SD-SAVE
+changed: []
+kept_borderline:
+- id: SD-WARP
+  note: Unreachable tree could involve altering map transitions, but vanilla edge warps are not required to change.
+summary: Forest spirit story with a tree the family cannot find again
+task_checks: []
+note: 'policy (A): excluded only when the instruction explicitly requires the change; plausible side effects stay tested; adding
+  new content is never a reason to exclude. Proposed by claude-sonnet-5-5 via `gab task picks` 2026-11-06; a maintainer checks (set status: checked).
+  The evaluator tests the pool''s always items (unless in changed) + picks.'

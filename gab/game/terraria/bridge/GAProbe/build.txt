@@ -1,0 +1,4 @@
+displayName = GameAnything probe
+author = GameAnything-Bench
+version = 0.1
+side = Both

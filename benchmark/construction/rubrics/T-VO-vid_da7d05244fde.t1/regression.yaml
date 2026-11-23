@@ -1,0 +1,24 @@
+# GameAnything-Bench scoring material: never shown to agents during a trial.
+task_id: T-VO-vid_da7d05244fde.t1
+game: minecraft
+status: pending
+picks:
+- MC-MOVE
+- MC-JOIN-INVENTORY
+- MC-JOIN-STATE
+- MC-BUILD
+- MC-INVENTORY
+- MC-PERF
+changed: []
+kept_borderline:
+- id: MC-MOVE
+  note: The core player mechanic may alter movement, but the instruction does not state it.
+- id: MC-JOIN-INVENTORY
+  note: Cubes may be carried as items, not required.
+- id: MC-JOIN-STATE
+  note: A custom max-resource HUD might touch health, but this is not required.
+summary: Mechanics game with a cube resource, ink void hazard and HUD.
+task_checks: []
+note: 'policy (A): excluded only when the instruction explicitly requires the change; plausible side effects stay tested; adding
+  new content is never a reason to exclude. Proposed by claude-sonnet-5-5 via `gab task picks` 2026-11-06; a maintainer checks (set status: checked).
+  The evaluator tests the pool''s always items (unless in changed) + picks.'

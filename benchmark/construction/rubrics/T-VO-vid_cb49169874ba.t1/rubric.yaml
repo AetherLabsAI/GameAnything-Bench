@@ -1,0 +1,272 @@
+# GameAnything-Bench scoring material: never shown to agents during a trial.
+task_id: T-VO-vid_cb49169874ba.t1
+source_inventory:
+- '00:00-00:07 intro: ''Jart'' logo (00:00-00:01), ''PRESENTS'' (00:01.5-00:03), ''GINWOO'' title (00:03.5-00:05) over a long covered school walkway
+  with cream lockers, blue doors and posts, trees and lawn at left, stair rails in the background; a skater in white rolls from far toward the
+  camera and does a small pop near the camera (00:06-00:06.5)'
+- '00:07-00:08.5 low fisheye: at the top of a short stair set beside a concrete ledge and a metal handrail, the skater jumps down the stairs with
+  the board flipping under the feet (00:08) and lands rolling at the bottom (00:08.5)'
+- '00:09-00:17.5 low fisheye along the covered walkway (lockers, blue doors, trash bin, picnic tables on the courtyard): pushing with one foot
+  (00:11, 00:17.5), rolling, and flat-ground flip tricks: board tilts and rotates in the air under the rider (00:13.5, 00:15.5) and is landed
+  on (00:14, 00:16)'
+- 00:18-00:20.5 the skater pushes along the walkway edge out toward an open courtyard with trees and hedges
+- '00:21-00:22 fisheye at the top of a stair set with teal handrails and brick planters: the skater pops up over / onto the teal rail (00:21)
+  and is seen rolling away on the courtyard below (00:21.5-00:22)'
+- '00:22.5-00:28 wide static shot: a long stair set with several teal handrails running down it, brick planters at both sides, hedges, the covered
+  walkway roof behind; a filmer with a camera at the top left; the skater at the top (00:23.5) jumps onto the middle rail (00:24), slides down
+  it (00:24.5-00:25.5), comes off at the lower end (00:26) and lands crouched, rolling away (00:26.5-00:28)'
+- 00:28.5-00:30 a person leans out of a teal door holding food and looks on
+- '00:30-00:33 high-angle shot on a sloped concrete plaza: a skater in black pushes toward a low metal rail with a filmer in black riding a board
+  alongside with a camera; jumps onto the rail (00:30.5), slides it (00:31-00:31.5), leaves it (00:32), lands and rolls on beside the filmer (00:32.5-00:33)'
+- '00:33.5-00:37.5 low fisheye: a metal rail along a run of low wide steps on a plaza, teal-railed two-storey building and trees behind; the skater
+  in black jumps over the rail while the board flips (00:34-00:35.5), lands (00:36) and rolls away, standing up (00:36.5-00:37.5)'
+- 00:38 a skater in black walks up stone steps carrying the board (a different place from the rails above)
+- 00:38.5-00:39.8 a stone archway and stone-and-sandstone building with large windows; a skater rolls through the arch toward the camera and passes
+  it
+- '04:07.2-04:09.7 low fisheye from the top of a long concrete stair set: a single dark metal handrail runs down beside dense hedges and curves
+  down at its lower end; a skater in a mint top, white long sleeves and white beanie with a red board jumps onto the rail (04:07.7), the board
+  seen turned over in the air above the rail (04:08.2), slides it down (04:08.2-04:08.7), and lands rolling away below (04:09.2-04:09.7)'
+- '04:10.2-04:12.2 wide shot from below: the stair set with one central handrail, hedges and pink-flowering shrubs at both sides, a low white
+  building behind; a photographer sits at the lower left; the skater appears at the top (04:10.7), is on the rail (04:11.2), lands at the bottom
+  (04:11.7) and rolls past (04:12.2)'
+- '04:12.7-04:13.7 close shot through the flowering shrub: the red board sliding on the rail'
+- 04:14.2-04:14.7 the skater rolling crouched at the bottom past the hedges
+- '04:15.2-04:18.2 the same low fisheye view from the top: the empty rail, the skater approaches (04:15.7), jumps on (04:16.2), the board turned
+  on its edge in the air (04:16.7), slides (04:16.7-04:17.2), leaves the lower end in the air (04:17.7) and rolls away (04:18.2); whether this
+  is a second attempt or another camera on the same attempt cannot be told'
+- '04:18.7-04:20.2 wide view from below again: on the rail (04:18.7), leaving its end with the board under the feet, tilted (04:19.2-04:19.7),
+  landing crouched close to the camera (04:20.2)'
+- 04:20.7-04:21.0 a police car parked on the sidewalk beside a lawn (next segment begins)
+- 'not visible: no fall, bail or missed attempt inside the ranges; no score, timer or HUD; trick names cannot be read; rail height and slope only
+  approximately; no clear return to the top of the same obstacle for a retry'
+- 'audio: music only (no speech in the transcript); no audible cue tied to the tricks can be confirmed from the material'
+instructions_meta:
+  requirement_groups:
+    riding and jumping:
+    - CR1
+    - FP1
+    - FP2
+    tricks on obstacles:
+    - FP3
+    - FP4
+    - VP2
+    complete attempts:
+    - FP5
+    skate spot and presentation:
+    - CR2
+    - VP1
+    - VP3
+  explicit_requirements:
+  - type: keep
+    text: I really want to keep the rail grinds, where you jump onto a rail with the board, slide along it and come off at its end.
+    covers:
+    - FP3
+  - type: specify
+    text: A trick should only count as done like in the clip, when you land back on the board and roll away without stopping.
+    covers:
+    - FP5
+rubric:
+  content_realization:
+  - id: CR1
+    item: 'The player rides a skateboard: the board is a distinct object under the rider''s feet while moving'
+    anchors:
+      '1': the player character stands on a visible board that stays under the feet while moving
+      '0.5': skating is implied (a speed buff, a skating pose or an item) but no board is visible under the rider
+      '0': no board; the player runs or walks
+    evidence:
+    - - 00:09
+      - 00:17
+    - - 00:30
+      - 00:31
+    - - 04:15
+      - 04:16
+  - id: CR2
+    item: The skate spot contains a stair set from an upper to a lower level with a handrail running parallel down it from top to bottom, and
+      open flat ground at the top for the run-up and at the bottom for the landing
+    anchors:
+      '1': stairs between two levels, a rail following them from the top to the bottom, and open ground at both ends
+      '0.5': stairs and a rail exist, but the rail does not follow the stairs from top to bottom, or there is no open ground at one end
+      '0': no stair set with a rail
+    evidence:
+    - - 00:07
+      - 00:08
+    - - 00:22
+      - 00:28
+    - - 04:07
+      - 04:12
+  functions_playability:
+  - id: FP1
+    item: 'Board riding: the player pushes to gain speed and rolls on the board, keeping that momentum while coasting so it carries into an obstacle'
+    anchors:
+      '1': speed builds by pushing and is kept while rolling, so a run-up toward an obstacle is possible
+      '0.5': movement exists but is plain walking-speed movement with no build-up or momentum
+      '0': no board riding
+    evidence:
+    - - 00:09
+      - 00:12
+    - - 00:17
+      - 00:21
+  - id: FP2
+    item: 'Jump with the board: the player can jump with the board staying under the feet, including off the top of a stair set down to the lower
+      level'
+    anchors:
+      '1': a jump that takes the board along and can carry the player from the top of the stairs down to the lower level
+      '0.5': a jump exists, but the board is left behind, or the player cannot get down the stairs with it (stuck at the edge)
+      '0': no jump
+    evidence:
+    - - 00:07
+      - 00:09
+    - - 00:21
+      - 00:22
+  - id: FP3
+    item: 'Grinding: jumping onto a rail attaches the player to it, the player slides along it (down its slope on an inclined rail) and leaves
+      at its end onto the ground below without falling through or getting stuck'
+    anchors:
+      '1': attach, slide along the rail's direction and exit at the end onto the ground, on an inclined rail
+      '0.5': the player can stand or move on the rail, but there is no slide along it, or the exit leaves the player stuck / falling through
+      '0': rails cannot be ridden
+    evidence:
+    - - 00:23
+      - 00:28
+    - - 00:30
+      - 00:33
+    - - 04:07
+      - 04:10
+    - - 04:16
+      - 04:18
+  - id: FP4
+    item: 'Flip trick: while airborne the player can make the board flip under the rider and end up back on it'
+    anchors:
+      '1': a distinct board-flip action in which the board visibly rotates separately from the rider and comes back under the feet, usable on
+        flat ground and off an obstacle
+      '0.5': the rotation is partial or unclear, the rider does not end up on the board, or the flip works only in one place
+      '0': no flip trick
+    evidence:
+    - - 00:07
+      - 00:08
+    - - 00:13
+      - 00:16
+    - - 00:34
+      - 00:36
+  - id: FP5
+    item: 'One continuous line: run-up, trick at the obstacle and a landing back on the board that rides away link without a stop, cut or loss
+      of control, and the landed trick is clearly the end of the attempt'
+    anchors:
+      '1': approach, trick and ride-away play out as one uninterrupted run, the rider lands on the board and keeps control rolling away
+      '0.5': the parts work but are separated (e.g. the player stops dead on landing, lands off the board, or control is lost for a while)
+      '0': tricks cannot be linked into a run
+    evidence:
+    - - 00:08
+      - 00:09
+    - - 00:18
+      - 00:22
+    - - 00:23
+      - 00:28
+    - - 00:30
+      - 00:33
+    - - 00:36
+      - 00:38
+    - - 04:15
+      - 04:20
+  visual_presentation:
+  - id: VP1
+    cat: spatial
+    keyframes:
+    - '00:22.5'
+    - '04:10.2'
+    - '04:07.2'
+    item: 'The play space looks like a street-skate stair set: a run of hard steps with a thin metal handrail raised above them'
+    anchors:
+      '1': compared with the keyframes, the spot is recognisable as steps with a thin bar-like handrail raised above them
+      '0.5': stairs and a rail are there, but the rail reads as a solid wall, ledge or floating platform rather than a thin raised bar
+      '0': the obstacle does not look like stairs with a handrail
+    evidence:
+    - - 00:22
+      - 00:28
+    - - 04:07
+      - 04:12
+  - id: VP2
+    cat: key_moment
+    keyframes:
+    - '00:25.0'
+    - '04:08.7'
+    - '04:11.2'
+    item: 'The grind as seen: the rider on the board, the board visibly on top of the rail, the stairs running down below'
+    anchors:
+      '1': a recognisable rider-on-board-on-rail look above the stairs
+      '0.5': the rider is on the rail but without the board under the feet, the rider seems to float beside rather than on the rail, or the stairs
+        are not visible
+      '0': none
+    evidence:
+    - - 00:24
+      - 00:26
+    - - 04:08
+      - 04:09
+    - - 04:11
+      - 04:12
+  - id: VP3
+    cat: presentation
+    keyframes:
+    - '00:23.5'
+    - '04:10.7'
+    item: 'Framing of the attempt: the view keeps the rider, the obstacle and the landing area in frame together, so the whole attempt from top
+      to bottom can be followed'
+    anchors:
+      '1': rider, rail and landing visible together through the whole attempt
+      '0.5': the rider is followed but the rail or the landing is off-screen for part of the attempt
+      '0': the attempt cannot be followed on screen
+    evidence:
+    - - 00:22
+      - 00:28
+    - - 04:10
+      - 04:12
+    - - 04:18
+      - 04:20
+play_suggestions:
+  FP1:
+  - 'push a few times on flat ground, then stop pushing: does speed build and then carry on?'
+  - 'ride toward the stairs from a distance and from a standstill: does the run-up matter?'
+  - 'steer while rolling: can the player line up with the rail?'
+  FP2:
+  - 'jump in place and while rolling: does the board stay under the rider?'
+  - 'jump down the stair set without touching the rail: does the ride continue at the bottom?'
+  FP3:
+  - jump onto the inclined rail from the top and ride it to the end
+  - jump onto the rail halfway down, and onto a flat rail if there is one
+  - 'jump next to the rail (miss it): does the player attach anyway?'
+  FP4:
+  - flip on flat ground, then off the stairs, then over a rail
+  - 'trigger a flip just before touching the ground: what happens?'
+  FP5:
+  - 'run a full line: push, grind the rail, land, keep riding to the next obstacle'
+  - 'land at an awkward angle or mid-flip: is there a visible failure, or does the game silently accept it?'
+  robustness:
+  - after landing, go back to the top and repeat the same rail five times
+  - get off the board at the bottom and try to climb the stairs
+  - ride off the side of the rail mid-grind
+  - approach the rail from the bottom and try to grind upward
+  - stand still on the rail
+  - ride into the hedges / planters and the walls at full speed
+  - jump repeatedly on the stairs and at the rail ends to look for getting stuck or falling through the ground
+v4_map:
+  U1: FP1 | existence part (the board) -> CR1
+  U2: 'FP3 | dropped: mechanism already scored by FP3'
+  U3: 'FP4 | dropped: mechanism already scored by FP4 (settings added to FP4 evidence)'
+  U4: 'FP5 | dropped: completion rule merged into FP5 anchors'
+  U5: 'CR2 | lower plaza rails dropped: peripheral (seen only at 00:30-00:37, a variation of the rail; the stair handrail is the foregrounded
+    obstacle)'
+  U6: CR2
+  FP1: FP1
+  FP2: FP2
+  FP3: FP3 | existence part (rail along the stairs) -> CR2
+  FP4: FP4
+  FP5: FP5
+  VP1: CR2 (layout), VP1 (look only)
+  VP2: VP2 | prescribed pose (upright / crouched, arms out) removed
+  VP3: VP3
+provenance:
+  source_yaml: T-VO-vid_cb49169874ba.t1.yaml
+  source_sha256: 3583008f372198bdf58ecb05638959e1b3e00f78e4e550d61949efe11baf5078
+  size_waiver: null
+  size_max: null
+  sources: []

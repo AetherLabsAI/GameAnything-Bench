@@ -1,0 +1,108 @@
+#!/usr/bin/env python3
+"""Steam IPC relay between the Steam hub and a trial container that has NO network (gab/host/steam.py).
+
+Measured with `gab steam probe` (pre-login): a game's steamclient.so reaches the running client through shared memory
+(/dev/shm, shared with --ipc container:<hub>) AND a TCP connection to the client on 127.0.0.1; with --network none the game
+gets "Cannot create IPC pipe to Steam client process"; with the hub's network namespace it gets as far as the logon check. So
+the trial's 127.0.0.1:<port> is bridged to the hub's 127.0.0.1:<port> over unix sockets in a shared dir -- only the ports the
+Steam client process itself listens on; nothing else of the hub's network (no internet, no webhelper / CEF ports) reaches a trial.
+
+  gab-steam-relay hub DIR     in the hub: for every 127.0.0.1 TCP port the main Steam process (.../ubuntu12_32/steam or .../steamrt64/steam) listens on,
+                              DIR/<port>.sock -> 127.0.0.1:<port>; DIR/ports lists them (re-scanned every 3 s: Steam restarts)
+  gab-steam-relay trial DIR   in a trial: 127.0.0.1:<port> -> DIR/<port>.sock for every port in DIR/ports (re-read every 3 s)
+  GAB_STEAM_RELAY_PORTS="p1 p2"  hub: relay exactly these ports instead of the automatic choice
+"""
+import os, socket, sys, threading, time
+
+
+def pump(a, b):
+    try:
+        while True:
+            d = a.recv(65536)
+            if not d: break
+            b.sendall(d)
+    except OSError: pass
+    finally:
+        for s in (a, b):
+            try: s.shutdown(socket.SHUT_RDWR)
+            except OSError: pass
+
+
+def bridge(c, connect):
+    try: u = connect()
+    except OSError: c.close(); return
+    threading.Thread(target=pump, args=(c, u), daemon=True).start()
+    threading.Thread(target=pump, args=(u, c), daemon=True).start()
+
+
+def serve(lst, connect):
+    while True:
+        try: c, _ = lst.accept()
+        except OSError: return
+        bridge(c, connect)
+
+
+def steam_ports():
+    """127.0.0.1 listening TCP ports whose socket belongs to the main Steam client process"""
+    if os.environ.get("GAB_STEAM_RELAY_PORTS"): return {int(p) for p in os.environ["GAB_STEAM_RELAY_PORTS"].split()}
+    inodes = {}
+    for f in ("/proc/net/tcp",):
+        for l in open(f).read().splitlines()[1:]:
+            x = l.split()
+            ip, port = x[1].split(":")
+            if x[3] == "0A" and ip == "0100007F": inodes[x[9]] = int(port, 16)
+    out = set()
+    for p in os.listdir("/proc"):
+        if not p.isdigit(): continue
+        try:
+            # the main client is .../ubuntu12_32/steam (32-bit) or, since a client update in November 2026,
+            # .../steamrt64/steam (64-bit): matching only the first left DIR/ports empty -> every trial's SteamAPI_Init failed
+            if not os.readlink(f"/proc/{p}/exe").replace(" (deleted)", "").endswith(("/ubuntu12_32/steam", "/steamrt64/steam")): continue
+            for fd in os.listdir(f"/proc/{p}/fd"):
+                t = os.readlink(f"/proc/{p}/fd/{fd}")
+                if t.startswith("socket:[") and t[8:-1] in inodes: out.add(inodes[t[8:-1]])
+        except OSError: continue
+    return out
+
+
+def hub(d):
+    os.makedirs(d, exist_ok=True); have = {}
+    while True:
+        try: ports = steam_ports()
+        except OSError: ports = set()
+        for p in ports - set(have):
+            path = f"{d}/{p}.sock"
+            try: os.unlink(path)
+            except OSError: pass
+            s = socket.socket(socket.AF_UNIX); old = os.umask(0o077); s.bind(path); os.umask(old); s.listen(64)
+            have[p] = s
+            threading.Thread(target=serve, args=(s, lambda p=p: socket.create_connection(("127.0.0.1", p))), daemon=True).start()
+        for p in set(have) - ports:
+            have.pop(p).close()
+            try: os.unlink(f"{d}/{p}.sock")
+            except OSError: pass
+        tmp = f"{d}/.ports.tmp"
+        with open(tmp, "w") as f: f.write(" ".join(str(p) for p in sorted(have)) + "\n")
+        os.replace(tmp, f"{d}/ports")
+        time.sleep(3)
+
+
+def trial(d):
+    have = {}
+    while True:
+        try: ports = {int(x) for x in open(f"{d}/ports").read().split()}
+        except (OSError, ValueError): ports = set()
+        for p in ports - set(have):
+            s = socket.socket(); s.setsockopt(socket.SOL_SOCKET, socket.SO_REUSEADDR, 1)
+            try: s.bind(("127.0.0.1", p)); s.listen(64)
+            except OSError: s.close(); continue
+            def conn(p=p):
+                u = socket.socket(socket.AF_UNIX); u.connect(f"{d}/{p}.sock"); return u
+            have[p] = s; threading.Thread(target=serve, args=(s, conn), daemon=True).start()
+        for p in set(have) - ports: have.pop(p).close()
+        time.sleep(3)
+
+
+if __name__ == "__main__":
+    if len(sys.argv) != 3 or sys.argv[1] not in ("hub", "trial"): print(__doc__); sys.exit(2)
+    (hub if sys.argv[1] == "hub" else trial)(sys.argv[2])

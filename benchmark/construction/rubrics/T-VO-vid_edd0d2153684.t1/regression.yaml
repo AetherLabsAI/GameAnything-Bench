@@ -1,0 +1,22 @@
+# GameAnything-Bench scoring material: never shown to agents during a trial.
+task_id: T-VO-vid_edd0d2153684.t1
+game: minecraft
+status: pending
+picks:
+- MC-JOIN-STATE
+- MC-JOIN-INVENTORY
+- MC-MOVE
+- MC-COMBAT
+- MC-RULE-DAYCYCLE
+- MC-PERF
+changed: []
+kept_borderline:
+- id: MC-JOIN-INVENTORY
+  note: Players may get a stick on join, but this is not required.
+- id: MC-COMBAT
+  note: Puck play may reuse attacks, but melee need not change.
+summary: Ice hockey match with periods, game clock, score display and a rink.
+task_checks: []
+note: 'policy (A): excluded only when the instruction explicitly requires the change; plausible side effects stay tested; adding
+  new content is never a reason to exclude. Proposed by claude-sonnet-5-5 via `gab task picks` 2026-11-06; a maintainer checks (set status: checked).
+  The evaluator tests the pool''s always items (unless in changed) + picks.'

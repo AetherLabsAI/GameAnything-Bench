@@ -1,0 +1,172 @@
+# GameAnything-Bench scoring material: never shown to agents during a trial.
+task_id: T-IO-f749361617
+source_inventory:
+- 'img01: flat field of dry golden reeds in the foreground; behind it about eight large windmills spread across the view under a hazy grey sky,
+  some with brick round towers and some with dark tapering bodies, sails lattice-framed; small sheds, a tree, a parked car and distant blocks
+  of flats on the horizon'
+- 'img02: a long straight canal running away from the viewer to the horizon under a clear blue sky; a row of windmills along the right bank, two
+  more far off on the left; reeds and bushes line the right bank, lily pads at the edge; a fisher on the left bank, a small boat far up the canal,
+  a water bird; cranes and modern buildings on the horizon'
+- 'img03: close view of one windmill from behind green reeds: a tall tapering brick tower, a thatched cap, four lattice sails (one blade reaching
+  down close to the ground), long black struts from the cap to the ground at the back, red-white-blue poles; at the base a green door, small windows,
+  a low tiled annex and a bench'
+- 'img04: a calm canal in low sun; dark thatched windmills in a line along the left bank receding into the distance, mirrored in the still water;
+  dry reeds on both banks, a woven reed structure and a wooden fence on the right'
+- 'img05: a street front: a white plastered house with a red pantile roof, a dormer and tall multi-pane windows, next to a brick house; cellar
+  hatches, a cargo bicycle, potted plants and cobbles in front; two blue street-name signs are legible'
+- 'img06: across a pond or wide water: a dark-brick house with a hipped tiled roof and dormers standing on a brick-walled quay at the water''s
+  edge, a black wooden barn beside it, trees, and a grassy embankment behind on the left; the buildings are mirrored in the water; green reeds
+  and yellow irises in the foreground'
+instructions_meta:
+  requirement_groups:
+    route through the place:
+    - CR1
+    - FP1
+    - VP1
+    landmarks:
+    - CR2
+    - CR3
+    - FP2
+    - VP2
+    - VP3
+    landscape and look:
+    - CR4
+  explicit_requirements:
+  - type: keep
+    text: I want the big old-style windmills with a broad tapering tower, a cap on top and large sails, not little decorative ones.
+    covers:
+    - CR2
+rubric:
+  content_realization:
+  - id: CR1
+    item: The place contains one long, continuous canal that runs through it as its axis
+    anchors:
+      '1': a single long canal crosses the area as its main axis, with the rest of the place arranged along it
+      '0.5': water is present, but only as ponds, short stretches or scenery, not as one canal running through the place
+      '0': no canal
+    evidence:
+    - 'img02: the long straight canal to the horizon'
+    - 'img04: the canal receding past the mills'
+  - id: CR2
+    item: 'The landmarks are large traditional tower windmills: a broad tapering tower carrying a cap with large sails'
+    anchors:
+      '1': large tower windmills with a broad tapering body, a cap on top and sails that are large relative to the tower
+      '0.5': windmills present but small or decorative, or with the form partly wrong (e.g. straight post body, no cap, small sails)
+      '0': no windmills, or modern wind turbines
+    evidence:
+    - 'img03: the tapering tower, cap and lattice sails'
+    - img01
+    - img04
+  - id: CR3
+    item: The windmills stand in a long row along the canal bank, one after another, close to the water
+    anchors:
+      '1': many mills placed one after another along the canal bank, each standing near the water's edge
+      '0.5': several mills present, but scattered, set well back from the canal, or only two or three together
+      '0': a single mill, or no relation between the mills and the canal
+    evidence:
+    - 'img02: the row along the right bank'
+    - 'img04: the line along the left bank'
+    - 'img03: the mill just behind the reeds'
+  - id: CR4
+    item: 'The land around the canal is flat, open lowland: water edged with reed beds, with grass and open ground beyond'
+    anchors:
+      '1': flat open land with reed beds along the water and open grass or fields, not broken up by hills, woods or dense buildings
+      '0.5': open countryside, but without the reed-edged watery character, or broken up by hills, woods or dense buildings
+      '0': no surrounding land built, or the place is a town or hilly terrain
+    evidence:
+    - 'img01: the reed field before the mills'
+    - 'img02: reeds and bushes on the bank'
+    - 'img04: dry reeds on both banks'
+  functions_playability:
+  - id: FP1
+    item: The player can travel along the canal through the place, on its banks, from one end of the row of mills to the other, passing the mills
+      in sequence
+    anchors:
+      '1': a continuous route along the canal that passes the mills one after another and can be followed to the end
+      '0.5': the route cannot be followed through (blocked, broken up, or only one short stretch is reachable)
+      '0': no traversable canal-side route
+    evidence:
+    - img02
+    - img04
+  - id: FP2
+    item: 'The windmills are reachable landmarks: the player can leave the canal route and walk up to a mill'
+    anchors:
+      '1': the player can reach at least one mill up close
+      '0.5': mills are visible but only approachable from afar, or only as flat background scenery
+      '0': no mill can be reached
+    evidence:
+    - img03
+  visual_presentation:
+  - id: VP1
+    cat: spatial
+    item: Seen from above, the windmills are placed one after another along the canal bank, so that following the water the player meets
+      them in sequence
+    anchors:
+      '1': several mills seen placed one after another along the canal bank
+      '0.5': mills and canal both visible, but the mills are never seen lined up along the water
+      '0': missing
+    evidence:
+    - img02
+    - img04
+  - id: VP2
+    cat: spatial
+    item: 'The windmills are not packed closely together: they are widely spread out, with broad open space between one mill and the next'
+    anchors:
+      '1': the mills stand well apart, with wide stretches of open land or water between neighbouring mills, so they are spread out across the
+        area
+      '0.5': the mills are somewhat spaced, but several stand close together or form a compact cluster
+      '0': missing, or the mills are packed tightly side by side
+    evidence:
+    - 'img01: about eight mills spread far apart across the view'
+    - 'img02: the mills spaced out along the right bank, two more far off on the left'
+    - 'img04: the mills at wide intervals along the bank'
+  - id: VP3
+    cat: presentation
+    item: 'The mills stay readable as landmarks: several of them are visible together in one screen, clearly standing out from the flat land
+      around them'
+    anchors:
+      '1': several mills can be seen together in one screen, each clearly recognisable and standing out from the surroundings
+      '0.5': only one mill is ever visible at a time, or the mills are lost against the surroundings
+      '0': missing
+    evidence:
+    - 'img01: about eight mills spread across the view'
+    - 'img02: mills visible far up the canal'
+play_suggestions:
+  FP1:
+  - 'walk the canal banks from one end to the other: is the route continuous, and are the mills passed one after another?'
+  - 'try to leave the canal-side route halfway: is the way back obvious?'
+  FP2:
+  - leave the canal route and walk up to the base of a mill
+  - check that the mills are solid structures, not flat backdrops you pass through
+  robustness:
+  - 'walk along the outer edge of the reed beds: what happens?'
+  - 'leave the area and come back: are the mills and the route still in place?'
+v4_map:
+  U1: CR1 (canal as the axis); the route along it stays in FP1
+  U2: CR2
+  U3: CR4 (the land's structure); its wide-sky look dropped on review (not presentable in the 2D game)
+  U4: CR3
+  U5: CR3 (mills close to the water), CR4 (reed-edged banks)
+  FP1: CR1 (canal existence split off), FP1
+  FP2: FP2
+  FP3: 'removed: editing request (winter, frozen water), moved to editing_seed.yaml'
+  VP1: VP1 (the arrangement itself moved to CR3)
+  VP2: 'CR2 (merged: the mill''s form is an entity property, scored once)'
+  VP3: CR4 (reeds, grass, flat land as content); the wide, low, open look dropped on review, VP2 now scores the wide spacing of the mills
+  VP4: CR3, CR4 (reed-fringed banks with mills just behind are arrangement and terrain, scored there only)
+  VP5: VP3
+provenance:
+  source_yaml: T-IO-f749361617.yaml
+  source_sha256: 9f2390b3f1fcafcf2b89464784cc27b570640c10aca8a19d214afa78a6f3b66a
+  size_waiver: null
+  size_max: null
+  sources:
+  - refs:
+    - img01
+    - img02
+    - img03
+    - img04
+    - img05
+    - img06
+    bundle: f749361617
+    title: 荷兰金德代克圩田：风车、水渠与农田

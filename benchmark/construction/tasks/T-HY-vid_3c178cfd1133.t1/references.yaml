@@ -1,0 +1,35 @@
+# Reference material: fetched from the HF dataset into $GAB_MEDIA_DIR/<task>/ by `gab media fetch` (sha256 checked).
+# The agent gets the files only (no title, author, caption or source): this file is never shown to it.
+task_id: T-HY-vid_3c178cfd1133.t1
+refs:
+- id: c01
+  kind: video
+  file: clip_01.mp4
+  video_id: vid_3c178cfd1133
+  source:
+    title: Hogwarts Legacy - Official Reveal Trailer ｜ PS5 [1O6Qstncpnc]
+    url: https://www.youtube.com/watch?v=1O6Qstncpnc
+    channel: null
+    youtube_id: 1O6Qstncpnc
+  range:
+    start: 11.0
+    end: 87.7
+    text: 0:11.00-1:27.70
+  duration_s: 76.7
+  size_bytes: 11004530
+  format: mp4 H.264 720p, AAC audio
+  hf_path: media/T-HY-vid_3c178cfd1133.t1/clip_01.mp4
+  sha256: 9a617f42de31a7b44b0a3e21b7273db39de69856c053973aa1a19aa2d3156392
+  rights_note: null
+- id: t01
+  kind: text
+  file: text_01.md
+  words: 3352
+  paragraphs: 53
+  anchors: p001 .. p053
+  judge_file: judge/text_01.anchored.md
+  judge_sha256: 779f25e629c44ce1adac4d4d5b92926c8648a1a595aba75ae90426c1bf48d415
+  format: plain text (UTF-8)
+  hf_path: media/T-HY-vid_3c178cfd1133.t1/text_01.md
+  sha256: 40cb6b79e8e667f620fc505669084241b12b49e1bb824a5b2d615fcd1e901536
+  size_bytes: 18786

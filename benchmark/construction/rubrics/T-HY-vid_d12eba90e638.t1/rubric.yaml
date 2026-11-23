@@ -1,0 +1,275 @@
+# GameAnything-Bench scoring material: never shown to agents during a trial.
+task_id: T-HY-vid_d12eba90e638.t1
+source_inventory:
+- 'clip 00:27-00:35: dark, symmetrical ribbed hall with blue edge lights and a long central staircase; two silhouetted figures; dissolves to the
+  next shot'
+- 'clip 00:35-00:41.5: a staff-carrying figure and a small round droid walk over desert dunes at dusk, footprints behind them'
+- 'clip 00:41.5-00:46: close-up of a hooded face in a dim red-lit room'
+- 'clip 00:46-00:50.5: a group walks along a city landing platform at dusk toward a parked ship'
+- 'clip 00:50.5-00:55.5: red-carpeted room with a long wide window over a city, two robed figures standing'
+- 'clip 00:55.5-01:04: cloaked figure with a staff on a rocky ledge over a fog-filled valley with tall rock spires'
+- 'clip 01:04-01:13.5: small ships fly in space toward a planet; a huge damaged ring-shaped structure on the planet''s edge, red firing flashes'
+- 'clip 01:13.5-01:22.5: a figure and a small round droid silhouetted against two setting suns, a pale yellow one and a red one, over a flat horizon'
+- 'clip 02:48-02:51: rapid cuts of a duel with blue blades in a red, lava-lit industrial setting; blades meet in large white flares (02:49.5,
+  02:50.5)'
+- 'clip 02:51-02:58.5: red blade against green blade in a dark, blue-lit hall with tilted stairs and railings; sparks where the blades meet (02:51.5);
+  the green-blade fighter crouches and moves around the dark-cloaked red-blade fighter'
+- 'clip 02:58.5-03:02.5: a dark-robed fighter in front of a sandstone wall ignites a red double-ended blade and holds it out in a wide stance'
+- 'clip 03:02.5-03:06.5: blue blade against red blade on a gantry with railings, blue fog behind, orange lights on the floor edge; blades cross
+  repeatedly, a small flare at the contact'
+- 'clip 03:07-03:10.5: small fighter ships fly through a burning, red, cave-like ruin; explosion'
+- 'clip 03:11-03:14.5: a sandy open arena: many fighters with blue, green and yellow-green blades run at a line of thin droids; red blaster bolts;
+  bright flare at 03:13.5'
+- 'clip 03:15-03:26.5: red throne room: two fighters (one blue blade, one red blade) back to back against several red-armoured guards with bladed
+  polearms and staffs; sparks at contacts, a blue-white flare at 03:19 and 03:26.5'
+- 'clip 03:27-03:31: duel by a long window over a night city: purple blade against red blade; the window shatters (03:29)'
+- 'clip 03:31.5-03:36: a white-clad fighter with a blue blade against a dark fighter with a red double-ended blade on a high walkway above a round
+  pit; flares at contacts (03:33.5, 03:36)'
+- 'clip audio: music only, no speech (the transcript line is a hallucination)'
+- 'text p001-p006: four numbered sword guards, each defined by hand position, point and edge direction; ''Engage'' as before'
+- 'text p007-p015: four points (thrusts), each parried by forming the matching numbered guard'
+- 'text p016-p021: single-stick (a stick standing for a one-edged sabre): grip so that every blow lands with the true edge; footwork first; the
+  engaging guard as the start position'
+- 'text p022-p026: two guards in use, hanging and upright; a guard kept truly stops most attacks at proper distance; a bent arm lets you cut straight
+  from guard; drawing the hand back gives the opponent his moment (''Time'' is the essence); upright is quicker to attack from; meet the blade
+  with the forte, edge outward, feel the blade before returning'
+- 'text p027-p032: opposition: attack so that your own blade covers the line you attack in, to hit without being hit; feint to draw a habitual
+  counter, stop it and return'
+- 'text p033-p037: hits numbered by target: 1 left cheek, 2 right cheek, 3 left ribs, 4 right ribs, 5 and 6 the inside and outside of the leg;
+  the point is more deadly than the edge'
+- 'text p038-p042: almost every cut is made on the lunge, since the engaged players are out of range otherwise; how to lunge; overreaching leaves
+  you unable to recover and at the opponent''s mercy; recovering from the lunge'
+- 'text p043-p054: each numbered cut and the guard that stops it (high guards for the cheeks, low hanging or upright guards for the ribs, only
+  a low hanging guard for the legs); the point given on the lunge and parried by any guard; a point is an effective return from a hanging guard'
+- 'text p055-p058: in general play acknowledge the opponent''s hits (spring to attention, sword to the recover), then return to the engaging guard
+  and continue; in competitions the judges score'
+- 'text p059-p063: a foul hit is a blow struck back on receiving a hit, instead of a guard'
+- 'text p064-p068: competitions: bouts in a small ring (rarely enforced); best of three hits (first to two) or first to five; sticks are chalked
+  so a hit leaves a mark; a stick whipping over a true guard should not score; three judges'
+- 'text p069-p074: simultaneous direct attacks that both land are a counter and score nothing; a defender who stands fast and counters instead
+  of guarding should not score nor cancel the attacker''s point, who led as his lunge shows; the author proposes either attacker priority (unless
+  the defender guarded and returned) or that only clean hits without a counter score'
+- 'text p075: the players face each other on the engaging guard and begin at the judge''s command; sticks must have crossed before hits count;
+  step out of distance after crossing to avoid a quick tap; advice on bringing your own kit'
+instructions_meta:
+  requirement_groups:
+    attack, defence and blade contact against an opponent:
+    - CR1
+    - CR2
+    - FP1
+    - FP2
+    - FP3
+    bout start, hit rules and end:
+    - FP5
+    look and play space:
+    - VP1
+    - VP2
+    readable bout state:
+    - VP3
+  explicit_requirements:
+  - type: keep
+    text: I want to keep the lunging attacks, where you only reach the other fighter by lunging in and a missed lunge leaves you open until you
+      recover.
+    covers:
+    - FP3
+  - type: specify
+    text: 'Scoring should work like in the text: the first fighter to five hits wins the bout, and after every hit both fighters go back on guard.'
+    covers:
+    - FP5
+rubric:
+  content_realization:
+  - id: CR1
+    item: 'The game contains a one-on-one duel: the player''s fighter and an opponent fighter, each armed with an energy blade, with the blade
+      colour telling the two sides apart (e.g. red against blue)'
+    anchors:
+      '1': the player faces one opposing fighter in single combat, both with blades, and their blades have clearly different colours by side
+      '0.5': both fighters have blades but the same colour, or the opponent is unarmed, or the player never faces one opponent in single combat
+        (only groups of enemies)
+      '0': no opponent fighter with a blade
+    evidence:
+    - - '02:51.5'
+      - '02:58.0'
+    - - '03:02.5'
+      - '03:06.5'
+    - - '03:27.0'
+      - '03:31.0'
+    - p075
+  - id: CR2
+    item: The fighters have distinct attack lines (head, body and legs, plus a point thrust) and distinct guards that differ by the line they
+      cover, including a low guard for the legs
+    anchors:
+      '1': several attack lines including a low (leg) line and a point, and several guards including a high and a low one, all available in the
+        move set
+      '0.5': attacks or guards exist but not differentiated by line (one swing, one block), or no low line and low guard
+      '0': no attack lines or no guards
+    evidence:
+    - - p008
+      - p015
+    - p022
+    - p035
+    - - p044
+      - p053
+  functions_playability:
+  - id: FP1
+    item: 'The opponent fights on its own: it attacks on varying lines and takes guards against the player''s attacks'
+    anchors:
+      '1': the opponent both attacks on different lines and guards against the player's attacks on its own
+      '0.5': the opponent only attacks or only stands and blocks, or always uses the same attack and the same guard
+      '0': no opponent that fights back
+    evidence:
+    - - '03:02.5'
+      - '03:06.5'
+    - - '03:31.5'
+      - '03:36.0'
+    - p035
+    - p075
+  - id: FP2
+    cross: true
+    item: 'Guards by line, played out as the clip''s blade fights: an attack met by the guard of its line (text) is stopped blade on blade, the
+      blades meeting as in the clip''s clashes (video), and scores nothing; an attack on an uncovered line lands as a hit'
+    anchors:
+      '1': the matching guard stops the attack with the blades meeting, a wrong or missing guard lets it land
+      '0.5': blocking works, but any guard stops any attack; or the line matching works but the stop has no blade contact
+      '0': blocking does not exist or does not change whether a hit lands
+    evidence:
+    - - '02:51.5'
+      - '02:58.0'
+    - - '03:02.5'
+      - '03:06.5'
+    - - p044
+      - p053
+  - id: FP3
+    item: 'Attacks reach the opponent by lunging in from guard distance, and the attacker is briefly committed afterwards: a failed lunge leaves
+      an opening the opponent can punish'
+    anchors:
+      '1': fighters stand out of reach until they lunge, and a missed or parried lunge can be answered before recovery
+      '0.5': a lunge or reach exists, but recovery carries no risk
+      '0': attacks land from anywhere at any time
+    evidence:
+    - p025
+    - p038
+    - p040
+    - p042
+    - p054
+  - id: FP5
+    item: 'A bout scored by hits: it begins with both fighters on guard, each clean hit counts one, play resets to guard, and the first to a fixed
+      number wins, ending the bout with a clear winner and a way to fight again'
+    anchors:
+      '1': a defined start on guard, hit count, reset after a hit, first-to-N win and a clear end with a restart
+      '0.5': hits are counted but the bout never ends, or ends by a timer or health bar, or there is no reset to guard after a hit
+      '0': no scoring
+    evidence:
+    - p058
+    - p066
+    - p075
+  visual_presentation:
+  - id: VP1
+    cat: style
+    keyframes:
+    - '02:52.0'
+    - '03:04.5'
+    - '02:50.5'
+    item: 'The weapons and their contact look like the clip''s: blades made of glowing light, a bright beam with a coloured glow, and a bright
+      flare where two blades meet'
+    anchors:
+      '1': the blades read as beams of glowing light and a bright flare shows at the point where blades meet, as in the keyframes
+      '0.5': coloured blades that do not glow, or a glow that does not read as a blade of light, or glowing blades whose contact shows no flare
+      '0': plain weapons
+    evidence:
+    - - '02:49.5'
+      - '02:50.5'
+    - - '02:51.5'
+      - '02:58.0'
+    - - '03:02.5'
+      - '03:06.5'
+    - - '03:27.0'
+      - '03:31.0'
+    - - '03:33.5'
+      - '03:36.0'
+  - id: VP2
+    cat: spatial
+    keyframes:
+    - '03:03.0'
+    - '03:30.0'
+    - '03:32.0'
+    item: The duel takes place on a clearly bounded floor (a gantry, a room by a window or a walkway set apart from its surroundings) where the
+      two fighters face each other
+    anchors:
+      '1': a distinct, readably bounded duelling floor with the fighters facing each other on it
+      '0.5': a play space exists but its bounds are not readable, or it is an open generic level
+      '0': no recognisable duel space
+    evidence:
+    - - '03:02.5'
+      - '03:06.5'
+    - - '03:27.0'
+      - '03:31.0'
+    - - '03:31.5'
+      - '03:36.0'
+  - id: VP3
+    cat: presentation
+    item: Each scored hit and the running count toward the winning number are visible to the player
+    anchors:
+      '1': a hit is clearly marked when it scores and the score of both fighters is readable during the bout
+      '0.5': only one of the two, or the score appears only at the end
+      '0': hits and score are not shown
+    evidence:
+    - p055
+    - p066
+    - p067
+play_suggestions:
+  FP1:
+  - 'fight several exchanges only defending: does the opponent attack on different lines?'
+  - 'attack repeatedly on one line: does the opponent take the matching guard?'
+  FP2:
+  - 'attack each line against each guard: does only the matching guard stop it?'
+  - 'attack the legs against a high guard: does it land?'
+  - 'watch a successful guard: do the blades meet where the attack is stopped?'
+  FP3:
+  - 'swing from standing distance without lunging: does it reach?'
+  - 'lunge and miss, then stay still: can the opponent punish before you recover?'
+  FP5:
+  - 'start a bout: do both fighters begin on guard at a clear start?'
+  - 'play a full bout to the winning number: does it end and name the winner?'
+  - 'after a hit: do both fighters reset to guard?'
+  robustness:
+  - lose a bout on purpose and start another
+  - walk off the duelling floor during a bout
+  - 'hold guard and never attack: does the bout still progress or stall sensibly?'
+  - spam attacks without guarding
+hybrid:
+  modality: video+text
+  roles:
+    video: 'the look of the duel: glowing energy blades whose colours set the sides apart, the bright flare where blades meet, one-on-one fights
+      on clearly bounded floors'
+    text: 'the rules of the bout: cuts and the point aimed at distinct lines and stopped by the guard covering that line, attacking on the lunge
+      and recovering, starting on guard, scoring to a fixed number of hits'
+  cross_reference_requirement: 'The text''s guard rules must decide the clip''s blade fights: an attack met by the guard of its line (text) is
+    stopped blade on blade as the clip''s blades meet (video), an attack on an uncovered line lands; neither the montage (no readable hit or block
+    rules) nor the text (no look of the weapons or the contact) gives this alone.'
+v4_map:
+  U1: CR2 (attack lines and guards exist); line-to-guard matching stays scored by FP2
+  U2: 'dropped: mechanism already scored by FP3 (lunge and risky recovery)'
+  U3: 'dropped: mechanism already scored by FP5 (first to N hits, reset to guard)'
+  U4: 'dropped: relation was scored by FP4 (counters and attacker priority), deleted 2026-11-09'
+  U5: CR1, VP1 (blade colour by side -> CR1; glowing blade look -> VP1)
+  U6: 'dropped: interpretive join, the clash-as-guard is scored by cross item FP2'
+  U7: 'FP5 (start on guard); crossing rule dropped: peripheral (one clause of p075''s competition procedure, the bout is recognisable without
+    it)'
+  FP1: CR1, CR2, FP1 (existence of the fighters and of the move set -> CR; FP1 keeps only the opponent's own fighting)
+  FP2: FP2, VP1 (look of the clash flare moved to VP1 on review)
+  FP3: FP3
+  FP4: 'dropped: counters and priority item deleted 2026-11-09'
+  FP5: FP5
+  FP6: 'FP5 (start on guard merged in); crossing rule dropped: peripheral (one clause of p075''s competition procedure, the bout is recognisable
+    without it)'
+  VP1: VP1 (colour-by-side clause moved to CR1; clash flare look added from FP2 on review)
+  VP2: VP2
+  VP3: VP3
+provenance:
+  source_yaml: T-HY-vid_d12eba90e638.t1.yaml
+  source_sha256: 5577b49d5b019296c1303f73d648182a01bc5b79aa53494afcf16e366edbc5e9
+  size_waiver: null
+  size_max: null
+  sources:
+  - ref: t01
+    text: /Volumes/USB-500G/gameanything_local/hf/curation/hybrid_texts/T-HY-vid_d12eba90e638.t1/final.md

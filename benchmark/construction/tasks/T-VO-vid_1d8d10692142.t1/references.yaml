@@ -1,0 +1,24 @@
+# Reference material: fetched from the HF dataset into $GAB_MEDIA_DIR/<task>/ by `gab media fetch` (sha256 checked).
+# The agent gets the files only (no title, author, caption or source): this file is never shown to it.
+task_id: T-VO-vid_1d8d10692142.t1
+refs:
+- id: c01
+  kind: video
+  file: clip_01.mp4
+  video_id: vid_1d8d10692142
+  source:
+    title: Paris： The last drone aerials [REDVbTQxMXo]
+    url: https://www.youtube.com/watch?v=REDVbTQxMXo
+    channel: null
+    youtube_id: REDVbTQxMXo
+  range:
+    start: 27.4
+    end: 78.8
+    text: 0:27.40-1:18.80
+  duration_s: 51.4
+  size_bytes: 7851138
+  format: mp4 H.264 720p, AAC audio
+  hf_path: media/T-VO-vid_1d8d10692142.t1/clip_01.mp4
+  sha256: 0ed307b330d5569f1e495f86a6ec7f987503c8f536d8eb65e8d43dffbfdb864c
+  rights_note: Third-party commercial drone footage of real landmarks (travel source, possible studio logo at the end). Use as a private reference
+    only and do not redistribute the frames. Recreate the layout in original assets.

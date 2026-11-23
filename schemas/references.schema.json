@@ -1,0 +1,216 @@
+{
+ "$schema": "https://json-schema.org/draft/2020-12/schema",
+ "title": "references.yaml (public; never shown to the agent)",
+ "type": "object",
+ "required": [
+  "task_id",
+  "refs"
+ ],
+ "additionalProperties": false,
+ "properties": {
+  "task_id": {
+   "type": "string"
+  },
+  "refs": {
+   "type": "array",
+   "minItems": 1,
+   "items": {
+    "oneOf": [
+     {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+       "id",
+       "kind",
+       "file",
+       "video_id",
+       "source",
+       "range",
+       "hf_path",
+       "sha256"
+      ],
+      "properties": {
+       "id": {
+        "type": "string",
+        "pattern": "^c\\d{2}$"
+       },
+       "kind": {
+        "const": "video"
+       },
+       "file": {
+        "type": "string",
+        "pattern": "^clip_\\d{2}\\.mp4$"
+       },
+       "hf_path": {
+        "type": "string"
+       },
+       "sha256": {
+        "type": "string",
+        "pattern": "^[0-9a-f]{64}$"
+       },
+       "size_bytes": {
+        "type": "integer"
+       },
+       "format": {
+        "type": "string"
+       },
+       "video_id": {
+        "type": "string"
+       },
+       "source": {
+        "type": "object",
+        "required": [
+         "title",
+         "url"
+        ],
+        "properties": {
+         "title": {
+          "type": "string"
+         },
+         "url": {
+          "type": [
+           "string",
+           "null"
+          ]
+         },
+         "channel": {
+          "type": [
+           "string",
+           "null"
+          ]
+         },
+         "youtube_id": {
+          "type": [
+           "string",
+           "null"
+          ]
+         }
+        }
+       },
+       "range": {
+        "type": "object",
+        "required": [
+         "start",
+         "end"
+        ],
+        "properties": {
+         "start": {
+          "type": "number"
+         },
+         "end": {
+          "type": "number"
+         },
+         "text": {
+          "type": "string"
+         }
+        }
+       },
+       "duration_s": {
+        "type": "number"
+       },
+       "rights_note": {
+        "type": [
+         "string",
+         "null"
+        ]
+       }
+      }
+     },
+     {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+       "id",
+       "kind",
+       "file",
+       "hf_path",
+       "sha256",
+       "judge_file",
+       "judge_sha256"
+      ],
+      "properties": {
+       "id": {
+        "type": "string",
+        "pattern": "^t\\d{2}$"
+       },
+       "kind": {
+        "const": "text"
+       },
+       "file": {
+        "type": "string",
+        "pattern": "^text_\\d{2}\\.md$"
+       },
+       "hf_path": {
+        "type": "string"
+       },
+       "sha256": {
+        "type": "string",
+        "pattern": "^[0-9a-f]{64}$"
+       },
+       "size_bytes": {
+        "type": "integer"
+       },
+       "format": {
+        "type": "string"
+       },
+       "words": {
+        "type": "integer"
+       },
+       "paragraphs": {
+        "type": "integer"
+       },
+       "anchors": {
+        "type": "string"
+       },
+       "judge_file": {
+        "type": "string",
+        "pattern": "^judge/text_\\d{2}\\.anchored\\.md$"
+       },
+       "judge_sha256": {
+        "type": "string",
+        "pattern": "^[0-9a-f]{64}$"
+       }
+      }
+     },
+     {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+       "id",
+       "kind",
+       "file",
+       "hf_path",
+       "sha256"
+      ],
+      "properties": {
+       "id": {
+        "type": "string",
+        "pattern": "^img\\d{2}$"
+       },
+       "kind": {
+        "const": "image"
+       },
+       "file": {
+        "type": "string",
+        "pattern": "^img\\d{2}\\.jpg$"
+       },
+       "hf_path": {
+        "type": "string"
+       },
+       "sha256": {
+        "type": "string",
+        "pattern": "^[0-9a-f]{64}$"
+       },
+       "size_bytes": {
+        "type": "integer"
+       },
+       "format": {
+        "type": "string"
+       }
+      }
+     }
+    ]
+   }
+  }
+ }
+}

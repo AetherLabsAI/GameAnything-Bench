@@ -1,0 +1,274 @@
+# GameAnything-Bench scoring material: never shown to agents during a trial.
+task_id: T-TO-txt_b9a5af2c4d1f.e2
+source_inventory:
+- 'c11.p001-c11.p008: the nursery is full of carpet-brought Persian cats and musk-rats; a large policeman in the kitchen accuses the four children
+  of ill-treating a cat; Robert retorts that police should only act when people shout ''murder'' and ''stop thief'''
+- 'c11.p009-c11.p017: the Phoenix slips out unnoticed; the animals'' noise drowns the children''s four different explanations; the policeman pushes
+  past to inspect the next room'
+- 'c11.p018-c11.p030: a shrill voice outside screams ''Murder! Stop thief!''; the policeman runs off after it; the Phoenix flies back, says he
+  does not know where the house is, and goes to bed'
+- 'c11.p031-c11.p040: Cyril writes a note telling the carpet to take the rats away and bring milk; Robert points out that the three wishes for
+  the day are spent, so the cats must stay the night; the children stroke the cats quiet'
+- 'c11.p041-c11.p047: the carpet comes back with a Jersey cow instead of milk; the children''s attempt to milk it fails (saucer knocked away,
+  feet trodden on); Jane breaks down'
+- 'c11.p048-c11.p059: council in the cold, neglected drawing-room; the boys set off to leave cats on doorsteps like foundlings; the girls fall
+  asleep under a blanket and hearthrug'
+- 'c11.p060-c11.p068: Jane wakes, follows footsteps to the basement and finds a burglar sitting among the cats, overwhelmed; the cow reminds him
+  of his father''s cow Daisy'
+- 'c11.p069-c11.p084: Jane talks to him kindly, promises not to call the police, and persuades him to milk the cow so the cats will drink, sleep
+  and stop the noise that could bring the police back'
+- 'c11.p085-c11.p094: boots on the stairs are only the boys; Jane passes him off as a friend; he milks the cow; Cyril tells how a second policeman
+  nearly caught them with cat-bags'
+- 'c11.p095-c11.p105: milking soothes the burglar and the fed cats purr; he says it is his first job: a barrow seller who overheard the servants''
+  plan for a night out, was robbed of his takings and came to burgle; the cats have turned him honest'
+- 'c11.p106-c11.p118: the children offer him the valuable cats if he takes them away; he returns in the night with a pal, a barrow and sacks,
+  and the sleepy cats are carted off; he gloomily calls himself a fence'
+- 'c11.p119-c11.p123: past one o''clock counts as the next day, so a new wish sends the cow back, tied to a corner of the carpet; next morning
+  that corner is badly torn'
+- 'c12.p001-c12.p013: late breakfast; Robert''s booby trap catches the returning servants; the children silence them with what they know of the
+  servants'' night out'
+- 'c12.p014-c12.p029: the Phoenix warns that the carpet is wearing out from wishes, travels, claws and the cow; held to the light it is full of
+  holes, thin places and a torn strip'
+- 'c12.p030-c12.p040: the children buy ordinary wool (no wishing-wool exists) and the girls darn all day; the Phoenix tells of the carpet''s royal
+  Persian past and begins a story, cut off by the boys'' return'
+- 'c12.p041-c12.p054: the boys report that the police have arrested ''our burglar'' on suspicion of stolen cats (his sister-in-law blames the
+  cats he paraded in blue ribbons); he is in the cells for the magistrate in the morning'
+- 'c12.p055-c12.p065: the truth would never be believed; the Phoenix suggests a rescue; he cannot be hidden at home, so Jane proposes the sunny
+  southern shore where the cook is queen; the girls darn on so he cannot fall through a hole'
+- 'c12.p066-c12.p080: at night the children wish themselves into his cell (a small plain whitewashed room, no dungeon); the sleeping burglar throws
+  off the boys and shouts; a warder calls through the door and goes away'
+- 'c12.p081-c12.p098: whispered persuasion; he would like Boolong but has no living there; a shore with nothing to do suits him; gardening was
+  his hobby; he lets himself be pulled onto the carpet'
+- 'c12.p099-c12.p111: the sunny southern shore: rainbow sands, tropical flowers, brilliant sun; the cook, crowned with white flowers and looking
+  young, sits with her court and takes it all for a dream; the burglar bathes in a rock pool'
+- 'c12.p112-c12.p124: the burglar, crowned with a woven wreath, asks the cook to walk out with him; Anthea proposes marriage; the cook will only
+  marry before a clergyman; he agrees to marry if one is brought'
+- 'c12.p125-c12.p129: the carpet, instructed in chalk inside Cyril''s cap, fetches the Reverend Septimus Blenkinsop from his study; he stands
+  half on an ordinary-wool darn, so he is only half there, see-through, and sees his study through everything; he marries the couple anyway, then
+  wanders off botanising'
+- 'c12.p130-c12.p133: wedding feast, flowers and dancing around the couple; the burglar''s speech: happy, honest, with an allotment, asks for
+  seeds and for the see-through parson to be taken away; the children leave and return the clergyman to his study'
+- 'c12.p134-c12.p137: the Phoenix brings the seeds and reports the pair are happy (he has a wooden spade, she weaves him white clothes); the police
+  never learn how he escaped (''the Persian mystery''); the clergyman blames over-study, takes his aunts to Paris and tells no one'
+instructions_meta:
+  requirement_groups:
+    world rules in play:
+    - CR1
+    - FP1
+    central crisis:
+    - CR2
+    - FP2
+    - VP1
+    consequence and rescue:
+    - CR3
+    - CR4
+    - FP3
+    resolution and ending:
+    - FP4
+    - VP3
+    settings and presentation:
+    - VP2
+  explicit_requirements:
+  - type: specify
+    text: The burglar should be taken to the tropical island where the children's former cook now lives, so the two of them can keep each other
+      company.
+    covers:
+    - CR4
+rubric:
+  content_realization:
+  - id: CR1
+    item: 'The game contains the wishing carpet as the story''s means of wishing, and the story''s main places linked by its travel: the children''s
+      town house, the cell where the burglar is held, and the far-off island.'
+    anchors:
+      '1': a wishing carpet is present and the house, the cell and the island all exist as places it carries the player (and others) between
+      '0.5': the carpet is present but only some of these places exist or they are linked by ordinary travel, or the places exist with no carpet
+      '0': no wishing carpet in the game
+    evidence:
+    - c11.p001
+    - c11.p031
+    - c11.p041
+    - - c12.p066
+      - c12.p069
+    - - c12.p098
+      - c12.p100
+  - id: CR2
+    item: The game contains the burglar as a soft-hearted first-timer, not a hardened criminal, who ends up on the children's side as their ally
+      and turns honest.
+    anchors:
+      '1': the burglar is shown as a kind, first-time would-be thief who sides with the children and reforms
+      '0.5': a sympathetic or comic burglar, but not shown as a first-timer, or not as becoming their ally and honest
+      '0': no burglar, or a menacing professional thief who stays an enemy
+    evidence:
+    - c11.p078
+    - c11.p100
+    - c11.p102
+    - c11.p105
+    - c11.p112
+    - c12.p057
+  - id: CR3
+    item: 'The game shows the cause of the burglar''s arrest: he is arrested on suspicion of having stolen the very cats the children gave him,
+      and since no one would believe the truth, the children set out to rescue him themselves.'
+    anchors:
+      '1': the arrest is tied to the cats he was given, and the rescue is shown as the children's own answer because the truth cannot help him
+      '0.5': the arrest and rescue are present but the arrest is not tied to the cats, or no reason is given why the children act themselves
+      '0': no arrest, or an arrest with no connection to the earlier events
+    evidence:
+    - c12.p045
+    - c12.p047
+    - c12.p051
+    - c12.p053
+    - - c12.p055
+      - c12.p060
+  - id: CR4
+    item: The game contains the far-off tropical island where the children's former cook now lives, and the burglar is taken there so that the
+      two will be company for each other, ending up settled there together for good, out of the police's reach.
+    anchors:
+      '1': the island exists with the former cook living there, the burglar is brought there so he and the cook keep each other company, and at
+        the end he lives there with her as a couple, settled and happy, beyond the police
+      '0.5': the island or the cook is present, but the burglar is not brought to her, or no reason for the destination is shown, or he is brought
+        there but nothing shows the two settled together for good
+      '0': no island with the cook
+    evidence:
+    - - c12.p060
+      - c12.p062
+    - - c12.p095
+      - c12.p096
+    - - c12.p099
+      - c12.p100
+    - c12.p131
+    - - c12.p134
+      - c12.p136
+  functions_playability:
+  - id: FP1
+    item: 'Wishing is a limited resource: the player uses the carpet''s wishes to change where they are or what is around them, and once the day''s
+      wishes are spent the player has to cope without them until the next day.'
+    anchors:
+      '1': wishes change the player's location or circumstances, a daily limit is enforced, and running out leaves the player to deal with the
+        situation until a new day
+      '0.5': wishes exist and move the story but are unlimited, or a limit is shown but never matters
+      '0': no wish mechanic, or wishes are only told in cutscenes
+    evidence:
+    - c11.p031
+    - c11.p035
+    - - c11.p120
+      - c11.p122
+    - c12.p067
+    - c12.p099
+    - c12.p125
+  - id: FP2
+    item: The night the house is overrun by the animals is a situation the player must resolve, and it is resolved by winning the intruding burglar
+      over, whose help quiets the animals and gets them out of the house.
+    anchors:
+      '1': the overrun house is a playable problem that the player solves through the burglar's cooperation, gained by talking to or persuading
+        him
+      '0.5': the problem is solved without the burglar, or the burglar appears but only as an obstacle to beat, or his help happens without player
+        involvement
+      '0': missing
+    evidence:
+    - - c11.p031
+      - c11.p047
+    - - c11.p069
+      - c11.p095
+    - - c11.p106
+      - c11.p113
+  - id: FP3
+    item: 'The burglar''s arrest is a consequence the player must answer: the player reaches him in custody and gets him out.'
+    anchors:
+      '1': after the arrest the player can reach the burglar in custody and take him away from it by their own action
+      '0.5': the player reaches the cell but cannot take him away, or he is freed without the player's action
+      '0': missing
+    evidence:
+    - c12.p059
+    - - c12.p066
+      - c12.p098
+  - id: FP4
+    item: 'The story reaches a clear ending on the island: the cook''s condition for marrying is met by bringing a clergyman, and the wedding
+      closes the story.'
+    anchors:
+      '1': the player meets the cook's condition (a clergyman brought in), the wedding takes place, and the story ends or clearly concludes there
+      '0.5': the wedding happens without the condition being played, or the condition is met but there is no clear ending
+      '0': missing
+    evidence:
+    - - c12.p122
+      - c12.p125
+    - c12.p128
+    - - c12.p130
+      - c12.p134
+  visual_presentation:
+  - id: VP1
+    cat: key_moment
+    item: 'The home overrun: rooms crowded with cats.'
+    anchors:
+      '1': a room inside the house visibly packed with cats
+      '0.5': only a few cats, or the cats not inside the house
+      '0': not shown
+    evidence:
+    - c11.p001
+    - c11.p063
+    - c11.p093
+  - id: VP2
+    cat: style
+    item: 'The two worlds contrast: the ordinary London town house against the open tropical island.'
+    anchors:
+      '1': both settings are shown and clearly contrast (domestic town house vs tropical island)
+      '0.5': both settings exist but look alike, or only one has its character
+      '0': missing
+    evidence:
+    - c11.p001
+    - c11.p048
+    - c12.p001
+    - - c12.p100
+      - c12.p101
+  - id: VP3
+    cat: key_moment
+    item: The island wedding is shown as a festive celebration around the couple.
+    anchors:
+      '1': a set-apart, festive wedding scene centred on the couple
+      '0.5': the wedding only stated in text, or a plain scene with no celebration
+      '0': not shown
+    evidence:
+    - c12.p128
+    - c12.p130
+play_suggestions:
+  FP1:
+  - 'spend all the wishes early on: is a further wish refused, and does the game go on until a new day?'
+  - 'use wishes both to go somewhere and to change what is around the player: do both work?'
+  FP2:
+  - 'try to drive off or ignore the burglar: can the night still be resolved, and how?'
+  - 'talk to him: does persuading him lead to the animals being quieted and removed?'
+  FP3:
+  - after the cats are gone, does the arrest follow and set up the rescue?
+  - 'reach the cell: can the burglar be got out of custody by the player''s own action?'
+  FP4:
+  - 'ask the cook to marry before a clergyman is brought: is she refusing?'
+  - after the wedding, is there a clear ending or a way to continue?
+  robustness:
+  - 'leave the house overrun and wander off: does the situation persist?'
+  - try to wish for something before the story needs it, and when no wishes are left
+  - save and reload between the night and the next day
+v4_map:
+  U1: 'dropped: mechanism scored by FP1; carpet''s existence moved to CR1'
+  U2: CR2
+  U3: CR2 (ally relation) + FP2 (persuading him brings the help that resolves the crisis)
+  U4: CR3
+  U5: CR4
+  U6: 'CR4 (lasting outcome: settled together on the island) + FP4 (cook''s condition and wedding)'
+  FP1: FP1 (carpet and linked places as existence in CR1)
+  FP2: FP2
+  FP3: FP3 (arrest's cause moved to CR3; island destination and arrival scored in CR4)
+  FP4: FP4
+  FP5: 'dropped: editing request (modify, arrest witnessed in town), split off to editing_seed.yaml 2026-11-05'
+  VP1: VP1
+  VP2: VP2
+  VP3: VP3
+provenance:
+  source_yaml: T-TO-txt_b9a5af2c4d1f.e2.yaml
+  source_sha256: 79f9a2e89fcf9d0dd5435760d922719850f9c8eec9e31da3d9b87186daadcc0e
+  size_waiver: null
+  size_max: null
+  sources:
+  - ref: t01
+    title: The Phoenix and the Carpet
+    author: E. Nesbit
+    text_id: txt_b9a5af2c4d1f
+    excerpt_id: e2

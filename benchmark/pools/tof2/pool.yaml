@@ -1,0 +1,76 @@
+# Copied from the original pool_tof2.yaml (2026-10-30) + game / version / default_picks for gab.
+# default_picks: used for a task whose regression.yaml has no checked picks yet; cheap, uncorrelated probes
+# (no TF-UNIT-DATA: it flags intended unit changes too; no TF-AI / TF-CAMPAIGN: the two slow runs, 3 + 7 min).
+# gab runs: gab/game/tof2/probes.py (TOFProbes), a fresh instance under <root>/inst/gab-<label>-<time> per call, every probe its
+# own detached headless run, polled. Headless: no GPU / display needed for the probes.
+# Base-capability pool, Tanks of Freedom II (v0.2, verified in game 2026-10-30, Tanks of Freedom II 1.0.9 = github P1X-in/tanks-of-freedom-ii
+# master dbe629e, run from source with the official Godot 4.4.1 build; no binary release exists on GitHub)
+# Same rules as pool_minecraft.yaml: atomic base capabilities a task's change could break. Pass = same result as a vanilla
+# instance. Per task the drafter picks the 4-6 relevant ones and may add 0-2 task-specific items; a maintainer checks. Avoid
+# correlated picks: a change to a stock unit (scenes/tiles/units/templates/*.tscn) fails TF-UNIT-DATA and TF-COMBAT together
+# (and maybe TF-AI); a stock skirmish map edit fails TF-MAPS and, for 2p_crossroad / 2p_oasis / 4p_ridge, the probes that play
+# on that map (TURNS, ECONOMY, PRODUCE, MOVE, SAVE, AI on 2p_crossroad; COMBAT, CAPTURE, WIN, CAMERA, MENU, EDITOR on 2p_oasis;
+# ABILITIES on 4p_ridge) - for a map task pick TF-MAPS and leave those out or give the task's own map item.
+# Mod surface: JSON maps (assets/maps/skirmish/*.tofmap.json, custom maps in user://), campaigns (assets/campaigns/<c>/campaign.json
+# + maps/*.tofmap.json with their story scripts: scripts.triggers / scripts.stories; custom campaigns in campaign/<c>/), and the
+# game's own scenes/scripts when a task changes them.
+# Probes: gab/game/tof2/probes.py (TOFProbes); `probe: x.y+z` = fields y, z of probe x; produce / move / capture /
+# win are views of the produce_move and capture_win probes.
+# Runtime: <sandbox>:/home/player/oss-tof2 (src = imported project, godot = Godot 4.4.1). Every probe is its own short headless
+# run (`godot --headless --path <instance> -- probe=<name>`) of a fresh instance (assets hard-linked, rest copied, own user://);
+# a bridge autoload added through override.cfg drives the game through its own services and scenes (MatchSetup + SceneSwitcher,
+# board.select_tile / handle_interaction / _activate_production_ability / _activate_ability / end_turn, map builder, the map
+# editor's save/load handler, the main-menu panels, the saves panel) and writes JSON. Game speed 4x (AI 8x); story dialogs
+# are read and closed by the bridge. No network: online / relay / LAN multiplayer are not used.
+# A/A calibration 2026-10-30: fresh vanilla instances aa1-aa4 (+ aaA/aaB with an earlier bridge): every ready item agrees in
+#   aa1-aa2 and aa3-aa4. Exact (deterministic): unit data, maps, turn order, AP per turn, production, movement costs, all 49
+#   combat pairs, 30 ability checks, capture / win, save round trip, editor, menu, 38 campaign missions (story texts read until
+#   the turn-1 stories are idle). Noise: edge-pan distance -28.3 / -30.2 per game second (frame-delta dependent; +-10%),
+#   scripted camera arrival 164/164 or 166/162 (+-4 = half a tile), AI after 6 turns: most buildings 4-6, most units 3-5 per
+#   side (fail only >50% below vanilla, or the AI match not reaching the turn limit). Error lines 9-24 per suite, all of known
+#   vanilla kinds (a vanilla bug repeats one per frame: board.gd:814 update_tile_highlight on campaign maps), so TF-STABLE
+#   compares error kinds (message @ location) per probe, not counts.
+# Negative checks 2026-10-30 (vs aa3): map mod 4p_cross without one neutral barracks -> TF-MAPS fails, 16 others pass;
+#   campaign mod prologue mission 1 without its trigger 01_phase_one_turn_start -> TF-CAMPAIGN fails (triggers 6 -> 5), others
+#   pass; scene mod units/templates/tank.tscn attack 10 -> 6 -> TF-UNIT-DATA (4 tanks) and TF-COMBAT fail, others pass.
+# Full suite: ~6 min per instance (campaign 3 min), one Godot process at a time, ~300 MB RAM. Evidence:
+#   the verification logs (reproduce.sh, aa/, negative/, negative_mods/, screenshots/)
+
+game: tof2
+version: 1.0.9 (dbe629e) on Godot 4.4.1
+default_picks: [TF-MAPS, TF-TURNS, TF-COMBAT, TF-CAPTURE, TF-MENU]
+
+# gate (gab/eval/regression.py): the STABLE item (no real crash / hang, no new fatal error kind) + the host-present
+# item(s): the stock content they reach must still be there on the modded game (numbers NOT compared with vanilla; only a mod that
+# removes / replaces the host game wholesale fails). Scores are 0 unless the gate passes. Not chosen per task.
+gate: [TF-STABLE, TF-MENU, TF-MAPS]
+
+always:
+  - {id: TF-STABLE, capability: "no crash or hang in any probe run, and no kind of engine/script error (message @ location) that vanilla does not show in the same probe", probe: log_errors, status: ready}
+
+pool:
+  # content
+  - {id: TF-UNIT-DATA, capability: "stock units unchanged: hp, move, attack, armor, attacks, capture / fly, value, class and active abilities (cost, cooldown, range) of all 28 coloured units and 12 heroes / NPCs; every building's AP income, crew rule, capture value and production list (unit, cost); who may attack whom (new content may be added)", probe: data, status: ready}
+  - {id: TF-MAPS, capability: "all 12 stock skirmish maps are listed and start: same sides, ground / terrain tiles, buildings (type, side, position), starting units and objective as vanilla", probe: maps, status: ready}
+  # turn flow and economy
+  - {id: TF-TURNS, capability: "turn order: end turn passes to the next player and the turn counter advances after the last one; the human player's end of turn writes an autosave", probe: turns.order+autosave_written, status: ready}
+  - {id: TF-ECONOMY, capability: "AP income: each turn start adds the AP of the player's buildings (2p_crossroad, 3 rounds), same AP per player per turn as vanilla", probe: turns.ap+income_now, status: ready}
+  # units
+  - {id: TF-PRODUCE, capability: "an owned building's production ability spawns its unit on a marked neighbour tile at vanilla AP cost and with full moves", probe: produce, status: ready}
+  - {id: TF-MOVE, capability: "a fresh unit's movement range (reachable tiles and their AP costs) is as vanilla, moving to the farthest tile costs vanilla AP and moves, and moves come back next turn", probe: move, status: ready}
+  - {id: TF-COMBAT, capability: "adjacent attack with retaliation: for each of the 7 stock attackers against each of the 7 stock defenders, whether the attack is allowed and both units' HP afterwards are as vanilla", probe: combat, status: ready}
+  - {id: TF-ABILITIES, capability: "active unit and hero abilities (LR shell, missiles, medkit, repair kit, pick up, rapid response, hero strikes / buffs ...): which ones the game offers, the tiles they can target, their AP cost, cooldown and effect on a fixed test scene are as vanilla", probe: abilities, status: ready}
+  # buildings and game end
+  - {id: TF-CAPTURE, capability: "a unit next to a neutral building captures it (building changes side, AP cost, crew rule as vanilla)", probe: capture, status: ready}
+  - {id: TF-WIN, capability: "capturing the enemy HQ on a stock skirmish map eliminates that player and shows the match summary", probe: win, status: ready}
+  # players
+  - {id: TF-AI, capability: "an AI-vs-AI skirmish (2p_crossroad, 6 turns) runs to the turn limit with every AI taking its turns, and the AIs expand / build about as much as vanilla", probe: ai, status: ready}
+  # campaign and stories
+  - {id: TF-CAMPAIGN, capability: "all stock campaigns (tutorial, prologue, 4 core, epilogue) and the bundled custom one are listed with their missions; every mission starts and runs its turn-1 story scripts: same triggers, story texts, objectives, players and starting units / buildings as vanilla", probe: campaign, status: ready}
+  # interface and tools
+  - {id: TF-MENU, capability: "main menu works: map picker lists the stock maps, skirmish setup shows the map's players, campaign selection and settings open and close, and a skirmish starts from the setup panel's start button", probe: menu, status: ready}
+  - {id: TF-SAVE, capability: "a manual save during a skirmish and loading it through the saves panel restores turn, active player, AP and every unit / building, and the loaded game runs on; autosaves rotate", probe: save, status: ready}
+  - {id: TF-EDITOR, capability: "the map editor opens a stock map, places a building and a unit, saves the map through its save handler, loads it back with the edit kept, and the saved map plays as a skirmish", probe: editor, status: ready}
+  - {id: TF-CAMERA, capability: "board camera: edge-pan moves the camera, mouse-wheel zoom changes distance, the camera-style switch cycles TOF -> AW -> FREE -> TOF, and scripted camera moves arrive", probe: camera, status: ready}
+  # not probed
+  - {id: TF-MULTIPLAYER, capability: "LAN / online multiplayer and the online map exchange work", probe: none, status: blocked, why: "needs a second client or the third-party api.tof.p1x.in / relay servers; not run in the sandbox"}

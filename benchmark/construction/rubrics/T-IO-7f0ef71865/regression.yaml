@@ -1,0 +1,20 @@
+# GameAnything-Bench scoring material: never shown to agents during a trial.
+task_id: T-IO-7f0ef71865
+game: terraria
+status: pending
+picks:
+- TR-CONTENT
+- TR-MOVE
+- TR-DIG-PLACE
+- TR-CRAFT
+- TR-INVENTORY
+- TR-PERF
+changed: []
+kept_borderline:
+- id: TR-MOVE
+  note: Carts move the player, but vanilla running/jump/fall is not required to change; stays tested.
+summary: Mine-cart system mod with a multi-line track network, cart state display, and mine spaces.
+task_checks: []
+note: 'policy (A): excluded only when the instruction explicitly requires the change; plausible side effects stay tested; adding
+  new content is never a reason to exclude. Proposed by claude-sonnet-5-5 via `gab task picks` 2026-11-06; a maintainer checks (set status: checked).
+  The evaluator tests the pool''s always items (unless in changed) + picks.'

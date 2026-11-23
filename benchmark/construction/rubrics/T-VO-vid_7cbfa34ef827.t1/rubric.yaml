@@ -1,0 +1,318 @@
+# GameAnything-Bench scoring material: never shown to agents during a trial.
+task_id: T-VO-vid_7cbfa34ef827.t1
+source_inventory:
+- '00:08.2-00:09.0 night hedge garden: stone fountain on a round cobbled plaza, tall clipped hedges, dim blue light'
+- '00:09.2-00:11.2 wide shot: a short woman in a starry pointed wizard hat and blue robe (the fairy-godmother figure) points a glowing wand; a
+  blonde girl in a yellow dress stands beside her; a blue sparkle cloud billows up next to a garden gazebo and swells across the frame, a carriage
+  shape and a gown shape forming inside it'
+- 00:11.7-00:12.2 the blonde girl floats, arms out, in a glowing pink-white gown between an ornate silver-blue carriage (left) and white horses
+  with blue plumes (right)
+- '00:12.7-00:13.7 close-up: blue sparkles wrap the girl''s feet and form glowing glass slippers'
+- 00:14.2-00:14.7 the wizard-hat woman (chain belt, wand in hand) looks off to the side, alarmed; the blonde girl's shoulder in the foreground
+- 00:15.2-00:16.2 a dark-haired girl in purple with a hair pin peers out of the hedge, wide-eyed and frowning
+- '00:16.7-00:18.2 an open illustrated storybook: the page shows the same garden transformation (girl in a sparkling gown, wizard-hat woman with
+  wand); the page turns at 00:18.2'
+- 00:18.7-00:19.2 a glowing blue crystal wand streaks through blue sparkles toward the dark-haired girl, who crouches on the grass in front of
+  the lit palace
+- 00:19.7 black frame
+- 00:20.2-00:22.7 the dark-haired girl holds a glowing crystal wand, lit blue by it, smirking and talking; hedges and the lit palace behind
+- 00:23.2 the blonde girl in a pink layered ball gown at the top of an ornate palace staircase
+- 00:23.7 the dark-haired girl in a different, dark spiky gown with a choker and teal-streaked hair, scowling, in a palace corridor; a stout creature
+  at the frame edge
+- '00:34.5-00:35.0 ballroom (chandeliers, guests, blue-gold patterned floor): a prince in a teal embroidered jacket stands still, eyes closed;
+  the blonde girl, now in a green outfit with a green headband, runs past him covering her face'
+- 00:35.5-00:38.0 the wizard-hat woman (chain belts) holds open a storybook with glowing page edges; the page shows a glass slipper illustration;
+  a small glowing blue object in her other hand; the dark-haired girl (purple) and the blonde girl stand in the foreground, backs to camera; candles,
+  a window behind
+- '00:38.5-00:39.0 exterior at night: palace with a clock tower on a cliff'
+- '00:39.5 palace entrance staircase: a king-like figure at the doors, a figure hurrying down the steps'
+- 00:40.0-00:40.5 the prince on the staircase looks at a glowing glass slipper in his hands
+- 00:41.0-00:41.5 the prince twirls a curly-haired blonde girl in a lilac gown on a purple-lit, crowded dance floor
+- 00:42.0-00:43.5 the wizard-hat woman throws up her arms and clutches her head in front of red-pink smoke and fire; two figures at the frame
+  edges
+- 00:44.0-00:45.0 a dark room with a candle circle around a couch; pink-red smoke bursts and fills the whole frame
+- 00:45.5-00:47.5 a small blue-green frog with big eyes held in purple-sleeved arms
+- 00:48.0-00:49.5 text card 'From the studio that brought you K-Pop Demon Hunters' (unscorable)
+- 00:49.5-00:50.0 sunset ridge with bare, twisted dead trees
+- '00:50.5-00:51.0 sunlit forest (huge trunks, moss, yellow flowers): the dark-haired girl (purple dress, hand on hip) and the blonde girl (green
+  outfit) holding the glowing slipper; the frog sits on a rock between them'
+- 00:51.5-00:52.0 the blonde girl walks along a mossy fallen log over a shallow stream, holding the glowing slipper; the dark-haired girl enters
+  at the left
+- '00:52.5-00:53.5 close-up: the blonde girl, flustered and sweating, glowing slipper in hand, a fallen log and a sapling behind'
+- 00:54.0 the blonde girl reaches up and grabs a branch of the sapling
+- '00:54.5-00:56.5 from behind the blonde girl: the dark-haired girl crosses the clearing, stumbles and falls back over a fallen log; the frog
+  on the ground nearby'
+- 00:57.0-00:57.5 the blonde girl again holding the branch, slipper glowing in her other hand
+- '00:58.0-01:01.0 close-up: the dark-haired girl, smirking and talking, a fallen log behind'
+- 'audio (Whisper, check speakers against frames): 00:08.6-00:15.2 ''I''m here to make all your dreams come true after the way you''ve been treated
+  by your evil stepsisters'' (over the transformation, likely the wizard-hat woman); 00:15.2-00:17.0 ''Evil stepsister?'' (over the girl in the
+  hedge); 00:17.0-00:20.3 ''You deserve to know the real story.'' (speaker unclear); 00:20.3-00:24.2 ''Looks like we have a ball to crash.'' (over
+  the dark-haired girl with the wand)'
+- 'audio: 00:34.0-00:35.8 ''Now the story''s broken.''; 00:35.8-00:45.3 ''There is one way and one way only to fix this mess. The prince has got
+  to put this slipper on your foot before midnight. Or we''re all toast. Especially you, dear.'' (over the wizard-hat woman, the clock tower,
+  the prince with the slipper, the red smoke); 00:45.3-00:47.7 ''You can become a full frog forever.'' (over the frog)'
+- 'audio: 00:47.7-00:51.6 ''Us, our first girls trip.''; 00:51.6-00:54.3 ''We appear to be producing condensation?'' (over the sweating blonde
+  girl); 00:54.3-00:58.1 ''Oh, that''s called sweat, babe. You''re like the rest of us now.''; 00:58.1-01:01.6 ''Not all of us had a magical personal
+  assistant pulling the strings.'' (over the dark-haired girl)'
+- 'audio: trailer music and effects under the dialogue are not described in the material and cannot be verified'
+- 'not shown: whether the slipper is ever fitted, who the frog is, what happens at midnight, how the dark-haired girl gets the wand, whether she
+  actually crashes the ball or causes the broken story, and whether the shots are in story order'
+instructions_meta:
+  requirement_groups:
+    characters, roles and relations:
+    - CR1
+    - CR5
+    opening event and its presentation:
+    - FP1
+    - VP1
+    story disruption and goal setup:
+    - CR3
+    - CR4
+    - FP2
+    stakes and outcomes:
+    - CR2
+    - FP3
+    - VP4
+    story locations and progression:
+    - CR6
+    - FP4
+    - VP2
+    - VP3
+  explicit_requirements:
+  - type: keep
+    text: I want to keep the glowing glass slipper that gets carried along on the quest.
+    covers:
+    - CR2
+    - FP4
+    - VP4
+  - type: specify
+    text: 'The stakes should work like in the clip: the prince has to put that slipper on the girl''s foot before midnight, or we''re all toast
+      and someone ends up a frog forever.'
+    covers:
+    - CR4
+    - FP3
+rubric:
+  content_realization:
+  - id: CR1
+    item: 'The main cast with their story roles: a fairy-godmother-like helper who wields the magic wand; the Cinderella-like heroine she makes
+      over; a dark-haired girl cast as the heroine''s ''evil stepsister''; the prince, on whom the fix depends; a small frog tied to the curse'
+    anchors:
+      '1': all five are in the game, each recognisable in their story role
+      '0.5': one of the five is missing, or some are present without a recognisable role (e.g. the dark-haired girl as a generic villager, the
+        helper without her magic)
+      '0': two or more of the five missing, or the cast is not in the game
+    evidence:
+    - - '00:09.2'
+      - '00:16.2'
+    - - '00:34.5'
+      - '00:40.5'
+    - - '00:45.5'
+      - '00:51.0'
+  - id: CR2
+    item: 'The glass slipper: the slipper conjured by the helper''s magic at the makeover is the same item the fix depends on'
+    anchors:
+      '1': a glass slipper exists in the game, comes from the makeover magic and is the item of the fix
+      '0.5': a slipper or special item exists but is not tied to the makeover, or it is a generic quest item not recognisable as a glass slipper
+      '0': no such item
+    evidence:
+    - - '00:12.7'
+      - '00:13.7'
+    - - '00:35.5'
+      - '00:40.5'
+  - id: CR3
+    item: 'Inciting turn: in the garden the dark-haired girl watches the heroine''s makeover from hiding, objects to being cast as the ''evil
+      stepsister'', then holds the helper''s wand and sets out to crash the ball'
+    anchors:
+      '1': the game contains her watching the makeover, rejecting the stepsister role, and then holding the wand with the intent to crash the
+        ball, in this order
+      '0.5': she ends up with the wand but the rejection of the role or the intent to crash the ball is missing, or these garden events are out
+        of order
+      '0': missing, or the roles reversed (e.g. the heroine takes the wand)
+    evidence:
+    - - '00:14.2'
+      - '00:24.2'
+  - id: CR4
+    item: 'Goal and stakes stated in the game: before the quest the helper gives the one way to fix the broken story, the prince putting the slipper
+      on the girl''s foot before midnight, and the penalty for failing: everyone is doomed and someone becomes a frog forever'
+    anchors:
+      '1': the fix (the prince fits the slipper on the girl's foot), the midnight deadline and the frog-forever penalty are all stated by the
+        helper in play before the quest
+      '0.5': two of the three are stated, or they are stated only after the quest has begun or by no character
+      '0': no stated goal
+    evidence:
+    - - '00:35.5'
+      - '00:47.5'
+  - id: CR5
+    item: 'Allies on the quest: the heroine and the girl cast as her ''evil stepsister'' travel together with the frog as companions instead of
+      keeping their fairy-tale roles'
+    anchors:
+      '1': the two girls are companions on one quest with the frog, no longer opposed as heroine and evil stepsister
+      '0.5': they travel together but the frog is not with them, or they still act out their fairy-tale opposition
+      '0': missing, or they are strangers or enemies on the journey
+    evidence:
+    - - '00:50.5'
+      - '01:01.0'
+  - id: CR6
+    item: 'The story''s places: the palace at night with its hedge garden, where the makeover happens, and its ball; and, apart from the palace,
+      a sunlit wild forest that the quest travels through'
+    anchors:
+      '1': a night palace area with its garden and a ball or ballroom, plus a separate forest area outside the palace
+      '0.5': only the palace area or only the forest exists, or the ball has no place of its own
+      '0': none of the story's places
+    evidence:
+    - - '00:08.2'
+      - '00:22.7'
+    - - '00:34.5'
+      - '00:41.5'
+    - - '00:49.5'
+      - '00:57.5'
+  functions_playability:
+  - id: FP1
+    item: 'Magic transformation event: a helper character''s magic visibly changes the main character''s state (new outfit, conjured ride and
+      special item), and the changed state holds after the event instead of reverting at once'
+    anchors:
+      '1': the event plays in the experience and the before and after states clearly differ
+      '0.5': the event is only narrated, or the change reverts at once
+      '0': no transformation event
+    evidence:
+    - - '00:09.2'
+      - '00:13.7'
+  - id: FP2
+    item: 'Inciting disruption: before the main goal is given, the planned story is established in play as broken, and the goal is presented as
+      the way to fix that disruption'
+    anchors:
+      '1': the broken story is established (shown or told) before the goal and the goal is framed as fixing it
+      '0.5': the disruption is present but disconnected from the goal, or the goal can be started before it
+      '0': no disruption; the quest starts from nothing
+    evidence:
+    - - '00:15.2'
+      - '00:24.2'
+    - - '00:34.5'
+      - '00:38.5'
+  - id: FP3
+    item: 'Deadline with consequence: the deadline is actually tracked in play; missing it leads to the stated penalty (a transformation into
+      a small creature), and succeeding in time leads to a resolution or lets the story continue'
+    anchors:
+      '1': missing the deadline triggers the stated penalty and meeting it gives a distinct success / continuation
+      '0.5': the deadline exists but nothing happens when it passes, or the outcome ignores the stated penalty
+      '0': no deadline in play
+    evidence:
+    - - '00:38.5'
+      - '00:47.5'
+  - id: FP4
+    item: 'The quest journey: after the setup the player leaves the starting place and crosses a wild area carrying the special item, with the
+      other girl and the small creature present along the way'
+    anchors:
+      '1': a journey leg after the setup, the item carried and both companions present along the way
+      '0.5': the journey exists but a companion is missing, or the item is not carried
+      '0': no journey; the story jumps from setup to end
+    evidence:
+    - - '00:49.5'
+      - '00:57.5'
+  visual_presentation:
+  - id: VP1
+    cat: key_moment
+    keyframes:
+    - '00:10.2'
+    - '00:11.7'
+    - '00:13.2'
+    item: 'The makeover moment: a burst of magic out of which the ride, the gown and the glass slippers take shape, set apart from the dark night
+      around it'
+    anchors:
+      '1': a distinct magic effect that the conjured results visibly emerge from
+      '0.5': a magic effect that is generic or not set apart from the scene, or the results pop in with no effect
+      '0': none
+    evidence:
+    - - '00:09.2'
+      - '00:13.7'
+  - id: VP2
+    cat: spatial
+    keyframes:
+    - '00:08.2'
+    - '00:09.2'
+    - '00:15.2'
+    item: 'The look of the night garden: a stone fountain on a round plaza surrounded by tall clipped hedges, with the lit palace nearby, at night'
+    anchors:
+      '1': fountain, hedges and the palace readable in a night setting
+      '0.5': a garden at night but without the fountain or the hedges, or the same layout by day
+      '0': none
+    evidence:
+    - - '00:08.2'
+      - '00:09.2'
+    - - '00:15.2'
+      - '00:22.7'
+  - id: VP3
+    cat: spatial
+    keyframes:
+    - '00:50.5'
+    - '00:51.5'
+    - '00:54.5'
+    item: 'The look of the sunlit forest: huge mossy trunks, a fallen log across a shallow stream and logs in a clearing, in warm daylight that
+      contrasts with the night palace scenes'
+    anchors:
+      '1': dense forest of big mossy trees with a fallen log over water, in warm daylight that sets it apart from the night palace
+      '0.5': a forest without the log over water, or not in daylight / not distinct in look from the other areas
+      '0': none
+    evidence:
+    - - '00:50.5'
+      - '00:57.5'
+  - id: VP4
+    cat: presentation
+    keyframes:
+    - '00:38.5'
+    - '00:40.0'
+    - '00:52.5'
+    item: 'Readable stakes: the slipper is visibly distinct (glowing) whenever it is held or carried, and the deadline has a visible cue (the
+      reference cuts to the palace clock tower when midnight is spoken)'
+    anchors:
+      '1': the carried slipper stands out on screen and the deadline has a visible cue
+      '0.5': only one of the two is readable
+      '0': neither
+    evidence:
+    - - '00:38.5'
+      - '00:40.5'
+    - - '00:50.5'
+      - '00:57.5'
+play_suggestions:
+  FP1:
+  - 'watch the makeover, then walk away and come back: are the new outfit and the conjured ride still there?'
+  - compare the heroine before and after the event
+  FP2:
+  - try to start the slipper quest before the disruption happens
+  - check whether the rival holds the magic afterwards and that the planned story is established as broken
+  CR4:
+  - after the briefing, check whether the objective, the deadline and the penalty can be read again (log, dialogue, note)
+  - 'skip through the briefing quickly: is the goal still clear?'
+  FP3:
+  - 'let the deadline pass on purpose: does the frog penalty happen?'
+  - 'complete the fix just before the deadline and once well before it: is there a distinct success?'
+  - 'sleep or pass time in other ways: does the deadline still hold?'
+  FP4:
+  - walk through the forest leg and check that both companions keep up
+  - 'try to drop, sell or store the slipper during the journey: does it stay with the player until it is used?'
+  robustness:
+  - fail the quest and check that the game can continue or be retried sensibly
+  - save and reload in the middle of the deadline
+  - 'leave the forest leg early and return to the palace: does the story state stay consistent?'
+v4_map:
+  U1: FP1, CR1
+  U2: CR1
+  U3: 'CR2, CR3; the storybook part dropped: peripheral (a prop shown twice; the broken story itself is FP2)'
+  U4: CR3, FP2
+  U5: CR4
+  U7: 'CR5; the magic-assisted vs ordinary-life contrast dropped: peripheral (dialogue-level jokes in the forest)'
+  FP1: FP1
+  FP2: FP2
+  FP3: CR4
+  FP4: FP3
+  FP5: FP4, CR6
+  VP1: VP1
+  VP2: VP2, CR6
+  VP3: VP3, CR6
+  VP4: VP4
+provenance:
+  source_yaml: T-VO-vid_7cbfa34ef827.t1.yaml
+  source_sha256: 379fb8f8bb6312f4028888e9b4b1b88499f64efb086003c704bb35f61406afef
+  size_waiver: null
+  size_max: null
+  sources: []

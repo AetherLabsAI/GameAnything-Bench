@@ -1,0 +1,22 @@
+# GameAnything-Bench scoring material: never shown to agents during a trial.
+task_id: T-HY-vid_01f55d4c784a.t1
+game: minecraft
+status: pending
+picks:
+- MC-JOIN-INVENTORY
+- MC-BUILD
+- MC-COMBAT
+- MC-RULE-SPAWNING
+- MC-PERF
+- MC-INVENTORY
+changed: []
+kept_borderline:
+- id: MC-RULE-SPAWNING
+  note: Agent may disable natural spawning for custom attackers, but not required.
+- id: MC-JOIN-INVENTORY
+  note: Agent may give starting defender items, but not required.
+summary: Tower-defense game with a shooter and a one-shot mine defender, economy and waves.
+task_checks: []
+note: 'policy (A): excluded only when the instruction explicitly requires the change; plausible side effects stay tested; adding
+  new content is never a reason to exclude. Proposed by claude-sonnet-5-5 via `gab task picks` 2026-11-06; a maintainer checks (set status: checked).
+  The evaluator tests the pool''s always items (unless in changed) + picks.'

@@ -1,0 +1,22 @@
+# GameAnything-Bench scoring material: never shown to agents during a trial.
+task_id: T-TO-txt_162cbc111eec.e2
+game: minecraft
+status: pending
+picks:
+- MC-DAYNIGHT
+- MC-RULE-DAYCYCLE
+- MC-COMBAT
+- MC-RULE-SPAWNING
+- MC-JOIN-STATE
+- MC-PERF
+changed: []
+kept_borderline:
+- id: MC-RULE-DAYCYCLE
+  note: Agent might freeze time to control sunset, but the instruction does not require stopping the clock.
+- id: MC-DAYNIGHT
+  note: Sunset timing may tempt clock changes; the clock still need not stop.
+summary: Story of a besieged castle where magic lasts until sunset.
+task_checks: []
+note: 'policy (A): excluded only when the instruction explicitly requires the change; plausible side effects stay tested; adding
+  new content is never a reason to exclude. Proposed by claude-sonnet-5-5 via `gab task picks` 2026-11-06; a maintainer checks (set status: checked).
+  The evaluator tests the pool''s always items (unless in changed) + picks.'

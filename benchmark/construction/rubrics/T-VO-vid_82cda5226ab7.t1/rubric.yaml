@@ -1,0 +1,310 @@
+# GameAnything-Bench scoring material: never shown to agents during a trial.
+task_id: T-VO-vid_82cda5226ab7.t1
+source_inventory:
+- '00:00-00:01 overhead start view: eight four-person kayaks stationary on an aligned start line, one per lane; lane boards painted on the water
+  left of the line, each with a three-letter country code, flag and lane number 1-8 (UKR 1, LTU 2, SRB 3, GER 4, AUS 5, HUN 6, ESP 7, NZL 8);
+  pink/red buoys mark the lane ends; Olympic rings top right'
+- 00:01-00:06 all eight boats leave the line together and accelerate in parallel lanes, white wakes behind them; a race clock (0:01, 0:02, ...)
+  and 'FINAL A' label appear bottom right; title card 'MEN'S KAYAK FOUR 500M - Final' bottom left 00:03-00:05
+- 00:06-00:09 close-up of an Australian paddler (green cap, sunglasses, green-and-yellow kit); clock keeps running
+- '00:10-00:17 low side-on and wide shots across the lake: the field moves in parallel, yellow buoys line the lanes, tree line in the background;
+  from 00:13 the HUD adds ''DISTANCE TO GO'' above the clock, counting down (439M, 431M, 417M ...)'
+- 00:18-00:22 side-on close-ups of single paddlers in the front seats (white German and Spanish kits, boat names on the hulls), double-bladed
+  paddles, yellow buoys; distance to go 409M -> 380M
+- 00:23-00:27 side-on wide shot of the whole field, still within a few boat lengths; from 00:24 a ranking panel top-left lists the leading five
+  boats with rank, flag, country and gap to the leader in metres (e.g. Germany +0.6M, Australia +1.9M, Serbia +1.9M, Hungary +2.4M; the leader's
+  row is covered by the frame label); distance 366M -> 345M
+- 00:28-00:33 close-ups of the Spanish front paddler; ranking panel with metre gaps until 00:31; distance 338M -> 311M
+- '00:34-00:43 overhead view at the half-way mark: a second set of lane boards (number, code, flag) painted on the water beside a timing line;
+  the HUD label reads ''250M'' instead of distance to go; 00:41-00:42 the ranking panel shows a split: the leader''s time 38.35 and the others''
+  gaps in seconds (+0.16, +0.31, +0.60, +0.71)'
+- 00:44-00:46 front view of crews paddling in unison (German crew, then Hungarian), large pink buoys; distance to go 219M
+- '00:47-00:51 side-on wide shot: the field compact, red buoys near the lanes; ranking panel back with metre gaps from 00:50; distance 207M ->
+  189M'
+- 00:52-00:58 side-on close-ups of Spanish, German and Australian front paddlers side by side; ranking panel changes (Lithuania, then Ukraine,
+  enter fifth place); distance 182M -> 145M
+- '00:59-01:01 head-on aerial from behind the finish towards the field: eight boats abreast with wakes, grandstand on the left bank; ranking lists
+  Spain and Australia behind the hidden leader; distance 139M -> 120M'
+- '01:02-01:06 side-on wide shot: boats nearly level; ranking panel now lists Australia second and Spain third (the leader''s row covered); distance
+  120M -> 95M; panel fades at 01:05'
+- 01:07-01:11 side-on close-ups of Spanish, Australian and German boats in tight contention, red buoys; distance 83M -> 77M; from 01:11 the HUD
+  label reads 'FINISH'
+- 01:12-01:17 overhead tracking shot of the field approaching the line in parallel lanes, the two lowest boats (red hull and dark hull) slightly
+  ahead
+- 01:17-01:21 the finish line enters from the left with the timing towers and lane markers; OMEGA timing logo; boats cross the line; the race
+  clock stops at 1:19 and stays frozen
+- '01:22-01:25 result labels appear painted on the water at the finish line in each boat''s lane: ''PF GER'' and ''PF AUS'' (photo finish, place
+  not yet given) and ''3 ESP'' (numeric third place); HUD removed by 01:25'
+- 'audio: English commentary throughout (Whisper): lists the nations ''in the battle for the medals'', ''men''s kayak four racing over 500 meters
+  ... off the start line ... perfect synchronicity'', ''a sensational start from Germany'', Craviotto ''a fast starter'', ''the charge comes on
+  the second 250'', ''past mid-race distance, Spain, Germany and Australia'', ''can he hold that pace ... found a second gear'', ''the narrowest
+  of margins, Germany hit the front'', ''Germany look to have it ... are they going to be caught'', ''under the line ... Germany lunged''; no
+  other audio is identifiable from the material'
+- 'not visible: no false start, collision, lane change, capsizing or penalty; no medal ceremony inside the range; the final 1-2 order between
+  GER and AUS is not resolved on screen (both PF)'
+instructions_meta:
+  requirement_groups:
+    start and course:
+    - CR2
+    - FP1
+    - FP2
+    - VP1
+    player propulsion and rivals:
+    - CR1
+    - FP3
+    - FP4
+    race progress interface:
+    - CR3
+    - FP5
+    - VP3
+    finish and results:
+    - FP6
+    - VP2
+  explicit_requirements:
+  - type: keep
+    text: I want to keep the finish from the clip, where each lane's result appears right on the water at the finish line and a finish too close
+      to call is marked PF instead of getting a place.
+    covers:
+    - FP6
+    - VP2
+  - type: specify
+    text: 'The race tracking should work like in the clip: a running clock with a distance-to-go countdown, a live ranking that shows each boat''s
+      gap to the leader in metres, and a timed split at the halfway mark that ranks the boats with gaps in seconds.'
+    covers:
+    - CR3
+    - FP5
+    - VP3
+rubric:
+  content_realization:
+  - id: CR1
+    item: 'The field: one racing boat per lane, each a long, narrow kayak crewed by four paddlers who propel it by paddling in unison with double-bladed
+      paddles, the player''s boat in one lane and computer-controlled rival boats in the others, each boat identified by its lane number and a
+      team label'
+    anchors:
+      '1': a full field of four-person crewed kayaks, one per lane (player plus rivals), whose crews visibly paddle in unison as the boat moves,
+        each identified by lane number and team label
+      '0.5': a field of boats in lanes, but the crews are not four-person kayak crews, the boats move without the crew visibly paddling, the lanes
+        are not all filled, or the boats carry no lane / team identification
+      '0': no field of boats (no rivals, or racers that are not crewed boats at all)
+    evidence:
+    - - 00:00
+      - 00:02
+    - - 00:18
+      - 00:22
+    - - 00:44
+      - 00:46
+  - id: CR2
+    item: 'The course: one straight course of fixed length made of parallel lanes side by side, running from an aligned start line across all
+      lanes, past a half-way timing mark, to a finish line across all lanes, with no laps or turns'
+    anchors:
+      '1': a single straight fixed-length course of parallel lanes with an aligned start line, a half-way mark and a finish line across all lanes
+      '0.5': a straight lane course with start and finish, but the lanes are not parallel / separate, the half-way mark is missing, or laps /
+        turns are added
+      '0': a lap circuit or open track without lanes, or no defined start and finish
+    evidence:
+    - - 00:00
+      - 00:06
+    - - 00:13
+      - 00:17
+    - - 00:34
+      - 00:43
+    - - 01:17
+      - 01:25
+  - id: CR3
+    item: 'The race tracking the reference uses: a running race clock with a distance-to-go readout, a ranking of the leading boats with each
+      one''s gap to the leader in metres, and at the half-way mark a timed split that ranks the boats with gaps in seconds'
+    anchors:
+      '1': 'all three present: clock with distance to go, a ranking with gaps in metres, and a half-way split with gaps in seconds'
+      '0.5': one or two of the three present, or the gap units confused (e.g. only time gaps throughout)
+      '0': no race tracking beyond a bare clock or position number
+    evidence:
+    - - 00:13
+      - 00:31
+    - - 00:34
+      - 00:43
+    - - 00:50
+      - 01:05
+  functions_playability:
+  - id: FP1
+    item: 'Synchronised start: every racer waits stationary on the start line in its own lane and all are released by the same start signal'
+    anchors:
+      '1': all racers, including the player, are held still on the line and start moving on one signal; moving early is impossible or handled
+      '0.5': a common start exists but racers (or the player) can move before the signal unhandled, or are released at slightly different times
+      '0': no start procedure; racers spawn already moving or start at different times
+    evidence:
+    - - 00:00
+      - 00:06
+  - id: FP2
+    item: 'Lane-bound sprint: each racer stays in its own lane the whole way, the run ends after the one fixed distance, and the order is decided
+      by how fast each racer covers it'
+    anchors:
+      '1': racers are kept in their own lanes the whole way, the race ends after one run of the distance, and the order follows the racers' speed
+      '0.5': the race runs over the distance but racers can leave or cross into other lanes, or the order does not follow speed reliably
+      '0': racers move freely without lanes or the race does not end after the distance
+    evidence:
+    - - 00:00
+      - 00:06
+    - - 00:34
+      - 00:43
+    - - 00:59
+      - 01:01
+  - id: FP3
+    item: 'Player-driven propulsion: the player controls one racer and drives its propulsion and pace over the distance, so the player''s own
+      effort decides how fast it goes'
+    anchors:
+      '1': the player's racer moves only through the player's input, and the player can push or ease its pace during the race
+      '0.5': the player controls the racer, but its propulsion or pace is automatic (e.g. only steering or only a start button)
+      '0': the player cannot influence the race, or the racer moves on its own
+    evidence:
+    - - 00:12
+      - 00:22
+    - - 00:44
+      - 00:46
+    - - 00:52
+      - 00:58
+  - id: FP4
+    item: 'Close rivals: the computer-controlled racers race the full distance at a pace close to the player''s, with different pacing, so the
+      order changes during the race, the top places can stay open until the line, and the player can both win and lose'
+    anchors:
+      '1': rivals race close to the player, positions change during a race, and both a win and a loss are reachable
+      '0.5': rivals race but are clearly much faster or slower, move at one fixed speed so the order never changes, or the player always wins
+      '0': the rivals do not race
+    evidence:
+    - - 00:23
+      - 00:31
+    - - 00:41
+      - 00:42
+    - - 00:50
+      - 01:11
+  - id: FP5
+    item: 'Live tracking: during the race the distance to go counts down with the actual progress, the ranking follows the racers'' current order
+      with their gaps and updates when positions change, and the half-way split is taken when the boats pass the half-way mark'
+    anchors:
+      '1': the distance counts down with progress, the ranking and its gaps match the actual order and update on an overtake, and the split reflects
+        the passage at half-way
+      '0.5': the tracking runs but lags behind or does not match the actual order, or the distance does not count down
+      '0': the tracking shown does not follow the race at all
+    evidence:
+    - - 00:13
+      - 00:31
+    - - 00:41
+      - 00:42
+    - - 00:50
+      - 01:05
+  - id: FP6
+    item: 'Finish rule: crossing the finish line ends each racer''s run, placings follow the actual crossing order, the race clock stops at the
+      finish, a finish too close to call gets a pending photo-finish (PF) status instead of a place while a clear finish gets its place at once,
+      and the race ends with a way to race again'
+    anchors:
+      '1': placings match the crossing order, the clock stops at the finish, a near-dead-heat is marked PF rather than given a place, and a new
+        race can be started
+      '0.5': placings follow the crossing order but the PF status for a too-close finish is missing, the clock does not stop, or there is no way
+        to race again
+      '0': the race never ends or the placings are not based on crossing the line
+    evidence:
+    - - 01:17
+      - 01:25
+  visual_presentation:
+  - id: VP1
+    cat: spatial
+    keyframes:
+    - '00:00.0'
+    - '00:37.0'
+    - '01:21.0'
+    item: 'Lane course look: the lanes lie on open water (or the target game''s equivalent surface), separated by lines of buoys, with the start,
+      half-way and finish lines visibly marked across the lanes on the surface'
+    anchors:
+      '1': buoy-lined lanes on a water-like surface, with the course lines visibly marked across the lanes
+      '0.5': the lanes are visible but not marked by buoy lines, or the course lines are not visibly marked on the surface
+      '0': no readable lane look
+    evidence:
+    - - 00:00
+      - 00:02
+    - - 00:34
+      - 00:43
+    - - 01:17
+      - 01:25
+  - id: VP2
+    cat: key_moment
+    keyframes:
+    - '01:20.0'
+    - '01:23.0'
+    - '01:25.0'
+    item: 'Finish moment: the racers are seen crossing the line side by side, and the finishers'' result labels (a place, or a pending / photo-finish
+      status) appear right at the line in their own lanes'
+    anchors:
+      '1': the crossing of the line is visible, with per-lane result labels (place or pending status) at the finish
+      '0.5': the crossing is shown but the result only appears later in a separate list, or the result appears without the crossing
+      '0': no finish moment, the race just cuts to a menu
+    evidence:
+    - - 01:17
+      - 01:25
+  - id: VP3
+    cat: presentation
+    keyframes:
+    - '00:16.0'
+    - '00:35.0'
+    - '01:12.0'
+    item: 'Race readout: the clock and distance readout stay readable in a corner through the main race phases alongside the ranking, without
+      hiding the race, and its label visibly switches at the half-way mark and on the final stretch to the finish'
+    anchors:
+      '1': the readout is readable through the race next to the ranking, with a visible label change at half-way and before the finish
+      '0.5': the readout is readable but its label never changes, or it covers the race / is unreadable in parts of the race
+      '0': the readout is not readable during play
+    evidence:
+    - - 00:13
+      - 00:33
+    - - 00:34
+      - 00:43
+    - - 01:11
+      - 01:24
+play_suggestions:
+  FP1:
+  - 'press accelerate before the start signal: does the racer move? is it a false start?'
+  - check all racers are level on the line at the signal
+  FP2:
+  - 'steer hard sideways: does your racer keep to its own lane?'
+  - check whether the course loops or has laps; measure that it ends after one straight run
+  - check that the finishing order follows how fast each racer covered the distance
+  FP3:
+  - 'stop giving input mid-race: does the racer slow down?'
+  - 'push hard early and ease off, then the reverse: does the pace follow?'
+  - 'race once with steady input and once with sloppy / slow input: compare the finishing time'
+  FP4:
+  - 'race several times: do you sometimes win and sometimes lose?'
+  - 'watch the ranking: does the order change during a race?'
+  FP5:
+  - overtake a rival and check the ranking and gaps update
+  - compare the ranking with what you see on screen
+  - check the distance to go falls as you advance and the split appears when the boats pass half-way
+  FP6:
+  - 'finish level with a rival: is it marked PF, and is the result consistent and not random?'
+  - 'finish last on purpose: is the place right and can you race again?'
+  - check the clock stops when the finish line is crossed
+  robustness:
+  - pause or leave mid-race and come back
+  - 'restart the race several times in a row: do all racers reset to the line?'
+  - 'idle at the start without input for the whole race: does it still end?'
+v4_map:
+  U1: CR2, FP1 | lanes and start line to CR2; simultaneous release already FP1
+  U2: CR2 | straight fixed-distance course without laps
+  U3: CR3, FP5 | tracking elements to CR3; live updating to FP5
+  U4: FP6 | PF status and stopped clock added to the finish rule
+  U5: CR1 | four-person kayaks paddled in unison with double-bladed paddles, identified by lane number and team label
+  U6: FP4 | pacing-driven order changes, result open until the line
+  FP1: FP1
+  FP2: CR2, FP2 | course existence split to CR2; lane-keeping and order stay FP2
+  FP3: FP3
+  FP4: CR1, FP4 | rivals filling the lanes to CR1; close pacing stays FP4
+  FP5: FP5 | extended with distance countdown and split timing
+  FP6: FP6 | PF rule added from U4
+  VP1: CR2, CR1, VP1 | lanes and finish line existence to CR2; per-lane number / team boards to CR1 identification; buoy-lined water lanes and
+    marked lines stay VP1
+  VP2: VP2
+  VP3: VP3, FP5 | countdown behaviour to FP5; readability and label switch stay VP3
+provenance:
+  source_yaml: T-VO-vid_82cda5226ab7.t1.yaml
+  source_sha256: cdbe2f3f4673ab42dfadfd70af113cad5c4f3d3f7ac78000ed3aeb1949c0d81f
+  size_waiver: null
+  size_max: null
+  sources: []

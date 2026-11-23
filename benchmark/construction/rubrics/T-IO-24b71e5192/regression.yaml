@@ -1,0 +1,20 @@
+# GameAnything-Bench scoring material: never shown to agents during a trial.
+task_id: T-IO-24b71e5192
+game: terraria
+status: pending
+picks:
+- TR-CONTENT
+- TR-MOVE
+- TR-DIG-PLACE
+- TR-INVENTORY
+- TR-SAVE
+- TR-PERF
+changed: []
+kept_borderline:
+- id: TR-WORLDGEN
+  note: Location might be generated into the world, but no explicit requirement to change vanilla worldgen; stays tested.
+summary: Recreate an explorable place with a deep vertical shaft, traversable throughout.
+task_checks: []
+note: 'policy (A): excluded only when the instruction explicitly requires the change; plausible side effects stay tested; adding
+  new content is never a reason to exclude. Proposed by claude-sonnet-5-5 via `gab task picks` 2026-11-06; a maintainer checks (set status: checked).
+  The evaluator tests the pool''s always items (unless in changed) + picks.'

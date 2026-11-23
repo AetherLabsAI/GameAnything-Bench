@@ -1,0 +1,46 @@
+# Reference material: fetched from the HF dataset into $GAB_MEDIA_DIR/<task>/ by `gab media fetch` (sha256 checked).
+# The agent gets the files only (no title, author, caption or source): this file is never shown to it.
+task_id: T-VO-vid_d4a5d37f6ea0.t1
+refs:
+- id: c01
+  kind: video
+  file: clip_01.mp4
+  video_id: vid_d4a5d37f6ea0
+  source:
+    title: 01 - Aerial View of 𝗟𝗢𝗦 𝗔𝗡𝗚𝗘𝗟𝗘𝗦 City 🇺🇸 USA ｜ Drone View ｜ Dr Drone
+    url: null
+    channel: null
+    youtube_id: null
+  range:
+    start: 10.0
+    end: 58.6
+    text: 0:10.00-0:58.60
+  duration_s: 48.6
+  size_bytes: 12745032
+  format: mp4 H.264 720p, AAC audio
+  hf_path: media/T-VO-vid_d4a5d37f6ea0.t1/clip_01.mp4
+  sha256: 28834edf1d44bc37dde48196d98598d465ba5e6b3da46b608ae6066ec608f37a
+  rights_note: Real-world drone footage from a third-party travel channel (Dr Drone), with a drone-logo watermark and background music. It is
+    copyrighted; use as a private reference only and do not redistribute or embed it in the benchmark outputs. Built content should be original
+    and should not copy the footage.
+- id: c02
+  kind: video
+  file: clip_02.mp4
+  video_id: vid_d4a5d37f6ea0
+  source:
+    title: 01 - Aerial View of 𝗟𝗢𝗦 𝗔𝗡𝗚𝗘𝗟𝗘𝗦 City 🇺🇸 USA ｜ Drone View ｜ Dr Drone
+    url: null
+    channel: null
+    youtube_id: null
+  range:
+    start: 58.6
+    end: 91.1
+    text: 0:58.60-1:31.10
+  duration_s: 32.5
+  size_bytes: 10007399
+  format: mp4 H.264 720p, AAC audio
+  hf_path: media/T-VO-vid_d4a5d37f6ea0.t1/clip_02.mp4
+  sha256: 940aa553d7f7f03806fbc555940b79493f76aa41592c656c2d88fecefdcd9166
+  rights_note: Real-world drone footage from a third-party travel channel (Dr Drone), with a drone-logo watermark and background music. It is
+    copyrighted; use as a private reference only and do not redistribute or embed it in the benchmark outputs. Built content should be original
+    and should not copy the footage.

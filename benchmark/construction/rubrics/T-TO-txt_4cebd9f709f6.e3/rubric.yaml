@@ -1,0 +1,221 @@
+# GameAnything-Bench scoring material: never shown to agents during a trial.
+task_id: T-TO-txt_4cebd9f709f6.e3
+source_inventory:
+- 'c10.p013-c10.p014: the narrator visits a cattle ranch in Parana (Brazil) run by an old friend; American foreman and Western hands; a ride over
+  rolling country'
+- 'c10.p015-c10.p017: shy Indians nearby; climate, ticks, cattle dipping; upgrading native cattle, pigs and horses with imported breeding stock'
+- 'c10.p018-c10.p019: the twenty-mile ride: flat-top pines, flowers, a prairie deer, armadillo burrows, birds; the evening canter back'
+- 'c11.p001-c11.p002: crossing the Andes into Chile by rail: barren pass, then lake, gorges and the fertile lowland valleys'
+- 'c11.p003-c11.p004: a day at a great ranch near Santiago; hosts summon several hundred riders to a rondeo (round-up and sports); the huasos
+  as a pastoral horse-riding class'
+- 'c11.p005-c11.p006: huasos arriving on stocky native horses; mantas, hats, big-rowelled spurs, carved stirrups; their ease in the saddle; family
+  parties'
+- 'c11.p007-c11.p008: the setting: a pen full of cattle, a long stout hitching bar of tree trunks, a big corral lined with poles into a springy
+  wall (needed for jamming cattle against it), gates at opposite ends, a short crescent fence near one gate separating worked from unworked stock;
+  about thirty riders drive a mob of tame graded cattle in'
+- 'c11.p009: gentry ride alongside the huasos; a ranchman and his son are the best pair'
+- 'c11.p010: the main feat: two riders cut a steer from the bunch, race it round the corral edge past the far gate and back, one behind on the
+  inside, one outside abreast; the outside rider wheels in and pins it against the lined wall, the other pushes its hindquarters so it turns;
+  repeated; after the third turn the gate is opened and it trots out'
+- 'c11.p011: a dozen pairs do it with different steers; the lining keeps the steer from being killed (one is hurt); if the rider charges too late
+  and catches the steer too far back it escapes to the herd; riders never unseated, no horse hurt'
+- 'c11.p012: bull riding: a footman baits the bull, horsemen rope horns and hind legs and throw it, a saddle and chest rope are put on, a man
+  rides out the bucking; horsemen tease it with red blankets, throw it again, unsaddle it, then a pair races it round the corral pinning and turning
+  it like the steers'
+- 'c11.p013: the bull-rider passes his hat for silver; remarks on the gulf between gentry and ranch-hands in Chile'
+- 'c11.p014: the rail contest: two champions with their horses'' heads over the bar push each other, alone or with two or three backers each;
+  no one may touch another man''s horse; near-stalemate gained by inches until one side gets the vantage and bursts through along the bar; rough
+  but good-natured'
+- 'c11.p015-c11.p016: a lake-side pasture, the white courtyard ranch-house, breakfast under the trees; a huaso gallops beside the car to say good-by'
+instructions_meta:
+  requirement_groups:
+    cattle driving:
+    - CR2
+    - CR4
+    - FP1
+    rider-animal interaction:
+    - FP2
+    - FP3
+    - VP2
+    run structure:
+    - FP4
+    rider contest:
+    - CR3
+    - FP5
+    corral play space:
+    - CR1
+    - VP1
+  explicit_requirements:
+  - type: specify
+    text: 'Each run should end like in the text: once the steer has been turned three times, the gate opens and it is let out.'
+    covers:
+    - FP4
+rubric:
+  content_realization:
+  - id: CR1
+    item: The game contains a large enclosed corral whose inner wall is a yielding lining along its whole edge, the surface animals are pinned
+      against, with a gate through which a finished animal is let out
+    anchors:
+      '1': a closed corral whose wall all along the edge has a yielding / padded lining meant for pinning, and a gate in it
+      '0.5': a corral with a gate, but its wall is an ordinary fence with no lining that gives, or the lining covers only a small part of the
+        edge
+      '0': no recognisable corral
+    evidence:
+    - c11.p007
+    - c11.p008
+    - c11.p011
+  - id: CR2
+    item: The game contains a herd of cattle held in its own area of the corral, set apart from the open track along the wall, from which single
+      animals are taken
+    anchors:
+      '1': several cattle kept together in a separated holding area inside the corral (fenced off or clearly marked), with the run track along
+        the wall left free
+      '0.5': a herd exists, but it is not held in an area of its own, or it is outside the corral with no link to the runs
+      '0': no herd; single animals simply appear
+    evidence:
+    - c11.p007
+    - c11.p008
+    - c11.p010
+  - id: CR3
+    item: The game contains a long, stout bar, a structure of its own beside the corral, as the place of the rail contest
+    anchors:
+      '1': a long, solid bar or rail outside the corral that riders can line up their horses at
+      '0.5': a bar exists, but it is part of the corral fence or too short for two sides to engage at it
+      '0': no bar
+    evidence:
+    - c11.p007
+    - c11.p014
+  - id: CR4
+    item: 'The pin-and-turn game has two complementary rider roles working one animal: one rider pins it against the wall, the partner pushes
+      its hindquarters to turn it'
+    anchors:
+      '1': two riders per run (the player as one, the other a partner), one of them the pinning rider and the other the one who pushes the rear
+        to turn the animal
+      '0.5': two riders take part, but without distinct pin / push roles, or the player works the animal alone
+      '0': no pair of riders
+    evidence:
+    - c11.p010
+    - c11.p011
+  functions_playability:
+  - id: FP1
+    item: One animal is cut out of the herd and driven round the edge of the enclosure; the animal moves on its own and heads back toward the
+      herd
+    anchors:
+      '1': a single animal is separated from the herd and driven along the enclosure's edge by the riders; it has its own movement and is drawn
+        toward the herd
+      '0.5': an animal is chased, but it is not cut from the herd, or it follows a fixed path regardless of the riders
+      '0': no animal-driving play
+    evidence:
+    - c11.p008
+    - c11.p010
+  - id: FP2
+    item: Charging the animal against the enclosure wall pins and stops it, and pushing its hindquarters turns it back the other way, after which
+      it can be driven again
+    anchors:
+      '1': a pin against the wall stops the running animal, a push on its rear turns it around, and play continues with the turned animal
+      '0.5': the animal can be stopped or turned, but not by pinning against the wall, or the turn does not follow from the push
+      '0': no pin or turn
+    evidence:
+    - c11.p010
+    - c11.p012
+  - id: FP3
+    item: 'Pinning depends on timing and position: a charge that comes too late or catches the animal too far back fails, and the animal escapes
+      back to the herd without the run being completed'
+    anchors:
+      '1': a mistimed or badly placed charge visibly fails and the animal returns to the herd, so the run is not completed
+      '0.5': pins can fail, but the failure does not depend on timing / position, or has no consequence
+      '0': every attempt succeeds automatically
+    evidence:
+    - c11.p011
+  - id: FP4
+    item: A run is completed when the animal has been turned three times; then the gate opens, the animal is let out, and another run can begin
+    anchors:
+      '1': the third turn completes the run, the gate opens and the animal leaves through it, and a further run is possible
+      '0.5': runs end, but not after three turns, or the animal is not let out through the gate, or play stops after one run
+      '0': no run structure or end
+    evidence:
+    - c11.p010
+    - c11.p011
+  - id: FP5
+    item: 'Rail contest: two sides push horse against horse at the bar, without touching the opponent''s horse, gaining ground gradually until
+      one forces the other off and breaks through along the bar'
+    anchors:
+      '1': a head-to-head push at the bar in which force is applied only horse against horse, position shifts gradually with sustained effort,
+        and the contest ends when one side breaks through along the bar
+      '0.5': a pushing contest exists, but it is decided instantly or by chance, the no-touching restriction is not respected, or it is not played
+        at the bar
+      '0': no rail contest
+    evidence:
+    - c11.p014
+  visual_presentation:
+  - id: VP1
+    cat: spatial
+    item: 'The corral''s wall visibly reads as a lined pinning surface: its inner lining looks like a layer of its own, different from an ordinary
+      fence'
+    anchors:
+      '1': the lining is visible as its own padded / springy-looking layer on the inside of the wall, clearly told apart from the fence behind
+        it
+      '0.5': a lining is present, but it hardly differs in look from the fence
+      '0': the wall looks like a plain fence or wall
+    evidence:
+    - c11.p007
+    - c11.p010
+  - id: VP2
+    cat: key_moment
+    item: 'The pin looks like an impact of its own: the horse visibly crashes into the running animal and jams it against the lining'
+    anchors:
+      '1': 'the moment reads as a collision: the horse drives bodily into the animal and the animal is seen jammed between horse and lining'
+      '0.5': the animal is seen at the wall, but no contact between horse and animal is visible (it just halts there)
+      '0': the pin cannot be seen as a moment of its own
+    evidence:
+    - c11.p011
+    - c11.p012
+play_suggestions:
+  FP1:
+  - 'start a run: is one animal separated from the others, and does it run on its own?'
+  - 'stop chasing mid-run: does the animal drift back toward the herd?'
+  FP2:
+  - 'charge the animal in the open, away from the wall: does it still stop (it should not pin)?'
+  - 'pin it against the wall, then push its rear: does it turn and run the other way?'
+  FP3:
+  - 'charge deliberately late, well behind the animal: does it escape back to the herd?'
+  - compare a well-timed charge with a late one on the same stretch of wall
+  FP4:
+  - 'complete a run: does it end after the third turn, and does the gate open to let the animal out?'
+  - 'after a completed run and after an escape: can another run start?'
+  FP5:
+  - 'push steadily against the opponent: does position change gradually?'
+  - 'try to touch or strike the opponent''s horse directly: is it prevented or penalised?'
+  - 'play until the end: does one side break through along the bar?'
+  robustness:
+  - 'ride into a gate or corner with the animal: does it get stuck or leave the enclosure unintentionally?'
+  - fail several runs in a row, then restart
+  - leave the rail contest mid-push and come back
+v4_map:
+  U1: CR4, FP1 | pair existence to CR4, the driving to FP1
+  U2: FP2, CR4 | paired mechanism in FP2; the pin / push role split in CR4
+  U3: FP4 | paired mechanism; three turns now from the explicit requirement
+  U4: FP3 | paired mechanism
+  U5: CR1
+  U6: FP5 | paired mechanism; the bar's existence in CR3
+  U7: FP5 | paired mechanism (gradual gain and breakthrough)
+  FP1: FP1, CR2, CR4 | herd and pair existence split off
+  FP2: FP2
+  FP3: FP3
+  FP4: FP4 | anchors now use the explicit three turns and gate release
+  FP5: FP5 | bar existence split off to CR3
+  FP6: 'removed: editing split (user-requested run tally, moved to editing_seed.yaml)'
+  VP1: CR1, CR2, VP1 | which spaces exist and the lining's extent to CR; the lining's look stays VP1
+  VP2: CR3, FP5 | bar existence to CR3; contest staged at it in FP5
+  VP3: VP2 | narrowed to the look of the impact
+provenance:
+  source_yaml: T-TO-txt_4cebd9f709f6.e3.yaml
+  source_sha256: eee8a8c5e85decc9953455a8dbbf0efaa3743024ae543e804f609ff339c5bd89
+  size_waiver: null
+  size_max: null
+  sources:
+  - ref: t01
+    title: A Book-Lover's Holidays in the Open
+    author: Theodore Roosevelt
+    text_id: txt_4cebd9f709f6
+    excerpt_id: e3

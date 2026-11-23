@@ -1,0 +1,22 @@
+# GameAnything-Bench scoring material: never shown to agents during a trial.
+task_id: T-TO-txt_61059729ca86.e2
+game: valheim
+status: pending
+picks:
+- VH-SAIL
+- VH-WEATHER
+- VH-CONTENT
+- VH-INVENTORY
+- VH-SAVE
+- VH-PERF
+changed: []
+kept_borderline:
+- id: VH-WEATHER
+  note: Fog conditions may be added or altered, not explicitly required to change vanilla weather.
+- id: VH-SAIL
+  note: Boats are used, but vanilla sailing is not required to change.
+summary: Fishing system with ship signals to boats and fog depth sounding.
+task_checks: []
+note: 'policy (A): excluded only when the instruction explicitly requires the change; plausible side effects stay tested; adding
+  new content is never a reason to exclude. Proposed by claude-sonnet-5-5 via `gab task picks` 2026-11-06; a maintainer checks (set status: checked).
+  The evaluator tests the pool''s always items (unless in changed) + picks.'

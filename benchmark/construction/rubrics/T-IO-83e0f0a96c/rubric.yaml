@@ -1,0 +1,182 @@
+# GameAnything-Bench scoring material: never shown to agents during a trial.
+task_id: T-IO-83e0f0a96c
+source_inventory:
+- 'img01: oil painting of a café interior at night seen from the entrance end: deep red upper walls over an ochre lower band, green ceiling, yellow
+  plank floor; four hanging lamps with glowing halos; a green-cloth billiard table with cue and balls in the middle of the floor, casting a long
+  shadow; a light-green bar counter with bottles and a vase of flowers against the back wall, a clock above it, and beside it a doorway to a lit
+  back room; small tables with chairs along the left and right walls, a round dark stove on the left; patrons slumped or huddled at the tables,
+  a man in white standing by the billiard table; a framed picture and a dark doorway / mirror on the right wall; signature lower right'
+- 'img02: the same room in a brighter, flatter painted version (watercolour-like, outlined): same layout and colours (red walls, ochre band, green
+  ceiling, plank floor), lamps with halos, billiard table with three balls in the centre on a green floor area, pale bar counter with bottles
+  and flowers at the back with the doorway beside it, clock above, a purple stove on the left, tables and chairs along both walls, slumped patrons
+  and the man in white'
+- 'img03: a different painter''s close view of the same kind of room from a seat at a table: a woman in black with a white shawl leaning on her
+  hand at a marble-top table with a siphon bottle and a glass in the foreground; a green billiard table with three balls just behind; patrons
+  seated at tables along the back wall; red upper wall with a framed picture and a wall lamp, ochre lower band; drifting tobacco smoke; a cat
+  under the billiard table; signature lower right'
+instructions_meta:
+  requirement_groups:
+    exploration on foot:
+    - FP1
+    layout and key objects:
+    - CR1
+    - CR2
+    - CR3
+    - VP1
+    landmarks and spatial relations:
+    - CR4
+    - FP2
+    colour and lighting:
+    - CR5
+    - VP2
+    - VP3
+  explicit_requirements:
+  - type: keep
+    text: Please keep the big green billiard table, that's the part I care about most.
+    covers:
+    - CR2
+    - VP1
+rubric:
+  content_realization:
+  - id: CR1
+    item: The place is one enclosed room that reads as a café / bar
+    anchors:
+      '1': a closed room (walls, floor, ceiling) that reads as a café or bar
+      '0.5': a café or bar setting that is not enclosed (missing walls or ceiling, an open or unbounded space)
+      '0': no café or bar room (e.g. a living room, a dining hall, an outdoor area)
+    evidence:
+    - img01
+    - img02
+    - img03
+  - id: CR2
+    item: A billiard table with cushions and balls on it is the room's main piece of furniture
+    anchors:
+      '1': a full-size billiard table with cushions and several balls on it, clearly the room's largest piece
+      '0.5': a billiard table without balls or cushions, or so small it is just one table among others
+      '0': no billiard table
+    evidence:
+    - 'img01: the billiard table with cue and balls in the middle of the floor'
+    - 'img02: the three balls on the billiard table'
+    - 'img03: the billiard table with three balls behind the foreground table'
+  - id: CR3
+    item: The billiard table stands in the open middle of the floor and small tables with chairs line both side walls around it
+    anchors:
+      '1': billiard table centred in open floor, small tables with chairs along both side walls
+      '0.5': both present but arranged differently (tables scattered across the middle, billiard table pushed to a wall, tables on one side only),
+        or no small tables at all
+      '0': no recognisable arrangement
+    evidence:
+    - img01
+    - img02
+    - img03
+  - id: CR4
+    item: At the far end a bar counter stands against the back wall, with a doorway beside it opening onto a lit adjoining room
+    anchors:
+      '1': bar counter at the back wall and, beside it, a doorway through which a lit space is visible
+      '0.5': only one of the two, or not at the back wall, or the doorway a flat shape with nothing behind it
+      '0': neither
+    evidence:
+    - img01
+    - img02
+  - id: CR5
+    item: Lamps hang from the ceiling over the room
+    anchors:
+      '1': several lamps hanging from the ceiling above the floor
+      '0.5': one lamp only, or lamps only on the walls
+      '0': no lamps
+    evidence:
+    - img01
+    - img02
+  functions_playability:
+  - id: FP1
+    item: 'The player can walk through the café room: move around the billiard table, between the side tables and up to the bar'
+    anchors:
+      '1': free movement through the room's open floor, with the billiard table, the side tables and the bar all reachable
+      '0.5': movement exists but is confined (a fixed spot, a rail, only part of the room reachable), or the room is only viewed
+      '0': no movement in the room
+    evidence:
+    - img01
+    - img02
+    - img03
+  - id: FP2
+    item: 'The doorway beside the bar is a passage: the player can walk through it into the lit space behind and back into the café'
+    anchors:
+      '1': the player walks through the doorway into the lit space behind it and returns to the café room
+      '0.5': the doorway can be reached but not passed (blocked, too narrow, the space behind only a backdrop), or passing it breaks (falling
+        out of the world, getting stuck, no way back)
+      '0': the doorway cannot be reached, or there is no doorway
+    evidence:
+    - 'img01: the doorway to the lit back room beside the bar'
+    - 'img02: the doorway beside the bar counter'
+  visual_presentation:
+  - id: VP1
+    cat: style
+    item: The billiard table's cloth is green, as in the reference
+    anchors:
+      '1': a billiard table whose cloth reads clearly as the reference's green
+      '0.5': a cloth of a clearly different green (bluish, greyish, near-black) or only partly green
+      '0': a cloth of another colour, or no billiard table visible
+    evidence:
+    - img01
+    - img02
+    - img03
+  - id: VP2
+    cat: style
+    item: 'The room''s colours: deep red walls under a green ceiling'
+    anchors:
+      '1': red walls and a green ceiling dominate the room
+      '0.5': red walls but no green ceiling, or the colours muted so the red-green clash is lost
+      '0': different colours
+    evidence:
+    - img01
+    - img02
+    - img03
+  - id: VP3
+    cat: style
+    item: 'Lamplight: the hanging lamps glow and fill the room with warm artificial light'
+    anchors:
+      '1': glowing lamps and a warm, lamp-lit room
+      '0.5': lamps unlit or not glowing, or the room lit like daytime
+      '0': no lamplight at all
+    evidence:
+    - img01
+    - img02
+play_suggestions:
+  FP1:
+  - walk a full circle around the billiard table
+  - walk from the entrance end to the bar along each side wall, passing the tables
+  - 'stand next to a side table and look across the room: are the billiard table and the bar in view?'
+  FP2:
+  - 'walk to the doorway beside the bar: can you reach it?'
+  - 'walk through the doorway: is there a lit space you can stand in?'
+  - 'turn round in the doorway and walk back into the café: is the way back open?'
+  robustness:
+  - 'walk into the walls, the billiard table and the side tables: do you pass through or get stuck?'
+  - 'look straight up and into every corner: are the ceiling and walls closed, with no holes?'
+  - try to leave the room through the walls or the floor
+v4_map:
+  U1: CR5, VP3 (lamps exist -> CR5; their warm light -> VP3)
+  U2: CR1, CR2 (café room -> CR1; billiard table as main piece -> CR2)
+  U3: 'dropped: duplicate of VP2, colours are a look property'
+  U4: CR3
+  U5: CR4
+  FP1: FP1
+  FP2: CR4, FP2 (lit space beyond doorway -> CR4; walking through it -> FP2)
+  FP3: 'dropped: editing request (rolling balls), moved to editing_seed.yaml; balls existence in CR2'
+  VP1: CR3 (arrangement of places is content, not look; side tables' presence scored there too)
+  VP2: CR4 (which things stand at the back wall is content)
+  VP3: VP2
+  VP4: VP3
+  VP5: CR2, VP1 (table exists, its size and main-piece role -> CR2; green cloth -> VP1)
+provenance:
+  source_yaml: T-IO-83e0f0a96c.yaml
+  source_sha256: 5647730eee2222e008c0730bd87914f22226ee5d3033ff6d1f5cab2bfe90750c
+  size_waiver: null
+  size_max: null
+  sources:
+  - refs:
+    - img01
+    - img02
+    - img03
+    bundle: 83e0f0a96c
+    title: 梵高《夜间咖啡馆》：同一间咖啡馆的三个视角

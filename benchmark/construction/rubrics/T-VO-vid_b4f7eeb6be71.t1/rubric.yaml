@@ -1,0 +1,272 @@
+# GameAnything-Bench scoring material: never shown to agents during a trial.
+task_id: T-VO-vid_b4f7eeb6be71.t1
+source_inventory:
+- '01:28.6-01:30.6 close-ups of a sight: a sight bar with a ring-shaped sight pin aperture, then the pin in front of a red riser against a blurred
+  background'
+- 01:31.6-01:33.6 an archer in a bucket hat, sunglasses and a yellow-green top at full draw, facing the camera; the bow arm is extended, the string
+  hand anchored under the jaw; tents and seated people behind
+- '01:34.6-01:39.6 a target face on a stand in front of a blue backdrop: concentric rings, white outer, black, blue, red, yellow centre; an animated
+  white swirl transition (01:35.6) and a circle callout ''12.2 cm'' pointing at the innermost gold ring; a few arrows are in or near the gold'
+- 01:40.6-01:45.6 side view of an archer in a red Great Britain top at full draw on a grass field with yellow umbrellas behind; the arrow (purple
+  fletching) rests along the bow, the string hand at the face; from 01:43.6 the purple riser is in the foreground
+- '01:46.6-01:51.6 close-up of the purple riser: the arrow shaft sits under a thin blade at the riser; label ''CLICKER'' with a pointer to it
+  (01:47.6-01:50.6), introduced by a white swirl animation'
+- '01:52.6 motion-blurred riser: the bow moving at release'
+- '01:53.6-01:55.6 an archer in a USA top: the string hand with finger tab leaves the face and moves backward after release'
+- 01:56.6 an archer in a white top lowers the bow beside a camera operator; on-screen scoreboard with two names, a flag each, a per-archer countdown
+  (one at 12 s, the other at 20 s) and zeros for set points
+- '01:57.6-02:01.6 wide shot of a finals stage: an archer in a USA top at full draw, a second archer waiting behind, crowd stands, red/blue banners'
+- 02:02.6-02:03.6 an archer in a red top and white cap at full draw on a blue stage, long front stabiliser rod visible
+- '02:04.6-02:08.6 the same archer just after release: the bow jumps forward out of the open hand and rotates downward, swinging on its sling;
+  label ''STABILISERS'' points at the long rods (02:04.6-02:06.6)'
+- 02:09.6-02:13.6 over-the-shoulder view of an archer at full draw on a grass field toward a far row of target butts with yellow and red flags;
+  butts numbered (12, 14, 15 readable), some with four small faces, others with one large face
+- '02:14.6-02:15.6 tele view of the target line: lanes numbered 13-17, butts on wooden stands on grass, a blurred bow limb in the foreground'
+- 02:16.6-02:19.6 an archer in a red-white top and cap at full draw beside a Hyundai banner and a red car; a thin streak, likely the arrow in
+  flight, near the top of the frame (02:17.6-02:18.6)
+- 02:20.6-02:24.6 an archer in a blue top and blue cap at full draw on a stage; a single target face on a video wall behind; a scoreboard panel
+  on the stage edge
+- '02:25.6-02:26.6 an archer in a USA top shoots and lowers the bow, the stabilisers swing; scoreboard overlay: two archers (Korea and USA flags),
+  per-archer countdown (20 s for the waiting archer, 13 s then 12 s for the shooter), per-arrow scores (10, 9 and 8, 10), end totals (19, 18),
+  set points (2, 0)'
+- 02:27.6-02:28.6 close-up of the target face with ring numbers 10, 9 (yellow), 8, 7 (red), 6, 5 (blue); three arrows in the face, one in the
+  inner 10 ring, others in the 9 / red, plus earlier holes; same scoreboard, the shooter's countdown at 11 s then 10 s
+- 02:29.1 clip end
+- 'audio: English voiceover narration: aiming through a sight pin at the centre of the target; hitting a circle about the size of an orange, which
+  looks minuscule from 70 metres; when it is time to shoot the arrow drops under a clicker, which helps draw the bow to the same distance each
+  time; the archer lets the arrow fly; the bow jumps forward and swings, powered by the limbs and balanced by stabilising rods; the arrow, usually
+  carbon fibre, takes up to a second to reach the target and can travel a few metres up off the ground; the whole process can take as little as
+  3 or 4 seconds and the tiniest error can mean disaster (cut off at the clip end)'
+- 'not visible / not heard: no continuous arrow flight from bow to target, no miss shown, no explicit statement of how an end or set is won, no
+  end-of-match moment, no early release and no shot-clock timeout; whether a clicker click is audible is not verified'
+instructions_meta:
+  requirement_groups:
+    shot cycle (draw, release, bow reaction):
+    - FP1
+    - VP1
+    arrow flight and aiming:
+    - FP2
+    - FP6
+    shot scoring:
+    - CR1
+    - FP3
+    - VP2
+    match structure and pacing:
+    - CR3
+    - FP4
+    - FP5
+    range and match interface:
+    - CR2
+    - VP3
+  explicit_requirements:
+  - type: specify
+    text: Each archer should have their own shot clock that only counts down on their turn while the other archer's clock waits at full time,
+      just like in the clip.
+    covers:
+    - FP5
+rubric:
+  content_realization:
+  - id: CR1
+    item: 'The game contains a target face of concentric scoring rings: a small centre ring worth the most and ring values falling outward'
+    anchors:
+      '1': a target with several concentric rings whose values fall from a highest-valued centre outward
+      '0.5': a target with a highest-valued centre but no graded rings (e.g. centre / rest only), or rings whose values do not fall outward
+      '0': no ringed target
+    evidence:
+    - - '01:34.6'
+      - '01:39.6'
+    - - '02:27.6'
+      - '02:29.1'
+  - id: CR2
+    item: 'The game contains a shooting range: a shooting position for the archer facing ringed targets set far away across open ground'
+    anchors:
+      '1': a recognisable shooting position and distant ringed targets across open ground, the distance clearly long against the target's centre
+      '0.5': a shooting position and a target, but the target is close or the shooting position is not recognisable
+      '0': no recognisable range
+    evidence:
+    - - '01:28.6'
+      - '01:41.4'
+    - - '02:09.6'
+      - '02:16.0'
+  - id: CR3
+    item: The match has two opposing sides (the player against an opponent or a second player), each with its own per-arrow scores, end total
+      and set points
+    anchors:
+      '1': two sides, each with per-arrow scores, an end total and a separate set-points tally
+      '0.5': two sides with a single running score each, or end totals without a set-points tally
+      '0': no opponent (a solo score attack) or no match tallies
+    evidence:
+    - - '01:56.6'
+      - '01:56.6'
+    - - '02:25.6'
+      - '02:29.1'
+  functions_playability:
+  - id: FP1
+    item: 'Draw to a repeatable full draw, then release: the player draws and holds the shot, a clear signal marks the same full-draw point every
+      time (like the clicker), and shots released at that signal behave consistently'
+    anchors:
+      '1': a draw-and-hold phase with a clearly signalled, repeatable full-draw point, and shots released at it behave consistently
+      '0.5': a draw or charge exists but there is no recognisable full-draw signal, or shots released at it vary without cause
+      '0': a single click fires instantly
+    evidence:
+    - - '01:41.4'
+      - '01:53.7'
+  - id: FP2
+    item: 'Arrow flight: the released projectile visibly travels on an arc to a distant target and takes a noticeable moment to arrive, and where
+      it lands follows the aim'
+    anchors:
+      '1': a visible, non-instant, curved flight to a far target that lands where it was aimed (within the player's error)
+      '0.5': a visible projectile, but straight and near-instant, or the landing point is unrelated to the aim
+      '0': hitscan or no projectile
+    evidence:
+    - - '02:03.1'
+      - '02:23.8'
+  - id: FP3
+    item: 'Ring scoring: each arrow is awarded the value of the ring it actually lands in'
+    anchors:
+      '1': every shot's score matches the ring it landed in, centre highest
+      '0.5': hit / miss only, or scores that do not match the landing point
+      '0': shots are not scored
+    evidence:
+    - - '01:34.6'
+      - '01:39.6'
+    - - '02:27.6'
+      - '02:29.1'
+  - id: FP4
+    item: 'Head-to-head match play: the two sides shoot in alternation, arrow scores add up into end totals, set points are awarded from the ends
+      by one consistent rule and carried across them, and the match goes on end after end until it reaches a result that agrees with the set points'
+    anchors:
+      '1': alternating turns, per-arrow scores summed into end totals, set points awarded consistently from the ends and carried across them,
+        and a match that reaches a result agreeing with the set points
+      '0.5': turns and scores work, but end totals are not summed, set points never change or contradict the end results, play stalls after one
+        end, or the match never reaches a result
+      '0': no working match flow
+    evidence:
+    - - '01:56.6'
+      - '01:56.6'
+    - - '02:25.6'
+      - '02:29.1'
+  - id: FP5
+    item: 'Shot clock: each archer has their own countdown that runs only on their turn while the other''s waits at full time, and it is back
+      at full time when that side''s next turn comes'
+    anchors:
+      '1': a per-archer countdown that runs only for the active shooter, the waiting side's clock at full time, reset for each turn
+      '0.5': a timer exists but is global, runs for both sides at once, or never resets
+      '0': no time limit
+    evidence:
+    - - '01:56.6'
+      - '01:56.6'
+    - - '02:25.6'
+      - '02:29.1'
+  - id: FP6
+    item: 'Aiming and precision: an aiming reference (like the sight pin) lets the player hold a point of aim on the target centre, the top-scoring
+      centre is small at the shooting distance, so careful aiming can hit it while a slight aim or timing error drops the arrow into lower rings;
+      results depend on the player''s skill, not chance'
+    anchors:
+      '1': a usable aiming reference tied to where shots land, a centre hittable with care where a small error visibly costs points, and careful
+        shots scoring better than careless ones
+      '0.5': no usable aiming reference, or the target is either trivially easy (centre every time) or nearly impossible, or results look random
+      '0': no aiming challenge
+    evidence:
+    - - '01:28.6'
+      - '01:41.4'
+    - - '02:23.8'
+      - '02:29.1'
+  visual_presentation:
+  - id: VP1
+    cat: key_moment
+    keyframes:
+    - '02:04.6'
+    - '02:07.6'
+    - '02:08.6'
+    item: 'The shot: the player shoots with a recognisable bow and arrow; the bow''s forward jump / swing at release and its stabiliser rods are not
+      required'
+    anchors:
+      '1': a recognisable bow and a recognisable arrow at the shot (a forward jump / swing of the bow or stabiliser rods may add to it but are not
+        needed)
+      '0.5': only one of bow or arrow is recognisable, or a generic weapon is used but shows a visible kick or recoil at release
+      '0': neither a recognisable bow nor arrow, and no visible reaction at release
+    evidence:
+    - - '02:03.6'
+      - '02:10.0'
+  - id: VP2
+    cat: style
+    keyframes:
+    - '01:36.6'
+    - '02:27.6'
+    item: 'The target face looks like an archery target: a gold centre, then red, blue, black and white rings outward'
+    anchors:
+      '1': rings coloured gold at the centre, then red, blue, black and white outward
+      '0.5': coloured concentric rings, but not in this order or with only some of the colours
+      '0': plain or uncoloured rings, or no ringed face
+    evidence:
+    - - '01:34.6'
+      - '01:39.6'
+    - - '02:27.6'
+      - '02:29.1'
+  - id: VP3
+    cat: presentation
+    keyframes:
+    - '02:25.6'
+    - '02:27.6'
+    item: 'Readable match state: a scoreboard shows both sides'' per-arrow scores, end totals, set points and the running shot clock, and the
+      player can make out which ring each arrow landed in on the target face'
+    anchors:
+      '1': per-arrow scores, totals, set points and the clock readable together, and where the arrows landed on the face can be made out
+      '0.5': only a total score, or where the arrows landed cannot be made out
+      '0': no score display
+    evidence:
+    - - '01:56.6'
+      - '01:56.6'
+    - - '02:25.6'
+      - '02:29.1'
+play_suggestions:
+  FP1:
+  - 'draw and hold just short of the full-draw signal, release: compare with a full-draw release (counter-case, unscored)'
+  - 'release at full draw several times aiming at the same point: are the shots consistent?'
+  FP2:
+  - 'shoot at the farthest target and watch the projectile: does it arc and take time?'
+  - 'aim high, low and to the side: does the landing point move accordingly?'
+  FP3:
+  - hit the centre, an outer ring and miss the face entirely; compare the scores with the landing points (a miss should sensibly score nothing)
+  - hit a ring boundary
+  FP4:
+  - 'play several ends: do turns alternate, do end totals and set points update?'
+  - 'play to the end of a match: is a winner declared and does it agree with the set points?'
+  - 'after the result: can you play again? (unscored)'
+  FP5:
+  - 'wait without shooting until the clock runs out: what happens?'
+  - check that only the active shooter's clock runs and that it resets each turn
+  FP6:
+  - 'take ten careful shots and ten hasty ones: does care score better?'
+  - try to hit the centre from the shooting line repeatedly
+  - check that the aiming reference matches where arrows land
+  robustness:
+  - shoot during the opponent's turn
+  - move off the shooting line or walk toward the targets mid-match
+  - spam the fire input while drawing
+  - leave in the middle of a match and come back
+v4_map:
+  U1: 'dropped: mechanism already scored by FP1 (full-draw signal)'
+  U2: 'dropped: mechanism already scored by FP2 (arcing, non-instant flight)'
+  U3: CR1, VP2
+  U4: CR3
+  U5: 'dropped: mechanism already scored by FP5 (per-archer shot clock)'
+  U6: 'dropped: bow jump and stabilisers already scored by VP1'
+  U7: 'dropped: precision relation scored by FP6; long distance in CR2'
+  FP1: FP1
+  FP2: FP2
+  FP3: CR1, FP3
+  FP4: CR3, FP4
+  FP5: FP5
+  FP6: FP6
+  FP7: 'dropped: editing request (wind), moved to editing_seed.yaml'
+  VP1: VP1
+  VP2: CR2
+  VP3: VP3
+provenance:
+  source_yaml: T-VO-vid_b4f7eeb6be71.t1.yaml
+  source_sha256: f550221e6ab3b68728f49d4dbb4e8c1417f9f6c32d68ef5495172039b14deffc
+  size_waiver: null
+  size_max: null
+  sources: []

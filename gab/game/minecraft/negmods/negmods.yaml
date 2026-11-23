@@ -1,0 +1,7 @@
+# negative mods for `gab selfcheck minecraft` (2026-10-31, verified in game): each must fail exactly its expected pool items
+# against a fresh vanilla instance. Each is ONE item of a mod/ folder (selfcheck installs negmods/<m> as mod/<m>): a datapack or
+# a Fabric source project (built with javac by the adapter like a deliverable).
+neg_daycycle: {expect_fail: [MC-RULE-DAYCYCLE, MC-DAYNIGHT], quick_probes: [game_rules, time_advances]}
+neg_keepinv: {expect_fail: [MC-RULE-KEEPINV, MC-DEATH], quick_probes: [game_rules, death_respawn]}
+neg_nobuild: {expect_fail: [MC-BUILD], quick_probes: [place_break, containers, inventory_use]}
+neg_starter: {expect_fail: [MC-JOIN-INVENTORY], quick_probes: [player_start, inventory_use, death_respawn]}

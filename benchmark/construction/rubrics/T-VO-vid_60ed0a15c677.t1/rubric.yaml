@@ -1,0 +1,273 @@
+# GameAnything-Bench scoring material: never shown to agents during a trial.
+task_id: T-VO-vid_60ed0a15c677.t1
+source_inventory:
+- '00:49.6-00:50.0 elevated wide broadcast view from behind the near baseline: blue hard court inside white lines, green surround, net across
+  the middle, chair umpire on the left, ball kids and line judges, packed stands, sponsor boards; scorebug bottom-left: ''22 KEYS USA 6 6 2''
+  over ''ZHENG CHN 1 6 2'' (first set 6-1 Keys, second set 6-6, tiebreak points 2-2), yellow tag ''7 POINT TIEBREAK'', ball icon (server) on Zheng''s
+  row'
+- '00:50.0-01:01.6 wide view: a rally between the players at opposite baselines; both move side to side; the near player runs and slides wide
+  to the right (01:00-01:01); the ball is tiny and how the point ends cannot be read from the frames'
+- '01:02.1-01:04.6 close-up: Zheng (white top, mint skirt) walks along the baseline after the point; at 01:04.6 the scorebug changes to Keys 2
+  - Zheng 3 and the server icon moves to Keys'' row; a courtside board shows ''83'''
+- 01:05.1-01:08.1 Keys (mint dress) walks past her box; the people in the box stand, clap and gesture
+- 01:08.6-01:10.1 Keys behind the baseline bounces the ball, then tosses it overhead and starts the serve; a Rolex court clock reads 1:22 and
+  does not change in these frames (elapsed match time, not a countdown)
+- '01:10.6-01:21.1 wide view: Keys serves from the near baseline, then a rally from the baselines; tiebreak score still 2-3 during the rally'
+- '01:21.6-01:24.1 close-up: Zheng at the sideline next to officials and a ball kid; at 01:24.1 the scorebug reads Keys 2 - Zheng 4, server icon
+  still on Keys'
+- 01:24.6-01:27.6 crowd applauds and films with phones
+- '01:28.1-01:30.6 close-up: Zheng faces the camera holding her racket; the tag changes to yellow ''SET POINT''; the scorebug reads Keys 3 - Zheng
+  6 with the server icon on Keys (the points between 2-4 and 3-6 are cut out)'
+- '01:31.1-01:39.1 wide view: the set-point rally, both players at their baselines and moving side to side; the clip ends mid-rally, the outcome
+  of the set point is not shown'
+- 'audio (offline Whisper transcript, not checked by ear): commentary ''... that''s so good from [Zheng] ... went right ... taking it on, not
+  getting passive ... the drop shot ... that is costly ... takes the second set ...''; the last segment runs to 01:43.9, so ''takes the second
+  set'' may fall after the clip end; crowd applause is visible at 01:05 and 01:24-01:27'
+- 'not visible: line calls, faults, ball landing spots, what ended each rally; no serve-countdown clock is shown'
+instructions_meta:
+  requirement_groups:
+    serving:
+    - FP3
+    - VP2
+    rally interaction:
+    - FP1
+    - FP6
+    scoring logic:
+    - CR3
+    - FP2
+    - FP4
+    - FP5
+    match interface:
+    - CR2
+    - VP3
+    court and presentation:
+    - CR1
+    - VP1
+  explicit_requirements:
+  - type: keep
+    text: I want to keep the long baseline rallies from the clip, where both players hit from the back of the court and run side to side to reach
+      the ball.
+    covers:
+    - FP1
+  - type: specify
+    text: 'The scoring should work like in the clip: at 6-6 in games the set goes to a tiebreak counted in single points to 7, not 15-30-40.'
+    covers:
+    - CR3
+    - FP4
+rubric:
+  content_realization:
+  - id: CR1
+    item: The play space is a court split across the middle by a net into two halves, each with a baseline at its back, and the player and the
+      opponent take position on opposite halves
+    anchors:
+      '1': a bounded court with a net across the middle, a baseline at each end, and the two sides on opposite halves
+      '0.5': two sides on a divided play area, but no net or no marked bounds / baselines
+      '0': 'no divided court: both sides share one area, or there is no opponent'
+    evidence:
+    - - '00:49.6'
+      - '01:01.6'
+    - - '01:10.6'
+      - '01:21.1'
+  - id: CR2
+    item: 'The game has a scoreboard holding the reference''s match state: both sides'' names, the games won in each set, the current tiebreak
+      points, a marker of who serves, and a tag naming the current situation (the tiebreak; set point when it arises)'
+    anchors:
+      '1': names, games per set, current points, the server marker and the situation tag are all part of the scoreboard
+      '0.5': a scoreboard with only some of these parts (e.g. points only, or no server marker or no situation tag)
+      '0': no scoreboard
+    evidence:
+    - - '00:49.6'
+      - '00:50.0'
+    - - '01:04.6'
+      - '01:04.6'
+    - - '01:28.1'
+      - '01:30.6'
+  - id: CR3
+    item: 'The match situation of the reference: a set whose games stand at 6-6 goes to a tiebreak as its deciding game'
+    anchors:
+      '1': the game contains a set level at 6-6 in games that is then decided by a tiebreak (reached through play or set up as the starting situation)
+      '0.5': a tiebreak or deciding game exists but is not tied to a set at 6-6 in games (e.g. a standalone points race with no games or sets)
+      '0': no tiebreak situation; only ordinary games
+    evidence:
+    - - '00:49.6'
+      - '00:50.0'
+    - - '01:04.6'
+      - '01:04.6'
+    - - '01:28.1'
+      - '01:28.6'
+  functions_playability:
+  - id: FP1
+    item: 'Long baseline rallies against an opponent: the two sides hit the ball back and forth over the net from the back of their halves over
+      several shots, both moving side to side to reach it'
+    anchors:
+      '1': multi-shot rallies played from the baselines, with the opponent as well as the player chasing the ball side to side and returning it
+      '0.5': the opponent returns in a scripted way without moving, rallies never pass one exchange, or play is not from the back of the court
+      '0': no opponent hitting the ball back
+    evidence:
+    - - '00:50.0'
+      - '01:01.6'
+    - - '01:10.6'
+      - '01:21.1'
+    - - '01:31.1'
+      - '01:39.1'
+  - id: FP2
+    item: 'Points decided by play, then reset: a point ends when the rally ends in play, the side that won it (either side, the opponent included)
+      gets the point and the score advances, and play resets for the next point'
+    anchors:
+      '1': every point is settled by how the rally ends, the score advances for the side that won it, both sides win points through play, and
+        the next point starts from reset positions
+      '0.5': points end through play but sometimes go to the wrong side, the opponent never wins a point by its own play, play stalls, or does
+        not reset cleanly
+      '0': points awarded by a timer, a button or chance, or no scoring or reset at all
+    evidence:
+    - - '00:50.0'
+      - '01:04.6'
+    - - '01:10.6'
+      - '01:24.1'
+  - id: FP3
+    item: 'Serve and change of server: every point starts with a serve from behind the server''s baseline, and within the tiebreak the serving
+      side changes after the first point and then after every two points'
+    anchors:
+      '1': a serve starts every point from behind the baseline and within the tiebreak the server changes after the first point and then after
+        every two points
+      '0.5': a serve exists but one side always serves, the server changes after every point or only between games, or it can be served from anywhere
+      '0': points start without a serve
+    evidence:
+    - - '00:49.6'
+      - '00:50.0'
+    - - '01:04.6'
+      - '01:11.1'
+    - - '01:24.1'
+      - '01:24.1'
+    - - '01:28.1'
+      - '01:31.1'
+  - id: FP4
+    item: 'Tiebreak scoring with an end: tiebreak points are counted one by one toward 7, not 15-30-40, the first side to reach the target (by
+      the rule the game states) wins the set, and the game then shows the result and lets the player continue or restart'
+    anchors:
+      '1': a single-point count toward 7, a winner declared when it is reached, and a way to play again; a win-by-two rule is not required
+      '0.5': single points counted toward a target, but the end is unclear or there is no way to continue
+      '0': no score, a score that does not count single points (e.g. 15-30-40 only), or no target that ends the game
+    evidence:
+    - - '00:49.6'
+      - '00:50.0'
+    - - '01:04.6'
+      - '01:04.6'
+    - - '01:24.1'
+      - '01:24.1'
+    - - '01:28.1'
+      - '01:28.6'
+  - id: FP5
+    item: 'Set point arises from the score: when a side is one point from winning the tiebreak and so the set, the game flags set point and the
+      flag stays up while that point is played'
+    anchors:
+      '1': the flag appears exactly when a side is one point from winning and is visible during the following point
+      '0.5': a flag appears but at the wrong score, or disappears before the point is played
+      '0': no such state
+    evidence:
+    - - '01:24.1'
+      - '01:24.1'
+    - - '01:28.1'
+      - '01:39.1'
+  - id: FP6
+    item: 'Player control decides rallies: the player''s movement and hitting input decide whether the ball comes back, and the player can send
+      it to different sides of the court'
+    anchors:
+      '1': reaching the ball needs movement and timing, and input sends the return to clearly different sides of the opponent's court
+      '0.5': only hit-or-miss timing with a fixed return path, or the player never needs to move
+      '0': returns are automatic
+    evidence:
+    - - '00:50.0'
+      - '01:01.6'
+    - - '01:31.1'
+      - '01:39.1'
+  visual_presentation:
+  - id: VP1
+    cat: spatial
+    keyframes:
+    - '00:50.1'
+    - '01:12.1'
+    item: 'The court reads as a tennis court in play: the net and the boundary lines are readable together with both players at opposite ends'
+    anchors:
+      '1': net, boundary lines and the two opposing players at opposite ends readable in one view
+      '0.5': the court is there but the net or the lines are hard to read, or both sides are never visible together
+      '0': the play space does not read as a court
+    evidence:
+    - - '00:49.6'
+      - '01:01.6'
+    - - '01:10.6'
+      - '01:21.1'
+  - id: VP2
+    cat: key_moment
+    keyframes:
+    - '01:09.1'
+    - '01:10.1'
+    - '01:10.6'
+    item: 'The serve looks like a tennis serve: the ball is tossed up and struck overhead'
+    anchors:
+      '1': a recognisable serving motion showing both the toss and the overhead strike
+      '0.5': only one of the toss or the overhead strike is shown, or the motion does not read as a serve (e.g. a ground-stroke swing)
+      '0': no serving motion is shown
+    evidence:
+    - - '01:08.6'
+      - '01:11.1'
+  - id: VP3
+    cat: presentation
+    keyframes:
+    - '00:49.6'
+    - '01:04.6'
+    - '01:28.1'
+    item: 'The match state stays readable during play: the scoreboard is on screen while points are played and its score, server marker and tag
+      can be read without stopping play'
+    anchors:
+      '1': the scoreboard is readable throughout the rallies, not hidden by the action or shown only between points
+      '0.5': readable only between points, or partly covered or too small during play
+      '0': no on-screen match state
+    evidence:
+    - - '00:49.6'
+      - '01:39.1'
+play_suggestions:
+  FP1:
+  - 'play several points returning only to the middle: does the opponent move and hit back?'
+  - 'hit to the far corners: does the opponent chase the ball or stay put?'
+  FP2:
+  - 'let a ball pass without swinging, and hit one far out or into the net: who gets the point?'
+  - count how many points the opponent wins by its own shot rather than by your miss
+  - after each point, check that both sides reset and the next point starts
+  FP3:
+  - 'note who serves each point through a whole tiebreak: does the server change after the first point and then after every two points?'
+  - try to serve from inside the court or out of turn
+  FP4:
+  - 'play a tiebreak to its end: is a winner named, and can you play again?'
+  - 'lose it on purpose: is the result shown just as clearly?'
+  FP5:
+  - 'reach one point from winning for yourself, then let the opponent reach it: does the flag appear for both?'
+  - 'win and lose a flagged point: does the flag clear or end the game correctly?'
+  FP6:
+  - return the same ball to different sides and depths
+  - 'stand still during a rally: can the opponent win by placing the ball away from you?'
+  robustness:
+  - quit or restart in the middle of the tiebreak and check the score resets
+  - run far out of the court during a rally and back
+  - check that the target game's normal combat or enemies do not break or interrupt a point
+v4_map:
+  U1: FP1
+  U2: CR3, FP4
+  U3: FP3
+  U4: CR2
+  U5: FP5
+  FP1: FP1
+  FP2: FP2
+  FP3: FP3
+  FP4: FP4
+  FP5: FP5
+  FP6: FP6
+  VP1: CR1, VP1
+  VP2: VP2
+  VP3: VP3, CR2
+provenance:
+  source_yaml: T-VO-vid_60ed0a15c677.t1.yaml
+  source_sha256: 971003665da3bde82db6c8a00d6f09b05b56df905e58af690351105d198de80b
+  size_waiver: null
+  size_max: null
+  sources: []

@@ -1,0 +1,329 @@
+# GameAnything-Bench scoring material: never shown to agents during a trial.
+task_id: T-HY-vid_01f55d4c784a.t1
+source_inventory:
+- 'clip 00:07.6-00:09.6: stat card ''ZOMBIE'', Toughness Low, Speed Low, on a blue streaked background; music only, no speech in the whole clip'
+- 'clip 00:09.6-00:11.6: lawn gameplay, a checkered grass grid seen from above; a group of plain zombies walks in from the right; top bar with
+  a counter (50) and seed packets with costs (100, 50, 150, 50, 25), a shovel and a Menu button; red lawn mowers at the left edge of every row;
+  a level progress bar at the bottom right (''Level 1-6'')'
+- 'clip 00:12.1-00:14.1: ''VS.'' splash Peashooter vs Zombie, then card ''PEASHOOTER / PLANT'', Damage Normal, Cost 100 Sun, Recharge Fast'
+- 'clip 00:14.6-00:16.1: close-up of peashooters, then lawn gameplay: peashooters in the two left columns of five rows fire green peas rightward
+  along their rows at zombies approaching from the right; counter shows 150; a lighter-skinned zombie appears among them; no hit or kill clearly
+  visible'
+- 'clip 00:16.6-00:19.1: ''VS.'' splash Peashooter vs Buckethead Zombie, then card ''BUCKETHEAD ZOMBIE'', Toughness High, Speed Low (a zombie
+  wearing a metal bucket)'
+- 'clip 00:19.6-00:21.6: close-up and lawn gameplay: peashooters keep firing along their rows at a crowd of buckethead zombies; zombies reach
+  the second column and stand at a peashooter'
+- 'clip 00:22.1-00:24.1: ''VS.'' splash Potato Mine vs Buckethead Zombie, then card ''POTATO MINE / PLANT'', Damage Massive, Cost 25 Sun, Recharge
+  Slow'
+- 'clip 00:24.6-00:26.6: close-up of a potato mine as a zombie steps up; lawn gameplay: several potato mines on different rows (some show a red
+  light on their knob, some are small/half-buried), buckethead zombies walking in; a ''SPUDOW!!'' burst of potato debris appears at a mine where
+  zombies stood (00:25.6, 00:26.6), the mine is gone afterwards'
+- 'clip 00:27.1-00:29.3: ''VS.'' splash with Potato Mine, then card ''ZOMBIE BOBSLED TEAM'' (four zombies on a red bobsled); no stats shown for
+  it'
+- 'clip, not shown: how plants are placed, how the counter is earned, win or lose, the mowers in action, the end of a level'
+- 'text p001-p002: tower defense is a strategy subgenre where the goal is to defend territory by obstructing attackers or stopping them reaching
+  exits, by placing structures that automatically block, impede, attack or destroy enemies; strategic choice and positioning of defences is essential'
+- 'text p003-p009: basic elements: a ''base'' that must be defended; waves of multiple incoming enemies; placement of towers or obstructions along
+  the path of attack; the player''s character is often invincible, the objective is the survival of the base'
+- 'text p010-p020: features of modern tower defense: placed obstructions that damage or kill attackers before they destroy the base; repair and
+  upgrade of obstructions; a currency for upgrades and repairs (time, in-game currency or experience, e.g. earned by defeating an attacker); multiple
+  paths; each wave usually has a set number and types of enemies; unlocking maps and levels; moving towers; build / defend / repair / celebrate
+  phases in turn-based variants'
+- 'text p021-p022: preset maze paths vs mazes built from towers; ''mazing'' to lengthen the enemies'' route; ''juggling''; changing the towers''
+  attack strategy'
+- 'text p023-p025: degrees of player control; ''air'' units that ignore the board layout; tower wars, where players also send enemies to opponents''
+  boards'
+instructions_meta:
+  requirement_groups:
+    play field and placement:
+    - CR1
+    - FP1
+    - VP1
+    defensive units:
+    - CR2
+    - CR3
+    - FP2
+    - FP3
+    - FP7
+    - VP3
+    attackers and run progression:
+    - CR4
+    - FP4
+    - FP6
+    economy and game interface:
+    - FP5
+    - VP2
+  explicit_requirements:
+  - type: keep
+    text: I definitely want the one-shot mine that goes off in a big, clearly visible burst when an enemy reaches it and is used up afterwards.
+    covers:
+    - CR2
+    - FP3
+    - VP3
+  - type: specify
+    text: 'The two defenders should trade off like in the clip: the shooter costs several times more than the mine and recharges fast with normal
+      damage, while the mine is cheap and hits massively but recharges slowly.'
+    covers:
+    - CR3
+    - FP3
+    - FP7
+rubric:
+  content_realization:
+  - id: CR1
+    cross: true
+    item: The play field is a grid of parallel lanes of cells (video) whose near end, where the defenders stand, is the base that must survive
+      (text), with enemies entering at the far end of the lanes
+    anchors:
+      '1': parallel lanes divided into cells, an enemy entry at one end and a base to defend at the other end behind the defenders' cells
+      '0.5': a lane grid without a base at its end, or a base that is not at the lanes' end (a free field or a single path)
+      '0': no lane field
+    evidence:
+    - - '00:09.6'
+      - '00:11.1'
+    - - '00:15.1'
+      - '00:16.1'
+    - - '00:20.1'
+      - '00:21.6'
+    - p005
+    - p009
+  - id: CR2
+    item: 'Two placeable defender types exist and are told apart: a shooter and a mine'
+    anchors:
+      '1': both defender types present and distinguishable in look and in role (a ranged shooter, a trap on its cell)
+      '0.5': only one of the two, or two types that are not told apart (same look or same role)
+      '0': no placeable defenders
+    evidence:
+    - - '00:12.1'
+      - '00:16.1'
+    - - '00:22.1'
+      - '00:26.6'
+  - id: CR3
+    item: 'The two defenders carry the clip''s cost contrast: the shooter costs several times what the mine costs'
+    anchors:
+      '1': the shooter's cost several times the mine's
+      '0.5': the shooter dearer than the mine, but only slightly
+      '0': equal costs, the mine dearer, or no costs
+    evidence:
+    - - '00:13.1'
+      - '00:14.1'
+    - - '00:23.1'
+      - '00:24.1'
+  - id: CR4
+    item: 'Two enemy types exist and are told apart: a plain enemy and a visibly armoured one'
+    anchors:
+      '1': a plain and an armoured enemy type, the armour recognisable on sight
+      '0.5': two types that cannot be told apart on sight, or the second type not armoured in any visible way
+      '0': one enemy type
+    evidence:
+    - - '00:07.6'
+      - '00:09.1'
+    - - '00:16.6'
+      - '00:21.6'
+  functions_playability:
+  - id: FP1
+    item: 'Lane defense: enemies advance along their own row toward the defended end, and the player places defenders on the cells of those rows'
+    anchors:
+      '1': enemies keep to rows and advance toward the defended end, and defenders are placed per cell in the rows
+      '0.5': enemies advance but not in lanes (free or a single path), or defenders cannot be placed by the player
+      '0': no advancing enemies or no placeable defenders
+    evidence:
+    - - '00:09.6'
+      - '00:11.1'
+    - - '00:15.1'
+      - '00:16.1'
+    - p007
+  - id: FP2
+    item: 'Row shooter: a placed shooter fires repeatedly along its own row and its shots damage and eventually kill the enemies in that row'
+    anchors:
+      '1': repeated shots that stay in the row and kill enemies there after enough hits
+      '0.5': it fires but shots ignore rows or never kill, or it kills instantly without projectiles
+      '0': no working shooter
+    evidence:
+    - - '00:15.1'
+      - '00:16.1'
+    - - '00:20.1'
+      - '00:21.6'
+    - - '00:13.1'
+      - '00:14.1'
+    - p011
+  - id: FP3
+    item: 'Single-use mine: a placed mine goes off when an enemy reaches it, deals heavy damage at that spot, far more than a shooter hit, and
+      is consumed'
+    anchors:
+      '1': triggered by contact, a heavy hit on the enemies there (clearly stronger than a shot, telling even on the armoured tier), and gone
+        after use
+      '0.5': it triggers but is not consumed, or it only damages lightly, or it triggers without an enemy
+      '0': no working mine
+    evidence:
+    - - '00:24.6'
+      - '00:26.6'
+    - - '00:23.1'
+      - '00:24.1'
+  - id: FP4
+    item: 'Enemy tiers in play: the plain and the armoured enemy advance equally slowly, and the armoured one takes clearly more shooter hits
+      to kill'
+    anchors:
+      '1': similar slow speed, the armoured one clearly tougher in play
+      '0.5': the two types do not differ in toughness, or differ in speed instead of toughness
+      '0': no difference in play between the types, or only one type
+    evidence:
+    - - '00:07.6'
+      - '00:09.1'
+    - - '00:17.6'
+      - '00:21.6'
+  - id: FP5
+    cross: true
+    item: 'Economy: placing a defender deducts its own cost (video) from a currency that is earned during play the way the text describes, time-based
+      or by defeating attackers (text)'
+    anchors:
+      '1': placing deducts a per-type cost, placing is refused when the currency is short, and the currency grows during play (with time or from
+        kills)
+      '0.5': a cost exists but income is missing (a fixed budget only), or costs are not enforced
+      '0': defenders are free
+    evidence:
+    - - '00:10.1'
+      - '00:11.1'
+    - - '00:13.1'
+      - '00:14.1'
+    - - '00:23.1'
+      - '00:24.1'
+    - p015
+  - id: FP6
+    cross: true
+    item: 'Waves against the base: enemies of the clip''s two tiers arrive in waves of a set number and types (text), the run is lost when enemies
+      get through a lane to the base (text), and holding a wave leads on to the next one'
+    anchors:
+      '1': distinct waves with a set composition using both tiers, a loss when the base at the lanes' end is reached, and a clear advance to the
+        next wave when one is held
+      '0.5': endless or random spawns, or no consequence when enemies reach the end, or no advance from wave to wave
+      '0': no waves and no base to lose
+    evidence:
+    - - '00:09.6'
+      - '00:11.1'
+    - - '00:20.1'
+      - '00:21.6'
+    - p006
+    - p011
+    - p017
+  - id: FP7
+    item: 'Recharge: after a defender is placed, its type can be placed again only after a wait, and the shooter''s wait is clearly shorter than
+      the mine''s'
+    anchors:
+      '1': a per-type wait before the same defender can be placed again, the shooter's clearly shorter than the mine's
+      '0.5': a wait exists but is the same for both types, or only one type has one
+      '0': no wait at all, or the mine's wait shorter than the shooter's
+    evidence:
+    - - '00:13.1'
+      - '00:14.1'
+    - - '00:23.1'
+      - '00:24.1'
+  visual_presentation:
+  - id: VP1
+    cat: spatial
+    keyframes:
+    - '00:15.1'
+    - '00:20.1'
+    - '00:25.1'
+    item: 'The play space visibly reads as a grid: the lanes and their cells can be told apart at a glance'
+    anchors:
+      '1': rows and cells clearly distinguishable on screen
+      '0.5': lanes visible but cells not, or the grid only faintly readable
+      '0': the lanes and cells cannot be made out
+    evidence:
+    - - '00:15.1'
+      - '00:16.1'
+    - - '00:25.1'
+      - '00:26.6'
+  - id: VP2
+    cat: presentation
+    keyframes:
+    - '00:10.1'
+    - '00:25.1'
+    item: During play the currency amount and the available defenders with their costs are readable to the player
+    anchors:
+      '1': the current currency and each defender's cost visible while playing
+      '0.5': only one of the two is visible, or only outside play (a menu, chat on demand)
+      '0': neither shown
+    evidence:
+    - - '00:10.1'
+      - '00:11.1'
+    - - '00:25.1'
+      - '00:26.6'
+  - id: VP3
+    cat: key_moment
+    keyframes:
+    - '00:25.6'
+    - '00:26.6'
+    item: The mine going off is seen as a conspicuous burst at the mine's spot, set apart from the ordinary shots
+    anchors:
+      '1': a clearly visible blast effect localised at the mine's cell when it goes off
+      '0.5': a blast effect that is faint, easy to miss or not at the mine's spot
+      '0': nothing visible
+    evidence:
+    - - '00:25.6'
+      - '00:26.6'
+play_suggestions:
+  FP1:
+  - 'watch several enemies spawn: does each keep to its row all the way?'
+  - try to place a defender between rows or outside the field
+  FP2:
+  - 'place one shooter and let an enemy come in its row and another in the next row: is only the first shot at?'
+  - count roughly how many hits a plain enemy takes to die
+  FP3:
+  - place a mine in the path of an armoured enemy and watch it go off; is the cell empty afterwards?
+  - check whether a freshly placed mine goes off at once or needs time to arm (the clip shows mines with and without a red light; not scored)
+  FP4:
+  - compare the hits a plain and an armoured enemy take from one shooter
+  - compare how long each type takes to cross the field
+  FP5:
+  - 'spend down the currency, then try to place a shooter: is it refused?'
+  - 'wait and kill enemies: does the counter grow, and by which means?'
+  - place a mine and a shooter and compare what each deducts
+  FP6:
+  - 'leave one lane undefended: what happens when an enemy reaches the end?'
+  - 'note the composition of the first waves: are both tiers used, in set waves?'
+  - 'hold all waves: is there an end, a result or a next stage? (not scored)'
+  FP7:
+  - 'with enough currency, place a shooter and try to place another at once: how long until it is allowed?'
+  - do the same with a mine and compare the two waits
+  - is the wait shown to the player (not scored)?
+  robustness:
+  - place defenders in every cell before any enemy comes
+  - try to place a defender on a cell an enemy is standing on
+  - lose on purpose, then check you can start again
+  - leave and rejoin the world in the middle of a wave
+hybrid:
+  modality: video+text
+  roles:
+    video: the lane-grid play space, the two defender roles (repeating row shooter, one-shot mine) and the two enemy toughness tiers with their
+      stat cards (cost, damage, recharge, toughness, speed), the resource counter with per-defender costs, and how shots and the mine blast look
+    text: 'the generic tower-defense frame: a base that must be defended and survive, enemies arriving in waves of a set number and types, player-placed
+      obstructions that damage or kill enemies before they destroy the base, and a currency that can be time, in-game currency or experience,
+      e.g. earned by defeating an attacker'
+  cross_reference_requirement: 'The built game must give the video''s lane grid, unit roles and costs the text''s rule frame: the left end of
+    the lanes is the base that must survive, enemies of the clip''s two toughness tiers arrive in waves, and the clip''s per-defender costs are
+    paid from a currency earned during play the way the text describes (time-based, or by defeating attackers).'
+v4_map:
+  U1: CR1, FP1 (lane grid existence to CR1; row-bound movement and shots stay in FP1, FP2)
+  U2: CR2 (both defender types exist; their behaviour, incl. the mine's single use, stays in FP2, FP3)
+  U3: 'dropped: mechanism already scored by FP5 and VP2; cost relation in CR3'
+  U4: CR3, FP3, FP7 (cost relation to CR3; recharge relation to FP7; massive damage already in FP3)
+  U5: CR4, FP4 (two types exist in CR4; equal speed and toughness in FP4)
+  U6: 'CR1 (cross: base at the lanes'' near end)'
+  FP1: FP1 (field existence split off to CR1)
+  FP2: FP2
+  FP3: FP3 (mine existence split off to CR2)
+  FP4: FP4 (two enemy types' existence split off to CR4)
+  FP5: FP5 (shooter-dearer-than-mine relation moved to CR3)
+  FP6: FP6
+  VP1: CR1, VP1 (arrangement of ends to CR1; grid readability stays VP1)
+  VP2: VP2
+  VP3: VP3
+provenance:
+  source_yaml: T-HY-vid_01f55d4c784a.t1.yaml
+  source_sha256: 8eb6fe260783acd5d746ac3924e545a4318b0a53d008c7424baf2ef05c9985ad
+  size_waiver: null
+  size_max: null
+  sources:
+  - ref: t01
+    text: /Volumes/USB-500G/gameanything_local/hf/curation/hybrid_texts/T-HY-vid_01f55d4c784a.t1/final.md

@@ -1,0 +1,256 @@
+# GameAnything-Bench scoring material: never shown to agents during a trial.
+task_id: T-VO-vid_d958cf2529d4.t1
+source_inventory:
+- '00:43-00:44 dusk street, purple sky: a yellow car / small truck drives away from the camera between tall buildings (transition shot)'
+- 00:44-00:45 black card with green text 'FROM Disney'; 00:45 the 'FROM Disney' logo fades out over the next shot
+- '00:45-00:46 wide establishing shot of the Marsh Market: a large green hanging sign ''Welcome to the MARSH MARKET'' with a red fish emblem and
+  a small fountain on top; a canal of green water with boats and gondola-like skiffs; wooden docks, stalls and stilted, patched-together buildings
+  along the water; tall swamp trees; teal tube arcs in the background; round signs on poles in the water; a crowd of small animals on the docks
+  and in boats'
+- '00:46-00:48 at a kiosk counter with a round metal hatch under a ''BLUE LINE'' sign and a green signal light, animals wait in front: a fox in
+  a pink shirt and bucket hat, a rabbit in a cap, a beaver, a walrus in a tank top, a seal carrying a fish; an older animal in a green cap is
+  in the hatch behind them'
+- 00:48-00:50 a round animal in a yellow shirt sits in the round hatch, then spins and shrinks down into it like water down a drain; at 00:50
+  the hatch shows an empty swirling tube; a small animal holding a plunger stands at the hatch rim
+- 00:50-00:51 low view up at teal translucent tube water slides looping between wooden scaffold towers, blue sky, buildings, small animals in
+  the green water below
+- '00:51-00:52 a mural on a dark curved wall: two blue dolphins framing a pink heart with a red heart and a crown at the center, stars around;
+  small mice working a contraption to the right'
+- 00:52-00:54 a large hippo in a sleeveless denim vest with a back patch, a colorful print on its shorts, wades waist-deep through the green water
+  past a green-roofed shop with a round sign; the fox and the rabbit stand on a dock behind
+- 00:54-00:55 the hippo moves and throws up a big green wave that rocks a small boat with a tiny animal holding a pole
+- 00:55 black cut
+- '00:55-00:56 dim corridor seen from behind: warm round wall lamps, a teal-glowing round porthole window on the right, a red-lit round doorway
+  ahead; the fox, the rabbit and a beaver walk toward it'
+- 00:56-00:57 front view of the rabbit, the beaver (vest) and the fox, lit red and green from ahead, looking into the space before them
+- '00:57-00:58 reveal of the club interior past a large dark reptile silhouette in the foreground: magenta and purple neon light, glowing signs,
+  a lit bar, reptile figures silhouetted on the floor, a neon ring sign overhead'
+- 00:59-01:02 the fox stands tense in magenta light, eyes darting down; a small lizard figure on the left, a large reptile body on the right
+- '01:02-01:03 close-up at floor level: a long scaly tail slides across the wooden floor between the fox''s feet'
+- 01:03-01:05 the fox's arm is held by the scaly red arm of a large reptile seated on a stool in blue shorts; the fox is pulled in and braces
+- '01:05-01:07 wider: the fox is pulled up against a bar / piano where a large red lizard with a frill, in blue shorts, sits on a stool holding
+  the fox''s arm; a grand piano lid and bottles at right; magenta and purple light throughout'
+- 'dialogue (Whisper transcript): 00:43-00:50 ''When Zootopia was founded, this whole neighborhood got cut off from the rest of town.''; 00:50-00:53
+  ''It''s the only place to get away with wearing a shirt and no pants.''; 00:53 ''Hey, Johnny!''; 00:56-00:59 ''Zootopia has a secret reptile
+  population.''; 00:59 ''So warm.''; 01:02 ''Whoops!''; 01:06 ''Keep it.'''
+- audio otherwise not verifiable from the material (trailer music and effects presumed); no on-screen text besides 'FROM Disney', the market sign,
+  'BLUE LINE' and shop signs
+- 'not shown: overall layout or distances between the market, the corridor and the club; how the corridor is entered from the market; where the
+  hatch leads; whether the water can be walked in by the protagonists'
+instructions_meta:
+  requirement_groups:
+    exploring the market and its landmarks:
+    - CR1
+    - CR2
+    - FP1
+    passage into the club and arrival:
+    - CR4
+    - CR5
+    - FP2
+    - VP1
+    - VP3
+    usable transit feature:
+    - CR3
+    - FP3
+    inhabitants:
+    - CR6
+    lighting and atmosphere of the areas:
+    - VP2
+  explicit_requirements:
+  - type: keep
+    text: I really want those teal see-through tube water slides looping between wooden scaffold towers in the market.
+    covers:
+    - CR2
+  - type: specify
+    text: The club should be a reptile hangout, dark and lit in magenta and purple neon, with a bar and a piano and lizards as the regulars.
+    covers:
+    - CR5
+    - VP2
+rubric:
+  content_realization:
+  - id: CR1
+    item: 'The game contains a market district built on water: a canal with boats, wooden docks / walkways with stalls, and stilted buildings
+      standing over the water, under a large hanging market sign'
+    anchors:
+      '1': 'a market on or over water: a water channel with boats, docks / walkways with stalls, buildings on stilts over the water, and a big
+        hanging market sign'
+      '0.5': a market or a waterfront, but without the built-on-water character (no buildings over the water, no boats) or without the market
+        sign
+      '0': no market area
+    evidence:
+    - - 00:45
+      - 00:47
+    - - 00:52
+      - 00:55
+  - id: CR2
+    item: 'The market contains its landmark: teal see-through tube water slides looping between wooden scaffold towers'
+    anchors:
+      '1': translucent teal tubes that loop / arc between several wooden scaffold towers, standing in the market
+      '0.5': a tube or slide structure that lacks the see-through teal tubes or the wooden scaffold towers, or stands outside the market
+      '0': no tube-slide landmark
+    evidence:
+    - - 00:45
+      - 00:46
+    - - 00:50
+      - 00:51
+  - id: CR3
+    item: 'The market contains a transit kiosk: a counter with a round hatch that opens onto a tube'
+    anchors:
+      '1': a kiosk / counter in the market with a round hatch opening that reads as the mouth of a tube
+      '0.5': a round hatch or tube opening without the kiosk counter, or placed outside the market
+      '0': no hatch
+    evidence:
+    - - 00:46
+      - 00:50
+  - id: CR4
+    item: The market and the club are two distinct places joined by an enclosed corridor that leads into the club
+    anchors:
+      '1': an open market area and a separate enclosed club, with a corridor that leads into the club
+      '0.5': both places exist but the corridor is missing or does not lead into the club, or the two places are not set apart (the club is just
+        a corner of the market)
+      '0': one of the two places is missing
+    evidence:
+    - - 00:45
+      - 00:55
+    - - 00:55
+      - 00:58
+  - id: CR5
+    item: 'The club is a reptile hangout: an interior with a bar and a piano, whose regulars are reptiles such as lizards'
+    anchors:
+      '1': the club interior has a bar and a piano, and its patrons are clearly reptiles (lizards, including a large one)
+      '0.5': a bar / piano interior without reptile patrons, or reptile patrons without the bar or the piano
+      '0': no club interior
+    evidence:
+    - - 00:57
+      - 01:07
+  - id: CR6
+    item: The market is populated by non-player animal characters of different kinds and clearly different sizes, on the docks and in the water
+    anchors:
+      '1': several animal characters in the market, of different kinds and a clear range of sizes (small to very large)
+      '0.5': characters in the market but all of one kind or one size, or not animals
+      '0': the market is empty
+    evidence:
+    - - 00:45
+      - 00:47
+    - - 00:52
+      - 00:55
+  functions_playability:
+  - id: FP1
+    item: 'The water market can be explored on foot: walkways and docks over water lead between stalls, buildings and the landmarks, and the water
+      behaves consistently (it can be waded or swum, or it clearly blocks), without dead ends the player cannot leave'
+    anchors:
+      '1': the player moves freely along walkways over water between several market spots and the landmarks; water is either traversable or clearly
+        bounded; no stuck spots or falls out of the world
+      '0.5': the market is walkable but cramped to one spot, the water behaves inconsistently or it is unclear whether it can be entered, or the
+        player can get stuck or fall out of the map
+      '0': the market cannot be explored on foot
+    evidence:
+    - - 00:45
+      - 00:47
+    - - 00:50
+      - 00:55
+  - id: FP2
+    item: 'The player can walk through the corridor into the club: it is reached in normal play, walked through without a break, and the player
+      clearly arrives in the club interior'
+    anchors:
+      '1': the player walks through the corridor straight into the club interior without a teleport or load, and the corridor can be found and
+        entered in normal play
+      '0.5': the club is reached from the corridor only by a teleport, menu or load, or the corridor is very hard to find or enter
+      '0': the corridor cannot be walked through into the club
+    evidence:
+    - - 00:55
+      - 00:58
+  - id: FP3
+    item: 'The round hatch works as a tube passage: entering it carries the player down and away through a tube'
+    anchors:
+      '1': the player enters the round hatch and is visibly carried into and away through the tube, ending in a playable state
+      '0.5': the hatch is only decorative, or using it moves the player with no sense of passing through a tube, or leaves the player stuck or
+        out of the world
+      '0': the hatch cannot be used, or there is no hatch
+    evidence:
+    - - 00:46
+      - 00:50
+  visual_presentation:
+  - id: VP1
+    cat: spatial
+    keyframes:
+    - '00:55.6'
+    - '00:56.1'
+    item: 'The corridor looks like the reference''s: dim, lit by warm wall lamps, with a glowing round porthole and a red-lit round doorway at
+      its end'
+    anchors:
+      '1': a dark corridor with spaced warm lamps and a round, colored-lit door or opening at its end
+      '0.5': a dark corridor without the lamps or without the lit round door
+      '0': the corridor looks like none of this (bright, plain, no round lit door)
+    evidence:
+    - - 00:55
+      - 00:57
+  - id: VP2
+    cat: style
+    keyframes:
+    - '00:46.1'
+    - '00:58.1'
+    - '01:05.6'
+    item: 'Palette contrast between the zones: the market in bright daylight with saturated green water and teal accents, the club dark and saturated
+      in magenta and purple neon'
+    anchors:
+      '1': the two zones have clearly different palettes matching bright green-teal daylight vs. dark magenta-purple neon
+      '0.5': the zones differ in lighting but not in these palettes, or only one zone matches
+      '0': both zones look alike
+    evidence:
+    - - 00:45
+      - 00:55
+    - - 00:57
+      - 01:07
+  - id: VP3
+    cat: presentation
+    keyframes:
+    - '00:56.1'
+    - '00:58.1'
+    item: 'Entering the club is presented as a reveal: from the dim, narrow corridor the view opens up into the wide, glowing neon interior'
+    anchors:
+      '1': a clear moment where the dark, narrow corridor view gives way to the brighter, wider neon room, either by stepping through the doorway
+        or by a staged transition from the corridor straight onto the neon interior
+      '0.5': the club is entered but without a dark-to-bright opening (e.g. the interior is visible from far off, or a plain load / cut with no
+        corridor-to-room contrast)
+      '0': no entry into the club
+    evidence:
+    - - 00:55
+      - 00:58
+play_suggestions:
+  FP1:
+  - 'walk the market edge to edge along the docks; step off into the water: wade, swim or blocked?'
+  - try to reach the slides and the kiosk from the market on foot
+  - 'jump around the stilts and dock edges: can you get stuck or fall out of the map?'
+  FP2:
+  - 'start in the market without a hint and look for the way to the corridor and the club; note how long it takes and whether it is a walk or
+    a teleport (unscored: the clip does not show this link)'
+  - 'walk corridor -> club, then try to leave the club again: is there a way back, or is the club a dead end?'
+  FP3:
+  - 'enter the round hatch: is the tube motion visible, where do you end up, and can you go on from there?'
+  - use the hatch twice in a row
+  robustness:
+  - 'sprint and jump through the corridor and the club doorway: no clipping through walls into the void'
+  - 'stand still in the water for a while: no drowning or damage loop the player cannot escape, unless it is clearly intended'
+  - 'reload or respawn: does the player start in a sensible place in the market?'
+v4_map:
+  U1: CR3, FP3 (mechanism scored by FP3; hatch existence to CR3)
+  U2: CR1 (green water colour scored by VP2)
+  U3: CR2
+  U4: CR5, VP2 (neon palette scored by VP2)
+  U5: CR4, VP1, VP2 (corridor linking the places to CR4; corridor look to VP1; bright vs dark contrast to VP2)
+  FP1: FP1
+  FP2: CR4, FP2 (corridor existence split to CR4)
+  FP3: CR3, FP3 (hatch existence split to CR3)
+  FP4: 'CR6, CR5 (inhabitants are existence: market animals CR6, club reptiles CR5)'
+  VP1: CR1 (which parts the market has is existence; green water colour to VP2)
+  VP2: 'CR2 | mural dropped: peripheral (one-second shot, not a defining landmark)'
+  VP3: VP1 (the round lit doorway is look, scored only here, not in CR4)
+  VP4: VP2
+  VP5: VP3
+provenance:
+  source_yaml: T-VO-vid_d958cf2529d4.t1.yaml
+  source_sha256: d0d86ae1b0591acc637c27869269dbd31d28609848f8e10a82c4f9cba4be6f74
+  size_waiver: null
+  size_max: null
+  sources: []

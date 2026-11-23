@@ -1,0 +1,277 @@
+# GameAnything-Bench scoring material: never shown to agents during a trial.
+task_id: T-VO-vid_c82606109b35.t1
+source_inventory:
+- '00:06-00:08 golden aerial along a wide river: low-rise waterfront on the left bank, distant towers on the horizon, warm haze and low sun, a
+  pier / barge at the lower right'
+- 00:08-00:09 aerial over mid-height towers toward a skyline with one clearly tallest spired tower; pink hazy sky, river behind the towers
+- 00:10-00:14 low-angle time-lapse of an outdoor oval ice rink with a yellow-edged barrier and blurred skaters moving around it; autumn trees
+  (red, orange, green) ring the rink and tall towers, one with a pointed top, rise right behind the tree line; sun starburst through the trees
+  at 00:12.3 and 00:14.3; a small booth at the left edge
+- '00:15-00:17 split screen of two stacked panels: top, upward view of a narrow wedge-shaped corner tower against blue sky with streaking clouds;
+  bottom, street-level view of older masonry buildings, billboards and fire escapes, with a lens flare'
+- 00:18-00:22 time-lapse sunset silhouette of the skyline across calm water, the tallest spired tower in the middle and many lower towers, mirrored
+  in the water; the sun sinks behind the towers with a starburst flare (00:20-00:22)
+- 00:22-00:25 silhouetted towers with pointed spires against a teal sky, bright sun disk at the upper right, a lens-flare beam (00:23.3), steam
+  plumes at the right edge, a dark glass tower at the left
+- 00:25-00:27 hazy backlit aerial over a dense tower field with one prominent spired tower; the river and far shore glow in the haze
+- 00:28-00:30 orange ferry moving across choppy open water in front of a low far shore with a few towers and a terminal building; clear blue sky
+  with clouds
+- 00:30-00:31 suspension bridge with stone towers and cables over the river, a second bridge farther back, buildings at the right; blue sky
+- 00:31-00:32 close aerial of a statue with a raised arm on a tall pedestal, backlit, strong sun glare on the water, bare trees on its island
+- 00:33-00:34 close aerial over dense towers including an ornamented spired tower and a large slab tower, deep shadows
+- 00:34-00:35 aerial of a shore lined with long parallel piers, a rectilinear block grid with towers behind, warm side light, a spired tower on
+  the horizon
+- '00:35-00:37 upward time-lapse from the street: towers frame the view, a traffic signal on a mast arm, an airplane crossing the blue sky'
+- 00:37-00:40 aerial of an oval stadium among low-rise brick blocks, sports fields, an elevated road and a river at the side, warm haze
+- 00:40-00:42 high aerial of a small island with a statue and a pier on golden water, a low industrial shore behind
+- 00:43-00:44 the tallest spired tower at dusk, its glass faces lit orange, beside an orange-lit tower and a building with a green ornamented
+  top; violet sky
+- 00:45-00:46 aerial over a stone bridge tower and its roadway deck crossing the river into a district of brick housing blocks with towers behind
+- 00:47-00:48 dark street canyon at street level, a blazing sun at the end of the street, cars, pedestrians and flags
+- 'audio: music only; no speech and no sound effects tied to the shots'
+- 'not shown: no on-screen text inside the range, no continuous route; each shot lasts about 1-5 s and cuts between places, so the relative positions
+  of most landmarks are not shown; no landmark is named'
+instructions_meta:
+  requirement_groups:
+    playable city space:
+    - CR2
+    - FP1
+    connections between the city's parts:
+    - CR3
+    - FP2
+    game goal and progression:
+    - FP3
+    skyline and landmarks:
+    - CR1
+    - CR4
+    - CR5
+    - VP2
+    - VP3
+    - VP5
+    lighting and atmosphere:
+    - VP1
+    overall view of the place:
+    - VP4
+  explicit_requirements:
+  - type: keep
+    text: Keep that one tall spired tower on the waterfront that clearly stands above all the others.
+    covers:
+    - CR1
+    - VP5
+rubric:
+  content_realization:
+  - id: CR1
+    item: The skyline is a dense field of towers at the water's edge, dominated by one clearly tallest tower with a spire standing on the waterfront
+    anchors:
+      '1': a dense field of towers stands at the water's edge and one spired tower on the waterfront clearly rises above all the others
+      '0.5': dense towers without a single clearly tallest spired tower, or that tower alone without a dense field, or the tower core set away
+        from the water
+      '0': no tower skyline, or a generic group of buildings with no dominant tower
+    evidence:
+    - - 00:08
+      - 00:10
+    - - 00:18
+      - 00:22
+    - - 00:43
+      - 00:44
+  - id: CR2
+    item: 'Water divides the city: the tower core borders a wide river / harbor, with a separate built-up shore across the water'
+    anchors:
+      '1': the tower core lies directly on a wide body of water and a second built-up shore lies across it
+      '0.5': water is present but does not border the tower core, or there is no shore across it (open water only)
+      '0': no water, or the city is one landmass with no water edge
+    evidence:
+    - - 00:06
+      - 00:10
+    - - 00:18
+      - 00:22
+    - - 00:25
+      - 00:30
+    - - 00:45
+      - 00:46
+  - id: CR3
+    item: A large suspension bridge with tall towers spans the water and links the tower core's shore to a lower-rise district on the other shore
+    anchors:
+      '1': a large bridge with tall towers spans the water and runs from the core's shore into a district on the other shore
+      '0.5': a bridge spans the water but connects nothing on one side, or it is a small plain bridge without tall towers
+      '0': no bridge over the water
+    evidence:
+    - - 00:30
+      - 00:31
+    - - 00:45
+      - 00:46
+  - id: CR4
+    item: A small island lies offshore in open water, topped by a large statue with a raised arm on a tall pedestal
+    anchors:
+      '1': a small island stands apart in open water and carries a large raised-arm statue on a tall pedestal
+      '0.5': the island or the statue is present but not both together, or the statue is a generic figure / monument without the raised arm and
+        pedestal
+      '0': neither the island nor the statue
+    evidence:
+    - - 00:31
+      - 00:32
+    - - 00:40
+      - 00:42
+  - id: CR5
+    item: A park with an oval open rink ringed by trees lies by the tower core, with tall towers rising right behind its tree line
+    anchors:
+      '1': an oval rink (ice or a flat light surface) inside a ring of trees, with tall towers directly behind the trees
+      '0.5': a park with trees by the towers but no rink, or a rink with no trees around it or no towers behind
+      '0': no park
+    evidence:
+    - - 00:10
+      - 00:14
+  functions_playability:
+  - id: FP1
+    item: 'The city is a working play space: the player can move through it and reach the tower core, the waterfront, the park and the statue
+      island in play, in whatever layout and by whatever connection the adaptation chooses'
+    anchors:
+      '1': the tower core, the waterfront, the park and the statue island can all be reached and used in play, with no stuck spots, holes or areas
+        cut off by mistake
+      '0.5': some of these areas (e.g. the island) are only backdrop, unreachable by mistake, or play in them breaks
+      '0': no playable space, or the map does not load
+    evidence:
+    - - 00:06
+      - 00:48
+  - id: FP2
+    item: 'The bridge works as a crossing: the player can move across it from one shore to the other in play'
+    anchors:
+      '1': the player reliably crosses the bridge from one shore to the other and back
+      '0.5': the bridge can be walked on but the crossing breaks (blocked, stuck spots, falls through, ends before the far shore)
+      '0': the bridge cannot be crossed in play, or there is none
+    evidence:
+    - - 00:30
+      - 00:31
+    - - 00:45
+      - 00:46
+  - id: FP3
+    item: 'It holds up as a game set in this city: a clear start in the scene, a goal or progression that uses the landmark areas, feedback while
+      playing, and an end or a way to continue'
+    anchors:
+      '1': start, a goal involving the city's areas, readable feedback and a reachable end or continuation
+      '0.5': playable but the goal ignores the city areas, or there is no clear end / continuation
+      '0': no goal or progression; the scene can only be looked at
+    evidence:
+    - - 00:06
+      - 00:48
+  visual_presentation:
+  - id: VP1
+    cat: style
+    keyframes:
+    - '00:07.3'
+    - '00:20.8'
+    - '00:43.8'
+    item: 'Golden-hour look: a low warm sun with haze, towers silhouetted against it, light reflected on the water and sun-facing facades glowing
+      warm'
+    anchors:
+      '1': low warm light with clear silhouettes or warm-lit facades and a warm, hazy atmosphere
+      '0.5': a warm tint only, without low-sun silhouettes or glowing facades
+      '0': neutral midday or unrelated lighting
+    evidence:
+    - - 00:06
+      - 00:08
+    - - 00:18
+      - 00:27
+    - - 00:43
+      - 00:44
+  - id: VP2
+    cat: spatial
+    keyframes:
+    - '00:11.3'
+    - '00:13.3'
+    item: 'The park looks autumnal: the trees around the rink carry red, orange and green foliage, with the towers seen behind them'
+    anchors:
+      '1': mixed autumn foliage (red / orange with some green) rings the rink and reads together with the towers behind in one view
+      '0.5': trees around the rink but in a single plain green or bare, or the autumn trees never seen together with the towers
+      '0': no trees around the rink
+    evidence:
+    - - 00:10
+      - 00:14
+  - id: VP3
+    cat: spatial
+    keyframes:
+    - '00:30.8'
+    - '00:45.3'
+    item: 'The bridge reads as a stone-towered suspension bridge: massive masonry-looking towers carrying the cables above the roadway'
+    anchors:
+      '1': the bridge's towers look like massive stone / masonry piers and the cables hang between them over the deck
+      '0.5': a suspension look without stone-style towers (e.g. thin steel pylons), or stone towers without visible cables
+      '0': a plain flat bridge with no towers
+    evidence:
+    - - 00:30
+      - 00:31
+    - - 00:45
+      - 00:46
+  - id: VP4
+    cat: presentation
+    keyframes:
+    - '00:06.8'
+    - '00:18.8'
+    item: 'Establishing view: the player is given a view across the water that frames the whole skyline and its dominant tower, as the clip''s
+      wide river and across-the-water shots do'
+    anchors:
+      '1': from the start or from a spot the player reaches in normal play, a wide view across the water shows the skyline and its dominant tower
+        together
+      '0.5': the skyline can be seen only in fragments, e.g. nearby geometry blocks it from every spot the player can stand on
+      '0': the skyline is never visible as a whole
+    evidence:
+    - - 00:06
+      - 00:08
+    - - 00:18
+      - 00:22
+  - id: VP5
+    cat: spatial
+    keyframes:
+    - '00:08.8'
+    - '00:19.8'
+    - '00:43.3'
+    item: 'The skyline''s silhouette looks like the reference''s: the dominant tower is a slender glass tower tapering up to a thin spire, above
+      a profile of mid-height towers among which a few have pointed tops'
+    anchors:
+      '1': the dominant tower reads as a slender, tapering glass tower with a thin spire, and the surrounding profile mixes mid-height towers
+        with a few pointed tops
+      '0.5': the dominant tower is a plain box with a token spike, or the surrounding towers are uniform blocks with no pointed tops
+      '0': the skyline looks nothing like the reference (e.g. a few generic blocks), or there is none
+    evidence:
+    - - 00:08
+      - 00:10
+    - - 00:18
+      - 00:25
+    - - 00:43
+      - 00:44
+play_suggestions:
+  FP1:
+  - 'move the player from the tower core to the waterfront, to the park and onto the statue island: is every area reachable?'
+  - 'try to move through tower blocks and along the shore: is blocking consistent?'
+  FP2:
+  - cross from one shore to the other by the bridge
+  - 'try to cross open water directly: does the water act as a boundary? (design expectation, not scored)'
+  - 'block or occupy the bridge: does it still behave as the crossing?'
+  FP3:
+  - 'play from the start to the end or the goal: does the goal involve the city''s areas?'
+  - after the end, is there a result and a way to replay or continue?
+  robustness:
+  - leave the scene in the middle of play and return
+  - 'push to the map edges and the far shore: are there holes, floating geometry or unintended exits?'
+  - check whether moving elements (ferry, skaters, traffic), if built, keep working over a long session
+v4_map:
+  U1: CR1, VP5
+  U2: 'CR3, CR4, CR5 | dropped: peripheral (stadium, pier-lined shore: single brief shots)'
+  U3: 'CR2, CR4, CR5 | dropped: peripheral (piers-and-grid relation)'
+  U4: VP1
+  U5: 'CR2, CR3 | dropped: peripheral (ferry and terminal, island pier: one-off sights)'
+  FP1: CR2, CR5, FP1
+  FP2: CR3, FP2
+  FP3: FP3
+  FP4: 'dropped: editing request (moved to editing_seed.yaml)'
+  VP1: CR1, VP5
+  VP2: CR5, VP2
+  VP3: 'CR3, CR4, VP3 | dropped: peripheral (pier-lined shore, island pier)'
+  VP4: VP1
+  VP5: VP4
+provenance:
+  source_yaml: T-VO-vid_c82606109b35.t1.yaml
+  source_sha256: ad06eb96b03c55929e8ab4e5579cb1d375a40188d50e8e23ef58bbb4559cd6e3
+  size_waiver: null
+  size_max: null
+  sources: []

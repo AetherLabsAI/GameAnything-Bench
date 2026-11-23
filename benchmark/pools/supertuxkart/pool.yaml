@@ -1,0 +1,105 @@
+# Copied from the original pool_supertuxkart.yaml (2026-10-30) + game / version / default_picks for gab.
+# default_picks: used for a task whose regression.yaml has no checked picks yet; cheap, uncorrelated probes
+# (four headless items + the main-menu item, one 2-minute graphics run).
+# gab runs: all asked probes in ONE fresh instance per call (STKProbes session, detached in the sandbox, polled); graphics
+# probes on the leased seat's display (sandbox A :101-:103, sandbox B :101/:102).
+# gab changes (2026-10-31, flagged for review): SK-STORY: the overworld screenshot now waits for the log to go quiet first
+#   (selfcheck on a test sandbox: twice a neg_rescue run shot the overworld 0.073 / 0.234 off vanilla, the second time on the
+#   loading screen: 8 s after the overworld track loaded was not always enough); SK-MENU / SK-STORY: every ui screenshot is
+#   taken once the screen has settled (3 shots 5 s apart within 0.004, overworld 0.01; after a slow start-up the menu shot
+#   waits (start-up - 40 s) / 2 more, max 90 s): with a second GPU game on the pod
+#   (start-up 89 s instead of 33 s) the menu text, the options panel and the overworld HUD were drawn late and A/A failed;
+#   the main menu also counts as up only when its yellow bottom bar is on the screen (with the pod's GPU at 100% from
+#   elsewhere the loading screen stayed up minutes after the log went quiet); a game that dies before the main menu is
+#   started again up to twice, as is a ui run in which the game died anywhere (vanilla died, SIGABRT, in ~5 of ~25 graphics
+#   runs on a test sandbox while the GPU was busy from elsewhere); limits
+#   unchanged (0.01 / 0.06); the overworld counts as reached only once the overworld track itself loaded (the probe shot the
+#   2nd intro cutscene part in both A/A runs once); SK-FRAMETIME: a graphics start-up that dies before the race is started
+#   again up to twice (SIGABRT before the race, busy pod, 2026-10-31);
+#   SK-MODES: vanilla 1.5 segfaults at follow-the-leader start-up now and then (sandbox B 2 of 16 runs; the second selfcheck on
+#   sandbox A had it in 2 of 4 sessions, failing SK-MODES + SK-STABLE for two no-op-for-FTL mods) -> a crash without a race
+#   table is retried up to twice and not counted as a crash; a mod that breaks FTL crashes every time;
+#   the pool's neg_heavy_scene is not a selfcheck negative (see gab/game/supertuxkart/negmods/negmods.yaml); the vanilla
+#   baseline is cached per sandbox (version build "1.5 on <sandbox>": SK-PERF / SK-FRAMETIME are machine-bound).
+# Base-capability pool, SuperTuxKart (v0.2, verified in game 2026-10-30, SuperTuxKart version 1.5 = upstream Linux x86_64 release)
+# Same rules as pool_minecraft.yaml: atomic base capabilities a task's change could break. Pass = same result as a vanilla
+# instance. Per task the drafter picks the 4-6 relevant ones and may add 0-2 task-specific items; a maintainer checks. Avoid
+# correlated picks: a kart_characteristics.xml / kart.xml change fails SK-GAME-SETTINGS together with the matching behaviour
+# item (SK-ACCEL, SK-RESCUE, ...) and, for a stock kart, SK-KARTS; SK-AI and SK-ITEMS come from the same AI races.
+# Mod surface: kart and track add-ons (Blender exports: <instance home>/addons/{karts,tracks}/<id>), data files laid over the
+# game data (stk_config.xml, kart_characteristics.xml, powerup.xml, items.xml, karts/<kart>/kart.xml, tracks/<track>/...),
+# scriptable tracks (tracks/<track>/scripting.as, AngelScript).
+# Probes: gab/game/supertuxkart/probes.py (STKProbes); `probe: x.y` = field y of probe x (fields joined with +).
+# Runtime: headless (--no-graphics) runs of the stock binary, ~3 min per instance. Each instance = hard-link copy of the
+# data dir with the mod laid over it + its own HOME. Bridge: profile mode (AI-only races, the game prints a per-kart table),
+# --history (a scripted input file: accelerate / brake / steer / drift / rescue, one event per physics tick), probe tracks
+# (copies of the instance's own lighthouse with an AngelScript scripting.as and a static grid of action-triggers that log
+# Kart::getLocation/getVelocity), --dump-official-karts, and the tuning XML files as loaded from the instance's data dir.
+# A/A calibration 2026-10-30: five fresh vanilla instances (aa1-aa5; aa4 vs aa5 = final code) -> all ready items agree.
+#   Scripted single-kart runs are bit-identical across instances (t10/t30/t50 0.788/2.001/2.954 s, top speed 22.99, brake
+#   8.39 m, steer 33.8 deg, drift 30.5 deg, rescue gap 1.21 s, jump apex 0.9 m / air 0.658 s); AI races are not
+#   deterministic: mean finish time per track (3 races x 4 AI karts) lighthouse 34.2-34.8 / zengarden 30.3-31.2 /
+#   snowtuxpeak 40.2-41.5 s (tol 12%), item boxes 8.2-10.1 / nitro 2.4-3.6 per race (fail below 40% of vanilla), 2-lap /
+#   1-lap ratio 1.97-2.05 (tol 12%), headless simulation 3400-5000 frames/s on the CPU-throttled pod (fail below 0.5x).
+# Negative checks 2026-10-30 (deliberately breaking data mods, vs aa4): kart_characteristics rescue duration 1.2 -> 3.0 s
+#   -> SK-GAME-SETTINGS + SK-RESCUE fail; sandtrack quads.xml emptied -> SK-TRACKS + SK-STABLE (that run segfaults) fail;
+#   tux kart.xml class medium -> heavy -> SK-GAME-SETTINGS, SK-KARTS and all tux driving items fail (expected correlation).
+#   Others pass. Evidence: the verification logs (results/*.json, compare_vs_aa4.txt).
+# SK-BATTLE is the only graphics item (`run --only modes --display :101`; vglrun on a test sandbox, 1.5-10 min per run: start-up is slow when the
+#   pod's CPU quota is mostly used by a neighbour). A/A aag1/aag2/aag3: started, mode 2000, 4 karts, no crash (kart contacts
+#   25 / 3 / 100: reported, not compared). Negative: stadium navmesh.xml emptied -> the battle segfaults at load -> SK-BATTLE fails.
+#   Run graphics jobs one at a time per instance (parallel runs race on the texture cache dir: harmless "Can't create dir"
+#   error lines, now ignored).
+# Setup baked into every instance (the benchmark's runtime policy: setup choices go into the
+#   config, always the privacy-preserving option): config.xml as the game writes it with enable_internet = 2 (= answering "No"
+#   to the first-start internet-permission dialog: no add-on/news server; hardware reports off) and the game's own default
+#   local player "Player" with use-frequency 1 (no tutorial question). A fresh instance then starts straight into the main menu
+#   (screens/seeded_main_menu.png). Applies to the headless probes too (aa6 vs aa4 re-checked).
+# SK-MENU / SK-STORY: one graphics run (`run --only ui --display :101`, ~2 min) driven like a player with xdotool on the
+#   game's own window: main menu -> Options (wrench) -> Escape -> Story Mode -> intro -> kart selection (Return) -> overworld.
+#   A/A aaui1/2/3: menu and options screenshots identical (diff 0.0), overworld 0.006-0.007 (max 0.06; menu/options 0.01),
+#   story reached every time. Negative: main_menu.stkgui without the Story Mode button -> menu screenshot differs (0.034),
+#   the click lands elsewhere and the game crashes -> SK-MENU, SK-STORY and SK-STABLE fail.
+# SK-FRAMETIME (`run --only fps --display :101`, ~2 min): A/A aafps1/aafps2 best-of-2 94.9 / 83.9 fps (single runs 82-95);
+#   negative: lighthouse scene.xml with 60 extra copies of the track mesh -> 69.3 fps (0.73x) -> fails at the 0.75x limit.
+# sandbox B seats are now :101 / :102 only (:103 belongs to The Dark Mod); UI and FPS ran on :101, battle re-checked there (aag4).
+
+game: supertuxkart
+version: '1.5'
+default_picks: [SK-GAME-SETTINGS, SK-ACCEL, SK-AI, SK-TRACKS, SK-MENU]
+
+# gate (gab/eval/regression.py): the STABLE item (no real crash / hang, no new fatal error kind) + the host-present
+# item(s): the stock content they reach must still be there on the modded game (numbers NOT compared with vanilla; only a mod that
+# removes / replaces the host game wholesale fails). Scores are 0 unless the gate passes. Not chosen per task.
+gate: [SK-STABLE, SK-TRACKS, SK-ACCEL]
+
+always:
+  - {id: SK-STABLE, capability: "no crash, and no more error lines in the game logs than vanilla, over all probe runs of the evaluation", probe: log_errors, status: ready}
+
+pool:
+  # data snapshots (what data mods change directly)
+  - {id: SK-GAME-SETTINGS, capability: "the game's tuning files unchanged as loaded: stk_config.xml, kart_characteristics.xml (base / difficulty / kart-class characteristics), powerup.xml, items.xml and the stock karts' kart.xml (~700 values)", probe: settings, status: ready}
+  - {id: SK-KARTS, capability: "all 18 stock karts present with their vanilla class (light / medium / heavy), model size and top speed at expert difficulty (the game's own --dump-official-karts + Kart::getMaxSpeed)", probe: karts, status: ready}
+  # driving (scripted input replay of the stock kart tux on the lighthouse start straight, expert difficulty)
+  - {id: SK-ACCEL, capability: "acceleration and top speed as vanilla: time and speed at 10 / 30 / 50 m from a standing start, top speed (~23 m/s)", probe: drive.t10+t30+t50+v10+v30+v50+vmax, status: ready}
+  - {id: SK-BRAKE, capability: "braking from ~17.5 m/s: stopping distance (~8.4 m) and time (~0.85 s) as vanilla", probe: drive.brake_speed+brake_dist+brake_time, status: ready}
+  - {id: SK-STEER, capability: "steering: heading change of a 0.5 s full left turn at ~14 m/s (~34 deg) and the speed through it as vanilla", probe: drive.steer_heading+steer_speed_in+steer_speed_out, status: ready}
+  - {id: SK-DRIFT, capability: "drifting (skid): heading change of a 0.5 s left drift (~30 deg), speed out of it and the post-drift speed as vanilla", probe: drive.drift_heading+drift_speed_in+drift_speed_out+drift_boost_speed, status: ready}
+  - {id: SK-WALL, capability: "kart-track collision: the kart driving flat out down the straight hits the barrier at the same place and is slowed as in vanilla", probe: drive.wall_x+wall_speed_after, status: ready}
+  # physics
+  - {id: SK-RESCUE, capability: "rescue: pressing rescue lifts the kart off and puts it back on the road after ~1.2 s at the same place, and it drives on", probe: physics.rescued+rescue_gap_s+rescue_put_x+rescue_drives_on, status: ready}
+  - {id: SK-JUMP, capability: "airborne physics: a kart given 7 m/s upward speed by a track script rises, falls and lands like vanilla (apex height / time, air time, jump length)", probe: physics.launched+apex+apex_time+air_time+jump_dist, status: ready}
+  - {id: SK-KART-COLLISION, capability: "kart-kart collision: a kart driving into a parked kart pushes it as in vanilla", probe: physics.collided+hit_speed+pushed_speed, status: blocked, note: "no stable way found to park a kart: with --history only one local player works (2 players -> 'getActivePlayer(): id 1 out of bounds'), and an AI kart teleported by the track script during the countdown is not kept in place; onKartKartCollision itself works (used by SK-ARENA-MODES)"}
+  # races (AI-only profile races, expert difficulty, tux + gnu + kiki + puffy)
+  - {id: SK-AI, capability: "AI karts race and all finish on stock tracks (lighthouse, zengarden, snowtuxpeak; 3 races each) in about the vanilla time", probe: race.all_finished+tracks, status: ready}
+  - {id: SK-LAPS, capability: "lap counting and race end: a 2-lap race ends with all karts finished, taking ~2x the 1-lap time", probe: race.all_finished+lap_ratio, status: ready}
+  - {id: SK-ITEMS, capability: "item boxes and nitro cans on stock tracks are picked up by the AI about as often as in vanilla (per-race counts from the game's race table)", probe: race.items_per_race, status: ready}
+  - {id: SK-TRACKS, capability: "all 21 stock race tracks still load and AI karts drive on them", probe: tracks, status: ready}
+  - {id: SK-MODES, capability: "time trial and follow-the-leader start and run with 4 karts (time trial in about the vanilla time)", probe: modes_fast, status: ready}
+  - {id: SK-PERF, capability: "headless simulation speed (physics + AI + scripts, frames/s of an AI race) not below half of vanilla", probe: perf, status: ready}
+  # graphics runs (vglrun -d :99 on the seat display; `--display :101` or `:102`)
+  - {id: SK-BATTLE, capability: "3-strikes battle starts on the stock stadium arena with 4 karts (AI karts move and bump into each other) and runs 90 s without a crash (graphics run, 1.5-10 min)", probe: modes.battle, status: ready}
+  - {id: SK-SOCCER-CTF, capability: "soccer (soccer_field) and capture-the-flag (stadium) start", probe: modes.soccer+ctf, status: blocked, note: "started from the command line (-R --mode=3 / --mode=5) both segfault in 1.5, with and without graphics (teams never assigned: 'World: Blue AI: 538976288 red AI: 538976288'); the menu route (Singleplayer -> soccer / CTF setup with team choice) now opens with the seeded config but is not automated yet"}
+  - {id: SK-STORY, capability: "story mode from the main menu: Story Mode plays the intro cutscene, the kart selection follows and the overworld opens (screenshot compared)", probe: ui.story_intro+story_overworld+overworld_shot, status: ready}
+  - {id: SK-MENU, capability: "a fresh instance starts into the main menu and the Options screen opens (screenshots compared with vanilla)", probe: ui.menu_shot+options_shot, status: ready}
+  - {id: SK-FRAMETIME, capability: "rendered frame rate of a 4-kart AI race on lighthouse (1024x600, the game's own profile 'Average FPS', best of 2) at least 0.75x vanilla", probe: fps, status: ready, note: "load-sensitive: the pod shares its 10-CPU quota with a neighbour using ~9.7 CPUs; run vanilla and mod back to back on the same seat"}

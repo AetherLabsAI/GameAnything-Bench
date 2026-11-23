@@ -1,0 +1,35 @@
+
+
+-------------
+  Separator
+-------------
+
+2026-10-31 06:31:59: ERROR[Main]: Audio: Global Initialization: Failed to open device
+2026-10-31 06:32:03: ACTION[ServerStart]: World seed = 20261030
+2026-10-31 06:32:03: ACTION[ServerStart]: VoxeLibre mapgen version = 0.92.4 initial version = 0.92.4
+2026-10-31 06:32:03: ACTION[ServerStart]: World created with Luanti version = 5.17
+2026-10-31 06:32:03: ACTION[ServerStart]: [mcl_init] increased LuaJIT parameters. LuaJIT version: LuaJIT 2.1.1703358377 with flags SSE3
+2026-10-31 06:32:03: ACTION[ServerStart]: [vl_cavesounds] Cave sounds are activated
+2026-10-31 06:32:03: ACTION[ServerStart]: [mcl_music] In-game music is deactivated
+2026-10-31 06:32:04: WARNING[ServerStart]: Tried to log at unknown level 'frozen_fever'. Defaulting to "none".
+2026-10-31 06:32:04: [ServerStart]: mod loaded
+2026-10-31 06:32:04: ACTION[ServerStart]: [mcl_weather] No weather data found. Starting with clear weather.
+2026-10-31 06:32:10: WARNING[ServerStart]: Decoration registered after mapgen core initialization: mcl_structures:mineshaft
+2026-10-31 06:32:12: ACTION[ServerStart]: World at [/home/player/oss-voxelibre/runs/eval-qwen27b-fine/world]
+2026-10-31 06:32:12: ACTION[ServerStart]: Server for gameid="voxelibre" listening on 127.0.0.1:57997.
+2026-10-31 06:32:16: ACTION[Server]: singleplayer [127.0.0.1] joins game. List of players: singleplayer
+2026-10-31 06:32:16: ACTION[Server]: frozen_fever: building scene at gy=110
+2026-10-31 06:32:16: ACTION[Server]: frozen_fever: set_node failure suppressed at -14,111,-7 (air)
+2026-10-31 06:32:17: ACTION[Server]: frozen_fever: scene build complete
+2026-10-31 06:32:17: WARNING[Server]: Invalid vector coordinate x (value is nil). (at /home/player/oss-voxelibre/runs/eval-qwen27b-fine/world/worldmods/frozen_fever/init.lua:98)
+2026-10-31 06:32:17: WARNING[Server]: Invalid vector coordinate y (value is nil). (at /home/player/oss-voxelibre/runs/eval-qwen27b-fine/world/worldmods/frozen_fever/init.lua:98)
+2026-10-31 06:32:17: ERROR[Main]: ServerError: AsyncErr: Lua: Runtime error from mod 'frozen_fever' in callback on_joinplayer(): "basic_string: construction from null is not valid"
+2026-10-31 06:32:17: ERROR[Main]: stack traceback:
+2026-10-31 06:32:17: ERROR[Main]: 	[C]: in function 'hud_change'
+2026-10-31 06:32:17: ERROR[Main]: 	.../eval-qwen27b-fine/world/worldmods/frozen_fever/init.lua:125: in function 'set_objective'
+2026-10-31 06:32:17: ERROR[Main]: 	.../eval-qwen27b-fine/world/worldmods/frozen_fever/init.lua:1076: in function <.../eval-qwen27b-fine/world/worldmods/frozen_fever/init.lua:1047>
+2026-10-31 06:32:17: ERROR[Main]: 	...root/usr/bin/../share/luanti/builtin/common/register.lua:27: in function <...root/usr/bin/../share/luanti/builtin/common/register.lua:13>
+2026-10-31 06:32:17: ACTION[ServerStop]: Server: Shutting down
+2026-10-31 06:32:17: ACTION[ServerStop]: [doc] Server shuts down. Player data is about to be saved.
+2026-10-31 06:32:17: ACTION[ServerStop]: [doc] Wrote player data into /home/player/oss-voxelibre/runs/eval-qwen27b-fine/world/doc.mt.
+2026-10-31 06:32:17: WARNING[ServerStop]: on_leaveplayer: missing mcl_burning.storage for player singleplayer

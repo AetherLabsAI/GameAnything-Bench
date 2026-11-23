@@ -1,0 +1,235 @@
+# GameAnything-Bench scoring material: never shown to agents during a trial.
+task_id: T-VO-vid_23ed32fc8e18.t1
+source_inventory:
+- '00:43.2 the small round pink hero stands on a sunny meadow with a glowing yellow ring on the ground under him; far behind: red-orange mesa
+  cliffs and a waterfall'
+- '00:44.2-00:46.2 the hero spins fast along the meadow, leaving a light trail, green swirl rings and small yellow stars falling; at 00:46.2 a
+  large glowing star coin hovers in the foreground with a white streak behind it, a small enemy runs in the distance'
+- '00:46.9-00:47.9 close view: the hero, now in a green pointed cap, lunges with a sword across the grass with a white streak; a large pink-brown
+  round enemy at the right edge; star coins above; white dust'
+- '00:48.2-00:49.8 the hero in the green cap dashes toward the camera with blue-white speed lines, past a creature-shaped hedge and a big stump;
+  the dash slows at the end'
+- '01:08.2-01:08.9 close-up: the pink hero''s head in the foreground; a big blue penguin king in a red robe with white fur trim sits on a throne
+  at a red-and-gold stall and frowns'
+- '01:09.0-01:09.9 the sand arena with a rock wall behind: the king leaps with a huge barrel-like wooden hammer marked with a star, a yellow star
+  in a bubble, a shadow on the ground under him; the hero stands near'
+- '01:10.0-01:10.9 the hero spins into the king with a blue swirl; star bubbles and white dust puffs burst out; the mushroom-shaped stall at the
+  left'
+- '01:11.0-01:11.9 right after the hit the king lies and slides on his belly across the sand, the hammer beside him; star bubbles around; the
+  hero spins at the right'
+- '01:12.0-01:12.9 the hero alone in the arena, jumping, in front of the stall and a pile of fruit; the king is gone'
+- '01:13.0-01:13.9 a bright sky with a purple flash and a lens ring; the king a small figure at the upper right, stars drifting'
+- '01:14.0-01:18.5 sky with clouds; the king is a speck that shrinks and disappears; no characters, no text'
+- 'not visible: HUD, health bars or on-screen text in either clip; how many hits the king takes; what the star coin does; how the fight starts
+  (the king seated, then leaping, is all that is shown); whether the small enemies fall at a touch or drop anything'
+- 'audio: cheerful trailer music only, no speech in either range (transcript empty)'
+instructions_meta:
+  requirement_groups:
+    the hero's move:
+    - FP1
+    warm-up on small enemies:
+    - CR2
+    - FP2
+    boss introduction and attack:
+    - CR3
+    - FP3
+    reaction to hits:
+    - FP4
+    winning the fight:
+    - FP5
+    - VP3
+    cast and play spaces:
+    - CR1
+    - CR2
+    - VP1
+    - VP2
+  explicit_requirements:
+  - type: specify
+    text: The hero should have just one move, the spinning dash, which is both how he gets around fast and how he attacks, used on the small enemies
+      and on the boss alike.
+    covers:
+    - FP1
+    - FP2
+    - FP4
+rubric:
+  content_realization:
+  - id: CR1
+    item: 'The cast and its scale: the player''s small hero, small enemies as fodder, and a boss far bigger than the hero who fights with a heavy
+      hammer'
+    anchors:
+      '1': the player's hero, small enemies and a boss clearly bigger than the hero and armed with a heavy hammer are all in the game and told
+        apart by size and weapon
+      '0.5': a boss exists but is not clearly bigger than the hero or has no heavy weapon, or there are no small enemies besides him
+      '0': no boss
+    evidence:
+    - - '00:43.2'
+      - '00:47.9'
+    - - '01:08.2'
+      - '01:11.9'
+  - id: CR2
+    item: 'Two separate play spaces: an open meadow where the hero meets the small enemies, and the boss''s own sand arena with his stall, set apart
+      from the meadow'
+    anchors:
+      '1': an open meadow area with the small enemies and a distinct sand arena containing the boss's stall, both reachable by the player
+      '0.5': only one of the two areas, or both without the boss's stall in the arena, or the arena not set apart from the meadow
+      '0': neither
+    evidence:
+    - - '00:43.2'
+      - '00:49.8'
+    - - '01:09.0'
+      - '01:12.9'
+  - id: CR3
+    item: 'The boss is introduced at rest: before the fight he is seen seated at his stall in the arena, and the fight begins after that'
+    anchors:
+      '1': the boss is first seen seated or at rest at his stall, and only then fights
+      '0.5': the boss is at rest first but not at his stall, or he is at his stall but already fighting when first seen
+      '0': no introduction; the boss is simply met fighting, or there is no boss encounter
+    evidence:
+    - - '01:08.2'
+      - '01:09.9'
+  functions_playability:
+  - id: FP1
+    item: 'Spin dash: the player can use, on demand, a spinning dash that carries the hero quickly forward in a line over a clear distance and hits
+      what is on the line'
+    anchors:
+      '1': usable on demand, covers a clear distance in a straight line quickly and damages or pushes an enemy it meets
+      '0.5': only a short hop, a dash that is not on demand, or a dash that passes through enemies without effect
+      '0': no such move
+    evidence:
+    - - '00:43.2'
+      - '00:46.2'
+    - - '00:48.2'
+      - '00:49.8'
+    - - '01:10.0'
+      - '01:10.9'
+  - id: FP2
+    item: 'Warm-up: the dash can be used on the small enemies of the meadow, and they react to being hit'
+    anchors:
+      '1': dash contact on a small enemy shows an impact and the enemy reacts (flinches, falls or is removed)
+      '0.5': the enemies can be hit but show no reaction, or the dash cannot reach them
+      '0': no small enemies, or no way to hit them
+    evidence:
+    - - '00:46.2'
+      - '00:47.9'
+  - id: FP3
+    item: 'Boss attack: the boss leaps and slams down with his hammer, and a landing indicator (such as a shadow) shows where he will come down,
+      so the player can see the slam coming'
+    anchors:
+      '1': a slam with a readable leap and an indicator showing where he lands before he lands
+      '0.5': a slam with no leap, or no landing indicator
+      '0': no leaping heavy-weapon slam
+    evidence:
+    - - '01:09.0'
+      - '01:09.9'
+  - id: FP4
+    item: 'Hit response: when the hero''s dash connects with the boss, he is at once sent sliding back along the ground'
+    anchors:
+      '1': a dash hit on the boss sends him sliding along the ground immediately
+      '0.5': a generic knockback with no slide, or a slide that starts late
+      '0': the dash cannot connect with the boss, or the hit causes no reaction
+    evidence:
+    - - '01:10.0'
+      - '01:11.9'
+  - id: FP5
+    item: 'Winning: the hero can defeat the boss with his hits; the final blow removes the boss from the arena, he stops fighting and the encounter
+      ends'
+    anchors:
+      '1': a last blow sends the boss away from the arena, after which he no longer fights and the encounter is over
+      '0.5': the boss is defeated and the encounter ends but he just falls or vanishes in place, or he stops fighting but the encounter does not
+        end
+      '0': no way to defeat the boss
+    evidence:
+    - - '01:11.0'
+      - '01:13.9'
+  visual_presentation:
+  - id: VP1
+    cat: key_moment
+    keyframes:
+    - '00:43.2'
+    - '00:45.2'
+    - '00:48.7'
+    item: 'The hero and his dash: a small round pink hero with a green sword cap spinning across a bright green meadow with a luminous trail and
+      star sparkles'
+    anchors:
+      '1': the hero clearly reads as a small round pink figure with a green cap, and his dash visibly spins and leaves a luminous trail, with
+        star particles or the bright meadow around it
+      '0.5': a spinning dash with a trail on a generic hero, or the pink capped hero without a spin or trail
+      '0': neither the hero's look nor a spinning luminous dash
+    evidence:
+    - - '00:43.2'
+      - '00:46.2'
+    - - '00:48.2'
+      - '00:49.8'
+  - id: VP2
+    cat: style
+    keyframes:
+    - '01:08.5'
+    - '01:09.5'
+    - '01:10.5'
+    item: 'The boss in his arena: a big blue penguin king in a red fur-trimmed robe with an oversized star-marked wooden hammer, in a sand ring
+      with a mushroom-shaped stall behind'
+    anchors:
+      '1': the boss reads as the large blue penguin king (robe, fur trim, oversized hammer) and the arena reads as a sand ring with the mushroom-shaped
+        stall
+      '0.5': the boss look or the arena look is there, but the other has substantial omissions (for example a generic ogre, no hammer, or neither
+        stall nor sand)
+      '0': no recognisable boss look and no recognisable arena
+    evidence:
+    - - '01:08.2'
+      - '01:12.9'
+  - id: VP3
+    cat: key_moment
+    keyframes:
+    - '01:13.5'
+    - '01:15.0'
+    - '01:17.0'
+    item: 'The knock-out: the beaten boss is flung up and away, shrinking out of sight against a bright sky'
+    anchors:
+      '1': the boss visibly rises and shrinks away from the arena against a bright, airy backdrop
+      '0.5': the boss shrinks or vanishes without rising, or rises without shrinking
+      '0': none, or the boss just falls over in place
+    evidence:
+    - - '01:13.0'
+      - '01:18.5'
+play_suggestions:
+  FP1:
+  - 'measure how far the dash goes, and dash into a wall: where does the hero stop?'
+  - dash several times in a row (a cooldown is fine, unscored)
+  FP2:
+  - dash through each small enemy and look at the contact effect and the enemy's reaction
+  FP3:
+  - watch the slam several times from a safe distance; note whether the landing spot shows before he lands
+  - let it land once, then try to dodge it
+  FP4:
+  - hit the boss right after his attack and during it; does he slide at once each time?
+  FP5:
+  - 'fight to the end: does the last blow send him away, and does he stop fighting afterwards?'
+  CR3:
+  - look at the boss before engaging; approach from different distances (how the fight starts is the build's choice, unscored)
+  robustness:
+  - die once during the fight and retry
+  - leave the arena mid-fight and come back
+  - dash into the boss at the moment of his slam
+  - walk in all directions and compare the hero's walk animation with stock
+v4_map:
+  U1: 'FP1 | dropped: mechanism already scored by FP1 (paired U/FP)'
+  U2: CR1 (roles and scale); hero and boss looks -> VP1, VP2
+  U3: 'FP3, FP4 | dropped: mechanism already scored by FP3 / FP4 (paired U/FP)'
+  U4: CR2
+  U5: 'FP5 | dropped: already scored by FP5 (removal as the win)'
+  F1: FP1
+  F2: FP2 (existence of the small enemies -> CR1, their meadow -> CR2)
+  F3: FP3
+  F4: FP4
+  F5: FP5
+  F6: CR3 (event order seen by inspection)
+  V1: VP1
+  V2: VP2 (sand arena and stall as a place -> CR2)
+  V3: VP3
+  not scored (pilot authored adaptations): health bar, waking when the hero comes near, star-coin pickup, any second boss attack
+provenance:
+  source_yaml: v2g2_original/game_trailer.yaml (+ game_trailer.rubric.yaml c98f49242e7d7e8c461b0407cb697996de6b3f4742cb8a4de2bbc4ed25646c1d)
+  source_sha256: 19f782ff4058205d9ff84607c40248424f28b448e577fa8d737119276e054674
+  size_waiver: null
+  size_max: null
+  sources: []

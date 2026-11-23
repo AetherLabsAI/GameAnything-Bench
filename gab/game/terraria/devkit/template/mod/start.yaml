@@ -1,0 +1,6 @@
+# optional: how a fresh start of your mod begins (all keys optional)
+mode: game        # game: straight into the start world as the start player | menu: the title menu
+seed: gab         # the start world's seed (worlds are generated WITH your mods loaded)
+size: small       # small | medium | large
+# world: MyWorld  # instead of generating: your own world file mod/worlds/MyWorld.wld (+ MyWorld.twld)
+# player: Player  # the start player's name

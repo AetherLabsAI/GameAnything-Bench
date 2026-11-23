@@ -1,0 +1,22 @@
+# GameAnything-Bench scoring material: never shown to agents during a trial.
+task_id: T-TO-txt_015981ffe10d.e3
+game: terraria
+status: pending
+picks:
+- TR-CONTENT
+- TR-MOVE
+- TR-DAYNIGHT
+- TR-ENEMIES
+- TR-SAVE
+- TR-PERF
+changed: []
+kept_borderline:
+- id: TR-DAYNIGHT
+  note: Environment behaves over time per the text, possibly touching time; not explicitly required to change vanilla day/night.
+- id: TR-WORLDGEN
+  note: Place may be built through worldgen, but no explicit change to vanilla seeded generation is required.
+summary: Explorable shoreline area with waterfalls, giant mushroom forest, ancient plant forest, harbour, own sky and lighting.
+task_checks: []
+note: 'policy (A): excluded only when the instruction explicitly requires the change; plausible side effects stay tested; adding
+  new content is never a reason to exclude. Proposed by claude-sonnet-5-5 via `gab task picks` 2026-11-06; a maintainer checks (set status: checked).
+  The evaluator tests the pool''s always items (unless in changed) + picks.'

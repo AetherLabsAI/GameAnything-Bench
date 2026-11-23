@@ -1,0 +1,39 @@
+APPEND
+
+[event]
+# sets the campaign flag and says so on the HUD when the hero arrives
+type=event
+location=1,1,1,1
+activate=on_load
+set_status=gab_beacon_lit
+msg=GAB STATE TEST: the beacon flag is set on Arrival.
+
+[event]
+# repeats a HUD line while the hero stands near the start (an on-screen text that stays)
+type=event
+location=17,17,8,8
+activate=on_trigger
+repeat=true
+cooldown=4s
+msg=GAB HUD: the beacon keeper waits nearby.
+
+[event]
+# a sign post the stock map does not have
+type=event
+location=30,24,1,1
+activate=on_interact
+hotspot=location
+tooltip=GAB signpost
+msg=GAB signpost read
+
+[npc]
+type=npc
+location=22,18,1,1
+filename=npcs/gab_beacon_keeper.txt
+
+[enemy]
+type=enemy
+location=31,30,1,1
+category=goblin
+level=1
+number=1

@@ -1,0 +1,24 @@
+# Reference material: fetched from the HF dataset into $GAB_MEDIA_DIR/<task>/ by `gab media fetch` (sha256 checked).
+# The agent gets the files only (no title, author, caption or source): this file is never shown to it.
+task_id: T-VO-vid_c6749ac9ffcd.t1
+refs:
+- id: c01
+  kind: video
+  file: clip_01.mp4
+  video_id: vid_c6749ac9ffcd
+  source:
+    title: 19 - Minions & Monsters ｜ Official Trailer [ZSdOwt-G49w]
+    url: https://www.youtube.com/watch?v=ZSdOwt-G49w
+    channel: null
+    youtube_id: ZSdOwt-G49w
+  range:
+    start: 47.0
+    end: 75.0
+    text: 0:47.00-1:15.00
+  duration_s: 28.0
+  size_bytes: 4308714
+  format: mp4 H.264 720p, AAC audio
+  hf_path: media/T-VO-vid_c6749ac9ffcd.t1/clip_01.mp4
+  sha256: f6426fec13e8536b110d8490a4fcd83a3e81dcb68e13b74be9e31c59f6496b59
+  rights_note: Copyrighted theatrical trailer. Use as a private reference only and do not redistribute the footage or its frames. The Minions
+    have official games, so the characters, the creature design and the 'Monstras' poster must not be copied into the built content.

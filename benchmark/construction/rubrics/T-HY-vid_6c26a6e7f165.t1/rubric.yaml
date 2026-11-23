@@ -1,0 +1,301 @@
+# GameAnything-Bench scoring material: never shown to agents during a trial.
+task_id: T-HY-vid_6c26a6e7f165.t1
+source_inventory:
+- 'clip 00:25.0-00:30.5: a row of broken arches (a ruined arcade / aqueduct) on a rubble ridge with a tall tower, under an enormous glowing golden
+  tree that fills the sky and sends shafts of light down; subtitle ''Guided by grace once lost.'''
+- 'clip 00:31.0-00:32.5: black'
+- 'clip 00:33.0-00:35.0: dark castle and cathedral silhouettes over a misty, blue-lit marsh, the glowing tree above them'
+- 'clip 00:35.5-00:37.0: jagged mountain range under a golden sky, banner and small fires in a field; subtitle ''The golden order is broken to
+  its core.'''
+- 'clip 00:37.5-00:39.0: ruins with stone debris floating in a white sky'
+- 'clip 00:39.5-00:41.5: a lone bonfire under a large dark tree at night, a figure beside it'
+- 'clip 00:42.0-00:43.5: an armoured warrior seen from behind in tall grass at sunset, a pillar of light in the distance'
+- 'clip 00:44.0-00:45.5: a figure wrapped in blue-white sparkling light on a rock, golden rays behind'
+- 'clip 00:46.0-00:47.5: a rider leaps from a rock outcrop under the glowing tree; a stone pillar with a horned figure; a rider passes rocks'
+- 'clip 00:48.0-00:49.5: a rider through a misty forest with shafts of light'
+- 'clip 00:50.0-00:51.0: grassland with rock pillars above a fog-filled valley, a castle on a crag in the distance, a rider in the foreground;
+  pink-purple dusk sky'
+- 'clip 00:51.5-00:54.0: a narrow stone span (a natural rock slab bridge) over a deep misty gorge, castle towers and a lone tree beyond; a rider
+  crosses it'
+- 'clip 00:54.5-00:56.0: a colossal moss-covered statue with a great bell hanging from it, standing in shallow misty water; a rider splashes past
+  between its feet'
+- 'clip 00:56.5-00:59.0: a lantern-lit wagon on grassland under a crescent moon; the wagon pulled along a stone road by two hunched, gaunt giants'
+- 'clip 00:59.0-01:02.3: a rider with a spear on a horned mount gallops along the stone road after the wagon'
+- 'clip audio: music; narration only as subtitles inside the ranges; no HUD, no visible player input'
+- 'img01: illustrated map in mist, compass and a 0-5 scale bar; a river runs south-north through a deep gorge; dotted route from 1 TREE (large
+  old tree, south-west) north to a fork, a branch west to 2 ARCADE (broken arches among fallen stones), east over 3 BRIDGE (a stone arch bridge
+  over the gorge), then a branch east to 4 STATUE (a toppled robed statue in rubble) and a climb north to 5 CASTLE (a ruined castle on the north-east
+  hilltop)'
+- 'img03: painting of a ruined Romanesque arcade: rows of round arches on carved columns, broken roof beams, snow and mountains beyond'
+- 'img04: photo of two free-standing stone arches on a ruined wall among bare trees in thick fog'
+- 'img05: photo of a roofless Gothic abbey ruin on a meadow in morning mist, a stone wall in front'
+- 'img06: photo of a broken masonry arch bridge that ends part-way across a river, a small chapel on it, evening light'
+- 'img07: old photo of a stone bridge with one tall pointed arch and a small house on top, a jagged mountain behind'
+- 'img08: photo of a natural rock arch spanning a forest stream'
+instructions_meta:
+  requirement_groups:
+    route and layout:
+    - CR6
+    - FP1
+    terrain and crossings:
+    - CR3
+    - FP2
+    - VP2
+    navigation by sight:
+    - FP3
+    landmark appearance:
+    - CR1
+    - CR2
+    - CR4
+    - CR5
+    - VP1
+    - VP3
+    atmosphere and light:
+    - VP4
+  explicit_requirements:
+  - type: keep
+    text: I really want that colossal stone statue with the great bell hanging from it, so huge that I can ride right between its feet.
+    covers:
+    - CR4
+    - VP3
+  - type: specify
+    text: 'The tree should work like in the clip: an enormous glowing golden tree up in the sky that towers over the ruins and sends shafts of
+      light down onto the land.'
+    covers:
+    - CR1
+    - VP1
+rubric:
+  content_realization:
+  - id: CR1
+    item: The game contains an enormous tree up in the sky that towers over the ruins and dominates the skyline of the region
+    anchors:
+      '1': a gigantic tree set high in the sky above the ruins, dominating the skyline
+      '0.5': a large tree, but on the ground or not clearly above the ruins / not dominating the skyline
+      '0': no such tree
+    evidence:
+    - - '00:25.0'
+      - '00:30.5'
+    - - '00:33.0'
+      - '00:35.0'
+    - - '00:46.0'
+      - '00:46.5'
+  - id: CR2
+    item: 'The game contains the arcade as a ruin: a row of broken, roofless stone arches standing among fallen stones'
+    anchors:
+      '1': a recognisable row of free-standing broken arches in rubble
+      '0.5': a ruin without the arched row, or a row of intact arches
+      '0': no arcade
+    evidence:
+    - - '00:25.0'
+      - '00:30.5'
+    - img01
+    - img03
+    - img04
+  - id: CR3
+    cross: true
+    item: A deep gorge splits the region as on the map img01 (tree and arcade on one side, statue and castle on the other), and the crossing that
+      joins the two sides is a narrow stone span like the clip's
+    anchors:
+      '1': the gorge divides the region along the map's line and is crossed by a narrow stone span like the clip's
+      '0.5': 'only one reference carried: the map''s gorge and crossing with an ordinary bridge, or a clip-like stone span not placed as the map''s
+        divide'
+      '0': no gorge or no crossing
+    evidence:
+    - img01
+    - - '00:51.5'
+      - '00:54.0'
+  - id: CR4
+    item: The game contains the colossal stone statue with a great bell hanging from it, standing with a gap between its feet wide and high enough
+      for a mounted player to pass through
+    anchors:
+      '1': a giant stone figure with a hanging bell, its feet set apart with visible room for a mounted player beneath
+      '0.5': a large statue without the bell, or a bell statue too small or too closed for a rider to fit between its feet
+      '0': no statue
+    evidence:
+    - - '00:54.5'
+      - '00:56.0'
+    - img01
+  - id: CR5
+    item: The game contains a ruined castle on a height at the far end of the region, beyond the gorge
+    anchors:
+      '1': a ruined castle on a hilltop or crag on the far side, as the route's end
+      '0.5': a castle present but not on a height, or not on the far side
+      '0': no castle
+    evidence:
+    - img01
+    - - '00:33.0'
+      - '00:35.0'
+    - - '00:50.0'
+      - '00:51.0'
+    - - '00:51.5'
+      - '00:54.0'
+  - id: CR6
+    item: 'The landmarks lie on one connected route in the map img01''s arrangement: it starts at the tree, branches to the arcade on the near
+      side, crosses the bridge, branches to the statue and climbs to the castle as the end'
+    anchors:
+      '1': one route with the map's positions and order, tree first and castle last
+      '0.5': the landmarks present but the order, the branches or the start / end differ from the map
+      '0': no route, or the landmarks placed without relation to the map
+    evidence:
+    - img01
+  functions_playability:
+  - id: FP1
+    item: The player can travel the route from the tree to the castle in normal play and reach every landmark on it, the side branches included
+    anchors:
+      '1': the whole route can be walked or ridden from start to end and every landmark is reached
+      '0.5': the route works but one landmark cannot be reached, or a stretch needs leaving the way or building
+      '0': no traversable route
+    evidence:
+    - img01
+    - - '00:46.0'
+      - '00:54.0'
+  - id: FP2
+    item: 'The gorge works as the divide of the region: it is too deep to simply walk through, and the bridge is a way across it that the player
+      can walk or ride over'
+    anchors:
+      '1': the gorge is not simply walked through and the bridge is the clear way across that carries the player
+      '0.5': a bridge exists but the gorge is shallow enough to walk through anywhere, or the bridge is decorative
+      '0': no gorge or no crossing
+    evidence:
+    - img01
+    - - '00:51.5'
+      - '00:54.0'
+  - id: FP3
+    item: 'Distant landmarks guide the way: from the route the glowing tree and the castle are visible far away across the valleys, so the player
+      can steer toward them'
+    anchors:
+      '1': the tree and the castle can be seen from afar along the route and serve as goals
+      '0.5': only one of them is visible from a distance, or only from close by
+      '0': landmarks are seen only when the player is next to them
+    evidence:
+    - - '00:33.0'
+      - '00:35.0'
+    - - '00:46.0'
+      - '00:46.5'
+    - - '00:50.0'
+      - '00:54.0'
+    - img01
+  visual_presentation:
+  - id: VP1
+    cat: spatial
+    keyframes:
+    - '00:28.5'
+    - '00:30.0'
+    - '00:34.0'
+    item: The sky tree glows golden and sends shafts of light down through the haze onto the land
+    anchors:
+      '1': a golden glow with visible light shafts falling over the ruins and the land
+      '0.5': a glowing tree without light shafts, or shafts without a golden glow
+      '0': a plain, unlit tree
+    evidence:
+    - - '00:25.0'
+      - '00:30.5'
+    - - '00:33.0'
+      - '00:35.0'
+  - id: VP2
+    cat: spatial
+    keyframes:
+    - '00:52.0'
+    - '00:53.5'
+    item: 'The crossing looks like the clip''s: a weathered stone span high above the gorge with mist filling the drop below'
+    anchors:
+      '1': a weathered stone span over a deep drop filled with mist
+      '0.5': a stone span without mist below, or a crossing that looks new or wooden
+      '0': none
+    evidence:
+    - - '00:51.5'
+      - '00:54.0'
+    - img06
+    - img07
+    - img08
+  - id: VP3
+    cat: key_moment
+    keyframes:
+    - '00:55.0'
+    item: 'The statue''s surface looks like the clip''s: old, weathered stone grown over with moss'
+    anchors:
+      '1': weathered, moss-grown old stone like the clip's
+      '0.5': stone that looks old but bare of moss, or moss on clean, new-looking stone
+      '0': a clean, new-looking statue, or none
+    evidence:
+    - - '00:54.5'
+      - '00:56.0'
+  - id: VP4
+    cat: style
+    keyframes:
+    - '00:34.0'
+    - '00:50.5'
+    - '00:42.0'
+    item: Mist fills the valleys and lies between the viewer and distant landmarks, under warm golden or dusk light
+    anchors:
+      '1': layered valley fog and golden / dusk light across the region
+      '0.5': fog or the light, but not both, or only in one spot
+      '0': clear, neutral daylight
+    evidence:
+    - - '00:33.0'
+      - '00:35.0'
+    - - '00:42.0'
+      - '00:43.5'
+    - - '00:50.0'
+      - '00:54.0'
+    - img04
+    - img05
+play_suggestions:
+  FP1:
+  - 'start at the tree and follow the route: are the landmarks met in the map''s order, and does it end at the castle?'
+  - compare each stop with the clip shots of the arcade, the bridge and the statue
+  - 'check the side branches: is the arcade off the main way, the statue reached after the bridge?'
+  - 'at the statue, ride a mount between its feet: does the rider pass through without getting stuck?'
+  FP2:
+  - try to cross the gorge away from the bridge (walk down, jump, swim)
+  - walk and ride across the bridge
+  FP3:
+  - 'from the start and from the bridge, turn the camera: can the glowing tree and the castle be seen?'
+  - steer only by sight toward the castle
+  robustness:
+  - travel the route backwards from the castle to the tree
+  - 'leave the route and wander off: can you find the way back by the landmarks?'
+  - 'visit the region at another time of day if the game cycles: does the mist and light still read?'
+hybrid:
+  modality: video+image
+  roles:
+    video: 'the look of the place: its landmarks (an enormous glowing tree in the sky over a ruined arcade, a stone span over a misty gorge, a
+      colossal moss-covered statue with a hanging bell, far castle silhouettes), the fog in the valleys and the golden / dusk light'
+    images: 'img01 is an illustrated map that fixes the layout: five numbered landmarks (tree, arcade, bridge, statue, castle) on a dotted route
+      across a river gorge; img03-img08 are real ruined arcades and stone bridges that give form to those landmarks'
+  cross_reference_requirement: The region must be laid out as the map img01 lays it out (the tree at the start, the arcade on the near side, the
+    bridge as the crossing of the gorge, the statue and the castle on the far side, the castle last) while its landmarks, mist and light look
+    like the clip's. The map alone gives no look, the clip alone gives no layout.
+v4_map:
+  U1: CR6
+  U2: CR1
+  U3: CR2
+  U4: CR4
+  U5: CR3
+  FP1: CR5, CR6, FP1 (castle existence and map layout split off; traversal stays FP)
+  FP2: FP2
+  FP3: FP3
+  VP1: VP1 (tree's place above the ruins moved to CR1)
+  VP2: CR2 (merged; same broken-arch property as U3)
+  VP3: VP2 (narrow span as the crossing moved to CR3)
+  VP4: VP3 (bell, colossal scale and towering over the traveller moved to CR4; VP3 keeps the weathered, mossy look)
+  VP5: VP4
+provenance:
+  source_yaml: T-HY-vid_6c26a6e7f165.t1.yaml
+  source_sha256: 810a345a49fbff538813b71db4aad9f549e6d51488cbd4f60d8d3f8ea25276b7
+  size_waiver: null
+  size_max: null
+  sources:
+  - refs:
+    - img01
+    - img03
+    - img04
+    - img05
+    - img06
+    - img07
+    - img08
+    images:
+    - hybrid/q16_ref0
+    - hybrid/q16_ref1
+  revision: 'curator review: clip_02 and img02 removed from the task (no rubric item cited them); the instruction now says the map gives
+    the layout and order'

@@ -1,0 +1,20 @@
+# GameAnything-Bench scoring material: never shown to agents during a trial.
+task_id: T-VO-vid_c0e249892a36.t1
+game: terraria
+status: pending
+picks:
+- TR-MOVE
+- TR-CONTENT
+- TR-NPCS
+- TR-DAYNIGHT
+- TR-SAVE
+- TR-PERF
+changed: []
+kept_borderline:
+- id: TR-MOVE
+  note: Surfing is a new activity; vanilla running, jump and fall are not required to change.
+summary: Surfing story with a shore warning, a controllable surfing activity, a turning point and an ending.
+task_checks: []
+note: 'policy (A): excluded only when the instruction explicitly requires the change; plausible side effects stay tested; adding
+  new content is never a reason to exclude. Proposed by claude-sonnet-5-5 via `gab task picks` 2026-11-06; a maintainer checks (set status: checked).
+  The evaluator tests the pool''s always items (unless in changed) + picks.'

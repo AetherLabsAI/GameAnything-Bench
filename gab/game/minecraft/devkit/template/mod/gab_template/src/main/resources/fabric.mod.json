@@ -1,0 +1,10 @@
+{
+  "schemaVersion": 1,
+  "id": "gab_template",
+  "version": "1.0.0",
+  "name": "GAB template mod",
+  "description": "Rename the id (and the package), then build your mod here.",
+  "environment": "*",
+  "entrypoints": {"main": ["org.gab.template.GabTemplate"]},
+  "depends": {"fabricloader": ">=0.19.5", "minecraft": "26.3", "java": ">=25", "fabric-api": "*"}
+}

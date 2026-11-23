@@ -1,0 +1,239 @@
+# GameAnything-Bench scoring material: never shown to agents during a trial.
+task_id: T-TO-txt_91bad850eb3c.e1
+source_inventory:
+- 'text p001-p004: at six the travellers prepare to blast through a mass of granite that bars the way; the uncle and the hunter board the raft
+  while the narrator stays ashore with a lantern to light the fuse; the Professor, chronometer in hand, gives the order to fire'
+- 'text p005-p011: the narrator lights the fuse and runs to the raft; Hans pushes it far out from the shore; the Professor counts down the last
+  minutes'
+- 'text p012-p016: the rocks split like a curtain, a bottomless pit opens on the shore, the sea rises in a huge billow that lifts the raft; the
+  three fall flat, plunge into darkness; the narrator understands the blast opened an abyss and the sea, now a torrent, is carrying them into
+  it; he gives himself up for lost'
+- 'text p017: for an hour or two they cling to each other on the raft, shocks against crags; it is the road an earlier traveller (Saknussemm)
+  once walked, but they carry a whole sea down it'
+- 'text p018-p020: the speed doubles, they fall vertically while the uncle and Hans hold the narrator; the fall is checked by a waterspout that
+  beats on them, he is drowning; after a few seconds he is in the air again, still held, still on the raft'
+- 'text p021: final surprise: expecting the icy arctic north, the three find themselves half-way down a mountain under a burning, blinding southern
+  sun'
+instructions_meta:
+  requirement_groups:
+    story progression:
+    - CR3
+    - FP1
+    characters, roles and causes:
+    - CR1
+    - CR2
+    opening and ending:
+    - FP3
+    - CR5
+    - FP4
+    - VP4
+    pressure and hazards:
+    - FP2
+    - VP1
+    - VP3
+    places and key settings:
+    - CR4
+    - VP2
+  explicit_requirements:
+  - type: keep
+    text: the ending where the three of them come out alive on a mountainside under a burning southern sun instead of the icy north they expected.
+    covers:
+    - CR5
+    - FP4
+rubric:
+  content_realization:
+  - id: CR1
+    item: 'The three travellers are in the game with their roles: the narrator (the one who fires the blast), his uncle the Professor who leads,
+      times the blast and gives the order to fire, and the hunter Hans who handles the raft'
+    anchors:
+      '1': three companions present and told apart by these roles (who fires, who leads and times, who works the raft)
+      '0.5': three companions present but the roles missing or partly wrong, or only two of them
+      '0': no such characters, or unrelated ones
+    evidence:
+    - - p002
+      - p007
+    - p011
+    - p018
+    - p020
+  - id: CR2
+    item: 'The cause is in the game: the blast is meant to clear the passage that blocks the way, and instead it opens an abyss into which the
+      sea pours as a torrent that sweeps the travellers off'
+    anchors:
+      '1': a blocked passage, the blast set to clear it, and the flood released by the blast that carries them away, shown as cause and effect
+      '0.5': an explosion and a flood both present but not linked, or the blast's purpose missing
+      '0': missing, or another cause (e.g. a guardian, a collapse they did not cause)
+    evidence:
+    - p001
+    - p012
+    - p015
+  - id: CR3
+    item: 'The text''s escape stages are in the game in their order: the fuse lit and the push-off on the raft, the blast, the billow that lifts
+      the raft, swept by the torrent through darkness with shocks against the crags, the steep vertical fall, the waterspout, and out into the
+      air'
+    anchors:
+      '1': all these stages present in this order
+      '0.5': most stages present in order, or all present with one or two out of order
+      '0': the text's stages missing or largely out of order
+    evidence:
+    - - p005
+      - p007
+    - p012
+    - p013
+    - p017
+    - p018
+    - p019
+    - p020
+  - id: CR4
+    item: 'The places of the sequence are built: the shore of the underground sea where a mass of granite bars the way, the raft on the water,
+      and the dark channel with craggy walls down which the torrent carries the raft'
+    anchors:
+      '1': the shore with the granite barrier, the raft at sea and the dark craggy channel are all built
+      '0.5': one or two of these places, or all of them only as generic terrain
+      '0': no such places (e.g. an open field or an unrelated building)
+    evidence:
+    - p001
+    - - p002
+      - p007
+    - p012
+    - p013
+    - p015
+    - p017
+  - id: CR5
+    item: 'The ending is in the game: the three come out alive on a mountainside under a burning southern sun, and the game makes clear this is
+      the reverse of the icy north they expected'
+    anchors:
+      '1': the three alive on a hot, sun-blasted mountainside, with the contrast to the expected icy north conveyed
+      '0.5': they come out alive into the open, but not under a blazing sun, or the reversal of expectation is missing
+      '0': missing, or they die or stay trapped
+    evidence:
+    - p020
+    - p021
+  functions_playability:
+  - id: FP1
+    item: 'Story progression: the escape plays as one continuous forward sequence; advancing along the route triggers its stages one after another
+      from the opening to the end without breaking off'
+    anchors:
+      '1': playing forward carries the player through the stages in one unbroken sequence to the end
+      '0.5': the stages can be reached but the sequence breaks (stages must be found separately, it stalls or needs restarts to continue)
+      '0': no story progression, or a free roam with no sequence
+    evidence:
+    - - p005
+      - p021
+  - id: FP2
+    item: 'Flight under pressure: once the blast goes off the player is carried on by the flood and cannot stop or turn back, and hazards on the
+      way (the raft driven against the crags, the waterspout) visibly strike and set the player back'
+    anchors:
+      '1': the drive onward starts with the blast, the player cannot linger, and the hazards strike with a visible effect (e.g. knocked down,
+        thrown about) before the flight goes on
+      '0.5': pressure or hazards exist but are not set off by the blast, or hits have no visible effect, or the player can wait them out
+      '0': no pressure or hazards
+    evidence:
+    - p012
+    - - p015
+      - p017
+    - p019
+  - id: FP3
+    item: 'Opening: the player sets off the blast and must get back to the companions before it goes off'
+    anchors:
+      '1': the player triggers the blast and a timed retreat to the companions / the escape point follows
+      '0.5': the blast happens but is not triggered by the player, or there is no time pressure
+      '0': no opening blast
+    evidence:
+    - - p002
+      - p011
+  - id: FP4
+    item: 'Ending: reaching the sunlit emergence closes the sequence as a clear, set-apart end'
+    anchors:
+      '1': arriving there ends the sequence distinctly (it is clearly over, not just more terrain)
+      '0.5': the sequence stops, but without a recognisable end, or play simply continues past it
+      '0': no end
+    evidence:
+    - p020
+    - p021
+  visual_presentation:
+  - id: VP1
+    cat: key_moment
+    item: 'The blast: the granite rends apart like a curtain, a pit opens on the shore and the sea rises in an enormous billow that lifts the
+      raft into the air'
+    anchors:
+      '1': the rock splitting open and a huge wave lifting the raft are both shown
+      '0.5': an explosion or a wave, but not the rock rending and the raft lifted
+      '0': no visible blast
+    evidence:
+    - p012
+  - id: VP2
+    cat: spatial
+    item: The descent reads as plunging through deep darkness down a narrow craggy gully with rushing water
+    anchors:
+      '1': a dark, enclosed, rocky channel with the water rushing down it
+      '0.5': darkness or a rocky channel, but not both
+      '0': an open, lit landscape
+    evidence:
+    - p013
+    - p015
+    - p017
+  - id: VP3
+    cat: key_moment
+    item: 'The waterspout: an immense column of water beats down on the raft, then the travellers are out in the open air'
+    anchors:
+      '1': a towering water column striking the raft, followed by the emergence into the air
+      '0.5': a water effect or the emergence, not both
+      '0': none
+    evidence:
+    - p019
+    - p020
+  - id: VP4
+    cat: style
+    item: 'The ending mountainside is baked under a fierce, nearly vertical southern sun: harsh, blinding light and a hot, dry slope, not snow
+      and pale arctic light'
+    anchors:
+      '1': bright, hot, sun-blasted mountainside light and look
+      '0.5': an outdoor mountainside without the harsh hot light, or bright light on a snowy slope
+      '0': no such ending scene
+    evidence:
+    - p021
+play_suggestions:
+  FP1:
+  - 'play the sequence start to end without restarting: does each stage follow from advancing, or does it stall?'
+  - write down the stages in the order met and compare with CR3
+  FP2:
+  - 'after the blast, stop moving: is the player forced on or caught?'
+  - 'deliberately run into a hazard: is there a knock-down or another visible setback before the flight goes on?'
+  FP3:
+  - 'start a new run: who triggers the blast? is there a countdown or other time pressure to get away?'
+  - 'dawdle after lighting the fuse: what happens?'
+  FP4:
+  - 'reach the end: does the sequence clearly end there?'
+  robustness:
+  - 'fail or die mid-flight: can the player retry from a sensible point?'
+  - try to leave the raft or turn back during the flood
+  - 'replay the whole sequence twice: does it run the same way and end the same way?'
+v4_map:
+  U1: CR1
+  U2: CR4
+  U3: FP2
+  U4: FP2
+  U5: CR2
+  U6: CR3
+  U7: CR5
+  FP1: CR3, FP1
+  FP2: FP2
+  FP3: FP3
+  FP4: CR5, FP4
+  VP1: CR4, VP1
+  VP2: VP2
+  VP3: VP3
+  VP4: CR3, CR4, VP4 (the plunge into open water as the route's end and the staging of the fall in CR3 / CR4; the splash look in VP4)
+  VP5: 'removed: editing request (night run), moved to editing_seed.yaml'
+provenance:
+  source_yaml: T-HY-vid_2fb07a68a564.t1.yaml
+  source_sha256: aa4295410326dad728a244c49b175b5975a4e863c7d42c7886eb4c93c9d7b3f9
+  size_waiver: null
+  size_max:
+    VP: 5
+  sources:
+  - ref: t01
+    text: /Volumes/USB-500G/gameanything_local/hf/curation/hybrid_texts/T-HY-vid_2fb07a68a564.t1/final.md
+  revision: 'curator review: video removed, text-only task scoring only the Journey-to-the-Centre escape sequence and the sunlit mountainside
+    ending; CR3 / CR4 / FP2 rewritten without the video, VP1-VP4 replaced by text-based items, cross items dropped; renamed from T-HY-vid_2fb07a68a564.t1
+    (old trial results moved to runs-stale)'

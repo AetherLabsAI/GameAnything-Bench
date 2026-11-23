@@ -1,0 +1,19 @@
+# STATE_SPEC self-check (gab selfcheck valheim --state): format in gab/setup/selfcheck.py state_check.
+# A fresh start enters the start world (a new character at the start temple); the test plugin acts when the player spawns.
+vanilla:
+  steps:
+    - {do: wait, seconds: 3}
+    - {do: hold, keys: [w], seconds: 1.0}
+    - {do: wait, seconds: 1}
+  engine: [screen, world.name, world.seed, time.day, time.time_of_day, player.name, player.pos, player.health, player.stamina, player.biome,
+           inventory, equipment, nearby, progress.global_keys]
+  mod_allow: []
+mod:
+  dir: testmod
+  steps:
+    - {do: wait, seconds: 4}
+  expect:
+    - "mod: gab_beacon_chest"
+    - "mod: gab_test_flag"
+    - "mod: stage_two"
+    - "screen_text: GAB HUD: the beacon is lit"

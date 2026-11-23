@@ -1,0 +1,72 @@
+# Reference material: fetched from the HF dataset into $GAB_MEDIA_DIR/<task>/ by `gab media fetch` (sha256 checked).
+# The agent gets the files only (no title, author, caption or source): this file is never shown to it.
+task_id: T-HY-vid_c6749ac9ffcd.t1
+refs:
+- id: c01
+  kind: video
+  file: clip_01.mp4
+  video_id: vid_c6749ac9ffcd
+  source:
+    title: 19 - Minions & Monsters ｜ Official Trailer [ZSdOwt-G49w]
+    url: https://www.youtube.com/watch?v=ZSdOwt-G49w
+    channel: null
+    youtube_id: ZSdOwt-G49w
+  range:
+    start: 47.0
+    end: 75.0
+    text: 0:47.00-1:15.00
+  duration_s: 28.0
+  size_bytes: 4310085
+  format: mp4 H.264 720p, AAC audio
+  hf_path: media/T-HY-vid_c6749ac9ffcd.t1/clip_01.mp4
+  sha256: 4a0f54e2108cbeba5e641c42fec9d61fb891c891ccd7110a7c9e5cad0a73ae13
+  rights_note: null
+- id: img01
+  kind: image
+  file: img01.jpg
+  format: jpg
+  hf_path: media/T-HY-vid_c6749ac9ffcd.t1/img01.jpg
+  sha256: 09a67b7a31340349df783f353a2c37b8f03134741430f2e66db4eaca7f1280dc
+  size_bytes: 524399
+- id: img02
+  kind: image
+  file: img02.jpg
+  format: jpg
+  hf_path: media/T-HY-vid_c6749ac9ffcd.t1/img02.jpg
+  sha256: 16412c6dba20bbd0a23018779d90094d466e074cd7351003445fbc55bbc3a149
+  size_bytes: 787807
+- id: img03
+  kind: image
+  file: img03.jpg
+  format: jpg
+  hf_path: media/T-HY-vid_c6749ac9ffcd.t1/img03.jpg
+  sha256: caf5e69196338868a483bfebe34ac6fb99502e6cda3b884f3844b63cf9cd835a
+  size_bytes: 359835
+- id: img04
+  kind: image
+  file: img04.jpg
+  format: jpg
+  hf_path: media/T-HY-vid_c6749ac9ffcd.t1/img04.jpg
+  sha256: f97b43fda8d9f78bc65a093333b277c818166ef1110edb0bd090758cd742936f
+  size_bytes: 132138
+- id: img05
+  kind: image
+  file: img05.jpg
+  format: jpg
+  hf_path: media/T-HY-vid_c6749ac9ffcd.t1/img05.jpg
+  sha256: 39b7433715d3e1a30b66831edbe65108f1af9fd5500d2d559bc7ed8a06b566eb
+  size_bytes: 204459
+- id: img06
+  kind: image
+  file: img06.jpg
+  format: jpg
+  hf_path: media/T-HY-vid_c6749ac9ffcd.t1/img06.jpg
+  sha256: db38af3b581c964235d71d6d4bc67f988fe301014b4efd8d7b3335fabdfc0335
+  size_bytes: 284822
+- id: img07
+  kind: image
+  file: img07.jpg
+  format: jpg
+  hf_path: media/T-HY-vid_c6749ac9ffcd.t1/img07.jpg
+  sha256: ce5f949095602e719174e5bcae7c30e3a065964d375ab1db7a4f121a9d39ec15
+  size_bytes: 420336

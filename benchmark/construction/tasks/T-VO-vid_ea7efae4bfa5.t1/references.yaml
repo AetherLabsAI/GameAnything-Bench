@@ -1,0 +1,24 @@
+# Reference material: fetched from the HF dataset into $GAB_MEDIA_DIR/<task>/ by `gab media fetch` (sha256 checked).
+# The agent gets the files only (no title, author, caption or source): this file is never shown to it.
+task_id: T-VO-vid_ea7efae4bfa5.t1
+refs:
+- id: c01
+  kind: video
+  file: clip_01.mp4
+  video_id: vid_ea7efae4bfa5
+  source:
+    title: 06 - Snowboarding The PERFECT Snow Pump Track
+    url: null
+    channel: null
+    youtube_id: null
+  range:
+    start: 100.4
+    end: 113.8
+    text: 1:40.40-1:53.80
+  duration_s: 13.4
+  size_bytes: 1865246
+  format: mp4 H.264 720p, AAC audio
+  hf_path: media/T-VO-vid_ea7efae4bfa5.t1/clip_01.mp4
+  sha256: bc78e2a171b7280cbd73c4472e8ee0e38d84b769d2ffae82169261faab24c591
+  rights_note: Branded real-world sponsored footage with Red Bull logos. Use as a private reference only. Do not redistribute the footage or recreate
+    the logos or the eagle emblem in the built content.

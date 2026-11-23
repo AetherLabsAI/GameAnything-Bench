@@ -1,0 +1,7 @@
+# GameAnything-Bench scoring material: never shown to agents during a trial.
+task_id: T-HY-vid_ed6ca1b2a47b.t1
+game: tuxemon
+status: pending
+picks: []
+task_checks: []
+note: picks wait for the verified pools (model proposes, a maintainer checks); until then the evaluator uses the game's default_picks

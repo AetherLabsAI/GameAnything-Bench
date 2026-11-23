@@ -1,0 +1,2 @@
+Title.E text="GAB state check"
+Resume.E text="state check test level"

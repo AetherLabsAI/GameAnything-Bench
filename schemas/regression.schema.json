@@ -1,0 +1,41 @@
+{
+ "$schema": "https://json-schema.org/draft/2020-12/schema",
+ "title": "regression.yaml (hidden)",
+ "type": "object",
+ "required": [
+  "task_id",
+  "game",
+  "status",
+  "picks"
+ ],
+ "properties": {
+  "task_id": {
+   "type": "string"
+  },
+  "game": {
+   "type": "string"
+  },
+  "status": {
+   "enum": [
+    "pending",
+    "proposed",
+    "checked"
+   ]
+  },
+  "picks": {
+   "type": "array",
+   "items": {
+    "type": "string"
+   }
+  },
+  "task_checks": {
+   "type": "array",
+   "items": {
+    "type": "object"
+   }
+  },
+  "note": {
+   "type": "string"
+  }
+ }
+}

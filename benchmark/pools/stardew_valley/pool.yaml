@@ -1,0 +1,60 @@
+# Base-capability pool, Stardew Valley (v0.3, verified in game 2026-10-31, Stardew Valley 1.6.15 (Linux, build 24356) + SMAPI 4.5.2;
+# from the draft pool_stardew_valley.yaml v0.2 of 2026-10-15, whose StarDojo-based probes are not used).
+# Same rules as the other pools: atomic base capabilities a task's change could break; pass = the same result as a fresh vanilla
+# instance (vanilla is the oracle, so vanilla behaviour -- e.g. the horse dismounted at day end -- is never a regression).
+# Mod surface: SMAPI C# mods (Harmony patches, events, asset edits of Data/*, maps, dialogue, events) and Content Patcher 2.9.0 packs.
+# Probes: gab/game/stardew_valley/probes.py (SDProbes); `probe: x.y` = field y of probe x (fields joined with +).
+# Runtime: all probes in ONE game session on a fresh probe instance (the start save the game makes itself: new farm "Bench",
+#   spring 1 y1, 6:00, in bed), in the order player_start, menu_opens, clock, walk, farm_tools, warp_works, npc_talk, shop_buy,
+#   sleep_next_day, save_reload; ~5 min incl. the start. Setup through the harness bridge GabBridge (warp the farmer, clear a
+#   strip / place a stone, weeds or twig, move a villager next to the farmer, set the clock); what is measured is driven by REAL
+#   input on the game window (xdotool, keys / clicks held 0.1 s). State is read from the running game through the bridge.
+# A/A 2026-10-31 (test sandbox, software GL, other games on the same machine): seven fresh vanilla runs (try1; aaA / aaB of the
+#   selfchecks 20261031-211741, -215415 and the final one) -> all 14 items agree (try1: 13, its sleep probe had a since-fixed
+#   setup bug). Exact in every run: start in bed (FarmHouse 9,9), 500 g, 100 HP /
+#   270 stamina, the 5 tools; E opens GameMenu, Escape closes; hoe / can / pickaxe / axe 2 stamina, scythe 0, every tool works;
+#   walk 6 tiles east / 6 west in 1.2 s; Farm -> BusStop arrival (11,23), BusStop -> Farm (78,17); Lewis' dialogue, +20
+#   friendship; SeedShop 24 items, Parsnip Seeds 20 g, 1 bought; sleep -> spring 2, morning, in the farmhouse; save / quit / load
+#   identical; 2 SMAPI ERROR lines, both vanilla here (no Steam client; XACT audio init with sound off). Noise: clock 7.30-7.31 s
+#   per 10 in-game minutes (intervals 7.20-7.40 s; tolerance 0.75x-1.33x of vanilla); walk tolerance 30% / 2 tiles; warp arrival
+#   +-2 tiles; the wake-up time is read at the first look after the day changed (6:00-6:10 seen: a slower night under load once
+#   gave 6:10 at a later look), so SD-SLEEP compares "morning" (6:00-6:50), not the minute.
+# Negative mods 2026-10-31 (gab/game/stardew_valley/negmods, C# built like a deliverable), each fails exactly its item:
+#   neg_slow_clock (14 s per 10 min) -> SD-CLOCK (14.6 vs 7.3 s); neg_seed_price (Parsnip Seeds price x2 in Data/Objects) ->
+#   SD-SHOP (paid 40 vs 20); neg_slow_walk (Harmony: movement speed x0.5) -> SD-WALK (3 vs 6 tiles); neg_bonus_gold (+1000 g once
+#   at the first load) -> SD-MONEY (1500 vs 500). Evidence: the verification logs.
+# Changes against the draft: SD-WALK has its own probe (walk), SD-TOOLS adds the watering can and the axe and the stamina per
+#   tool, SD-WARP walks off the map edge (real input) instead of the debug warp, SD-NPC talks by right click (the keyboard
+#   action key does not start a villager's dialogue from the grab tile in this setup), SD-SAVE / SD-SHOP / SD-NPC were todo,
+#   now ready.
+
+game: stardew_valley
+version: 1.6.15 (SMAPI 4.5.2)
+default_picks:
+- SD-CLOCK
+- SD-WALK
+- SD-TOOLS
+- SD-SHOP
+- SD-SLEEP
+# gate (gab/eval/regression.py): the STABLE item (no real crash / hang, no new fatal error kind) + the host-present
+# item(s): the stock content they reach must still be there on the modded game (numbers NOT compared with vanilla; only a mod that
+# removes / replaces the host game wholesale fails). Scores are 0 unless the gate passes. Not chosen per task.
+gate: [SD-STABLE, SD-WALK, SD-WARP]
+
+always:
+  - {id: SD-STABLE, capability: "no crash, and no new kinds of ERROR lines in the SMAPI log beyond vanilla's, over the whole probe run", probe: log_errors, status: ready}
+
+pool:
+  - {id: SD-CLOCK, capability: "the clock runs at normal speed (about 7 s per 10 in-game minutes, outside menus)", probe: clock, status: ready}
+  - {id: SD-TOOLS, capability: "vanilla farm tools work (number keys select, C uses): hoe tills, watering can waters, pickaxe breaks a stone, scythe cuts weeds, axe chops a twig; vanilla stamina per use", probe: farm_tools, status: ready}
+  - {id: SD-WALK, capability: "the farmer walks at vanilla speed with w a s d (tiles per held second, east and west)", probe: walk, status: ready}
+  - {id: SD-WARP, capability: "walking off a map edge moves between locations (Farm -> Bus Stop -> Farm) onto the vanilla arrival tiles", probe: warp_works, status: ready}
+  - {id: SD-LOCATION, capability: "a fresh start puts the farmer where vanilla does (farmhouse, in bed)", probe: player_start.location+tile, status: ready}
+  - {id: SD-MONEY, capability: "starting money unchanged (500 g)", probe: player_start.money, status: ready}
+  - {id: SD-HEALTH-STAMINA, capability: "starting health and stamina unchanged", probe: player_start.health+stamina, status: ready}
+  - {id: SD-INVENTORY, capability: "starting inventory unchanged (the five tools)", probe: player_start.items, status: ready}
+  - {id: SD-MENU, capability: "the game menu opens with E and closes with Escape", probe: menu_opens, status: ready}
+  - {id: SD-NPC, capability: "a vanilla villager (Lewis) can be talked to with a right click: his dialogue opens, friendship rises as vanilla", probe: npc_talk, status: ready}
+  - {id: SD-SHOP, capability: "Pierre's shop opens at his counter (X) and sells Parsnip Seeds at the vanilla price with a left click", probe: shop_buy, status: ready}
+  - {id: SD-SLEEP, capability: "stepping into the bed asks to sleep; Yes ends the day and the next morning starts normally (vanilla also dismounts and sends the horse to its stable)", probe: sleep_next_day, status: ready}
+  - {id: SD-SAVE, capability: "the night's save, quit to title and load keep the farmer's state (location, money, inventory, date, health, stamina, skills, friendship)", probe: save_reload, status: ready}

@@ -1,0 +1,5 @@
+mode: race
+track: lighthouse
+kart: tux
+numkarts: 3
+laps: 1

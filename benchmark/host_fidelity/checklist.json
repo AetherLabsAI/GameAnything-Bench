@@ -1,0 +1,462 @@
+{
+ "version": "v2 + rule (built on / played through the host; not_applicable; instruction given; official score by fixed rule)",
+ "source": "host-identity checklist v2 (GameAnything-Bench)",
+ "games": {
+  "celeste64": {
+   "title": "Celeste 64: Fragments of the Mountain",
+   "gate": "C6-STABLE, C6-LEVELS, C6-RUN",
+   "features": [
+    {
+     "id": "C6-ID1",
+     "trait": "In the host's world: the session is played in Celeste 64's World scene (stock or new levels built in it), driven by moving Madeline through 3D space and interacting with level objects.",
+     "evidence": "state `engine.screen = World`, `engine.player.pos` / `vel` / `on_ground` changing between snapshots; screenshots of Madeline in a 3D level, not a mod-drawn screen."
+    },
+    {
+     "id": "C6-ID2",
+     "trait": "Controls & camera: Madeline is controlled directly in third person with a chase camera behind/above (camera keys rotate it); run, jump, climb, dash.",
+     "evidence": "play-session actions are movement/jump/dash/climb keys; screenshots show a small character centred with the camera behind and above, not a fixed custom view or a menu-driven game."
+    },
+    {
+     "id": "C6-ID3",
+     "trait": "Host systems as building blocks: level geometry and actors (solids, springs, crystals/refills, feathers, falling/break blocks, checkpoints, strawberries, cassettes) and the player physics (dash, climb, wall kick).",
+     "evidence": "`engine.actors` counts or new actor types in `mod.actors`; `engine.player.dashes` / `player.state`; screenshots of these objects in the level."
+    },
+    {
+     "id": "C6-ID4",
+     "trait": "Host systems as building blocks: NPC talk / dialog boxes, level select and level cards, death → respawn at checkpoint, the record (deaths, strawberries).",
+     "evidence": "`screen_text` dialog lines, `record` fields, level-card screenshots, respawn after `record.deaths` increments."
+    },
+    {
+     "id": "C6-ID5",
+     "trait": "Visual style: low-poly, N64-era 3D with chunky pixelated textures and a small stylised character; the game's own UI font/cards.",
+     "evidence": "screenshots look like Celeste 64 (blocky low-poly terrain, pixel-texture surfaces, sprite-like Madeline with coloured hair), or new levels rendered in that style."
+    }
+   ],
+   "notes": []
+  },
+  "cities_skylines": {
+   "title": "Cities: Skylines 1",
+   "gate": "CS-STABLE, CS-SIM, CS-ROADS (unverified)",
+   "features": [
+    {
+     "id": "CS-ID1",
+     "trait": "In the host's world: the session takes place on a city map in game, driven by the host's god-view play (placing / inspecting / watching the simulated city).",
+     "evidence": "`engine.status = in_game`, `engine.date` advancing, `engine.counts` / `population` changing together with screenshots of the 3D city map."
+    },
+    {
+     "id": "CS-ID2",
+     "trait": "Controls & camera: god-view free camera (pan/rotate/zoom over the 3D map), mouse-driven tool placement from the bottom toolbar.",
+     "evidence": "`engine.camera` {x, z, height, angle} varying; `engine.tool` cycling through stock tool classes; screenshots from above the city with the stock toolbar; actions are mouse clicks/drags on the map."
+    },
+    {
+     "id": "CS-ID3",
+     "trait": "Host systems as building blocks: roads / networks, zoning, building and prop prefabs (stock or custom assets placed on the map), traffic and citizen agents.",
+     "evidence": "`engine.counts.segments` / buildings, `mod.networks` / `mod.buildings` for reference-specific prefabs; screenshots of roads, buildings, traffic."
+    },
+    {
+     "id": "CS-ID4",
+     "trait": "Host systems as building blocks: services and info views, transport lines, budget/economy, Chirper and the stock info panels.",
+     "evidence": "info-view overlays in screenshots, `engine.transport.lines`, `engine.happiness`, `screen_text \"chirp: ...\"`."
+    },
+    {
+     "id": "CS-ID5",
+     "trait": "Visual style: realistic-ish 3D city diorama with tilt-shift-like camera, stock Colossal Order UI panels and icons.",
+     "evidence": "screenshots show the stock UI chrome (top info bar, bottom toolbar) over a 3D terrain map."
+    }
+   ],
+   "notes": []
+  },
+  "colobot": {
+   "title": "Colobot: Gold Edition",
+   "gate": "CB-STABLE, CB-LEVELS, CB-BOTS",
+   "features": [
+    {
+     "id": "CB-ID1",
+     "trait": "In the host's world: the session is a Colobot level (stock or new mission) on 3D planet/underwater terrain, driven by moving the astronaut / bots and interacting with objects.",
+     "evidence": "`engine.screen = level`; `engine.me.pos` / `altitude` changing; `engine.object_counts` changing; screenshots of the astronaut or bots on terrain."
+    },
+    {
+     "id": "CB-ID2",
+     "trait": "Controls & camera: the astronaut (and selected bots) driven directly in 3D third person (jetpack, keys), with the stock camera behind the selected object and the stock HUD (selection buttons, energy/shield gauges).",
+     "evidence": "screenshots with the stock bottom HUD button panel and minimap; actions use the stock movement keys / Shift jetpack / object selection clicks."
+    },
+    {
+     "id": "CB-ID3",
+     "trait": "Host systems as building blocks: bots and buildings (grabbers, shooters, subbers, factories, power stations, converters, ores, cells), aliens; CBOT programs that drive bots.",
+     "evidence": "`engine.object_counts`, `mod.objects`, `mod.programs` (running CBOT programs), `screen_text` CBOT `message()` texts; screenshots of bots acting."
+    },
+    {
+     "id": "CB-ID4",
+     "trait": "Host systems as building blocks: mission scripting (level goals, SatCom/info texts, mission-finished flow), energy/shield, the program editor.",
+     "evidence": "`engine.screen` → `won`, log \"Mission finished\", SatCom/info screenshots, `mod.objects` energy/shield."
+    },
+    {
+     "id": "CB-ID5",
+     "trait": "Visual style: early-2000s 3D sci-fi: textured terrain, robotic bots with chassis (wheels/tracks/legs/wings), blue-grey stock HUD.",
+     "evidence": "screenshots look like Colobot (terrain + skybox, stock bot models, stock interface), or a restyle still rendered by the engine."
+    }
+   ],
+   "notes": []
+  },
+  "flare": {
+   "title": "Flare: Empyrean Campaign",
+   "gate": "FL-STABLE, FL-NEWGAME, FL-MOVE",
+   "features": [
+    {
+     "id": "FL-ID1",
+     "trait": "In the host's world: the session is played on Flare maps (stock or new `mod.map` built from Flare tilesets), driven by moving the hero and interacting (talk, pick up, fight when asked).",
+     "evidence": "`engine.screen = in game`, `engine.pos` moving across tiles; screenshots of the hero on an isometric map."
+    },
+    {
+     "id": "FL-ID2",
+     "trait": "Controls & perspective: isometric 2.5D top-down view of a single hero, moved with WASD / mouse click, attack/interact with mouse buttons, powers on the action bar.",
+     "evidence": "actions are WASD / clicks / number keys; screenshots show the isometric camera centred on the hero with the stock action bar."
+    },
+    {
+     "id": "FL-ID3",
+     "trait": "Host systems as building blocks: NPCs and talkers (dialog with portraits), quests / quest log / statuses, events and map transitions, cutscenes.",
+     "evidence": "`engine.menus_open` includes talker / log, `engine.talking_to`, `screen_text \"dialog: ...\" / \"quest: ...\"`, `engine.statuses` / `mod.statuses`."
+    },
+    {
+     "id": "FL-ID4",
+     "trait": "Host systems as building blocks: enemies and combat, powers with HP/MP, items / inventory / equipment / vendors, loot and XP.",
+     "evidence": "`engine.hp` / `mp` / `xp` / `inventory` / `enemies`, menus open; screenshots of combat or inventory."
+    },
+    {
+     "id": "FL-ID5",
+     "trait": "Visual style: painted isometric 2D fantasy tiles and sprites, stock UI frames and fonts.",
+     "evidence": "screenshots in the isometric diamond tile grid with painterly fantasy art; mod maps drawn with the stock tilesets or tiles of the same style."
+    }
+   ],
+   "notes": []
+  },
+  "godot-tps": {
+   "title": "Godot TPS demo",
+   "gate": "GT-STABLE, GT-LEVEL, GT-MOVE",
+   "features": [
+    {
+     "id": "GT-ID1",
+     "trait": "In the host's world: the session is played in the demo's 3D scene (the stock level or new areas built under it), driven by walking/jumping the stock player character through it.",
+     "evidence": "`engine.screen = level`; `engine.player.pos` / `velocity` changing; `mod.nodes` added under the level rather than replacing the main scene; screenshots of the character in a 3D environment."
+    },
+    {
+     "id": "GT-ID2",
+     "trait": "Controls & camera: third-person character (root-motion walk, jump) with an orbit camera behind; aiming moves it over the shoulder with a crosshair.",
+     "evidence": "`engine.player.heading_deg` / `on_floor` / `aiming` / `camera_pos`; screenshots with the character visible from behind; actions WASD + mouse."
+    },
+    {
+     "id": "GT-ID3",
+     "trait": "Host systems as building blocks: the player scene (character controller, animations, shooting), robots / enemies and bullets.",
+     "evidence": "`engine.robots`, `engine.bullets`, `engine.player.shooting`; screenshots of the stock player model, robots, projectiles."
+    },
+    {
+     "id": "GT-ID4",
+     "trait": "Host systems as building blocks: the level kit and physics (stock meshes, GridMap/kit pieces, moving platforms, lighting/environment, spawn points).",
+     "evidence": "`mod.nodes` parented under the stock level; screenshots of stock level parts or new geometry lit by the same environment."
+    },
+    {
+     "id": "GT-ID5",
+     "trait": "Visual style: modern PBR rendering (stock lighting/environment, stock player and robot models), stock HUD.",
+     "evidence": "screenshots show the stock player model and the demo's lighting, or new models rendered in the same engine look."
+    }
+   ],
+   "notes": []
+  },
+  "minecraft": {
+   "title": "Minecraft Java 26.3 + Fabric",
+   "gate": "MC-STABLE, MC-JOIN-STATE, MC-MOVE",
+   "features": [
+    {
+     "id": "MC-ID1",
+     "trait": "In the host's world: the session is played in a Minecraft world (stock or custom-built block map), driven by moving the player and interacting with blocks / entities.",
+     "evidence": "`engine.pos` changing, `looking_at` / `blocks_near`, `engine.screen` in-game; screenshots of the block world."
+    },
+    {
+     "id": "MC-ID2",
+     "trait": "Controls & perspective: first-person (or F5 third-person) free-look camera with WASD + mouse, hotbar selection, left-click break/attack, right-click use.",
+     "evidence": "`engine.pos` / `yaw` / `pitch` / `hotbar_slot` changing; screenshots in first person with the hotbar + hearts + hunger bar; actions WASD/mouse/number keys."
+    },
+    {
+     "id": "MC-ID3",
+     "trait": "Host systems as building blocks: blocks and the block grid (stock or registered blocks, structures built from them), items and inventory / containers / crafting screens.",
+     "evidence": "`mod.registries`, `mod.blocks_near`, `mod.block_entities`, `engine.inventory` / `held`, container screens."
+    },
+    {
+     "id": "MC-ID4",
+     "trait": "Host systems as building blocks: entities and mobs (vanilla or custom), day/night, weather, health/hunger, titles / bossbars / scoreboards / chat for text.",
+     "evidence": "`engine.entities_near`, `mod.entities`, `time_of_day`, `weather`, `screen_text` titles/sidebar/bossbar; screenshots of mobs."
+    },
+    {
+     "id": "MC-ID5",
+     "trait": "Visual style: blocky 1 m cube world with 16x16 pixel textures, block-shaped mobs, stock HUD.",
+     "evidence": "screenshots show cube terrain and pixel textures (new blocks/mobs in the same pixel-voxel style count)."
+    }
+   ],
+   "notes": []
+  },
+  "stardew_valley": {
+   "title": "Stardew Valley 1.6 + SMAPI",
+   "gate": "SD-STABLE, SD-WALK, SD-WARP",
+   "features": [
+    {
+     "id": "SD-ID1",
+     "trait": "In the host's world: the session is played on Stardew maps (stock or new locations), driven by walking the farmer and interacting (tools, talking, picking up, doors).",
+     "evidence": "`engine.tile` / `location` changing; screenshots of the farmer on the tile map. `engine.screen = minigame` (a mod-drawn full screen) for most of the session is not host world."
+    },
+    {
+     "id": "SD-ID2",
+     "trait": "Controls & perspective: top-down 2D tile view following the farmer, WASD walking, tool on C/click, right-click interact; doors / map edges warp.",
+     "evidence": "`engine.facing` / `location`; actions WASD / C / right-click; screenshots with the farmer centred and the stock toolbar and clock box."
+    },
+    {
+     "id": "SD-ID3",
+     "trait": "Host systems as building blocks: NPCs (stock or custom characters), dialogue boxes with portraits, events, mail / quests, shops, friendship.",
+     "evidence": "`screen_text \"dialog: speaker: ...\"`, `engine.friendship`, `npcs_here`, `mod.npcs`, `mod.events`; dialogue-box screenshots."
+    },
+    {
+     "id": "SD-ID4",
+     "trait": "Host systems as building blocks: tools, items and crops / objects on the tile map, inventory, clock / calendar / energy, money.",
+     "evidence": "`engine.inventory`, `stamina`, `time`, `money`, `mod.data` (custom items/crops); screenshots of tool use, crops, HUD clock."
+    },
+    {
+     "id": "SD-ID5",
+     "trait": "Visual style: warm 16-bit-like pixel art, the stock HUD (toolbar, clock, energy bar) and dialogue frames.",
+     "evidence": "screenshots in Stardew's pixel style; custom content drawn in matching pixel art on the tile map."
+    }
+   ],
+   "notes": []
+  },
+  "supertuxkart": {
+   "title": "SuperTuxKart 1.5",
+   "gate": "SK-STABLE, SK-TRACKS, SK-ACCEL",
+   "features": [
+    {
+     "id": "SK-ID1",
+     "trait": "In the host's world: the session is played on a track / arena in a race-world (stock or add-on track), driven by driving the kart.",
+     "evidence": "`engine.screen = race`, `engine.karts[].pos` moving with `speed` > 0; screenshots of the kart on a track."
+    },
+    {
+     "id": "SK-ID2",
+     "trait": "Controls & camera: chase camera behind the player's kart; accelerate/brake/steer with arrows, drift, nitro, fire item, rescue.",
+     "evidence": "kart `speed` rising, heading changes; actions arrow keys / drift / fire; screenshots from behind the kart with the stock race HUD."
+    },
+    {
+     "id": "SK-ID3",
+     "trait": "Host systems as building blocks: tracks / arenas and their scripting (add-on tracks, track scripts, GABMSG messages, checkpoints, laps), karts (stock or add-on).",
+     "evidence": "`engine.track`, `tracks_loaded`, `mod` (mod_static.json) listing tracks/karts; `screen_text` GABMSG lines; lap counter."
+    },
+    {
+     "id": "SK-ID4",
+     "trait": "Host systems as building blocks: AI karts, items / item boxes / nitro, race modes (race, battle, soccer, follow-the-leader), story-mode overworld.",
+     "evidence": "`engine.race` {karts, mode}; item icons and boxes in screenshots."
+    },
+    {
+     "id": "SK-ID5",
+     "trait": "Visual style: colourful cartoon 3D (Tux and open-source mascots, stylised tracks), stock menus and HUD.",
+     "evidence": "screenshots show cartoon karts/mascots and stylised scenery; custom tracks/karts in a matching cartoon style."
+    }
+   ],
+   "notes": [
+    "a GUI overlay covering the track while the kart sits still is not host world."
+   ]
+  },
+  "terraria": {
+   "title": "Terraria 1.4.4 + tModLoader",
+   "gate": "TR-STABLE, TR-MOVE, TR-DIG-PLACE",
+   "features": [
+    {
+     "id": "TR-ID1",
+     "trait": "In the host's world: the session is played in a Terraria world (stock-generated or custom-built), driven by moving the player character and interacting (use items, talk, dig/place when asked).",
+     "evidence": "`engine.player.pos` / `velocity` changing; screenshots of the player in the tile world."
+    },
+    {
+     "id": "TR-ID2",
+     "trait": "Controls & perspective: side-view 2D platforming of one character (A/D run, Space jump, mouse to use the held item at the cursor), camera centred on the player.",
+     "evidence": "actions A/D/Space/mouse; screenshots in side view with the hotbar top-left and hearts/mana top-right."
+    },
+    {
+     "id": "TR-ID3",
+     "trait": "Host systems as building blocks: tiles and walls (stock or mod tiles), biomes, liquids, structures built from them; items and inventory.",
+     "evidence": "`mod.tiles` / `mod.walls` / `mod.biomes`, `engine.player.inventory` / `held`; screenshots of tile terrain and built structures."
+    },
+    {
+     "id": "TR-ID4",
+     "trait": "Host systems as building blocks: NPCs (town NPCs, enemies, bosses — stock or mod NPCs), NPC chat / shops, projectiles, events.",
+     "evidence": "`engine.npcs`, `mod.npcs` / `mod.projectiles`, `engine.menus_open` (npc_chat, chest), `screen_text \"dialog: ...\"`; boss bar in screenshots."
+    },
+    {
+     "id": "TR-ID5",
+     "trait": "Visual style: detailed 2D pixel art sprites and tiles, parallax backgrounds, the stock HUD and inventory grid.",
+     "evidence": "screenshots in Terraria's pixel style; new mod sprites in matching pixel art in the tile world."
+    }
+   ],
+   "notes": [
+    "a mod UI (`mod.ui`) covering the screen for most snapshots while `player.pos` is static is not host world."
+   ]
+  },
+  "tof2": {
+   "title": "Tanks of Freedom II",
+   "gate": "TF-STABLE, TF-MENU, TF-MAPS",
+   "features": [
+    {
+     "id": "TF-ID1",
+     "trait": "In the host's world: the session is played on a ToF2 board (stock or new map), driven by selecting and moving units / acting on tiles.",
+     "evidence": "`engine.screen = board`, `engine.units` / `cursor` / `selected` changing; screenshots of units on the board."
+    },
+    {
+     "id": "TF-ID2",
+     "trait": "Controls & camera: tile-board view with the stock tilted 3D camera (edge-pan, zoom, camera-style switch), cursor/click to select a unit, see its move range and act; end-turn button.",
+     "evidence": "`engine.cursor`, `engine.selected`; actions are clicks on tiles / end turn; screenshots of the board with highlighted move tiles and the stock side panel."
+    },
+    {
+     "id": "TF-ID3",
+     "trait": "Host systems as building blocks: map tiles and buildings (HQ, barracks, factory...), units (stock types or new ones), turns and AP.",
+     "evidence": "`engine.buildings`, `engine.units`, `players[].ap`, `engine.turn`; `mod.maps`."
+    },
+    {
+     "id": "TF-ID4",
+     "trait": "Host systems as building blocks: campaign / story triggers (portrait dialog, objectives), combat and abilities.",
+     "evidence": "`engine.story` {shown, text}, `engine.triggers`, `mod.campaigns`; story-dialog screenshots."
+    },
+    {
+     "id": "TF-ID5",
+     "trait": "Visual style: voxel / low-poly miniature 3D (blocky tanks, soldiers, buildings on tile terrain), stock UI.",
+     "evidence": "screenshots look like ToF2's voxel diorama; new units/tiles in the same voxel style."
+    }
+   ],
+   "notes": []
+  },
+  "tuxemon": {
+   "title": "Tuxemon 0.4.35",
+   "gate": "TX-STABLE, TX-MOVE, TX-WARP",
+   "features": [
+    {
+     "id": "TX-ID1",
+     "trait": "In the host's world: the session is played on Tuxemon .tmx maps (stock or new), driven by walking the player sprite and interacting (talk, events, doors).",
+     "evidence": "`engine.screen = WorldState` (also DialogState / CombatState), `engine.tile` / `map` / `steps` changing; screenshots of the top-down tile map with the player sprite."
+    },
+    {
+     "id": "TX-ID2",
+     "trait": "Controls & perspective: top-down 2D grid walking with arrow keys, A button to interact while facing, stairs/doors warp between maps.",
+     "evidence": "`engine.facing`; actions arrow keys / Enter-space; screenshots of the top-down map with the player centred."
+    },
+    {
+     "id": "TX-ID3",
+     "trait": "Host systems as building blocks: NPCs, dialog boxes, map events / scripted actions and variables, warps, items / shops.",
+     "evidence": "`screen_text` dialog lines, `mod.npcs` / `mod.map_events`, `mod.variables`; dialog screenshots."
+    },
+    {
+     "id": "TX-ID4",
+     "trait": "Host systems as building blocks: monsters, party, battles (FIGHT / ITEM / TUXEMON / RUN), capture, world menu.",
+     "evidence": "`engine.party`, `engine.screen = CombatState`, `mod.monsters`; battle screenshots."
+    },
+    {
+     "id": "TX-ID5",
+     "trait": "Visual style: 16-bit-handheld-like pixel tiles and sprites, stock dialog boxes and battle layout.",
+     "evidence": "screenshots in this pixel style rendered on the tile map; new maps/sprites drawn in matching pixel art."
+    }
+   ],
+   "notes": [
+    "a mod-drawn full-screen canvas (own scenes, own HUD) while `engine.tile` stays put is not host world."
+   ]
+  },
+  "valheim": {
+   "title": "Valheim + BepInEx",
+   "gate": "VH-STABLE, VH-MOVE, VH-BUILD",
+   "features": [
+    {
+     "id": "VH-ID1",
+     "trait": "In the host's world: the session is played in a Valheim world (generated or custom-built area), driven by moving the Viking character and interacting.",
+     "evidence": "`engine.player.pos` / `on_ground` / `swimming` changing; screenshots of the character in the 3D world."
+    },
+    {
+     "id": "VH-ID2",
+     "trait": "Controls & camera: third-person over-the-shoulder character with WASD, sprint/jump/dodge with a stamina bar, mouse attack/block; hotbar 1–8.",
+     "evidence": "`engine.player.yaw` / `stamina`; screenshots from behind the character with health/stamina bars and the hotbar; actions WASD/Shift/Space/mouse."
+    },
+    {
+     "id": "VH-ID3",
+     "trait": "Host systems as building blocks: build pieces and prefabs (stock or new `mod.objects`), the hammer, crafting stations, items / inventory.",
+     "evidence": "`engine.player.in_place_mode` / `selected_piece`, `mod.objects`, `engine.inventory`; screenshots of pieces and crafting."
+    },
+    {
+     "id": "VH-ID4",
+     "trait": "Host systems as building blocks: creatures and NPCs (stock or new), biomes, day/night & weather, boats, portals, skills, messages (center/raven texts).",
+     "evidence": "`engine.nearby` creatures, `engine.player.biome`, `time.environment`, `player.at_helm`; screenshots of creatures/biomes/boats."
+    },
+    {
+     "id": "VH-ID5",
+     "trait": "Visual style: low-poly models with pixelated low-res textures under rich modern lighting/fog; stock Norse-themed UI.",
+     "evidence": "screenshots show the Valheim look; new prefabs matching that style."
+    }
+   ],
+   "notes": []
+  },
+  "voxelibre": {
+   "title": "VoxeLibre 0.92 on Luanti",
+   "gate": "VL-STABLE, VL-JOIN-STATE, VL-DIG-PLACE",
+   "features": [
+    {
+     "id": "VL-ID1",
+     "trait": "In the host's world: the session is played in a VoxeLibre/Luanti world (generated or custom-built), driven by moving the player and interacting with nodes / entities.",
+     "evidence": "`engine.pos` changing, `engine.screen` in-game; screenshots of the node world."
+    },
+    {
+     "id": "VL-ID2",
+     "trait": "Controls & perspective: first-person free-look with WASD + mouse, hotbar selection, left-click dig/punch, right-click place/use.",
+     "evidence": "`engine.yaw` / `pitch` changing; screenshots in first person with the wielded item, VoxeLibre hotbar, hearts and hunger; actions WASD/mouse."
+    },
+    {
+     "id": "VL-ID3",
+     "trait": "Host systems as building blocks: nodes (stock or registered) and structures built from them, items, formspec inventories (crafting, furnace, chests), redstone-like mechanisms.",
+     "evidence": "`mod.node_meta`, `engine.inventory` / `wielded`, `engine.screen = formspec`, `screen_text \"form: ...\"`."
+    },
+    {
+     "id": "VL-ID4",
+     "trait": "Host systems as building blocks: entities and mobs (mobs_mc or custom Lua entities), attached / ridden objects, day/night, weather, HUD texts / waypoints.",
+     "evidence": "`engine.objects_near`, `mod.entities`, `time_of_day`, `weather`, `screen_text \"hud: ...\"`."
+    },
+    {
+     "id": "VL-ID5",
+     "trait": "Visual style: cube world with Minecraft-like 16x16 pixel textures, blocky mobs, VoxeLibre HUD.",
+     "evidence": "screenshots show cube terrain with pixel textures and the stock HUD."
+    }
+   ],
+   "notes": [
+    "a custom camera and control scheme replacing the host's first-person controls (e.g. a scripted vehicle with its own camera) is a \"no\" for ID2 if it dominates the session."
+   ]
+  },
+  "xonotic": {
+   "title": "Xonotic 0.8.6",
+   "gate": "XO-STABLE, XO-MAPLIST, XO-SPAWN-LOADOUT",
+   "features": [
+    {
+     "id": "XO-ID1",
+     "trait": "In the host's world: the session is played on a Xonotic map (stock or new map), driven by moving the player in first person and interacting (pickups, triggers, combat when asked).",
+     "evidence": "`engine.match = running`, `engine.player.pos` changing; screenshots of the player in a 3D map."
+    },
+    {
+     "id": "XO-ID2",
+     "trait": "Controls & perspective: first-person view, WASD + mouse-look, jump, primary/secondary fire, weapon switching; fast movement physics.",
+     "evidence": "`engine.player.pos` / `weapon`; screenshots in first person with the weapon model and crosshair; actions WASD/mouse/space."
+    },
+    {
+     "id": "XO-ID3",
+     "trait": "Host systems as building blocks: map entities (triggers, items, teleporters, jump pads, doors), weapons and pickups, cvar tunings.",
+     "evidence": "`mod.entities` counts, `mod.cvars`, `engine.player.weapons` / `ammo`; screenshots of items / triggers."
+    },
+    {
+     "id": "XO-ID4",
+     "trait": "Host systems as building blocks: game modes and match flow, bots, scoreboard, centerprint / HUD messages.",
+     "evidence": "`engine.gametype`, `engine.match`, `engine.others`, `screen_text` centerprint; screenshots of HUD messages / scoreboard."
+    },
+    {
+     "id": "XO-ID5",
+     "trait": "Visual style: sci-fi 3D maps rendered by the Darkplaces engine, stock Xonotic HUD (health/armor/ammo panels, crosshair).",
+     "evidence": "screenshots show the stock HUD and maps rendered by the engine (a new map in another theme still counts when rendered by the engine)."
+    }
+   ],
+   "notes": []
+  }
+ }
+}

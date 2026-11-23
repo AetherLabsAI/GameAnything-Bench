@@ -1,0 +1,10 @@
+{
+  "Name": "NegSlowWalk",
+  "Author": "gab",
+  "Version": "1.0.0",
+  "Description": "gab negative mod: the farmer walks at half speed",
+  "UniqueID": "gab.neg.SlowWalk",
+  "EntryDll": "NegSlowWalk.dll",
+  "MinimumApiVersion": "4.0.0",
+  "UpdateKeys": []
+}

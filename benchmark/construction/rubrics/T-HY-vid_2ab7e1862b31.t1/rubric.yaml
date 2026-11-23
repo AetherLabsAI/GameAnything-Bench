@@ -1,0 +1,252 @@
+# GameAnything-Bench scoring material: never shown to agents during a trial.
+task_id: T-HY-vid_2ab7e1862b31.t1
+source_inventory:
+- 'clip 01:05.2-01:05.9: close-up of a motorbike wheel with a glowing cyan rim, riding down a rainy multi-lane road at night; cars with headlights
+  ahead, street lamps, wet asphalt'
+- 'clip 01:06.0-01:07.4: first-person view over a bike''s dashboard with a digital speed readout (values change), following a car down a wide
+  wet road toward a brightly lit structure spanning the road; yellow-striped crossing markings'
+- 'clip 01:07.5-01:08.5: side view of a rider on a glowing-wheel motorbike passing a car; pink and red neon signs and a large billboard with a
+  face behind, rain'
+- 'clip 01:08.6-01:10.9: view from beside a car (wing mirror), a motorbike approaching on the wet street; neon signs and lit towers in the background'
+- 'clip 01:11.0-01:12.5: a rider comes toward the camera under an elevated structure whose underside is outlined by bright red neon strips; signs
+  and billboards hang from it'
+- 'clip 01:12.6-01:14.0: close-up of the red-haired rider in a jacket, the red neon underside and billboards (''WHEN YOU ARE SKY HIGH'') behind,
+  cars in the distance'
+- 'clip 01:14.2-01:17.9: first-person ride on a raised road (speed readout visible at first) past a roadside canopy structure; tall towers with
+  vertical neon screens, rain, wet reflections'
+- 'clip 01:18.0-01:20.0: a motorbike and cars drive away from the camera on a wide rainy street with cyan-lit canopies; tall buildings carry giant
+  billboards with faces and neon brand signs'
+- 'clip 01:20.0-01:22.6: the same rainy street with traffic; the yellow title ''CITY'' then ''OF'' appears over the footage'
+- 'clip 01:22.7-01:26.9: the yellow title ''DREAMS'' over a slow view of a tower front stacked with neon signs and a tall pink video billboard'
+- 'clip audio: music only, no speech'
+- 'img01: street map (OpenStreetMap, Japanese labels): a broad bundle of rail tracks runs north-south; east of it a dense grid of small blocks
+  and narrow streets; wide arterial roads (orange) bound the grid to the north, south and east; the southern arterials pass under the rail corridor;
+  stations along the corridor'
+- 'img02: motion-blurred rainy night street: cars and a cyclist on a wet road, a train on an elevated bridge crossing behind the street, big neon
+  billboards above'
+- 'img03: rainy night street corner: wide zebra crossing, wet tiled pavement and road, people with umbrellas; behind, a green steel railway bridge
+  spans the road; buildings topped with large lit billboards; dark skyscrapers; a video-screen building at left'
+- 'img04: narrow side street at night in the rain, both sides walled floor by floor with projecting vertical illuminated signs and lanterns; a
+  red-lit arch gate across the street and a large video screen at the far end; umbrellas in the foreground'
+- 'img05: wide wet avenue at night with taxis and a truck; a large curved corner building covered with video screens and brand names; neon-lined
+  buildings and street trees on the other side'
+- 'img06: wide avenue at night with crosswalks and taxis; the red-lit arch gate at the mouth of a side street opening off the avenue; buildings
+  crowned with very large rooftop billboards and covered with signs'
+instructions_meta:
+  requirement_groups:
+    district layout:
+    - CR1
+    - CR2
+    - CR4
+    routes and connectivity:
+    - FP1
+    - FP2
+    atmosphere and lighting:
+    - VP1
+    landmark crossing:
+    - CR3
+    - VP2
+    streets and buildings:
+    - VP3
+    - VP4
+  explicit_requirements:
+  - type: keep
+    text: I really want to keep the rainy neon night, with the wet roads mirroring all the coloured lights.
+    covers:
+    - VP1
+  - type: specify
+    text: 'The layout should be like the map: a tight grid of small blocks and narrow streets right beside the wide rail corridor, boxed in by
+      the big avenues, with the side streets opening off the avenue.'
+    covers:
+    - CR2
+    - CR4
+rubric:
+  content_realization:
+  - id: CR1
+    item: The district has a wide multi-lane avenue that runs through it as its main road
+    anchors:
+      '1': a clearly wide, multi-lane avenue running through the district, much broader than the other streets
+      '0.5': a main street exists but is not clearly wider than the rest, or is only a short stub
+      '0': no wide avenue
+    evidence:
+    - - '01:06.0'
+      - '01:07.4'
+    - - '01:18.0'
+      - '01:20.0'
+    - img03
+    - img05
+    - img06
+  - id: CR2
+    item: 'The layout of the map: a dense grid of small blocks and narrow streets lies right beside a broad rail corridor and is bounded by wide
+      avenues'
+    anchors:
+      '1': a grid of small blocks and narrow streets, with a broad rail corridor along one side and wide avenues bounding it
+      '0.5': a narrow-street grid exists, but the rail corridor or the bounding avenues are missing or not beside it
+      '0': no grid of narrow streets, or a single street
+    evidence:
+    - img01
+  - id: CR3
+    cross: true
+    item: Where the avenue meets the rail corridor, an elevated railway bridge (images) spans the avenue's full width, and the avenue runs beneath
+      it as an underpass (the clip's overhead crossing the road passes under)
+    anchors:
+      '1': a raised railway bridge spanning the whole avenue at the rail corridor, with the road passing beneath it
+      '0.5': an overhead structure over the avenue that is not a railway bridge, or a rail line that does not cross the avenue
+      '0': no elevated crossing over the avenue
+    evidence:
+    - - '01:06.0'
+      - '01:07.4'
+    - - '01:11.0'
+      - '01:14.0'
+    - img01
+    - img02
+    - img03
+  - id: CR4
+    item: The narrow side streets open off the avenue, and one of them is entered under a lit arch gate at its mouth
+    anchors:
+      '1': several side-street mouths opening off the avenue, one marked by a lit arch gate
+      '0.5': side streets open off the avenue but no gate marks an entrance, or a gate stands with no side street behind it
+      '0': no side street opens off the avenue
+    evidence:
+    - img01
+    - img04
+    - img06
+  functions_playability:
+  - id: FP1
+    cross: true
+    item: The player can travel the wide avenue of the images from end to end without interruption, passing through the underpass beneath the
+      elevated crossing (the clip's red-lit underpass)
+    anchors:
+      '1': the avenue can be travelled end to end, passing beneath the elevated crossing
+      '0.5': a route exists, but the crossing is missing or blocks the way
+      '0': no traversable avenue route
+    evidence:
+    - - '01:06.0'
+      - '01:07.4'
+    - - '01:11.0'
+      - '01:12.5'
+    - - '01:14.2'
+      - '01:17.9'
+    - img01
+    - img02
+    - img03
+  - id: FP2
+    item: The player can walk from the avenue into the narrow side streets, move between them and come back to the avenue by another way, exploring
+      them as a district of blocks, not a single corridor
+    anchors:
+      '1': several side streets enterable from the avenue, linked into a loop or grid that leads back to the avenue
+      '0.5': side streets can be entered but are dead ends or decoration only
+      '0': only the avenue is reachable
+    evidence:
+    - img01
+    - img04
+    - img06
+  visual_presentation:
+  - id: VP1
+    cat: style
+    keyframes:
+    - '01:05.2'
+    - '01:15.7'
+    - '01:19.7'
+    item: 'Rainy neon night: falling rain, dark sky, and wet roads that reflect the coloured lights, in a teal-and-magenta palette'
+    anchors:
+      '1': rain, night and visible reflections on the road in the clip's cool teal / magenta light
+      '0.5': a neon night without rain or reflections, or rain without the neon palette
+      '0': a dry, daylight or neutral-lit scene
+    evidence:
+    - - '01:05.2'
+      - '01:06.0'
+    - - '01:14.2'
+      - '01:20.0'
+    - img03
+    - img05
+  - id: VP2
+    cat: key_moment
+    keyframes:
+    - '01:11.2'
+    - '01:12.2'
+    item: 'The underpass: the underside of the overhead crossing outlined by bright red neon strips over the road, set apart from the teal street
+      around it'
+    anchors:
+      '1': a red-lit overhead underside over the road, recognisable as the clip's underpass
+      '0.5': an overhead crossing without the red neon look, or red lighting not tied to an overhead structure
+      '0': none
+    evidence:
+    - - '01:11.0'
+      - '01:14.0'
+  - id: VP3
+    cat: spatial
+    keyframes:
+    - '01:19.7'
+    item: The wide avenue is lined by tall buildings dominated by large illuminated billboards and video screens on their tops and facades
+    anchors:
+      '1': the avenue flanked by buildings whose facades and rooftops are dominated by big lit billboards / screens
+      '0.5': some lit signs along the avenue, but no large billboards or screens dominating the buildings
+      '0': plain, unlit or sign-less buildings
+    evidence:
+    - - '01:18.0'
+      - '01:26.9'
+    - img03
+    - img05
+    - img06
+  - id: VP4
+    cat: spatial
+    item: A narrow side street walled on both sides, floor by floor, with stacked projecting vertical illuminated signs
+    anchors:
+      '1': a narrow street whose both sides are densely stacked with projecting vertical lit signs
+      '0.5': a narrow street with a few signs, not walled by dense vertical signage
+      '0': no sign-walled side street
+    evidence:
+    - img04
+    - img06
+play_suggestions:
+  FP1:
+  - 'travel the avenue from one end to the other: is there a passage beneath the elevated crossing, and does it stay open?'
+  - 'time a run along the avenue: is it clearly faster than walking (vehicle, sprint, the game''s own movement)? (unscored: the clip''s ride pace)'
+  FP2:
+  - enter a side street from the avenue and try to come back to the avenue by another street
+  - 'count dead ends: can the narrow streets be explored as a network?'
+  robustness:
+  - 'leave the district''s edges: are there invisible walls or holes into the void?'
+  - 'look around under the crossing and in a side street: are the lights, signs and rain consistent from every side?'
+  - check that rain and reflections persist after a respawn or a reload
+hybrid:
+  modality: video+image
+  roles:
+    video: 'the look and the roads: a rainy neon night, wet roads mirroring the lights, a teal-and-magenta palette, wide multi-lane roads carrying
+      traffic through the city, and a road running under an overhead structure lit by red neon strips'
+    images: 'the place and its layout: a street map (img01) of a dense grid of narrow streets beside a broad rail corridor, bounded by wide arterial
+      roads that pass under the tracks; night photos (img02-img06) of the wide avenue with crosswalks, an elevated railway bridge spanning the
+      street, sign-covered buildings with large billboards and video screens, and narrow side streets walled with vertical signs entered under
+      a lit arch gate'
+  cross_reference_requirement: 'Lay out the district from the images (a wide avenue crossed by an elevated railway bridge at the edge of a dense
+    grid of narrow, sign-packed side streets, as the map and photos show) and give it the clip''s look: rainy night, wet reflective roads, the
+    neon palette, and an underpass lit like the clip''s red-neon overpass that the avenue route runs through.'
+v4_map:
+  U1: CR1
+  U2: 'dropped: duplicate of VP1 (night, rain, wet reflections), now scored once there'
+  U3: VP3, VP4
+  U4: CR3
+  U5: CR2, CR4
+  FP1: FP1
+  FP2: FP2, CR4
+  VP1: VP1
+  VP2: VP2
+  VP3: VP3
+  VP4: VP4, CR4
+  VP5: CR3
+provenance:
+  source_yaml: T-HY-vid_2ab7e1862b31.t1.yaml
+  source_sha256: b406977f88b21280adc5a7da5a9916df83247005c63ac3443147b54f14681080
+  size_waiver: null
+  size_max: null
+  sources:
+  - refs:
+    - img01
+    - img02
+    - img03
+    - img04
+    - img05
+    - img06
+    images:
+    - hybrid/q10_ref0

@@ -1,0 +1,77 @@
+# Copied from the original pool_terraria.yaml (2026-10-31) + game / version / default_picks for gab.
+# Verified in game 2026-10-30, tModLoader v2026.8.3.0 (stable) on Terraria 1.4.4.9 (pool A/A x4 + 4 negatives, in the Steam sandbox).
+# gab port: gab/game/terraria/probes.py (= probes_terraria.py on a gab Seat), bridge/GAProbe + bridge/trp.sh unchanged.
+# NOT YET RUN LIVE through gab (2026-10-31): the old Steam sandbox lost Steam (mount namespaces) at its 10-30 restart; the Steam games move to
+#   the test sandbox, whose Steam setup is pending. `gab selfcheck terraria` (A/A + negatives NegFall / NegRecipe / NegSlime / NegOres) is the
+#   first thing to run there; the recorded 10-30 sessions pass the gab compare (tests/test_game_terraria.py).
+# Change for gab: TR-CRAFT's probe is written "craft,content.recipes" (was "content.recipes,craft"): the framework runs the probes
+#   named by the part of `probe:` before the first ".", which for the old order was only "content" (craft never ran). Same items,
+#   same comparison.
+# TR-COMBAT compare change (gab 2026-10-31): "hits landed of 4 swings" and the slime's top speed after a hit are
+#   no longer compared (they follow the slime's random hop: the test sandbox NegFall run 4 -> 2 hits, 5.5 -> 7.7 px/tick with the same sword and
+#   slime); compared instead: at least one hit lands, the hit's own knockback (5.5) and damage, contact damage, immunity, loot.
+# Re-verified on the test sandbox 2026-10-31 (tModLoader from the new Steam install, gab selfcheck): A/A 14/14; NegFall -> TR-MOVE (+ the
+#   TR-COMBAT flake above), NegRecipe -> TR-CRAFT, NegSlime -> TR-CONTENT + TR-COMBAT, NegOres -> TR-WORLDGEN.
+# default_picks: used for a task whose regression.yaml has no checked picks yet; every item comes from the same
+#   ~3.5 min session, so the picks only choose what is scored.
+
+game: terraria
+version: tModLoader v2026.8.3.0 (stable) / Terraria 1.4.4.9
+default_picks:
+- TR-MOVE
+- TR-DIG-PLACE
+- TR-CRAFT
+- TR-NPCS
+- TR-SAVE
+- TR-PERF
+
+# Base-capability pool, Terraria via tModLoader (v0.2, verified in game 2026-10-30, tModLoader v2026.8.3.0 stable on Terraria
+# 1.4.4.9, Steam app 1281930, Linux; the Steam install in the Steam sandbox)
+# Same rules as pool_minecraft.yaml: atomic base capabilities a task's change could break. Pass = same result as a vanilla
+# instance. Per task the drafter picks the 4-6 relevant ones and may add 0-2 task-specific items; a maintainer checks. Avoid correlated
+# picks: TR-CONTENT already flags any change of a vanilla item / NPC / projectile / tile stat, so pick it only when the task should
+# not touch stock content; TR-COMBAT and TR-CONTENT both see a changed Blue Slime.
+# Mod surface: tModLoader C# mods (.tmod, or a mod source folder that the probe module builds with tModLoader's own packer).
+# Probes (origin): probes_terraria.py (host side, docker exec into the Steam sandbox; whole-sandbox lease) + the bridge mod
+#   GAProbe (C#, inactive unless $GAPROBE is set; source in the evidence folder bridge/). `probe: x.y` = field y of probe x
+#   (fields joined with +); `a,b` = all of these probes must pass.
+# Runtime: a PRIVATE copy of the Steam tModLoader install (/home/player/pool-probes/terraria/steamapps/common/tModLoader, logs in its
+#   own tModLoader-Logs; Terraria content read from the Steam install) so other users' running tModLoader is never touched; a
+#   private Xvfb display :151 + VirtualGL (vglrun -d egl). One session = headless server (world generated WITH the mods, seed
+#   "gaprobe1", small world, + the probe player made like the character screen does) -> client (-skipselect, all in-world probes in
+#   a stone arena built in the sky above spawn; the bridge drives the player through ModPlayer.SetControls + the cursor, uses the
+#   game's own routines, reseeds Main.rand before each probe, suppresses natural spawns outside the enemies probe) -> client again
+#   (reload check). ~3 min per session, 60 updates/s at 0.7-0.8 ms per update.
+# A/A calibration 2026-10-30 (fresh vanilla sessions aa1/aa2/aa3 + aa4 on the final bridge build; all pairs pass all 13 items):
+#   identical: content, worldgen (seeded generation is deterministic), new player, inventory, movement, accessories (boots 6.02),
+#   dig ticks, time, town NPCs / shops / housing, crafting, boss, save. Varying: melee hit damage mean 7.75-8.67 (vanilla damage
+#   variance), slime knockback 4.76-5.5, contact damage 6-8, the copper ore's random extra drop (183), spawn totals (day 24-30,
+#   night 48-63, cavern 79-87; a negative run gave 133: totals are compared in a 0.4x-2.5x band plus "no family lost"),
+#   update 0.69-0.9 ms at 60 updates/s, 0 error log entries. 5 projectiles roll random defaults per process (ignored).
+# Negative checks 2026-10-30 (vs aa1): no fall damage -> only TR-MOVE (50 -> 0); Wooden Sword recipe disabled -> only TR-CRAFT
+#   (recipe list + crafting); Blue Slime 2x life / 3x damage -> TR-CONTENT + TR-COMBAT (life 25 -> 50, contact 8 -> 22); worldgen
+#   without the "Shinies" pass -> only TR-WORLDGEN (tile counts, spawn-area hash).
+#   Evidence: the verification logs (results/, reproduce.sh, bridge/, negative_mods/, screenshots/).
+
+# gate (gab/eval/regression.py): the STABLE item (no real crash / hang, no new fatal error kind) + the host-present
+# item(s): the stock content they reach must still be there on the modded game (numbers NOT compared with vanilla; only a mod that
+# removes / replaces the host game wholesale fails). Scores are 0 unless the gate passes. Not chosen per task.
+gate: [TR-STABLE, TR-MOVE, TR-DIG-PLACE]
+
+always:
+  - {id: TR-STABLE, capability: "no crash or hang in the three game starts, and no more ERROR/FATAL or exception log entries (client.log, server.log) than vanilla", probe: log_errors, status: ready}
+
+pool:
+  - {id: TR-CONTENT, capability: "every vanilla item, NPC, projectile and tile keeps its stats (damage, use time, knockback, value, life, defense, AI style, size, tile flags ...; additions allowed); flags intended edits of stock content too", probe: content.items+npcs+projectiles+tiles, status: ready}
+  - {id: TR-MOVE, capability: "running (top speed 3.08 px/tick in 37 ticks, stops in 15), full jump 6.1 tiles / 50 ticks, short hop 2.1 tiles, max fall speed 10, fall damage 50 from 30 tiles, the Grappling Hook latches onto a ceiling and pulls the player up", probe: move, status: ready}
+  - {id: TR-DIG-PLACE, capability: "the Copper Pickaxe mines dirt (16 ticks), stone / copper ore / wood (31 ticks) and they drop their item; a dirt block and a Work Bench are placed by item use (one item used); the Wooden Hammer removes a wall", probe: dig, status: ready}
+  - {id: TR-COMBAT, capability: "the Copper Broadsword hits a Blue Slime (9 damage source, knockback 5.5, 3 hits land), the slime's contact damage (6-8) and the player's 40-tick immunity and knockback, slime loot (gel)", probe: combat, status: ready}
+  - {id: TR-ENEMIES, capability: "the game's spawner gives the vanilla spawn table by biome and time: surface day (slimes, critters), surface night (zombies, demon eyes), caverns (bats, skeletons, worms, slimes) in vanilla proportions", probe: enemies, status: ready}
+  - {id: TR-BOSSES, capability: "the Suspicious Looking Eye summons the Eye of Cthulhu at night (2800 life, 15 damage, 12 defense), it charges the player, enters phase 2 below half life and spawns Servants, drops its loot and sets downedBoss1", probe: boss, status: ready}
+  - {id: TR-NPCS, capability: "the Guide is there and talks; the stock shops sell their vanilla items at vanilla prices (additions allowed); a built wooden house passes the housing check and a Merchant moves in", probe: npcs, status: ready}
+  - {id: TR-CRAFT, capability: "every vanilla recipe still exists (additions allowed); with 30 wood the by-hand and Work Bench recipe lists are vanilla and crafting a Wooden Sword uses 7 wood", probe: "craft,content.recipes", status: ready}
+  - {id: TR-DAYNIGHT, capability: "time runs at 1x (300 ticks per 300 updates), day 54000 / night 32400 ticks, dusk and dawn switch day/night and the moon phase advances (random events like the Blood Moon are not probed)", probe: time, status: ready}
+  - {id: TR-WORLDGEN, capability: "a world generated with the probe seed is identical to vanilla: size, spawn point, surface/rock layers, dungeon, evil, every tile count and the tiles + walls + liquid around spawn (not for tasks that change world generation)", probe: worldgen, status: ready}
+  - {id: TR-INVENTORY, capability: "a new player gets the vanilla start items (copper shortsword, pickaxe, axe), 100 life / 20 mana and the vanilla slot counts; accessories work (Hermes Boots: top speed 6.02 after 280 ticks, Cloud in a Bottle double jump 11.1 tiles)", probe: "newplayer,inventory,accessory", status: ready}
+  - {id: TR-SAVE, capability: "Save & Quit writes the world (a placed tile, downedBoss1, time, the moved-in Merchant) and the player (an inventory item, life); a fresh start reads them back", probe: "save,saveload", status: ready}
+  - {id: TR-PERF, capability: "in-world update cost not much higher than vanilla (median update <= 2x or +1 ms, >= 85% of vanilla updates/s)", probe: perf, status: ready}

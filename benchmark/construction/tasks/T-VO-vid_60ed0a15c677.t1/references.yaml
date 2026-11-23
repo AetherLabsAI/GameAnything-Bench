@@ -1,0 +1,24 @@
+# Reference material: fetched from the HF dataset into $GAB_MEDIA_DIR/<task>/ by `gab media fetch` (sha256 checked).
+# The agent gets the files only (no title, author, caption or source): this file is never shown to it.
+task_id: T-VO-vid_60ed0a15c677.t1
+refs:
+- id: c01
+  kind: video
+  file: clip_01.mp4
+  video_id: vid_60ed0a15c677
+  source:
+    title: 09 - Madison Keys vs. Qinwen Zheng Highlights ｜ 2026 US Open Round 3
+    url: null
+    channel: null
+    youtube_id: null
+  range:
+    start: 49.6
+    end: 99.1
+    text: 0:49.60-1:39.10
+  duration_s: 49.5
+  size_bytes: 6632367
+  format: mp4 H.264 720p, AAC audio
+  hf_path: media/T-VO-vid_60ed0a15c677.t1/clip_01.mp4
+  sha256: 3f4f52f1c3a66db84aa311be48649de64abfd0538bdb10a870d649c147af6408
+  rights_note: 'Copyrighted sports broadcast with named athletes and sponsor branding: use as a private reference only, do not redistribute the
+    footage, and do not reproduce player likenesses, names or sponsor logos in the built game.'

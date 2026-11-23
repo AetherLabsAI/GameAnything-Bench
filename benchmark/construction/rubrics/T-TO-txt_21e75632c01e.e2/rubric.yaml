@@ -1,0 +1,351 @@
+# GameAnything-Bench scoring material: never shown to agents during a trial.
+task_id: T-TO-txt_21e75632c01e.e2
+source_inventory:
+- 'c38.p001-c38.p002: the Orion runs south on the surface; first floating ice, the ice blink, ever larger and more brilliant ice masses; the captain
+  slips through narrow passes that close behind him; bitter cold outside, electric warmth inside; the nights are lengthening toward the six-month
+  polar night'
+- 'c38.p003: the polar circle is crossed; ice on all sides; the captain finds pass after pass, then rams and splits the ice-fields; gales, fog,
+  ice coating the hull; on 18 March the vessel is stopped by an immovable barrier of ice mountains'
+- 'c38.p004-c38.p005: ''An iceberg!''; noon position taken; a frozen, silent plain; no way forward or back, every pass closed behind; fresh ice
+  forms round the hull and the Orion is held fast'
+- 'c38.p006-c38.p021: Marchand thinks they are caught; Hargrave declares the Orion will go to the pole, not over the ice but under it, if the
+  pole lies on open sea'
+- 'c38.p022-c38.p035: the reasoning: deep water stays liquid below the frozen surface, an iceberg is about one part above to three below, so the
+  Orion can pass beneath; the dangers are days without renewing air (the reservoirs can be filled) and a pole sea that might be iced over (the
+  spur could break the ice); open water at the pole is possible'
+- 'c38.p036-c38.p039: pumps store air in the reservoirs; about ten men free the hull with pickaxes; the Orion dives below the iceberg''s base
+  and heads for the pole, about forty hours away'
+- 'c38.p040: the night run; on rising the vessel strikes the ice ceiling again and again; Marchand charts the thickness; the daily air renewal
+  is overdue; the ice slowly thins into an ice-field'
+- 'c38.p041-c39.p001: ''The sea is open!'': an open polar sea beyond the iceberg, birds and fish, milder air, the iceberg on the northern horizon'
+- 'c39.p002-c39.p005: are they at the pole? the captain will take bearings at noon if the sun shows through the fog'
+- 'c39.p006-c39.p010: an island and a large land beyond, perhaps a continent (Maury''s theory); the boat lands; Tom Harker stays away; Hargrave
+  sets foot first and silently takes possession'
+- 'c39.p011-c39.p013: volcanic soil, lava and pumice, smoking sulphurous cracks; meagre plant life, shellfish, swarms of birds (penguins, albatrosses,
+  petrels); Gaspard''s joke about petrels as lamps'
+- 'c39.p014-c39.p015: nesting grounds; the fog stays; noon passes without the sun; snow; ''Till to-morrow'''
+- 'c39.p016-c39.p023: a snowstorm; the Orion moves further south along the coast; on 20 March Marchand and Gaspard land again; a bay crowded with
+  seals, described at length; seals are harmless unless their young are attacked'
+- 'c39.p024-c39.p031: behind a promontory bellowing is heard; a slippery climb; a white plain covered with walruses at play'
+- 'c39.p032: the walruses described; back at the landing the captain waits with his instruments; noon again without sun; the next day is the equinox,
+  after which the sun is gone for six months: the last chance'
+- 'c39.p033-c39.p039: Hargrave''s method: with the chronometer only; if at noon on the 21st the sun''s disc is cut exactly by the northern horizon,
+  they are at the pole'
+- 'c39.p040-c39.p042: the morning of the 21st, the weather lightening; Tom refuses to come, his sullenness growing; the boat crosses among whales
+  and medusae'
+- 'c39.p043: the climb to a volcanic peak; the view over the sea and the endless land; barometer reading; the sun sinks along the horizon; Marchand
+  holds the chronometer'
+- 'c39.p044-c39.p051: ''Twelve!'', ''The South Pole!'': the sun cut in equal halves; Hargrave takes possession of the land in his own name, unfurls
+  a black banner with a gold N and bids the sun farewell for the six-month night'
+- 'c40.p001 (first part): departure on 22 March as night falls and new ice forms; seals and walruses stay on the coast; the Orion dives and runs
+  north under the iceberg'
+- 'c40.p001 (rest)-c40.p010: at three in the morning a violent shock; the Orion lies motionless on its side; Tom and Gaspard join Marchand; the
+  manometer shows a depth of over 180 fathoms'
+- 'c40.p011-c40.p022: the captain arrives, uneasy: ''an accident this time''; the vessel is stranded by natural law, not by error'
+- 'c40.p023-c40.p031: an undermined iceberg has turned over, struck the Orion and lifted it; the pumps raise the vessel with the block until it
+  stops; the Orion rights itself'
+- 'c40.p032-c40.p042: the Orion floats in a tunnel of ice, walls on both sides, ceiling above, the block below; the lantern makes the ice blaze
+  like gems; at full speed the glare blinds them'
+- 'c40.p043-c40.p058: a shock at the bow: that end is closed; the Orion reverses toward the other opening; Marchand reads his own book without
+  noticing; the three stay together'
+- 'c40.p059-c41.p001: a second shock from behind; the iceberg has shifted and closed every outlet: they are prisoners of the iceberg'
+- 'c41.p002-c41.p009: Hargrave: death by crushing or by suffocation; the reservoirs hold two days'' air and have already been drawn on; they will
+  cut through the wall, the thinnest side found by sounding; the Orion is set down on the lower ice'
+- 'c41.p010-c41.p014: Tom Harker offers to work with the pickaxe for the general safety'
+- 'c41.p015: the crew in diving suits; soundings: the floor is the thinnest side (about ten yards); a trench is cut round the vessel''s outline;
+  shifts of two hours, Marchand and Gaspard among the diggers; the air aboard is fouled; twelve hours cut one yard: the work would take far longer
+  than the air lasts; Tom: even once out they are still under the iceberg'
+- 'c41.p016-c41.p018: the side walls are freezing and closing in; the captain: the only chance is to go faster than the freezing'
+- 'c41.p019: more digging; suffocating air aboard, no means of absorbing the carbonic acid; reserve air let into the vessel; on 26 March the walls
+  are visibly closing, Marchand despairs and the captain takes him aboard'
+- 'c41.p020-c41.p029: freezing could burst the ice but would crush the Orion, so it must be stopped; the reservoirs will be empty after the next
+  day'
+- 'c41.p030-c41.p038: ''Boiling water!'': the distilling machines heat sea water that the pumps inject outside; the temperature rises and the
+  freezing is stopped'
+- 'c41.p039-c41.p042: 27 March, two more days of work needed; Marchand near collapse, Gaspard wishes he could stop breathing to leave him air;
+  the diggers hand on their breathing apparatus in turn, the captain first; two yards remain; the reservoirs are almost empty'
+- 'c41.p043-c41.p047: the sixth day: the captain decides to crush the remaining ice; the vessel is floated over the trench and flooded to add
+  weight; the ice cracks and the Orion falls through; pumps stop the fall and it runs north under the iceberg'
+- 'c41.p048: Marchand suffocating; Tom and Gaspard give him the last air of one apparatus; near the surface the Orion tilts and rams the thin
+  ice-field from beneath until it breaks through; the panel opens and fresh air pours in'
+instructions_meta:
+  requirement_groups:
+    story progression and ending:
+    - FP1
+    obstacle and the way past it:
+    - CR2
+    - FP2
+    - VP1
+    reaching and confirming the goal:
+    - CR1
+    - CR3
+    - FP3
+    - VP2
+    the crisis and its stakes:
+    - CR4
+    - FP4
+    the way out of the crisis:
+    - CR5
+    - CR6
+    - FP5
+    - FP6
+  explicit_requirements:
+  - type: specify
+    text: 'When the water around the trapped vessel starts freezing and closing in, the way to stop it should be the one from the text: heat the
+      water around the vessel.'
+    covers:
+    - CR5
+    - FP5
+rubric:
+  content_realization:
+  - id: CR1
+    item: The game shows Captain Hargrave as the commander whose bold, near-rash ambition drives the vessel to the pole and who claims the pole
+      for himself, with Professor Marchand, the narrator, aboard as his companion who goes through the expedition and its dangers
+    anchors:
+      '1': Hargrave is present as the commander, his daring ambition sets the goal of reaching the pole and he claims it as his own, and Marchand
+        is present as the companion aboard who goes with him through the pole and the ice trap
+      '0.5': a captain leads the vessel, but his ambition as the driving force or his personal claim to the pole is missing, or Marchand is missing
+        or plays no part
+      '0': no captain character, or the goal comes from somewhere else
+    evidence:
+    - c38.p005
+    - - c38.p006
+      - c38.p017
+    - - c39.p007
+      - c39.p009
+    - c39.p043
+    - - c39.p047
+      - c39.p049
+    - c41.p015
+    - c41.p019
+    - c41.p048
+  - id: CR2
+    item: 'The game''s world is laid out as the route south: an ice-choked sea ending in an impassable ice barrier with open water beneath it,
+      and beyond the barrier an open polar sea with the polar land on its shore'
+    anchors:
+      '1': an ice barrier shuts off the sea, it reaches down only so far with water passable beneath it, and an open polar sea with a polar land
+        lies beyond it
+      '0.5': the barrier and the open polar sea both exist, but not connected by a way beneath the ice, or the open sea and land do not lie beyond
+        the barrier
+      '0': no ice barrier, or no open polar sea or land beyond it
+    evidence:
+    - c38.p003
+    - c38.p005
+    - - c38.p019
+      - c38.p023
+    - c38.p041
+    - c39.p001
+    - c39.p006
+  - id: CR3
+    item: The game establishes that the pole is confirmed by seeing the sun, and that the coming long polar night makes the last day before it
+      the final chance
+    anchors:
+      '1': the game makes clear that sighting the sun confirms the pole and that the polar night about to begin leaves a last chance (no exact
+        method required)
+      '0.5': a confirmation of the pole is in the game, but not what it depends on, or without the polar-night deadline
+      '0': 'no confirmation of the pole: the arrival is simply declared'
+    evidence:
+    - c39.p003
+    - c39.p014
+    - c39.p032
+    - - c39.p033
+      - c39.p037
+    - - c39.p043
+      - c39.p045
+  - id: CR4
+    item: 'On the way back an overturning iceberg strikes the vessel and leaves it in a prison of ice closed on every side: walls to both sides,
+      the iceberg as a ceiling, ice below, every exit shut'
+    anchors:
+      '1': the trap happens on the return, is caused by an iceberg turning over, and the vessel ends in an enclosure of ice with walls, ceiling
+        and floor and no open exit
+      '0.5': an ice trap exists, but without the overturning iceberg as its cause, or it is not closed on every side
+      '0': no ice trap
+    evidence:
+    - c40.p001
+    - c40.p024
+    - c40.p032
+    - c40.p061
+    - c41.p001
+  - id: CR5
+    item: In the ice prison the water around the vessel freezes and closes in, threatening to crush it, and the answer to this threat is heating
+      the water around the vessel
+    anchors:
+      '1': the freezing walls closing in are in the game as a threat of crushing, together with heating the surrounding water as the way to stop
+        them
+      '0.5': the freezing threat is there without the heating, or the heating without the threat it answers
+      '0': missing
+    evidence:
+    - c41.p016
+    - c41.p018
+    - c41.p020
+    - c41.p026
+    - - c41.p032
+      - c41.p038
+  - id: CR6
+    item: 'The escape goes down through the ice floor, the thinnest side: once it is thinned, the vessel breaks through it by its own weight and
+      then rises through thin ice to open air'
+    anchors:
+      '1': the way out is through the thinned floor of the prison, broken by the vessel's own weight, followed by breaking up through thin ice
+        into open air
+      '0.5': an escape through the ice exists, but not by the vessel's own weight on the thinned floor, or it ends without reaching open air
+      '0': no escape from the ice prison
+    evidence:
+    - c41.p008
+    - c41.p015
+    - - c41.p043
+      - c41.p045
+    - c41.p048
+  functions_playability:
+  - id: FP1
+    item: The experience runs as one progression through the story's key situations in their order (ice barrier, under-ice passage, pole, trap,
+      escape) and ends when the vessel breaks out to open air
+    anchors:
+      '1': the player goes through these situations in this order, the experience reaches a clear ending with the break-out, and wherever the
+        player can fail there is a clear failure and a way to retry
+      '0.5': the situations exist but out of order, one is missing, there is no clear ending, or a challenge that can fail has no clear failure
+        or no way to retry
+      '0': 'no progression: isolated scenes or free roaming'
+    evidence:
+    - c38.p005
+    - c38.p041
+    - c39.p045
+    - c40.p061
+    - c41.p048
+  - id: FP2
+    item: The ice barrier cannot be crossed on the surface; the player gets through by going beneath the ice and can surface only once the ice
+      above thins out
+    anchors:
+      '1': the surface route is blocked, the player passes under the ice, and surfacing is impossible under thick ice and possible where it has
+        thinned
+      '0.5': the player can pass under the ice, but the ceiling never blocks surfacing, or the barrier can simply be bypassed
+      '0': the barrier cannot be passed beneath in play
+    evidence:
+    - c38.p003
+    - c38.p005
+    - c38.p019
+    - c38.p040
+    - c38.p041
+  - id: FP3
+    item: At the pole, reaching the pole must be confirmed by a step that conditions can block, with a last possible chance before the long night
+    anchors:
+      '1': the confirmation of the pole can fail or be delayed by conditions, with a final chance
+      '0.5': a confirmation is required but it cannot fail or has no deadline
+      '0': the pole is reached without any confirmation step
+    evidence:
+    - c39.p014
+    - c39.p032
+    - c39.p037
+    - - c39.p043
+      - c39.p045
+  - id: FP4
+    item: While the vessel is trapped under the ice, a depleting air supply is the time limit the player must beat
+    anchors:
+      '1': the player cannot leave the trap by an exit, the air runs down noticeably to the player, and running out has a consequence (failure
+        or loss)
+      '0.5': the air limit is only narrated, or running out has no consequence
+      '0': no air limit while trapped
+    evidence:
+    - c41.p001
+    - c41.p004
+    - c41.p019
+    - c41.p039
+    - c41.p042
+  - id: FP5
+    item: The freezing water closes in on the trapped vessel unless the player stops it, and heating the water around the vessel stops it
+    anchors:
+      '1': left alone, the freezing visibly closes in with a consequence, and heating the surrounding water stops it
+      '0.5': the freezing closes in, but stopping it does not depend on heating the water, or ignoring it has no consequence
+      '0': the freezing threat does not act in play
+    evidence:
+    - c41.p016
+    - c41.p019
+    - c41.p026
+    - c41.p035
+    - c41.p038
+  - id: FP6
+    item: Working through the ice alone is too slow for the air, so the player must break through the thinned ice with the vessel itself
+    anchors:
+      '1': work on the ice makes progress but too slowly to finish before the air runs out, and the break-out succeeds by the vessel's own force
+        or weight once the ice is thinned
+      '0.5': the escape is a single action or digging alone, or breaking through works before any thinning
+      '0': no escape sequence
+    evidence:
+    - c41.p015
+    - c41.p042
+    - c41.p045
+    - c41.p048
+  visual_presentation:
+  - id: VP1
+    cat: style
+    item: 'The polar sea on the way south looks ice-choked: floating ice masses everywhere and a continuous wall of ice mountains across the sea'
+    anchors:
+      '1': a polar sea crowded with ice masses and a continuous wall of high ice across it
+      '0.5': polar ice is shown, but scattered or without a continuous wall of ice
+      '0': no polar ice setting
+    evidence:
+    - c38.p001
+    - c38.p003
+    - c38.p005
+  - id: VP2
+    cat: key_moment
+    item: 'The pole moment: the sun stands at the horizon, cut in half by it, as the long night begins'
+    anchors:
+      '1': a recognisable moment of the sun halved by the horizon at the pole
+      '0.5': a sunset or arrival moment without the sun cut by the horizon
+      '0': none
+    evidence:
+    - - c39.p043
+      - c39.p046
+    - c39.p051
+play_suggestions:
+  FP1:
+  - 'play from the start to the end: are the situations met in order, and does the break-out end it?'
+  - 'fail during the trap (and at any other challenge that can fail): is there a clear failure and a way to retry?'
+  FP2:
+  - try to cross the barrier on the surface or go around it
+  - try to surface while the ice overhead is still thick, then again where it thins
+  FP3:
+  - try to confirm the pole at the wrong time or in bad conditions
+  - 'miss the last chance: what happens?'
+  FP4:
+  - after the trap closes, look for any open exit
+  - 'wait without acting: does the air run down and does running out matter?'
+  FP5:
+  - 'ignore the freezing: does the space close in?'
+  - 'heat the water around the vessel: does the freezing stop?'
+  FP6:
+  - 'dig only: does it finish before the air runs out?'
+  - try to break out before the ice has been thinned
+  robustness:
+  - 'leave in the middle of the trap and come back: is the air and the progress kept?'
+  - rush through the under-ice passage without stopping
+  - replay after an escape
+v4_map:
+  U1: CR2, FP2 (barrier with water beneath -> CR2; passing under and surfacing -> FP2)
+  U2: 'dropped: mechanism already scored by FP4 (air reserve as the time limit)'
+  U3: CR1
+  U4: CR4, FP1 (trap and its cause -> CR4; order of turning points -> FP1)
+  U5: CR3
+  U6: CR6, FP6 (break-out through the floor by weight -> CR6; digging too slow -> FP6)
+  U7: CR5, FP5
+  FP1: FP1
+  FP2: FP2, CR2 (existence of barrier and passage split off to CR2)
+  FP3: FP3, CR3 (what confirms the pole and its deadline -> CR3)
+  FP4: FP4, CR4 (trap with every exit closed split off to CR4)
+  FP5: 'FP5, FP6, CR5, CR6 (split: freezing -> FP5 / CR5; break-out -> FP6 / CR6)'
+  VP1: VP1 (narrowed to the look; the closing-in route is in CR2 / FP2)
+  VP2: 'CR2 (spatial: which places exist and how they connect)'
+  VP3: VP2
+  VP4: 'CR4 (spatial: the enclosure''s arrangement of walls, ceiling, floor)'
+  VP5: 'dropped: user modification (glacier land and climbable ice peak), moved to editing_seed.yaml'
+provenance:
+  source_yaml: T-TO-txt_21e75632c01e.e2.yaml
+  source_sha256: 9836f40b7820a5f37e5ed88f3cbdb4885ab0beba1349662321baf778c6056f23
+  size_waiver: null
+  size_max: null
+  sources:
+  - ref: t01
+    title: Twenty Thousand Leagues under the Sea
+    author: Jules Verne
+    text_id: txt_21e75632c01e
+    excerpt_id: e2

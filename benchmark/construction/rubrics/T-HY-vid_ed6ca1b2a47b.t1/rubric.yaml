@@ -1,0 +1,362 @@
+# GameAnything-Bench scoring material: never shown to agents during a trial.
+task_id: T-HY-vid_ed6ca1b2a47b.t1
+source_inventory:
+- 'clip 00:02.4-00:03.9: narrow cobbled alley between ochre half-timbered walls; dark, blob-like figures in straw boater hats move at its far
+  end'
+- 'clip 00:03.9-00:06.9: close-up, a blond man in a pink-and-grey diamond-patterned cloak with a blue pendant has his arm round a girl in a straw
+  hat with a red band and a green dress; they walk quickly down the alley, the dark figures reaching after them from behind (00:06.4-00:06.9)'
+- 'clip 00:07.4-00:11.3: they hold hands and are seen walking in the air above steep red-tiled roofs of half-timbered houses; pink-and-yellow
+  banners and a crowd in the street below; text card ''From Academy Award-winning director Hayao Miyazaki'' (00:09.1-00:11.3)'
+- 'clip 00:11.3-00:12.9: the girl lands on a covered timber balcony while the man stays outside in the air; he stands against blue sky with the
+  cloak spread'
+- 'clip 00:13.4-00:14.4: the girl (braid, green dress) embraces a blonde young woman in pink at a large wooden door'
+- 'clip 00:14.9-00:16.4: a dim, cluttered hat shop: shelves and stands of hats, green patterned walls, red curtains; the girl stands in it'
+- 'clip 00:16.9-00:17.9: a large woman in a dark wide hat and furs with a red necklace looms in the shop, smiling; the girl, holding her hat,
+  looks round startled'
+- 'clip 00:18.4-00:20.4: a dark smoky shot, then a hunched grey-haired old woman in the same green dress stares at her own old face in the shop
+  mirror'
+- 'clip 00:20.9-00:22.2: text card ''The critically acclaimed epic adventure'' over a sunset hillside; a small figure with a red scarf on the
+  grassy rocks'
+- 'clip 00:22.4-00:22.9: an old woman in a red head-scarf and apron in an interior; a round dial with four coloured segments on the wall by the
+  door'
+- 'clip 00:41.0: close-up of a young woman with silver-grey hair against a night sky'
+- 'clip 00:41.5-00:43.0: the silver-haired young woman in a blue dress leans over a brick hearth where a small orange flame with eyes and a mouth
+  sits on logs'
+- 'clip 00:43.5-00:44.0: she floats or falls against a burning sunset sky'
+- 'clip 00:44.5-00:45.5: a huge patchwork castle of domes, little houses, turrets, chimneys and pipes, venting steam and throwing light beams,
+  stands on thin legs on a rocky hilltop under a dark dusk sky'
+- 'clip 00:46.0-00:47.4: a scarecrow with a grinning turnip-like head, top hat and outstretched arms on one pole hangs over the old woman (red
+  shawl, straw hat, walking stick) on a rocky slope'
+- 'audio: no transcript is available inside the clip ranges; nothing scored rests on speech'
+- 'text p001-p002: film lead; a fictional kingdom with magic and early 20th-century technology at war; Sophie, a young milliner, is turned into
+  an old woman by a witch who enters her shop; she meets the wizard Howl, who refuses to fight for the king'
+- 'text p003-p004: plot of the film''s first act: Sophie, eldest of three sisters, meets Howl on her way to her sister Lettie; at home the Witch
+  of the Waste turns her into an old woman, unable to reveal the curse; she leaves home through the countryside; a living scarecrow, ''Turnip
+  Head'', leads her to Howl''s moving castle, which she enters uninvited; she meets the apprentice Markl and the fire demon Calcifer, source of
+  the castle''s magic and movement; Calcifer will break her curse if she breaks his link with Howl; she tells Howl that Calcifer hired her as
+  a cleaning lady'
+- 'text p005: the war; the King summons Howl; Sophie goes to the king posing as Howl''s mother with a charmed ring; Suliman drains the Witch of
+  the Waste''s power; Howl rescues Sophie; the castle''s magic door opens on two false shopfronts'
+- 'text p006: Howl''s life is bound to Calcifer''s; Howl turns into a bird-like creature, harder each time to undo; the castle is linked to Sophie''s
+  home; the town is bombed; Sophie takes Calcifer out of the fireplace and the castle collapses; the Witch grabs Calcifer, who holds Howl''s heart;
+  Sophie falls into a chasm'
+- 'text p007: the ring leads Sophie into the past, where young Howl catches a falling star, Calcifer, and gives him his heart; back in the present
+  the heart is returned to Howl, reviving him and freeing Calcifer; Sophie''s curse is broken but her hair stays silver; her kiss turns Turnip
+  Head back into Justin, the missing enemy prince; the war ends; they fly off in a new flying castle'
+- 'text p008-p009: comparison with the novel: the film''s castle is a ''rotund collage of chimneys, roofs, steam pipes, and other odd appendages,
+  borne along on mechanized bird legs'', vaguely organic, driven by steam and magic; Calcifer is endearing; fantastic elements shown as mundane
+  routine'
+- 'text p010-p012: novel plot: Sophie Hatter, eldest of three in Market Chipping, Ingary, resigned to running the family hat shop; the Witch of
+  the Waste turns her into a crone; she becomes cleaning lady to the wizard Howl and bargains with his fire demon Calcifer; neither Howl nor Calcifer
+  can disclose the contract''s main clause, so Sophie must work it out herself'
+- 'img01: ink-and-watercolour painting of the castle: a heap of small houses, turrets, riveted metal domes with eye-like portholes, cannon-like
+  pipes and a gaping jaw-like front, on legs, in clouds of smoke'
+- 'img02: castle design sheet: the same patchwork body with chimneys pouring smoke on thin bird-like legs, a tiny figure beside it; sketches of
+  old Sophie, of the scarecrow with a hat, and of a jointed leg'
+- 'img03: rough sketches of the castle from several sides, walking over a hill, a door low in its body with an old woman with a stick at it, the
+  castle crouched on the ground'
+- 'img04: watercolour sketch of a hunched old woman with a stick crouching at a big hearth where a flame with a face burns under a hood, kettle
+  and pans around'
+- 'img05: watercolour of a blond young man in a pink-and-dark-green diamond-patterned jacket with a red pendant, a flame with a face behind him,
+  a plate before him'
+- 'img06: character sketches: old woman with a braid, a dark-haired young man, a boy in a green waistcoat, the blond man in the diamond jacket
+  with the flame demon behind, a startled old woman (Japanese name labels)'
+- 'img07: watercolour of a girl in a hat and long dress with a braid facing a tall blond man in a long pink-and-green diamond cloak; a pencil
+  sketch; a layout sheet with the blond man and other figures'
+- 'img08: model sheet of the girl: long braid tied with a ribbon, high-collared buttoned long dress, brimmed hat, turnaround views'
+- 'img09: pencil sketches of the wizard''s figure in the long diamond-patterned coat: running, from behind, reaching out a hand'
+- 'img10: film still of the castle on a rocky hilltop under a stormy dusk sky: domes, little houses, chimneys venting steam, a light beam, thin
+  legs'
+- 'img11: film still of the flame demon in the hearth: a round orange flame with big eyes and a wide mouth on logs, two small carved figures either
+  side'
+instructions_meta:
+  requirement_groups:
+    story sequence and settings:
+    - CR3
+    - CR4
+    - FP1
+    - VP1
+    lasting change to the protagonist:
+    - CR1
+    - FP2
+    - VP2
+    goal and its resolution:
+    - CR5
+    - FP3
+    key location and its inhabitants:
+    - CR2
+    - FP4
+    - VP3
+    - VP4
+  explicit_requirements:
+  - type: specify
+    text: Once she gets inside the castle, the creature living there should offer her a bargain, lifting her curse if she breaks its bond with
+      the wizard.
+    covers:
+    - CR5
+rubric:
+  content_realization:
+  - id: CR1
+    cross: true
+    item: The game contains the Witch of the Waste (text) as the large dark-hatted woman who comes into the hat shop (clip), shown as the one
+      whose curse turns the girl into an old woman, and the old woman is the girl herself
+    anchors:
+      '1': a witch figure visits the hat shop and is shown or told as the Witch of the Waste who curses the girl there, and the aged heroine is
+        clearly the same character as the young one
+      '0.5': the girl is cursed into an old woman, but the curse is not tied to the witch or to her visit to the shop
+      '0': missing, or the old woman is a different character from the girl
+    evidence:
+    - - '00:14.9'
+      - '00:20.4'
+    - p002
+    - p004
+  - id: CR2
+    cross: true
+    item: The game contains the fire demon Calcifer (text) as the flame in the castle's hearth (clip, art), presented as the source of the magic
+      and the movement of the walking castle
+    anchors:
+      '1': a flame character in the castle's hearth that is named or presented as the fire demon Calcifer AND as what powers and moves the castle
+      '0.5': the flame creature is a fire demon or named Calcifer, but has no role for the castle, or the castle's power is named without linking
+        it to the creature
+      '0': missing, or the hearth flame is an ordinary fire or a pet without a role
+    evidence:
+    - - '00:41.5'
+      - '00:43.0'
+    - - '00:44.5'
+      - '00:45.5'
+    - p004
+    - p009
+    - img10
+    - img11
+  - id: CR3
+    item: 'The game''s story contains the opening events in the text''s order and with its cause: she meets the wizard, the Witch curses her in
+      the hat shop, she leaves home to seek a cure, a living scarecrow leads her to the moving castle, and she enters it'
+    anchors:
+      '1': the meeting, the curse, the departure, the scarecrow as guide and the entry into the castle, in this order and with the cure as the
+        reason she leaves
+      '0.5': most of these events in a mostly right order, or the right order without why she leaves
+      '0': missing, or the order is broken at its core (e.g. she is cursed after reaching the castle)
+    evidence:
+    - p004
+    - - '00:02.4'
+      - '00:22.9'
+    - - '00:46.0'
+      - '00:47.4'
+  - id: CR4
+    cross: true
+    item: 'The game contains the story''s settings (clip, art) as distinct places along her route (text): the old town where she meets the wizard,
+      the hat shop that is her home, the open hill country beyond, and the castle out in that country with the hearth room inside it'
+    anchors:
+      '1': all four exist as distinct places, connected so that she goes from the town and the shop out into the hills and reaches the castle
+        there, and the hearth is inside the castle
+      '0.5': one of these places is missing or merged into a generic place, or the castle stands somewhere unconnected to the route, or the hearth
+        is not inside the castle
+      '0': the story has no distinct settings
+    evidence:
+    - - '00:02.4'
+      - '00:12.9'
+    - - '00:14.9'
+      - '00:16.4'
+    - - '00:20.9'
+      - '00:22.2'
+    - - '00:41.5'
+      - '00:45.5'
+    - p002
+    - p004
+    - p012
+    - img03
+  - id: CR5
+    item: 'Inside the castle the fire demon strikes a deal with her: he will break her curse if she breaks the link between him and the wizard'
+    anchors:
+      '1': 'the game shows both sides of the deal: her curse lifted in return for freeing the demon from the wizard'
+      '0.5': a deal with the demon is shown, but one side of the bargain is missing or wrong
+      '0': missing
+    evidence:
+    - p004
+    - p012
+  functions_playability:
+  - id: FP1
+    item: 'The opening can be played through: each beat (the meeting, the curse, the departure, the scarecrow''s guidance, entering the castle)
+      is reached or triggered by the player''s own play, and each leads on to the next'
+    anchors:
+      '1': the player plays each beat in turn and is led from one to the next up to entering the castle
+      '0.5': one key beat (the curse, or reaching the castle) is only narrated or skipped by text, or progress stalls and needs a workaround
+      '0': no playable story sequence
+    evidence:
+    - p004
+    - - '00:02.4'
+      - '00:20.4'
+    - - '00:20.9'
+      - '00:22.2'
+    - - '00:44.5'
+      - '00:47.4'
+  - id: FP2
+    item: 'The curse changes the heroine: after the Witch''s visit she is an old woman, and stays one in play until the curse is lifted'
+    anchors:
+      '1': the playable heroine visibly becomes old at the curse and remains so afterwards (until lifted, if the game gets that far)
+      '0.5': the curse happens but has no lasting effect on the heroine, or is only stated in dialogue
+      '0': no curse
+    evidence:
+    - - '00:16.9'
+      - '00:20.4'
+    - - '00:46.0'
+      - '00:47.4'
+    - p004
+  - id: FP3
+    item: 'Lifting the curse is the goal: the deal with the fire demon in the castle gives the player this goal, play progresses toward it, and
+      the experience either reaches the text''s resolution or stops at a clear next step toward it'
+    anchors:
+      '1': meeting the demon sets the goal of the deal, there are steps toward it, and the experience either ends the way the text resolves it
+        (the heart given back to the wizard, which frees the demon and lifts the curse) or stops at a clear next step toward that end
+      '0.5': the goal is stated but nothing advances it, or progress happens without the goal ever being set, or the experience ends with the
+        curse lifted in a way unrelated to the deal
+      '0': no goal
+    evidence:
+    - p004
+    - p006
+    - p007
+    - p012
+    - - '00:41.5'
+      - '00:43.0'
+  - id: FP4
+    item: 'The castle moves: it walks or relocates across the land rather than standing fixed'
+    anchors:
+      '1': the castle is seen moving or is found in a different place on a later visit
+      '0.5': its movement is only stated in dialogue or text, never seen or experienced
+      '0': the castle stays fixed, or there is no castle
+    evidence:
+    - p004
+    - p009
+    - - '00:44.5'
+      - '00:45.5'
+    - img02
+    - img03
+  visual_presentation:
+  - id: VP1
+    cat: spatial
+    keyframes:
+    - '00:02.4'
+    - '00:08.4'
+    - '00:11.4'
+    item: 'The look of the town of the wizard encounter: narrow cobbled alleys between half-timbered houses under steep red-tiled roofs'
+    anchors:
+      '1': a cramped old town of narrow alleys and timber-framed, steep-roofed houses
+      '0.5': the town looks generic (no narrow alleys, or no half-timbered, steep-roofed look)
+      '0': the town looks nothing like the clip's (e.g. modern or rural), or there is no town to look at
+    evidence:
+    - - '00:02.4'
+      - '00:12.9'
+  - id: VP2
+    cat: key_moment
+    keyframes:
+    - '00:15.4'
+    - '00:17.4'
+    - '00:19.4'
+    item: 'The curse in the hat shop: a dim shop crowded with hats, the large dark witch looming, and the girl, now old, facing her aged reflection
+      in a mirror'
+    anchors:
+      '1': a recognisable hat shop interior with the large dark witch in it, and a moment where the heroine sees her aged self
+      '0.5': the shop or the transformation is shown, but not both, or the change is a text message only
+      '0': neither
+    evidence:
+    - - '00:14.9'
+      - '00:20.4'
+  - id: VP3
+    cat: style
+    keyframes:
+    - '00:44.5'
+    - '00:45.5'
+    item: 'The moving castle''s look: a hulking patchwork of houses, domes, turrets and smoking chimneys on thin legs'
+    anchors:
+      '1': a large, visibly cobbled-together castle with chimneys or steam that stands on legs
+      '0.5': a castle that is patchwork or on legs but not both
+      '0': no castle, or an ordinary stone castle
+    evidence:
+    - - '00:44.5'
+      - '00:45.5'
+    - p009
+    - img01
+    - img02
+    - img10
+  - id: VP4
+    cat: key_moment
+    keyframes:
+    - '00:42.0'
+    item: 'The fire demon in the hearth: a small living flame with eyes and a mouth sitting on logs in the castle''s fireplace'
+    anchors:
+      '1': a flame character with a face in a hearth inside the castle
+      '0.5': a fire demon with a face but not in a hearth, or a hearth fire without a face
+      '0': none
+    evidence:
+    - - '00:41.5'
+      - '00:43.0'
+    - img04
+    - img11
+play_suggestions:
+  FP1:
+  - play from the start and write down the order of the beats and where each happens
+  - 'try to reach the castle before the curse: is it possible, and does the story still make sense?'
+  FP2:
+  - 'after the curse, change maps, save and reload: is the heroine still old?'
+  - 'talk to NPCs after the curse: do they treat her as an old woman?'
+  FP3:
+  - 'talk to the fire demon: is the deal''s goal stated, and is it tracked anywhere?'
+  - 'follow the goal as far as the game goes: is there an ending or a clear next step?'
+  FP4:
+  - 'enter and leave the castle twice: is it in the same place both times, and is it ever seen moving?'
+  robustness:
+  - 'skip or rush through dialogue: does the story still advance?'
+  - 'walk away from the scripted path in the town or the hills: can you get stuck?'
+  - try to enter the castle before the scarecrow leads you there
+hybrid:
+  modality: video+text+image
+  roles:
+    video: 'the look and staging of the opening: the old-town alley and rooftops where the girl meets the wizard, the hat shop and the mirror
+      of the curse, the hillside road, the hearth with the flame creature, the walking castle, the scarecrow'
+    text: who the characters are and what they are (milliner, wizard Howl, Witch of the Waste, fire demon Calcifer, Turnip Head), the order and
+      causes of the events, the deal and the rules of the curse and the contract, how the curse is resolved, the castle described as a collage
+      on bird legs
+    images: design art of the castle (patchwork of houses, domes, chimneys and pipes on thin legs), of the flame demon in the hearth, and of the
+      main characters' looks (the wizard's diamond-patterned cloak, the girl's hat, braid and long dress, her old form)
+  cross_reference_requirement: The story order and causes come from the text (meeting the wizard, the Witch's curse in the hat shop, leaving home,
+    the scarecrow leading her to the castle, the deal with Calcifer) and must be staged with the characters, places and creatures as the clip
+    and the design art show them; the text names who the clip's figures are (the large woman in the shop is the Witch of the Waste, the flame
+    in the hearth is Calcifer, the power of the walking castle).
+v4_map:
+  U1: 'dropped: peripheral (curse-silence clause; the cure as reason to leave kept in CR3)'
+  U3: CR2
+  U4: CR1
+  U5: CR3
+  U6: CR5
+  U7: 'FP3 (the heart bond, former CR6, dropped by the curator 2026-11-05: beyond the first act; the resolution stays in FP3)'
+  FP1: CR3, CR4, FP1
+  FP2: FP2
+  FP3: FP3
+  FP4: CR4, FP4
+  FP5: 'dropped: editing request (the slower walk after the curse), moved to editing_seed.yaml by the curator 2026-11-05'
+  VP1: CR4, VP1
+  VP2: VP2
+  VP3: VP3
+  VP4: VP4
+provenance:
+  source_yaml: T-HY-vid_ed6ca1b2a47b.t1.yaml
+  source_sha256: f934e17f083c8bf96defd3a03ee22da252716201cca2a3871347857cc771993d
+  size_waiver: null
+  size_max: null
+  sources:
+  - ref: t01
+    text: /Volumes/USB-500G/gameanything_local/hf/curation/hybrid_texts/T-HY-vid_ed6ca1b2a47b.t1/final.md
+  - refs:
+    - img01
+    - img02
+    - img03
+    - img04
+    - img05
+    - img06
+    - img07
+    - img08
+    - img09
+    - img10
+    - img11
+    images:
+    - hybrid/q30_ref1

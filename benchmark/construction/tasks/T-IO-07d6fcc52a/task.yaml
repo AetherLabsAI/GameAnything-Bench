@@ -1,0 +1,18 @@
+# GameAnything-Bench task T-IO-07d6fcc52a (public part). Instruction: instruction_fine.md.
+task_id: T-IO-07d6fcc52a
+version: '0.2'
+category: narrative_event
+modality: image
+domain: film
+track: commercial
+target_game: valheim
+references:
+- img01
+- img02
+- img03
+- img05
+- img06
+provenance:
+  pipeline: reference_curation ga_author (v3 draft -> crosscheck -> reconcile -> instruct -> explicit) -> restructure_v4
+  rules_version: v4.2
+  review_status: pending

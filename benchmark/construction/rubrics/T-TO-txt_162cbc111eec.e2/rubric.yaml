@@ -1,0 +1,269 @@
+# GameAnything-Bench scoring material: never shown to agents during a trial.
+task_id: T-TO-txt_162cbc111eec.e2
+source_inventory:
+- 'c08.p001-c08.p005: Martha keeps the other children indoors as a punishment for the day before; only Robert may go out for half an hour, to
+  fetch the day''s wish'
+- 'c08.p006-c08.p013: Robert finds the Psammead basking in the sand-pit, cannot think of a wish and blurts out a wish that it could give one of
+  the others their wish without their coming; it grants this with great effort and sends him home'
+- 'c08.p014-c08.p017: running home, Robert finds the house gone: a tall black castle with battlements and towers stands in its place, and tents
+  with armoured men fill the garden and orchard; he realises the others wished for a castle and it is besieged'
+- 'c08.p018-c08.p029: Robert answers a handkerchief waved from the window over the gateway across the moat; two men-at-arms see it, suspect him
+  of carrying tidings to the besieged and drag him by the ear to their leader'
+- 'c08.p031-c08.p040: the leader, a splendid storybook knight in armour of mixed periods with a kind face, reassures Robert and names himself
+  Wulfric de Talbot'
+- 'c08.p041-c08.p063: Robert tells him the true story of the Psammead and the wishes; the knight accepts the enchanter but takes offence at being
+  called unreal and vanishing at sunset; the men think Robert feigns madness and the knight refuses to let him go ''home'' to the castle with
+  news'
+- 'c08.p064-c08.p068: Robert appeals to the knight''s honour not to hold a harmless boy; Sir Wulfric frees him (''warreth not with babes'') with
+  Jakin as escort, and Robert runs to the sand-pit'
+- 'c08.p069-c08.p078: the grumbling Psammead grants a third wish of the day, ''I wish I was with the others'' (Jakin watches in horror); Robert
+  finds himself inside with the others, who had guessed what his wish allowed them'
+- 'c08.p079-c08.p082: Robert tells his story and is made captain of the besieged force; he warns that the besiegers'' weapons are real and can
+  kill, and that Jakin said they will attack just before sundown; Cyril says he wished them into a besieged castle'
+- 'c08.p083: exploring: a thick-walled room, a stair to the great gate-house with barred doors, drawbridge up, portcullis down, a wide deep moat,
+  then a courtyard enclosed by grey walls'
+- 'c08.p084-c08.p092: in the courtyard Martha irons and the cook cooks with invisible things, and the Lamb sits laughing on nothing in mid-air;
+  Martha sees only the house and her chores, and the children leave the Lamb with her'
+- 'c08.p093-c08.p100: in a dim arched hall Cyril works out that castle and house share the same place: the children see only the castle, the servants
+  only the house; Jane fears the dinner will be invisible and unfeelable'
+- 'c08.p101-c08.p109: the castle is perfectly furnished but holds neither food nor soldiers; Martha serves dinner in the banqueting hall (the
+  dining-room''s spot) and it is invisible; despair'
+- 'c09.p001-c09.p012: Cyril finds biscuits in his pocket that are real; they reason that what they already had is unchanged and food may become
+  theirs once in their mouths or pockets'
+- 'c09.p013-c09.p017: Cyril bites into the air over the table and gets real bread; everyone eats the mutton and a plain pudding this way, to Martha''s
+  disgust at the mess'
+- 'c09.p018-c09.p027: from a tower Robert, as captain, sees tents on every side beyond the moat, men preparing their weapons and a tree trunk
+  brought for a battering-ram; the children talk about how to defend the castle; Jane hopes it is only a game'
+- 'c09.p028-c09.p036: the castle''s weapons are too heavy; they pile stones and daggers in the room above the gate, get biscuits put into their
+  pockets by Martha as provisions, fetch pots of water; the afternoon passes; only Robert feels the danger is real'
+- 'c09.p037-c09.p049: a trumpet; the besiegers turn out; the children argue about bravery, Jane wants to stop; the camp looks like a splendid
+  coloured picture'
+- 'c09.p050-c09.p060: a herald summons the castle to surrender in the name of the King and Sir Wulfric; Robert refuses and leads cheers; the attack
+  begins as the room grows dark and sunset nears'
+- 'c09.p061-c09.p067: Jakin, who swam the moat, climbs to the drawbridge machinery; Robert locks him in that room, then knocks a second swimmer
+  off the big window and bolts its door'
+- 'c09.p068-c09.p081: the drawbridge crashes down and armed men cross it; the children drop stones, the ram batters the door, the room is almost
+  pitch dark; Robert refuses to surrender or parley; poured water through the lead-holes falls only into the gate-house'
+- 'c09.p083-c09.p092: as Robert pours water out through an arrow-slit, the noise stops and the room whirls: they are in their own front bedroom,
+  the garden and road outside; Anthea notes this is the first wish without a row'
+- 'c09.p093-c09.p104: Martha storms in: the water fell on her on the front doorstep; they are sent to bed; the water stayed because the castle
+  well was their own well; closing banter about Sir Wulfric and the pinafores'
+instructions_meta:
+  requirement_groups:
+    separation and reunion:
+    - CR3
+    - FP1
+    shared household and provisions:
+    - CR4
+    - FP2
+    siege defence:
+    - CR5
+    - FP3
+    - VP2
+    sunset ending:
+    - FP4
+    castle, camp and besiegers:
+    - CR1
+    - CR2
+    - VP1
+  explicit_requirements:
+  - type: specify
+    text: The castle magic should last only until sunset, and the besiegers should attack just before sundown, so the defenders only have to hold
+      out until the sun goes down.
+    covers:
+    - FP3
+    - FP4
+rubric:
+  content_realization:
+  - id: CR1
+    item: In place of the house stands a castle cut off by a moat, with a defended gate as the only crossing, and the besiegers' camp surrounds
+      it beyond the moat
+    anchors:
+      '1': the castle encircled by water with a gated crossing, and the camp on all sides beyond the moat
+      '0.5': a castle and a camp, but no moat, or the camp not around the castle
+      '0': no recognisable besieged castle
+    evidence:
+    - c08.p015
+    - c08.p018
+    - c08.p083
+    - c09.p018
+  - id: CR2
+    item: Sir Wulfric de Talbot is present as the leader of the force besieging the children's castle
+    anchors:
+      '1': Sir Wulfric de Talbot shown or named as the besiegers' leader
+      '0.5': a besiegers' leader present but not named, or the name given to another role
+      '0': no leader of the besiegers
+    evidence:
+    - - c08.p031
+      - c08.p040
+    - c09.p053
+  - id: CR3
+    item: 'The opening''s causes are in the game: Robert''s wish lets the others wish from home, they wish for a besieged castle while he is out,
+      so he is cut off outside among the besiegers before rejoining them'
+    anchors:
+      '1': 'the causes in order: Robert''s enabling wish, the others'' castle wish, Robert cut off outside and later rejoining them'
+      '0.5': the castle wish present, but Robert's enabling wish or his being cut off outside is missing
+      '0': missing, or the causes are wrong (e.g. Robert wished for the castle)
+    evidence:
+    - - c08.p011
+      - c08.p017
+    - - c08.p074
+      - c08.p076
+    - c08.p082
+  - id: CR4
+    item: 'The game shows that castle and house occupy one place: the servants go about their household work inside the castle with things the
+      children cannot see, perceiving only the house'
+    anchors:
+      '1': servants inside the castle visibly working with invisible things and unaware of the castle, so both worlds coexist and each side perceives
+        only its own
+      '0.5': one half only (e.g. the servants do not notice the castle but handle visible objects, or invisible house things without the servants
+        present)
+      '0': missing, or the castle simply replaces the house for everyone
+    evidence:
+    - - c08.p084
+      - c08.p092
+    - - c08.p099
+      - c08.p100
+    - - c08.p105
+      - c08.p106
+    - c09.p001
+  - id: CR5
+    item: Robert is the captain of the besieged children because he alone has met the besiegers up close and knows they are real and can hurt
+      them
+    anchors:
+      '1': Robert leads the defence, and his leadership is tied to his first-hand knowledge of the real danger
+      '0.5': Robert as leader without the reason, or the danger told without his role
+      '0': missing
+    evidence:
+    - c08.p079
+    - c08.p081
+    - c09.p018
+    - c09.p035
+  functions_playability:
+  - id: FP1
+    item: 'Opening apart: the player begins separated from the others, outside, finds the house turned into a besieged castle and must make their
+      way to rejoin the defenders inside'
+    anchors:
+      '1': a playable outside part among the besiegers that leads, through the player's own progress, to the reunion inside the castle
+      '0.5': the separation is only told or shown, or the reunion happens without any progress by the player
+      '0': the experience starts inside the castle with no separation
+    evidence:
+    - - c08.p014
+      - c08.p029
+    - - c08.p064
+      - c08.p076
+  - id: FP2
+    item: 'Invisible-dinner problem: the household food cannot be seen or touched normally, and the player must overcome this to get food so the
+      garrison can eat before the attack'
+    anchors:
+      '1': a real obstacle (no usable food) that the player overcomes by a way of taking the house food
+      '0.5': the food is simply invisible scenery, or the problem resolves itself without the player
+      '0': no food problem
+    evidence:
+    - - c08.p100
+      - c08.p106
+    - - c09.p007
+      - c09.p015
+    - c09.p033
+  - id: FP3
+    item: 'Siege defence: after preparing the defences, the player holds the castle against an assault that comes shortly before sunset and escalates
+      as the besiegers try to break in'
+    anchors:
+      '1': a preparation phase and an assault the player actively resists, with the besiegers making real attempts to get in and pressure rising
+        toward sunset
+      '0.5': an assault exists but the player has no real part in resisting it, or there is no preparation and no escalation
+      '0': no siege
+    evidence:
+    - - c09.p018
+      - c09.p034
+    - - c09.p050
+      - c09.p058
+    - - c09.p061
+      - c09.p081
+  - id: FP4
+    item: 'Ending at sunset: holding out until sunset ends the siege by the castle turning back into the house, not by beating the besiegers,
+      and play continues in the ordinary house'
+    anchors:
+      '1': reaching sunset during the assault ends the siege with the return to the house, and the player is then in the ordinary house
+      '0.5': the return to the house happens but the siege is ended by winning a battle, or the reversion is not tied to sunset
+      '0': no ending, or the castle never reverts
+    evidence:
+    - c08.p058
+    - c08.p081
+    - - c09.p084
+      - c09.p087
+    - - c09.p093
+      - c09.p096
+  visual_presentation:
+  - id: VP1
+    cat: style
+    item: 'The besieging army and its leader look like a picture from a historical romance for children: colourful and splendid rather than grim'
+    anchors:
+      '1': a colourful, storybook-chivalric look for the besiegers
+      '0.5': an army of medieval soldiers without the picture-book splendour
+      '0': no distinct look, or a grim realistic army
+    evidence:
+    - c08.p031
+    - c09.p048
+    - c09.p049
+  - id: VP2
+    cat: presentation
+    item: 'The approach of sunset is visible to the defenders: the daylight fails as the assault builds, so the player can read how close the
+      end of the wish is'
+    anchors:
+      '1': a visible darkening that progresses with the assault
+      '0.5': the approach of sunset is shown only by another sign (e.g. a timer), or the light changes only at the moment of reversion
+      '0': no sign of the time at all
+    evidence:
+    - c09.p059
+    - c09.p076
+    - c09.p077
+play_suggestions:
+  FP1:
+  - 'start a new game: where does the player begin, and is the castle already standing?'
+  - 'try to walk straight into the castle from outside: is there a story reason it fails or succeeds?'
+  FP2:
+  - 'go to the table at dinner without knowing the trick: can the food be seen or picked up?'
+  - check whether the player gets to eat by their own action or the problem just goes away
+  FP3:
+  - 'do nothing during the assault: do the besiegers get further in?'
+  - 'resist actively: does it change anything, and does the pressure rise toward sunset?'
+  FP4:
+  - 'hold out until sunset: what ends the siege, and where is the player afterwards?'
+  - 'after the return to the house: can the player still move about the ordinary house?'
+  CR4:
+  - 'walk through the castle while the servants work: what are they handling?'
+  VP2:
+  - compare the light early in the afternoon with the light during the assault
+  robustness:
+  - 'let the besiegers break in before sunset: is the outcome sensible and can play continue or restart?'
+  - 'skip the dinner entirely: does the story still proceed or block sensibly?'
+  - 'leave the castle area during the siege: what happens?'
+v4_map:
+  U1: CR4
+  U2: 'dropped: sunset deadline mechanism already scored by FP3 and FP4'
+  U3: CR2
+  U4: CR3
+  U5: CR5
+  U6: 'dropped: hunger and possession rule already scored by FP2'
+  U7: 'dropped: peripheral (post-reversion comic coda: the poured water lands on Martha and the day ends in a scolding)'
+  FP1: FP1
+  FP2: FP2
+  FP3: FP3
+  FP4: 'FP4 (aftermath part dropped: peripheral post-reversion coda)'
+  VP1: CR1 (which places exist and how they connect)
+  VP2: VP1
+  VP3: 'CR4 (merged with U1: the overlap seen in the game)'
+  VP4: VP2
+  VP5: 'dropped: editing request (winter setting), moved to ./editing_seed.yaml (2026-11-05)'
+provenance:
+  source_yaml: T-TO-txt_162cbc111eec.e2.yaml
+  source_sha256: 863ee27da1beeae94e6af0531f013aa232ddc9ece7ba8b69b7ce711667c5a1ff
+  size_waiver: null
+  size_max: null
+  sources:
+  - ref: t01
+    title: Five Children and It
+    author: E. Nesbit
+    text_id: txt_162cbc111eec
+    excerpt_id: e2

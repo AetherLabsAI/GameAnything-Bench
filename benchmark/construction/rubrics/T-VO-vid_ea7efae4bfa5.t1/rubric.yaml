@@ -1,0 +1,223 @@
+# GameAnything-Bench scoring material: never shown to agents during a trial.
+task_id: T-VO-vid_ea7efae4bfa5.t1
+source_inventory:
+- '01:40.4-01:40.9 close follow shot: a snowboarder (red jacket, black pants, helmet) on the top edge of a long white snow-block wall, then dropping
+  onto its inclined face, one hand reaching toward the snow; rocky peaks and blue sky behind'
+- 01:41.4-01:42.9 the rider rides along the length of a long, curved, banked snow wall; a red line runs along the wall's edge; small white cube
+  boxes with red logos stand further down the course; follow camera behind / beside the rider
+- '01:43.4 low shot along the vertical side of the wall: red stripe on its top edge, rider further along it, a small logo box ahead'
+- 01:43.9 the rider reaches a small white cube box at the end of the wall section, board and hand against it (a hit on / over the box)
+- '01:44.4-01:45.4 cut to a wide shot from a rocky slope (crew member in the foreground, bottom right): a tall stepped tower with sawtooth edges
+  and red-striped steps beside a tall square block bearing a blue eagle emblem and the text ''Serre Chevalier Vallée Briançon''; the rider is
+  small, moving across the steps'
+- 01:45.9-01:47.4 the rider appears on top of the tall emblem block, rides across its top and stands upright on it; a ski area with lifts and
+  a hut on the slope behind
+- 01:47.9-01:48.9 two crew members on the rocky outcrop applaud, one seated, one standing up
+- 01:49.4-01:50.4 more crew next to a snowmobile (some seated on it holding cameras) clap and cheer; a person in a yellow jacket; chairlift behind
+- 01:50.9-01:51.9 the rider (red jacket, no helmet) talks to a crew member in green with goggles holding a camera device; burned-in subtitle 'That's
+  why we do this'
+- 01:52.4-01:53.8 the group gathers on the snow, the rider (helmet on) bumps fists / greets crew members; chairlift pylon behind
+- 'not shown: no score, timer, points, HUD or judging; no fall or failed attempt; the run is cut into several shots, so one continuous take is
+  not certain; how the rider gets from the box to the tower is not shown'
+- 'audio (offline Whisper, unreliable): ''Allez frigo'' over 01:34.6-01:51.3 (likely invented over music); ''C''est pour ça qu''on fait ça'' around
+  01:51.3-01:52.3 (matches the subtitle ''That''s why we do this''); ''Bon, ça c''est dans la boîte'' (''that''s in the can'') from 01:52.3, running
+  past the clip end; music and cheering likely, not verifiable from the frames'
+instructions_meta:
+  requirement_groups:
+    board riding:
+    - FP1
+    feature riding:
+    - CR1
+    - CR2
+    - FP2
+    - FP3
+    - VP2
+    course layout and setting:
+    - CR3
+    - FP4
+    - VP1
+    run outcome and finish:
+    - CR4
+    - FP5
+    - VP3
+  explicit_requirements:
+  - type: keep
+    text: I definitely want that long wall you ride along on its face, not just past it.
+    covers:
+    - CR1
+    - FP2
+  - type: specify
+    text: 'The run should end like in the clip: you finish by getting up onto the top of the last, tall block and staying there on your board
+      in control.'
+    covers:
+    - CR2
+    - FP3
+rubric:
+  content_realization:
+  - id: CR1
+    item: The course contains a long wall with an inclined (banked) face, long enough to be ridden along its length
+    anchors:
+      '1': a long wall whose face is inclined and runs for a good stretch of the course
+      '0.5': a wall exists but is short, or its face is vertical / flat ground rather than banked
+      '0': no such wall
+    evidence:
+    - - 01:40
+      - 01:43
+  - id: CR2
+    item: A tall stepped tower stands beside a tall square block whose flat top is big enough to stand on
+    anchors:
+      '1': a stepped tower and, right beside it, a tall block with a standable top
+      '0.5': only one of the two (tower or tall block), or the block's top is too small / not flat to stand on
+      '0': neither
+    evidence:
+    - - 01:44
+      - 01:48
+  - id: CR3
+    item: 'The features are arranged as one line in the reference''s order: a start, the long wall, then the stepped tower and tall block at the
+      finish'
+    anchors:
+      '1': start, wall and tower / block placed along one course in that order, the tower / block ending it
+      '0.5': the features are there but in another order (e.g. the tower / block is not at the end), or they do not form one line
+      '0': separate features with no line, or most features missing
+    evidence:
+    - - 01:40
+      - 01:47
+  - id: CR4
+    item: Onlookers are present, placed where they can watch the end of the run
+    anchors:
+      '1': a group of onlookers in view of the finish
+      '0.5': onlookers exist but are out of view of the finish
+      '0': no onlookers
+    evidence:
+    - - 01:47
+      - 01:54
+  functions_playability:
+  - id: FP1
+    item: 'Board riding: the player controls a rider who slides over the course with carried momentum rather than walking or stepping'
+    anchors:
+      '1': sliding movement with carried speed
+      '0.5': fast movement but without carried momentum (e.g. instant stop when the input is released)
+      '0': ordinary walking / running only
+    evidence:
+    - - 01:40
+      - 01:43
+  - id: FP2
+    item: 'Wallride: the rider can get onto the face of the long inclined wall, ride along its length, and come off at its end'
+    anchors:
+      '1': sustained riding along the inclined wall face, leaving it at its end
+      '0.5': the wall can only be touched or jumped off, not ridden along
+      '0': the wall cannot be ridden at all
+    evidence:
+    - - 01:40
+      - 01:43
+  - id: FP3
+    item: 'Finish: the rider can pass the stepped tower, reach the top of the tall block by riding, and stay on it in control'
+    anchors:
+      '1': the top of the tall block is reached by riding and held in control
+      '0.5': the top is reached but the rider cannot stay on it, or it can only be reached by leaving the board
+      '0': the top cannot be reached
+    evidence:
+    - - 01:44
+      - 01:48
+  - id: FP4
+    item: 'A rideable line: the rider can get from the start to each feature in turn and on to the finish by riding'
+    anchors:
+      '1': the whole line can be ridden from start to finish, each feature reachable from the one before
+      '0.5': parts of the line can be ridden but some transitions need unreachable gaps, climbing or teleports
+      '0': the features cannot be ridden as a line
+    evidence:
+    - - 01:40
+      - 01:47
+  - id: FP5
+    item: 'Outcome: completing the line on the final feature produces a clear success state, with the onlookers reacting (applause, gathering)'
+    anchors:
+      '1': a success state tied to completion, with an onlooker reaction
+      '0.5': a success state without onlooker reaction, or a reaction not tied to completion
+      '0': no outcome
+    evidence:
+    - - 01:45
+      - 01:54
+  visual_presentation:
+  - id: VP1
+    cat: spatial
+    keyframes:
+    - '01:42.4'
+    - '01:44.4'
+    item: 'The course look: white, flat-faced snow-block features on an open high-mountain slope, the long wall marked by a red line on its edge,
+      the stepped tower with red-striped steps'
+    anchors:
+      '1': white block-built features with the red line and the stepped tower in a mountain setting, recognisable
+      '0.5': a snowy course but the features do not read as snow blocks (generic ramps), or the red marking is missing
+      '0': no recognisable course
+    evidence:
+    - - 01:41
+      - 01:47
+  - id: VP2
+    cat: key_moment
+    keyframes:
+    - '01:41.4'
+    - '01:42.4'
+    item: 'The wallride: the rider tilted on the inclined wall face, the wall with its red line stretching ahead along the rider''s path'
+    anchors:
+      '1': the rider visibly on the wall face, with the wall and its red line readable
+      '0.5': the wallride happens but the wall or the rider's position on it cannot be read
+      '0': not shown
+    evidence:
+    - - 01:40
+      - 01:43
+  - id: VP3
+    cat: key_moment
+    keyframes:
+    - '01:46.4'
+    - '01:47.4'
+    item: 'The finish: the rider standing upright on top of the tall block, the stepped tower beside it, against the snowy slope'
+    anchors:
+      '1': a recognisable finish pose on top of the tall block, with block and tower readable
+      '0.5': the rider reaches the top but block and tower cannot be read, or the moment is not set apart
+      '0': not shown
+    evidence:
+    - - 01:45
+      - 01:48
+play_suggestions:
+  FP1:
+  - 'ride down and then release the input: does speed carry and decay?'
+  - 'steer hard at speed: does the path bend rather than snap?'
+  FP2:
+  - 'approach the wall fast and slow: can you ride along its face, and do you drop off when too slow?'
+  - 'ride the wall to its end: what happens there?'
+  FP3:
+  - 'reach the top of the tall block: can you stay on it in control?'
+  - try to reach the top by a shortcut that skips the tower
+  FP4:
+  - ride from the start to the finish in one go without stopping
+  - look for gaps, forced stops, resets or teleports between the features
+  FP5:
+  - 'finish the line: is success clear and do the onlookers react?'
+  - 'stop short of the last feature or bail: does a success still trigger?'
+  - after a finish, can you ride again?
+  robustness:
+  - 'ride the line backwards or skip a feature: is the finish still granted?'
+  - ride off the course into the open slope and come back
+  - 'finish several runs in a row: do the success state and the reaction reset each time?'
+v4_map:
+  U1: FP2 (mechanism, paired), CR1 (the wall exists)
+  U2: 'CR3 (order: wall, then tower / block at the finish), FP4 (ridden as a line); box as a station dropped: peripheral (a brief hit at the end
+    of the wall, not needed to recognise the wall-to-block run)'
+  U3: CR2 (tower beside a standable block), CR3 (it is the last feature), FP3 (reach and hold the top)
+  U4: 'CR1 (wall), CR2 (tower beside block); red line moved to VP1; small cube boxes dropped: peripheral (brief, secondary feature passed on the
+    way)'
+  U5: CR4 (onlookers exist), FP5 (reaction on completion); 'no score / timer' part dropped as an absence
+  FP1: FP1
+  FP2: FP2 (behaviour); wall existence -> CR1
+  FP3: FP3 (behaviour); tower / block existence -> CR2
+  FP4: 'FP4 (rideability); features in order -> CR3; box dropped: peripheral (see U2)'
+  FP5: FP5 (success + reaction); onlookers existence -> CR4
+  VP1: 'VP1 (look only); arrangement wall -> tower -> CR3; boxes and emblem dropped: peripheral (details)'
+  VP2: VP2
+  VP3: VP3
+provenance:
+  source_yaml: T-VO-vid_ea7efae4bfa5.t1.yaml
+  source_sha256: 0894cb6df77b089e68ffe99b601dce3e34d107d6b5b84df7881471bfd26d327c
+  size_waiver: null
+  size_max: null
+  sources: []

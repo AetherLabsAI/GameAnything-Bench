@@ -1,0 +1,185 @@
+{
+ "what": "Start checkpoints of the editing tasks: one archive per key (checkpoints/<key>.tar.gz in the Hugging Face dataset), downloaded by `gab media fetch` into the checkpoint store and checked against sha256. Filled by scripts/pack_checkpoints.py.",
+ "checkpoints": {
+  "T-HY-vid_01f55d4c784a.t1": {
+   "file": "checkpoints/T-HY-vid_01f55d4c784a.t1.tar.gz",
+   "sha256": "4bbe5b2909c08e4be403951d174b78711f3f3de4cf223b0e290e016d0a01ac65",
+   "size_bytes": 480933703
+  },
+  "T-HY-vid_22c94960e3ee.t1": {
+   "file": "checkpoints/T-HY-vid_22c94960e3ee.t1.tar.gz",
+   "sha256": "3579d9a0dd0a1b1bdbc423f2860ce03bc5171c2b83be54e47acbd9607a6a2cc9",
+   "size_bytes": 64603040
+  },
+  "T-HY-vid_2ab7e1862b31.t1": {
+   "file": "checkpoints/T-HY-vid_2ab7e1862b31.t1.tar.gz",
+   "sha256": "64aa628212b8eabf35610550bd984191f2d42ee94b97133a2a15ca8e918a3bac",
+   "size_bytes": 316715592
+  },
+  "T-HY-vid_b5be7373833d.t1": {
+   "file": "checkpoints/T-HY-vid_b5be7373833d.t1.tar.gz",
+   "sha256": "75dea6419a5e3e09d99be4bc036fdd0f02ea5e010b1ba9e3466e73244ca57a4c",
+   "size_bytes": 68491193
+  },
+  "T-HY-vid_c68b71958bb2.t1": {
+   "file": "checkpoints/T-HY-vid_c68b71958bb2.t1.tar.gz",
+   "sha256": "1736a448ed278d62eb728416ecab6afda44c9c748f50706f6327a6df75f621fb",
+   "size_bytes": 129059224
+  },
+  "T-HY-vid_d12eba90e638.t1": {
+   "file": "checkpoints/T-HY-vid_d12eba90e638.t1.tar.gz",
+   "sha256": "1472bc34bd4cd791baa329d78f067fbe182da8a9ce7bc313a8cc67fe76c0f8cc",
+   "size_bytes": 247867510
+  },
+  "T-IO-1a6ba80e63": {
+   "file": "checkpoints/T-IO-1a6ba80e63.tar.gz",
+   "sha256": "82c497d92cd376c3eeb57ac7057809a49897a52d2e116b1ee37781060f235d05",
+   "size_bytes": 139826521
+  },
+  "T-IO-43b34cf1fa": {
+   "file": "checkpoints/T-IO-43b34cf1fa.tar.gz",
+   "sha256": "2f9b5bd55e3c8eef71a8b6d34eba2f055c5deb9bae94c1c0f5625343fd6dd3c3",
+   "size_bytes": 60836573
+  },
+  "T-IO-43b34cf1fa@dsv41flash-opencode-s0-r1": {
+   "file": "checkpoints/T-IO-43b34cf1fa@dsv41flash-opencode-s0-r1.tar.gz",
+   "sha256": "23e9ab3a72170a7d3819965965a84958353ef163eac5ce116ce4ad142189e177",
+   "size_bytes": 34997648
+  },
+  "T-IO-6911566349": {
+   "file": "checkpoints/T-IO-6911566349.tar.gz",
+   "sha256": "2496e0519762d30592425404049b4b8b3d23a02a8ef4b6589e8611187d273580",
+   "size_bytes": 450046139
+  },
+  "T-IO-6c75b47b0a": {
+   "file": "checkpoints/T-IO-6c75b47b0a.tar.gz",
+   "sha256": "4b637eecf70ce2924d8dab87204df8bb27ce3f150fd9f06ae31ed4cf84f72446",
+   "size_bytes": 86580280
+  },
+  "T-IO-7ecf78daed": {
+   "file": "checkpoints/T-IO-7ecf78daed.tar.gz",
+   "sha256": "d59879c9fc7379dc9819be94ad2c91fc4a51cdd257d3bd071d4c8b947d37398c",
+   "size_bytes": 78090782
+  },
+  "T-IO-83e0f0a96c": {
+   "file": "checkpoints/T-IO-83e0f0a96c.tar.gz",
+   "sha256": "bd12c4cf12cf87962271e98989a9366ac7751ddf34c0f2a7a0115f42cdcca78d",
+   "size_bytes": 321054365
+  },
+  "T-IO-83e0f0a96c@dsv41flash-opencode-s0-r1": {
+   "file": "checkpoints/T-IO-83e0f0a96c@dsv41flash-opencode-s0-r1.tar.gz",
+   "sha256": "139a3cce06cafd9466a35695843ac36e64dfdb6845964ae3ceaca92f02991e69",
+   "size_bytes": 133294699
+  },
+  "T-IO-bd15cf5893": {
+   "file": "checkpoints/T-IO-bd15cf5893.tar.gz",
+   "sha256": "57a996da5b690c60b21a6eac61298e8299a6c8418d9d218c99030931cfc057da",
+   "size_bytes": 424517130
+  },
+  "T-IO-c020afada8": {
+   "file": "checkpoints/T-IO-c020afada8.tar.gz",
+   "sha256": "4b340dbe71da095960bff7516b2b977aa3cf9e5d82dd5f287407b11e04c38bc5",
+   "size_bytes": 123483060
+  },
+  "T-IO-de407dbd4c": {
+   "file": "checkpoints/T-IO-de407dbd4c.tar.gz",
+   "sha256": "3fd7f2ef8b7df54af9209dd6d97fa0b7e98cdc0b262f4ce8ddfa4f05e30423aa",
+   "size_bytes": 99254671
+  },
+  "T-IO-de407dbd4c@sonnet55-claudecode-s0-r1": {
+   "file": "checkpoints/T-IO-de407dbd4c@sonnet55-claudecode-s0-r1.tar.gz",
+   "sha256": "db98477715a2bdd4ca413da808a285235a8c38e1a6afe367b98e207435562ad9",
+   "size_bytes": 12441991
+  },
+  "T-TO-txt_11f912532ada.e3": {
+   "file": "checkpoints/T-TO-txt_11f912532ada.e3.tar.gz",
+   "sha256": "b4f9c5839610dea8d96b7bca861576c52eb38aef6e76b191171aba99092ac90e",
+   "size_bytes": 359747050
+  },
+  "T-TO-txt_27babbacad50.e1": {
+   "file": "checkpoints/T-TO-txt_27babbacad50.e1.tar.gz",
+   "sha256": "811cd478e2dd88036547ef551f9539f80e4bf1cda004a08d2bf28d84c9029123",
+   "size_bytes": 116706109
+  },
+  "T-TO-txt_6469bcc4c8d9.e1": {
+   "file": "checkpoints/T-TO-txt_6469bcc4c8d9.e1.tar.gz",
+   "sha256": "8ae5e2c27c050c9e651f4b605c053aec38597a6edd3080d3054164d600574427",
+   "size_bytes": 747482635
+  },
+  "T-TO-txt_6b6b5b7ebb21.e1": {
+   "file": "checkpoints/T-TO-txt_6b6b5b7ebb21.e1.tar.gz",
+   "sha256": "4fcf3048e0d1348d851e16ee5f3a5b69e6d83941ba1127b28c66f81128bd698d",
+   "size_bytes": 167830632
+  },
+  "T-TO-txt_78542cb1c0a7.e1": {
+   "file": "checkpoints/T-TO-txt_78542cb1c0a7.e1.tar.gz",
+   "sha256": "d83da1351a8960bd3783e95ae6b620ebb0c92148e4447d78fb7a0c3f0f5a2dc7",
+   "size_bytes": 1337482013
+  },
+  "T-VO-vid_0885d9e061b2.t1": {
+   "file": "checkpoints/T-VO-vid_0885d9e061b2.t1.tar.gz",
+   "sha256": "1eded949008cce01f70d5e2312029ca8b99a8bd8f933442f4d2899703ef2305b",
+   "size_bytes": 78719957
+  },
+  "T-VO-vid_36189d888e0a.t1": {
+   "file": "checkpoints/T-VO-vid_36189d888e0a.t1.tar.gz",
+   "sha256": "0fef96db615818242be730d78f5a70b86d51a6779988eb0b8feb8f2d133f733b",
+   "size_bytes": 88191009
+  },
+  "T-VO-vid_3a02ca02cf88.t1": {
+   "file": "checkpoints/T-VO-vid_3a02ca02cf88.t1.tar.gz",
+   "sha256": "9f78cf5ef9229b441c1cb7ebf9173b39ada639bc3c90ccaa9b7875e6821dce8d",
+   "size_bytes": 289775551
+  },
+  "T-VO-vid_3a02ca02cf88.t1@dsv41flash-opencode-s0-r1": {
+   "file": "checkpoints/T-VO-vid_3a02ca02cf88.t1@dsv41flash-opencode-s0-r1.tar.gz",
+   "sha256": "797ca9da15b9a1940005b382ea7b9df5361d29b2b849ef22f277aa0572c8b47b",
+   "size_bytes": 41919774
+  },
+  "T-VO-vid_4c7cbea650bf.t1": {
+   "file": "checkpoints/T-VO-vid_4c7cbea650bf.t1.tar.gz",
+   "sha256": "c635853b69f67ca4753de3b7d19e07ccc4d858206fc515c2bb3173c14f1fef36",
+   "size_bytes": 339009614
+  },
+  "T-VO-vid_502243ca1a9b.t1": {
+   "file": "checkpoints/T-VO-vid_502243ca1a9b.t1.tar.gz",
+   "sha256": "76914ea0a5fc9b0743aea9293093a7cb06b637d66bd50b33d0bbb0c128b0758b",
+   "size_bytes": 192914035
+  },
+  "T-VO-vid_6d84fc825226.t1": {
+   "file": "checkpoints/T-VO-vid_6d84fc825226.t1.tar.gz",
+   "sha256": "25f7748acea57b001d9efad624f20db5846a761985be54da10addfd7eaa9e33f",
+   "size_bytes": 82833744
+  },
+  "T-VO-vid_7cbfa34ef827.t1": {
+   "file": "checkpoints/T-VO-vid_7cbfa34ef827.t1.tar.gz",
+   "sha256": "8d3bbde4d0b47744aa8318cfe9df0548fda0f1cfd255c397e889dfcdc970ab6c",
+   "size_bytes": 114136472
+  },
+  "T-VO-vid_822a0bfacf16.t1": {
+   "file": "checkpoints/T-VO-vid_822a0bfacf16.t1.tar.gz",
+   "sha256": "cb326907a88b5228ce9e3b82809e04e9425804f78b9686fa07a5199b6b597dcb",
+   "size_bytes": 85353518
+  },
+  "T-VO-vid_822a0bfacf16.t1@dsv41flash-opencode-s0-r1": {
+   "file": "checkpoints/T-VO-vid_822a0bfacf16.t1@dsv41flash-opencode-s0-r1.tar.gz",
+   "sha256": "50f24ffe45107bb8b421b579ef7796814eda4ab712d0fb47b223933344980f9f",
+   "size_bytes": 37827413
+  },
+  "T-VO-vid_bb7a508ee81a.t1": {
+   "file": "checkpoints/T-VO-vid_bb7a508ee81a.t1.tar.gz",
+   "sha256": "14562247ae889a5d802e896fc6d90d1f29514be50bdd1825ef9eb8be55d0f4b3",
+   "size_bytes": 215092004
+  },
+  "T-VO-vid_d921d48cf861.t1": {
+   "file": "checkpoints/T-VO-vid_d921d48cf861.t1.tar.gz",
+   "sha256": "4e7a0bffd08e64c680fab5314e7fb776a9717e4bc568f430c61a623054e07090",
+   "size_bytes": 223663872
+  },
+  "T-VO-vid_ea7efae4bfa5.t1": {
+   "file": "checkpoints/T-VO-vid_ea7efae4bfa5.t1.tar.gz",
+   "sha256": "58d4384336bf9235d28fa989e0d1b3a1b2866d453101330a31b00727fdebbe23",
+   "size_bytes": 82793627
+  }
+ }
+}

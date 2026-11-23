@@ -1,0 +1,70 @@
+# Copied from the original pool_flare.yaml (2026-10-30) + game / version / default_picks for gab.
+# default_picks: used for a task whose regression.yaml has no checked picks yet; cheap, uncorrelated probes
+# (one of COMBAT / POWERS, one of NPC / QUEST / SHOP; no DATA: it flags intended changes too).
+# gab selfcheck 2026-10-30: one A/A pair had a single power cast (the zombie died after the first: damage roll + bleeding) ->
+# FL-POWERS compares the MP cost of each cast and that a cast happened, not the cast count (probes.py compare).
+# FL-MOVE: best of two walks (under pod load ~11 a late key press lost 3 tiles once in a negative run that should pass).
+# Base-capability pool, Flare (empyrean campaign) (v0.2, verified in game 2026-10-30, Flare version 1.15 = upstream release
+# AppImage flare-linux64-v1.15: engine 1.15, fantasycore 1.15, empyrean_campaign 1.15)
+# Same rules as pool_minecraft.yaml: atomic base capabilities a task's change could break. Pass = same result as a vanilla
+# instance. Per task the drafter picks the 4-6 relevant ones and may add 0-2 task-specific items; a maintainer checks. Avoid
+# correlated picks: FL-DATA flags any change to a vanilla definition (intended ones too), so pick it only when the task
+# should add content without touching the stock game; FL-COMBAT and FL-POWERS both kill the same lvl-2 zombie; FL-NPC,
+# FL-QUEST and FL-SHOP share one Perdition Harbor run (Udana).
+# Mod surface: Flare mod dirs (settings.txt + text definitions: items, powers, enemies, npcs, loot, quests, maps, engine/*.txt
+# (APPEND or full override), images / portraits / sprites / sounds), enabled after empyrean_campaign in mods.txt.
+# Probes: gab/game/flare/probes.py (FLProbes); `probe: x.y` = field y of probe x (fields joined with +).
+# Runtime: every probe is its own short game run in the sandbox (private Xvfb, software GL, fresh HOME): a crafted text save
+#   slot (Brute, level 1) + `--load-slot=1 [--load-script]`; state is read from the game's own save file (timed save_game
+#   events every 100 ms from a harness mod "flareprobe" loaded last; engine/misc.txt APPEND save_hpmp / save_pos_onexit);
+#   actions through the developer console (dev_mode=1, F5: `exec` event components such as restore, reward_xp, loot,
+#   intramap) and real xdotool keys / clicks; three UI panels are compared as screenshots.
+# A/A calibration 2026-10-30: three fresh vanilla instances aa1/aa2/aa3 (pairs aa1-aa2, aa1-aa3, aa2-aa3) -> all 15 items
+#   pass. Exact in every run: new-game kit, teleport tile, map sequence, XP, MP cost 6/cast, potion use, mana potion +25,
+#   loot, shop gold 425, levels 280/330/380/430 HP, save/reload, the five UI panels (pixel-identical), 36 ERROR lines (the same
+#   3 kinds: missing fow / stash files on a fresh slot, images/menus/game_over.png). Noise: walking 10 tiles east / -7,-5..-6
+#   NW in 1.5 s, speed 5.4-6.5 tiles/s (tol 30%, +-2 tiles); zombie kill 1.2-2.1 s after the attack starts (tol 4 s), lowest
+#   HP 214-243 (tol 35%); health potion +69.6..+73.7 net of regen (tol 8). FL-STABLE fails only on a crash / hang or a new
+#   kind of ERROR line (counts per kind may not grow).
+# Negative checks 2026-10-30 (one deliberately breaking mod each, vs aa1): engine/stats.txt hero speed 6 -> 3 -> FL-MOVE
+#   (10 -> 5 tiles, 5.9 -> 3.0 tiles/s), FL-DATA; lvl2_zombie hp 85 -> 2000 -> FL-COMBAT, FL-POWERS (not killed), FL-DATA;
+#   items/items.txt APPEND [item] id=8 price=300 -> FL-SHOP (gold 425 -> 225), FL-DATA (overridden id); Udana's portrait
+#   swapped -> FL-NPC (talker panel diff 8.2), FL-DATA. All other items pass. Evidence: the verification logs
+
+game: flare
+version: 1.15 (fantasycore 1.15, empyrean_campaign 1.15)
+default_picks:
+- FL-NEWGAME
+- FL-MOVE
+- FL-COMBAT
+- FL-SHOP
+- FL-SAVE
+# gate (gab/eval/regression.py): the STABLE item (no real crash / hang, no new fatal error kind) + the host-present
+# item(s): the stock content they reach must still be there on the modded game (numbers NOT compared with vanilla; only a mod that
+# removes / replaces the host game wholesale fails). Scores are 0 unless the gate passes. Not chosen per task.
+gate: [FL-STABLE, FL-NEWGAME, FL-MOVE]
+
+always:
+  - {id: FL-STABLE, capability: "no crash or hang, and no new kinds of ERROR lines in the log beyond vanilla's, over all probe runs of the evaluation", probe: log_errors, status: ready}
+
+pool:
+  # content
+  - {id: FL-DATA, capability: "stock definitions unchanged: every vanilla item, power, enemy, NPC, loot table, quest, engine setting, menu / animation definition and map of the effective mod stack is as in vanilla (new files and new ids may be added)", probe: data, status: ready}
+  # start and world
+  - {id: FL-NEWGAME, capability: "a new game from the title menu (Play Game, class Brute, Create) plays the backstory and starts on Arrival with the vanilla class kit (stats, gear, potions, powers, action bar)", probe: newgame, status: ready}
+  - {id: FL-MOVE, capability: "keyboard movement (W/A/S/D) moves the hero at vanilla speed and distance, and an in-map teleport (intramap) lands on its tile", probe: move, status: ready}
+  - {id: FL-MAP-TRANSITION, capability: "walking into a map exit loads the next map at its arrival point and back (Arrival -> River Trail -> Arrival)", probe: transition, status: ready}
+  # fighting
+  - {id: FL-COMBAT, capability: "a spawned enemy (lvl-2 zombie) attacks the hero, the hero's basic melee attack (left mouse) kills it in vanilla time and the kill gives the vanilla XP", probe: fight, status: ready}
+  - {id: FL-POWERS, capability: "a class power (Brute right-mouse power) casts on an enemy and costs the vanilla mana per cast", probe: powers, status: ready}
+  - {id: FL-CONSUMABLES, capability: "the action-bar health and mana potions (Q, E) are used up one each and restore the vanilla amounts", probe: potion, status: ready}
+  - {id: FL-LEVELUP, capability: "XP rewards raise the level at the vanilla thresholds and each level raises max HP / MP like vanilla; the character sheet shows it", probe: levelup, status: ready}
+  # items
+  - {id: FL-LOOT, capability: "loot dropped on the ground is picked up: gold automatically, an item by clicking it", probe: loot, status: ready}
+  - {id: FL-INVENTORY, capability: "right-clicking a gear item in the inventory equips it and its bonus applies (+25 max HP), character sheet as vanilla", probe: equip, status: ready}
+  # town
+  - {id: FL-NPC, capability: "clicking a vanilla NPC (Udana) opens the talker with its portrait and topics; the dialogue runs and sets its status", probe: town.npc_status_set+shot_talker+shot_topics, status: ready}
+  - {id: FL-QUEST, capability: "a quest step set by dialogue shows in the quest log (Krolan's Missing) like vanilla", probe: town.npc_status_set+shot_questlog, status: ready}
+  - {id: FL-SHOP, capability: "the vendor trade window buys (ctrl+click, gold paid) and sells (ctrl+click, gold received) at vanilla prices", probe: town.gold+bought_dagger+slingshot_left, status: ready}
+  # persistence
+  - {id: FL-SAVE, capability: "saving (on quit) and loading the slot keep position, gold, items, statuses, HP/MP and gear", probe: save_load, status: ready}

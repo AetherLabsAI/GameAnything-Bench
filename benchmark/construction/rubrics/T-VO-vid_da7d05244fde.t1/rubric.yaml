@@ -1,0 +1,338 @@
+# GameAnything-Bench scoring material: never shown to agents during a trial.
+task_id: T-VO-vid_da7d05244fde.t1
+source_inventory:
+- 00:05.0-00:06.5 small round floating grass island with tall-grass rim, cartoon trees, a pale stone building and pink radish-like sprouts; a
+  red cube with a white lid sleeps ('Z' marks) under a small bird; the cube wakes, the lid flips off, the bird flies away
+- '00:07.0 the red lead piece (small red cylinder with a pink top) stands on the grass; HUD appears top right: red box ''- / 1,000'' plus a small
+  box with an icon and ''5'''
+- 00:07.5-00:09.5 the lead piece moves over the grass and leaves identical red cubes behind it that stay where they were laid; the chain bends,
+  doubles back and closes into a rectangular ring; HUD '6+1', '10+1', '16+1', '22+1', '28+1' over '1,000'
+- '00:10.0-00:11.5 orange wheat field beside a golden building and purple water: the chain rises out of the wheat as a vertical column of red
+  / orange cubes with the lead piece on top'
+- '00:12.0-00:13.5 top-down view of a golden temple-like structure with cyan / pink balloons: an orange chain climbs stacked up a wall; a white
+  puff of cubes at the head (00:13.0); HUD orange ''206+2'', ''210+2'', ''214+2'', ''218+2'' over ''1,000'', small box ''7'''
+- '00:14.0-00:17.0 top-down view of a green island with brick terraces and white pillars: a peach chain runs as a staircase across the ground
+  and a second line climbs a terrace onto a higher grass block; a cube appears on top (00:15.0); HUD ''237+2'' ... ''249'' over ''1,050''; caption
+  ''ORANGE'' at the bottom (00:16.5-00:17.0)'
+- '00:17.5-00:18.0 factory rooftop over purple water: yellow and red chains bend along the roof between orange lamp-like objects'
+- '00:18.5-00:19.5 dark workshop with stone walls: a glowing yellow-green blob / chain head on a planter box beside green and yellow cubes'
+- '00:20.0-00:20.5 green island: a pit ringed by a white stone wall with a small altar; a white star rises from a cyan cube on the altar; a cyan
+  laser beam crosses the sky'
+- '00:21.0-00:22.5 dark space backdrop: a tiny rock island with a glowing doorway framed by orange cubes; a small cube walks into the light'
+- 00:23.0-00:24.0 large whale-shaped green island; a red cube floats beside it; a cyan laser line
+- 00:24.5-00:25.5 small floating puzzle island (white stone walls, purple floor tile, wooden ramp, water pool); a red cube on it; camera moves
+  in
+- '00:26.0-00:27.0 farm corner by a water pool: NPC portrait icon (character with a hat and sunglasses) and a dialogue box typing ''H'' -> ''Howdy!''
+  with a next-arrow; a hatted character beside a tree stump'
+- '00:27.5-00:28.5 green terrace: a red chain reaches a pink sprout; a white flash and a ''+10'' popup above the lead piece, the sprout disappears;
+  more sprouts on the slope; HUD ''166-1 / 1,057'' then ''166 / 1,060'''
+- '00:29.0-00:31.0 dark river under a wooden arch bridge with pink walls: dark teal cubes lie in the water, a red head stacks up and drops; the
+  camera passes behind dark foliage'
+- '00:31.5-00:34.0 white factory buildings on a sand island in purple water: a red chain grows across a rooftop and down its edge; a heart-shaped
+  red sprout pickup on top of a building; HUD ''64+1'', ''65'', ''65'', ''68+1'', ''73+1'' over ''1,000'', small box ''5'''
+- '00:34.5-00:36.0 green island with dark trees: a long red chain winds across the grass to a large pink round pad that glows; red cubes along
+  a curving path'
+- '00:36.4-00:38.4 night lava arena: round orange lava pool inside a dark stone ring with black and white horn-shaped props on green posts; a
+  pink-and-yellow target disc and a dark disc on the lava; a white cube-cloud appears on the dark disc and becomes a white marshmallow-like object
+  (00:37.9), then a green apple-like object (00:38.4)'
+- 00:38.9-00:39.4 floating green islands with clouds; a big red apple-like object stands on a green block
+- '00:39.9-00:40.4 lava machine room: a dark crane claw lowers over a press with grating and green pipes; a yellow block appears in the press
+  with yellow sparks'
+- 00:40.9 desert town with a teal canal; an orange cube on a dark ring post
+- '00:41.4-00:41.9 green island with barrels and cabbages: a pink chain runs straight from a pink round disc toward a dark house'
+- '00:42.4-00:42.9 orange factory floor with blue pipes: a white chain runs along a glass track'
+- '00:43.4-00:43.9 a teal canal under orange arches: a white puff and a disc on the water'
+- '00:44.4-00:47.4 dark mesh-walled area: large green face-cubes stacked around a grey block; a yellow-orange chain crosses on top of the green
+  cubes and a wall behind'
+- '00:47.9-00:49.4 brown ledge between bamboo plants: an orange chain runs along the ledge toward a blue crystal fountain, turns up into a short
+  column (00:48.9) and reaches the crystal; white puffs and loose cubes (00:49.4)'
+- '00:49.9-00:51.4 dark cobblestone street with round grey boulders: an orange chain bends between boulders toward a dark pedestal holding pink
+  sprouts with yellow leaves'
+- '00:51.9-00:53.4 wooden room with lit windows: yellow / orange / pink cubes stacked in rows; a toucan-like bird flies over them and lands; a
+  white puff (00:53.4); small round icons at the left edge'
+- 00:53.9-00:55.4 night hub with balloons, a hanging cage and a green pepper-shaped object on a chain over an orange path; white cubes puff out
+  (00:55.4)
+- '00:55.9-00:56.9 machine with a grated drawer between brown blocks on a purple-water island: a red chain goes up into the drawer, which slides;
+  a red laser line; HUD ''289+1 / 1,013'' -> ''288-1 / 1,013'' -> ''288 / 1,013'''
+- '00:57.4-00:58.9 top-down view of the lava machine: a yellow block with a leaf symbol in the press, a green pipe, a trail of yellow sparks;
+  HUD ''75+1'', ''78-1'', ''80+1'', ''84+1'' over ''1,000'''
+- '00:59.4-01:00.9 white city with a pink robot NPC: a red ball / cube moves on a transparent track with a dashed line; yellow ring markers around
+  it; a green arrow; prompt ''Point Direction/Exit'' bottom right'
+- '01:01.4-01:02.4 teal water with sandy islets and palm trees: a teal chain winds over the water and islets'
+- 01:02.9-01:04.4 green hub island with a white round plaza and a pink chain; panorama of many floating islands, tube structures and bridges in
+  a bright sky
+- '01:04.9-01:05.4 white factory wall with dark slots: red cubes on a pad and in a slot rise upward'
+- 01:05.9-01:07.4 floating island with white stone blocks, a purple floor, wooden stairs and flying pink birds
+- '01:07.9-01:08.9 factory floor: a green NPC with sunglasses and a tie stands on a purple tile'
+- '01:09.4-01:09.9 dim house: three characters around a checked-cloth table, a guitar, music notes'
+- 01:10.4-01:10.9 cabbage field with a box-headed scarecrow wearing a top hat
+- '01:11.4 snowy yard: a creature sleeps (''Z'' marks) in a dark house doorway'
+- '01:11.9-01:13.4 a white pool under a green arch: black ink fish-like creatures with one white eye; a black ball floats above'
+- '01:13.9-01:15.9 top-down night view of a dark stone and lava hub in space: a long orange chain runs across it; a white puff where it meets
+  a round platform'
+- '01:16.4-01:17.9 sand dunes: a small character with a lid on a white ring marker with red arrows; the ring pulses'
+- '01:18.4-01:20.4 top-down snowy circle: an orange-red chain winds around a big spotted orb inside a transparent shield bubble above a round
+  green pad; the bubble bursts in a white flash (01:19.9); afterwards the chain lies around the pad'
+- '01:20.9-01:22.9 sand building with stacked disc pillars: a yellow chain runs along a ledge and into a black hose / pipe, glowing where it enters'
+- '01:23.4-01:24.4 city street: black ink spreads beside a red chain; red cubes are thrown around and vanish; HUD max ''1,000'' -> ''992'' ->
+  ''990'' with a minus delta'
+- '01:24.9-01:27.4 desert dunes with large black void patches: a teal chain advances; a black hand reaches out next to it (01:25.9); a white puff
+  (01:26.4); wide shot of a long teal chain winding over the sand with a teal disc at its free end'
+- 'not visible: controls, how the player chooses direction, any fail state or level end, what reaching the max does, the meaning of the small
+  HUD box, why chains differ in colour'
+- 'audio: trailer music only; no speech, no readable sound effects (the transcript ''Hello'' is a hallucination)'
+instructions_meta:
+  requirement_groups:
+    core mechanic and traversal:
+    - CR1
+    - FP1
+    - FP2
+    - VP2
+    resource tracking and readout:
+    - FP3
+    - VP3
+    level elements and objectives:
+    - CR2
+    - CR3
+    - CR4
+    - FP4
+    - FP5
+    - FP6
+    play space:
+    - VP1
+  explicit_requirements:
+  - type: keep
+    text: I really want to keep the black ink void from the clip that eats any cubes it touches and lowers my maximum.
+    covers:
+    - CR3
+    - FP5
+rubric:
+  content_realization:
+  - id: CR1
+    item: 'The chain and its head: the player controls the head at the free end of a chain of cubes it has laid; the head may be the player
+      themself or a lead piece the player controls, told apart from the laid cubes'
+    anchors:
+      '1': a chain of laid cubes whose free end is the player themself or a distinct lead piece that the player controls
+      '0.5': a chain of cubes exists, but a lead piece at its free end is not told apart from the laid cubes, or the chain is not tied to what
+        the player controls
+      '0': no chain of laid cubes
+    evidence:
+    - - 00:07
+      - 00:12
+    - - 00:31
+      - 00:36
+    - - 01:24
+      - 01:28
+  - id: CR2
+    item: 'Pickups: collectable pickups are placed in the levels, recognisable as items set apart from the terrain and the chain'
+    anchors:
+      '1': pickups placed in the level(s), clearly recognisable as collectables
+      '0.5': pickups exist only in one spot or are hard to tell from terrain / decoration
+      '0': no pickups in the levels
+    evidence:
+    - - 00:27
+      - 00:29
+    - - 00:31
+      - 00:34
+  - id: CR3
+    item: 'The black ink void: black void areas on the ground and/or black ink creatures are present in the levels, clearly set apart from the
+      normal terrain'
+    anchors:
+      '1': black ink void patches or ink creatures placed in the level(s), clearly distinct from the terrain
+      '0.5': a hazard area exists but does not read as a black void (e.g. ordinary lava or a generic danger zone)
+      '0': no void in the game
+    evidence:
+    - - 01:23
+      - 01:25
+    - - 01:24
+      - 01:28
+  - id: CR4
+    item: 'Level targets set in height: the levels are built on several height levels (terraces, ledges, walls) and hold targets placed up on
+      a ledge, at the end of a long route, or as an object to wind round or build into'
+    anchors:
+      '1': ground with several height levels and at least one target placed up high, far off or as an object to surround / enter
+      '0.5': targets exist but all sit on one flat level next to the start, or the levels have height but no target
+      '0': no target in the levels
+    evidence:
+    - - 00:12
+      - 00:17
+    - - 00:47
+      - 00:50
+    - - 00:55
+      - 00:57
+    - - 01:18
+      - 01:21
+  functions_playability:
+  - id: FP1
+    item: 'Laying the chain: moving the head (the player or the lead piece) places one block per step that stays where it was placed, so the
+      chain is the travelled path and can be closed into a loop'
+    anchors:
+      '1': blocks are placed as the player moves, stay fixed, and follow the route including loops and turns
+      '0.5': blocks are placed but drift, follow the head like a snake, or gaps appear
+      '0': no chain
+    evidence:
+    - - 00:07
+      - 00:10
+    - - 00:34
+      - 00:36
+  - id: FP2
+    item: 'Building upward: the chain can rise as a column, letting the player climb onto a higher ledge that cannot be reached on the flat'
+    anchors:
+      '1': the player builds up and reaches a higher spot with the chain
+      '0.5': the chain goes up only one step, or the player cannot get from the column onto the higher spot
+      '0': flat only
+    evidence:
+    - - 00:10
+      - 00:12
+    - - 00:14
+      - 00:17
+  - id: FP3
+    item: 'Cube budget: the number of blocks in use is tracked against a maximum, rises with every placed block and falls when the chain gets
+      shorter, so freed blocks can be placed again'
+    anchors:
+      '1': the in-use count stays correct against a maximum, rising per placed block and falling when the chain shortens
+      '0.5': a count without a maximum, or a count that never falls
+      '0': no budget
+    evidence:
+    - - 00:07
+      - 00:10
+    - - 00:55
+      - 00:59
+  - id: FP4
+    item: 'Pickups extend the budget: touching a pickup with the chain consumes it and raises the maximum'
+    anchors:
+      '1': pickup consumed and maximum raised
+      '0.5': pickup consumed, but the maximum does not change (e.g. a separate score)
+      '0': touching a pickup with the chain does nothing
+    evidence:
+    - - 00:27
+      - 00:29
+  - id: FP5
+    item: 'Void hazard: the void destroys chain blocks it touches and lowers the maximum, while the rest of the chain stays in place'
+    anchors:
+      '1': blocks are destroyed on contact, the maximum drops, and the untouched part of the chain remains
+      '0.5': the void resets the whole chain, or does not affect the budget
+      '0': the void has no effect on the chain
+    evidence:
+    - - 01:23
+      - 01:25
+    - - 01:24
+      - 01:28
+  - id: FP6
+    item: 'A goal that needs the chain: reaching or surrounding a target with the chain triggers it and visibly changes something, giving play
+      a purpose'
+    anchors:
+      '1': the chain reaching / surrounding a target makes it react visibly, so the player has a clear objective
+      '0.5': the target reacts without the chain (e.g. to the player alone), or its reaction is hard to notice
+      '0': nothing reacts; free building only
+    evidence:
+    - - 00:47
+      - 00:50
+    - - 00:55
+      - 00:57
+    - - 01:18
+      - 01:21
+  visual_presentation:
+  - id: VP1
+    cat: spatial
+    keyframes:
+    - '00:09.0'
+    - '00:24.5'
+    - '01:03.9'
+    item: 'Play space: compact plots that read as small floating islands in a bright sky, with other islands visible in the distance'
+    anchors:
+      '1': floating plot(s) with a sky backdrop and other islands in view
+      '0.5': a bounded play area but on ordinary ground or without the floating-island read
+      '0': an unrelated open world
+    evidence:
+    - - 00:07
+      - 00:10
+    - - 00:24
+      - 00:26
+    - - 01:03
+      - 01:05
+  - id: VP2
+    cat: style
+    keyframes:
+    - '00:09.0'
+    - '00:11.5'
+    - '01:27.4'
+    item: 'The chain''s look: an observable trail of placed blocks / segments left behind the player, winding over and stacking up from the
+      terrain so it stands out from the ground'
+    anchors:
+      '1': a visible trail of placed blocks / segments behind the player, standing out from the ground and reading as one chain
+      '0.5': blocks present but blending into the terrain, or not readable as one continuous trail
+      '0': no visible chain
+    evidence:
+    - - 00:07
+      - 00:12
+    - - 01:24
+      - 01:28
+  - id: VP3
+    cat: presentation
+    keyframes:
+    - '00:08.5'
+    - '00:27.5'
+    - '00:56.4'
+    item: 'Budget readout: a corner HUD with in-use / maximum and a +/- delta always visible during play, and a number popup at the spot where
+      a pickup is collected'
+    anchors:
+      '1': a constantly visible in-use / maximum readout with change feedback, and a popup at the pickup
+      '0.5': the readout only on demand (menu, chat line) or no feedback at the pickup
+      '0': the budget is not shown
+    evidence:
+    - - 00:07
+      - 00:10
+    - - 00:27
+      - 00:29
+    - - 00:55
+      - 00:57
+play_suggestions:
+  FP1:
+  - 'walk a square back to the start: is it a closed ring of fixed blocks?'
+  - 'walk, then look back: did any block move or vanish?'
+  FP2:
+  - find a ledge higher than a jump and build up to it
+  - 'try to reach that ledge without the chain (counter-case: it should not be reachable)'
+  - 'build a tall column and step off: what happens to the chain?'
+  FP3:
+  - count placed blocks against the readout or game state
+  - 'shorten the chain by whatever means the build offers (e.g. stepping back), then extend again: does the count stay correct?'
+  - 'try to extend past the maximum (counter-case: the maximum should stop you)'
+  FP4:
+  - 'collect one pickup: note the maximum before and after'
+  - try to collect a pickup with the player only, not the chain
+  FP5:
+  - 'lay the chain into a void area: which blocks go, and does the maximum drop?'
+  - 'after a loss, keep building: is play still possible?'
+  FP6:
+  - try to reach the target without building the chain
+  - 'reach it with the chain: what changes?'
+  robustness:
+  - cross your own chain or build into a wall
+  - shorten to zero and start again
+  - 'leave and rejoin mid-chain: is the chain and the count kept?'
+v4_map:
+  U1: FP1 (trace mechanism); existence of chain and lead piece -> CR1
+  U2: FP2
+  U3: FP3
+  U4: CR2 (pickups exist) + FP4 (raise the maximum)
+  U5: CR3 (void exists) + FP5 (destroys cubes, lowers maximum)
+  U6: 'CR1 (lead piece vs laid cubes) + VP2 (one colour); per-area colours dropped: peripheral (colour variety across zones)'
+  U7: CR4 (targets placed up high / far off / as objects to surround) + FP6 (they react to the chain)
+  FP1: FP1
+  FP2: FP2 (0.5 anchor no longer scores whether a ledge exists; that is CR4)
+  FP3: FP3
+  FP4: FP4 + CR2 (existence of pickups split off)
+  FP5: FP5 + CR3 (existence of the void split off)
+  FP6: FP6 + CR4 (target placement split off)
+  FP7: 'removed: editing request (level time limit), moved to editing_seed.yaml (curator decision 2026-11-05)'
+  VP1: VP1 (floating-island look); terraces and ledges at several heights -> CR4
+  VP2: VP2
+  VP3: VP3
+provenance:
+  source_yaml: T-VO-vid_da7d05244fde.t1.yaml
+  source_sha256: 511bb3562752355119417602e452283d77b639f2d9a5069f7e20eec59b60b354
+  size_waiver: null
+  size_max: null
+  sources: []

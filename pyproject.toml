@@ -1,0 +1,29 @@
+[project]
+name = "gameanything-bench"
+version = "1.0.0"
+description = "GameAnything-Bench: coding agents build and edit game mods from multimodal references"
+requires-python = ">=3.11"
+license = {text = "Apache-2.0"}
+authors = [{name = "The GameAnything-Bench Authors"}]
+dependencies = ["PyYAML>=6.0,<7", "jsonschema>=4.19,<5", "huggingface_hub>=0.20", "pillow>=10"]
+
+[project.optional-dependencies]
+test = ["pytest>=7"]
+# the Steam login QR code in the terminal (gab/setup/steamsetup.py; installed on first use if missing)
+steam = ["zxing-cpp>=2.2", "segno>=1.6", "pillow>=10"]
+
+[project.scripts]
+gab = "gab.cli:main"
+
+[build-system]
+requires = ["setuptools>=68"]
+build-backend = "setuptools.build_meta"
+
+[tool.setuptools.packages.find]
+include = ["gab*"]
+
+[tool.setuptools.package-data]
+gab = ["**/*.yaml", "**/*.lua", "**/*.md", "**/*.sh", "tools/*", "game/**/*", "agent/container_files/*", "refine/memory_seed/*.json", "report/*.html"]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]

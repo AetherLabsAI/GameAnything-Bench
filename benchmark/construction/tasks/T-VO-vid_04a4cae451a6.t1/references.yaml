@@ -1,0 +1,24 @@
+# Reference material: fetched from the HF dataset into $GAB_MEDIA_DIR/<task>/ by `gab media fetch` (sha256 checked).
+# The agent gets the files only (no title, author, caption or source): this file is never shown to it.
+task_id: T-VO-vid_04a4cae451a6.t1
+refs:
+- id: c01
+  kind: video
+  file: clip_01.mp4
+  video_id: vid_04a4cae451a6
+  source:
+    title: 07 - Disney's Frozen Official Trailer
+    url: null
+    channel: null
+    youtube_id: null
+  range:
+    start: 65.1
+    end: 114.2
+    text: 1:05.10-1:54.20
+  duration_s: 49.1
+  size_bytes: 8610486
+  format: mp4 H.264 720p, AAC audio
+  hf_path: media/T-VO-vid_04a4cae451a6.t1/clip_01.mp4
+  sha256: 0e726f8e2aa5efa3645d2dac0c59712ea13c6bccd35966b2671136aec4528235
+  rights_note: 'Copyrighted film trailer: use as private reference only, do not redistribute; the built content should transfer the beats rather
+    than copy characters 1:1.'

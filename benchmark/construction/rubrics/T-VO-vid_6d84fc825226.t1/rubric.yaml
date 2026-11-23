@@ -1,0 +1,261 @@
+# GameAnything-Bench scoring material: never shown to agents during a trial.
+task_id: T-VO-vid_6d84fc825226.t1
+source_inventory:
+- 00:00-00:05.5 title 'ROME' in large pale-yellow serif capitals fades in at 00:00 and fades out by about 00:05.5, over a slow forward drone glide
+  above a river
+- 00:00-00:05.5 the river with a stone arched bridge lined with statues leading to a round drum-shaped fortress-like building on the far bank;
+  stone embankment walls, a tree-lined bank on the right, ochre and terracotta-roofed buildings in the foreground, a long pale palace block behind,
+  hills on the horizon
+- '00:06-00:12.8 cut to a higher, wider aerial: the river bends through the city, crossed by several bridges (a multi-arched stone bridge at the
+  back, flatter bridges in front); both embankments tree-lined, walled; a dense carpet of low ochre / terracotta-roofed blocks with scattered
+  domes fills the far side to the horizon; warm low sun; slow forward move'
+- '00:13-00:15.5 close aerial of a white marble monument: a square colonnaded block topped by a bronze chariot group, beside a roundabout with
+  green lawns, a plaza, trees and brick palazzi with a tower; slow orbit'
+- 00:16-00:18.5 aerial of a large elliptical amphitheatre ruin with tiers of arches; the outer ring is broken lower on one side, exposing inner
+  tiers; red-roofed blocks in front, trees behind, streets around; slow orbit with long shadows
+- 00:19-00:25.5 low aerial over rooftops toward a round domed temple with a triangular-pediment portico, sunk among low roofs; church bell towers
+  / facades in the foreground, small domes and spires on the skyline; clear blue sky; slow forward drift
+- '00:26-00:31.5 near top-down oblique view of a fountain: a turquoise basin set against a sculpted pale palace facade, hemmed in by tight alleys
+  and rooftops; slow rotation'
+- '00:32-00:38 golden-hour aerial, partly backlit and hazy: the wide white colonnaded monument on stepped terraces, with a long straight tree-lined
+  avenue running from it toward the horizon; mountains silhouetted far away'
+- 00:38.5-00:41.5 aerial of a large dome behind a church facade, with curved colonnades enclosing an oval square; a straight street on the right;
+  palazzi around; hazy warm light
+- 00:42-00:44.5 the amphitheatre again, farther away and lit warm gold, among trees and streets, with a pale building complex in the foreground
+  and hills on the horizon
+- 00:45-00:51 the white monument again, now from the front at a distance, long shadows across the city, two ochre buildings in the foreground
+  and a dome at lower left; slow drift
+- '00:51.5-00:57.5 street-level shot: a stone lion-head (mask) fountain spouting water into a basin in the foreground, the columned portico of
+  the domed temple with an inscribed frieze behind, cars and a few pedestrians, pale buildings on the right; slow lateral move'
+- 'throughout: only slow camera moves (forward glides, orbits, drifts) cut together; no interaction, no on-screen text after the title, no night
+  shots'
+- 'audio: music only (no speech detected; transcript empty)'
+instructions_meta:
+  requirement_groups:
+    exploration and connections:
+    - FP1
+    - FP2
+    tour structure:
+    - FP3
+    landmarks:
+    - CR2
+    - CR3
+    - CR4
+    - CR5
+    - CR6
+    - VP2
+    - VP3
+    river setting, city fabric and atmosphere:
+    - CR1
+    - VP1
+    - VP4
+  explicit_requirements:
+  - type: specify
+    text: 'The landmarks should sit where they do in the clip: the white monument at the end of the long tree-lined avenue, the big dome behind
+      its oval square, the fountain squeezed into tight alleys, and the lion-head fountain in front of the temple.'
+    covers:
+    - CR3
+    - CR4
+    - CR5
+    - CR6
+rubric:
+  content_realization:
+  - id: CR1
+    item: The river runs through the city in a clear bend, with city blocks on both banks, is crossed by several bridges, and a round drum-shaped
+      fortress-like building stands on one bank at the head of a bridge
+    anchors:
+      '1': a bending river through the built city with blocks on both banks, more than one bridge across it, and the round drum-shaped building
+        on a bank at a bridge head
+      '0.5': a river with bridges through the city, but straight, with only one bridge, or without the round building at a bridge
+      '0': no river through the city, or a coast / canal grid instead
+    evidence:
+    - - 00:00
+      - 00:05
+    - - 00:06
+      - 00:12
+  - id: CR2
+    item: The game contains a large elliptical amphitheatre ruin standing among the city's streets and blocks, far larger than the buildings around
+      it
+    anchors:
+      '1': an elliptical arena ruin set inside the city fabric and clearly dominating the blocks around it
+      '0.5': an arena is present but round / not ruined, or set apart from the city, or no larger than its neighbours
+      '0': no amphitheatre
+    evidence:
+    - - 00:16
+      - 00:19
+    - - 00:42
+      - 00:45
+  - id: CR3
+    item: A wide white colonnaded monument on stepped terraces stands at the end of a long straight tree-lined avenue, with an open plaza / roundabout
+      beside it
+    anchors:
+      '1': the wide white colonnaded, terraced monument terminates a long straight tree-lined avenue, with an open plaza or roundabout beside
+        it
+      '0.5': the monument and the avenue both exist but the avenue does not lead to it, or the monument lacks its colonnade / terraces, or the
+        plaza is missing
+      '0': no such monument, or it stands alone without any avenue
+    evidence:
+    - - 00:13
+      - 00:16
+    - - 00:32
+      - 00:38
+    - - 00:45
+      - 00:51
+  - id: CR4
+    item: A large dome rises behind a church front, with curved colonnades in front of it enclosing an oval square
+    anchors:
+      '1': a big dome behind a church front and an oval square enclosed by curved colonnades in front of it
+      '0.5': the dome or the colonnaded square present but not together, or the square neither oval nor enclosed by colonnades
+      '0': neither
+    evidence:
+    - - 00:38
+      - 00:42
+  - id: CR5
+    item: A round domed temple with a triangular-pediment columned portico stands sunk among low roofs, with a lion-head fountain in the square
+      in front of its portico
+    anchors:
+      '1': the round domed temple with a pediment portico among low roofs, and a lion-head fountain in the square in front of the portico
+      '0.5': the temple present but without the portico or the fountain in front, or standing in open ground
+      '0': no domed temple
+    evidence:
+    - - 00:19
+      - 00:26
+    - - 00:51
+      - 00:57
+  - id: CR6
+    item: A large fountain basin set against a building front is wedged into a tight block of narrow alleys and rooftops
+    anchors:
+      '1': a fountain basin against a building front, hemmed in on its sides by narrow alleys and close buildings
+      '0.5': a fountain against a building front, but in an open square or wide street
+      '0': no such fountain
+    evidence:
+    - - 00:26
+      - 00:32
+  functions_playability:
+  - id: FP1
+    item: 'The built city can be explored: the player can move the view (or a character) over every part of the scene and bring each landmark
+      that was built into view, with no unreachable, cut-off or broken area'
+    anchors:
+      '1': every built landmark and district can be reached and brought into view, with no unreachable or broken area
+      '0.5': most of the scene can be reached, but some landmarks or areas are cut off or cannot be brought into view
+      '0': the player cannot move the view / character to the landmarks, or the scene does not load
+    evidence:
+    - - 00:00
+      - 00:57
+  - id: FP2
+    item: 'The bridges work as crossings: movement (or roads / routes, whatever the game uses) can get from one bank of the river to the other
+      over the bridges'
+    anchors:
+      '1': the banks are connected by working crossings over the bridges
+      '0.5': crossing is unreliable or works only at some bridges
+      '0': the bridges are decoration only and the banks are not connected over them, or there are no bridges to cross
+    evidence:
+    - - 00:00
+      - 00:12
+  - id: FP3
+    item: 'Tour structure: the experience gives a coherent start-to-end tour of the landmarks: a recognisable start, the landmarks as milestones
+      the player moves through (guided or player-driven, in any order), and a clear end or a way to continue'
+    anchors:
+      '1': a clear start, the landmarks reachable as distinct milestones of one tour, and a clear end or continuation
+      '0.5': 'only part of the structure: e.g. the landmarks work as milestones but there is no recognisable start, or no end / continuation;
+        or a start and end exist but the landmarks are not set apart as milestones'
+      '0': 'no tour structure at all: a static scene, or landmarks with none of a start, milestones or an end'
+    evidence:
+    - - 00:00
+      - 00:57
+  visual_presentation:
+  - id: VP1
+    cat: spatial
+    keyframes:
+    - '00:02.0'
+    - '00:06.0'
+    - '00:10.0'
+    item: 'The look of the river: walled stone embankments lined with trees on both banks and stone arched bridges, with the bend readable from
+      above'
+    anchors:
+      '1': walled, tree-lined embankments and arched stone bridges, the curve of the river readable in an overview
+      '0.5': the river reads as a river but the banks are bare / unwalled or the bridges flat slabs without arches
+      '0': no river, or nothing of its look carried over
+    evidence:
+    - - 00:00
+      - 00:12
+  - id: VP2
+    cat: key_moment
+    keyframes:
+    - '00:17.0'
+    - '00:43.0'
+    item: 'The look of the amphitheatre: stacked tiers of arches, with the outer ring broken lower on one side so the inner tiers show'
+    anchors:
+      '1': tiers of arches and a visibly broken outer ring exposing the inner tiers
+      '0.5': tiers of arches without the broken side, or a broken ring without arched tiers
+      '0': a plain wall or bowl, or no amphitheatre
+    evidence:
+    - - 00:16
+      - 00:19
+    - - 00:42
+      - 00:45
+  - id: VP3
+    cat: key_moment
+    keyframes:
+    - '00:28.0'
+    item: 'The look of the alley fountain: turquoise water in its basin against a pale, sculpted palace facade'
+    anchors:
+      '1': turquoise / clear blue water against a pale facade with visible sculpted decoration, recognisable against the keyframe
+      '0.5': only one of the two reads (the coloured water or the pale sculpted facade)
+      '0': neither, or no such fountain
+    evidence:
+    - - 00:26
+      - 00:32
+  - id: VP4
+    cat: style
+    keyframes:
+    - '00:08.0'
+    - '00:36.0'
+    - '00:42.5'
+    item: 'City fabric and light: a dense, uniform low-rise fabric of ochre / terracotta roofs fills the space between the landmarks, under warm
+      low-angle sunlight with long shadows and a hazy horizon'
+    anchors:
+      '1': dense uniform warm-roofed low-rise blocks AND a warm low-sun mood
+      '0.5': only one of the two (the fabric or the light), or the fabric is sparse / mixed in colour
+      '0': neither
+    evidence:
+    - - 00:06
+      - 00:12
+    - - 00:32
+      - 00:51
+play_suggestions:
+  FP1:
+  - visit each built landmark in turn by moving the view or a character
+  - 'pan to the edges of the built city: is any part cut off or unreachable?'
+  FP2:
+  - cross from one bank to the other at each bridge (on foot, by road or route, whatever the game uses)
+  - 'counter-case: check that the bridges are working crossings, not only decoration'
+  FP3:
+  - 'start a fresh game: is there a recognisable start of the tour?'
+  - 'move through the landmarks: can you tell they are stops of one tour, and is there an end or a way to continue after the last one?'
+  robustness:
+  - 'try to build or place objects on top of a landmark or in the river: does the scene stay intact?'
+  - try to cross the river away from any bridge and note what happens (unscored)
+  - 'leave the game idle for a while, then save and reload: are the landmarks and bridges still there?'
+  - 'move to the map edge beyond the built area: does it end cleanly?'
+v4_map:
+  U1: 'CR1, CR3, CR6, FP2 (straight street by the oval square dropped: peripheral)'
+  U2: 'CR1, VP1 (statues on the bridge dropped: detail)'
+  U3: CR2, CR3, CR4, CR5, CR6
+  U4: CR3, CR4, CR5, CR6
+  U5: 'CR2, VP4 (hills on the horizon dropped: peripheral background)'
+  FP1: FP1
+  FP2: CR1 (bridges exist), FP2 (they work as crossings)
+  FP3: FP3
+  FP4: 'dropped: editing request (boat travel along the river), moved to editing_seed.yaml'
+  VP1: CR1 (bend, bridges, round building), VP1 (look of banks and bridges)
+  VP2: CR2 (elliptical ruin, dominant size), VP2 (look of tiers and broken ring)
+  VP3: CR3
+  VP4: CR4, CR5, CR6 (shape and setting, incl. the temple's round drum and the dome over the church front), VP3 (look of the alley fountain)
+  VP5: VP4
+provenance:
+  source_yaml: T-VO-vid_6d84fc825226.t1.yaml
+  source_sha256: 723bf6e1ec26bdda5e0b049e45df8e5d635c9bb3bb63406c0fc9efbb6d217e8f
+  size_waiver: null
+  size_max: null
+  sources: []

@@ -1,0 +1,10 @@
+{
+  "Name": "NegSlowClock",
+  "Author": "gab",
+  "Version": "1.0.0",
+  "Description": "gab negative mod: the clock runs at half speed",
+  "UniqueID": "gab.neg.SlowClock",
+  "EntryDll": "NegSlowClock.dll",
+  "MinimumApiVersion": "4.0.0",
+  "UpdateKeys": []
+}

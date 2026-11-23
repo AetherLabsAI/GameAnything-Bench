@@ -1,0 +1,227 @@
+# GameAnything-Bench scoring material: never shown to agents during a trial.
+task_id: T-IO-ba73f854d1
+source_inventory:
+- 'img01: a small canal crossed by a single-leaf opening bridge; the leaf is part-way raised over the channel, hinged at a brick-and-concrete
+  pier, with a white overhead balance beam on two posts tied to the leaf tip by rods; a fixed approach span on the left with a red-white barrier
+  arm across its far end; a person in an orange vest on the pier beside a parked scooter; a cyclist waiting on the brick path at right; wooden
+  fenders and a jetty in the water; a red-white sign by the pier, a name board ''Haxtum'' and a ''1999'' plaque; overcast'
+- 'img02: the same bridge from almost the same spot; the leaf is raised steeply (near vertical) and the balance beam has swung up with it; a white
+  motor boat is passing through the opened channel toward the viewer; the person is still on the pier'
+- 'img03: a road bridge in a harbour town seen from the road; the leaf stands raised, its asphalt surface with the centre line facing the approaching
+  road; two pale green A-frame towers beside it; a red-white barrier arm with lamps is down across the road, a red traffic light and a triangular
+  warning sign stand beside it; a white camper van waits at the barrier; buildings, flags, blue sky'
+- 'img04: a large double-leaf opening bridge over a wide river; two leaves are partly raised from their piers (small towers on each pier), tips
+  apart at midspan, leaving a gap over the channel; fixed steel-truss approach spans either side, people standing on the left approach; city behind;
+  a small orange boat at right'
+- 'img05: collage of four other opening bridges, each over water with leaves raised: top-left a twin-tower bridge with two leaves raised and a
+  sailing ship between the towers; top-right a red steel-truss bridge with a leaf raised beside a high truss frame; bottom-left a black truss
+  leaf raised high, a large concrete counterweight block at its heel, a boat and a city skyline; bottom-right a blue arched-truss bridge with
+  two leaves raised'
+- 'img06: engineering side-view line drawing of one leaf: the leaf turns about a pivot A (red dot) on a pier, shown closed (horizontal, solid)
+  and raised (dashed, about 45 degrees); a yellow ''Counterweight'' on the other side of the pivot, linked by C-D-B; the leaf''s weight P acts
+  at its centre g with lever arm x (x'' when raised), the counterweight W at arm y (y''); ''Operating Pinion'' labelled near the pivot'
+- 'not shown: no image shows a road vehicle actually crossing, the leaf being lowered or the road reopening; the closed leaf appears only in the
+  img06 drawing; no timing or control panel is readable'
+instructions_meta:
+  requirement_groups:
+    bridge operation:
+    - CR2
+    - FP1
+    - FP5
+    crossing:
+    - FP2
+    traffic around the bridge:
+    - CR3
+    - CR4
+    - FP3
+    - FP4
+    crossing site and state display:
+    - CR1
+    - VP1
+    - VP2
+  explicit_requirements:
+  - type: keep
+    text: I definitely want the boats that wait at the closed bridge and sail through the gap once it is raised.
+    covers:
+    - CR4
+    - FP3
+rubric:
+  content_realization:
+  - id: CR1
+    item: 'The game contains a road or path that crosses a water channel on a movable span: a leaf hinged at its pier end beside the channel,
+      which joins the approach road to the far side when down'
+    anchors:
+      '1': a road over a water channel whose crossing span is a leaf hinged at a pier end, lying in line with the approach road
+      '0.5': a bridge over water exists, but no separate movable leaf with a pier-end hinge can be found, or the leaf does not line up with the
+        road
+      '0': no crossing over water, or no movable span
+    evidence:
+    - img01
+    - img02
+    - img04
+    - img06
+  - id: CR2
+    item: The leaf has a counterweight on the other side of its pivot, connected to the leaf
+    anchors:
+      '1': a counterweight sits across the pivot from the leaf and is connected to it (directly at the heel or through a beam or linkage)
+      '0.5': a counterweight is present but on the leaf's side of the pivot or not connected to the leaf
+      '0': no counterweight
+    evidence:
+    - img06
+    - img01
+    - img02
+    - img05
+  - id: CR3
+    item: The approach road has a road stop (a barrier, signal or equivalent) placed before the movable span
+    anchors:
+      '1': a road stop that can close the road stands on the approach before the leaf
+      '0.5': a stop exists but is placed away from the approach, e.g. beyond the gap or off the road
+      '0': no road stop
+    evidence:
+    - img03
+    - img01
+  - id: CR4
+    item: 'The crossing site has traffic of both kinds: vessels on the waterway that use the channel under the bridge, and road users on the approach
+      road'
+    anchors:
+      '1': vessels on the water and road users (vehicles or people other than the player) on the approach are both present
+      '0.5': only one of the two kinds of traffic is present
+      '0': no traffic around the crossing
+    evidence:
+    - img02
+    - img05
+    - img03
+    - img01
+  functions_playability:
+  - id: FP1
+    item: The player can raise and lower the leaf, which turns about its pivot end through intermediate angles between closed and fully open,
+      and the open-close cycle can be repeated
+    anchors:
+      '1': the leaf is operated by the player, rotates about its pivot end (not teleporting or sliding) and can be opened and closed again any
+        number of times
+      '0.5': the leaf moves but only by a fixed script, only one way, or without a pivot-like motion
+      '0': no movable leaf
+    evidence:
+    - img01
+    - img02
+    - img06
+  - id: FP2
+    item: 'The leaf is a solid part of the crossing: closed, it forms a continuous deck that the player and road traffic can cross; raised, it
+      leaves a gap that cannot be crossed'
+    anchors:
+      '1': crossing works on the closed leaf, and the open gap really prevents the crossing
+      '0.5': the leaf is solid but the open gap can still be crossed, or the closed leaf cannot be walked or driven on
+      '0': the leaf has no effect on the crossing
+    evidence:
+    - img04
+    - img06
+    - img01
+  - id: FP3
+    item: Vessels on the waterway are blocked by the closed leaf and pass through the channel once it is raised, giving the opening a purpose
+      and visible feedback
+    anchors:
+      '1': a vessel waits or is stopped at the closed bridge and goes through the gap when the leaf is up
+      '0.5': vessels pass but regardless of the leaf's position, or they never actually move through
+      '0': vessels do not react to the leaf, or there are none to observe
+    evidence:
+    - img02
+    - img05
+  - id: FP4
+    item: Road traffic is held at the approach while the bridge is open and may proceed once it is closed
+    anchors:
+      '1': road users (vehicles or the player) are stopped before the gap whenever the leaf is up and released when it is down
+      '0.5': a stop exists but does not track the bridge state, or it can be passed into the gap
+      '0': road traffic is never held when the bridge opens
+    evidence:
+    - img03
+    - img01
+  - id: FP5
+    item: The counterweight moves opposite to the leaf about the pivot as the bridge opens and closes
+    anchors:
+      '1': as the leaf tip rises the counterweight side goes down, and the reverse on closing, in step throughout the motion
+      '0.5': the counterweight moves but in the same direction as the leaf, or out of step with it
+      '0': the counterweight stays static while the leaf moves, or there is none
+    evidence:
+    - img06
+    - img01
+    - img02
+    - img05
+  visual_presentation:
+  - id: VP1
+    cat: presentation
+    item: 'The bridge state is readable to the player: whether the leaf is up or down and whether the road is stopped can be seen together'
+    anchors:
+      '1': leaf position and whether road access is stopped are visible and readable together
+      '0.5': only one of the two readable, or the state must be guessed
+      '0': state not readable
+    evidence:
+    - img03
+    - img01
+  - id: VP2
+    cat: style
+    item: 'The crossing site looks like the referenced opening-bridge crossings: the leaf reads as a heavy road deck rising from a solid pier,
+      over a water channel held between built banks'
+    anchors:
+      '1': compared with the references, the leaf looks like a road deck (road surface on a substantial span) standing on a solid pier, and the
+        water runs as a canal or river channel with built edges; the site is recognisably an opening-bridge crossing
+      '0.5': a bridge over water is visible but looks generic, e.g. a thin plank or floating slab with no pier, or the water is a featureless
+        plane with no channel edges
+      '0': the site does not look like a bridge crossing over water
+    evidence:
+    - img01
+    - img02
+    - img03
+    - img04
+play_suggestions:
+  FP1:
+  - 'raise the leaf halfway and stop: does it hold an intermediate angle?'
+  - open and close the bridge several times in a row
+  FP2:
+  - walk or drive onto the closed leaf and across
+  - with the leaf up, try to walk off the end of the approach into the gap
+  - stand on the leaf while it starts to rise
+  FP3:
+  - 'keep the bridge closed while a vessel approaches: is it stopped?'
+  - 'raise the leaf only partly as a vessel arrives: does it pass or wait?'
+  FP4:
+  - 'open the bridge while a vehicle approaches: does it stop before the gap?'
+  - 'close the bridge: does held traffic move on?'
+  - try to get past the road stop on foot while open
+  FP5:
+  - 'raise the leaf slowly: does the counterweight side go down as the tip rises?'
+  - 'stop the leaf halfway and reverse: does the counterweight follow back without lag or jumps?'
+  robustness:
+  - lower the leaf onto a vessel or a vehicle in the gap
+  - spam the raise / lower control mid-motion
+  - 'leave the bridge open for a long time: does traffic stay held without breaking?'
+v4_map:
+  U1: FP1, CR1 | rotation scored by FP1; hinged leaf existence to CR1
+  U2: FP3, CR4 | vessel passage scored by FP3; vessel existence to CR4
+  U3: FP4, CR3 | holding scored by FP4; road stop existence to CR3
+  U4: CR2
+  U5: FP5, CR2 | opposite motion scored by FP5; linkage to CR2
+  FP1: FP1
+  FP2: FP2
+  FP3: FP3, CR4 | vessel existence split off to CR4
+  FP4: FP4, CR3 | road stop existence split off to CR3
+  FP5: FP5, CR2 | counterweight existence split off to CR2
+  VP1: CR1 | spatial arrangement of road, channel and leaf
+  VP2: VP1
+  VP3: 'removed: editing (night setting, moved to editing_seed.yaml as its VP2)'
+  new: 'VP2 | added in the editing split: play-space style item (v3.2), restores the v4 VP minimum of 2; not derived from the removed night-setting
+    item'
+provenance:
+  source_yaml: T-IO-ba73f854d1.yaml
+  source_sha256: 63cfe447468843c4d5bb22c956079dee75bb233884f8d9bf7f5b22d3db8bf96e
+  size_waiver: null
+  size_max: null
+  sources:
+  - refs:
+    - img01
+    - img02
+    - img03
+    - img04
+    - img05
+    - img06
+    bundle: ba73f854d1
+    title: 吊桥开合：关闭通车、开启让船

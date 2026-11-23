@@ -1,0 +1,7 @@
+# GameAnything-Bench scoring material: never shown to agents during a trial.
+task_id: T-IO-2c9843ed0d
+game: godot-tps
+status: pending
+picks: []
+task_checks: []
+note: picks wait for the verified pools (model proposes, a maintainer checks); until then the evaluator uses the game's default_picks

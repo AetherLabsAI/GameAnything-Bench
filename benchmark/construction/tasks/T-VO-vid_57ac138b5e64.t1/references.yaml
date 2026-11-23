@@ -1,0 +1,24 @@
+# Reference material: fetched from the HF dataset into $GAB_MEDIA_DIR/<task>/ by `gab media fetch` (sha256 checked).
+# The agent gets the files only (no title, author, caption or source): this file is never shown to it.
+task_id: T-VO-vid_57ac138b5e64.t1
+refs:
+- id: c01
+  kind: video
+  file: clip_01.mp4
+  video_id: vid_57ac138b5e64
+  source:
+    title: 05 - Flying Through London’s Tower Bridge (World First)
+    url: null
+    channel: null
+    youtube_id: null
+  range:
+    start: 86.8
+    end: 115.6
+    text: 1:26.80-1:55.60
+  duration_s: 28.8
+  size_bytes: 5986331
+  format: mp4 H.264 720p, AAC audio
+  hf_path: media/T-VO-vid_57ac138b5e64.t1/clip_01.mp4
+  sha256: 532493a783f5bf4581ac5da71522b2b52d03e1f17245a005027c81de438e7938
+  rights_note: Real-world branded promotional footage of a Red Bull stunt (Red Bull logos on suit, helmet and canopy). Use as a private reference
+    only. Do not redistribute the footage or reproduce the Red Bull branding in built content.

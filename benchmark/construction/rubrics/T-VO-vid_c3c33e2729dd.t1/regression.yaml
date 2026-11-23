@@ -1,0 +1,20 @@
+# GameAnything-Bench scoring material: never shown to agents during a trial.
+task_id: T-VO-vid_c3c33e2729dd.t1
+game: valheim
+status: pending
+picks:
+- VH-MOVE
+- VH-SKILLS
+- VH-INVENTORY
+- VH-CRAFT
+- VH-SAVE
+- VH-PERF
+changed: []
+kept_borderline:
+- id: VH-MOVE
+  note: Riding with momentum on terrain may alter movement physics, but vanilla movement not explicitly required to change.
+summary: Timed downhill ski race with splits and on-screen gap display.
+task_checks: []
+note: 'policy (A): excluded only when the instruction explicitly requires the change; plausible side effects stay tested; adding
+  new content is never a reason to exclude. Proposed by claude-sonnet-5-5 via `gab task picks` 2026-11-06; a maintainer checks (set status: checked).
+  The evaluator tests the pool''s always items (unless in changed) + picks.'

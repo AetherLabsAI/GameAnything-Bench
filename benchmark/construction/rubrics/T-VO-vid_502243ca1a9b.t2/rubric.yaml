@@ -1,0 +1,282 @@
+# GameAnything-Bench scoring material: never shown to agents during a trial.
+task_id: T-VO-vid_502243ca1a9b.t2
+source_inventory:
+- '00:31.0-00:31.5 dissolve from the previous (deer) shot into an underground platform; caption ''The Tube'' stays on screen until about 00:38'
+- '00:32.0-00:37.5 time-lapse of a long covered platform with a glass-and-steel roof and a row of ceiling lights: a red, white and blue train
+  stands at the platform (00:32), then is blurred by motion from 00:33 as trains pull in and out; a round Underground emblem on the carriages;
+  a woman with a suitcase stands on the platform (00:34); a yellow edge strip runs along the platform floor'
+- '00:38.0-00:41.5 an old brick-walled station with an iron roof, stairs and a footbridge: a red train with bright headlights comes round a curve
+  along the track toward the camera, growing larger'
+- '00:42.0 the train''s red front with two headlights and a destination display fills the frame beside a ''Way out'' sign on the brick wall, a
+  roundel sign beside it'
+- '00:43.0 dissolve into a platform in a tiled station: passengers wait at the left near a bench, a train slides in along the yellow edge strip,
+  blurred by motion'
+- '00:44.0-00:47.5 the train glides in and stands at the platform (red door frames, white and blue body, yellow edge strip on the floor); a woman
+  with a red bag and other commuters in dark coats walk along the platform close to the camera'
+- '00:48.0 the doors are open and passengers (one with a pink bag, one with a backpack) step off and on'
+- '00:49.0-00:53.0 high, still view of a hall of several wide parallel escalators (grey steps with dark ribs) packed with people riding in both
+  directions'
+- '00:53.2 the narration moves on to the Thames (caption at 00:54): not part of the excerpt'
+- 'speech (voice-over): ''... and is the oldest underground railway in the world. It is constantly expanding and it now has 11 lines (00:36)
+  covering 402 kilometres with 272 stations. Over 5 million people use the Tube every single day (00:44)'''
+- 'audio otherwise: no train or crowd sound is annotated in the material and none is scored'
+- 'text: no editorial caption other than ''The Tube''; the ''Way out'' sign, the roundel and the train''s destination display (00:42) are part of
+  the scene; no on-screen game UI (documentary footage)'
+- 'not shown: no player or guide is visible and the section has no interaction; the ride between stations and the exit to the street are not
+  shown; the escalator shot follows the platform shots after a cut (the clip does not show the same people going from the train to the escalators)'
+instructions_meta:
+  requirement_groups:
+    the place to walk through:
+    - CR1
+    - VP1
+    recurring event:
+    - CR2
+    - CR3
+    - FP1
+    - VP2
+    taking part:
+    - FP2
+    people of the place:
+    - FP3
+    on to the next part:
+    - CR4
+    - FP4
+    - VP4
+    facts about the place:
+    - CR5
+    look of the settings and key moments:
+    - VP3
+  explicit_requirements:
+  - type: specify
+    text: 'I want to catch the train myself: I should only be able to get on while it is standing at the platform with its doors open.'
+    covers:
+    - FP2
+rubric:
+  content_realization:
+  - id: CR1
+    item: 'The station''s layout: a long platform beside a track lane that leads out of a dark tunnel, with an edge strip along the platform separating
+      the waiting area from the track'
+    anchors:
+      '1': a long platform, a track lane beside it and a tunnel mouth the track runs into, with an edge strip along the platform edge, arranged
+        as one connected station
+      '0.5': a platform beside a track, but without the tunnel or without the edge strip separating the waiting area from the track
+      '0': no recognisable platform-and-track station
+    evidence:
+    - - 00:32
+      - 00:38
+    - - 00:38
+      - 00:42
+    - - 00:43
+      - 00:48
+  - id: CR2
+    item: 'The train: a long train of several carriages with doors along its side and a driver''s front with headlights, running on the track
+      beside the platform'
+    anchors:
+      '1': a multi-carriage train with doors along the side facing the platform and a front with headlights stands or runs on the track beside
+        the platform
+      '0.5': a train is present but reads as a single block, or has no doors on the platform side, or never stands beside the platform
+      '0': no train
+    evidence:
+    - - 00:32
+      - 00:37
+    - - 00:38
+      - 00:42
+    - - 00:44
+      - 00:48
+  - id: CR3
+    item: 'The order of events at the station: people wait on the platform, a train comes in out of the tunnel and stops, its doors open and passengers
+      get off and on; the crowded escalators follow the platform scenes'
+    anchors:
+      '1': the game presents waiting, the train's arrival and stop, the door exchange and then the escalators in this order
+      '0.5': the platform events are in order but the escalators are missing or come before them, or the door exchange is missing from the
+        sequence
+      '0': no recognisable sequence of station events
+    evidence:
+    - - 00:32
+      - 00:38
+    - - 00:38
+      - 00:43
+    - - 00:43
+      - 00:48
+    - - 00:49
+      - 00:53
+  - id: CR4
+    item: 'An escalator hall: several wide parallel escalators link the platform level with the level above (in Flare''s view they may be sloped
+      or stepped lanes, moving walkways or ramps, as long as they read as the way up between levels)'
+    anchors:
+      '1': a hall of several parallel escalator lanes that is reachable from the platform side and reads as leading up to another level (by
+        slope, steps, a raised far end or a level change at its top)
+      '0.5': a single escalator or stair only, or parallel lanes that read as a flat corridor with no sense of going up, or a hall not connected
+        to the station
+      '0': no escalator hall
+    evidence:
+    - - 00:49
+      - 00:53
+  - id: CR5
+    item: 'The facts the reference tells about the place: it is the oldest underground railway in the world, a large network of lines and stations
+      used by millions of people every day'
+    anchors:
+      '1': the game states the oldest-underground-railway claim together with the network's scale (lines, length, stations or daily riders as
+        the reference gives them)
+      '0.5': only the claim or only the scale is stated, or the facts are given in vague words that do not match the reference
+      '0': no facts about the place
+    evidence:
+    - - 00:31
+      - 00:53
+  functions_playability:
+  - id: FP1
+    item: 'The train service runs: a train arrives, stops at the platform with its doors visibly open for long enough to use, then leaves, and
+      another train follows'
+    anchors:
+      '1': while the player waits on the platform, a train arrives, stops with open doors for a usable interval, departs, and a next train arrives
+        within a few minutes of play
+      '0.5': a recognisable but incomplete service (one visit and no next train, or an arrival and stop without a departure)
+      '0': no arrival and departure, or a train that is always standing there
+    evidence:
+    - - 00:32
+      - 00:37
+    - - 00:38
+      - 00:48
+  - id: FP2
+    item: 'Boarding: the player can get on the train only while it is stopped at the platform with its doors open, and boarding leads on to the
+      next scene'
+    anchors:
+      '1': the player boards at an open door during the stop, a transition leads on, and boarding is refused (blocked or with a message) while
+        no train is stopped or its doors are closed
+      '0.5': boarding works but is always available regardless of the train, or it works and no transition follows
+      '0': no way to board
+    evidence:
+    - - 00:44
+      - 00:48
+  - id: FP3
+    item: 'The crowd lives with the train: many commuters wait on the platform before an arrival, walk along it, and get off and on at the open
+      doors during the stop'
+    anchors:
+      '1': people visibly wait before an arrival, walk along the platform and use the doors while the train is stopped
+      '0.5': one or two of the three behaviours (waiting, walking along the platform, using the doors) are shown
+      '0': the people are static or move with no link to the train
+    evidence:
+    - - 00:34
+      - 00:35
+    - - 00:43
+      - 00:48
+  - id: FP4
+    item: 'Going up through the escalator hall: the player reaches the hall from the station and goes up along the escalator lanes to the upper
+      level among people moving in both directions'
+    anchors:
+      '1': the player reaches the hall, travels along the lanes and arrives at the upper level (by walking, being carried or a transition at
+        the top), with people moving both ways around them
+      '0.5': the hall is reached but the player cannot get through it to the upper level, or the crowd is sparse, one-way or static
+      '0': the hall cannot be reached
+    evidence:
+    - - 00:49
+      - 00:53
+  visual_presentation:
+  - id: VP1
+    cat: spatial
+    keyframes:
+    - '00:33.0'
+    - '00:35.0'
+    - '00:37.0'
+    item: 'The platform view: a long covered platform with a roof and a row of ceiling lights, the train alongside and the edge strip on the floor'
+    anchors:
+      '1': one view shows a long platform under a roof with ceiling lights, a train along it and a yellow edge strip on the floor
+      '0.5': a recognisable platform-and-train view that lacks the roof and lights or the edge strip
+      '0': no such view
+    evidence:
+    - - 00:32
+      - 00:38
+  - id: VP2
+    cat: key_moment
+    keyframes:
+    - '00:39.0'
+    - '00:41.0'
+    - '00:42.0'
+    item: 'The train''s arrival: the train''s lit front with bright headlights comes out of the dark tunnel into an old brick-walled station
+      with a ''Way out'' sign'
+    anchors:
+      '1': the arriving train shows bright headlights against a dark tunnel, in a station part with old brick walls and a 'Way out' style sign
+      '0.5': a recognisable arrival without the headlight-and-dark-tunnel contrast or without the old brick setting and sign
+      '0': no visible arrival moment
+    evidence:
+    - - 00:38
+      - 00:43
+  - id: VP3
+    cat: style
+    keyframes:
+    - '00:32.0'
+    - '00:42.0'
+    - '00:46.0'
+    item: 'The Underground''s look: red, white and blue carriages with red door frames, and the round Underground emblem on the carriages and
+      the station walls'
+    anchors:
+      '1': the train is drawn red, white and blue and the round emblem appears on it and in the station
+      '0.5': the colours without the emblem, or the emblem on a train of other colours
+      '0': neither
+    evidence:
+    - - 00:32
+      - 00:37
+    - - 00:42
+      - 00:48
+  - id: VP4
+    cat: spatial
+    keyframes:
+    - '00:50.0'
+    - '00:51.0'
+    - '00:52.0'
+    item: 'The escalator hall: several wide parallel escalator lanes side by side, packed with people'
+    anchors:
+      '1': a view of several parallel lanes side by side with a dense crowd on them
+      '0.5': escalator-like lanes with a thin crowd, or a crowd without visible lanes
+      '0': no such view
+    evidence:
+    - - 00:49
+      - 00:53
+play_suggestions:
+  CR3:
+  - 'play from the station start to the escalator hall without help: note the order in which waiting, the arrival, the door exchange and the escalators
+    come'
+  CR5:
+  - 'talk to every NPC and read every sign and message in the station; compare with the narration facts in the source inventory'
+  FP1:
+  - 'stand on the platform for 3 minutes and note arrival, stop and departure times: do trains keep coming?'
+  - stand next to the doors while they are open and watch whether they close at the end
+  FP2:
+  - 'try to enter the train while it arrives, while its doors are open and just after they close (counter-case)'
+  - walk into a non-door part of a carriage
+  FP3:
+  - 'watch two arrivals: do the commuters wait, walk along the platform, step off and on?'
+  FP4:
+  - after the ride walk to the escalator hall; try to walk against the lanes
+  - 'does the hall read as going up (slope, steps, raised end, level change at the top)? the isometric view need not show real height'
+  robustness:
+  - board and get off repeatedly
+  - stand in a doorway as the doors close and on the edge strip as a train arrives; can the player always walk away?
+  - save during the train's stop and reload
+  - 'leave the station map and come back: is the train cycle still running?'
+v4_map:
+  U1: CR5 (the network of lines and stations as stated facts); trains at platforms -> CR2
+  U2: CR3
+  U3: CR1
+  U4: FP3
+  U5: CR4 (escalators between levels); the two-way dense flow -> FP4, VP4
+  U6: CR5
+  F1: FP1
+  F2: FP2
+  F3: CR5 (the facts are content to be found in the game, not a mechanism)
+  F4: FP3
+  F5: FP4 (the hall's existence and connection -> CR4)
+  V1: VP1
+  V2: VP2 (the round emblem -> VP3; stairs and footbridge dropped, Flare's isometric view cannot show them and they are not spine)
+  V3: 'dropped: peripheral (the commuters'' clothes and bags are details; the crowd at the carriages is scored in FP3)'
+  V4: VP4
+  Q1-Q3: 'dropped: v4 has no per-task quality contract'
+  regression: 'dropped: Host Preservation is measured from the host game''s own tests'
+  authored (not scored, as in the pilot): the ride between stations, the exit to the street, the guide NPC as the carrier of the facts
+provenance:
+  source_yaml: v2g2_original/city.rubric.yaml (with city.yaml, city.contract.yaml; flare__city, pilot capped after round 3 with one open major
+    issue)
+  source_sha256: 4ec1c6b039c013d7fe67847c4b5e6e6a51baaf04706231912ab614d9ea2f5918
+  size_waiver: null
+  size_max: null
+  sources: []

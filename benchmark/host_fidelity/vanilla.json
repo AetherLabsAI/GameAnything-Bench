@@ -1,0 +1,75 @@
+{
+ "what": "One unmodified in-game screenshot per game: style / perspective reference for the host-fidelity judge (optional; downloaded by `gab media fetch` into <media_dir>/_host_fidelity/vanilla/).",
+ "vanilla": {
+  "celeste64": {
+   "path": "host_fidelity/vanilla/celeste64.png",
+   "sha256": "026c9128dbe2f4c4a892860551aa25a2b511ba5629a6892df3f05ee39a75ab66",
+   "size_bytes": 66304
+  },
+  "cities_skylines": {
+   "path": "host_fidelity/vanilla/cities_skylines.png",
+   "sha256": "eb2a1c24e6278570432427367dbef8caffba2851686d0aa9b076a8010cedef64",
+   "size_bytes": 1543751
+  },
+  "colobot": {
+   "path": "host_fidelity/vanilla/colobot.png",
+   "sha256": "170e7288a4a8546a66f1451ba815c464fcc1ef2bcbd2cf7ae227435a0627e6b9",
+   "size_bytes": 533437
+  },
+  "flare": {
+   "path": "host_fidelity/vanilla/flare.png",
+   "sha256": "1f874e15349a37996ba92049801480af8a11a91388e93c4373d56d543a5626e9",
+   "size_bytes": 1389398
+  },
+  "godot-tps": {
+   "path": "host_fidelity/vanilla/godot-tps.png",
+   "sha256": "7298835c4fe7d33db3b310a8f9c4b6a6bbce12034cf1db7d6d57b45aebca43ee",
+   "size_bytes": 807689
+  },
+  "minecraft": {
+   "path": "host_fidelity/vanilla/minecraft.png",
+   "sha256": "9e1fc464e21c51ce4a1854343a53270d82cef7a5e129cd1e559e1fa7e7a949be",
+   "size_bytes": 856592
+  },
+  "stardew_valley": {
+   "path": "host_fidelity/vanilla/stardew_valley.png",
+   "sha256": "d1acc6e4a3ebd78f88e259ef59c3b7859cb4e03258be2fe29ccbb465d0318133",
+   "size_bytes": 70360
+  },
+  "supertuxkart": {
+   "path": "host_fidelity/vanilla/supertuxkart.png",
+   "sha256": "cfd115a0b00b0bbbd8c03fc3255c1a8227604c4e76003edaf2fadaa66f766ae2",
+   "size_bytes": 1703682
+  },
+  "terraria": {
+   "path": "host_fidelity/vanilla/terraria.png",
+   "sha256": "620bcc218abac9cd63d5244ea242e08d16fd7c681d154cb7ce2e6ce882a1f7b5",
+   "size_bytes": 274736
+  },
+  "tof2": {
+   "path": "host_fidelity/vanilla/tof2.png",
+   "sha256": "d0ba14db3702623beffaebe3b83ad985c1ce0ea679610ad33d76ec4e59ba0294",
+   "size_bytes": 530421
+  },
+  "tuxemon": {
+   "path": "host_fidelity/vanilla/tuxemon.png",
+   "sha256": "fe734e76614618615c88f2394a187fe374440d21dccf2a36661c7eb083e280aa",
+   "size_bytes": 25357
+  },
+  "valheim": {
+   "path": "host_fidelity/vanilla/valheim.png",
+   "sha256": "5911a13c38c5823e25a607470e4cbe8752e3b7ae4097d5dcbae9b3e5a3933eed",
+   "size_bytes": 2338757
+  },
+  "voxelibre": {
+   "path": "host_fidelity/vanilla/voxelibre.png",
+   "sha256": "99d99456256ef76a31c27684b24e963d1c22c7adab1bb7a408283308792d903b",
+   "size_bytes": 233788
+  },
+  "xonotic": {
+   "path": "host_fidelity/vanilla/xonotic.png",
+   "sha256": "b292ad9b53eabf618efc2090aec30e2ec48da900e64c3893d5516bfc192fa6c1",
+   "size_bytes": 1525884
+  }
+ }
+}

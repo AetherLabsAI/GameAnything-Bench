@@ -1,0 +1,20 @@
+# GameAnything-Bench scoring material: never shown to agents during a trial.
+task_id: T-HY-vid_64b16980d5a1.t1
+game: minecraft
+status: pending
+picks:
+- MC-MOVE
+- MC-BUILD
+- MC-DAYNIGHT
+- MC-RULE-SPAWNING
+- MC-PERF
+- MC-JOIN-STATE
+changed: []
+kept_borderline:
+- id: MC-SPAWN-TERRAIN
+  note: Site may be built near spawn, so not picked, but not excluded by the instruction.
+summary: 'Walkable district: old temple quarter ringed by high-rises with a snow mountain.'
+task_checks: []
+note: 'policy (A): excluded only when the instruction explicitly requires the change; plausible side effects stay tested; adding
+  new content is never a reason to exclude. Proposed by claude-sonnet-5-5 via `gab task picks` 2026-11-06; a maintainer checks (set status: checked).
+  The evaluator tests the pool''s always items (unless in changed) + picks.'

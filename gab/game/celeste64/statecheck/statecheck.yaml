@@ -1,0 +1,16 @@
+# STATE_SPEC self-check for Celeste 64 (gab selfcheck celeste64 --state; contract in gab/setup/selfcheck.py state_check)
+# vanilla: title -> overworld -> level card -> Forsaken City with the Confirm key (c), as a player; engine fields there, `mod` empty
+vanilla:
+  steps: [{do: wait, seconds: 2}, {do: key, keys: c}, {do: wait, seconds: 3}, {do: key, keys: c}, {do: wait, seconds: 3},
+          {do: key, keys: c}, {do: wait, seconds: 8}]
+  engine: [screen, map, level_id, player.pos.x, player.state, player.dashes, record.strawberries, record.deaths, actors.Strawberry, strawberries_total]
+  mod_allow: []
+# mod: gab_statecheck/ = Levels.json with a first level "Gab State Check" (map gab_statecheck: the probe arena + one GabBeacon
+# entity) + Source/GabStateCheck/GabBeacon.cs (a new actor type registered in Map.ActorFactories by a module initializer: sets
+# the record flag gab_visited_shrine, has the static QuestStage = "stage_two" and draws HUD text); the game is rebuilt (C#)
+mod:
+  dir: gab_statecheck
+  steps: [{do: wait, seconds: 2}, {do: key, keys: c}, {do: wait, seconds: 3}, {do: key, keys: c}, {do: wait, seconds: 3},
+          {do: key, keys: c}, {do: wait, seconds: 8}]
+  expect: ["mod: GabBeacon", "mod: beacon_alpha", "mod: gab_visited_shrine", "mod: stage_two", "mod: gab_statecheck",
+           "screen_text: GAB TEST HUD", "engine: GAB_STATECHECK"]

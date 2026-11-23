@@ -1,0 +1,6 @@
+extern void object::MymodHello()
+{
+	message("Hello from my mod");
+	object c = radar(Titanium);
+	if (c != null) { goto(c.position, 0, 1); grab(); }
+}

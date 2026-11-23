@@ -1,0 +1,15 @@
+# GameAnything-Bench task T-VO-vid_a54a88754425.t1 (public part). Instruction: instruction_fine.md.
+task_id: T-VO-vid_a54a88754425.t1
+version: '0.2'
+category: scene_world
+modality: video
+domain: travel
+track: commercial
+target_game: cities_skylines
+references:
+- c01
+- c02
+provenance:
+  pipeline: reference_curation ga_author (v3 draft -> crosscheck -> reconcile -> instruct -> explicit) -> restructure_v4
+  rules_version: v4
+  review_status: pending

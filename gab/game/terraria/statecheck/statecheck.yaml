@@ -1,0 +1,20 @@
+# STATE_SPEC self-check (gab selfcheck terraria --state): format in gab/setup/selfcheck.py state_check.
+# A fresh start enters the start world directly (start.yaml mode game, the default); the test mod acts on entering the world.
+vanilla:
+  steps:
+    - {do: wait, seconds: 3}
+    - {do: hold, keys: [d], seconds: 1.0}
+    - {do: wait, seconds: 1}
+  engine: [screen, world.name, world.seed, world.size, time.clock, time.day, player.name, player.pos, player.life, player.life_max,
+           player.mana, player.inventory, player.zones, progress.downed, mods]
+  mod_allow: []
+mod:
+  dir: testmod
+  steps:
+    - {do: wait, seconds: 3}
+  expect:
+    - "mod: gabBeaconLit"
+    - "mod: stage_two"
+    - "mod: GabStateTest/GabBeacon"
+    - "screen_text: GAB HUD: the beacon is lit"
+    - "screen_text: GAB chat: hello from the state test"

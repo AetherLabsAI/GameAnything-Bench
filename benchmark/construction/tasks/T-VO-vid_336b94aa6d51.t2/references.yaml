@@ -1,0 +1,44 @@
+# Reference material: fetched from the HF dataset into $GAB_MEDIA_DIR/<task>/ by `gab media fetch` (sha256 checked).
+# The agent gets the files only (no title, author, caption or source): this file is never shown to it.
+task_id: T-VO-vid_336b94aa6d51.t2
+refs:
+- id: c01
+  kind: video
+  file: clip_01.mp4
+  video_id: vid_336b94aa6d51
+  source:
+    title: 01 - R.B.I. Baseball 16 Gameplay Trailer
+    url: null
+    channel: null
+    youtube_id: null
+  range:
+    start: 2.1
+    end: 9.0
+    text: 0:02.10-0:09.00
+  duration_s: 6.9
+  size_bytes: 2027717
+  format: mp4 H.264 720p, AAC audio
+  hf_path: media/T-VO-vid_336b94aa6d51.t2/clip_01.mp4
+  sha256: fc0c23b0aa60f37487eaeb59197995aa2268b03a56af2474894804c7a97b6f7a
+  rights_note: Publisher promotional trailer of a licensed commercial game with MLB and team marks. Use as a private reference only; do not redistribute
+    the footage or reproduce the logos or team marks.
+- id: c02
+  kind: video
+  file: clip_02.mp4
+  video_id: vid_336b94aa6d51
+  source:
+    title: 01 - R.B.I. Baseball 16 Gameplay Trailer
+    url: null
+    channel: null
+    youtube_id: null
+  range:
+    start: 14.2
+    end: 25.0
+    text: 0:14.20-0:25.00
+  duration_s: 10.8
+  size_bytes: 3055490
+  format: mp4 H.264 720p, AAC audio
+  hf_path: media/T-VO-vid_336b94aa6d51.t2/clip_02.mp4
+  sha256: ea5a612c4f77cf589a4bcd51a886ae8243013f17b41aec1a30dfe485a96ad9f3
+  rights_note: Publisher promotional trailer of a licensed commercial game with MLB and team marks. Use as a private reference only; do not redistribute
+    the footage or reproduce the logos or team marks.

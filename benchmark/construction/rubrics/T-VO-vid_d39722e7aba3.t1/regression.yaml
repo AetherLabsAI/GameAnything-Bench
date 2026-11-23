@@ -1,0 +1,22 @@
+# GameAnything-Bench scoring material: never shown to agents during a trial.
+task_id: T-VO-vid_d39722e7aba3.t1
+game: minecraft
+status: pending
+picks:
+- MC-MOVE
+- MC-COMBAT
+- MC-BUILD
+- MC-JOIN-STATE
+- MC-RULE-DAMAGE
+- MC-PERF
+changed: []
+kept_borderline:
+- id: MC-MOVE
+  note: Movement keeps working through the changed space; base movement is not required to change.
+- id: MC-BUILD
+  note: World twisting may alter blocks, but placing and breaking is not required to change.
+summary: Chase game with an orange portal; pursuers twist the city.
+task_checks: []
+note: 'policy (A): excluded only when the instruction explicitly requires the change; plausible side effects stay tested; adding
+  new content is never a reason to exclude. Proposed by claude-sonnet-5-5 via `gab task picks` 2026-11-06; a maintainer checks (set status: checked).
+  The evaluator tests the pool''s always items (unless in changed) + picks.'

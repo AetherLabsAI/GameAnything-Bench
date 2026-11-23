@@ -1,0 +1,232 @@
+# GameAnything-Bench scoring material: never shown to agents during a trial.
+task_id: T-TO-txt_347c15d5ad77.e1
+source_inventory:
+- 'recap (NOT scoreable): Ranger''s earlier life on Judge Hartley''s estate, sale north as a sled dog, fight with Frost, the team sold to Hal,
+  Charles and Mercedes, Harlow cutting his traces'
+- 'c06.p001-c06.p003: spring by the river; Harlow, his feet healed, waits for his partners'' raft; Ranger slowly recovers; the setter Pippa nurses
+  him, the big black dog Bram befriends him; games; Ranger feels love for the first time, unlike his old bonds at Judge Hartley''s'
+- 'c06.p004-c06.p006: Harlow as the ideal master who treats his dogs like children; their rough embrace and love-curses, Ranger''s love-bite;
+  Ranger adores him from a distance, watching his face'
+- 'c06.p007: Ranger follows Harlow everywhere and checks on him at night, afraid he will lose him as he lost Gaudet and Lucien'
+- 'c06.p008-c06.p011: Ranger stays wild: steals from other camps, fights strange dogs without mercy (law of club and fang); ancestral shades and
+  a call deep in the forest pull him away, love for Harlow draws him back to the fire'
+- 'c06.p012: Harlow alone holds him; cold to strangers; the partners Gus and Nate arrive with the raft, Ranger tolerates them because they are
+  close to Harlow; raft taken to Dawson'
+- 'c06.p013-c06.p017: on the way to the Tanana, Harlow on a whim orders Ranger to jump off a cliff and has to grab him at the edge; Nate: no one
+  should lay hands on Harlow while Ranger is around'
+- 'c06.p018-c06.p019: Circle City bar: ''Black'' Calloway strikes Harlow, Ranger goes for his throat and badly hurts him; a miners'' meeting rules
+  the dog provoked; his name spreads through Alaska'
+- 'c06.p020-c06.p023: Forty-Mile Creek: lining a boat down rapids, the boat capsizes and Harlow is swept toward deadly water; Ranger reaches him,
+  Harlow clings to a rock and orders him ashore; Ranger is pulled out just above the falls'
+- 'c06.p024-c06.p028: the partners run upstream and tie the rope to Ranger; first attempt misses (wrong angle), he is dragged under and half drowned;
+  at Harlow''s faint voice he goes again, swims straight out, comes down on Harlow, and the rope hauls both to the bank; Ranger injured, they
+  camp until he heals'
+- 'c06.p029-c06.p038: Dawson winter, Eldorado Saloon: men boast of their dogs; Harlow claims Ranger can start a thousand pounds and walk off a
+  hundred yards; Prescott bets a thousand dollars; Harlow has no money and borrows the stake from Jim Flanagan; the win will fund the partners''
+  trip east'
+- 'c06.p039-c06.p042: the crowd moves to the street; the flour sled has frozen fast at sixty below; dispute over ''break out'' decided for Prescott,
+  odds go to three to one; Harlow, doubting, and the partners stake their whole two hundred dollars'
+- 'c06.p043-c06.p049: Ranger harnessed alone; his powerful look brings the odds down; a Skookum Bench king offers eight hundred for him, refused;
+  Harlow whispers ''As you love me''; Ranger answers with the hand-bite'
+- 'c06.p050-c06.p058: on ''Gee'' and ''Haw'' Ranger swings right and left and breaks the runners loose, on ''mush'' he hauls the sled, it gains
+  momentum and passes the firewood pile marking a hundred yards; the crowd erupts'
+- 'c06.p059-c06.p062: Harlow kneels and shakes Ranger, cursing him lovingly; refuses twelve hundred for him, in tears; Ranger takes his hand in
+  his teeth; the crowd draws back and leaves them alone'
+instructions_meta:
+  requirement_groups:
+    relationship opening:
+    - CR1
+    - CR2
+    - CR6
+    playable challenges:
+    - CR3
+    - CR5
+    - FP1
+    - FP2
+    story progression and ending:
+    - CR4
+    - FP3
+    settings and key moments:
+    - VP1
+    - VP2
+    - VP3
+  explicit_requirements:
+  - type: specify
+    text: Harlow's own boasting about Ranger should be what drags him into the bet.
+    covers:
+    - CR4
+rubric:
+  content_realization:
+  - id: CR1
+    item: 'Ranger is devoted to Harlow alone: the game shows him attached to Harlow and indifferent or cold to everyone else'
+    anchors:
+      '1': Ranger's devotion to Harlow is shown, and it is exclusive (other people are kept at a distance or merely tolerated)
+      '0.5': Ranger is shown attached to Harlow, but no different with other people
+      '0': no visible bond between Ranger and Harlow
+    evidence:
+    - - c06.p006
+      - c06.p007
+    - c06.p012
+    - c06.p013
+  - id: CR2
+    item: 'The bond''s origin: Harlow has rescued the weakened Ranger and nurses him back to strength, the first real love Ranger knows'
+    anchors:
+      '1': the game shows Ranger weak and recovering in Harlow's care, presented as the start of their bond
+      '0.5': Harlow and Ranger together at the start, but no rescue or recovery that grounds the bond
+      '0': missing
+    evidence:
+    - c06.p001
+    - - c06.p003
+      - c06.p004
+  - id: CR3
+    item: 'The rapids: Harlow is swept into wild water toward deadly rapids, and Ranger saves his life'
+    anchors:
+      '1': the game contains a river event in which Harlow is in mortal danger in the current and is saved by Ranger
+      '0.5': a river event with both of them, but Harlow is not in mortal danger or it is not Ranger who saves him
+      '0': missing
+    evidence:
+    - - c06.p020
+      - c06.p028
+  - id: CR4
+    item: 'The wager: Harlow''s own boast about Ranger''s strength pulls him into a bet on what Ranger can do'
+    anchors:
+      '1': Harlow boasts about Ranger, and that boast is what leads to the bet on Ranger
+      '0.5': a bet on Ranger exists, but it does not come from Harlow's boast
+      '0': no bet
+    evidence:
+    - - c06.p029
+      - c06.p034
+  - id: CR5
+    item: 'The haul test: Ranger alone, in harness, against a load far heavier than any other dog is claimed to move, over a marked distance'
+    anchors:
+      '1': a haul in which Ranger alone pulls a load set out as extraordinarily heavy, toward a marked end point
+      '0.5': a sled haul exists, but with a team, an ordinary load or no marked distance
+      '0': missing
+    evidence:
+    - - c06.p029
+      - c06.p032
+    - c06.p035
+    - c06.p039
+    - c06.p043
+  - id: CR6
+    item: 'Ranger''s wild side: a call from the wild forest pulls him away from the camp, and only his love for Harlow brings him back'
+    anchors:
+      '1': the game shows Ranger drawn off toward the wild and returning to Harlow because of his bond with him
+      '0.5': Ranger is shown as wild or fierce, but without the pull away and the return to Harlow
+      '0': Ranger is a fully tame dog with no wild side
+    evidence:
+    - - c06.p008
+      - c06.p011
+    - c06.p012
+  functions_playability:
+  - id: FP1
+    item: 'The river rescue plays as a challenge: Ranger must reach Harlow against the current and bring him to the bank, with a clear outcome'
+    anchors:
+      '1': reaching Harlow takes effort against the current, success ends with Harlow safe on the bank, and failure gives a retry or a consequence
+      '0.5': the rescue can be played, but it succeeds without effort, or failure has no outcome
+      '0': the rescue cannot be played (cutscene only, or missing)
+    evidence:
+    - - c06.p021
+      - c06.p026
+  - id: FP2
+    item: 'The haul plays as an effortful challenge whose success wins the bet: the bet is laid before the test, and reaching the end mark resolves
+      it'
+    anchors:
+      '1': the bet is set before the haul, the haul takes sustained effort toward the marked end, and reaching it wins the wager
+      '0.5': the haul can be played, but succeeds without effort, or its result is not tied to the bet
+      '0': the haul cannot be played
+    evidence:
+    - - c06.p033
+      - c06.p039
+    - - c06.p050
+      - c06.p058
+  - id: FP3
+    item: 'The story plays in causal order: an opening that builds the bond, then the rapids, then the wager and the haul, ending with the haul''s
+      outcome'
+    anchors:
+      '1': the bond phase comes before the trials, the situations follow in this order, and the story concludes with the haul's result
+      '0.5': the situations are reachable but out of order, or there is no bond phase before the trials, or no ending
+      '0': unconnected scenes with no progression
+    evidence:
+    - - c06.p001
+      - c06.p012
+    - c06.p020
+    - c06.p029
+    - - c06.p058
+      - c06.p059
+  visual_presentation:
+  - id: VP1
+    cat: style
+    item: 'The harsh northern frontier: untamed wilderness and rough mining settlements under severe cold'
+    anchors:
+      '1': a recognisably harsh northern frontier of wilderness and rough settlements
+      '0.5': a generic wilderness or town without the northern frontier or cold character
+      '0': no recognisable setting
+    evidence:
+    - c06.p001
+    - c06.p011
+    - c06.p018
+    - c06.p029
+    - c06.p039
+  - id: VP2
+    cat: spatial
+    item: 'The rapids: Harlow held midstream in wild water, out of reach of the bank, with deadlier water just below'
+    anchors:
+      '1': a fast, wild river with Harlow stranded away from the bank and visibly deadlier water downstream
+      '0.5': a river is shown but calm, or Harlow's stranded position is not visible
+      '0': missing
+    evidence:
+    - - c06.p021
+      - c06.p024
+  - id: VP3
+    cat: key_moment
+    item: 'The haul: one dog alone in harness, visibly straining against a sled that looks far too heavy for it'
+    anchors:
+      '1': a single dog straining in harness against a visibly heavy load
+      '0.5': the sled pull is shown, but the load does not look heavy or the effort is not visible
+      '0': missing
+    evidence:
+    - c06.p039
+    - c06.p043
+    - c06.p057
+play_suggestions:
+  FP1:
+  - 'fail the rescue on purpose (drift past Harlow, wait): what happens, can you retry?'
+  - 'complete it: is Harlow brought to the bank?'
+  FP2:
+  - check that the wager is set before the haul starts
+  - 'stop pulling midway: does the sled stop or stall?'
+  - 'reach the end mark: is the bet resolved as won?'
+  FP3:
+  - play start to end and note the order of the situations
+  - check that a bond phase comes before the first trial and that the story concludes after the haul
+  robustness:
+  - 'skip or rush through dialogue: does the story still progress?'
+  - 'fail the haul: is there a sensible outcome or a retry?'
+  - quit mid-scene and resume
+v4_map:
+  U1: CR1
+  U2: CR6
+  U3: CR2
+  U4: CR3
+  U5: 'CR4 (boast-caused wager only; what is staked dropped: peripheral, v4.2 binding example)'
+  U6: 'dropped: peripheral (offer refused after the climax; reviewer''s binding example)'
+  FP1: CR2 (recovery in Harlow's care), FP3 (bond phase before the trials)
+  FP2: CR3 (the rapids event exists), FP1 (the rescue as a playable challenge)
+  FP3: CR4 (the wager), CR5 (the haul's terms), FP2 (the effortful haul wins the bet)
+  FP4: FP3 (ending now the haul's outcome; refusal to sell dropped as peripheral)
+  FP5: 'removed: editing request (training days decide the haul) split off to editing_seed.yaml, 2026-11-05'
+  VP1: VP1
+  VP2: VP2
+  VP3: VP3
+provenance:
+  source_yaml: T-TO-txt_347c15d5ad77.e1.yaml
+  source_sha256: f02bcbfa5df61b6de8a1c8e13f1beb7ec7ad1974eb5385a00750207bb47c1789
+  size_waiver: null
+  size_max: null
+  sources:
+  - ref: t01
+    title: The Call of the Wild
+    author: Jack London
+    text_id: txt_347c15d5ad77
+    excerpt_id: e1

@@ -1,0 +1,4 @@
+description=negative check for the FL pool (neg_tough_zombie)
+game=flare-game
+version=1.0
+requires=empyrean_campaign

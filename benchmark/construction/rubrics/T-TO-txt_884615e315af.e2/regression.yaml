@@ -1,0 +1,25 @@
+# GameAnything-Bench scoring material: never shown to agents during a trial.
+task_id: T-TO-txt_884615e315af.e2
+game: cities_skylines
+status: pending
+picks:
+- CS-CONTENT
+- CS-POPULATION
+- CS-ZONING
+- CS-SIM
+- CS-SAVE
+- CS-INFOVIEWS
+changed:
+- id: CS-ECONOMY
+  quote: sitting tenants to keep their plots as long as they pay what the best rival offers, less a small margin
+  why: Income and finance rules must be redefined, so vanilla money flow cannot stay as the probe measures it.
+kept_borderline:
+- id: CS-CONTENT
+  note: Default tax rates and start money are measured by this item, and the finance mod may touch them.
+- id: CS-POPULATION
+  note: Plot tenure could affect growth, but the instruction does not require changing it.
+summary: Mod implementing land-rent town finance, with tenants keeping plots at the rival's bid less a margin.
+task_checks: []
+note: 'policy (A): excluded only when the instruction explicitly requires the change; plausible side effects stay tested; adding
+  new content is never a reason to exclude. Proposed by claude-sonnet-5-5 via `gab task picks` 2026-11-06; a maintainer checks (set status: checked).
+  The evaluator tests the pool''s always items (unless in changed) + picks.'

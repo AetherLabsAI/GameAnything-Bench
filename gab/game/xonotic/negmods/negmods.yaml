@@ -1,0 +1,6 @@
+# negative mods for `gab selfcheck xonotic` (from the game's pool verification)
+# each must fail exactly its expected pool items (vs a fresh vanilla instance)
+# each is ONE item of a mod/ folder (selfcheck installs negmods/<m> as mod/<m>): the verified cfg / pk3 as an unpacked .pk3dir
+neg_gravity.pk3dir: {expect_fail: [XO-PHYSICS-SETTINGS, XO-JUMP, XO-GRAVITY], quick_probes: [physics_cvars, move]}
+neg_vortex.pk3dir: {expect_fail: [XO-WEAPON-SETTINGS, XO-WEAPONS], quick_probes: [weapon_balance, weapons]}
+neg_hud.pk3dir: {expect_fail: [XO-HUD], quick_probes: [client]}

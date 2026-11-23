@@ -1,0 +1,270 @@
+# GameAnything-Bench scoring material: never shown to agents during a trial.
+task_id: T-VO-vid_c92c0366c64b.t1
+source_inventory:
+- '00:06.6-00:08.1 high oblique aerial view over a dense city: the thin tower top / spire in the centre, lit orange; many mid-rise towers with
+  orange sunlit faces; wide roads and a highway interchange; a flat grid of low-rise blocks to a hazy horizon; turquoise water at lower left near
+  the tower''s base'
+- 00:08.6-00:10.6 the camera drops close along the shaft looking straight down the glass facade (pale glass, vertical metal fins) past curved
+  setback wings to a turquoise water basin with island-like platforms and a plaza with round features at the base
+- '00:11.1-00:13.1 the camera rolls to look along / up the facade: a copper-gold metal grid over dark glass on the sunlit side, silver-white glass
+  on the shaded side, curved bulging wings, pale sky'
+- 00:13.6-00:15.1 looking down the tapering shaft from high up; a white boxy structure sits on a setback ledge (00:13.6); the basin with islands
+  and the road grid far below
+- '00:15.6-00:20.1 rolling sweep around the upper shaft and spire: the tower appears as a long diagonal needle over the basin, the grid and orange-lit
+  neighbouring towers; ends looking up the sunlit, narrowing upper section'
+- '00:20.6-00:22.1 wide, level, calm shot: the tower rises alone from a flat low-rise city with the sea at the horizon; pale sky with an orange
+  band at the horizon; the lower body glows copper, the upper section and spire are pale silver'
+- '00:22.6-00:24.1 close pass over a stepped setback: a rounded terrace with an orange deck, outdoor furniture and a glass balustrade; the basin
+  and city below; then close along a glass facade'
+- 00:24.6 tilted view of the lower setbacks with orange terrace decks curving around the tower, basin below
+- '00:25.1-00:27.1 near top-down view along the tower: its stepped setbacks, the orthogonal road grid, a highway interchange and the basin curving
+  around one side of the base'
+- '00:27.6-00:30.6 the camera banks over the base: the basin wraps around part of the base, island platforms, a plaza with round pavilions, curved
+  lower wings with orange terrace decks'
+- 00:31.1-00:31.6 looking straight along the copper facade where curved wings converge toward the base
+- 00:32.1-00:35.1 fast sweep along the curved white-metal and glass facade a few metres away; the basin, a palm-lined island and a pool / terrace
+  area below
+- 00:35.6-00:41.1 fast climb up the copper-and-glass facade with strong motion blur; dark-glass neighbouring towers and an oval rooftop feature
+  at the frame edge
+- 00:41.6-00:43.6 looking up the facade at successive rounded setbacks (several lobes) against a teal sky, with copper horizontal bands at the
+  setbacks
+- '00:44.1-00:50.6 calm view of the whole tower centred against a clear teal sky: stepped setbacks and a thin spire; the camera lowers / pulls
+  back so orange-lit mid-rise towers and a skyline enter at the bottom; hazy horizon; low-sun glare on the lower body (00:47-00:50)'
+- 00:51.1 cut to black
+- 'overlay: a small ''DRONE SNAP'' channel watermark in the lower right throughout'
+- 'audio: no speech; music only (per annotation, the transcript is empty)'
+- 'not visible: no people, vehicles or street-level views readable; no interiors; no on-screen place names'
+instructions_meta:
+  requirement_groups:
+    vertical access and sense of height:
+    - FP1
+    - VP3
+    close contact with the landmark:
+    - FP2
+    - VP1
+    the area at the landmark's foot:
+    - CR2
+    - FP3
+    the landmark seen from afar:
+    - CR1
+    - CR3
+    - CR4
+    - FP4
+    lighting and atmosphere:
+    - VP2
+  explicit_requirements:
+  - type: specify
+    text: The water basin with its island platforms and plaza should sit right at the tower's foot and curve around one side of it, with roads
+      and city blocks meeting the other sides.
+    covers:
+    - CR2
+    - FP3
+rubric:
+  content_realization:
+  - id: CR1
+    item: 'The tower''s form: the level contains a single supertall tower that narrows upward through repeated stepped setbacks, built of rounded
+      wings / lobes around a core, ending in a long thin spire'
+    anchors:
+      '1': one supertall tower with repeated stepped setbacks, rounded wings / lobes and a thin spire
+      '0.5': a very tall tower with a spire, but without the stepped setbacks or the rounded-wing build (e.g. a straight box or a smooth cone)
+      '0': no such tower, or a tower of a clearly different form
+    evidence:
+    - - '00:20.6'
+      - '00:22.1'
+    - - '00:25.1'
+      - '00:27.1'
+    - - '00:41.6'
+      - '00:50.6'
+  - id: CR2
+    item: 'Layout at the base: a water basin with island-like platforms and a plaza lies directly at the tower''s foot and curves around one side
+      of it, while roads and city blocks meet the other sides'
+    anchors:
+      '1': a basin with platforms and a plaza adjoins the tower's foot and wraps around one side of it, with roads / blocks on the other sides
+      '0.5': a basin exists near the tower but is detached from the base or not curving around it, or the platforms / plaza are missing
+      '0': no water basin at the tower
+    evidence:
+    - - '00:08.6'
+      - '00:10.6'
+    - - '00:25.1'
+      - '00:30.6'
+    - - '00:34.1'
+      - '00:35.1'
+  - id: CR3
+    item: 'Height contrast: the tower stands alone far above everything else, many times taller than every other building in the level'
+    anchors:
+      '1': the tower is many times taller than every other building, clearly alone at its height
+      '0.5': the tower is the tallest, but only moderately so (other buildings reach a large share of its height)
+      '0': neighbours of comparable height, or no other buildings to set its height against
+    evidence:
+    - - '00:15.6'
+      - '00:20.1'
+    - - '00:20.6'
+      - '00:22.1'
+    - - '00:44.1'
+      - '00:50.6'
+  - id: CR4
+    item: 'Surrounding city: a cluster of much shorter mid-rise towers stands close around the tower, and a flat low-rise street grid stretches
+      away beyond them'
+    anchors:
+      '1': a nearby mid-rise cluster around the tower AND a flat low-rise street grid beyond it are present
+      '0.5': only one of the two (the nearby cluster or the flat grid beyond), or a generic set of buildings without that near-to-far arrangement
+      '0': no surrounding city
+    evidence:
+    - - '00:06.6'
+      - '00:08.1'
+    - - '00:20.6'
+      - '00:22.1'
+    - - '00:25.1'
+      - '00:27.1'
+    - - '00:45.6'
+      - '00:50.6'
+  functions_playability:
+  - id: FP1
+    item: 'Vertical access: in normal play the player can go from ground level at the tower''s base up the tower to a high vantage point near
+      its top'
+    anchors:
+      '1': the climb from the base to a point near the top works in normal play
+      '0.5': only the lower part of the tower can be climbed (nothing near the top is reachable), or a high point is reached only by a teleport
+        / debug move
+      '0': the tower is a non-interactive backdrop with no reachable high point
+    evidence:
+    - - '00:08.6'
+      - '00:15.1'
+    - - '00:27.6'
+      - '00:30.6'
+    - - '00:44.1'
+      - '00:50.6'
+  - id: FP2
+    item: 'Close access to the facade: the curved facade is solid geometry the player can get close to, and the stepped setbacks can be stood
+      on, so the building is experienced up close, not only from afar'
+    anchors:
+      '1': the player can get close to the curved facade, it collides solidly, and setback ledges / terraces can be stood on
+      '0.5': collision exists but is a crude box that ignores the curved / stepped shape, or the setbacks cannot be stood on
+      '0': no collision, or the player cannot get near the facade
+    evidence:
+    - - '00:22.6'
+      - '00:24.6'
+    - - '00:30.6'
+      - '00:35.1'
+  - id: FP3
+    item: 'The base area is playable space: the plaza and island platforms around the water basin can be reached and walked, connected to the
+      tower''s base'
+    anchors:
+      '1': plaza and platforms around the basin are reachable and walkable, connected to the tower's base
+      '0.5': only part of the base area is reachable, or it is cut off from the tower
+      '0': the base area cannot be entered
+    evidence:
+    - - '00:08.6'
+      - '00:10.6'
+    - - '00:27.6'
+      - '00:30.6'
+    - - '00:32.1'
+      - '00:35.1'
+  - id: FP4
+    item: 'Distant vantage: the player can reach a position away from the tower from which its whole tapering silhouette and spire are in view,
+      rising above the surrounding skyline'
+    anchors:
+      '1': a reachable spot shows the full tapering silhouette up to the spire above the skyline
+      '0.5': only partial views (the upper part or spire cut off, or the tower blocked by geometry)
+      '0': the tower's silhouette can never be seen from afar in play
+    evidence:
+    - - '00:20.6'
+      - '00:22.1'
+    - - '00:44.1'
+      - '00:50.6'
+  visual_presentation:
+  - id: VP1
+    cat: style
+    keyframes:
+    - '00:11.6'
+    - '00:33.1'
+    - '00:41.6'
+    item: 'Facade look up close: in a low-poly Celeste 64 rendition, the facade the player climbs reads as part of a very tall tapering tower with
+      stepped setbacks, recognisable in play; realistic glass and metal-grille material is not required'
+    anchors:
+      '1': up close the facade reads as the tall tapering tower with setbacks the player climbs (or curved surfaces with a visible grid pattern)
+      '0.5': only part of this reads up close (e.g. tall walls but no setbacks or tapering visible, or a grid texture on flat walls, or curved walls)
+      '0': plain featureless walls with nothing of the tower's form readable up close
+    evidence:
+    - - '00:11.1'
+      - '00:13.1'
+    - - '00:32.1'
+      - '00:43.6'
+  - id: VP2
+    cat: style
+    keyframes:
+    - '00:21.6'
+    - '00:43.1'
+    - '00:48.6'
+    item: 'Light and atmosphere: low warm sun giving the tower a warm lit side and paler shaded faces, against a pale-to-teal sky and a hazy horizon,
+      as a low-poly rendition shows it from the play view (no realistic copper facade material and no full distant silhouette required)'
+    anchors:
+      '1': warm side lighting with a warm (copper / orange / golden) tint on the tower's lit side, paler shaded side, pale or teal sky, haze at
+        the horizon; a stylised low-poly look counts
+      '0.5': warm sky or tint present but flat lighting with no lit / shaded contrast, or no haze
+      '0': neutral, night or unrelated lighting
+    evidence:
+    - - '00:11.1'
+      - '00:13.1'
+    - - '00:20.6'
+      - '00:22.1'
+    - - '00:41.6'
+      - '00:43.6'
+    - - '00:47.1'
+      - '00:50.6'
+  - id: VP3
+    cat: presentation
+    keyframes:
+    - '00:14.1'
+    - '00:17.1'
+    - '00:42.6'
+    item: 'Height made readable: when the player is high on the tower, the view keeps the narrowing tower and the ground far below readable together,
+      so its extreme height shows'
+    anchors:
+      '1': from a high point on the tower the ground is clearly far below and the tower's height is evident
+      '0.5': height conveyed only weakly (the drop hidden by the view or geometry, or the ground not readable)
+      '0': the game never conveys the height
+    evidence:
+    - - '00:13.6'
+      - '00:19.6'
+    - - '00:41.6'
+      - '00:43.6'
+play_suggestions:
+  FP1:
+  - 'walk around at the base, then climb the tower without debug tools: can you get all the way to the top?'
+  - 'from high up, look down: is the base far below?'
+  FP2:
+  - get close to a curved part of the facade and stand on several setbacks
+  - try to clip into the facade at a curve or corner
+  FP3:
+  - walk around the basin on the plaza and platforms
+  - 'walk from the plaza to the tower''s base: is the base area connected to the tower?'
+  FP4:
+  - 'move away from the tower and turn the camera toward it: is the whole silhouette up to the spire visible from some reachable spot?'
+  robustness:
+  - 'fall from high on the tower: is the recovery sensible (respawn at a nearby checkpoint, not at the very start)?'
+  - try to leave the map at the edge of the city grid
+  - 'climb the neighbouring towers: can they be used to skip the main tower?'
+  - 'walk or jump into the basin: is it water (swim / respawn), or floor?'
+v4_map:
+  U1: 'VP2 | dropped: lighting is a look, scored only in VP2 (lit / shaded contrast merged there)'
+  U2: CR1
+  U3: 'VP1 | dropped: peripheral (orange-deck rounded terraces are an incidental setback detail; facade look scored in VP1)'
+  U4: CR2
+  U5: CR3, CR4
+  FP1: FP1
+  FP2: FP2
+  FP3: CR2, FP3
+  FP4: FP4
+  FP5: 'FP1 | strawberry (user modification) moved to the Editing seed: editing_seed.yaml'
+  VP1: 'CR1, CR3 | dropped: silhouette form and height contrast now scored as content in CR'
+  VP2: CR2
+  VP3: VP1
+  VP4: VP2
+  VP5: VP3
+provenance:
+  source_yaml: T-VO-vid_c92c0366c64b.t1.yaml
+  source_sha256: 995095094418e3cd0cddf0dc1206fc657acbf2b3d28c8804c4621b927f10794b
+  size_waiver: null
+  size_max: null
+  sources: []

@@ -1,0 +1,17 @@
+# GameAnything-Bench task T-IO-0fd083ef5d (public part). Instruction: instruction_fine.md.
+task_id: T-IO-0fd083ef5d
+version: '0.2'
+category: mechanics_behavior
+modality: image
+domain: other
+track: core
+target_game: tof2
+references:
+- img01
+- img02
+- img03
+- img04
+provenance:
+  pipeline: reference_curation ga_author (v3 draft -> crosscheck -> reconcile -> instruct -> explicit) -> restructure_v4
+  rules_version: v4.2
+  review_status: pending

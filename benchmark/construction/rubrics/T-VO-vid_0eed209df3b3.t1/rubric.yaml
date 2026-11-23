@@ -1,0 +1,293 @@
+# GameAnything-Bench scoring material: never shown to agents during a trial.
+task_id: T-VO-vid_0eed209df3b3.t1
+source_inventory:
+- 'cast: Jerry (small brown mouse); Tom (grey cat); a black cat with a small blue cap working as a mouse exterminator, carrying a yellow bag labelled
+  ''MOUSE EXTERMINATOR'' full of tools'
+- 'setting: a house with pink walls, a lilac baseboard with a small arched mouse hole, a brick fireplace / white column in the background, blue
+  floor; later a corner with a brass wall vent grille beside a pink-shaded lamp on a round wooden table; a living room with an armchair, a yellow
+  lamp and purple curtains; a hidden wall interior of rough wooden boards with dark wires and insulators'
+- 03:06-03:07 Jerry runs across the floor and into the mouse hole in the baseboard
+- 03:08-03:10 the exterminator and Tom rush up to the hole; the exterminator sets down the bag and pulls out a long crowbar
+- 03:11-03:15 the exterminator pries at the baseboard with the crowbar, Tom beside him; cracks appear on the wall pillar; the baseboard lifts
+  away from the floor
+- 03:16-03:20 under the lifted baseboard Jerry stands on the floorboards holding a big hammer (blue head, yellow handle) and hits the cats' feet;
+  Tom yells in pain (03:16, 03:19), the exterminator grimaces (03:20)
+- 03:21 the exterminator lunges at the hole in a burst of plaster debris
+- '03:22-03:25 inside the wall: the exterminator''s arm reaches in through the mouse hole; Jerry rigs the hammer on a lever and pounds the arm
+  repeatedly (motion blur at 03:23)'
+- 03:26-03:27 outside, the exterminator crouched at the hole jerks back and leaps away in pain
+- '03:28-03:32 close-up of his two paws: the fingertips swell up bright red and steam rises from them'
+- 03:33-03:35 he digs in the exterminator bag and pulls out a big mallet (red head, yellow handle)
+- 03:36-03:41 he carries the mallet to Tom; Tom ends up holding it; the exterminator puts a finger to his lips (shush), gestures instructions
+  to Tom and walks off
+- 03:42-03:46 the exterminator sneaks to the brass vent grille next to the lamp, pulls the grille off (it lies by the baseboard) and peers into
+  the dark opening
+- '03:47-03:48 inside the walls: Jerry looks out / runs along a wooden passage with wires'
+- 03:49-03:50 the exterminator at the open vent, startled, clutching his head
+- 03:51 a cloud of grey dust and debris bursts at the vent, streaking across the lamp
+- 03:52-03:53 Tom sits by the mouse hole with the mallet; a dust trail runs along the baseboard; he swings and smashes a jagged hole in the wall
+  (laths visible), plaster flies
+- 03:54-03:58 a line of smashed holes runs along the walls through several rooms (pink, then green), past a table and a chandelier; a wall sconce
+  is knocked off (03:58)
+- 03:59-04:02 in the living room Tom keeps swinging the mallet at the wall, leaving long vertical cracks; Jerry steps out of the mouse hole behind
+  him (04:02)
+- 04:03 the exterminator's head pokes up at floor level next to Jerry; Tom raises the mallet high
+- '04:04-04:06 Tom brings the mallet down on the floor: floorboards burst, dust rings spread; Jerry runs off'
+- 04:07-04:09 paws come up out of the floor hole; the dazed exterminator climbs halfway out, eyes rolled, Tom beside him with the mallet
+- 04:10-04:13 a tall bump rises out of the exterminator's head and lifts his cap up into the air; Tom watches
+- 04:14-04:15 the picture darkens (fade); end of range
+- 'audio: no speech in the range (transcript empty); per the material the soundtrack is music only; sound effects could not be verified by the
+  drafter'
+instructions_meta:
+  requirement_groups:
+    characters and roles:
+    - CR1
+    play spaces and access:
+    - CR2
+    - FP1
+    - VP1
+    first confrontation:
+    - CR3
+    - FP2
+    - VP2
+    escalation:
+    - CR4
+    - FP3
+    - VP3
+    key events in order:
+    - CR3
+    - CR4
+    - CR5
+    climax and ending:
+    - CR5
+    - FP4
+    - VP4
+  explicit_requirements:
+  - type: keep
+    text: I really want to keep the part where they pry the baseboard open and the mouse hits back from inside with a big hammer, hurting their
+      paws.
+    covers:
+    - CR3
+    - FP2
+    - VP2
+  - type: specify
+    text: 'After that fails, the exterminator should hand the cat a heavier mallet from his kit and they split the job: the cat smashes the walls
+      from outside while the exterminator works the wall vent and later turns up under the floor.'
+    covers:
+    - CR4
+    - FP3
+rubric:
+  content_realization:
+  - id: CR1
+    item: 'The game contains the three characters in their roles: a mouse who hides and lives inside the walls of the house, the house cat who
+      hunts him, and a mouse exterminator with a bag of tools working on the cat''s side'
+    anchors:
+      '1': all three present and told apart, the exterminator recognisably a tool-carrying specialist allied with the cat and the mouse living
+        in the walls
+      '0.5': all three present but the exterminator's role (tool kit, ally of the cat) or the mouse's home in the walls is missing or unclear
+      '0': a character is missing, or the sides are mixed up
+    evidence:
+    - - 03:06
+      - 03:10
+    - - 03:33
+      - 03:41
+  - id: CR2
+    item: 'The house is built in two layers: rooms whose walls have a small mouse hole in the baseboard at floor level and a wall vent, both opening
+      into a hidden passage that runs inside the walls'
+    anchors:
+      '1': the rooms, the baseboard mouse hole and the wall vent exist, and both openings lead into one hidden in-wall passage
+      '0.5': the room and a hidden passage exist but only one opening leads into it, or the hole leads to a closed pocket rather than a passage
+      '0': no hidden space behind the walls
+    evidence:
+    - - 03:06
+      - 03:07
+    - - 03:22
+      - 03:25
+    - - 03:42
+      - 03:48
+  - id: CR3
+    item: 'The first confrontation is in the game with its cause: the pursuers force the baseboard at the mouse hole open, and the mouse strikes
+      back from inside with a big hammer, hurting their paws'
+    anchors:
+      '1': the forced baseboard, the mouse's hammer strike from inside as the answer to it, and the pursuers' hurt paws all present
+      '0.5': the confrontation present but the hammer counterattack or the injury is missing, or not linked to forcing the opening
+      '0': missing
+    evidence:
+    - - 03:11
+      - 03:32
+  - id: CR4
+    item: 'The escalation follows from that failure: the hurt exterminator takes a heavier mallet from his kit and hands it to the cat, and the
+      two then split the job, the cat smashing the walls from outside while the exterminator works the wall vent and later turns up under the
+      floor'
+    anchors:
+      '1': the heavier mallet from the kit after the failure, its hand-over to the cat, and the split of roles (cat on the walls from outside,
+        exterminator at the vent / under the floor)
+      '0.5': the mallet and the hand-over without the role split, or the role split without the hand-over, or the escalation not placed after
+        the failed first attempt
+      '0': missing, or the cat takes the mallet against the exterminator
+    evidence:
+    - - 03:33
+      - 03:53
+    - - 04:03
+      - 04:09
+  - id: CR5
+    item: 'The outcome backfires on the hunters: after the wall smashing, the cat''s final blow, meant for the mouse, lands on his own ally, the
+      exterminator coming up through the floor, and the mouse gets away unharmed'
+    anchors:
+      '1': the final blow hits the exterminator instead of the mouse and the mouse escapes
+      '0.5': the exterminator ends hurt but not by the cat's blow, or the mouse's escape is missing
+      '0': missing, or the mouse is caught
+    evidence:
+    - - 04:02
+      - 04:13
+  functions_playability:
+  - id: FP1
+    item: 'Two-layer space in play: the mouse character can enter the hidden passage inside the walls through the hole, move through it out of
+      sight and come out elsewhere, while the pursuers cannot simply follow and must force their way in or act from outside'
+    anchors:
+      '1': the mouse enters, traverses and exits the hidden passage, and pursuer access is restricted (forcing openings or acting from outside)
+      '0.5': a hole or hiding place exists but the mouse cannot move through it to another place, or the pursuers can freely follow inside
+      '0': no hidden in-wall space that the mouse uses
+    evidence:
+    - - 03:06
+      - 03:07
+    - - 03:22
+      - 03:25
+    - - 03:47
+      - 03:48
+  - id: FP2
+    item: 'First attempt in play: forcing the hole open can be done or triggered in play, it sets off the mouse''s counterattack from inside,
+      and the failed attempt moves the story on to the next stage'
+    anchors:
+      '1': forcing the opening triggers the counterattack and the failure leads on to the next stage
+      '0.5': the counterattack happens but not as a result of forcing the opening, or the failed attempt leads nowhere
+      '0': missing, or it cannot be triggered
+    evidence:
+    - - 03:11
+      - 03:32
+  - id: FP3
+    item: 'Escalation stage in play: after the failed first attempt the sequence moves into a new stage in which the cat, now holding the mallet,
+      can attack the walls from outside while the mouse is inside, and this stage leads on to the climax'
+    anchors:
+      '1': the stage starts after the failure, the cat can act with the mallet on the walls from outside, and the stage leads on to the climax
+      '0.5': the stage exists but is not tied to the failure (open from the start), or the cat cannot actually act with the mallet, or it does
+        not lead on to the climax
+      '0': no escalation stage in play
+    evidence:
+    - - 03:33
+      - 03:41
+    - - 03:52
+      - 04:03
+  - id: FP4
+    item: 'Climax and end in play: through normal play the sequence reaches the climax, the final blow can be triggered and resolves the chase,
+      and the sequence then reaches a clear end (or a way to continue) without soft-locking'
+    anchors:
+      '1': the climax is reachable through normal play, the final blow can be triggered and resolves it, and a clear end or continuation follows
+      '0.5': the climax is reached only through workarounds (skipping, debug), or it triggers but the sequence then stalls without a clear end
+      '0': the climax cannot be reached or triggered; the sequence just stops
+    evidence:
+    - - 04:02
+      - 04:15
+  visual_presentation:
+  - id: VP1
+    cat: spatial
+    keyframes:
+    - '03:07.1'
+    - '03:22.1'
+    - '03:47.1'
+    item: 'Look of the two layers: the room side reads as a house wall with a baseboard and a small arched mouse hole at floor level, the inside
+      as a dark, rough wooden in-wall passage'
+    anchors:
+      '1': both the baseboard hole in the room wall and the dark wooden interior read as such
+      '0.5': only one of the two reads as in the reference
+      '0': neither
+    evidence:
+    - - 03:06
+      - 03:07
+    - - 03:22
+      - 03:25
+    - - 03:47
+      - 03:48
+  - id: VP2
+    cat: key_moment
+    keyframes:
+    - '03:18.1'
+    - '03:23.1'
+    - '03:30.1'
+    item: 'Look of the hammer counterattack: the tiny mouse, clearly small beside the cats, wielding an oversized hammer at the opened baseboard,
+      and the hurt paws shown swollen and red'
+    anchors:
+      '1': the size contrast with the oversized hammer at the opening and the swollen red paws both read
+      '0.5': only one of the two reads, or the injury is shown only as a generic damage effect
+      '0': neither
+    evidence:
+    - - 03:16
+      - 03:32
+  - id: VP3
+    cat: key_moment
+    keyframes:
+    - '03:53.1'
+    - '03:57.1'
+    - '04:05.1'
+    item: 'Wall and floor smashing: the cat swinging the big mallet, leaving jagged holes and long cracks along the walls with flying plaster,
+      then a broken floor hole with dust'
+    anchors:
+      '1': the mallet swing, jagged wall breaks with debris and a smashed floor all readable
+      '0.5': damage shown but without the wall breaks or without the floor hole, or as a plain removed block with no debris
+      '0': none
+    evidence:
+    - - 03:52
+      - 04:06
+  - id: VP4
+    cat: presentation
+    keyframes:
+    - '04:08.1'
+    - '04:12.1'
+    - '04:14.1'
+    item: 'Set-apart payoff: the ending is shown to the player as its own distinct moment in which the dazed exterminator stuck in the floor hole
+      with a visible bump and the cat holding the mallet beside him are readable together, and the sequence clearly closes on it'
+    anchors:
+      '1': the ending is a distinct moment with both pursuers and the injury readable together, and the sequence clearly closes there
+      '0.5': the ending state is visible but not set apart from the ongoing play or without a clear close, or the injury is not readable
+      '0': no distinct ending moment
+    evidence:
+    - - 04:07
+      - 04:15
+play_suggestions:
+  FP1:
+  - 'follow the mouse into the hole: is there a passage inside the wall, and does it come out somewhere else?'
+  - 'try to walk into the passage as a pursuer: is it blocked without forcing it?'
+  FP2:
+  - 'trigger or watch the forced opening of the hole: does the counterattack happen as a result?'
+  - check that the failed attempt leads on to the next stage
+  FP3:
+  - check that the mallet stage only opens after the failed first attempt
+  - 'act with the mallet on the walls as the cat: does the stage respond and lead on to the climax?'
+  FP4:
+  - 'play to the end through normal play: can the final blow be reached and triggered?'
+  - after the end, is there a clear outcome and a way to restart or continue?
+  robustness:
+  - skip or interrupt a stage (leave the area, wait) and see whether the sequence breaks or soft-locks
+  - trigger the climax out of order if possible (e.g. smash the floor before the hand-over)
+  - 'save and reload in the middle of the wall-smashing stage: is damage and the tool holder kept?'
+v4_map:
+  U1: CR1
+  U2: CR2 (passage existence); access rule already scored by FP1
+  U3: CR3
+  U4: CR4
+  U5: 'dropped: duplicate (event order already scored by the causal links CR3 -> CR4 -> CR5)'
+  U6: CR5 (house-wreck clause left to VP3)
+  FP1: FP1
+  FP2: FP2 (trigger and progression; event content to CR3, look to VP2)
+  FP3: CR4 (tool, hand-over, role split), FP3 (escalation stage in play)
+  FP4: FP4 (reaching and completing the climax; who is hit / escapes to CR5)
+  VP1: CR2 (places and connection), VP1 (look only)
+  VP2: 'VP2 (look only: size contrast, oversized hammer, swollen paws)'
+  VP3: VP3
+  VP4: VP4
+provenance:
+  source_yaml: T-VO-vid_0eed209df3b3.t1.yaml
+  source_sha256: b0efecf70b8fa1c84fb8484e6f8697e6064cd51b2fedd38245bf3e57c6e0413b
+  size_waiver: null
+  size_max: null
+  sources: []

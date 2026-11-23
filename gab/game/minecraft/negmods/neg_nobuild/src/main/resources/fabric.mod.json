@@ -1,0 +1,2 @@
+{"schemaVersion": 1, "id": "gab_neg_nobuild", "version": "1.0.0", "name": "gab negative mod nobuild", "environment": "*",
+ "entrypoints": {"main": ["org.gab.neg.Neg_nobuild"]}, "depends": {"fabricloader": ">=0.19", "minecraft": "26.3", "fabric-api": "*"}}

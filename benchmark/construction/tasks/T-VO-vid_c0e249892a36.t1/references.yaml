@@ -1,0 +1,24 @@
+# Reference material: fetched from the HF dataset into $GAB_MEDIA_DIR/<task>/ by `gab media fetch` (sha256 checked).
+# The agent gets the files only (no title, author, caption or source): this file is never shown to it.
+task_id: T-VO-vid_c0e249892a36.t1
+refs:
+- id: c01
+  kind: video
+  file: clip_01.mp4
+  video_id: vid_c0e249892a36
+  source:
+    title: The Snoopy Show — Surf’s Up Snoopy ｜ Apple TV [BcxKk71AC2w]
+    url: https://www.youtube.com/watch?v=BcxKk71AC2w
+    channel: null
+    youtube_id: BcxKk71AC2w
+  range:
+    start: 74.9
+    end: 166.9
+    text: 1:14.90-2:46.90
+  duration_s: 92.0
+  size_bytes: 12844876
+  format: mp4 H.264 720p, AAC audio
+  hf_path: media/T-VO-vid_c0e249892a36.t1/clip_01.mp4
+  sha256: 31e9507b586624e8c656d9a8ec92ef3af19ca95ce48f0f43742565f74cd2874c
+  rights_note: 'Copyrighted animated episode footage: use as a private reference only and do not redistribute. The target game must use new or
+    original assets, not Peanuts character art, and the task should transfer the story beat rather than reproduce the characters.'

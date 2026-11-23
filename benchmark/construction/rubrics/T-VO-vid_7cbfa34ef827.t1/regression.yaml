@@ -1,0 +1,21 @@
+# GameAnything-Bench scoring material: never shown to agents during a trial.
+task_id: T-VO-vid_7cbfa34ef827.t1
+game: stardew_valley
+status: pending
+picks:
+- SD-CLOCK
+- SD-INVENTORY
+- SD-SLEEP
+- SD-NPC
+- SD-WARP
+changed: []
+kept_borderline:
+- id: SD-CLOCK
+  note: A midnight deadline might use the in-game clock, but the instruction does not require changing its speed.
+- id: SD-INVENTORY
+  note: The slipper may be added to the inventory, which is added content only.
+summary: Cinderella quest with glowing slipper and a midnight deadline
+task_checks: []
+note: 'policy (A): excluded only when the instruction explicitly requires the change; plausible side effects stay tested; adding
+  new content is never a reason to exclude. Proposed by claude-sonnet-5-5 via `gab task picks` 2026-11-06; a maintainer checks (set status: checked).
+  The evaluator tests the pool''s always items (unless in changed) + picks.'

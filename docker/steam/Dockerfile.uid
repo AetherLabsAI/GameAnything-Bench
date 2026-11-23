@@ -1,0 +1,19 @@
+# Last layer of the steam image: the game user `player` gets the host uid of the user who builds it / gid (docker/build.sh steam passes id -u / id -g).
+# Steam's files land in your state dir on the host (login token, library): they must belong to you, never to
+# whichever host account happens to have uid 1000. Trials of Steam games run this image too, so game and hub share the uid that
+# Steam's IPC needs (/dev/shm/u<uid>-...). gab refuses an image whose label player-uid is not the caller's uid.
+ARG STEAM_BASE=gameanything-bench-steam-common
+FROM ${STEAM_BASE}
+ARG PLAYER_UID
+ARG PLAYER_GID
+USER root
+RUN test -n "${PLAYER_UID}" && test -n "${PLAYER_GID}" \
+ && if [ "$(id -u player)" != "${PLAYER_UID}" ] || [ "$(id -g player)" != "${PLAYER_GID}" ]; then \
+      old=$(id -u player); oldg=$(id -g player); \
+      g=$(getent group "${PLAYER_GID}" | cut -d: -f1); if [ -n "$g" ] && [ "$g" != player ]; then groupdel "$g"; fi; \
+      u=$(getent passwd "${PLAYER_UID}" | cut -d: -f1); if [ -n "$u" ] && [ "$u" != player ]; then echo "uid ${PLAYER_UID} is taken by $u in the image" >&2; exit 1; fi; \
+      groupmod -g "${PLAYER_GID}" player && usermod -u "${PLAYER_UID}" -g "${PLAYER_GID}" player \
+      && find / -xdev \( -uid "$old" -o -gid "$oldg" \) -exec chown -h "${PLAYER_UID}:${PLAYER_GID}" {} + ; \
+    fi && id player
+USER player
+LABEL org.gameanything-bench.player-uid="${PLAYER_UID}" org.gameanything-bench.layer="steam-uid"

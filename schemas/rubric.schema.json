@@ -1,0 +1,329 @@
+{
+ "$schema": "https://json-schema.org/draft/2020-12/schema",
+ "title": "rubric.yaml (hidden or published; rubric v4: Construction only)",
+ "type": "object",
+ "required": [
+  "task_id",
+  "rubric",
+  "instructions_meta"
+ ],
+ "properties": {
+  "task_id": {
+   "type": "string"
+  },
+  "source_inventory": {
+   "type": "array",
+   "items": {
+    "type": "string"
+   }
+  },
+  "instructions_meta": {
+   "type": "object",
+   "required": [
+    "explicit_requirements"
+   ],
+   "properties": {
+    "requirement_groups": {
+     "type": "object"
+    },
+    "explicit_requirements": {
+     "type": "array",
+     "items": {
+      "type": "object",
+      "required": [
+       "type",
+       "text",
+       "covers"
+      ],
+      "properties": {
+       "type": {
+        "enum": [
+         "keep",
+         "specify",
+         "modify"
+        ]
+       },
+       "text": {
+        "type": "string"
+       },
+       "covers": {
+        "type": "array",
+        "minItems": 1,
+        "items": {
+         "type": "string",
+         "pattern": "^(CR|FP|VP)\\d+$"
+        }
+       }
+      }
+     }
+    }
+   }
+  },
+  "rubric": {
+   "type": "object",
+   "required": [
+    "content_realization",
+    "functions_playability",
+    "visual_presentation"
+   ],
+   "additionalProperties": false,
+   "properties": {
+    "content_realization": {
+     "type": "array",
+     "minItems": 1,
+     "items": {
+      "type": "object",
+      "required": [
+       "id",
+       "item",
+       "anchors"
+      ],
+      "properties": {
+       "id": {
+        "type": "string",
+        "pattern": "^CR\\d+$"
+       },
+       "item": {
+        "type": "string"
+       },
+       "anchors": {
+        "type": "object",
+        "required": [
+         "1",
+         "0.5",
+         "0"
+        ],
+        "properties": {
+         "1": {
+          "type": "string"
+         },
+         "0.5": {
+          "type": "string"
+         },
+         "0": {
+          "type": "string"
+         }
+        }
+       },
+       "evidence": {
+        "type": "array",
+        "items": {
+         "oneOf": [
+          {
+           "type": "string",
+           "pattern": "^(\\d{1,2}:\\d{2}(:\\d{2})?(\\.\\d+)?|(c\\d+\\.)?p\\d+|img\\d{2}(:.*)?)$"
+          },
+          {
+           "type": "array",
+           "minItems": 1,
+           "maxItems": 2,
+           "items": {
+            "type": "string",
+            "pattern": "^(\\d{1,2}:\\d{2}(:\\d{2})?(\\.\\d+)?|(c\\d+\\.)?p\\d+|img\\d{2}(:.*)?)$"
+           }
+          }
+         ]
+        }
+       },
+       "cat": {
+        "type": "string"
+       },
+       "cross": {
+        "type": "boolean"
+       }
+      },
+      "not": {
+       "anyOf": [
+        {
+         "required": [
+          "given_in_fine"
+         ]
+        },
+        {
+         "required": [
+          "fine_only"
+         ]
+        }
+       ]
+      }
+     }
+    },
+    "functions_playability": {
+     "type": "array",
+     "minItems": 1,
+     "items": {
+      "type": "object",
+      "required": [
+       "id",
+       "item",
+       "anchors"
+      ],
+      "properties": {
+       "id": {
+        "type": "string",
+        "pattern": "^FP\\d+$"
+       },
+       "item": {
+        "type": "string"
+       },
+       "anchors": {
+        "type": "object",
+        "required": [
+         "1",
+         "0.5",
+         "0"
+        ],
+        "properties": {
+         "1": {
+          "type": "string"
+         },
+         "0.5": {
+          "type": "string"
+         },
+         "0": {
+          "type": "string"
+         }
+        }
+       },
+       "evidence": {
+        "type": "array",
+        "items": {
+         "oneOf": [
+          {
+           "type": "string",
+           "pattern": "^(\\d{1,2}:\\d{2}(:\\d{2})?(\\.\\d+)?|(c\\d+\\.)?p\\d+|img\\d{2}(:.*)?)$"
+          },
+          {
+           "type": "array",
+           "minItems": 1,
+           "maxItems": 2,
+           "items": {
+            "type": "string",
+            "pattern": "^(\\d{1,2}:\\d{2}(:\\d{2})?(\\.\\d+)?|(c\\d+\\.)?p\\d+|img\\d{2}(:.*)?)$"
+           }
+          }
+         ]
+        }
+       },
+       "cat": {
+        "type": "string"
+       },
+       "cross": {
+        "type": "boolean"
+       }
+      },
+      "not": {
+       "anyOf": [
+        {
+         "required": [
+          "given_in_fine"
+         ]
+        },
+        {
+         "required": [
+          "fine_only"
+         ]
+        }
+       ]
+      }
+     }
+    },
+    "visual_presentation": {
+     "type": "array",
+     "minItems": 1,
+     "items": {
+      "type": "object",
+      "required": [
+       "id",
+       "item",
+       "anchors"
+      ],
+      "properties": {
+       "id": {
+        "type": "string",
+        "pattern": "^VP\\d+$"
+       },
+       "item": {
+        "type": "string"
+       },
+       "anchors": {
+        "type": "object",
+        "required": [
+         "1",
+         "0.5",
+         "0"
+        ],
+        "properties": {
+         "1": {
+          "type": "string"
+         },
+         "0.5": {
+          "type": "string"
+         },
+         "0": {
+          "type": "string"
+         }
+        }
+       },
+       "evidence": {
+        "type": "array",
+        "items": {
+         "oneOf": [
+          {
+           "type": "string",
+           "pattern": "^(\\d{1,2}:\\d{2}(:\\d{2})?(\\.\\d+)?|(c\\d+\\.)?p\\d+|img\\d{2}(:.*)?)$"
+          },
+          {
+           "type": "array",
+           "minItems": 1,
+           "maxItems": 2,
+           "items": {
+            "type": "string",
+            "pattern": "^(\\d{1,2}:\\d{2}(:\\d{2})?(\\.\\d+)?|(c\\d+\\.)?p\\d+|img\\d{2}(:.*)?)$"
+           }
+          }
+         ]
+        }
+       },
+       "cat": {
+        "type": "string"
+       },
+       "keyframes": {
+        "type": "array",
+        "minItems": 1,
+        "items": {
+         "type": "string",
+         "pattern": "^\\d{1,2}:\\d{2}(:\\d{2})?(\\.\\d+)?$"
+        }
+       }
+      },
+      "not": {
+       "anyOf": [
+        {
+         "required": [
+          "given_in_fine"
+         ]
+        },
+        {
+         "required": [
+          "fine_only"
+         ]
+        }
+       ]
+      }
+     }
+    }
+   }
+  },
+  "play_suggestions": {
+   "type": "object"
+  },
+  "hybrid": {
+   "type": "object"
+  },
+  "v4_map": {},
+  "provenance": {
+   "type": "object"
+  }
+ }
+}

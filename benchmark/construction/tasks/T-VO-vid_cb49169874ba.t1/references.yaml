@@ -1,0 +1,46 @@
+# Reference material: fetched from the HF dataset into $GAB_MEDIA_DIR/<task>/ by `gab media fetch` (sha256 checked).
+# The agent gets the files only (no title, author, caption or source): this file is never shown to it.
+task_id: T-VO-vid_cb49169874ba.t1
+refs:
+- id: c01
+  kind: video
+  file: clip_01.mp4
+  video_id: vid_cb49169874ba
+  source:
+    title: GINWOO ｜ Ginwoo Onodera Pro Debut JART Part [ZCsNROxJxcQ]
+    url: https://www.youtube.com/watch?v=ZCsNROxJxcQ
+    channel: null
+    youtube_id: ZCsNROxJxcQ
+  range:
+    start: 0.0
+    end: 39.8
+    text: 0:00.00-0:39.80
+  duration_s: 39.8
+  size_bytes: 7739402
+  format: mp4 H.264 720p, AAC audio
+  hf_path: media/T-VO-vid_cb49169874ba.t1/clip_01.mp4
+  sha256: 464fb85e9f4b97c07dcdd17015897b38eabac6f34e694ece13a62eeaec2c017f
+  rights_note: Real-world skate video from a named brand (Jart) and a named rider. The rider's name comes only from the title and intro text.
+    Use as a private reference only and do not redistribute the footage. Do not reproduce the rider's likeness, logos (the Jart intro) or on-screen
+    sponsor marks in built assets.
+- id: c02
+  kind: video
+  file: clip_02.mp4
+  video_id: vid_cb49169874ba
+  source:
+    title: GINWOO ｜ Ginwoo Onodera Pro Debut JART Part [ZCsNROxJxcQ]
+    url: https://www.youtube.com/watch?v=ZCsNROxJxcQ
+    channel: null
+    youtube_id: ZCsNROxJxcQ
+  range:
+    start: 247.2
+    end: 261.0
+    text: 4:07.20-4:21.00
+  duration_s: 13.8
+  size_bytes: 2614278
+  format: mp4 H.264 720p, AAC audio
+  hf_path: media/T-VO-vid_cb49169874ba.t1/clip_02.mp4
+  sha256: e434aa5c7c55501c444378a24b8c07ce98fa1e4cda6f0786490cf07074ca8fbd
+  rights_note: Real-world skate video from a named brand (Jart) and a named rider. The rider's name comes only from the title and intro text.
+    Use as a private reference only and do not redistribute the footage. Do not reproduce the rider's likeness, logos (the Jart intro) or on-screen
+    sponsor marks in built assets.

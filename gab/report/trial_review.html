@@ -1,0 +1,63 @@
+<!doctype html>
+<html lang="zh"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>评测结果审查</title>
+<style>
+:root{--bg:#fafafa;--card:#fff;--ink:#1d2330;--mute:#6b7280;--line:#e5e7eb;--acc:#2f6fdd;--ok:#1b8a4b;--mid:#b7791f;--bad:#c53030;--chip:#eef2f8}
+@media (prefers-color-scheme:dark){:root{--bg:#14161b;--card:#1d2027;--ink:#e6e8ee;--mute:#9aa1ad;--line:#30343d;--acc:#7aa7ff;--chip:#262a33}}
+*{box-sizing:border-box}body{margin:0;background:var(--bg);color:var(--ink);font:14px/1.6 -apple-system,"PingFang SC","Noto Sans CJK SC",sans-serif}
+header{padding:18px 20px;border-bottom:1px solid var(--line);background:var(--card);position:sticky;top:0;z-index:5}
+h1{font-size:18px;margin:0 0 8px}.tabs button{border:1px solid var(--line);background:var(--chip);color:var(--ink);padding:6px 12px;border-radius:6px;margin-right:6px;cursor:pointer}
+.tabs button.on{background:var(--acc);color:#fff;border-color:var(--acc)}
+main{max-width:1200px;margin:0 auto;padding:16px}
+section{background:var(--card);border:1px solid var(--line);border-radius:10px;padding:16px;margin-bottom:16px}
+h2{font-size:16px;margin:0 0 10px}h3{font-size:14px;margin:14px 0 6px}
+table{border-collapse:collapse;width:100%}td,th{border-bottom:1px solid var(--line);padding:6px 8px;text-align:left;vertical-align:top}th{color:var(--mute);font-weight:600}
+.s{display:inline-block;min-width:34px;text-align:center;border-radius:5px;padding:1px 6px;font-weight:700;color:#fff}
+.s1{background:var(--ok)}.s05{background:var(--mid)}.s0{background:var(--bad)}.sn{background:var(--mute)}
+.mute{color:var(--mute)}.en{color:var(--mute);font-size:12px}.chip{display:inline-block;background:var(--chip);border-radius:5px;padding:0 6px;margin:0 4px 4px 0;font-size:12px}
+.grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(300px,1fr));gap:12px}video{width:100%;border-radius:6px;background:#000}
+.item{border-top:1px solid var(--line);padding:10px 0}.judge{margin:6px 0 0 14px}.note{background:#fff4e0;color:#5a3b00;border-radius:6px;padding:6px 8px}.imgs img{height:120px;margin:4px 6px 0 0;border-radius:4px;border:1px solid var(--line);cursor:zoom-in}
+pre{white-space:pre-wrap;background:var(--chip);padding:10px;border-radius:6px;max-height:340px;overflow:auto;font-size:12.5px}
+details summary{cursor:pointer;color:var(--acc)}.cite{display:flex;gap:10px;margin:6px 0 0 14px;align-items:flex-start}.cite img{width:200px;border-radius:4px;border:1px solid var(--line);cursor:zoom-in}#zoom{position:fixed;inset:0;background:#000c;display:none;align-items:center;justify-content:center;z-index:9}#zoom img{max-width:95vw;max-height:95vh}
+@media(max-width:600px){main{padding:8px}td,th{padding:4px}}
+</style></head><body>
+<header><h1>评测结果审查（内部，含游戏截图和参考帧，勿外传）</h1><div class="tabs" id="tabs"></div></header>
+<main id="main">加载中…</main><div id="zoom" onclick="this.style.display='none'"><img></div>
+<script>
+const COLS=[["mechanisms","U · 机制"],["entities_properties","U · 实体与属性"],["relations","U · 关系"],["regression","C · Regression"],["functions_playability","C · 功能与可玩性"],["visual_presentation","C · 视觉与呈现"]];
+let D,ZH;const esc=s=>String(s??"").replace(/[&<>]/g,c=>({"&":"&amp;","<":"&lt;",">":"&gt;"})[c]);
+const sc=v=>v==null?'<span class="s sn">–</span>':`<span class="s ${v>=1?"s1":v>0?"s05":"s0"}">${(+v).toFixed(v%1?2:0).replace(/\.?0+$/,"")||0}</span>`;
+const z=(t,k,en)=>{const c=ZH[t+"|"+k];return c?`${esc(c)}<div class="en">${esc(en)}</div>`:esc(en)};
+const min=s=>s==null?"–":(s/60).toFixed(1)+" 分钟",usd=u=>u==null?"–":"$"+(+u).toFixed(2);
+function show(i){document.querySelectorAll("#tabs button").forEach((b,j)=>b.classList.toggle("on",i==j));const t=D.trials[i];const id=t.id;let h="";
+h+=`<section><h2>${esc(t.task)} · ${t.level=="fine"?"细粒度":"粗粒度"} · ${esc(t.game)} · ${esc(t.agent_name)} / ${esc(t.model)}</h2>${t.note?`<div class="note">${esc(t.note)}</div>`:""}
+<table><tr><th>状态</th><th>Gate</th>${COLS.map(c=>`<th>${c[1]}</th>`).join("")}</tr><tr><td>${esc(t.status)}</td><td>${t.gate.pass?"通过":(t.gate.pass===false?"未通过"+(t.gate.fail?`（${esc(t.gate.fail)}）`:""):"未判定")}</td>${COLS.map(([k])=>`<td>${sc(k==="overall"?t.scores.overall:t.scores.C[k])}</td>`).join("")}</tr></table>
+${t.gate_log?`<details open><summary>Gate 未通过：原因和报错（eval/gate.log）</summary><pre>${esc(t.gate_log)}</pre></details>`:""}
+<h3>明确要求满足度</h3>${(t.explicit||[]).map(e=>`<span class="chip">${esc(e.type)}：${sc(e.satisfied)} 覆盖 ${esc((e.items||[]).join(", "))}</span>`).join("")||'<span class="mute">无</span>'}
+<h3>用时与成本</h3><table><tr><th></th><th>用时</th><th>成本</th><th>tokens（输出）</th></tr>
+<tr><td>开发 agent</td><td>${min(t.cost.agent.wall_s)}</td><td>${usd(t.cost.agent.usd)}</td><td>${t.cost.agent.tokens_out??"–"}</td></tr>
+
+<tr><td>评测（合计）</td><td>${min(t.cost.eval.wall_s)}（游戏运行 ${t.cost.eval.game_minutes??"–"} 分钟）</td><td>${usd(t.cost.eval.usd)}</td><td>${t.cost.eval.tokens_out??"–"}</td></tr></table></section>`;
+h+=`<section><h2>视频</h2><p class="mute">游戏里没有录像，以下是把截图按顺序拼成的幻灯片（左下角是动作或截图名）。</p><div class="grid">${t.videos.map(v=>`<div><video controls preload="metadata" src="${v.src}"></video><div>${esc(v.title)}</div></div>`).join("")}</div></section>`;
+h+=`<section><h2>评测环节：做了什么、用时、成本</h2><table><tr><th>环节</th><th>做了什么</th><th>模型</th><th>用时</th><th>成本</th></tr>${t.evaluators.map(e=>`<tr><td>${esc(e.name)}</td><td>${esc(e.did)}</td><td>${esc(e.model)}</td><td>${e.wall_s==null?"–":(+e.wall_s).toFixed(0)+" 秒"}</td><td>${e.usd==null?"–":usd(e.usd)}</td></tr>`).join("")}</table></section>`;
+for(const [k,name] of COLS){const its=t.items.filter(r=>r.column==k);if(!its.length)continue;
+h+=`<section><h2>${name} <span class="mute">（${its.length} 条，列分 ${t.scores.C[k]?.toFixed?.(2)}）</span></h2>`;
+if(k=="regression")h+=`<p class="mute">怎么评：每条是这款游戏原有的一项能力。自动探针在<b>原版游戏</b>和<b>装了 agent 的 mod 的游戏</b>里做同样的操作、读同样的数值，结果一致记 1，不一致记 0（第一次不一致会在新的游戏实例上重测一次，两次都不一致才记 0）。列分 = 通过的条数 / 总条数。这几条是该游戏的默认挑选，每道题专属的挑选还没做。</p>`;
+for(const r of its){h+=`<div class="item"><b>${esc(r.id)}</b> ${sc(r.score)} ${r.could_not_test?'<span class="chip">测不了</span>':""}<div>${r.item?z(id,r.id+"|item",r.item):""}</div>`;
+if(r.anchors)h+=`<details><summary>锚点</summary>${Object.entries(r.anchors).map(([a,txt])=>`<div><b>${a}</b>：${z(id,r.id+"|a"+a,txt)}</div>`).join("")}</details>`;
+if(r.probe)h+=`<div class="en">探针：${esc(r.probe)}</div>`;
+r.judges.forEach((j,n)=>{h+=`<div class="judge">${sc(j.score)} <b>${esc(j.who)}</b>：${z(id,r.id+"|j"+n,j.reason)}${j.evidence?`<details><summary>证据</summary><div class="en">${(j.evidence||[]).map(esc).join("<br>")}</div></details>`:""}</div>`});
+if(r.cites&&r.cites.length)h+=`<details><summary>评委引用的截图与当时的状态变化（${r.cites.length}）</summary>${r.cites.map(c=>`<div class="cite">${c.img?`<img src="${c.img}">`:""}<div><b>${esc(c.label)}</b><div class="en">${esc(c.diff)}</div></div></div>`).join("")}</details>`;
+if(r.note)h+=`<div class="judge note"><b>审查备注：</b>${esc(r.note)}</div>`;
+if(r.kf||r.best)h+=`<div class="imgs"><span class="mute">参考帧：</span>${(r.kf||[]).map(s=>`<img src="${s}">`).join("")}<br><span class="mute">评委选的截图：</span>${(r.best||[]).map(s=>`<img src="${s}">`).join("")}</div>`;
+h+=`</div>`}h+=`</section>`}
+if((t.timelines||[]).length){h+=`<section><h2>回放时间线：每张截图时的游戏状态变化</h2><p class="mute">状态在每个截图点从运行中的游戏读取（引擎字段、mod 在引擎里创建的东西、屏幕文字），这里是和上一张截图相比的变化。</p>`;
+for(const tl of t.timelines)h+=`<details><summary>${esc(tl.trace)}（${tl.rows.length} 个截图点）</summary><table><tr><th>截图</th><th>之前的输入</th><th>状态变化</th></tr>${tl.rows.map(x=>`<tr><td>${esc(x.shot)}</td><td class="en">${esc(x.input)}</td><td class="en">${esc(x.diff)}</td></tr>`).join("")}</table></details>`;h+=`</section>`}
+const ag=t.agent;h+=`<section><h2>开发 agent 做了什么</h2><p>退出：${esc(ag.exit_reason)}，用时 ${min(ag.wall_s)}，成本 ${usd(ag.usd)}</p>
+<h3>工具调用</h3>${Object.entries(ag.tools).map(([k,v])=>`<span class="chip">${esc(k)} × ${v}</span>`).join("")}
+<h3>game 命令</h3>${ag.game_cmds.map(([k,v])=>`<span class="chip">${esc(k)} × ${v}</span>`).join("")}
+<h3>最后的总结</h3><pre>${ZH[id+"|agent_final"]?esc(ZH[id+"|agent_final"])+"\n\n——原文——\n":""}${esc(ag.final)}</pre>
+<h3>任务指令</h3><pre>${esc(t.instruction)}</pre>${t.reference_text?`<h3>参考文本（agent 拿到的文本）</h3><pre>${esc(t.reference_text)}</pre>`:""}${(t.reference_images||[]).length?`<h3>参考图片（agent 拿到的图片）</h3><div>${t.reference_images.map(x=>`<img src="${x}" style="max-width:240px;margin:4px">`).join("")}</div>`:""}</section>`;
+document.getElementById("main").innerHTML=h;document.querySelectorAll(".imgs img,.cite img").forEach(im=>im.onclick=()=>{const zz=document.getElementById("zoom");zz.querySelector("img").src=im.src;zz.style.display="flex"});scrollTo(0,0)}
+fetch("data.json").then(r=>r.json()).then(d=>{D=d;ZH=d.zh||{};document.getElementById("tabs").innerHTML=d.trials.map((t,i)=>`<button onclick="show(${i})">${esc(t.run)} · ${esc(t.task.replace("T-VO-vid_","").slice(0,6))} ${esc(t.game)} · ${t.level=="fine"?"细":"粗"}</button>`).join("");show(0)});
+</script></body></html>

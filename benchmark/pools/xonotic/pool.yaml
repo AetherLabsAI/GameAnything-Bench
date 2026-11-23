@@ -1,0 +1,66 @@
+# Copied from the original pool_xonotic.yaml (2026-10-30) + game / version / default_picks for gab.
+# default_picks: used for a task whose regression.yaml has no checked picks yet; cheap, uncorrelated probes.
+# Probes: gab/game/xonotic/probes.py (XOProbes, ClientRun); `probe: x.y` = field y of probe x (fields may be joined with +);
+# `client.*` = the GL client run (probes.ClientRun, started through the gab launcher bridge/xo-client.sh).
+# Base-capability pool, Xonotic (v0.2, verified in game 2026-10-30, Xonotic version 0.8.6 = release data 20230620, DarkPlaces build Jun 20 2023)
+# Same rules as pool_minecraft.yaml: atomic base capabilities a task's change could break. Pass = same result as a vanilla
+# instance. Per task the drafter picks the 4-6 relevant ones and may add 0-2 task-specific items; a maintainer checks. Avoid
+# correlated picks (e.g. XO-PHYSICS-SETTINGS and XO-GRAVITY: an sv_gravity cfg fails both; XO-WEAPON-SETTINGS and XO-WEAPONS:
+# a balance pk3 fails both).
+# Mod surface: cfg files and pk3 packs copied into the instance's <userdir>/data (physics / balance cvars, weapons, maps).
+# Probes: probes_xonotic.py (gab: gab/game/xonotic/probes.py) (XOProbes); `probe: x.y` = field y of probe x (fields joined with +).
+# Runtime: dedicated server (no display) with its own -userdir, driven over local rcon; players are bots scripted with the
+# game's own `sv_cmd bot_cmd` queue (keys, waits, weapon select), state read from the server (prvm_edictget), stock map stormkeep.
+# A/A calibration 2026-10-30: fresh vanilla instance pairs -> all ready probes agree. Noise seen: run+stop travel 394/406
+#   units (one server frame; tol 5% or 20), crylink one-shot damage 40.5/44.2 (spread/projectile weapons tol 8 HP, others 3),
+#   item respawn 14.7-14.8 s (tol 1.5 s), server CPU with 8 bots 6.3-7.7% (<= 2x or +3 points), bot kills in 45 s 7-8 (only
+#   "some fight happened" is compared). `status` frags were flaky (missed a suicide) -> scores read from the scorekeeper.
+# Client items (XO-HUD ready; XO-MENU / XO-FRAMETIME blocked by the shared pod's load): see the notes on the items.
+# Negative checks 2026-10-30 (deliberately breaking mods: autoexec.cfg sv_gravity 600; a pk3 with vortex damage 80 -> 40):
+#   see the verification logs (results/*.json, round*_compare.txt).
+
+game: xonotic
+version: 0.8.6 (data 20230620)
+default_picks:
+- XO-PHYSICS-SETTINGS
+- XO-WEAPON-SETTINGS
+- XO-SPAWN-LOADOUT
+- XO-MAPLIST
+- XO-PERF
+
+# gate (gab/eval/regression.py): the STABLE item (no real crash / hang, no new fatal error kind) + the host-present
+# item(s): the stock content they reach must still be there on the modded game (numbers NOT compared with vanilla; only a mod that
+# removes / replaces the host game wholesale fails). Scores are 0 unless the gate passes. Not chosen per task.
+gate: [XO-STABLE, XO-MAPLIST, XO-SPAWN-LOADOUT]
+
+always:
+  - {id: XO-STABLE, capability: "no crash, and no more error lines in the server console than vanilla, through the whole evaluation", probe: log_errors, status: ready}
+
+pool:
+  # settings snapshots (what cfg / pk3 mods change directly)
+  - {id: XO-PHYSICS-SETTINGS, capability: "movement physics settings unchanged (sv_gravity, sv_maxspeed, sv_jumpvelocity, friction, acceleration, air control, fall-damage cvars, ticrate)", probe: physics_cvars, status: ready}
+  - {id: XO-WEAPON-SETTINGS, capability: "the weapon balance unchanged: all ~930 weapon settings the game dumps (sv_cmd dumpweapons), and the weapon list", probe: weapon_balance, status: ready}
+  # movement (scripted bot on the stormkeep floor)
+  - {id: XO-RUN, capability: "running: top speed 360 and the run-and-stop distance as vanilla", probe: move.run_speed+travel, status: ready}
+  - {id: XO-JUMP, capability: "jumping: jump height (~42 units) and air time as vanilla", probe: move.jump_height+jump_airtime, status: ready}
+  - {id: XO-GRAVITY, capability: "gravity and falling as vanilla (gravity fitted from a jump and a 600 u/s launch arc)", probe: move.gravity+launch_height+launch_gravity, status: ready}
+  - {id: XO-FALLDAMAGE, capability: "landing hard hurts as in vanilla (fall damage after a 950 u/s slam into the floor)", probe: move.fall_damage, status: ready}
+  # combat
+  - {id: XO-WEAPONS, capability: "every stock weapon fires and one primary shot deals the vanilla damage and uses the vanilla ammo (blaster, shotgun, machinegun, mortar, electro, crylink, vortex, hagar, devastator, shockwave, arc)", probe: weapons, status: ready}
+  - {id: XO-SCORE, capability: "the scoreboard counts a frag (+1 score/kill, victim +1 death) and a suicide (-1 score, +1 suicide)", probe: score.shooter+victim+suicider, status: ready}
+  # player and items
+  - {id: XO-SPAWN-LOADOUT, capability: "a new player spawns with the vanilla loadout (100 health, 0 armor, blaster + shotgun, 15 shells)", probe: player_start.health+armor+weapons+ammo_shells+ammo_nails+ammo_rockets+ammo_cells, status: ready}
+  - {id: XO-PICKUPS, capability: "a health pickup heals (+25), disappears and respawns after ~15 s", probe: items.pickup_taken+pickup_gain+respawn_s, status: ready}
+  - {id: XO-ITEM-LAYOUT, capability: "the stock map's items and weapon pickups are all there (per class counts on stormkeep)", probe: items.counts, status: ready}
+  # game flow
+  - {id: XO-BOTS, capability: "bots join, move around a stock map and frag each other (4 bots, 45 s)", probe: bots_play.joined+all_moved+fight, status: ready}
+  - {id: XO-MODES, capability: "stock modes start with their rules: deathmatch (stormkeep), CTF (catharsis: 2 flags), race (leave_em_behind: 8 checkpoints) load, a player spawns, frag/time limits as vanilla", probe: modes, status: ready}
+  - {id: XO-MAPLIST, capability: "stock maps still load and a player spawns on them (afterslime, solarium, xoylent, stormkeep)", probe: maps_load, status: ready}
+  - {id: XO-PERF, capability: "server frame cost with 8 bots not much higher than vanilla (<= 2x or +3 CPU points)", probe: perf, status: ready}
+  # client-side: GL client as a listen server on the seat screen (vglrun), started only through /home/player/oss-xonotic/client/cl.sh
+  # (first-start setup by the main session as instructed), scripted by probes_xonotic.CLIENT_CFG;
+  # host steps: client-prep -> `docker exec <sandbox> bash /home/player/oss-xonotic/client/cl.sh <display> <name> <port>` -> client-result.
+  # Client A/A 2026-10-30 on a test sandbox while 5 other agents' games shared the pod (load average 20-38): see the evidence folder.
+  - {id: XO-HUD, capability: "the vanilla HUD configuration is in force in game (all 566 hud_* / crosshair* settings as vanilla; in-game screenshot kept for review)", probe: client.hud, status: ready, note: "A/A settings identical (3 runs); negative autoexec.cfg hud_panel_healtharmor 0 -> fail (1 setting differs). Pixel regions are reported, not judged: vanilla vs vanilla 0.003-0.006 when quiet but 0.10-0.15 under load, as large as the hidden panel (0.06-0.16). A HUD change made only by replacing gfx in a pk3 is not caught. 1 of 5 vanilla runs aborted (SIGABRT while loading the map under load) -> could_not_test, not fail"}
+  - {id: XO-MENU, capability: "main menu opens and looks like vanilla", probe: client.menu, status: blocked, note: "on the loaded shared pod the vanilla main menu is not reliably drawn: black at 40/70/100 s in 1 of 3 runs and half-loaded (no background) at 100 s in another -> vanilla vs vanilla differed by 0.11 (threshold 0.03; quiet-pod pair 0.0). Needs a menu-ready signal or a quiet pod; broken-menu.dat negative not run because the A/A does not hold"}
+  - {id: XO-FRAMETIME, capability: "client frame time on a stock map not much slower than vanilla (timerefresh fps at the probe spot)", probe: client.fps, status: blocked, note: "the GPU and CPUs are shared with the other seats: vanilla timerefresh read 0.6, 1.1, 35, 68, 82, 152, 196, 206 fps across runs -> no usable threshold; needs a dedicated GPU / quiet pod. Heavy-shadow negative not run for the same reason"}

@@ -1,0 +1,226 @@
+# GameAnything-Bench scoring material: never shown to agents during a trial.
+task_id: T-VO-vid_822a0bfacf16.t1
+source_inventory:
+- '01:25.9-01:28.0 low-angle close shot: a young man in a dark green / red patterned poncho, seen from behind-left, looks up and to the right;
+  above him a large balloon with navy and yellow vertical stripes, a red band and a basket; smaller striped balloons (navy / yellow, white, teal)
+  nearby and many tiny balloons further off; clear teal-blue sky'
+- '01:28.4-01:31.0 wide shot over a flat, dry plain with low scrub: a large dark balloon with red horizontal bands hangs low over the plain with
+  its basket just above the ground; many small balloons (orange, striped) are spread over the plain, some at ground level, others higher; long
+  flat-topped hills on the horizon; pastel pink-orange sky at the horizon fading to blue (low-sun, early light)'
+- 01:31.4-01:32.4 a person in the poncho and white trousers stands on top of a pale, rounded rock ridge, back to camera, looking out; a huge navy
+  / lime-green balloon fills the left of the frame very close; a red / white checkered balloon behind it; below, a valley of pale cream and pink
+  eroded rock formations with green trees, roads, a few buildings and glowing lights; hills on the horizon
+- '01:32.9-01:33.4 wider shot of the same ridge: soft, rounded white rock humps in the foreground, the person small on a top; a dark brown pointed
+  rock spire rises to the right; balloons at many distances (a large white balloon with orange pattern and a logo, the navy / lime balloon, striped
+  ones, small distant ones); buildings and lights in the valley; hazy hills behind'
+- 01:33.9-01:36.4 black (cut / fade to black)
+- 01:36.9-01:38.9 fade in from black, still dark, to the terrace view below
+- '01:39.4-01:43.3 a flat stone terrace on high ground: a tall, sunlit, warm orange rock face on the left, a tall black street-lamp post, a wooden
+  barrel and baskets, low floor seating with kilim-patterned cushions and bolsters along a low railing; a man in a white shirt sits on the cushions,
+  back to camera, looking out; below and beyond, a town of low pale buildings with rock cones / spires among them, dozens of small balloons spread
+  over the town, long flat-topped hills on a hazy horizon; warm, low sunlight'
+- no on-screen text; camera mostly static or slowly moving; shallow depth of field in the close shots
+- 'audio (from the Whisper transcript only, not checked by ear; may be unreliable over music): narration ''... hundreds of balloons breathe fire
+  into the sky, rising like a symphony. So this is a reminder'' (a segment 01:06.3-01:39.1 that likely covers only the end words) and ''... to
+  myself, to anyone listening. Sometimes, the most magic places ...'' (01:39.9-01:47.7, continues past the clip end); presumably a music bed under
+  the narration'
+- 'not shown: how the ridge and the terrace connect, whether they are the same location, the full valley layout, any balloon launch or burner
+  flame inside this range'
+instructions_meta:
+  requirement_groups:
+    access and usable vantage points:
+    - FP1
+    - FP2
+    - FP3
+    landscape layout and landmarks:
+    - CR1
+    - CR2
+    - CR3
+    sky:
+    - CR4
+    - VP1
+    light and atmosphere:
+    - VP2
+    framing of the view:
+    - VP3
+  explicit_requirements:
+  - type: specify
+    text: I want the lookout to sit high above everything like in the clip, with the town and valley spread out below it and long flat-topped
+      hills along the horizon.
+    covers:
+    - CR3
+rubric:
+  content_realization:
+  - id: CR1
+    item: 'The lookout terrace: a flat stone terrace set against a tall rock face, with low floor seating (cushions) along a low railing at its
+      open edge'
+    anchors:
+      '1': a flat terrace beside a tall rock face, with low floor seating and a railing or low wall at the edge facing the view
+      '0.5': a terrace or seating area exists, but without the rock face beside it or without the seating at the edge
+      '0': no terrace
+    evidence:
+    - - '01:39.4'
+      - '01:43.3'
+  - id: CR2
+    item: 'The rock formations: pale, soft, rounded eroded ridges and humps, with pointed rock spires / cones rising among them, one ridge top
+      high enough to stand on and look out'
+    anchors:
+      '1': pale rock with rounded / mounded forms (in the game's own block style) AND pointed spires or cones, including a ridge top above the
+        valley
+      '0.5': only one of the two forms, or the rock is not pale / not rounded (flat slabs, generic cliffs)
+      '0': no such rock formations; generic mountains or none
+    evidence:
+    - - '01:31.4'
+      - '01:33.4'
+    - - '01:39.4'
+      - '01:43.3'
+  - id: CR3
+    item: 'Vertical layout: the lookout(s) sit high above everything; the valley with a town of low pale buildings, with rock cones among the
+      buildings, lies below them, and long flat-topped hills close the horizon'
+    anchors:
+      '1': 'from the lookout: the town and valley clearly below, rock cones among the buildings, flat-topped hills on the horizon, in this order
+        of height and distance'
+      '0.5': the lookout is high and the town lies below, but the rock cones in the town or the horizon hills are missing
+      '0': no town / valley below the lookout, or the lookout at valley level
+    evidence:
+    - - '01:31.4'
+      - '01:33.4'
+    - - '01:39.4'
+      - '01:43.3'
+  - id: CR4
+    item: 'A sky full of balloons: many hot-air balloons float at once at many heights and distances, a few very close to the lookout and large
+      in the view, dozens spread over the town shrinking to specks toward the horizon, some hanging low near the ground'
+    anchors:
+      '1': many airborne balloons spread from close and large near the lookout to small and far over the town, at different heights
+      '0.5': several balloons, but all at about one distance / height, or only a few
+      '0': no balloons, or only landed / decorative ones
+    evidence:
+    - - '01:25.9'
+      - '01:28.0'
+    - - '01:28.4'
+      - '01:31.0'
+    - - '01:31.4'
+      - '01:33.4'
+    - - '01:39.4'
+      - '01:43.3'
+  functions_playability:
+  - id: FP1
+    item: 'Arrival: the player starts at, or can find and reach, the lookout area through ordinary player movement; the way to it is clear'
+    anchors:
+      '1': start on or a short, readable route to the lookout using ordinary movement only
+      '0.5': the lookout exists but is hard to find or needs special traversal or authoring / debug tools to reach
+      '0': no lookout reachable
+    evidence:
+    - - '01:31.4'
+      - '01:33.4'
+    - - '01:39.4'
+      - '01:43.3'
+  - id: FP2
+    item: 'The terrace is a usable place: the player can walk on it along the floor seating, step up to the railing at the edge and look out over
+      the valley without falling off or getting stuck'
+    anchors:
+      '1': walkable terrace, the seating blocks or supports the player sensibly, the edge is guarded and the view opens from it
+      '0.5': the terrace can be stood on, but the seating is walk-through / floating, the player gets stuck, or the edge is not guarded
+      '0': the terrace cannot be walked on
+    evidence:
+    - - '01:39.4'
+      - '01:43.3'
+  - id: FP3
+    item: 'A rock-ridge top is a standing viewpoint: the player can reach a top of the pale rounded rock formations through ordinary movement
+      and stand there with an open view of the balloons'
+    anchors:
+      '1': a rock top reachable by ordinary movement and standable, with an open view
+      '0.5': reachable only with special traversal or authoring / debug tools, or the top is too small or enclosed to look out
+      '0': no rock top can be reached
+    evidence:
+    - - '01:31.4'
+      - '01:33.4'
+  visual_presentation:
+  - id: VP1
+    cat: style
+    keyframes:
+    - '01:26.4'
+    - '01:28.9'
+    - '01:41.4'
+    item: 'The balloons look like hot-air balloons: upright teardrop envelopes with baskets, in bold varied patterns (vertical stripes, bands,
+      two-tone)'
+    anchors:
+      '1': recognisable teardrop envelopes with baskets and visibly varied bold patterns
+      '0.5': balloons present but uniform in look, or shapeless / without baskets
+      '0': no balloons
+    evidence:
+    - - '01:25.9'
+      - '01:28.0'
+    - - '01:28.4'
+      - '01:31.0'
+    - - '01:39.4'
+      - '01:43.3'
+  - id: VP2
+    cat: style
+    keyframes:
+    - '01:29.4'
+    - '01:41.4'
+    item: 'Light and atmosphere: low warm sun lighting the rock face, a pale sky with a pink-orange glow at the horizon, and haze softening the
+      distant hills'
+    anchors:
+      '1': warm low-sun light, a horizon glow and distance haze / fog
+      '0.5': one of them (e.g. warm light but no haze, or haze at noon light)
+      '0': default flat daylight or night
+    evidence:
+    - - '01:28.4'
+      - '01:31.0'
+    - - '01:39.4'
+      - '01:43.3'
+  - id: VP3
+    cat: presentation
+    keyframes:
+    - '01:26.4'
+    - '01:41.9'
+    item: 'Framed as watching: from the lookout (seated or standing spot) the player''s view opens onto the balloon-filled sky over the valley,
+      unobstructed, the way the clip frames a viewer looking up and out at the balloons'
+    anchors:
+      '1': from the natural standing / sitting spot the balloons and valley fill the view without walls, props or terrain blocking it
+      '0.5': the view exists but needs searching for the right spot, or is partly blocked
+      '0': the balloons and valley cannot be seen together from the lookout
+    evidence:
+    - - '01:25.9'
+      - '01:28.0'
+    - - '01:39.4'
+      - '01:43.3'
+play_suggestions:
+  FP1:
+  - from a fresh start, note how long it takes to reach the lookout and whether anything tells you where it is
+  - try to reach it with plain walking and jumping only
+  FP2:
+  - walk the whole terrace, bump into the seating, stand at the railing and push against it
+  - try to sit or rest on the cushions if the game allows it
+  FP3:
+  - try to reach the highest rock top with plain walking and jumping only
+  - stand on the highest rock top and turn 360 degrees
+  robustness:
+  - 'take screenshots from the lookout at different in-game times: do the balloons and lighting still read?'
+  - 'leave and rejoin the world: are balloons and props still in place?'
+  - 'dig or break a block of the terrace / rock: does the scene stay coherent?'
+  - 'walk from the lookout toward the town and the rock cones: are they real terrain or a backdrop / void just past the lookout?'
+  - 'go past the town toward the horizon hills: where does the built area end?'
+v4_map:
+  U1: CR4
+  U2: CR2
+  U3: CR1 | lamp, barrel, baskets, kilim pattern dropped as peripheral
+  U4: CR3
+  U5: CR4
+  FP1: FP1
+  FP2: FP2 | existence of terrace and furnishing split to CR1; lamp / generic props dropped as peripheral
+  FP3: FP3 | existence of the rock ridge top split to CR2
+  VP1: CR3 | terrace-view layering is arrangement of places, merged into CR3
+  VP2: CR2 | rounded pale ridge and spire merged into CR2
+  VP3: VP1 | near-to-far balloon spread moved to CR4
+  VP4: VP2
+  VP5: VP3
+  VP6: 'dropped: editing (snowy winter modification, moved to editing_seed.yaml)'
+provenance:
+  source_yaml: T-VO-vid_822a0bfacf16.t1.yaml
+  source_sha256: a949691da13ef6dbf371b4ef361c1580690ad9e7e88d936250042c29e349af4d
+  size_waiver: null
+  size_max: null
+  sources: []

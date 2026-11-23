@@ -1,0 +1,299 @@
+# GameAnything-Bench scoring material: never shown to agents during a trial.
+task_id: T-HY-vid_6d84fc825226.t1
+source_inventory:
+- 'clip 00:00-00:06: title ''ROME'' over a drone view of a river with an arched stone bridge and a round fortress-like building on the bank'
+- 'clip 00:06-00:12.8: wide aerial of the river bend with tree-lined embankments and several bridges, dense terracotta-roofed blocks beyond, small
+  domes among them'
+- 'clip 00:13-00:16: close aerial of a huge white columned monument with a bronze group on top, a plaza and roundabout below'
+- 'clip 00:16-00:19: orbit around an oval amphitheatre ruin with tiers of arches, a partly broken outer ring, among streets and trees'
+- 'clip 00:19-00:26: low view over rooftops toward a grey round dome behind a pedimented portico, set among dense low buildings'
+- 'clip 00:26-00:31.5: near top-down view of a large white sculpted fountain against a palace front, a turquoise basin, hemmed in by tight blocks
+  and narrow lanes'
+- 'clip 00:32-00:38: hazy golden-hour aerial of the white monument on stepped terraces at the end of a long straight avenue, hills on the horizon'
+- 'clip 00:38.5-00:41.5: aerial of a large dome behind a square framed by curved colonnades, an obelisk in its centre'
+- 'clip 00:42-00:44.5: golden-hour aerial of the amphitheatre in its setting, low buildings in front, greenery and hills beyond'
+- 'clip 00:45-00:51: the white monument seen frontally at sunset, terraces and colonnade, flanked by ochre buildings'
+- 'clip 00:51.5-00:57.5: street level, a domed temple''s columned portico with an inscribed pediment, a fountain with a carved grotesque face
+  spouting water in the foreground, a square with people and cars'
+- 'audio: music only, no speech'
+- 'text p001-p003: chapter heading ''A Moonlight Ramble''; a party of friends sets out on a moonlit walk through the city from a palace'
+- 'text p004-p008: they reach a famous fountain in a piazza (named Fountain of Trevi: a palace front with niches and statues, a basin reached
+  down some steps); Miriam drinks for the tradition that a parting draught ensures return; Donatello drinks with her'
+- 'text p009-p016: Miriam sees three shadows in the basin; the strange model, who follows her, washes his hands in the fountain and urges her
+  to do the same; she flings water in his face as an exorcism, which fails; the party laughs uneasily'
+- 'text p017-p025: Donatello in a fury offers to drown the model; Miriam calms him; walking apart, Donatello says the joy has gone out of his
+  life and that she is in the midst of his burning heart'
+- 'text p026-p028: chapter ''Miriam''s Trouble''; the party sits among ruins in the arena of the Coliseum at night, other people race and play
+  among the ground-tier arches'
+- 'text p029-p034: Hilda and Kenyon recognise a kneeling pilgrim circling the shrines; Miriam has hidden in a dark arch and, believing herself
+  unseen, gives way to a fit of wild despair, watched by Donatello'
+- 'text p035-p042: Miriam tells Donatello to flee from the evil hanging over her; he refuses to leave her; she accepts his aid and resolves to
+  tell him all; the pilgrim (the model) detects her in the arch'
+- 'text p043-p048: chapter ''On the Edge of a Precipice''; the friends have gone down the Capitoline Hill, Miriam and Donatello are alone at the
+  brow of the precipice; the model comes out of a niche in a palace wall; Hilda turns back and, through a courtyard door, sees the deed in one
+  instant'
+- 'text p049-p054: Donatello says he did to a traitor what Miriam''s eyes bade him as he held him over the precipice; the model is dead; Miriam
+  wishes she were dead too'
+- 'text p055-p061: days later Hilda and Kenyon (a sculptor) enter the Pantheon: a great circle of recesses and altars, a dome with an open eye
+  to the sky, moss on the pavement below it'
+- 'text p062-p067: a veiled female penitent kneels under the open eye; it is Miriam; she blesses them with extended hands that also keep them
+  away, and leaves without a greeting; Hilda asks whether Donatello was really a Faun'
+- 'text p068-p069: Kenyon wins Hilda as his bride, they resolve to go back to their own land; Hilda weeps over the mystery of Miriam''s life and
+  asks where Donatello is'
+instructions_meta:
+  requirement_groups:
+    characters and their relations:
+    - CR1
+    - CR2
+    story staging across the city:
+    - CR5
+    - CR6
+    travel and story progression:
+    - FP1
+    turning point and ending:
+    - CR3
+    - CR4
+    - FP2
+    - FP3
+    landmark settings:
+    - VP1
+    - VP2
+    - VP3
+  explicit_requirements:
+  - type: keep
+    text: I definitely want the creepy stranger who keeps turning up wherever Miriam goes and whom she can't get rid of no matter what she tries.
+    covers:
+    - CR2
+rubric:
+  content_realization:
+  - id: CR1
+    item: 'The game contains the main characters with their roles: Miriam, a woman under a hidden trouble; Donatello, a young man devoted to her
+      who stays at her side; the model, a strange figure who follows her; Hilda and Kenyon, her friends'
+    anchors:
+      '1': Miriam, Donatello and the model are present with these roles (Donatello clearly devoted to Miriam), and Hilda and Kenyon as the friends
+      '0.5': the characters are present but a role is missing or wrong (e.g. the model as a friend, Donatello as a rival or a stranger to Miriam)
+      '0': the cast is missing or wrong
+    evidence:
+    - - p011
+      - p013
+    - - p022
+      - p025
+    - - p035
+      - p042
+    - - p029
+      - p030
+    - p047
+  - id: CR2
+    item: 'The game shows the model persecuting Miriam: he turns up at her stops before the precipice, she dreads him, and her attempt to drive
+      him off fails'
+    anchors:
+      '1': the model appears at Miriam's earlier stops (fountain, arena) as a threat she fears, and her attempt to be rid of him fails
+      '0.5': the model appears, but only once or without the sense that she cannot shake him off
+      '0': no persecution shown
+    evidence:
+    - - p011
+      - p016
+    - p029
+    - p042
+    - p046
+  - id: CR3
+    item: 'The game contains the turning point: at the precipice Donatello throws the model to his death, doing what he read in Miriam''s eyes,
+      and Hilda sees the deed'
+    anchors:
+      '1': Donatello kills the model at the precipice, prompted by Miriam's look, and Hilda witnesses it
+      '0.5': the killing is there but its cause (Miriam's look) or the witness is missing
+      '0': no killing, or the wrong killer or victim
+    evidence:
+    - - p045
+      - p048
+    - - p051
+      - p054
+  - id: CR4
+    item: 'The game contains the ending: in the domed temple Miriam, now a veiled penitent kneeling under the open eye, blesses Hilda and Kenyon
+      while keeping them away, and leaves'
+    anchors:
+      '1': Miriam appears in the temple as a penitent set apart, blesses her friends while keeping them off, and leaves
+      '0.5': an ending in the temple, but Miriam is not shown as a penitent set apart, or she does not part from her friends
+      '0': no such ending
+    evidence:
+    - - p060
+      - p067
+  - id: CR5
+    item: The game contains one connected city in which the clip's palace-front fountain, oval amphitheatre and domed temple stand as landmarks
+      among dense low-rise blocks, and a high precipice edge exists as a place of its own apart from them
+    anchors:
+      '1': the three landmarks stand within one continuous dense low-rise city, and a separate high edge exists for the precipice
+      '0.5': the landmarks exist but as separate spots in an empty or generic landscape, or the precipice has no place of its own
+      '0': no city with these places
+    evidence:
+    - - '00:06.0'
+      - '00:12.8'
+    - - '00:16.0'
+      - '00:19.0'
+    - - '00:19.0'
+      - '00:26.0'
+    - - '00:26.0'
+      - '00:31.5'
+    - - '00:42.0'
+      - '00:44.5'
+    - - p045
+      - p047
+  - id: CR6
+    cross: true
+    item: 'Each scene of the text is staged at its place from the clip: the fountain scene (text) at the clip''s palace-front fountain, the arena
+      scene in the clip''s oval amphitheatre, the ending in the clip''s domed temple, and the precipice scene (text only) at the separate high
+      edge'
+    anchors:
+      '1': all four scenes happen at their matching places (fountain, amphitheatre, domed temple, a separate high edge)
+      '0.5': the scenes happen at places, but one is at the wrong place or the precipice scene shares a landmark
+      '0': the scenes are not tied to places
+    evidence:
+    - p004
+    - p028
+    - - p045
+      - p048
+    - p057
+    - - '00:26.0'
+      - '00:31.5'
+    - - '00:16.0'
+      - '00:19.0'
+    - - '00:19.0'
+      - '00:26.0'
+    - - '00:51.5'
+      - '00:57.5'
+  functions_playability:
+  - id: FP1
+    item: 'The player travels through the city from site to site and the story advances in the text''s order: fountain, arena, precipice, then
+      the later ending'
+    anchors:
+      '1': the scenes unfold in this order as the player travels between them, and a later scene does not play before the earlier ones
+      '0.5': the scenes exist but can be played out of order, or are reached without travel (e.g. a menu)
+      '0': no progression
+    evidence:
+    - - p003
+      - p004
+    - p028
+    - p047
+    - p057
+  - id: FP2
+    item: 'The killing at the precipice works as the turning point in play: reaching that scene triggers it, and the later ending visibly follows
+      from the deed (Miriam now set apart)'
+    anchors:
+      '1': the killing plays out at the precipice during play and the later ending is shaped by it (Miriam's changed state after the deed)
+      '0.5': the killing happens, but the later scenes are unconnected to it and would play the same without it
+      '0': no killing in play
+    evidence:
+    - - p045
+      - p054
+    - - p062
+      - p067
+  - id: FP3
+    item: The ending scene in the domed temple is reachable through normal play after the earlier scenes, and the experience then clearly ends
+      or lets the player continue
+    anchors:
+      '1': the ending scene can be reached and completed, followed by a clear end or a way to continue
+      '0.5': the ending is reachable but the game just stops or hangs without a clear end
+      '0': no reachable ending
+    evidence:
+    - - p057
+      - p069
+  visual_presentation:
+  - id: VP1
+    cat: spatial
+    keyframes:
+    - '00:27.0'
+    - '00:30.0'
+    item: 'The fountain: a large sculpted fountain built against a palace front, with a wide basin in front of it, hemmed in by tight blocks'
+    anchors:
+      '1': fountain on a palace front with its basin, closed in by buildings
+      '0.5': a fountain, but a free-standing or generic one
+      '0': none
+    evidence:
+    - - '00:26.0'
+      - '00:31.5'
+    - p008
+  - id: VP2
+    cat: spatial
+    keyframes:
+    - '00:17.0'
+    - '00:43.0'
+    item: 'The arena: a large oval ruin with tiers of arches around an open arena floor, dark arches at ground level'
+    anchors:
+      '1': an oval arched amphitheatre with an open floor and arches at ground level
+      '0.5': an arena shape without the tiers of arches
+      '0': none
+    evidence:
+    - - '00:16.0'
+      - '00:19.0'
+    - - '00:42.0'
+      - '00:44.5'
+    - p028
+    - p031
+  - id: VP3
+    cat: key_moment
+    keyframes:
+    - '00:21.0'
+    - '00:52.0'
+    item: 'The domed temple of the ending: a round dome behind a columned, pedimented portico, and inside a round hall under an open eye in the
+      dome'
+    anchors:
+      '1': dome and portico outside, the round interior with the open eye in the dome
+      '0.5': the temple outside or inside only, or no open eye
+      '0': none
+    evidence:
+    - - '00:19.0'
+      - '00:26.0'
+    - - '00:51.5'
+      - '00:57.5'
+    - - p060
+      - p062
+play_suggestions:
+  CR6:
+  - visit each landmark and note which scene plays there
+  - 'look for the precipice: is it a place of its own, apart from the three landmarks?'
+  FP1:
+  - 'go straight to the domed temple first: does the ending play before the earlier scenes?'
+  - 'skip the arena and go to the precipice: what happens?'
+  FP2:
+  - after the precipice, check whether the ending in the temple follows from the deed (Miriam's changed state)
+  FP3:
+  - 'play to the end: is there a clear end or a way to continue or replay?'
+  robustness:
+  - leave a scene halfway and come back
+  - wander far from the sites between scenes and try to return
+  - 'stand still during a scene: does it complete or wait sensibly?'
+hybrid:
+  modality: video+text
+  roles:
+    video: 'the look and the city context of the story''s places: a palace-front fountain wedged among tight blocks, an oval arched amphitheatre,
+      a domed temple with a columned portico, all rising out of a dense low-rise roofscape; no characters or events'
+    text: 'the story: the characters and their relations, the night walk from site to site, the events at the fountain, in the arena and at the
+      precipice, the killing and its cause, and the later ending in the domed temple (its interior with the open eye in the dome)'
+  cross_reference_requirement: The text's scenes must be staged, in the text's order, at the matching places of the clip (fountain scene at the
+    clip's palace-front fountain, arena scene in its oval amphitheatre, ending in its domed temple); the precipice scene, which the clip does
+    not show, needs a place of its own.
+v4_map:
+  U1: CR1
+  U2: CR2
+  U3: CR1 (devotion kept in Donatello's role; his rage at the fountain dropped as peripheral)
+  U4: CR3
+  U5: CR6 (scene-to-place link; the order goes to FP1)
+  U6: FP1 (walk from site to site; group thinning dropped as peripheral sub-episode)
+  U7: 'CR4 (Hilda and Kenyon''s engagement dropped: peripheral side thread; Donatello''s absence dropped: absence check, peripheral)'
+  FP1: CR6 (which place hosts which scene is checked by finding it)
+  FP2: FP1
+  FP3: FP2 (the model's recurrence before the killing moved to CR2; 'the model gone' dropped as absence check)
+  FP4: FP3 (Miriam's parting as content moved to CR4)
+  VP1: CR5 (city layout and landmarks among low-rise blocks; roof colour dropped as detail)
+  VP2: VP1
+  VP3: VP2
+  VP4: VP3 (the kneeling penitent moved to CR4)
+  VP5: 'removed: editing split (golden evening light was a modify requirement; kept in editing_seed.yaml)'
+provenance:
+  source_yaml: T-HY-vid_6d84fc825226.t1.yaml
+  source_sha256: e52e25b6ef5a18f7dacf0634eef514d9f1a82ccd31d97e747a760fea91e4db43
+  size_waiver: null
+  size_max: null
+  sources:
+  - ref: t01
+    text: /Volumes/USB-500G/gameanything_local/hf/curation/hybrid_texts/T-HY-vid_6d84fc825226.t1/final.md

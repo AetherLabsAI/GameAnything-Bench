@@ -1,0 +1,77 @@
+# Reference material: fetched from the HF dataset into $GAB_MEDIA_DIR/<task>/ by `gab media fetch` (sha256 checked).
+# The agent gets the files only (no title, author, caption or source): this file is never shown to it.
+task_id: T-HY-vid_c68b71958bb2.t1
+refs:
+- id: c01
+  kind: video
+  file: clip_01.mp4
+  video_id: vid_c68b71958bb2
+  source:
+    title: 06 - Disney's Encanto ｜ Official Trailer
+    url: null
+    channel: null
+    youtube_id: null
+  range:
+    start: 0.0
+    end: 56.0
+    text: 0:00.00-0:56.00
+  duration_s: 56.0
+  size_bytes: 10547565
+  format: mp4 H.264 720p, AAC audio
+  hf_path: media/T-HY-vid_c68b71958bb2.t1/clip_01.mp4
+  sha256: daa98adb48d95bbcf70a965008e4914c4015ee892e89ee1663df657e6720b6f7
+  rights_note: null
+- id: t01
+  kind: text
+  file: text_01.md
+  words: 2627
+  paragraphs: 37
+  anchors: p001 .. p037
+  judge_file: judge/text_01.anchored.md
+  judge_sha256: 7b437d00ab9f020c9505ed55d3a25e33ceed25adb928cad4905b4a72e6e33f19
+  format: plain text (UTF-8)
+  hf_path: media/T-HY-vid_c68b71958bb2.t1/text_01.md
+  sha256: f7a5265c88150c1d2b7d19167b3445c7a1cc01b6cd6681a87028535e48b56d47
+  size_bytes: 14337
+- id: img01
+  kind: image
+  file: img01.jpg
+  format: jpg
+  hf_path: media/T-HY-vid_c68b71958bb2.t1/img01.jpg
+  sha256: afd7edf35a452008bdb0c4e8a74ad8e1bc2ed9946d3ce2cd8da4d10affd34780
+  size_bytes: 383290
+- id: img02
+  kind: image
+  file: img02.jpg
+  format: jpg
+  hf_path: media/T-HY-vid_c68b71958bb2.t1/img02.jpg
+  sha256: 3d78ca977d70439e72f4c5d70fbfe5a8635de2971a6c8f51c340c084a98692f4
+  size_bytes: 421271
+- id: img03
+  kind: image
+  file: img03.jpg
+  format: jpg
+  hf_path: media/T-HY-vid_c68b71958bb2.t1/img03.jpg
+  sha256: cce5aa3b6fa9a7f41adf6b6265f0c92a91a54d6badaac8ddd31d59348eaccd08
+  size_bytes: 675268
+- id: img04
+  kind: image
+  file: img04.jpg
+  format: jpg
+  hf_path: media/T-HY-vid_c68b71958bb2.t1/img04.jpg
+  sha256: ae72eb5000b70c958f7f44bc68686dcc7ad9f9b21b60a93babc0acd42101e92a
+  size_bytes: 456121
+- id: img05
+  kind: image
+  file: img05.jpg
+  format: jpg
+  hf_path: media/T-HY-vid_c68b71958bb2.t1/img05.jpg
+  sha256: 1b4dbc41a1650acacdea49dddb2f71bb83d0a099e7d5a6e30b690784a2a58d6f
+  size_bytes: 566621
+- id: img06
+  kind: image
+  file: img06.jpg
+  format: jpg
+  hf_path: media/T-HY-vid_c68b71958bb2.t1/img06.jpg
+  sha256: f50c07a73948d0c4345000b386f695f4bdc2f81b181d16ea59005b9961efb155
+  size_bytes: 590356

@@ -1,0 +1,24 @@
+# Reference material: fetched from the HF dataset into $GAB_MEDIA_DIR/<task>/ by `gab media fetch` (sha256 checked).
+# The agent gets the files only (no title, author, caption or source): this file is never shown to it.
+task_id: T-VO-vid_502243ca1a9b.t2
+refs:
+- id: c01
+  kind: video
+  file: clip_01.mp4
+  video_id: vid_502243ca1a9b
+  source:
+    title: A Guide to London for Kids ｜ Tour of London for Kids ｜ London Facts for Kids [KtqVoo8iqeo]
+    url: https://www.youtube.com/watch?v=KtqVoo8iqeo
+    channel: null
+    youtube_id: KtqVoo8iqeo
+  range:
+    start: 31.0
+    end: 53.2
+    text: 0:31.00-0:53.20
+  duration_s: 22.2
+  size_bytes: 10993257
+  format: mp4 H.264 720p, AAC audio
+  hf_path: media/T-VO-vid_502243ca1a9b.t2/clip_01.mp4
+  sha256: faac27995f5b6387b4cf0c01c4bb8404de79cc4fa54f737780e3193aa3fbbc48
+  rights_note: Stock travel footage in a children's educational video with a brand logo, watermark and end card elsewhere in the video. Use as
+    a private reference only; do not redistribute the footage or frames.

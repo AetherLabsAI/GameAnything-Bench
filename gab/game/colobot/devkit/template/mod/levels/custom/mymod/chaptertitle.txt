@@ -1,0 +1,2 @@
+Title.E text="My mod"
+Resume.E text="what this chapter is about"

@@ -1,0 +1,66 @@
+Title.E text="GAB state check level"
+Resume.E text="GAB state check level (GameAnything)"
+#Include file="levels/missions/chapter001/planet.txt"
+TerrainRelief image="relief11.png" factor=1.0
+TerrainResource image="res05.png"
+#Include file="levels/missions/chapter001/terrain.txt"
+TerrainCreate
+MaxFlyingHeight max=40
+EnableResearch type=TRACKER
+DoneResearch type=TRACKER
+EnableResearch type=WINGER
+DoneResearch type=WINGER
+EnableResearch type=THUMPER
+DoneResearch type=THUMPER
+EnableResearch type=SHOOTER
+DoneResearch type=SHOOTER
+EnableResearch type=TOWER
+DoneResearch type=TOWER
+EnableResearch type=PHAZER
+DoneResearch type=PHAZER
+EnableResearch type=SHIELDER
+DoneResearch type=SHIELDER
+EnableResearch type=ATOMIC
+DoneResearch type=ATOMIC
+EnableResearch type=iPAW
+DoneResearch type=iPAW
+EnableResearch type=iGUN
+DoneResearch type=iGUN
+EnableResearch type=RECYCLER
+DoneResearch type=RECYCLER
+EnableResearch type=SUBBER
+DoneResearch type=SUBBER
+EnableResearch type=SNIFFER
+DoneResearch type=SNIFFER
+EnableResearch type=BUILDER
+DoneResearch type=BUILDER
+EnableResearch type=TARGET
+DoneResearch type=TARGET
+EnableBuild type=BotFactory
+EnableBuild type=Derrick
+EnableBuild type=Converter
+EnableBuild type=RadarStation
+EnableBuild type=PowerPlant
+EnableBuild type=NuclearPlant
+EnableBuild type=PowerStation
+EnableBuild type=RepairCenter
+EnableBuild type=DefenseTower
+EnableBuild type=ResearchCenter
+EnableBuild type=AutoLab
+EnableBuild type=PowerCaptor
+EnableBuild type=ExchangePost
+EnableBuild type=FlatGround
+EnableBuild type=Flag
+BeginObject
+CreateLight dir= 0.0;-1.0; 0.0 color= 0.63; 0.63; 0.63 type=Terrain
+CreateLight dir= 1.0; 0.0;-1.0 color=-0.70;-0.70;-0.70 type=Terrain
+CreateLight dir=-1.0; 0.0; 1.0 color= 1.40; 1.40; 1.40 type=Terrain
+CreateLight dir=-1.0;-1.0; 1.0 color= 0.56; 0.56; 0.56 type=Object
+CreateLight dir= 1.0;-1.0; 1.0 color= 0.32; 0.32; 0.32 type=Object
+CreateLight dir=-1.0;-1.0;-1.0 color= 0.32; 0.32; 0.32 type=Object
+CreateLight dir= 1.0;-1.0;-1.0 color= 0.16; 0.16; 0.16 type=Object
+CreateObject pos=-53.0; 39.0 dir=0.2 type=Me
+CreateObject pos=-45;30 dir=0.0 type=WheeledGrabber script1="gabstate.txt" run=1 power=1.0
+CreateObject pos=-40;45 dir=0.0 type=Titanium
+
+

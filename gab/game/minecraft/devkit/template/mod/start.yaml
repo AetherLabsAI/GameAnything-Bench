@@ -1,0 +1,7 @@
+# how a fresh start of the game enters your experience (all keys optional; these are the defaults)
+# world: my_map          # load saves/my_map/ (a world you ship) instead of creating a fresh world
+seed: 2024
+game_mode: survival      # survival | creative | adventure | spectator
+difficulty: normal       # peaceful | easy | normal | hard
+world_type: normal       # normal | flat | large_biomes | amplified | single_biome_surface
+cheats: false            # allow commands in chat for the player

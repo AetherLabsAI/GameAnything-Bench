@@ -1,0 +1,5 @@
+# how a fresh start enters your experience (all keys optional)
+mode: game          # game: straight into a match on `map` | menu: the main menu (describe the way in, in ACCESS.md)
+map: stormkeep      # a stock map (stormkeep, catharsis, solarium, ...) or maps/<name>.bsp from your pk3
+gametype: dm        # dm, tdm, ctf, ca, dom, ft, ka, kh, lms, race, cts, ons, as, inv, nb, duel
+bots: 0             # bots that join the match (0-15)

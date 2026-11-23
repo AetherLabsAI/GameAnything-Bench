@@ -1,0 +1,253 @@
+# GameAnything-Bench scoring material: never shown to agents during a trial.
+task_id: T-TO-txt_e90538d18245.e1
+source_inventory:
+- 'c05.p099-c05.p101: after dinner Fenn shows the new boy Ned the close (chapel, the spot for fights, little-side and big-side grounds, the island);
+  the two race across to the island moat'
+- 'c05.p102-c05.p107: why the School-house boys wear white trousers: today the School-house plays the whole School at football; Garland is head
+  of the School-house side; Ned may not play, he does not know the rules'
+- 'c05.p108-c05.p109: a goal (two tall posts with a crossbar) and the one opposite; Fenn explains: best of three goals, two win, the ball must
+  go over the crossbar between the posts; goalkeepers touch the ball behind the posts or the other side gets a try at goal; quarters in front
+  of goal, big players-up and scrummages in front of them'
+- 'c05.p110-c05.p112: terms named but not explained (''off your side'', drop-kicks, punts, places); the bounds (a gravel walk and a line of elms):
+  past them the ball is in touch, out of play, and the first to touch it knocks it straight out between two lines of players; three trees stand
+  in the play'
+- 'c05.p113-c05.p115: the punt-about practice ball; Ned tries a drop-kick; the crowd of boys grows until calling-over at three'
+- 'c05.p116-c05.p121: calling-over in the big school (master, praepostors, forms in order); the sixth turn everyone into the close for the match;
+  School-house boys trusted not to skip it; acorn pelting; the last fags swept out'
+- 'c05.p122: ''To the goals!'': the boys split into the School-house goal-keepers, the School goal-keepers and the mingled players-up, who strip
+  off jackets and hats; no uniforms then except the School-house white trousers'
+- 'c05.p123-c05.p124: fifty or sixty School-house boys face a much larger School side; Garland wins the toss (choice of goals and kick-off); the
+  School-house drill: goal-keepers spread behind the posts, quarters halfway, players-up in bodies (young Garland and the bull-dogs, two wings);
+  the School side unorganised, divided leadership'
+- 'c05.p125-c05.p126: kick-off; the first scrummage; the ball breaks out, the captain of quarters catches it and drop-kicks it back; rush upon
+  rush, the School-house slightly penning the School'
+- 'c05.p127-c05.p128: how boys face a scrummage: bull-dogs who overrun the ball and must get back to their own side, young Garland staying behind
+  the ball, shammers on the skirts; dodgers outside who seize the loose ball and run it toward the opposite goal'
+- 'c05.p129: after three-quarters of an hour weight tells and the School-house is penned; the ball goes behind their goal, Garland kicks out for
+  touch; ''In touch! Our ball!'': the ball struck out between two deep lines; young Garland breaks through and touches the ball down right under
+  the School goal-posts'
+- 'c05.p130-c05.p131: the try at goal: the School must stand behind their posts, Garland kicks out, Crab Jones catches and marks the spot the
+  School may not pass, places the ball, Garland kicks it over the bar: a goal'
+- 'c05.p132-c05.p133: ''Over!'': the sides change goals, the goal-keepers cross the field; Ned taught ''the science of touching''; an orange-seller''s
+  visit pauses play'
+- 'c05.p134-c05.p135: the School, having conceded, kicks off from midway with its picked players to drive the ball in by weight; Garland sets
+  Crab Jones and picked players before goal to keep the ball to the sides, where a try would be less dangerous; half an hour of charges beaten
+  back'
+- 'c05.p136: Fenn meets Crew, a dodger driving the ball behind the School-house goal, and stops him'
+- 'c05.p137-c05.p139: the School''s last rush rolls over the defenders and the ball rolls behind the School-house goal; the praepostor and Ned
+  throw themselves on it: ''Our ball'''
+- 'c05.p140-c05.p145: Ned is winded, picked up and praised by Garland; five o''clock strikes, ''No side'' is called and the first day of the match
+  is over'
+instructions_meta:
+  requirement_groups:
+    open play:
+    - CR2
+    - FP1
+    scoring and match end:
+    - FP2
+    - FP6
+    starts and restarts:
+    - CR3
+    - FP3
+    - FP4
+    - FP5
+    - FP7
+    field and goals:
+    - CR1
+    - VP1
+    match interface:
+    - VP2
+  explicit_requirements:
+  - type: keep
+    text: Keep the touch rule, so when the ball goes past the side bounds it's out of play and whoever touches it first puts it back in straight
+      out between two lines of players from both sides.
+    covers:
+    - CR1
+    - FP3
+rubric:
+  content_realization:
+  - id: CR1
+    item: The field has a goal at each end, the two facing each other, and bounds marked along both sides
+    anchors:
+      '1': two opposing goals at the ends of the field and bounds that can be found along both sides
+      '0.5': goals at the ends but no side bounds, or only one goal, or the goals do not face each other across the field
+      '0': no field with goals
+    evidence:
+    - c05.p108
+    - c05.p109
+    - c05.p112
+  - id: CR2
+    item: Two sides take the field, the player's side and an opposing side, each a team of several players
+    anchors:
+      '1': two teams of several players each, the player's side and an opposing side
+      '0.5': an opposing side exists, but one side is a single player rather than a team
+      '0': no opposing side
+    evidence:
+    - c05.p122
+    - c05.p123
+    - c05.p124
+  - id: CR3
+    item: Each side has goal-keepers stationed behind its own goal-posts
+    anchors:
+      '1': both sides keep players placed behind their own goal during play
+      '0.5': only one side has them, or they are not placed where they can reach a ball behind the goal
+      '0': no one guards the area behind the goals
+    evidence:
+    - c05.p109
+    - c05.p123
+    - c05.p139
+  functions_playability:
+  - id: FP1
+    item: The two sides contest the ball in open play and drive it toward the opponents' goal, mainly by kicking, winning the loose ball from
+      each other
+    anchors:
+      '1': both sides (player and opponents) can win the ball and move it toward the other goal
+      '0.5': the ball can be moved, but the opponents barely contest it
+      '0': no contested ball play
+    evidence:
+    - - c05.p125
+      - c05.p128
+    - c05.p135
+  - id: FP2
+    item: 'Scoring: a goal is given when the ball passes between the posts into the goal, and the goals are counted'
+    anchors:
+      '1': a ball between the posts (into the goal) scores, one wide of the posts does not, and goals are counted
+      '0.5': goals are scored but not counted, or a ball wide of the posts also scores
+      '0': no scoring
+    evidence:
+    - c05.p109
+    - c05.p131
+  - id: FP3
+    item: 'Touch: a ball that leaves the side bounds stops play and is put back in by whoever touches it first, straight out between two lines
+      of players of both sides'
+    anchors:
+      '1': out of bounds stops play, the player who first touches the ball puts it back in, and the restart is between lines of both sides
+      '0.5': out of bounds stops play, but the restart is not taken by whoever touched the ball first, or play restarts some other way than between
+        two lines
+      '0': the ball cannot leave or nothing happens when it does
+    evidence:
+    - c05.p112
+    - c05.p129
+  - id: FP4
+    item: 'Behind the goal: an attacker''s touch-down earns a place kick at goal that the defenders may not rush until the ball is set down, while
+      a defender''s first touch makes the ball safe for its side'
+    anchors:
+      '1': touching the ball down behind the opponents' goal leads to a kick at goal with the defence held back until the ball is placed, and
+        defending by touching it first works
+      '0.5': a kick at goal follows a touch-down but without the held-back defence, or defenders cannot make the ball safe
+      '0': nothing happens behind the goal
+    evidence:
+    - c05.p109
+    - - c05.p129
+      - c05.p131
+    - - c05.p138
+      - c05.p139
+  - id: FP5
+    item: 'Kick-off and restart: play starts with a kick-off from the middle, and after a goal the sides change ends and the conceding side kicks
+      off'
+    anchors:
+      '1': a kick-off from the middle, and after a goal ends swap and the conceding side restarts
+      '0.5': a kick-off exists but no change of ends, or the wrong side restarts
+      '0': no defined start or restart
+    evidence:
+    - c05.p123
+    - c05.p125
+    - c05.p132
+    - c05.p134
+  - id: FP6
+    item: The match ends when one side has kicked two goals, with that side shown as the winner
+    anchors:
+      '1': reaching two goals ends the match and the winner is clear
+      '0.5': the match ends, but not at two goals, or the end or winner is unclear
+      '0': play never ends
+    evidence:
+    - c05.p109
+  - id: FP7
+    item: 'Where the ball is touched down sets how hard the try at goal is: a touch-down in front of the posts gives an easy kick, one out to
+      the side a much harder one'
+    anchors:
+      '1': the try at goal is clearly easier after a touch-down in front of the posts than after one far to the side
+      '0.5': the try is taken, but its difficulty does not depend on where the ball was touched down
+      '0': no try at goal
+    evidence:
+    - c05.p130
+    - c05.p134
+  visual_presentation:
+  - id: VP1
+    cat: spatial
+    item: 'Each goal looks like the reference''s: two tall posts joined by a crossbar, the posts rising well above it'
+    anchors:
+      '1': goals with tall posts rising above the crossbar
+      '0.5': goals with posts and a bar, but the posts do not rise above it
+      '0': the goals are ordinary nets or boxes, or not recognisable
+    evidence:
+    - c05.p108
+    - c05.p109
+  - id: VP2
+    cat: presentation
+    item: 'The match state is readable to the player as it happens: the score, each ruling that stops or changes play, and which side has the
+      ball after it'
+    anchors:
+      '1': the player can tell the score at any time and, as it happens, when a ruling stops or changes play and which side has the ball after
+        it
+      '0.5': only some of these are shown, or rulings can only be inferred from what happens afterwards
+      '0': the score and the rulings are not shown
+    evidence:
+    - c05.p129
+    - c05.p131
+    - c05.p132
+    - c05.p139
+play_suggestions:
+  FP1:
+  - 'play several minutes: do opponents win the ball from you and push it toward your goal?'
+  - 'lose the ball on purpose: can you win it back?'
+  FP2:
+  - 'kick the ball between the posts into the goal, then wide: which ones score?'
+  - check that the score shows each goal
+  FP3:
+  - 'kick the ball over each side bound: does play stop, and how is it put back in?'
+  - 'after the ball goes out, let an opponent reach it first and then reach it first yourself: does the restart go to whoever touched it first?'
+  FP4:
+  - 'touch the ball down behind the opponents'' goal: is a kick at goal given, and can defenders charge before the ball is placed?'
+  - 'let the opponents push the ball behind your goal and touch it first: is it your ball?'
+  - 'watch your own goal while play is far away: is anyone there to touch the ball down?'
+  FP5:
+  - 'score a goal: do the ends swap, and who kicks off next?'
+  FP6:
+  - 'score two goals: does the match end with a winner?'
+  FP7:
+  - 'touch the ball down right in front of the posts and again far to one side: where is the kick taken from, and which try is harder?'
+  robustness:
+  - stand still for a long time, and run out over the bounds with the ball
+  - kick the ball straight at the crossbar or a post
+  - quit in the middle of a match and come back
+  - 'lose on purpose: is the result sensible and can you play again?'
+  - 'play a long time without scoring: does anything break?'
+v4_map:
+  U1: 'dropped: mechanism already scored by FP2 (over-the-bar goal)'
+  U2: 'dropped: mechanism already scored by FP6 (two goals win)'
+  U3: 'dropped: mechanism already scored by FP4 (touch-down, place kick)'
+  U4: CR1 (side bounds exist); the touch mechanism, including the first-touch restart, stays in FP3
+  U5: 'dropped: mechanism already scored by FP5 (change of ends, kick-off)'
+  U6: FP7 (relation needs play to check, no FP item scored it)
+  U7: CR3 (goal-keepers behind the posts); their first touch scored by FP4
+  FP1: FP1 (behaviour); existence of field and sides into CR1, CR2
+  FP2: FP2
+  FP3: FP3 (first-touch restart added to the item and anchors, from v3 U4 and the keep requirement)
+  FP4: FP4
+  FP5: FP5
+  FP6: FP6
+  VP1: CR1 (goals at both ends, side bounds), VP1 (look of the goals)
+  VP2: VP2 (score added, asked by the fine instruction)
+  VP3: CR2 (which entities make up the teams, found by looking)
+provenance:
+  source_yaml: T-TO-txt_e90538d18245.e1.yaml
+  source_sha256: 694ab4fc5e9ea45577fbb79fb8cdee7cd39a64fcff9c4f6eed0bb1078bb6c491
+  size_waiver: null
+  size_max: null
+  sources:
+  - ref: t01
+    title: Tom Brown's School Days
+    author: Thomas Hughes
+    text_id: txt_e90538d18245
+    excerpt_id: e1

@@ -1,0 +1,194 @@
+# GameAnything-Bench scoring material: never shown to agents during a trial.
+task_id: T-IO-0442e0b41e
+source_inventory:
+- 'img01: a sower striding across bare, ploughed ground, a seed bag slung over the shoulder, casting seed by hand in a wide arm swing; in the
+  background a ploughman with a two-ox team ploughing the field; pale yellow sky'
+- 'img02: a reaper bent low in tall standing wheat, cutting the stalks near the ground with a short curved sickle while the other hand gathers
+  a handful; a flock of birds in the sky'
+- 'img03: a man crouching in the stubble, pressing an armful of cut stalks against his knee and tying it into a sheaf; loose cut grain around
+  him, a large stack of grain behind, a wooden fork leaning at the right'
+- 'img04: a woman in a bonnet and apron bending in a stubble field, twisting a band of stalks round a bundle to bind a sheaf; bound sheaves stand
+  upright behind her to the right, rows of grain and distant trees beyond'
+- 'img05: a man in the doorway of a barn swinging a flail high over his head; bound sheaves lie on the straw-covered floor at his feet; a ladder
+  and wall at the left, the open door shows blue sky'
+instructions_meta:
+  requirement_groups:
+    work steps as player actions:
+    - CR1
+    - CR3
+    - FP1
+    means of each step:
+    - CR2
+    - FP3
+    - VP2
+    step progression and cycle completion:
+    - FP2
+    - FP4
+    work space state:
+    - VP1
+  explicit_requirements:
+  - type: specify
+    text: 'I want sowing done like in the pictures: I carry a bag of seed and cast it across the field by hand.'
+    covers:
+    - CR2
+rubric:
+  content_realization:
+  - id: CR1
+    item: 'The game contains the four work steps of one grain crop: sowing, cutting the grown grain, binding the cut stalks into sheaves, and
+      threshing the sheaves'
+    anchors:
+      '1': all four steps exist in the game and all work on the same crop
+      '0.5': one step is missing or merged into another (e.g. no separate binding, threshing replaced by something else), or the steps belong
+        to unrelated crops
+      '0': two or more of the steps are missing, or no grain-farming steps at all
+    evidence:
+    - img01
+    - img02
+    - img03
+    - img04
+    - img05
+  - id: CR2
+    item: 'Each step has its own means of the kind the images show: seed cast by hand from a carried bag, a hand-held curved blade for cutting,
+      a band twisted by hand to tie the sheaf, a flail to beat the sheaves'
+    anchors:
+      '1': means of the right kind exist for all four steps (equivalents of the same kind count, e.g. any hand-held cutting blade, any beating
+        tool for threshing)
+      '0.5': means of the right kind exist for two or three steps, or sowing uses a means other than hand-casting from a carried bag
+      '0': the right kind of means exists for at most one step, or one generic means serves every step
+    evidence:
+    - 'img01: seed bag on the shoulder, hand casting'
+    - 'img02: short curved sickle'
+    - 'img03: stalks tied against the knee'
+    - 'img04: band twisted round a bundle'
+    - 'img05: flail swung overhead'
+  - id: CR3
+    item: 'The crop exists in the distinct stages the steps produce: sown ground, standing grain, cut stalks, and bound sheaves'
+    anchors:
+      '1': standing grain, cut stalks and bound sheaves all exist in the game as distinct things
+      '0.5': one stage is missing (e.g. cutting yields sheaves directly, or binding leaves no sheaf)
+      '0': the crop has no intermediate stages, or there is no crop at all
+    evidence:
+    - 'img01: sown ploughed ground'
+    - 'img02: standing wheat being cut'
+    - 'img03: loose cut stalks'
+    - 'img04: bound sheaves standing'
+    - 'img05: sheaves on the threshing floor'
+  functions_playability:
+  - id: FP1
+    item: Each work step is an action the player performs, and doing it leaves a visible result on the crop that moves it to the next stage
+    anchors:
+      '1': all four steps need the player's action and each one visibly changes the crop
+      '0.5': one or two steps happen automatically without the player, or leave no visible result
+      '0': the player performs no farming step, or more than two steps happen without the player
+    evidence:
+    - img01
+    - img02
+    - img03
+    - img04
+    - img05
+  - id: FP2
+    item: 'The order is enforced by the products: a step can only be done once the previous step''s product exists'
+    anchors:
+      '1': every step depends on the previous step's product, and trying a step too early does not work
+      '0.5': the order is suggested (prompts, a list) but steps can be skipped or done out of order
+      '0': no order between the steps
+    evidence:
+    - img01
+    - img02
+    - img03
+    - img04
+    - img05
+  - id: FP3
+    item: The player performs each step by using that step's own means
+    anchors:
+      '1': for every step the player uses its own means to perform it
+      '0.5': the means is used for some steps only, or is applied automatically, or one and the same means does every step
+      '0': the means play no part in performing the steps
+    evidence:
+    - img01
+    - img02
+    - img03
+    - img04
+    - img05
+  - id: FP4
+    item: 'The cycle has a clear goal and end: the player can tell which step is current, and performing the final step (threshing) completes
+      the cycle'
+    anchors:
+      '1': the current / next step is readable and completing the threshing clearly ends the cycle
+      '0.5': the cycle ends without being marked as complete, or the current step is not readable
+      '0': no goal or end
+    evidence:
+    - img01
+    - img02
+    - img03
+    - img04
+    - img05
+  visual_presentation:
+  - id: VP1
+    cat: spatial
+    item: 'The field shows the stage of the crop: bare tilled earth to sow, tall standing grain to cut, stubble with cut stalks and sheaves after
+      cutting'
+    anchors:
+      '1': the field visibly passes through these states as the steps are done
+      '0.5': the field is shown but only one or two of the states are visible, or it does not change with the steps
+      '0': no field
+    evidence:
+    - img01
+    - img02
+    - img03
+    - img04
+  - id: VP2
+    cat: presentation
+    item: The means the player is using for the current step is visible to the player
+    anchors:
+      '1': the means in use is visible in hand or clearly shown while working
+      '0.5': the means is identified only through text or UI
+      '0': the means is neither shown nor otherwise identified
+    evidence:
+    - img01
+    - img02
+    - img03
+    - img04
+    - img05
+play_suggestions:
+  FP1:
+  - 'play the whole cycle once: does each of the four steps need your action, and does the crop change after each?'
+  - watch whether any step (e.g. binding) happens on its own
+  FP2:
+  - try to cut before anything is sown, to bind before cutting, and to thresh with no sheaves
+  - skip a step and see whether the next one still works
+  FP3:
+  - for each step, note which means you use and whether it differs from the other steps
+  - check whether a step is done for you without you using its means
+  FP4:
+  - 'finish a full cycle: is the end marked, and can you start again?'
+  - 'stop halfway: can you tell which step comes next?'
+  robustness:
+  - 'sow only part of the field and continue: do the later steps handle the partial crop?'
+  - leave in the middle of a step and come back
+  - 'run a second cycle on the same field: is the field reset sensibly?'
+v4_map:
+  U1: CR1
+  U2: CR3 (the crop stages exist); the order and the input dependency stay scored by FP2
+  U3: CR2
+  FP1: CR1 (the steps exist) + FP1 (player action with visible result)
+  FP2: FP2
+  FP3: CR2 (kind of means per step) + FP3 (player uses each step's means)
+  FP4: FP4
+  VP1: VP1
+  VP2: VP2
+  VP3: 'removed: editing request (rainy day), moved to editing_seed.yaml'
+provenance:
+  source_yaml: T-IO-0442e0b41e.yaml
+  source_sha256: f45b1eb86bd5ed8bc47d570207ea40df0ca73b4f0c3844fb14d81b7f4886d01e
+  size_waiver: null
+  size_max: null
+  sources:
+  - refs:
+    - img01
+    - img02
+    - img03
+    - img04
+    - img05
+    bundle: 0442e0b41e
+    title: 梵高临摹米勒《田间劳作》：播种、收割、捆麦、打谷

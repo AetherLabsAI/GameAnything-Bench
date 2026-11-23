@@ -1,0 +1,22 @@
+# GameAnything-Bench scoring material: never shown to agents during a trial.
+task_id: T-IO-0442e0b41e
+game: stardew_valley
+status: pending
+picks:
+- SD-TOOLS
+- SD-INVENTORY
+- SD-SHOP
+- SD-CLOCK
+- SD-HEALTH-STAMINA
+- SD-SLEEP
+changed: []
+kept_borderline:
+- id: SD-TOOLS
+  note: Hand sowing may touch tool use, but the instruction does not require changing the vanilla tools.
+- id: SD-INVENTORY
+  note: A seed bag might be added to the start inventory, but adding content does not require changing the vanilla five tools.
+summary: Farming work cycle with hand sowing from a seed bag
+task_checks: []
+note: 'policy (A): excluded only when the instruction explicitly requires the change; plausible side effects stay tested; adding
+  new content is never a reason to exclude. Proposed by claude-sonnet-5-5 via `gab task picks` 2026-11-06; a maintainer checks (set status: checked).
+  The evaluator tests the pool''s always items (unless in changed) + picks.'

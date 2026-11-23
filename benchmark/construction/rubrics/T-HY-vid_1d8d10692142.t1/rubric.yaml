@@ -1,0 +1,281 @@
+# GameAnything-Bench scoring material: never shown to agents during a trial.
+task_id: T-HY-vid_1d8d10692142.t1
+source_inventory:
+- 'clip 00:27.4-00:34.3: elevated view down a long straight avenue to the stone arch, which stands on an open round place; the low sun glows through
+  the arch''s opening and lights the roadway orange; cars on the avenue and circling the place; trees along the avenue; uniform low blocks around'
+- 'clip 00:34.3-00:41.2: close view of the arch''s corner and opening: sculpted relief panels, statue groups, engraved names on the inner pier;
+  a large red-and-white flag hangs and waves in the opening'
+- 'clip 00:41.2-00:48.0: high aerial view: the arch at the centre of a large round open place, about a dozen straight avenues radiating out, wedge-shaped
+  blocks of even height between them, trees along some avenues, long low-sun shadows, a dense even city to the horizon'
+- 'clip 00:48.0-00:54.9: rooftop-level view over grey mansard roofs with dormers and chimney pots; the lattice tower, already lit warm, rises
+  far above the low roofline; teal sky with a pink band at the horizon'
+- 'clip 00:54.9-01:01.7: dusk, view along a long straight avenue lined with dark trees and full of car lights, running to a cluster of high-rise
+  towers with a cube-shaped gate building on the horizon; orange sky; a dark park mass on the left; the low city has a few lit windows'
+- 'clip 01:01.7-01:08.6: the lattice tower floodlit gold-orange against a red cloudy sky above the city; a searchlight beam appears at its top
+  (01:06.4-01:07.9)'
+- 'clip 01:08.6-01:18.8: night aerial, nearly static: a lit avenue as a bright orange band running to a rectangular lit park / plaza area, a large
+  glass-roofed hall to the right; the city dark blue with scattered lights'
+- 'clip audio: music only, no speech'
+- 'img01: street map of the star: twelve straight named avenues radiate evenly from a round place with the arch (labelled, a rectangle) at its
+  centre; wedge-shaped blocks between the avenues; a ring street one block out; one avenue with a wide green strip; compass and 100 m scale bar'
+- 'img02: close plan of the round place: the arch as a dark rectangle on a round central island, twelve road openings around the open ring, numbered
+  markers 1-8 around the place, five avenue names (the two on each axis opposite each other)'
+- 'img03: the arch at blue hour, floodlit warm: block-shaped mass, large arched opening on the long face, smaller opening on the short side, relief
+  panels, statue groups, flat attic; the lattice tower lit in the distance; street lamps, light trails of traffic'
+- 'img04: the arch from a roof above the avenue, cloudy day: cars circling the wide open round place, people on the arch''s top, a tree-lined
+  avenue with wide pavements in front, cream blocks with grey roofs around, the high-rise cluster with a cube-shaped gate on the horizon behind
+  and left of the arch'
+- 'img05: corner of an apartment block: cream stone facade, wrought-iron balconies, grey mansard roof with dormers, chimneys, street trees in
+  front'
+- 'img06: street facade of a six-storey block: cream stone, continuous iron balconies on two floors, grey mansard roof with dormers, shops at
+  ground level, street trees, a lamp post'
+instructions_meta:
+  requirement_groups:
+    junction layout and traffic flow:
+    - CR2
+    - FP1
+    street network and routes:
+    - CR5
+    - FP2
+    landmarks:
+    - CR1
+    - CR4
+    - VP1
+    building fabric:
+    - CR3
+    - VP2
+    lighting and atmosphere:
+    - FP3
+    - VP3
+  explicit_requirements:
+  - type: keep
+    text: The massive stone arch with its big arched opening and carved reliefs has to be there, standing alone on its island in the middle of
+      the round place.
+    covers:
+    - CR1
+    - VP1
+  - type: specify
+    text: The round place should be laid out like on the plan, with twelve straight avenues spread evenly around it, all joining the ring that
+      the traffic circles.
+    covers:
+    - CR2
+    - FP1
+rubric:
+  content_realization:
+  - id: CR1
+    item: A monumental stone arch is the centrepiece of the round place, standing alone on its own island in the middle of it
+    anchors:
+      '1': a monumental arch (not another kind of monument) on its own central island, with the round place around it
+      '0.5': an arch exists but not at the centre of the round place or not on its own island (e.g. beside the place, or sharing the island with
+        other buildings), or a different monument at the centre
+      '0': no arch
+    evidence:
+    - - '00:27.4'
+      - '00:34.3'
+    - - '00:41.2'
+      - '00:48.0'
+    - img02
+    - img03
+    - img04
+  - id: CR2
+    cross: true
+    item: 'The arch''s round place is a star: twelve straight avenues (the count of the plan, img01 / img02) radiate at roughly even angles from
+      the open ring around the island (as seen from above in the clip)'
+    anchors:
+      '1': a round open place around the arch with twelve evenly spread straight avenues, all joining the ring
+      '0.5': a radial junction around the open round place, but with another number of avenues (six or more, but not twelve), unevenly spread
+        or curving, or some avenues not joining the ring; or the avenues right but without the open round space
+      '0': no radial layout, or fewer than six avenues
+    evidence:
+    - - '00:41.2'
+      - '00:48.0'
+    - - '00:27.4'
+      - '00:34.3'
+    - img01
+    - img02
+  - id: CR3
+    item: The wedges between the avenues and the streets around the landmarks are filled with dense blocks of even mid-rise height, forming a
+      low, even city
+    anchors:
+      '1': around the star and along its avenues, continuous blocks of uniform mid-rise height dominate and form a low, even roofline
+      '0.5': built-up blocks around the star, but of such mixed heights that no even roofline reads, or only in patches
+      '0': the area around the star left empty, or built up without any low, even block fabric
+    evidence:
+    - - '00:41.2'
+      - '00:48.0'
+    - - '00:48.0'
+      - '00:54.9'
+    - img04
+  - id: CR4
+    item: A slender lattice tower stands in the district and rises far above the low roofline, visible over the city
+    anchors:
+      '1': a lattice tower clearly taller than everything around it, standing out above the even roofline
+      '0.5': a tall tower, but not lattice-like, or hidden among other tall buildings
+      '0': no such tower
+    evidence:
+    - - '00:48.0'
+      - '00:54.9'
+    - - '01:01.7'
+      - '01:08.6'
+    - img03
+  - id: CR5
+    cross: true
+    item: 'A separate cluster of high-rise towers stands on the horizon, apart from the low city: beyond the arch as seen from the avenue (img04)
+      and at the far end of a long straight avenue through the low blocks (clip dusk view)'
+    anchors:
+      '1': a distinct high-rise cluster set apart from the low city, seen beyond the arch and at the end of a long straight avenue leading out
+        to it
+      '0.5': a distinct high-rise cluster, but neither beyond the arch nor at the end of a straight avenue, or high-rises only mixed into the
+        city
+      '0': no high-rise cluster
+    evidence:
+    - - '00:54.9'
+      - '01:01.7'
+    - img04
+  functions_playability:
+  - id: FP1
+    item: 'The star works as one junction: vehicles can enter the ring from any avenue, go around the arch''s island and leave by another avenue,
+      as the traffic circling the place does in the clip and img04'
+    anchors:
+      '1': vehicles (or the player) entering from different avenues go around the island and exit onto other avenues, and the ring keeps moving
+      '0.5': the ring works only from some avenues, or vehicles cross straight through the island instead of going around it, or the ring locks
+        up for good
+      '0': no working junction at the arch
+    evidence:
+    - - '00:27.4'
+      - '00:34.3'
+    - - '00:41.2'
+      - '00:48.0'
+    - img04
+  - id: FP2
+    item: 'The long straight avenue to the high-rise cluster is a working route: traffic or the player can travel along it through the low-rise
+      district to the towers'
+    anchors:
+      '1': the avenue can be travelled end to end, straight through the low district to the towers
+      '0.5': the towers are reached only by detours, or the avenue breaks off before reaching them
+      '0': no route along the avenue to the towers
+    evidence:
+    - - '00:54.9'
+      - '01:01.7'
+    - img04
+  - id: FP3
+    item: Time runs from low sun through dusk into night, and as it darkens the district's lights come on
+    anchors:
+      '1': letting time run shows the change from low sun to dusk to night, with street and building lights switching on as it darkens
+      '0.5': only a fixed evening or a fixed night, without the change between them, or the lights do not come on with the dark
+      '0': daytime only
+    evidence:
+    - - '00:27.4'
+      - '00:34.3'
+    - - '00:54.9'
+      - '01:01.7'
+    - - '01:08.6'
+      - '01:18.8'
+    - img03
+  visual_presentation:
+  - id: VP1
+    cat: style
+    keyframes:
+    - '00:29.4'
+    - '00:35.4'
+    item: 'The arch looks like the reference: a massive pale-stone block with a large arched opening, sculpted relief panels and a flat top'
+    anchors:
+      '1': a recognisable monumental triumphal arch of that shape and material
+      '0.5': an arch or gate, but small, thin or of another shape (e.g. a simple portal)
+      '0': no arch
+    evidence:
+    - - '00:27.4'
+      - '00:41.2'
+    - img03
+    - img04
+  - id: VP2
+    cat: style
+    keyframes:
+    - '00:42.4'
+    - '00:49.4'
+    item: 'The blocks around the landmarks look like the reference: cream-stone facades under grey mansard roofs with dormers'
+    anchors:
+      '1': around the star and along its avenues, the blocks have pale stone facades and grey mansard roofs
+      '0.5': the blocks are of another style (e.g. glass, brick, flat roofs), or the style appears only on scattered buildings
+      '0': no such buildings
+    evidence:
+    - - '00:41.2'
+      - '00:48.0'
+    - - '00:48.0'
+      - '00:54.9'
+    - img04
+    - img05
+    - img06
+  - id: VP3
+    cat: key_moment
+    keyframes:
+    - '00:56.4'
+    - '01:03.4'
+    - '01:10.4'
+    item: 'At dusk and night the district glows: the avenues are bright lines of warm light through the darker blocks, and the tower and the arch
+      are floodlit'
+    anchors:
+      '1': a dusk / night view with lit avenues standing out from the blocks and the landmarks lit
+      '0.5': a night view, but the avenues do not stand out or the landmarks stay dark
+      '0': no dusk or night look
+    evidence:
+    - - '00:54.9'
+      - '01:01.7'
+    - - '01:01.7'
+      - '01:08.6'
+    - - '01:08.6'
+      - '01:18.8'
+    - img03
+play_suggestions:
+  FP1:
+  - 'follow single vehicles entering from different avenues: do they go around the island and leave by another avenue?'
+  - 'let traffic run for a while: does the ring stay moving or lock up permanently?'
+  FP2:
+  - 'follow the long straight avenue to the high-rise district: does it reach the towers without breaks or turns?'
+  - check from the low district along that avenue whether the towers are visible at its end
+  - note (unscored) whether the avenue starts at the star and whether the towers line up behind the arch
+  FP3:
+  - let the day-night cycle run from late afternoon into night and watch when the street and building lights come on
+  robustness:
+  - let the day-night cycle run through a full evening and look at the star, the tower and the avenues
+  - 'view the district from street level and from high above: do the landmarks stay readable?'
+  - load a save and check that the junction and the avenue route still work
+hybrid:
+  modality: video+image
+  roles:
+    video: 'the look and atmosphere of the district from the air: the arch on its open round place, the radial avenues seen from above, the uniform
+      low roofline with the lattice tower and the distant high-rise cluster, traffic, and the light going from low sun through dusk to night'
+    images: 'the street plan (img01, img02: how many avenues radiate from the round place and how they are spread, the arch''s island at the centre),
+      ground- and roof-level photos of the arch (img03, img04; img04 also shows the high-rise cluster on the horizon behind the arch) and of the
+      blocks'' facades (img05, img06)'
+  cross_reference_requirement: The star junction must have the avenue count and even spread of the plan (img01, img02) while looking and working
+    like the busy open round place of the clip; and the high-rise cluster must stand apart on the horizon beyond the arch, as the photo from the
+    avenue (img04) shows it, at the end of a long straight avenue through the low city, as the clip's dusk view shows it.
+v4_map:
+  U1: FP3
+  U2: CR1
+  U3: CR3, VP2
+  U4: CR2
+  U5: CR5
+  FP1: FP1, CR2
+  FP2: FP2, CR5
+  VP1: CR2
+  VP2: VP1
+  VP3: VP2, CR3
+  VP4: CR4
+  VP5: VP3
+provenance:
+  source_yaml: T-HY-vid_1d8d10692142.t1.yaml
+  source_sha256: feacd9c984ab6c1d8dc3b872d38f28cb38d3981f821e932e9210fab59c79baf3
+  size_waiver: null
+  size_max: null
+  sources:
+  - refs:
+    - img01
+    - img02
+    - img03
+    - img04
+    - img05
+    - img06
+    images:
+    - hybrid/q07_ref0

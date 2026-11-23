@@ -1,0 +1,10 @@
+#!/bin/bash
+# Container main process of a GameAnything-Bench seat (docker run ... <image>, run under docker's --init): the seat's private
+# X screen ($DISPLAY, default :101, ${GAB_SCREEN:-1024x768x24}) and then nothing -- every game process is started by the gab
+# backend through docker exec. Keeps the screen alive: restarts Xvfb if it dies.
+D=${DISPLAY:-:101}; N=${D#:}
+while true; do
+  rm -f /tmp/.X$N-lock /tmp/.X11-unix/X$N
+  Xvfb $D -screen 0 ${GAB_SCREEN:-1024x768x24} -nolisten tcp -noreset > /tmp/gab-seat-xvfb.log 2>&1
+  sleep 2
+done

@@ -1,0 +1,32 @@
+#!/bin/bash
+# Main process of the Steam hub container (`gab steam up`, image gameanything-bench-steam). One hub per machine: it keeps ONE Steam
+# client running and logged in with your Steam account; the Terraria / Valheim trial containers use that client through its IPC (shared
+# /dev/shm + the hub's ~/.steam/steam.pid and steamclient.so, mounted read only) -- see gab/host/steam.py.
+#   HOME = your Steam state dir, mounted from the host (mode 700): the Steam client (downloaded by the bootstrapper on
+#          first start), its login token (config/), the game library (steamapps/). Never in the image.
+#   :101 = the hub's private Xvfb (Steam's windows: the login dialog). GAB_STEAM_VNC=1: x11vnc on that screen, ONLY on the unix
+#          socket /home/player/.steam-vnc/vnc.sock (= <state dir>/vnc/ on the host, mode 700; socket 600; the container user IS your
+#          host uid, see docker/build.sh steam), so only your own ssh -L reaches it.
+#   GAB_STEAM_ARGS: extra Steam client arguments.
+set -u
+D=${DISPLAY:-:101}; N=${D#:}
+mkdir -p "$HOME/logs.gab"; L=$HOME/logs.gab
+( while true; do rm -f /tmp/.X$N-lock /tmp/.X11-unix/X$N
+    Xvfb $D -screen 0 ${GAB_SCREEN:-1280x800x24} -nolisten tcp -noreset > $L/xvfb.log 2>&1; sleep 2; done ) &
+for _ in $(seq 1 40); do xdpyinfo -display $D >/dev/null 2>&1 && break; sleep 0.25; done
+export DBUS_SESSION_BUS_ADDRESS=$(dbus-daemon --session --fork --print-address)
+if [ "${GAB_STEAM_VNC:-0}" = 1 ]; then
+  V=${GAB_STEAM_VNC_DIR:-/home/player/.steam-vnc}; rm -f $V/vnc.sock
+  ( umask 077; while true; do x11vnc -display $D -unixsock $V/vnc.sock -rfbport 0 -forever -shared -nopw -noxdamage -quiet > $L/x11vnc.log 2>&1; sleep 2; done ) &
+fi
+# the IPC relay: trials (no network) reach the client's 127.0.0.1 IPC port through unix sockets in $GAB_STEAM_RELAY_DIR
+RELAY=$(dirname "$(readlink -f "$0")")/gab-steam-relay; [ -x "$RELAY" ] || RELAY=gab-steam-relay
+[ -n "${GAB_STEAM_RELAY_DIR:-}" ] && ( while true; do "$RELAY" hub "$GAB_STEAM_RELAY_DIR" >> $L/relay.log 2>&1; sleep 2; done ) &
+# the Debian launcher's first-run "Steam installer" question is answered by the zenity shim (SSA accepted at image build); the
+# bootstrapper then downloads the client into ~/.steam/debian-installation (in the state dir: kept across hub restarts)
+while true; do
+  [ -f $HOME/.gab-stop ] && { rm -f $HOME/.gab-stop; break; }
+  date -u +%s > /tmp/gab-steam.started
+  PATH=/usr/local/lib/gab-steam:$PATH /usr/games/steam -no-cef-sandbox -cef-disable-gpu -cef-disable-gpu-compositing -nochatui -nofriendsui -silent ${GAB_STEAM_ARGS:-} >> $L/steam.log 2>&1
+  echo "steam exited rc=$? at $(date -u +%FT%TZ)" >> $L/steam.log; sleep 10
+done

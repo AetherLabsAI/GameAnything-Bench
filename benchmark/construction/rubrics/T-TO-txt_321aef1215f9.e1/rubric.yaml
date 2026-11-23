@@ -1,0 +1,269 @@
+# GameAnything-Bench scoring material: never shown to agents during a trial.
+task_id: T-TO-txt_321aef1215f9.e1
+source_inventory:
+- 'c09.p001-c09.p008: how to mount: leading rein slack in the left hand, reins and a tuft of mane in the right, spring up and swing the leg over
+  without touching the back; translator footnotes'
+- 'c09.p009-c09.p010: practise mounting from the right side as well, so the soldier is ready on a sudden'
+- 'c09.p011-c09.p015: the seat: upright as if standing with legs apart, lower leg hanging loose, upper body supple so a tug or shove does not
+  unseat; the horse taught to stand quiet while the rider settles; well-balanced reins'
+- 'c09.p016-c09.p021: start at a walk to calm the horse, reins high or low by head carriage, then a natural trot, then the gallop; the gallop
+  signal timed to a step of the right foot gives the left lead; a horse turning left leads with the left'
+- 'c09.p022-c09.p026: the volte trains turning to either hand and both sides of the mouth; the oval volte preferred to the circular; the horse
+  held up at the curve, since a sharp turn at full speed is unsafe, worse on broken or slippery ground'
+- 'c09.p027-c09.p029: collect him without swaying him with the bit or leaning, or horse and rider fall; urge to full speed once his eyes are on
+  the straight after a turn; after a pause, sudden dashes away from and toward the other horses, short halts and about-turns'
+- 'c09.p030-c09.p032: dismount only on the exercising-ground, never among horses or people, so the place of exertion is also the place of relief'
+- 'c10.p001-c10.p005: horse and rider must be trained for uphill and downhill, slopes, leaps across obstacles, off banks and down from heights;
+  this is teaching, not the purchase test given earlier'
+- 'c10.p006-c10.p007: jump training: lead the untrained horse, cross the trench first and tighten the rein; if he refuses, a switch from behind,
+  later the mere sight of someone behind suffices; then ridden over smaller, then larger trenches; spur at the spring; a whole-body effort is
+  safer than lagging hindquarters'
+- 'c10.p008-c10.p010: steep inclines taught first on soft ground, after which the horse prefers the downward slope at speed; fear of shoulder
+  injury answered by foreign horsemen racing down slopes'
+- 'c10.p011-c10.p013: the rider''s posture by movement: bend forward when the horse breaks into a gallop, lean back when pulling up, hold the
+  mane and free the reins over a ditch or up a steep slope, throw himself back and hold in going down'
+- 'c10.p014: vary the exercises in place and in length; the horse takes to them more kindly'
+- 'c10.p015-c10.p018: to keep the seat at speed and use weapons, train in the chase or in a two-rider drill: a fugitive with lance reversed and
+  a pursuer with blunted javelins hitting within range; a drag-then-thrust trick to unhorse, countered by pressing the horse forward'
+- 'c10.p019-c10.p020: skirmishing before an enemy camp: charge hard near one''s own side, keep the horse in hand near the foe'
+- 'c10.p021-c10.p022: the core principle: the horse cannot learn by speech, so kindness follows obedience and chastisement follows disobedience;
+  it holds for taking the bit, ditches, embankments and every task'
+- 'c11.p001: summary of the topics so far (purchase, avoiding injury by mishandling, training a war horse)'
+- 'c11.p002-c11.p004: the spirited horse: spirit is like anger in a man; avoid annoying him from mounting on, sit quiet longer, gentlest signals,
+  raise the pace so gradually he reaches full speed unnoticing; any sudden signal or shock bewilders him'
+- 'c11.p005-c11.p010: pull him up gently, coaxing not compelling; long steady stretches calm him, frequent turns do not; repeated fast gallops
+  to tire him make him fight by force and with temper; keep him in check and never race him against another'
+- 'c11.p011-c11.p012: smooth bits better than rough; a quiet seat on a spirited horse, touching him as little as possible'
+- 'c11.p013-c11.p014: the calming and rousing sounds are only conventions: whatever sound is paired with soothing or rousing comes to soothe or
+  rouse; at the trumpet do not excite the horse, halt, rest and feed him; best not to take an over-spirited horse to war'
+- 'c11.p015: the sluggish horse: do the opposite of what is advised for the spirited one'
+- 'c12.p001-c12.p004: the showy horse: pulling the mouth up and spur and whip achieve the opposite, a blinded, bewildered horse with ugly tricks;
+  ride on a loose bridle so he holds his head high and arches his neck, as he does by nature when showing off among other horses'
+- 'c12.p005-c12.p010: two bits: a rough spiked one he drops, then a smooth one he welcomes and works on with more relish; large discs; any bit
+  must be flexible, chain-like, not stiff like a bar'
+- 'c12.p011-c12.p013: flexible vs stiff defined; with any bit the same rules: pull neither too hard nor too softly, give the bit at once when
+  he raises his neck, reward every compliance, caress rather than tax him when he enjoys arching his neck'
+- 'c12.p014-c12.p015: a horse at liberty takes to trot or gallop, never a walk: swift movement pleases him unless carried to excess'
+- 'c12.p016-c12.p019: once he wheels into a canter on cue, collecting him with the bit while giving the go signal makes him throw his chest forward
+  and lift his legs; giving him the rein then sends him forward proudly, admired by spectators'
+- 'c12.p020: closing line'
+instructions_meta:
+  requirement_groups:
+    pace and turning control:
+    - CR1
+    - FP1
+    - FP2
+    rider's seat:
+    - FP3
+    schooling and terrain training:
+    - FP4
+    - FP5
+    temperament and bearing:
+    - CR2
+    - FP6
+    - FP7
+    - VP2
+    riding ground and horse feedback:
+    - CR3
+    - VP1
+  explicit_requirements:
+  - type: keep
+    text: I really want a horse that refuses a big jump until it has been schooled over smaller ones first.
+    covers:
+    - CR3
+    - FP5
+rubric:
+  content_realization:
+  - id: CR1
+    item: The game contains a horse that the player mounts and rides as its rider.
+    anchors:
+      '1': a horse the player can mount, ride and dismount, with the player in the rider's role
+      '0.5': a horse exists but is only led, driven or controlled from outside, not ridden by the player
+      '0': no horse, or none the player can control
+    evidence:
+    - c09.p011
+    - c09.p016
+  - id: CR2
+    item: The game contains horses of different temperament, at least a spirited one and a sluggish one, told apart in the game.
+    anchors:
+      '1': a spirited and a sluggish horse both exist and the player can tell which is which (by behaviour or by any indicator)
+      '0.5': only one temperament exists, or temperaments exist but cannot be told apart
+      '0': no horse temperament at all
+    evidence:
+    - c11.p002
+    - c11.p015
+  - id: CR3
+    item: 'The game contains a riding ground for the exercises: room for straight runs and turns, smaller and larger obstacles to leap, and slopes
+      to ride up and down.'
+    anchors:
+      '1': a riding ground with room for straight runs and turns, obstacles in at least two sizes (smaller and larger), and slopes
+      '0.5': a riding ground with room to run and turn, but obstacles of one size only, or no slopes, or no obstacles
+      '0': no riding ground, or no room to run and turn
+    evidence:
+    - c09.p022
+    - c09.p030
+    - c10.p001
+    - c10.p006
+    - c10.p008
+  functions_playability:
+  - id: FP1
+    item: 'Graded paces in play: the horse has distinct paces, walk, trot and gallop, and the player works it up from the walk through the trot
+      to the gallop and can slow back down to a halt.'
+    anchors:
+      '1': walk, trot and gallop are clearly distinct paces, the player can work the horse up through walk and trot to the gallop, and can slow
+        it back down to a halt (a dash to full speed straight from a halt may also be allowed)
+      '0.5': speed varies but without three distinct paces, or there is no way to slow to a halt
+      '0': the player cannot change the horse's pace (a single fixed speed)
+    evidence:
+    - c09.p016
+    - c09.p027
+  - id: FP2
+    item: 'Turning against speed: a sharp turn at full speed risks a fall, while checking the horse into the turn and accelerating once it faces
+      the straight gets through safely.'
+    anchors:
+      '1': a real fall risk for turning sharply at full speed, and the checked turn followed by acceleration on the straight succeeds
+      '0.5': turning sharply at full speed carries only a slight or token risk, or the checked turn is no safer
+      '0': turns are free at any speed
+    evidence:
+    - - c09.p022
+      - c09.p027
+  - id: FP3
+    item: 'Keeping the seat: the rider can be unseated by changes of the horse''s motion or of the terrain, and adapting balance to them keeps
+      the seat.'
+    anchors:
+      '1': the rider can be unseated, and adapting balance or posture to the horse's movement prevents it
+      '0.5': posture changes shown but without consequence, or unseating happens at random
+      '0': the rider cannot be unseated and balance plays no role
+    evidence:
+    - c10.p011
+    - c09.p011
+  - id: FP4
+    item: 'Training by consequence: the player can reward or punish the horse after its response, and this changes how reliably it obeys later.'
+    anchors:
+      '1': reward and punishment both available and both change the horse's later behaviour (a rewarded response becomes more reliable)
+      '0.5': reward or punishment exists with no lasting effect, or only one of them
+      '0': no training through consequences
+    evidence:
+    - c10.p021
+    - c10.p006
+    - c12.p011
+  - id: FP5
+    item: 'Terrain learned in stages: an untrained horse may refuse a jump, and graded practice, easier obstacles and easier ground first, makes
+      it able to take larger obstacles and steep slopes.'
+    anchors:
+      '1': jump or slope ability is trained through easier steps before harder ones, with a visible change from refusing to clearing at least
+        for jumps
+      '0.5': any horse takes obstacles and slopes at once, or training is a single unlock with no grading
+      '0': the horse's ability over obstacles and slopes never changes with practice
+    evidence:
+    - c10.p001
+    - c10.p006
+    - c10.p008
+  - id: FP6
+    item: 'Temperament in play: a spirited horse becomes agitated and harder to control under abrupt or forceful handling and calms under gentle,
+      gradual handling, while a sluggish horse needs the opposite.'
+    anchors:
+      '1': the player's handling changes the horse's state in the stated directions, at least for the spirited horse, with the sluggish one needing
+        the opposite
+      '0.5': handling changes the state of one temperament only, or temperament is a label with no effect of handling
+      '0': handling has no effect on the horse's state
+    evidence:
+    - - c11.p002
+      - c11.p009
+    - c11.p015
+  - id: FP7
+    item: 'Show training: the player can train the horse toward a proud display, which forceful aids spoil into a bewildered, unruly horse and
+      timely release and reward bring out.'
+    anchors:
+      '1': a display / collected bearing the player works toward, where forcing it makes the horse worse and releasing or rewarding at the right
+        moment produces it
+      '0.5': a display exists but is triggered directly with no effect of handling, or only one side (force spoils / release produces) works
+      '0': no show training
+    evidence:
+    - c12.p001
+    - c12.p011
+    - c12.p016
+  visual_presentation:
+  - id: VP1
+    cat: presentation
+    item: The horse's reaction to handling is readable while riding (e.g. calm or agitated, complying or refusing), so the player can time reward
+      and handling.
+    anchors:
+      '1': the player can tell during riding how the horse is reacting to the handling (by its behaviour or by any indicator)
+      '0.5': readable only in part, or only in a menu away from play
+      '0': the horse's reaction cannot be seen
+    evidence:
+    - c10.p006
+    - c11.p002
+    - c11.p005
+    - c12.p011
+  - id: VP2
+    cat: key_moment
+    item: 'The proud display is seen as a set-apart moment: when it is brought out, the horse visibly carries its head high with an arched neck
+      in a proud, lifted bearing, clearly different from ordinary riding.'
+    anchors:
+      '1': in the display the horse visibly holds its head high and arches its neck (a lifted, proud carriage, e.g. with chest forward and high-stepping
+        legs), clearly set apart from ordinary riding; the exact pose or animation is the agent's choice
+      '0.5': the display is set apart only weakly (barely different from ordinary riding, or without the raised head and arched neck), or only
+        by a text or icon, not by how the horse looks
+      '0': the display moment cannot be seen as anything different from ordinary riding
+    evidence:
+    - c12.p001
+    - c12.p016
+play_suggestions:
+  FP1:
+  - build up from a walk through the trot to the gallop; then from a standstill, dash straight to full speed
+  - slow from a gallop to a halt
+  FP2:
+  - take the same sharp turn at full speed and after checking the horse
+  - accelerate as soon as the horse faces the straight after a turn
+  FP3:
+  - start a gallop and stop short without adjusting the rider; then with the adjustment
+  - ride down a steep slope both ways
+  FP4:
+  - reward a correct response several times, then test the same command
+  - punish a refusal, then repeat the request; check the effect persists later
+  FP5:
+  - put an untrained horse straight at the largest obstacle or steepest slope
+  - train on small obstacles first, then retry the large one
+  FP6:
+  - on a spirited horse give sudden, harsh signals and repeated fast gallops; then gentle signals and a long steady pace
+  - 'try to tire a spirited horse with gallop after gallop: does it calm or fight?'
+  - handle a sluggish horse the way that suits a spirited one
+  FP7:
+  - 'try to force the display with hard rein, spur or whip: does the horse get worse?'
+  - 'collect the horse, then give the rein and reward the raised neck: does the display come out?'
+  robustness:
+  - dismount mid-exercise and remount
+  - ride off the training ground and come back
+  - 'punish a horse continuously for a long time: does it stay controllable and the game playable?'
+  - 'reward the horse for a refusal: does the system stay consistent?'
+v4_map:
+  U1: 'CR1 (the ridden horse) | dropped: paces and build-up order already scored by FP1'
+  U2: 'dropped: mechanism already scored by FP2'
+  U3: 'dropped: mechanism already scored by FP4'
+  U4: CR2 (temperaments exist, told apart); handling effect stays in FP6
+  U5: CR3 (smaller and larger obstacles, slopes exist); staged learning stays in FP5
+  U6: 'dropped: seat-by-posture relation already scored by FP3'
+  U7: 'dropped: force-vs-release relation already scored by FP7'
+  FP1: CR1 (rideable horse), FP1 (distinct paces, working up, halting)
+  FP2: FP2
+  FP3: FP3
+  FP4: FP4
+  FP5: CR3 (graded obstacles, slopes), FP5 (staged learning)
+  FP6: CR2 (temperaments exist), FP6 (handling changes state)
+  FP7: FP7 (show training); its display look added as VP2 in the v4 fix
+  FP8: 'dropped: user modification (winter ground, icy footing), moved to editing_seed.yaml'
+  VP1: 'CR3 (riding ground: runs, turns, obstacles, slopes)'
+  VP2: VP1
+provenance:
+  source_yaml: T-TO-txt_321aef1215f9.e1.yaml
+  source_sha256: 327dc754cd13d4f2842b87a750cf6ebc469339f8ac011096ef8fe32f9e3b326f
+  size_waiver: null
+  size_max: null
+  sources:
+  - ref: t01
+    title: On Horsemanship
+    author: Xenophon
+    text_id: txt_321aef1215f9
+    excerpt_id: e1

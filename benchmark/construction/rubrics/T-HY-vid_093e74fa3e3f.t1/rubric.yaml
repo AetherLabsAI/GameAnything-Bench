@@ -1,0 +1,255 @@
+# GameAnything-Bench scoring material: never shown to agents during a trial.
+task_id: T-HY-vid_093e74fa3e3f.t1
+source_inventory:
+- 'clip 02:17.4-02:18.4: close-up of her feet on snowy ground; ice crystals spread out from where she stamps'
+- 'clip 02:18.9-02:22.0: overhead view: a large radial snowflake pattern of blue glowing ice spreads across the ground with her standing at its
+  centre'
+- 'clip 02:22.4-02:27.0: she runs and sweeps her arms toward the slope against dark night mountains (character close-ups, no place information
+  beyond the night sky and peaks)'
+- 'clip 02:27.4-02:32.0: wide shot of a snowy mountainside at night; a broad flat platform raised on tall ice pillars rises above the slope and
+  a cluster of glowing blue spires of uneven height grows on it, with sparkling magic around'
+- 'clip 02:32.4-02:33.4: closer view of the platform edge and the spires from below; her small figure on the platform'
+- 'clip 02:33.9-02:38.4: inside: a wide open hall with a glossy dark-blue floor that mirrors the tall glowing blue columns along its sides and
+  pointed arched openings between them; a radial snowflake pattern runs through the floor; she is small in the space'
+- 'clip 02:38.9-02:41.4: she stamps; a burst of light and ice spreads across the floor (purple-blue flash), and frost climbs the columns as she
+  raises her arms'
+- 'clip 02:41.9-02:46.9: view up the columns into a vault of ice ribs and spiky crystal facets closing over the dark sky'
+- 'clip 02:47.4-02:50.9: at the apex a crystal star / snowflake forms and hangs from the vault centre'
+- 'clip 02:51.4-02:54.4: the ceiling seen from below: ribs from the columns converge on a radial snowflake at the centre of the vault'
+- 'clip audio: music only, no speech in the range'
+- 'img01: night ice festival: a huge locomotive and stepped pyramids built of stacked ice blocks, lit from inside in cyan, pink, orange and blue;
+  visitors on snow'
+- 'img02: night ice festival: tiered pagoda towers of ice blocks glowing green, on a terraced base with balustrades and a central stair; pink-lit
+  ice arches at the left'
+- 'img03: an ice hotel by day: snow-covered pointed-arch gables over walls of pale ice blocks, a pointed-arch doorway with open wooden doors at
+  the centre'
+- 'img04: ice hotel interior: walls and square pillars of ice blocks, a crystal chandelier, an arched passage leading to a blue-lit block wall
+  with an ice unicorn sculpture; an octagonal ice basin in front'
+- 'img05: ice chapel interior: a pointed ribbed snow vault over an aisle lined on both sides by tall translucent ice pillars lit cyan from behind;
+  fur-covered benches and a carved ice altar wall'
+- 'img06: ice hotel corridor: rows of carved clear ice slabs with face reliefs along a vaulted snow passage, light at the far end'
+instructions_meta:
+  requirement_groups:
+    explorable surroundings and connected approach:
+    - CR1
+    - FP1
+    defining exterior presence:
+    - CR2
+    continuous exploration and interior circulation:
+    - FP2
+    - FP3
+    interior architecture and motifs:
+    - CR3
+    - CR4
+    - VP2
+    materials, lighting and atmosphere:
+    - CR5
+    - VP1
+    - VP3
+  explicit_requirements:
+  - type: keep
+    text: 'I want the outside to stay as in the video: a cluster of glowing ice spires of different heights standing on a broad flat platform
+      held up on ice pillars.'
+    covers:
+    - CR2
+  - type: specify
+    text: 'The snowflake should work the way it does in the video: a big radial snowflake set into the hall floor and repeated right above it,
+      where the ceiling ribs rising from the columns meet in a snowflake at the centre of the vault.'
+    covers:
+    - CR4
+rubric:
+  content_realization:
+  - id: CR1
+    item: The palace stands by itself high on a snowy mountainside, above the slope among mountain peaks
+    anchors:
+      '1': a lone palace set high on a snowy mountainside, raised above a slope that is part of the built world
+      '0.5': in snowy mountains, but not set above a slope (on flat ground, in a valley), or the mountainside is only a distant backdrop
+      '0': missing, or a different setting (a town, a plain, festival grounds)
+    evidence:
+    - - '02:22.4'
+      - '02:27.0'
+    - - '02:27.4'
+      - '02:29.4'
+  - id: CR2
+    item: Outside, the palace is a cluster of tall ice spires of uneven height standing on a broad flat platform raised on ice pillars
+    anchors:
+      '1': several spires of clearly different heights grouped on a broad flat platform, and the platform itself held up on pillars above the
+        ground
+      '0.5': an ice building with towers, but no raised platform on pillars, or spires of one height / a single tower
+      '0': no recognisable exterior, or a different form (a single dome, a walled castle)
+    evidence:
+    - - '02:27.4'
+      - '02:32.4'
+  - id: CR3
+    item: Inside the palace, on its platform, is one wide open hall lined along its sides by tall columns
+    anchors:
+      '1': a single wide open hall inside the spired exterior on the platform, with tall columns standing along its sides
+      '0.5': a column-lined hall that is cramped, split into rooms, or not inside the exterior (a separate build)
+      '0': no hall
+    evidence:
+    - - '02:31.4'
+      - '02:34.4'
+    - - '02:33.9'
+      - '02:38.4'
+  - id: CR4
+    item: A large radial snowflake is laid into the hall floor and repeated above it, where the ceiling ribs rising from the columns converge
+      on a snowflake at the vault's centre
+    anchors:
+      '1': a recognisable radial snowflake on the hall floor and a snowflake at the centre of the vault above it, with ribs from the columns running
+        to it
+      '0.5': a snowflake in only one of the two places, or ceiling ribs that do not converge on it, or a radial pattern not recognisable as a
+        snowflake
+      '0': no snowflake motif in the hall
+    evidence:
+    - - '02:36.4'
+      - '02:39.4'
+    - - '02:41.9'
+      - '02:54.4'
+  - id: CR5
+    cross: true
+    item: 'The clip''s palace (spires, platform pillars, hall columns and walls) is built in the images'' ice construction: its walls, spires
+      and columns are themselves built up of stacked ice blocks'
+    anchors:
+      '1': the clip's spires, platform pillars, hall columns and walls are built up of ice blocks as the images' walls, towers and pillars are
+      '0.5': 'only one reference used: the clip''s palace forms with ice only as a skin or trim over another material, or the images'' ice-block
+        construction used for buildings that are not the clip''s palace (e.g. a copied pagoda or hotel)'
+      '0': the palace is not built of ice at all
+    evidence:
+    - - '02:29.4'
+      - '02:31.4'
+    - - '02:33.9'
+      - '02:36.4'
+    - img01
+    - img02
+    - img04
+    - img05
+  functions_playability:
+  - id: FP1
+    item: The player can reach the palace on foot from the snowy mountainside it stands on and get up onto its raised platform
+    anchors:
+      '1': the palace can be reached on foot from the surrounding slope and its platform climbed onto
+      '0.5': the palace is reachable only by teleport / spawning on it, or the slope exists but does not lead up to it
+      '0': no outside approach (only the interior is built)
+    evidence:
+    - - '02:22.4'
+      - '02:27.0'
+    - - '02:27.4'
+      - '02:32.4'
+  - id: FP2
+    item: The player walks from the platform among the spires into the hall without a cut
+    anchors:
+      '1': the player walks from the platform into the hall continuously, without a cut or teleport
+      '0.5': the hall can be entered only by teleport or through a separate, disconnected route
+      '0': no way into the palace
+    evidence:
+    - - '02:31.4'
+      - '02:34.4'
+  - id: FP3
+    item: The hall is an open space the player can cross freely among the columns to its centre, beneath the snowflake of the vault
+    anchors:
+      '1': the hall floor is walkable from the sides to the centre, the columns stand around it and do not block it
+      '0.5': the hall can be entered but much of it is blocked, too cramped to move through, or the centre cannot be reached
+      '0': the hall cannot be walked
+    evidence:
+    - - '02:33.9'
+      - '02:41.4'
+    - - '02:51.4'
+      - '02:54.4'
+  visual_presentation:
+  - id: VP1
+    cat: style
+    keyframes:
+    - '02:30.9'
+    item: The palace reads as translucent ice that glows with light from within, like the lit ice architecture of the images
+    anchors:
+      '1': walls, spires and columns look like clear / translucent ice and glow from inside or behind, recognisably like the images' lit ice
+      '0.5': an ice or blue material but opaque and unlit, or glowing but not readable as ice
+      '0': ordinary stone / wood / snow look
+    evidence:
+    - img01
+    - img02
+    - img04
+    - img05
+    - - '02:29.9'
+      - '02:31.4'
+  - id: VP2
+    cat: spatial
+    keyframes:
+    - '02:34.9'
+    - '02:36.9'
+    item: The hall's glossy dark-blue floor mirrors the tall glowing blue columns along its sides
+    anchors:
+      '1': a glossy dark-blue floor in which the glowing columns are visibly reflected, seen together with the columns
+      '0.5': a smooth dark or blue floor that does not read as a mirror, or a reflective floor without the glowing columns showing in it
+      '0': an ordinary matte floor
+    evidence:
+    - - '02:33.9'
+      - '02:38.4'
+  - id: VP3
+    cat: style
+    keyframes:
+    - '02:27.9'
+    - '02:35.4'
+    item: 'Night atmosphere in deep blues and cyan: the glowing ice palace against a dark sky and moonlit snow'
+    anchors:
+      '1': night, a blue / cyan palette, the palace's glow standing out against the dark
+      '0.5': blue ice but in daylight, or night without the palace glowing
+      '0': neither
+    evidence:
+    - - '02:22.4'
+      - '02:27.0'
+    - - '02:27.4'
+      - '02:38.4'
+play_suggestions:
+  FP1:
+  - 'start on the slope below: can you walk up to the palace and onto the platform without flying or teleporting?'
+  FP2:
+  - 'from the platform, walk into the hall: do you arrive without a loading cut or teleport?'
+  - 'step back out: is the hall on the platform, inside the exterior you saw?'
+  FP3:
+  - 'walk from where you enter to the centre of the hall, then along the columns: anything blocking?'
+  - 'look up from the centre: is the ceiling snowflake above you?'
+  robustness:
+  - walk off the platform edge and come back up
+  - 'break or place blocks at the way in and inside the hall (survival sandbox): does the place stay recognisable and enterable?'
+  - 'visit at another in-game time of day: is the glow still readable?'
+hybrid:
+  modality: video+image
+  roles:
+    video: 'the place itself: the ice palace on its pillared platform high on a night mountainside, its mirror-floored hall lined with glowing
+      blue columns, the radial snowflake motif on the floor and in the ceiling vault'
+    images: 'how real ice architecture is built and lit: walls, towers, pillars and vaults of stacked translucent ice blocks glowing with light
+      from inside or behind, halls lined with ice pillars under arched vaults; daytime and multicoloured festival lighting are not shared with
+      the clip'
+  cross_reference_requirement: 'The palace the clip shows (its mountainside setting, the spired exterior on a pillared platform, the mirror-floored
+    hall of blue columns and the snowflake vault) must be built in the ice construction the images show: walls, spires and columns of stacked
+    translucent ice blocks lit from inside or behind.'
+v4_map:
+  U1: CR5 (stacked ice-block construction; translucency and light from inside / behind the ice -> VP1)
+  U2: CR1 (night part scored in VP3)
+  U3: CR2
+  U4: CR3 (mirror-floor look scored in VP2)
+  U5: CR4
+  FP1: FP1
+  FP2: 'FP2 (existence part: hall inside the exterior on the platform -> CR3)'
+  FP3: FP3
+  VP1: CR2 (exterior silhouette is the same spires-platform-pillars arrangement)
+  VP2: VP1
+  VP3: VP2 (hall and columns existence -> CR3; floor look stays)
+  VP4: CR4 (floor and vault snowflake arrangement, same property)
+  VP5: VP3
+provenance:
+  source_yaml: T-HY-vid_093e74fa3e3f.t1.yaml
+  source_sha256: 63c577f48f1e311cdd6b3482d2d8adc323f85cace1fd8578e98e43a4b46cc8f3
+  size_waiver: null
+  size_max: null
+  sources:
+  - refs:
+    - img01
+    - img02
+    - img03
+    - img04
+    - img05
+    - img06
+    images:
+    - hybrid/q04_ref0

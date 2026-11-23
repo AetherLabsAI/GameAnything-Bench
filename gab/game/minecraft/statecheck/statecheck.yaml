@@ -1,0 +1,21 @@
+# STATE_SPEC self-check (gab selfcheck minecraft --state): format in gab/setup/selfcheck.py state_check
+vanilla:
+  steps:
+    - {do: wait, seconds: 3}
+  engine: [screen, dimension, pos, health, food, game_mode, difficulty, time_of_day, weather, biome]
+  mod_allow: []
+mod:
+  dir: testmod                 # a datapack (variable, named NPC, HUD texts) + a Fabric project (a registered item given on join)
+  steps:
+    - {do: wait, seconds: 5}
+  expect:
+    - "mod: gab_quest"             # scoreboard objective
+    - "mod: stage_two"             # command storage
+    - "mod: Beacon Keeper"         # the named villager
+    - "mod: gab_visited_shrine"    # player tag
+    - "mod: beacon_shard"          # registry entry of the Fabric mod
+    - "mod: gabtest_pack"          # the datapack
+    - "screen_text: GAB TEST TITLE"
+    - "screen_text: GAB QUEST"
+    - "screen_text: GAB TEST BAR"
+    - "screen_text: the beacon is near"

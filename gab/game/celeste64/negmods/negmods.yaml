@@ -1,0 +1,8 @@
+# negative mods for `gab selfcheck celeste64` (the pool verification's negative checks 2026-10-30, a test sandbox
+# /home/player/oss-celeste64/negative/ + the verification logs), in the deliverable
+# layout: neg_map = Content/Maps/1.map without 2 strawberries; neg_text = Content/Text/English.json with Granny's first line
+# changed; neg_dash = Source/Actors/Player.cs with DashSpeed 140 -> 110 (the pool rebuilt a whole source tree; same change)
+# each must fail exactly its expected pool items (vs a fresh vanilla instance)
+neg_map: {expect_fail: [C6-LAYOUT], quick_probes: [maps]}
+neg_text: {expect_fail: [C6-NPC], quick_probes: [npc]}
+neg_dash: {expect_fail: [C6-DASH], quick_probes: [dash]}

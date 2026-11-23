@@ -1,0 +1,9 @@
+gab.local.json*
+__pycache__/
+*.pyc
+.pytest_cache/
+*.egg-info/
+*.bak*
+*.log
+docker/stardew_valley/cache/*
+!docker/stardew_valley/cache/README

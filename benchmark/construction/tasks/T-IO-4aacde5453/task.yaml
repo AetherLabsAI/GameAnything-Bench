@@ -1,0 +1,19 @@
+# GameAnything-Bench task T-IO-4aacde5453 (public part). Instruction: instruction_fine.md.
+task_id: T-IO-4aacde5453
+version: '0.2'
+category: narrative_event
+modality: image
+domain: film
+track: core
+target_game: tuxemon
+references:
+- img01
+- img02
+- img03
+- img04
+- img05
+- img06
+provenance:
+  pipeline: reference_curation ga_author (v3 draft -> crosscheck -> reconcile -> instruct -> explicit) -> restructure_v4
+  rules_version: v4.2
+  review_status: pending

@@ -1,0 +1,217 @@
+# GameAnything-Bench scoring material: never shown to agents during a trial.
+task_id: T-IO-4aacde5453
+source_inventory:
+- 'img01: a long-haired girl in a light dress swims through grey-green water among a crowd of animals of her own size or larger (a large white
+  long-beaked bird, a mouse as long as she is, a dodo-like bird, a duck, a crow, small birds, a crab, a furry animal); all move the same way'
+- 'img02: the girl stands on stony ground among giant mushrooms and a gnarled tree, looking up at a large blue caterpillar in spectacles that
+  sits coiled on top of a mushroom taller than she is, smoking a water pipe'
+- 'img03: an outdoor tea table by a thatched house under a tree: a long table laid with many cups and plates, a grinning man in a big top hat
+  (a label on the hat) and a hare in a jacket sit at the near end, the girl sits apart in a large armchair at the far end, looking unamused'
+- 'img04: a garden rose tree on stakes with white and red/pink roses; buckets of red paint with brushes; flat card-bodied gardeners lie face down
+  on the ground; a crowned Queen (hearts on her robe) points down at them in anger; a bowing figure carries a crown on a cushion; other crowned
+  card figures (kings, courtiers) stand behind'
+- 'img05: the crowned Queen, robes flying, shouts in fury; a frightened king with club symbols on his clothes holds a flamingo upside down; two
+  hedgehogs on the bare ground; a thin rose tree on stakes; behind, a crowd of crowned card courtiers, a white rabbit and the girl'
+- 'img06: the girl, now large, throws up her arms to shield herself as a whirl of playing cards (number cards and court cards with faces and limbs)
+  flies up and around her; small animals (a lizard, others) at her feet'
+instructions_meta:
+  requirement_groups:
+    scene progression and encounters:
+    - CR1
+    - CR5
+    - FP1
+    - FP2
+    turning points, climax and ending:
+    - CR4
+    - FP3
+    - FP4
+    world and settings:
+    - CR2
+    - VP1
+    characters and key moments:
+    - CR3
+    - VP2
+    - VP3
+  explicit_requirements:
+  - type: keep
+    text: I definitely want the royal court to be living playing cards, just like in the pictures.
+    covers:
+    - CR3
+    - VP2
+rubric:
+  content_realization:
+  - id: CR1
+    item: 'One girl is the protagonist: the player character is the same girl throughout, and she links all the scenes into one story'
+    anchors:
+      '1': a single girl is the player character in every scene, from the first encounters to the ending
+      '0.5': a girl is present but not as the one character carried through all scenes (e.g. replaced or absent in part of the story)
+      '0': no girl protagonist, or a different lead character
+    evidence:
+    - img01
+    - img02
+    - img03
+    - img05
+    - img06
+  - id: CR2
+    item: The world is peopled by animals and strange creatures that act like people (dressed, seated, using things, present as characters), met
+      by the girl in several distinct scenes
+    anchors:
+      '1': several person-like animal or creature characters, spread over more than one scene, present as characters the girl meets
+      '0.5': animals present but as ordinary animals, monsters or scenery, or person-like creatures in only one scene
+      '0': no animal or creature characters
+    evidence:
+    - img01
+    - img02
+    - img03
+  - id: CR3
+    item: 'A royal court is present as a body of characters: a King, courtiers and servants around the Queen'
+    anchors:
+      '1': the court's people (a King, courtiers, servants) are present as characters in the court scene
+      '0.5': a court exists only as a lone ruler or a backdrop, its people not present as characters
+      '0': no royal court
+    evidence:
+    - img04
+    - img05
+  - id: CR4
+    item: The Queen is the furious, threatening ruler of the card court, and her subjects fear her
+    anchors:
+      '1': a Queen who rules the court, is shown or stated as angry and threatening, and whose subjects are shown fearing her
+      '0.5': a Queen as ruler without her fury or the subjects' fear, or an angry figure who is not the court's ruler
+      '0': no Queen, or another figure as the court's ruler
+    evidence:
+    - img04
+    - img05
+  - id: CR5
+    item: 'The story''s phases are present as distinct scenes in this order: encounters with the strange creatures first, then the Queen''s card
+      court, and last the climax in which the court''s cards rise against the girl'
+    anchors:
+      '1': creature-encounter scenes, a court scene and a final scene of the cards turning on the girl, arranged in this order
+      '0.5': the phases exist but in another order, or the climax is not the court's cards turning on her
+      '0': only one phase, or the scenes are unrelated with no story order
+    evidence:
+    - img01
+    - img02
+    - img03
+    - img04
+    - img05
+    - img06
+  functions_playability:
+  - id: FP1
+    item: Playing from the start, the player as the girl moves from scene to scene and reaches them one after another in the story's order, through
+      to the ending
+    anchors:
+      '1': the scenes are reached in play one after another, with the encounters before the court and the court before the ending
+      '0.5': the scenes can be reached but in any order, or the transitions between them do not work as a progression
+      '0': a single scene, or no playable progression
+    evidence:
+    - img01
+    - img02
+    - img03
+    - img04
+    - img05
+    - img06
+  - id: FP2
+    item: 'The progression runs through encounters: meeting the characters of each stage is part of what moves the story on'
+    anchors:
+      '1': the girl can engage the characters she meets, and these encounters advance the progression
+      '0.5': characters can be engaged but nothing depends on it, they are scenery only
+      '0': no characters can be met
+    evidence:
+    - img02
+    - img03
+    - img05
+  - id: FP3
+    item: 'At the court the Queen''s anger is a threat in play: the girl faces a consequence or danger from her'
+    anchors:
+      '1': in the court stage the angry Queen poses a threat with a consequence for the girl
+      '0.5': the Queen's anger or threat is shown or stated in play (e.g. she shouts or threatens), but it has no consequence for the girl
+      '0': the Queen does not appear in play, or appears with no anger or threat at all
+    evidence:
+    - img04
+    - img05
+  - id: FP4
+    item: The story ends in a playable final confrontation with the card court rising against the girl, after which the experience clearly ends
+      or offers to continue
+    anchors:
+      '1': the confrontation with the cards is triggered in play as the final event, followed by a clear end state
+      '0.5': an ending exists but not as the confrontation with the cards, or the confrontation happens without the game ending
+      '0': no ending
+    evidence:
+    - img06
+  visual_presentation:
+  - id: VP1
+    cat: spatial
+    item: 'The girl''s scale against the world changes: small among oversized surroundings in an early scene, large against the cards at the end'
+    anchors:
+      '1': the girl visibly small against her surroundings in an early scene and visibly large against the cards at the end
+      '0.5': an unusual scale in only one scene
+      '0': the same normal scale everywhere
+    evidence:
+    - img01
+    - img02
+    - img06
+  - id: VP2
+    cat: style
+    item: The court's people look like playing cards come to life
+    anchors:
+      '1': the court figures recognisably playing cards (card bodies or suit symbols)
+      '0.5': a royal court in ordinary costume with only a hint of cards
+      '0': no card look
+    evidence:
+    - img04
+    - img05
+  - id: VP3
+    cat: key_moment
+    item: The ending looks like a storm of playing cards flying up around the girl
+    anchors:
+      '1': many cards whirling at the girl in one recognisable moment
+      '0.5': cards attack but as ordinary enemies, without the flying swarm
+      '0': none
+    evidence:
+    - img06
+play_suggestions:
+  FP1:
+  - 'play from the start: list the scenes in the order reached; can the court be reached before the creature encounters?'
+  - 'try to skip a scene or go back: does the progression still hold together?'
+  FP2:
+  - 'in each stage, engage every visible character: does at least one encounter move the story on?'
+  - 'try to leave a stage without meeting anyone: what happens?'
+  FP3:
+  - 'at the court, provoke or ignore the Queen: is there a consequence for the player?'
+  FP4:
+  - 'play to the end: is the cards'' confrontation the final event, and is there a clear end screen or a way to continue?'
+  robustness:
+  - 'lose or fail inside the court stage: can you retry sensibly?'
+  - save or leave mid-story and come back
+  - walk into walls, water and scene edges in each scene
+v4_map:
+  U1: CR1
+  U2: CR2
+  U3: VP1 (the changing scale is scored there)
+  U4: CR3 (the court as characters), VP2 (their playing-card nature)
+  U5: CR4
+  U6: CR5
+  U7: CR5, FP4
+  FP1: CR5, FP1
+  FP2: CR2, FP2
+  FP3: CR4, FP3
+  FP4: FP4
+  FP5: 'removed: editing request (two endings by a choice at the climax), kept in editing_seed.yaml'
+  VP1: VP1
+  VP2: VP2
+  VP3: VP3
+provenance:
+  source_yaml: T-IO-4aacde5453.yaml
+  source_sha256: bf21e36516b74bcc8748d3d7db08c8e1302b038b96139b7bba2122831fe1f10f
+  size_waiver: null
+  size_max: null
+  sources:
+  - refs:
+    - img01
+    - img02
+    - img03
+    - img04
+    - img05
+    - img06
+    bundle: 4aacde5453
+    title: 爱丽丝梦游仙境：兔子洞、茶会、红心女王（拉克姆插图）

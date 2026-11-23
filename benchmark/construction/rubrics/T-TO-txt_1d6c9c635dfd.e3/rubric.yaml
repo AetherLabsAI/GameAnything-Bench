@@ -1,0 +1,222 @@
+# GameAnything-Bench scoring material: never shown to agents during a trial.
+task_id: T-TO-txt_1d6c9c635dfd.e3
+source_inventory:
+- 'c31.p001-c31.p003: Walter and the Maid come through a narrow mountain pass into a small dale and find a camp of armed men with tents and saddled
+  horses; Walter fears thraldom and separation, the Maid rejoices; they decide to go to them quietly'
+- 'c31.p004: six men-at-arms bow to Walter without a word and lead the pair to an old armoured knight, who also bows silently; they are fed in
+  the main pavilion, the camp is struck, and the two are put in separate horse-litters and escorted off, Walter keeping his sword'
+- 'c31.p005: the company rides down the passes and through the night; Walter fears sacrifice and losing the Maid; at dawn they enter a huge walled
+  city by its gate (horn blown thrice), cross a great square to a palace, Walter is separated from the Maid, led to a vast chamber, made to strip
+  and lie in a bed, his clothes taken; he sleeps'
+- 'c32.p001: he wakes in a splendid chamber with a great ivory chair under a cloth of estate'
+- 'c32.p002-c32.p003: two servants and three old men, still only by signs, take him naked to a bath, then back between a double hedge of warriors
+  and sages; great men stand in a ring round the ivory chair; Walter expects the altar'
+- 'c32.p004-c32.p005: on two benches beside the chair lie two sets of raiment, gem-laden robes of peace fit for a great king and plain, weather-
+  and battle-worn war-gear; signed to choose, Walter lays his hand on the war-gear; a glad murmur; the old men arm him; a golden crown sits on
+  the helm'
+- 'c32.p006-c32.p011: armed, he sits on the ivory throne with a sword across his knees and asks why no one speaks; all hail him ''King of Battle'';
+  the elder promises they will do only as he bids and will answer truly'
+- 'c32.p012-c32.p017: Walter asks after the Maid (she has only slept, eaten, bathed), orders her brought to a chair beside his, dressed as she
+  wills; three lords go for her'
+- 'c33.p001-c33.p002: the elder explains: Walter is king of the mighty city of Stark-wall with subject cities, lands, havens and an army; the
+  custom: a male heir succeeds; with no heir a great lord with knights and sergeants watches the mountain pass and takes the first man who comes,
+  because the forefathers came down by it; the great men view him naked; an ill-fashioned man is cast out, a simple guileless man is given as
+  thrall to a craftsman, and in either case the watch resumes as if none had come; a well-fashioned man chooses between the ancient armour and
+  the golden raiment; war-gear makes him king; peace raiment leaves him the choice of thraldom or a test of wisdom with death on failure'
+- 'c34.p001-c34.p006: a roar is heard outside; the Maid enters in her white coat with roses, kneels and asks to be his handmaid; Walter seats
+  her beside him and tells the lords to worship her as queen or let them both go in peace; all acclaim her, the young men brandishing swords'
+- 'c35.p001-c35.p005: at the gallery window the King and the Maid see the square packed with armed folk who cheer and toss spears; the Maid blesses
+  Walter''s valiant heart; he stands as in a dream'
+- 'c35.p006-c35.p009: two neighbours in the crowd: one praises the ancient armour of the Battle of the Waters and the sword of the Day of the
+  Doubtful Onset as good luck, the other the Queen''s beauty'
+- 'c35.p010: the Queen is attired by damsels, the King unarmed but keeps the Sword of the King''s Slaying; they kiss on the dais, eat and drink
+  before all, ride white horses through the throng to the great church led by one unarmed squire (the custom), are met by bishop and folk, mass
+  is sung, the King anointed and crowned; they walk back alone; a neighbour now finds the crowned Queen as goodly as the King'
+- 'c35.p011-c35.p014: the second neighbour praises her holiness and foretells blessings for her descendants; the King and Queen feast with the
+  lords far into the night'
+instructions_meta:
+  requirement_groups:
+    succession and candidate selection:
+    - CR2
+    - CR3
+    - FP1
+    - FP2
+    judging the candidate:
+    - FP3
+    outcome branches:
+    - CR4
+    - FP4
+    - FP5
+    places and key moment presentation:
+    - CR1
+    - VP1
+    - VP2
+  explicit_requirements:
+  - type: specify
+    text: The custom should only kick in when the old king has died without an heir, and if there is an heir he just takes the throne.
+    covers:
+    - CR3
+    - FP1
+rubric:
+  content_realization:
+  - id: CR1
+    item: 'The game contains the two places of the custom as distinct, connected spaces: the mountain pass where the candidate is taken and the
+      city where he is judged.'
+    anchors:
+      '1': a recognisable mountain pass and a separate city, connected so that the candidate can get from one to the other
+      '0.5': only one of the two places exists, or they are not distinguishable as pass and city
+      '0': no play space for the custom
+    evidence:
+    - c31.p001
+    - c31.p005
+    - c33.p002
+  - id: CR2
+    item: The game contains a watch party (a lord with armed men) stationed at the pass, sent by the city to take the candidate.
+    anchors:
+      '1': a watch party from the city is present at the pass, recognisable as the city's men waiting there
+      '0.5': someone takes the candidate, but there is no watch at the pass (e.g. he is met in the city or by a lone figure with no tie to the
+        city)
+      '0': no watch party
+    evidence:
+    - c33.p002
+    - c31.p004
+  - id: CR3
+    item: 'The game shows the succession situation behind the custom: the old king has died and left no heir.'
+    anchors:
+      '1': the game states or shows that the king is dead and has no heir, as the reason the throne must be filled
+      '0.5': an empty throne or a dead king is mentioned, but the missing heir is not
+      '0': no succession situation; the custom has no stated cause
+    evidence:
+    - c33.p002
+  - id: CR4
+    item: 'The game contains the two raiments offered to the candidate at the choice: an ancient war-gear and a raiment of peace.'
+    anchors:
+      '1': both options exist together at the choice and are named or presented as war-gear vs raiment of peace
+      '0.5': a choice exists, but its two options are not war-gear vs raiment of peace (e.g. generic options A / B)
+      '0': no raiments to choose from
+    evidence:
+    - c33.p002
+    - - c32.p004
+      - c32.p005
+  functions_playability:
+  - id: FP1
+    item: 'The rite is set in motion by a vacant throne: only when the king has died without an heir is the watch sent to the pass; an heir would
+      simply succeed.'
+    anchors:
+      '1': in play, the rite starts because the throne is empty with no heir, and a case with an heir can be reached or observed in which the
+        heir takes the throne directly, with no watch at the pass and no rite
+      '0.5': the rite starts from a throne left without an heir, but there is no observable heir case, or an heir still has to pass the rite
+      '0': the rite simply runs with no succession condition behind it
+    evidence:
+    - c33.p002
+  - id: FP2
+    item: The candidate is whoever first reaches the watchers at the pass, and the watchers take him from there to the city where he is judged.
+    anchors:
+      '1': in play, arriving first at the watch at the pass makes one the candidate and leads to being brought to the city
+      '0.5': a candidate is brought to the city, but how he became the candidate (first arrival at the pass) plays no role
+      '0': no candidate selection; the player is a king or judged from the start
+    evidence:
+    - c33.p002
+    - - c31.p004
+      - c31.p005
+  - id: FP3
+    item: 'An inspection of the candidate''s own person gates the choice: only one found sound of body and not simple goes on; a candidate who
+      fails is removed and the watch at the pass resumes for a new candidate.'
+    anchors:
+      '1': inspection of the candidate's person gates the choice, failing it is a real outcome, and after a failure the rite continues with a
+        new watch / candidate
+      '0.5': an inspection exists but always passes or judges something other than the candidate's person, or a failure simply ends the game with
+        no new watch
+      '0': no inspection; every candidate goes straight to the choice
+    evidence:
+    - c33.p002
+    - - c32.p002
+      - c32.p003
+  - id: FP4
+    item: The passing candidate freely chooses between war-gear and a raiment of peace, and choosing the war-gear makes him king, a clear winning
+      end of the rite.
+    anchors:
+      '1': both options are really selectable, the war-gear leads to being proclaimed king, and the result is clear to the player
+      '0.5': the choice exists, but the war-gear does not lead to kingship, or one option cannot be taken
+      '0': no choice; kingship is automatic
+    evidence:
+    - c33.p002
+    - - c32.p004
+      - c32.p007
+  - id: FP5
+    item: Choosing the raiment of peace leads to a further choice between thraldom and a test of wisdom, whose failure means death and whose success
+      means the kingship.
+    anchors:
+      '1': the peace branch offers thraldom or the test, and the test can be both failed (death) and passed (kingship)
+      '0.5': the peace branch leads to only one of these, or the test has only one possible result
+      '0': the peace choice has no consequence, or is the same as the war-gear
+    evidence:
+    - c33.p002
+  visual_presentation:
+  - id: VP1
+    cat: key_moment
+    item: 'The choice: the two raiments are shown together to the candidate, recognisably one of war and one of peace by their look.'
+    anchors:
+      '1': both options visible at the moment of choice and readable by appearance as war-gear vs peace raiment
+      '0.5': the choice is offered only as text or the two options are not visually distinguishable
+      '0': no visible choice
+    evidence:
+    - - c32.p004
+      - c32.p005
+  - id: VP2
+    cat: spatial
+    item: 'The two places of the custom look like what they are: the pass a narrow way through mountains, the city a great walled city.'
+    anchors:
+      '1': the pass reads by its look as a narrow way between mountains and the city as a large city enclosed by walls
+      '0.5': only one of the two places has its look (e.g. the pass is a generic path, or the city is an open village or a few houses)
+      '0': neither place is recognisable by its look as a mountain pass or a walled city
+    evidence:
+    - c31.p001
+    - c31.p005
+play_suggestions:
+  FP1:
+  - 'start the game: is it clear the rite runs because the king left no heir?'
+  - 'find or trigger the case with an heir: does he take the throne directly, with no watch at the pass and no rite?'
+  FP2:
+  - 'start the rite: how does one become the candidate? does arriving at the pass matter?'
+  - 'if possible, reach the pass after someone else, or not at all: what happens?'
+  FP3:
+  - 'try to fail the inspection (if the game lets the candidate be unfit): is the candidate removed?'
+  - 'after a failure: does the watch at the pass resume and can a new candidate come?'
+  FP4:
+  - 'take the war-gear: is the candidate proclaimed king and is the end clear?'
+  - check that the peace raiment can also be taken
+  FP5:
+  - 'take the peace raiment: is a choice between thraldom and a test offered?'
+  - 'take the test and fail it, then take it and pass it: death and kingship respectively?'
+  robustness:
+  - 'play every branch once (heir succeeds, rejected, war-gear, peace then thrall, peace then failed / passed test): does each end in a distinct,
+    understandable state?'
+  - after a losing outcome, can the rite be played again?
+  - try to skip the inspection or reach the choice directly
+v4_map:
+  U1: CR3, FP1 (mechanism scored by FP1; the shown succession situation by CR3)
+  U2: CR2, FP2 (the watch at the pass to CR2; first-comer rule scored by FP2)
+  U3: FP3 (eligibility judged on the candidate's own person, merged into FP3)
+  U4: FP3 (watch resumes after rejection, already scored by FP3)
+  U5: CR4, FP4 (the two raiments to CR4; war-gear makes king in FP4)
+  U6: FP5 (peace branch already scored by FP5)
+  FP1: FP1 (existence part split off to CR3; heir branch now required, not 'if modelled')
+  FP2: FP2 (existence of the watch split off to CR2)
+  FP3: FP3 (anchors take in U3's criterion)
+  FP4: FP4 (existence of the two raiments split off to CR4)
+  FP5: FP5
+  VP1: CR1 (spatial item about which places exist and connect); its look-part re-added as VP2 in the editing split
+  VP2: VP1 (look of the choice by appearance; existence in CR4)
+  VP3: 'dropped: editing (night setting was a modify requirement; moved to editing_seed.yaml)'
+provenance:
+  source_yaml: T-TO-txt_1d6c9c635dfd.e3.yaml
+  source_sha256: 045f541fe0ea150bd8ade8b00bb33085d3a1ffd1a605b59a7403c84add4d1dec
+  size_waiver: null
+  size_max: null
+  sources:
+  - ref: t01
+    title: The Wood Beyond the World
+    author: William Morris
+    text_id: txt_1d6c9c635dfd
+    excerpt_id: e3

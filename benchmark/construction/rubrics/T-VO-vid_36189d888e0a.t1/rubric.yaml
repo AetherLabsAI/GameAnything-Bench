@@ -1,0 +1,293 @@
+# GameAnything-Bench scoring material: never shown to agents during a trial.
+task_id: T-VO-vid_36189d888e0a.t1
+source_inventory:
+- 'from about 00:03.0 on: orange vertical seal badge ''北京 2019'' bottom-right (absent in the opening sunrise and river shots 00:00.0-00:02.4);
+  a faint watermark box top-left (CGTN per the annotation; not legible in the sheets); shots 0.5-3 s, many time-lapse'
+- 'audio: music only, no speech (annotation: audio_relevance music_only; Whisper found no speech in the range)'
+- '00:00.0-00:00.9 sunrise over a palace complex seen from above: a long red wall with a central gate building, rows of golden-tiled hall roofs
+  behind, autumn trees and a road in front, city on the horizon'
+- 00:01.0-00:02.4 aerial over a turquoise river / reservoir winding between mountains; hillsides covered in white-pink blossom; a road along the
+  slope
+- 00:02.5-00:03.4 ruined carved stone arches and pillars (European-style ornament) in warm low sun, rubble blocks in front, trees behind
+- 00:03.5-00:04.4 a lake with small boats; on the far shore a wooded hill topped by a multi-storey pavilion on a large terraced base
+- 00:04.5-00:04.9 a painted, green-roofed ornamental gate (pailou) with tourists in front; a white bottle-shaped stupa (dagoba) on the hill behind;
+  willows
+- 00:05.0-00:05.9 round three-tier temple with dark-blue conical roofs and a gold finial on a stack of white marble balustraded terraces; stairs,
+  red ceremonial stoves, visitors
+- 00:06.0-00:06.4 view out through a deep dark arched gate passage onto a plaza with red buildings and trees; time-lapse crowd
+- '00:06.5-00:07.4 time-lapse plaza: bare winter trees, red-walled gate buildings with golden roofs, benches, blurred crowds'
+- 00:07.5-00:07.9 red walls and a gate with stacked golden-tiled roofs, blurred crowd in front, blue sky
+- 00:08.0-00:08.9 square grey-brick tower with an arched opening and green-tiled double roof, small gate in front, bare trees, plaza with people
+- '00:09.0-00:09.9 aerial: the same tower rises over a dense grid of low grey-roofed courtyard houses with green tree canopy; a wide road with
+  cars on the left; hazy horizon'
+- 00:10.0-00:11.4 dark blue glass skyscrapers from below against blue sky and clouds, sun flare
+- 00:11.5-00:12.4 woman in sunglasses and a beige coat walking among glass towers (hazy)
+- 00:12.4-00:12.8 subway platform 'Guomao' (Line 10 sign, line strip map above) with glass screen doors open; time-lapse passengers boarding
+- 00:12.9-00:13.3 long platform behind glass screen doors; waiting passengers, a guard, direction signs
+- 00:13.4-00:14.3 a white train on an elevated line crossing a white arched bridge through green trees beside water, seen through foliage
+- '00:14.4-00:14.8 rail control room: curved white ceiling, consoles, a large wall screen'
+- 00:14.9-00:15.8 colour-coded metro network map (lines M1, M2 loop, M4, M5, M7, M9, M10 loop, M13, M14, ...), animated
+- '00:15.9-00:16.3 from a hill past a red pillar: golden-roofed pavilions in the foreground, a low old city of grey roofs, a modern skyline of
+  towers beyond'
+- '00:16.4-00:17.3 aerial at sunset: a park with a river and a lake, tree lines, a multi-lane road and parking, city blocks on the horizon'
+- '00:17.4-00:18.3 teahouse front: carved painted eaves, a black-gold signboard (老舍茶馆), red lanterns, a stone lion; a man in a blue robe and white
+  towel gestures'
+- 00:18.4-00:18.8 view through a courtyard doorway with red couplets and red lanterns into a courtyard with a lawn and a red-pillared hall
+- 00:18.9-00:20.4 hands lift lids of red-and-white covered tea cups (opera-mask pattern) on a gold tray beside a brass kettle; tea leaves poured
+  into a white cup
+- 00:19.9 brass long-spout kettle close-up
+- 00:20.9-00:21.4 two performers in white do a long-spout tea pour beside a red-clothed table (teahouse name on the cloth); four covered cups
+- 00:21.9-00:22.4 green tea leaves swirling in water (macro)
+- 00:22.9 reeds / grass against blue sky with drifting leaves
+- '00:23.4-00:23.9 classical garden: an open pavilion with grey hipped roof by a pond with reeds and lotus, trees, grey walls'
+- 00:24.4-00:24.9 grandmother and girl (red jacket) water plants with a can in a courtyard garden; bamboo, latticed window
+- 00:25.4-00:25.9 a child runs with a small white dog on a leash down a narrow lane between grey-brick walls with tiled eaves, doorways and a
+  red-framed picture
+- '00:26.4-00:26.9 low view along a narrow grey-brick lane (hutong): tiled wall tops, a street plaque, sun overhead, red lanterns at the far end'
+- 00:27.4-00:28.2 a stone multi-spire pagoda (five spires on a high base with an arched door), bare trees, a cypress, stone stele and lantern
+  in a paved yard
+instructions_meta:
+  requirement_groups:
+    connected districts:
+    - CR4
+    - FP1
+    movement structure of the historic quarter:
+    - CR1
+    - CR3
+    - FP2
+    terrain and natural features:
+    - CR5
+    - FP3
+    landmarks and architectural palette:
+    - CR2
+    - VP1
+    - VP2
+    - VP3
+    overview of the place:
+    - VP4
+  explicit_requirements:
+  - type: keep
+    text: I want to keep the two colour schemes, red walls under golden tiled roofs for the palace and gates, and grey brick with grey tile for
+      the courtyard houses and lanes.
+    covers:
+    - VP2
+  - type: specify
+    text: The old low-rise city should sit right in front of the cluster of dark glass skyscrapers, like in the video, so you can see the old
+      roofs with the modern towers behind them.
+    covers:
+    - CR4
+    - FP1
+    - VP4
+rubric:
+  content_realization:
+  - id: CR1
+    item: 'The historic core is a walled palace / gate complex: long walls with gate buildings whose gate passages open onto a plaza, and halls
+      with large tiled roofs inside'
+    anchors:
+      '1': a walled complex with at least one gate building set in a long wall, a passage through it onto an open plaza, and hall buildings behind
+        the wall
+      '0.5': walls or a gate building stand alone (no enclosed complex, or no plaza / no halls behind)
+      '0': no walled palace / gate area
+    evidence:
+    - - '00:00.0'
+      - '00:00.9'
+    - - '00:06.0'
+      - '00:06.4'
+    - - '00:06.5'
+      - '00:07.9'
+  - id: CR2
+    item: 'The round temple landmark exists with its defining form: a round building with three stacked roof tiers standing on a stack of terraces
+      with balustrades and stairs up to it'
+    anchors:
+      '1': round plan, three roof tiers and a raised multi-level terrace base with stairs all present
+      '0.5': a round or tiered building without the terrace base, or a terraced building that is not round / tiered
+      '0': no such landmark
+    evidence:
+    - - '00:05.0'
+      - '00:05.9'
+  - id: CR3
+    item: 'A courtyard-house quarter: a dense grid of low walled courtyard houses with trees inside, threaded by narrow lanes between brick walls,
+      with one tall square tower rising over the quarter'
+    anchors:
+      '1': many small walled courtyards packed in a grid, narrow walkable lanes between them, and a single tall square tower standing over the
+        low roofs
+      '0.5': low houses but scattered (no grid of courtyards and lanes), or the grid without the dominant tower
+      '0': no courtyard quarter
+    evidence:
+    - - '00:08.0'
+      - '00:08.9'
+    - - '00:09.0'
+      - '00:09.9'
+    - - '00:25.4'
+      - '00:26.9'
+  - id: CR4
+    item: 'Old and new side by side: a modern district of high-rise towers stands directly beside / behind the low-rise traditional city, in the
+      same world'
+    anchors:
+      '1': a cluster of high-rise towers built in the world right next to the old low-rise quarters, so the two read as parts of one city
+      '0.5': both kinds of district exist but far apart or unrelated (e.g. separate areas with nothing linking them), or the towers are only a
+        skybox / backdrop
+      '0': only the old city, or only the modern one
+    evidence:
+    - - '00:08.9'
+      - '00:12.4'
+    - - '00:15.9'
+      - '00:16.3'
+  - id: CR5
+    item: 'Water and high ground: the place has water bodies (a river or lake) with hills or mountains rising beside them, as part of the world
+      rather than flat ground'
+    anchors:
+      '1': at least one river or lake with raised hills / mountains directly at its edge, built into the world
+      '0.5': water and hills both exist but nowhere together, or only one of the two
+      '0': neither a water body nor any high ground
+    evidence:
+    - - '00:01.0'
+      - '00:02.4'
+    - - '00:03.5'
+      - '00:04.4'
+    - - '00:15.9'
+      - '00:16.3'
+  functions_playability:
+  - id: FP1
+    item: 'The place is one connected world on foot: the palace / gate core, the round temple, the courtyard quarter, the water and hills, and
+      the modern high-rise district can all be reached by walking, including a real route from the old quarter into the towers'
+    anchors:
+      '1': every core area and landmark that was built can be walked to from the others, and the towers can be reached on foot from the old quarter
+      '0.5': most areas are connected but one core area or landmark is cut off, or the towers can be seen but not reached
+      '0': the areas are separate pieces with no walkable connection (in particular none between old and new)
+    evidence:
+    - - '00:08.9'
+      - '00:12.4'
+    - - '00:15.9'
+      - '00:16.3'
+  - id: FP2
+    item: 'Walls, gates and lanes shape movement: the palace walls and courtyard walls block passage, while gate openings and the lanes between
+      courtyards are the ways through'
+    anchors:
+      '1': walls block walking (too high to step or jump over) and the player passes only through gates and lanes, so the old quarter must be
+        navigated along them
+      '0.5': walls can simply be stepped or jumped over, or the lanes or gate passages cannot be walked
+      '0': walls do not hold the player at all (walk-through, or no barrier that matters)
+    evidence:
+    - - '00:06.0'
+      - '00:06.4'
+    - - '00:07.5'
+      - '00:07.9'
+    - - '00:09.0'
+      - '00:09.9'
+    - - '00:25.4'
+      - '00:26.9'
+  - id: FP3
+    item: 'Water and hills act as real terrain: water has to be swum or crossed by a bridge, and a hill can be climbed and looks out over the
+      water and the place'
+    anchors:
+      '1': water changes movement (swim or bridge) and a hill can be climbed and gives a view out over the water and the city
+      '0.5': only one of the two works (e.g. water is a coloured floor, or the hill cannot be climbed / gives no view)
+      '0': neither water nor hill has any effect on movement or view
+    evidence:
+    - - '00:01.0'
+      - '00:02.4'
+    - - '00:03.5'
+      - '00:04.4'
+    - - '00:15.9'
+      - '00:16.3'
+  visual_presentation:
+  - id: VP1
+    cat: key_moment
+    keyframes:
+    - '00:05.0'
+    - '00:05.5'
+    item: 'Signature landmark look: the round temple shows dark-blue tiered roofs with a pointed gold top above bright white balustraded terraces'
+    anchors:
+      '1': dark-blue roofs, a pointed top and white terraces / balustrades recognisable against the keyframes
+      '0.5': the form is there but the colours are wrong (e.g. not blue roofs or not white terraces)
+      '0': the temple looks nothing like the reference
+    evidence:
+    - - '00:05.0'
+      - '00:05.9'
+  - id: VP2
+    cat: style
+    keyframes:
+    - '00:07.5'
+    - '00:06.5'
+    - '00:26.4'
+    item: 'Two-tone traditional palette: red walls under golden-yellow tiled roofs for the gate / palace area, and grey brick with grey tile for
+      the courtyard houses and lanes'
+    anchors:
+      '1': both schemes visible and assigned to the right kind of building
+      '0.5': only one scheme, or colours mixed without that distinction
+      '0': generic colours unrelated to the reference
+    evidence:
+    - - '00:00.0'
+      - '00:00.9'
+    - - '00:06.5'
+      - '00:07.9'
+    - - '00:25.4'
+      - '00:26.9'
+  - id: VP3
+    cat: style
+    keyframes:
+    - '00:10.0'
+    - '00:11.0'
+    item: 'Modern district look: a cluster of tall, dark-blue glass towers'
+    anchors:
+      '1': several tall glass-like towers in dark blue / reflective material, standing together as a cluster
+      '0.5': tall buildings but not glass-like, or a single tower
+      '0': no modern high-rises
+    evidence:
+    - - '00:10.0'
+      - '00:12.4'
+  - id: VP4
+    cat: presentation
+    keyframes:
+    - '00:00.0'
+    - '00:15.9'
+    item: 'Establishing overview: as the reference opens on a wide high view over the palace roofs and later shows old roofs with the skyline
+      behind, the player gets a wide view in which the historic core and its main landmark are readable together with the modern district beyond'
+    anchors:
+      '1': from the start or from a high point the player can reach, the view shows the historic core with a landmark readable and the modern
+        district in the same view
+      '0.5': such a view exists but only one district or no landmark is readable in it
+      '0': no view shows more than a small patch of the place
+    evidence:
+    - - '00:00.0'
+      - '00:00.9'
+    - - '00:15.9'
+      - '00:16.3'
+play_suggestions:
+  FP1:
+  - 'start in the historic quarter and walk until you reach the high-rise district: is there a route, and how long does it take?'
+  - check that the towers are built in the world and can be walked up to, not a skybox
+  - 'from spawn, walk to each core area (gate plaza, round temple, courtyard quarter, lake / hills): is any of them cut off?'
+  FP2:
+  - try to walk or jump straight over a red wall and a courtyard wall
+  - 'find the gate opening and a lane: are they the only ways through?'
+  FP3:
+  - 'walk into the lake or river: do you have to swim, or is there a bridge or crossing?'
+  - 'climb a hill beside the water: does it give a view over the water and the place?'
+  robustness:
+  - 'explore the whole place from spawn: does the world load, and can the player get stuck in landmark geometry?'
+  - 'walk through tight lanes and around the round temple''s terraces: no spots where the player is trapped or cannot climb back out'
+  - check that decorative landmarks do not make a district unreachable
+  - 'if a rail line or station is built (unscored): is it continuous, and does it block or trap the player?'
+v4_map:
+  U1: VP2 (palette scored once, as look); the areas themselves in CR1, CR3
+  U2: 'CR2, CR3; hilltop pavilion dropped: peripheral (~1 s one-off sight; the lake and hill under it kept as terrain in CR5); multi-spire pagoda
+    dropped: peripheral (one-off closing shot)'
+  U3: CR4
+  U4: CR3 (wide road dropped as detail)
+  U5: 'dropped: peripheral (metro shots show no place or route; fine does not ask)'
+  FP1: CR4 (existence of both districts side by side), FP1 (walkable route, widened to all core areas)
+  FP2: CR1, CR3 (walls, gates, lanes exist), FP2 (they block / let through)
+  FP3: 'CR5 (water beside high ground exists), FP3 (terrain effect); pond, park parts dropped: peripheral'
+  VP1: CR2 (form), VP1 (colours and look)
+  VP2: CR3 (which places exist and how arranged)
+  VP3: VP2
+  VP4: VP3
+  VP5: VP4
+provenance:
+  source_yaml: T-VO-vid_36189d888e0a.t1.yaml
+  source_sha256: 846ce97d4570313682077d6d4426a01cf8ac77b4315531a5b2793bf9a18ec3e7
+  size_waiver: null
+  size_max: null
+  sources: []

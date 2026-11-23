@@ -1,0 +1,14 @@
+# STATE_SPEC self-check for the Godot TPS demo (gab selfcheck godot-tps --state; contract in gab/setup/selfcheck.py state_check)
+# vanilla: a fresh start = the main menu, then Play -> the level: the engine fields are there, `mod` is empty
+vanilla:
+  steps: [{do: wait, seconds: 3}, {do: click, x: 160, y: 277}, {do: wait, seconds: 15}]
+  engine: [screen, fps, level_time_s, player.pos, player.on_floor, robots.count, robots.alive, robots.nearest, online.server]
+  mod_allow: []
+# mod: gab_statecheck/ (files laid over the project): override.cfg adds the autoload GabStateCheck (variables gab_marker = 4242,
+# gab_note), which spawns its own entity GabBeacon (a Node3D with the mod's script beacon.gd, variable beacon_level) and shows a
+# HUD label "GAB STATE CHECK"
+mod:
+  dir: gab_statecheck
+  steps: [{do: wait, seconds: 3}, {do: click, x: 160, y: 277}, {do: wait, seconds: 15}]
+  expect: ["mod: GabStateCheck", "mod: gab_marker", "mod: 4242", "mod: GabBeacon", "mod: beacon_level", "engine: level",
+           "screen_text: GAB STATE CHECK"]

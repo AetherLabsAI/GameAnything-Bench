@@ -1,0 +1,237 @@
+# GameAnything-Bench scoring material: never shown to agents during a trial.
+task_id: T-TO-txt_27babbacad50.e1
+source_inventory:
+- 'c20.p001-c20.p007: introduction: the palace with its marble court, fountains, gardens, park and the two Trianons as a vast, varied ensemble;
+  Sunday crowds today; the gardens as the grand framing of a royal court; the town exists only because of the palace; old criticism of its cold
+  statuary and clipped trees'
+- 'c20.p008-c20.p010: origin as Louis XIII''s humble hunting lodge (1624) with a garden and a larger park; architect Le Roy'
+- 'c20.p011: Boyceau''s original parterres: a central basin where two wide avenues cross, four compartments with broderies, trimmed hedges and
+  coloured sands; a flower parterre next to the palace; alleys toward the wood; Menours'' pay and the costs'
+- 'c20.p012-c20.p014: the entrance: the great Cour Royale behind the long range of iron gates on the Place d''Armes, the Cour de Marbre as an
+  extension at its foot; Damiens'' attack on Louis XV there in 1757 and its background'
+- 'c20.p015: behind the palace: parterres, tapis vert, fountains and the grand canal, with the park of the Trianons off to the right'
+- 'c20.p016-c20.p022: Le Notre''s redesign from 1664: Parterre du Nord, an alley of four rows of lindens enclosing the park, the Parterre a Fleurs
+  between chateau and Orangerie; the Rondeau / Bassin du Dragon and the Jardin Bas; the Menagerie at one end of the park; the south region after
+  1679; two epochs and royal changes; early garden of sand and gravel more than grass, great enclosing trees since cut'
+- 'c20.p023-c20.p025: the Potager du Roy (fruit and vegetable garden) created after the ornamental gardens, still in its outlines; humid but drained
+  soil; drainage works and the Eaux des Suisses replacing a stagnant pool; La Quintinye'
+- 'c20.p026-c20.p028: espalier planting: the eight-hectare plot divided into many wall-enclosed subdivisions to multiply wall space and shelter
+  plants; terraces at least two metres wide around a central garden of about three hectares; twenty-eight compartments, nine kinds of garden'
+- 'c20.p029-c20.p032: forced culture of early vegetables for the king''s table (asparagus in December ... strawberries in April); costs and maintenance;
+  foreign visitors; since 1875 the National Horticultural College; some terraces and walls gone, sixteen gardens remain'
+- 'c20.p033-c20.p039: maintenance below its old standard; a military aerostation camp planned in the park near Rocquencourt that would fell its
+  trees; deforestation, lost lease revenue, the Societe des Amis de Versailles'
+- 'c20.p040-c20.p045: winter: crowds skate on the shallow Grand Canal despite posted 1849 no-skating notices; haze over the snowy Tapis Vert,
+  snow on the figures of the Bassin d''Apollon and the statues of the Allee Royale'
+- 'c20.p047-c20.p049: the fountains (Grands Eaux, Petits Eaux), costly to play; the Orangerie just below the terrace of the Parterre du Midi with
+  many orange trees; the Eaux des Suisses basin dug by the Swiss Guard to irrigate the Potager and to adorn the garden facing the palace''s long
+  front'
+- 'c20.p050: farther toward the Bois de Satory, past the Tapis Vert: the Bassins de Latone and Apollon, the Bassin du Miroir, then the Grand Canal,
+  one transverse branch leading to the Menagerie (now a stud farm), the other to the Trianons'
+- 'c20.p051-c20.p056: the Grand and Petit Trianons as satellite palaces; the Grand Trianon a sprawling one-storey horseshoe-shaped villa by Mansart
+  for Madame de Maintenon; recent restoration; de Musset''s remarks'
+- 'c20.p057-c20.p063: Louis XV''s small subdivided apartments and the blue-room anecdote; his pastoral taste in the gardens (bowers, labyrinths,
+  vases, statues); in the Grand Trianon''s garden a great basin with a cascade over the red and white marble Buffet de l''Architecture'
+- 'c20.p064-c20.p068: the Petit Trianon by Gabriel, Marie Antoinette''s, bored caretakers; its garden an English garden of sweeps and curves instead
+  of formal lines; the Hameau with the queen''s dairy just behind it, looking like a stage set for a pastoral play'
+- 'c20.p069-c20.p071: nearby Chateau de Clagny, the Couvent des Recollettes across the Bois de Satory, Noisy and Molineaux; the rest left to guidebooks'
+instructions_meta:
+  requirement_groups:
+    entrance approach:
+    - CR1
+    - FP1
+    garden axis and routes:
+    - CR2
+    - CR3
+    - FP2
+    - FP3
+    enterable garden areas:
+    - CR6
+    - FP4
+    formal garden look:
+    - VP1
+    outlying buildings and grounds:
+    - CR4
+    - CR5
+    - VP2
+    - VP3
+  explicit_requirements:
+  - type: keep
+    text: I want to keep the entrance just like in the text, through the gates on the town square into the main court and then the second court
+      at its foot before reaching the palace. The player should start outside the gates and walk in along this route to the palace.
+    covers:
+    - CR1
+    - FP1
+  - type: specify
+    text: 'The canal should work like in the text: its two cross arms are the routes out, one leading to the Menagerie and the other to the Trianons.'
+    covers:
+    - CR3
+    - FP3
+rubric:
+  content_realization:
+  - id: CR1
+    item: 'The palace is fronted by the entrance sequence: iron gates on the town square open into a great main court, and a second court extends
+      it at its foot, in front of the palace'
+    anchors:
+      '1': gates on a town square, then a large main court, then a second court at its foot, then the palace, in this order
+      '0.5': an entrance court before the palace exists, but the second court or the gates on the square are missing, or the order is wrong
+      '0': 'no entrance courts: the palace stands without a gated forecourt'
+    evidence:
+    - c20.p012
+  - id: CR2
+    item: 'Behind the palace the gardens lie along one axis, in this order outward: parterres, the long lawn of the Tapis Vert, a series of basins,
+      and finally the Grand Canal'
+    anchors:
+      '1': on the garden side of the palace, parterres, then a long lawn, then basins, then the canal, laid out outward in this order (basin names
+        not required)
+      '0.5': most of these features exist behind the palace, but one is missing or they are not in the outward order
+      '0': no gardens behind the palace, or only a generic park
+    evidence:
+    - c20.p015
+    - c20.p050
+  - id: CR3
+    item: 'The Grand Canal is cross-shaped: its two transverse arms lead one toward the Menagerie and the other toward the Trianons'
+    anchors:
+      '1': a canal with two cross arms; one arm leads toward the Menagerie, the other toward the Trianons
+      '0.5': a canal exists, but it has no cross arms, or only one arm leads toward an outlying destination
+      '0': no Grand Canal
+    evidence:
+    - c20.p015
+    - c20.p019
+    - c20.p050
+  - id: CR4
+    item: The Grand Trianon and the Petit Trianon stand in the park as two separate satellite palaces, smaller than the main palace and away from
+      it, off to one side of the garden axis
+    anchors:
+      '1': two distinct smaller palaces, the Grand and the Petit Trianon, set apart from the main palace in the park beside the garden axis
+      '0.5': only one Trianon exists, or the two are merged into one building or attached to the main palace
+      '0': no Trianons
+    evidence:
+    - c20.p015
+    - c20.p051
+    - c20.p052
+    - c20.p064
+  - id: CR5
+    item: The Petit Trianon has a garden of its own, set around it and separate from the main gardens
+    anchors:
+      '1': a garden that belongs to the Petit Trianon, set by it and apart from the main garden axis
+      '0.5': greenery near the Petit Trianon, but not a garden of its own (only a lawn, or simply part of the main gardens)
+      '0': no garden at the Petit Trianon
+    evidence:
+    - c20.p066
+  - id: CR6
+    item: The Potager du Roy is a separate kitchen garden, walled and divided inside by walls into many enclosed plots
+    anchors:
+      '1': a distinct kitchen garden whose ground is divided by walls into many separate walled plots
+      '0.5': a kitchen garden exists but is one open field or has only an outer wall
+      '0': no kitchen garden
+    evidence:
+    - c20.p023
+    - c20.p026
+  functions_playability:
+  - id: FP1
+    item: 'The player can walk in through the entrance sequence: through the gates, across the main court and the second court, up to the palace'
+    anchors:
+      '1': a continuous walkable approach that passes the gates and crosses both courts in order to reach the palace
+      '0.5': the palace is reached on foot, but the approach skips a court or bypasses the gates
+      '0': no walkable approach; the player starts at or inside the palace
+    evidence:
+    - c20.p012
+  - id: FP2
+    item: From the back of the palace the player can walk outward through the parterres, along the Tapis Vert and past the basins to the Grand
+      Canal
+    anchors:
+      '1': one connected walkable route from the palace's garden side through the garden features, in order, to the canal
+      '0.5': the garden features can be visited, but the route is broken, blocked or does not lead out to the canal
+      '0': the gardens behind the palace cannot be walked
+    evidence:
+    - c20.p015
+    - c20.p050
+  - id: FP3
+    item: 'The canal''s transverse arms work as routes to the outlying destinations: following one arm the player reaches the Trianons, following
+      the other the Menagerie'
+    anchors:
+      '1': walking along one arm leads to the Trianons and along the other to the Menagerie
+      '0.5': the Trianons can be reached, but not by way of the canal arms (e.g. a teleport or an unrelated path), or only one arm leads anywhere
+      '0': the Trianons cannot be reached
+    evidence:
+    - c20.p015
+    - c20.p050
+  - id: FP4
+    item: The player can enter the Potager du Roy and move from one walled plot to the next
+    anchors:
+      '1': the kitchen garden can be entered and its walled plots are reachable from one another on foot
+      '0.5': the kitchen garden can be entered, but its walled plots are closed off or only seen from outside
+      '0': the kitchen garden cannot be entered
+    evidence:
+    - c20.p026
+  visual_presentation:
+  - id: VP1
+    cat: style
+    item: 'The main gardens look grand and formal: geometric parterres and straight, ordered lines'
+    anchors:
+      '1': a clearly formal, geometric garden laid out in straight lines
+      '0.5': a garden with some formal parts, but its overall look is not formal or geometric
+      '0': a generic or natural park
+    evidence:
+    - c20.p003
+    - c20.p016
+    - c20.p066
+  - id: VP2
+    cat: style
+    item: 'The Petit Trianon''s garden looks informal: sweeps and curves instead of the straight formal lines of the main gardens'
+    anchors:
+      '1': a visibly curving, informal garden at the Petit Trianon that contrasts with the main gardens
+      '0.5': some curving or informal parts, but the garden still reads mostly formal or the contrast is weak
+      '0': the Petit Trianon's garden looks as formal as the main gardens
+    evidence:
+    - c20.p066
+  - id: VP3
+    cat: spatial
+    item: The Grand Trianon is a low, sprawling, one-storey, horseshoe-shaped villa
+    anchors:
+      '1': a low single-storey building curved in a horseshoe
+      '0.5': a low villa that is not horseshoe-shaped, or a horseshoe building of several storeys
+      '0': a generic building
+    evidence:
+    - c20.p052
+play_suggestions:
+  FP1:
+  - 'start from the town side: is there a gated entrance, and how many courts do you cross before the palace?'
+  FP2:
+  - 'leave the palace by the garden side and walk straight out: list the features in the order you meet them; does the route reach the canal?'
+  FP3:
+  - 'at the canal, follow each transverse arm: where does each lead?'
+  - try to reach the Trianons from the palace by another way and compare
+  FP4:
+  - 'find and enter the kitchen garden: walk from one walled plot to the next'
+  robustness:
+  - 'walk to the edge of the estate: is it bounded sensibly?'
+  - 'go back from the Trianons to the palace: is the way back clear?'
+  - try to walk into the canal and the basins
+v4_map:
+  U1: CR1
+  U2: CR2
+  U3: CR3
+  U4: VP1, VP2
+  U5: 'CR6 | dropped: walls'' purpose (espalier, shelter) fails removal test'
+  FP1: CR1, FP1
+  FP2: CR2, FP2
+  FP3: CR3, FP3
+  FP4: CR6, FP4
+  VP1: VP1
+  VP2: CR5, VP2
+  VP3: 'dropped: peripheral (the Hameau is a one-sentence sight beside the Petit Trianon; its stagy look is a simile)'
+  VP4: CR4, VP3
+  VP5: 'dropped: peripheral (Orangerie is a passing mention, not on the walk''s main thread)'
+provenance:
+  source_yaml: T-TO-txt_27babbacad50.e1.yaml
+  source_sha256: 0de595c3e3625998ed8bb8f4afae703e96b5351a5de6228194f4a0ba3f0b9bf5
+  size_waiver: null
+  size_max: null
+  sources:
+  - ref: t01
+    title: Royal Palaces and Parks of France
+    author: M. F. Mansfield
+    text_id: txt_27babbacad50
+    excerpt_id: e1

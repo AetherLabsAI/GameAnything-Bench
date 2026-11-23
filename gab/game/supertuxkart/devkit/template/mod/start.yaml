@@ -1,0 +1,8 @@
+# how a fresh start enters the experience (remove this file to start in the main menu)
+mode: race               # menu | race
+track: lighthouse        # stock id or addons/tracks/<id>
+kart: tux                # stock id or addons/karts/<id>
+numkarts: 3              # you + AI karts
+laps: 1
+race_mode: normal        # normal | time_trial | follow_leader | battle (needs an arena)
+difficulty: 1            # 0 novice .. 3 supertux

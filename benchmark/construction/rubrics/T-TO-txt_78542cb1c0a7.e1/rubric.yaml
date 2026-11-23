@@ -1,0 +1,288 @@
+# GameAnything-Bench scoring material: never shown to agents during a trial.
+task_id: T-TO-txt_78542cb1c0a7.e1
+source_inventory:
+- 'c13.p001-c13.p002: letter heading and dateline, Kanaya''s, Nikko, June 15'
+- 'c13.p003: the house: a quiet two-storied pavilion on a stone-faced terrace up stone steps, bright garden, the mountain rising just behind,
+  one stream supplying water and another passing under the house through a fish-pond to the river; the grey village of Irimichi across the road,
+  shut in by the rushing Daiya, wooded hills with ravines and waterfalls beyond'
+- 'c13.p004: arrival; polished verandahs and stairs, fine white mats; the narrator''s room (front of sliding shoji, wood ceiling, two alcoves
+  with a cherry-blossom kakemono and a painted cabinet, single flowers in hanging vases, almost no furniture), Ito''s room at the back, stair
+  to bath-house and garden, a room downstairs and the domestic space, a tiled fire-proof kura to the right of the house'
+- 'c13.p006: Kanaya (chief man of the village, leads music at the Shinto shrines, embellishes house and garden), his mother, sister, servant and
+  the sister''s children; he lets the rooms to foreigners without Europeanising them'
+- 'c13.p007-c13.p008: supper on a gold-lacquer zen; prices of rooms and food; interest of living in a private home; signature'
+- 'c14.p001-c14.p003: letter heading and dateline, June 21; nine days at Nikko'
+- 'c14.p004: the surroundings of Nikko: snow mountains round Nantaizan, forests, lakes, the Kegon falls, the Daiyagawa passes, azaleas, rich vegetation
+  around the shrines of the two Shoguns'
+- 'c14.p005: history: the burial of Iyeyasu on the hill-slope of Hotoke Iwa in 1617, his deification; the shrine since stripped of its Buddhist
+  ritual, a few Shinto priests selling tickets'
+- 'c14.p006: the grand approach: the Red Bridge, a broad road with steps at intervals between embankments topped by cryptomeria, a great granite
+  torii at the summit, then an array of bronze lanterns on stone pedestals, a roofed granite holy-water cistern, a bronze bell, lantern and candelabra,
+  and on the left a five-storied carved and painted pagoda'
+- 'c14.p007: the grand entrance (Ni-o) gate up a flight of steps beyond the torii, curtain and carvings; the overwhelming first view of the court'
+- 'c14.p008: the first court, pebbled and enclosed by a red timber wall: treasure buildings, the stable of the sacred white horses, the cistern,
+  the scripture library; steps up to a smaller court with bell-tower, drum-tower, a shrine and bronze lanterns'
+- 'c14.p009: steps up to the Yomei gate (white columns, kirin capitals, dragons, carved figures); a carved piazza encloses the next court against
+  a stone wall built into the hill, with the dance stage, incense altar and the hall of the sacred cars; ''from splendour to splendour'''
+- 'c14.p010-c14.p011: the gilded trellis enclosure in the middle with the chapel (haiden); after all the magnificence the dim golden temple holds
+  simply a black lacquer table with a metal mirror; the matted hall with the empty Shogun''s and Abbot''s rooms, carved and painted panels, a
+  stone-paved chapel behind and an inaccessible black-and-gold inner chapel'
+- 'c14.p012: the tomb is not in the shrines: leaving the courts by a covered gateway in the eastern piazza into a mossy stone gallery, a long
+  stone staircase climbs to the hilltop, where above and behind the shrines Iyeyasu lies in a plain massive tomb of stone and bronze with an urn,
+  a stone table with bronze ornaments, a walled enclosure, in perpetual twilight under large cryptomeria, silent'
+- 'c14.p013: the mortarless masonry of retaining walls, gallery and staircase; the overflowing granite cistern'
+- 'c14.p014: the nearby temples of Iyemitsu, still Buddhist: a series of gates with guardian figures (Ni-o, gods of wind and thunder, the four
+  quarters) up flights of steps to the main temple with gilded Buddhas, a subdued devil and rows of painted idols; an old priest''s remarks'
+- 'c14.p015: an earthquake rings the roof wind-bells and priests drum; Iyemitsu''s tomb up steps to the right of the chapel, with bronze gates;
+  a view from the uppermost gate framed by cryptomeria'
+- 'c14.p016: the roofs: sheet-copper or coppery-grey tiles with gold-badged ends, massive, on carved timbers'
+- 'c14.p017-c14.p018: the shrines in their setting of huge cryptomeria; gold, black, dull red and white lacquer; bronze fret-work; deep open-work
+  carvings of birds and flowers'
+- 'c14.p019-c14.p020: the lasting impression: masses of black and red lacquer and gold, silent matted halls with slanting sunbeams, bronze lanterns,
+  priests, and the cryptomeria forest lit by azaleas; signature'
+- 'c15.p001-c15.p003: letter heading, Yashimaya, Yumoto, June 22; a fifteen-mile, eight-hour ride on a pack-horse: the gentle mares, the led horse,
+  the pack-saddle and how a rider balances on it, a fall into a mud-hole'
+- 'c15.p005: the exquisite yadoya at the end of the day: scented planed-wood fusuma, white matting, polished pine balconies; tea and sweets on
+  arrival; the evening spent outdoors'
+- 'c15.p007: Yumoto: a village squeezed between the lake and the mountains, neat houses one above another of new reddish cedar; snow ten feet
+  deep in winter, the houses wrapped in matting and abandoned October to May but for one watchman; the proper way up is by kago'
+- 'c15.p008: two short narrow streets made entirely of yadoyas (deep eaves, balconies, lanterns, open lower fronts), full of bathers with blue
+  towels; four bathing-sheds; mountains of jungle allow walking only in the streets or along the track; a covered boat, geishas; the great sulphur
+  spring beyond the village in a square tank in a mound, invalids lying on boards over its steam; the water cools along an open wooden pipe to
+  the village; high and cold'
+- 'c15.p009-c15.p010: back at Irimichi: how a ''squeeze'' on the bill is shared between host and servant; signature'
+- 'c16.p001-c16.p003: letter heading, Irimichi, June 23; the quiet life there nearly at an end'
+- 'c16.p004-c16.p006: the village: about three hundred houses along three roads with steps across them at intervals and a rapid stream in a stone
+  channel down the middle of each, children''s water-wheel toys; the drum at 7 a.m. and the Europeanised school (benches, maps, black-board, recitation);
+  the syllabary poem and comment'
+- 'c16.p007-c16.p008: school punishments; children leave at noon in two divisions; afternoons and evening lesson preparation; a procession of
+  children with flags; the water-wheel toys'
+- 'c16.p009-c16.p011: a formal children''s party given by the house-child Haru, received at the top of the stone steps; her dress and make-up;
+  tea and sweets; forms of address and girls'' names; a game of doctor and funeral; etiquette'
+- 'c16.p012-c16.p013: Yuki, Haru''s mother: housework, garden, simple sewing of garments, reading from circulating libraries; her son''s calligraphy;
+  samisen lessons'
+- 'c16.p014: flower arrangement: the room newly decorated almost daily with a single kakemono and single flowers; contrast with western bouquets'
+- 'c16.p015: Kanaya again (music leader, sells drugs); his garden works: a waterfall, a stream, a small lake, a bamboo bridge, grass banks, transplanted
+  trees; he goes out with the narrator, Ito interprets'
+- 'c16.p016-c16.p017: the household day: rise at daylight, quilts into the press, sweeping, opening the amado shutters and throwing back the paper
+  windows, meals, work and visits; evening visitors, chess, stories, samisen, singing and sake'
+- 'c16.p018: an evening of guide books, picture books and old treasures brought from the kura; rooms kept uncluttered, one object shown at a time'
+- 'c16.p019-c16.p020: planning routes on Brunton''s map with Kanaya and his sister; Kanaya''s wish to build a hotel; the god-shelf with memorial
+  tablets, offerings each morning and a lamp each evening'
+- 'c17.p001-c17.p002: letter heading; dismal lighting: the paper andon and the wax candle; an andon burns all night'
+- 'c17.p003: the villages are full of shops: nearly every house sells food and small goods on stands at the open front, domestic work visible
+  in the room behind; match-cutting and foot-worked rice husking in house fronts'
+- 'c17.p004: women weaving, spinning, at their toilet; the rhythm of the village day (silent while the children are at school, livelier at sunset,
+  baths, lessons recited); at dark the paper windows drawn, the amado closed, a lamp before the family shrine, games round the andon, the family
+  sleeps in one room'
+- 'c17.p005: parents'' delight in children; men gathering at six each morning on a low wall with their infants; the docile, adult-dressed children'
+- 'c17.p006-c17.p007: hair styles of girls and boys by age; skin diseases and smallpox among the villagers'
+- 'c18.p001-c18.p002: letter heading; shopping in Hachiishi: open shop fronts with a raised polished ledge to sit on, the shopwoman at her brazier,
+  bowing and bargaining'
+- 'c18.p003: barbers working in the raised open shop fronts in the evening'
+- 'c18.p004: a seed shop with painted seed packets; purchases for the journey (an oiled-paper waterproof, baggage covers, a hat for Ito); Ito''s
+  vanity'
+- 'c18.p005: departure tomorrow for the interior and the Sea of Japan by a road ''all among the mountains'' to Tajima; the repaired bed; the Land
+  Transport Company and its rates'
+- 'c18.p006-c18.p007: Japanese money and distance units; what ''road'' means in the coming letters; signature'
+instructions_meta:
+  requirement_groups:
+    connected explorable area:
+    - CR1
+    - CR2
+    - FP1
+    route through the main site:
+    - CR3
+    - CR4
+    - CR5
+    - FP2
+    outlying location and its route:
+    - CR6
+    - FP3
+    buildings, streets and interiors:
+    - VP1
+    landmarks and overall look of the main site:
+    - VP2
+    surroundings:
+    - VP3
+  explicit_requirements:
+  - type: specify
+    text: 'The tomb shouldn''t be inside the shrine courts: put it above and behind them, at the top of a long stair up the wooded hill.'
+    covers:
+    - CR5
+rubric:
+  content_realization:
+  - id: CR1
+    item: Kanaya's house stands raised on a terrace reached by steps, with the mountain rising directly behind it and the village of Irimichi
+      across the road in front, shut in by the river beyond
+    anchors:
+      '1': the house raised on a terrace with steps, the mountain right behind it, and the village across the road with the river beyond, all
+        placed correctly relative to each other
+      '0.5': the house and the village both present, but one relation missing or wrong (e.g. no mountain behind, the village not across the road,
+        the house at ground level)
+      '0': the house or the village missing, or the two not related spatially
+    evidence:
+    - c13.p003
+  - id: CR2
+    item: Irimichi's streets each have a rapid stream running in a channel down the middle of the road
+    anchors:
+      '1': village streets lined with houses, each with a stream channel running down its middle
+      '0.5': the village has water, but not in the streets (e.g. a stream beside or crossing the street, a river beside the village)
+      '0': missing, or an ordinary village with no street streams
+    evidence:
+    - c16.p004
+    - c16.p008
+  - id: CR3
+    item: The shrine precinct is approached from a bridge by a road climbing to a great torii, followed by a long array of lanterns and a tall
+      pagoda, and then a gate up steps into a walled court
+    anchors:
+      '1': bridge, climbing approach, torii, lantern array, pagoda and the gate up steps into a walled court, in this processional order
+      '0.5': some of these landmarks, but the approach is not recognisable as this processional entry (e.g. no climb, landmarks scattered, no
+        gate into a court)
+      '0': no approach to the precinct
+    evidence:
+    - - c14.p006
+      - c14.p008
+  - id: CR4
+    item: Beyond the gate the precinct is a chain of courts, each higher than the one before and entered up steps through a gate, ending in a
+      gilded enclosure whose chapel is almost empty
+    anchors:
+      '1': several courts in an ascending chain, each entered by steps and a gate, ending at an innermost gilded enclosure with a near-empty chapel
+      '0.5': several courts but not as an ascending chain (e.g. side by side on one level), or the innermost chapel missing or filled like the
+        other buildings
+      '0': a single court or a single building only
+    evidence:
+    - - c14.p008
+      - c14.p011
+  - id: CR5
+    item: Iyéyasu's tomb is not inside the shrine courts but outside them, above and behind them, reached by leaving the courts and climbing a
+      long stair up the wooded hill
+    anchors:
+      '1': the tomb outside the enclosures, above and behind the shrines, at the top of a long stair that starts from the courts
+      '0.5': the tomb on the hill, but its relation to the courts wrong or vague (e.g. beside the first court, no stair from the courts)
+      '0': no tomb, or the tomb inside the chapel or the courts
+    evidence:
+    - c14.p012
+  - id: CR6
+    item: Yumoto is a separate small spa village of inns, squeezed between a lake and the mountains, joined to the base by a mountain track, with
+      its hot spring just beyond the village
+    anchors:
+      '1': a separate village of inns closed in between a lake and mountains, a track joining it to the base, and the spring at its edge
+      '0.5': Yumoto present but one of these missing (no lake or mountains closing it in, no track to the base, no spring), or it is merged into
+        Irimichi
+      '0': missing
+    evidence:
+    - c15.p007
+    - c15.p008
+  functions_playability:
+  - id: FP1
+    item: 'The house, the village and the shrine precinct form one place the player can move through: from the house down to the road and the
+      village streets across it, and along an approach to the shrines'
+    anchors:
+      '1': the player can walk between the house, the village streets and the shrine precinct as connected parts of one area
+      '0.5': all three exist but are not connected by movement (separate levels picked from a menu), or one of them cannot be entered
+      '0': only one of the three, or no free movement
+    evidence:
+    - c13.p003
+    - c14.p006
+    - c16.p004
+  - id: FP2
+    item: 'The shrine visit plays as a climb: the player walks up the approach and passes court by court, each reached only from the one before,
+      to the innermost chapel, and can leave the courts to climb on to the tomb above'
+    anchors:
+      '1': the courts are walked through in order, climbing, up to the chapel, and the tomb is reached on foot by an onward climb out of the courts
+      '0.5': the courts are walkable but can be entered out of order or without climbing, or the tomb cannot be reached on foot
+      '0': no walkable shrine route
+    evidence:
+    - - c14.p006
+      - c14.p012
+  - id: FP3
+    item: The player can travel from the base to Yumoto along the track and move about the village, kept to its short streets and the track by
+      the lake and the mountains, and walk to the spring
+    anchors:
+      '1': Yumoto reached on foot from the base along the track; inside it movement is bounded by the lake and the mountains, and the spring can
+        be walked to
+      '0.5': Yumoto walkable but reached only by a menu jump or teleport, or its bounds do not hold the player to the streets and track, or the
+        spring cannot be reached
+      '0': Yumoto cannot be visited
+    evidence:
+    - c15.p003
+    - - c15.p007
+      - c15.p008
+  visual_presentation:
+  - id: VP1
+    cat: style
+    item: The rooms of the house are open and nearly empty, walled by sliding paper screens, with sparse, restrained decoration
+    anchors:
+      '1': rooms with sliding paper-screen walls whose sparse, uncluttered character is recognisable
+      '0.5': sliding paper screens present but the sparse character is not recognisable, or sparse rooms without sliding screens
+      '0': missing, or the interior unrelated to the description
+    evidence:
+    - c13.p004
+    - c16.p014
+    - c16.p018
+  - id: VP2
+    cat: style
+    item: 'The precinct shows its two looks: ornate gilded and lacquered buildings among huge dark cryptomeria, and above them the plain tomb
+      in the twilight of the trees'
+    anchors:
+      '1': ornate gilded and lacquered buildings in a forest of tall dark trees, and a visibly plain, shaded tomb
+      '0.5': one of the two looks only, or both without the forest setting
+      '0': missing, or the precinct looks plain throughout
+    evidence:
+    - - c14.p016
+      - c14.p019
+    - c14.p012
+  - id: VP3
+    cat: style
+    item: 'The whole place looks like a deep mountain valley: steep, densely wooded mountains rise close around the house, the village and Yumoto,
+      with a rushing river below the village'
+    anchors:
+      '1': steep wooded mountain slopes visibly enclosing the base and Yumoto, and the river below the village shown as fast-flowing water
+      '0.5': mountains present but bare, distant or only around one location, or the river shown as still water
+      '0': missing, or the place sits on open flat land
+    evidence:
+    - c13.p003
+    - c14.p004
+    - c15.p008
+play_suggestions:
+  FP1:
+  - 'walk from the house down its steps to the road and into the village: is it a continuous route?'
+  - from the village, find the way to the shrine approach without a menu jump
+  FP2:
+  - 'walk the approach from the bridge: do the courts follow one after another, each up steps?'
+  - try to reach an inner court without passing the outer ones
+  - 'from the last court, find the way out and up to the tomb: is it above and behind the shrines?'
+  FP3:
+  - 'travel from the base to Yumoto: is it joined to the base by a track?'
+  - 'in Yumoto, walk to the edges: do the lake and the mountains close the village in? find the spring'
+  robustness:
+  - 'walk off the routes into the mountain slopes, the river and the stream channels: are you stuck, or does the place hold up?'
+  - go back and forth between the house, the shrines and Yumoto several times
+  - leave the game in the shrine courts and come back
+v4_map:
+  U1: CR1
+  U2: CR2
+  U3: CR3, CR4 (traversal order scored in FP2)
+  U4: CR5
+  U5: CR4 (near-empty chapel), VP2 (splendour vs plain tomb look)
+  FP1: FP1
+  FP2: FP2 (existence of courts and tomb moved to CR4, CR5)
+  FP3: FP3, CR6 (existence of Yumoto split off)
+  VP1: CR1 (house on terrace, mountain behind; garden water dropped as minor feature)
+  VP2: VP1
+  VP3: CR2
+  VP4: CR3
+  VP5: VP2
+  VP6: 'dropped: editing (winter setting, a modify requirement, moved to editing_seed.yaml as VP4)'
+provenance:
+  source_yaml: T-TO-txt_78542cb1c0a7.e1.yaml
+  source_sha256: ef078685fd3acdaacafdbdd15a504e08c173be93c84f9c6d2e0ed57cb7ae37d4
+  size_waiver: null
+  size_max: null
+  sources:
+  - ref: t01
+    title: Unbeaten Tracks in Japan
+    author: Isabella L. Bird
+    text_id: txt_78542cb1c0a7
+    excerpt_id: e1

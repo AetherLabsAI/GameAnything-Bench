@@ -1,0 +1,164 @@
+# Copied from the original pool_voxelibre.yaml (2026-10-30) + game / version / default_picks for gab.
+# default_picks: used for a task whose regression.yaml has no checked picks yet; cheap, uncorrelated probes.
+# Base-capability pool, VoxeLibre on Luanti (v0.2, verified in game 2026-10-30, VoxeLibre version 0.92.4, Luanti version 5.17.0)
+# Same rules as pool_minecraft.yaml: atomic base capabilities a task's change could break. Pass = same result as a vanilla
+# instance. Per task the drafter picks the 4-6 relevant ones and may add 0-2 task-specific items; a maintainer checks. Avoid
+# correlated picks (e.g. VL-RULE-SPAWNING and VL-MOB-SPAWNING: doMobSpawning=false fails both).
+# Mod surface: Luanti Lua world mods (copied into <world>/worldmods/).
+# Probes: gab/game/voxelibre/probes.py (VLProbes); `probe: x.y` = field y of probe x (fields may be joined with +).
+# Runtime: real singleplayer client (in-process server) on a lab seat display, fixed map seed 20261030, world mod `vlprobe` as
+# the probe bridge; walking / jumping / sprinting / eating / elytra use real keys and mouse (xdotool).
+# A/A calibration 2026-10-30: three pairs of fresh vanilla instances (A/B, C/D, E/F); the final pair E/F (final probes) agrees on
+#   all 21 probes. Noise -> rules: terrain 1.0-1.6% of columns differ (threshold 8%); Lua step cost 0.9-1.5 ms (<= 2x or +3 ms);
+#   day speed 0.000831-0.000841 day/s (+-25%); walk 6.54-6.77 blocks per 1.5 s (+-25%; walk = min of 2 tries, sprint = max of 2,
+#   one try in ~8 was off); fall damage 9 in every run; night spawns 5-15 in 45 s (fail only at 0; 30 s by day gave 0 once).
+#   Random in vanilla, so not compared exactly: the join / respawn spot (no world spawn set: the engine picks a random surface
+#   spot, seen up to ~110 blocks apart -> "on the ground within 128 of the origin") and the recovery-compass recipe output frame
+#   (random on load; normalised).
+# Load caveat: the client-physics probes (VL-MOVE, VL-FALL, VL-HUNGER, VL-DEATH) need an unstarved client. On sandbox B with
+#   three other GPU games on the pod (load ~30, GPU 100%), the client stopped moving or missed inputs (walk 0, no fall damage)
+#   and some starts failed their handshake (retried 3x now). Run VoxeLibre probes when the pod is quiet, or treat a vanilla
+#   baseline whose client probes all failed as "could not test".
+# Negative checks 2026-10-30 (one deliberately breaking world mod each, vs a fresh vanilla instance): neg_slow (walk speed x0.5)
+#   fails VL-MOVE only; neg_nomobspawn (gamerule doMobSpawning off) fails VL-RULE-SPAWNING only (+ the blocked VL-MOB-SPAWNING);
+#   neg_nocraft (crafting-table recipe removed) fails VL-CRAFT only; neg_noredstone (lamp ignores power) fails VL-REDSTONE only;
+#   neg_noelytra fails the blocked VL-ELYTRA. Evidence: the verification logs (REPORT.md).
+game: voxelibre
+version: 0.92.4 (Luanti 5.17.0)
+default_picks:
+- VL-JOIN-STATE
+- VL-RULE-DAMAGE
+- VL-DIG-PLACE
+- VL-CRAFT
+- VL-PERF
+# gate (gab/eval/regression.py): the STABLE item (no real crash / hang, no new fatal error kind) + the host-present
+# item(s): the stock content they reach must still be there on the modded game (numbers NOT compared with vanilla; only a mod that
+# removes / replaces the host game wholesale fails). Scores are 0 unless the gate passes. Not chosen per task.
+gate: [VL-STABLE, VL-JOIN-STATE, VL-DIG-PLACE]
+
+always:
+- id: VL-STABLE
+  capability: no crash, and no more ERROR lines in debug.txt than vanilla, through the whole evaluation
+  probe: log_errors
+  status: ready
+pool:
+- id: VL-RULE-DAYCYCLE
+  capability: gamerule doDaylightCycle unchanged
+  probe: game_rules.doDaylightCycle
+  status: ready
+- id: VL-RULE-WEATHERCYCLE
+  capability: gamerule doWeatherCycle unchanged
+  probe: game_rules.doWeatherCycle
+  status: ready
+- id: VL-RULE-SPAWNING
+  capability: gamerule doMobSpawning and settings mobs_spawn / only_peaceful_mobs unchanged
+  probe: game_rules.doMobSpawning+@mobs_spawn+@only_peaceful_mobs
+  status: ready
+- id: VL-RULE-KEEPINV
+  capability: gamerule keepInventory unchanged
+  probe: game_rules.keepInventory
+  status: ready
+- id: VL-RULE-REGEN
+  capability: gamerule naturalRegeneration unchanged
+  probe: game_rules.naturalRegeneration
+  status: ready
+- id: VL-RULE-DAMAGE
+  capability: damage on (enable_damage) and gamerules fallDamage / fireDamage / drowningDamage unchanged
+  probe: game_rules.@enable_damage+fallDamage+fireDamage+drowningDamage
+  status: ready
+- id: VL-RULE-GRIEFING
+  capability: mobs_griefing, gamerules tntExplodes / doFireTick / doMobLoot unchanged
+  probe: game_rules.@mobs_griefing+tntExplodes+doFireTick+doMobLoot
+  status: ready
+- id: VL-RULE-HUNGER
+  capability: the hunger mechanic is on (mcl_enable_hunger)
+  probe: game_rules.@mcl_enable_hunger+@hunger_active
+  status: ready
+- id: VL-DAYNIGHT
+  capability: the day-night cycle runs at vanilla speed (+-25%)
+  probe: time_advances
+  status: ready
+- id: VL-WEATHER
+  capability: weather can change (rain starts when triggered, and clears)
+  probe: weather_changes
+  status: ready
+- id: VL-MOBS
+  capability: passive and hostile mobs can exist (a pig and a zombie placed near the player stay)
+  probe: mobs_exist
+  status: ready
+- id: VL-MOB-SPAWNING
+  capability: natural mob spawning really runs (mobs appear around the player at night)
+  probe: mob_spawning
+  status: blocked
+  note: probe works (counts mobs_mc entities the game adds in 45 s at midnight, nearby mobs cleared first for the caps) but vanilla gives 0 in about 3 of 10 runs (otherwise 2-15), so 0 cannot tell broken
+    from unlucky; 'spawning is switched on' is covered by VL-RULE-SPAWNING (negative check passed)
+- id: VL-MAPGEN
+  capability: terrain around the origin unchanged (not for tasks that build near the origin)
+  probe: terrain_spawn
+  status: ready
+- id: VL-PERF
+  capability: server step not much slower than vanilla (Lua cost of a step <= 2x or +3 ms)
+  probe: perf
+  status: ready
+- id: VL-JOIN-POSITION
+  capability: a new player starts on the ground near the origin (vanilla spawn search)
+  probe: player_start.near_origin+on_ground
+  status: ready
+- id: VL-JOIN-INVENTORY
+  capability: a new player starts with an empty 36-slot inventory and a 9-slot hotbar
+  probe: player_start.items+main_size+hotbar
+  status: ready
+- id: VL-JOIN-STATE
+  capability: a new player starts in survival with full health, food, saturation and breath
+  probe: player_start.game_mode+health+hp_max+food+saturation+breath
+  status: ready
+- id: VL-MOVE
+  capability: walking (speed), sprinting and jumping onto a block work (real keys)
+  probe: move_jump
+  status: ready
+- id: VL-FALL
+  capability: fall damage as vanilla (12-block drop)
+  probe: fall_damage
+  status: ready
+- id: VL-HUNGER
+  capability: 'a hungry player can eat (hold use with bread: bread used, food goes up)'
+  probe: hunger_eat
+  status: ready
+- id: VL-DIG-PLACE
+  capability: the player can place and dig blocks, and dug blocks drop
+  probe: place_break
+  status: ready
+- id: VL-DIG-TIMES
+  capability: dig times, diggability and drops with the hand and vanilla tools unchanged
+  probe: dig_times
+  status: ready
+- id: VL-CRAFT
+  capability: key crafting / smelting / fuel recipes give vanilla results, and no vanilla recipe is lost
+  probe: crafting
+  status: ready
+- id: VL-FURNACE
+  capability: a furnace really smelts (raw iron + coal -> iron ingot)
+  probe: furnace_smelts
+  status: ready
+- id: VL-CONTAINERS
+  capability: a chest has 27 slots and keeps its items
+  probe: containers
+  status: ready
+- id: VL-REDSTONE
+  capability: redstone works (lever -> dust -> lamp lights and goes off again)
+  probe: redstone
+  status: ready
+- id: VL-COMBAT
+  capability: a punch damages a mob
+  probe: combat
+  status: ready
+- id: VL-ELYTRA
+  capability: elytra gliding starts on a jump while falling
+  probe: elytra_glide
+  status: blocked
+  note: probe works when the client cooperates (glides in ~6 of 10 vanilla runs; with the elytra group removed it never glides) but activation depends on client-side timing of the real space key after a
+    teleport (client sometimes does not start the fall, or the jump is missed), 3 retries were not enough; needs a server-side way to drive the jump control
+- id: VL-DEATH
+  capability: dying behaves like vanilla (items drop where the player died, respawn alive near the origin)
+  probe: death_respawn
+  status: ready

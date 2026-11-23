@@ -1,0 +1,44 @@
+# Reference material: fetched from the HF dataset into $GAB_MEDIA_DIR/<task>/ by `gab media fetch` (sha256 checked).
+# The agent gets the files only (no title, author, caption or source): this file is never shown to it.
+task_id: T-VO-vid_da7d05244fde.t1
+refs:
+- id: c01
+  kind: video
+  file: clip_01.mp4
+  video_id: vid_da7d05244fde
+  source:
+    title: 24 - Togges_-_Gameplay_Trailer
+    url: null
+    channel: null
+    youtube_id: null
+  range:
+    start: 5.0
+    end: 36.4
+    text: 0:05.00-0:36.40
+  duration_s: 31.4
+  size_bytes: 6304855
+  format: mp4 H.264 720p, AAC audio
+  hf_path: media/T-VO-vid_da7d05244fde.t1/clip_01.mp4
+  sha256: 415a83dc7becdfc7915eec8610330ef1d0ce180ef3307ca6be33a5a13a486231
+  rights_note: Official promotional trailer of a commercial game. Use as a private reference only; do not redistribute the footage or reproduce
+    Togges art, levels or names in the built game.
+- id: c02
+  kind: video
+  file: clip_02.mp4
+  video_id: vid_da7d05244fde
+  source:
+    title: 24 - Togges_-_Gameplay_Trailer
+    url: null
+    channel: null
+    youtube_id: null
+  range:
+    start: 36.4
+    end: 88.0
+    text: 0:36.40-1:28.00
+  duration_s: 51.6
+  size_bytes: 11322042
+  format: mp4 H.264 720p, AAC audio
+  hf_path: media/T-VO-vid_da7d05244fde.t1/clip_02.mp4
+  sha256: d1747f65324d8eb9b97da56b154454ce1b58e304d66e06057f26dea993e4e587
+  rights_note: Official promotional trailer of a commercial game. Use as a private reference only; do not redistribute the footage or reproduce
+    Togges art, levels or names in the built game.

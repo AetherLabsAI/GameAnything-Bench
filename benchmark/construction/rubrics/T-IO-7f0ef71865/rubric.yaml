@@ -1,0 +1,180 @@
+# GameAnything-Bench scoring material: never shown to agents during a trial.
+task_id: T-IO-7f0ef71865
+source_inventory:
+- 'img01: a mine entrance in colour: an arched stone portal with a closed grid gate, set in a cut between two sloping retaining walls; a single
+  narrow-gauge track runs out of the gate across the grass; beside it a grey steel cart (number 17, crossed-hammers sign) heaped with dark coal-like
+  lumps stands on a short separate piece of rail; a traffic cone at the left'
+- 'img02: black-and-white historical photo inside a rock tunnel: several tracks on sleepers curve and converge across the floor; two carts heaped
+  with broken rock stand on the left lines, an empty steel cart with a hook on the right line in the foreground; a man in a hat beside timber
+  structures at the back; pipes and wires along the roof, a diagonal cable or wire across the view, light from the tunnel mouth at the left'
+- 'img03: a museum cart cut out on white: a wooden box wagon with iron bands, a small plate, stencilled number 536, a hook coupling at the end,
+  four small iron wheels on a wooden frame, heaped with large reddish-yellow ore rocks'
+- 'img04: inside a rough rock gallery: a rusty steel tub cart on small wheels holding grey broken rock, with a ring / link coupling at its end;
+  no rail visible under it'
+- 'img05: outdoors under trees: a line of black riveted steel carts standing one behind another on a narrow-gauge track on sleepers and gravel;
+  the second cart is loaded with timber planks, others with planks or sacks; the track curves away'
+- 'img06: sepia historical photo in an open pit: four men push a steel cart on a wheeled frame along rails; other rails cross and run beside it,
+  an iron plate lies under the cart at the rail junction; earth banks behind'
+instructions_meta:
+  requirement_groups:
+    cart movement and control:
+    - FP1
+    - FP2
+    cargo and its readable state:
+    - CR1
+    - FP3
+    - VP2
+    track arrangement:
+    - CR2
+    haulage route:
+    - FP4
+    mine spaces:
+    - CR3
+    - VP1
+  explicit_requirements:
+  - type: specify
+    text: The track should be a network like in the pictures, with several lines that join or cross, not just one single line.
+    covers:
+    - CR2
+rubric:
+  content_realization:
+  - id: CR1
+    item: The game contains mine carts that hold a load of mined material, and both loaded and empty carts occur
+    anchors:
+      '1': carts that are containers for mined material (ore, rock, coal), with loaded and empty carts both present
+      '0.5': carts that hold a load, but loaded and empty carts are not both present, or the load is not mined material
+      '0': no carts, or carts that carry nothing
+    evidence:
+    - 'img02: loaded carts left, empty cart right'
+    - img03
+    - img04
+    - img01
+  - id: CR2
+    item: 'The track is a network, not one line: several lines join or cross'
+    anchors:
+      '1': several track lines that join or cross one another
+      '0.5': several separate tracks that do not connect
+      '0': a single line only, or no track
+    evidence:
+    - img02
+    - img06
+  - id: CR3
+    item: 'The mine layout: an underground tunnel or gallery with the track along its floor, and an entrance through which that track runs out
+      to the surface'
+    anchors:
+      '1': underground workings with track, and an entrance where the same track passes from the tunnels to the outside
+      '0.5': underground track and an entrance both exist but the track does not run through the entrance between them, or only one of the two
+        exists
+      '0': no underground track space
+    evidence:
+    - img01
+    - 'img02: light from the tunnel mouth'
+    - img04
+  functions_playability:
+  - id: FP1
+    item: 'Carts run on the track: they are guided by it and cannot travel where there is no track'
+    anchors:
+      '1': carts stay on and follow the track wherever it goes
+      '0.5': carts follow the track mostly but leave it or float off it in some places
+      '0': no rail-bound carts
+    evidence:
+    - img01
+    - img02
+    - img05
+  - id: FP2
+    item: 'The player moves the carts: by their own action the player makes a cart move along the track'
+    anchors:
+      '1': a cart moves along the track by the player's own input
+      '0.5': carts move along the track but only on their own or on a script, not by the player's action
+      '0': carts cannot be moved
+    evidence:
+    - img06
+  - id: FP3
+    item: A loaded cart keeps its load while it moves along the track
+    anchors:
+      '1': the load stays with the cart as it moves along the track
+      '0.5': the load stays only some of the time, or is lost or reset when the cart moves
+      '0': carts carry no load in play
+    evidence:
+    - img02
+    - img03
+    - img04
+  - id: FP4
+    item: 'Hauling route: a loaded cart can be brought along the track from the underground workings out through the entrance to the surface'
+    anchors:
+      '1': a loaded cart can be taken along the track from inside the mine to the outside
+      '0.5': a cart can be moved only part of the way, e.g. inside the mine but not out through the entrance
+      '0': no cart can be taken between the workings and the entrance
+    evidence:
+    - img01
+    - img02
+  visual_presentation:
+  - id: VP1
+    cat: spatial
+    item: 'The underground play space looks like a mine: a rough rock tunnel or gallery around the track'
+    anchors:
+      '1': the track and carts sit in a space that clearly reads as a rock-cut mine tunnel or gallery
+      '0.5': underground, but it reads as a generic cave or room rather than a mine tunnel
+      '0': the track space does not look underground, or there is none
+    evidence:
+    - img02
+    - img04
+  - id: VP2
+    cat: presentation
+    item: 'A cart''s load state is readable: loaded and empty carts are told apart at a glance'
+    anchors:
+      '1': loaded and empty carts distinguishable at a glance, by the load in the cart or another clear indicator, without opening a menu
+      '0.5': the load state only in a menu / tooltip that must be opened, or hard to see
+      '0': load state not shown
+    evidence:
+    - img02
+    - img03
+    - img04
+play_suggestions:
+  FP1:
+  - follow a cart round a curve and over the full track
+  - try to push or drive a cart past the track end or off a curve
+  FP2:
+  - start a cart, stop it halfway, start it again
+  - try to move a cart in both directions
+  FP3:
+  - 'fill an empty cart and move it: does the load stay?'
+  - 'empty it at the destination: does anything count it?'
+  FP4:
+  - take a loaded cart from deep in the mine to the entrance and check for feedback
+  - 'deliver a second load: does play continue?'
+  robustness:
+  - put two carts head-on on one line
+  - leave a loaded cart on the track, leave the area and come back
+  - break or remove a piece of track under a moving cart
+  - couple two or three carts, if possible, and move them through a curve
+  - at a junction, if any, send one cart onto each line
+v4_map:
+  U1: 'dropped: mechanism already scored by FP1; carts and track exist via CR1, CR2'
+  U2: 'dropped: peripheral (couplings are a form; joined movement not shown or scored)'
+  U3: CR1
+  U4: CR3
+  U5: CR2
+  FP1: FP1
+  FP2: FP2
+  FP3: FP3, CR1 (existence of loaded and empty carts split off)
+  FP4: FP4
+  VP1: CR3 (tunnel with track exists), VP1 (looks like a mine tunnel)
+  VP2: CR3
+  VP3: VP2
+  VP4: 'dropped: editing split (scored only the user''s snowy-surface modification; moved to editing_seed.yaml)'
+provenance:
+  source_yaml: T-IO-7f0ef71865.yaml
+  source_sha256: 633a2cc19d755389b10a3840e11e5b4f7d137c447c6aae6cbacdf719277d3267
+  size_waiver: null
+  size_max: null
+  sources:
+  - refs:
+    - img01
+    - img02
+    - img03
+    - img04
+    - img05
+    - img06
+    bundle: 7f0ef71865
+    title: 矿井矿车：挖矿装车、沿轨道运出

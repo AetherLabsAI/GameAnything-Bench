@@ -1,0 +1,8 @@
+name=GAB Beacon Keeper
+portrait=images/portraits/male02.png
+animations=animations/npcs/peasant_man1.txt
+talker=true
+
+[dialog]
+topic=The beacon
+him=The beacon is lit. This line comes from the GAB state test mod.

@@ -1,0 +1,78 @@
+# Copied from the original pool_valheim.yaml (2026-10-31) + game / version / default_picks for gab.
+# Verified in game 2026-10-30, Valheim 1.0.21 Linux + BepInExPack_Valheim 5.4.2351 + ValheimBridge 0.2.0 (pool A/A x3 + 2 negatives,
+#   in the Steam sandbox).
+# gab port: gab/game/valheim/probes.py (= probes_valheim.py on a gab Seat), bridge/driver.py unchanged, bridge/vhp.sh with its
+#   root / Steam folder / BepInEx source as parameters (gab unpacks BepInExPack_Valheim itself: the new Steam sandbox's Valheim has no
+#   BepInEx in its folder).
+# NOT YET RUN LIVE through gab (2026-10-31): the Steam games move from the old Steam sandbox to the test sandbox; `gab selfcheck valheim`
+#   (A/A + NegRun / NegClub) is the first thing to run there. The recorded 10-30 sessions pass the gab compare (tests/test_game_valheim.py).
+# Change for gab: VH-CRAFT's probe is written "craft,content.recipes" (was "content.recipes,craft"): the framework runs the probes
+#   named by the part of `probe:` before the first "." (probes.groups_of maps build / craft -> the group buildcraft, saveload -> save).
+# VH-COMBAT tolerance change (gab 2026-10-31): club_first_hit (0.35, 2) -> (0.6, 2): Valheim rolls a random skill
+#   factor per hit at Clubs level 0 (vanilla first hits 13.1-19.7; 9.7 in a NegRun run that changes only the run speed).
+# Re-verified on the test sandbox 2026-10-31 (Steam build 26249040, gab selfcheck run 20261031-234111): A/A 15/15 (also equal to the 10-30
+#   sessions); with the club_first_hit change above (RECOMPUTED from that run's saved sessions; tolerance approved 2026-11-01) NegRun -> VH-MOVE,
+#   NegClub -> VH-CONTENT + VH-CRAFT; with the old tolerance both negatives also failed VH-COMBAT.
+# default_picks: used for a task whose regression.yaml has no checked picks yet; every item comes from the same
+#   ~7 min session.
+
+game: valheim
+version: Valheim 1.0.21 (Steam 892970, Linux) + BepInExPack_Valheim 5.4.2351 + ValheimBridge 0.2.0
+default_picks:
+- VH-MOVE
+- VH-COMBAT
+- VH-BUILD
+- VH-CRAFT
+- VH-SAVE
+- VH-PERF
+
+# Base-capability pool, Valheim (v0.2, verified in game 2026-10-30, Valheim 1.0.21 Linux, Steam app 892970, BepInExPack_Valheim
+# 5.4.2351, ValheimBridge 0.2.0; the Steam install in the Steam sandbox)
+# Same rules as pool_minecraft.yaml: atomic base capabilities a task's change could break. Pass = same result as a vanilla
+# instance. Per task the drafter picks the 4-6 relevant ones and may add 0-2 task-specific items; a maintainer checks. Avoid correlated
+# picks: VH-CONTENT already flags changed vanilla prefabs / recipes / hammer pieces / sampled item and creature stats; VH-CRAFT
+# shares the recipe list with it.
+# Mod surface: BepInEx 5 C# plugins (net462, Harmony), assets.
+# Probes (origin): probes_valheim.py (host side) + probes_valheim_driver.py (runs in the sandbox, JSON-RPC to the lab's
+#   ValheimBridge: its menu-less session, actions (speed_sample, attack, place, craft, mount, sail ...) and fixtures/queries
+#   (spawn, teleport, give, apply_damage, portal_tag, locations, biome_finder, spawn_data, item_stats ...)). `probe: x.y` = field y
+#   of probe x; `a,b` = all of these probes must pass.
+# Runtime: a PRIVATE game folder per instance (launcher, UnityPlayer.so, BepInEx core + doorstop copied from the Steam install,
+#   valheim_Data symlinked; BepInEx/plugins = ValheimBridge + the mods under test only), a local save folder (VHBRIDGE_SAVEDIR,
+#   never Steam cloud, never the user's saves), its own Unity log, bridge ports 6534/6634, private Xvfb :151 + VirtualGL. One session
+#   = run1 (fresh world "gaprobe" seed gaprobe01, character "gaprobe", all probes, then a marker chest + items and save) -> run2 (the
+#   same world again: read them back). ~6.5 min per session. The game runs in real time (frame-rate dependent numbers get ranges).
+# A/A calibration 2026-10-30 (3 fresh vanilla sessions aa1/aa2/aa3; all pairs pass all 15 items): identical content (4644 prefabs,
+#   479 recipes, 398 hammer pieces), worldgen (12366 locations, start temple at (1,-3)), inventory, spawn tables, build (13 of 14
+#   poles stand, top 25 m), craft, portal, weather states, run/jump/swim skills, save. Close: jog top 4.0 / run top 7.0 m/s, run
+#   stamina 24 / 3 s, jump 1.52 m / 10 stamina, fall 11.6 from 6 m, swim 1.74-1.75 m/s, first club hit 17.8-18.1, blunt 20 -> 19,
+#   raft half sail 11.6-11.7 m in 8 s, 146-183 fps, 2 BepInEx error lines (libParty.so) in every run. Not compared (unstable):
+#   average run speed (3.8-6.2), creature AI reaction, shield block stamina (0 or 10), Clubs/Blocking XP.
+# Negative checks 2026-10-30 (vs aa1): NegRun (player run speed x0.6) -> only VH-MOVE (run 7.0 -> 4.2); NegClub (Club recipe removed
+#   from ObjectDB) -> VH-CONTENT + VH-CRAFT (they share the recipe list). A first NegRun run before the jump retry also lost the
+#   jump (probe flake, fixed: up to 3 tries).
+# Evidence: the verification logs (results/, reproduce.sh, bridge/, negative_mods/, screenshots/).
+
+# gate (gab/eval/regression.py): the STABLE item (no real crash / hang, no new fatal error kind) + the host-present
+# item(s): the stock content they reach must still be there on the modded game (numbers NOT compared with vanilla; only a mod that
+# removes / replaces the host game wholesale fails). Scores are 0 unless the gate passes. Not chosen per task.
+gate: [VH-STABLE, VH-MOVE, VH-BUILD]
+
+always:
+  - {id: VH-STABLE, capability: "no crash or boot failure in the two game starts, and no more BepInEx [Error]/[Fatal] log lines than vanilla (vanilla: 2 x libParty.so DllNotFound)", probe: log_errors, status: ready}
+
+pool:
+  - {id: VH-CONTENT, capability: "every vanilla prefab, recipe and hammer piece still exists unchanged (additions allowed); 35 sampled items (tools, weapons, armour, materials, food) and 13 creatures (Boar ... Eikthyr, Elder, Serpent) keep their stats", probe: content, status: ready}
+  - {id: VH-MOVE, capability: "walking/jogging (top 4.0 m/s), running (top 7.0 m/s, 24 stamina in 3 s), jump (1.5 m, 10 stamina), fall damage (11.6 from 6 m), swimming (1.75 m/s, ~18 stamina in 3 s)", probe: "move,swim", status: ready}
+  - {id: VH-COMBAT, capability: "a club hit on a Greydwarf (40 health) does vanilla damage (17.8-18.1); 20 blunt damage on the player takes vanilla health (19, rag armour). Shield blocking is recorded but not compared (unstable in A/A)", probe: combat, status: ready}
+  - {id: VH-CREATURES, capability: "the vanilla spawn tables (every Meadows spawner with its day/night, level, group and interval settings; the set of spawnable creatures in all biomes; the creature AI reaction is recorded but not compared: unstable in A/A)", probe: creatures, status: ready}
+  - {id: VH-BUILD, capability: "the hammer places a workbench (10 wood) through the game's placement path; structural support: a stack of 14 wood poles keeps 13 (25 m), the top one falls", probe: build, status: ready}
+  - {id: VH-CRAFT, capability: "every vanilla recipe exists unchanged (additions allowed); at the workbench a Club is crafted for 6 wood, a recipe without its materials fails, a Torch is crafted by hand", probe: "craft,content.recipes", status: ready}
+  - {id: VH-SAIL, capability: "a Raft spawned at sea can be boarded at the helm and sails at half speed with a fixed wind", probe: sail, status: ready}
+  - {id: VH-WEATHER, capability: "world time runs at 1 s per s; skipping time moves the day/night state and the Meadows environment as in vanilla (same states at the same skips)", probe: weather, status: ready}
+  - {id: VH-SKILLS, capability: "running, jumping and swimming raise their skills by the vanilla amounts during the probes (Clubs / Blocking XP are recorded, not compared: they depend on the creature AI)", probe: skills, status: ready}
+  - {id: VH-PORTAL, capability: "two portals with the same tag connect, a portal with another tag stays unconnected (walking through was not probed: the bridge's walk stops at the frame)", probe: portal, status: ready}
+  - {id: VH-WORLDGEN, capability: "the seeded world is identical: all 12366 location instances (names and positions, start temple), the nearest spots of each biome from the centre, ground heights and biomes around spawn (not for tasks that change world generation)", probe: worldgen, status: ready}
+  - {id: VH-INVENTORY, capability: "a new character starts with the vanilla items (torch, rag tunic), health / stamina / carry weight and skill list", probe: inventory, status: ready}
+  - {id: VH-SAVE, capability: "a placed chest and inventory items survive save, quit and reload of the world and character", probe: "saveload", status: ready}
+  - {id: VH-PERF, capability: "frame rate in the world not much lower than vanilla (>= 70% of vanilla fps, uncapped on the GPU)", probe: perf, status: ready}

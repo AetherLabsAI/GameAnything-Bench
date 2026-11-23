@@ -1,0 +1,6 @@
+Items: {
+	GabSword: {
+		DisplayName: GAB Sword
+		Tooltip: A template sword: 10 wood at a work bench
+	}
+}

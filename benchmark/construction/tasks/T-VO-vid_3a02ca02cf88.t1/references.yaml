@@ -1,0 +1,24 @@
+# Reference material: fetched from the HF dataset into $GAB_MEDIA_DIR/<task>/ by `gab media fetch` (sha256 checked).
+# The agent gets the files only (no title, author, caption or source): this file is never shown to it.
+task_id: T-VO-vid_3a02ca02cf88.t1
+refs:
+- id: c01
+  kind: video
+  file: clip_01.mp4
+  video_id: vid_3a02ca02cf88
+  source:
+    title: 01 - Subway Surfers But in RTX ON ｜ PARIS
+    url: null
+    channel: null
+    youtube_id: null
+  range:
+    start: 4.0
+    end: 69.0
+    text: 0:04.00-1:09.00
+  duration_s: 65.0
+  size_bytes: 21104641
+  format: mp4 H.264 720p, AAC audio
+  hf_path: media/T-VO-vid_3a02ca02cf88.t1/clip_01.mp4
+  sha256: c6f818d1aac8b6ada53e214b804013377a7953a101541f440771fb228d447aa6
+  rights_note: Fan-made or concept render styled after Subway Surfers, with a TeaserPlay credit card at the end. Use as a private reference only
+    and do not redistribute. Do not copy the jacket logo, the 'HIPHOP' graffiti or the character design.

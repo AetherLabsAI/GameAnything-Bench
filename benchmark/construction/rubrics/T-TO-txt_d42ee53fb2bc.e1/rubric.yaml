@@ -1,0 +1,354 @@
+# GameAnything-Bench scoring material: never shown to agents during a trial.
+task_id: T-TO-txt_d42ee53fb2bc.e1
+source_inventory:
+- 'c02.p001-c02.p005: the narrator insists that Carrow, Grimwald''s partner, has been dead for years; Grimwald was his sole executor and mourner,
+  did business on the funeral day and kept the firm''s name ''Grimwald and Carrow'''
+- 'c02.p006-c02.p009: portrait of Grimwald: a cold, grasping, solitary miser whom nobody greets and who likes being shunned'
+- 'c02.p010-c02.p011: Christmas Eve afternoon, dark and foggy in the City; Grimwald in his counting house keeps watch on his clerk, who copies
+  letters in a cold cell by a one-coal fire'
+- 'c02.p012-c02.p027: Grimwald''s nephew wishes him a merry Christmas; Grimwald calls Christmas humbug; the nephew defends it as a kind, charitable
+  time; the clerk applauds and is threatened with dismissal'
+- 'c02.p028-c02.p043: the nephew invites him to dinner tomorrow; Grimwald refuses and mocks his marriage; the nephew leaves without anger and
+  greets the clerk; Grimwald sneers at the clerk''s fifteen shillings a week and family'
+- 'c02.p044-c02.p056: two gentlemen collecting for the poor ask for a gift; Carrow died seven years ago this night; Grimwald asks whether the
+  prisons and workhouses are still working'
+- 'c02.p057-c02.p065: he gives nothing: the poor should go to the workhouses, and those who would rather die should ''decrease the surplus population'';
+  the gentlemen withdraw'
+- 'c02.p066-c02.p069: fog and cold thicken; street fires and lit shops as the city prepares for Christmas; Grimwald drives a carol singer from
+  his keyhole'
+- 'c02.p070-c02.p078: at closing time Grimwald grudgingly gives the clerk Christmas Day off, to come in earlier the next morning; the clerk slides
+  on Cornhill and runs home to Camden Town'
+- 'c02.p079-c02.p084: dinner in a tavern; his gloomy chambers, once Carrow''s, at the end of a dark yard; the door knocker briefly shows Carrow''s
+  face'
+- 'c02.p085-c02.p091: up the wide dark stairs, he checks every room and double-locks his door; at his small fire he sees Carrow''s face in every
+  tile; ''Humbug!'''
+- 'c02.p092-c02.p096: every bell in the house rings; a chain clanks up from the cellar and Carrow''s ghost passes through the locked door'
+- 'c02.p097-c02.p109: the transparent ghost, a chain of cash boxes, keys, padlocks, ledgers, deeds and purses about its middle, names itself as
+  his partner and sits by the fire'
+- 'c02.p110-c02.p127: Grimwald doubts his senses and jokes; the ghost cries out and drops its jaw; Grimwald falls to his knees and believes'
+- 'c02.p128-c02.p136: the ghost''s law: a spirit that did not go out among its fellow men in life must wander after death; it wears the chain
+  it forged in life, and Grimwald''s own was as long seven years ago and has grown; it has no comfort to give and cannot rest'
+- 'c02.p137-c02.p151: seven years of travel and remorse; ''Mankind was my business''; it suffers most at Christmas'
+- 'c02.p152-c02.p165: it has often sat invisible beside him; it brings a chance of escaping its fate: three spirits will haunt him, the first
+  tomorrow when the bell tolls one, the second the next night, the third the night after at twelve'
+- 'c02.p166-c02.p172: the ghost floats out of the window into air full of chained phantoms who can no longer help the living; they fade; the door
+  is still locked; Grimwald falls asleep'
+- 'c03.p001-c03.p009: he wakes in darkness, the clock strikes twelve though he went to bed after two; unsure whether it was a dream, he waits
+  for one o''clock'
+- 'c03.p010-c03.p021: at one his bed curtains are drawn by the first spirit: a child-sized yet old figure with a jet of light from its head, an
+  extinguisher cap, holly and summer flowers, its form flickering'
+- 'c03.p022-c03.p039: it is the Ghost of Christmas Past (''your past''), come for his reclamation; it takes his arm and they pass through the
+  wall'
+- 'c03.p040-c03.p052: a country road on a winter day where he was a boy; schoolboys going home for Christmas, ''shadows of the things that have
+  been'' who cannot perceive them; a neglected child is left at the school'
+- 'c03.p053-c03.p063: the decaying school; his younger self alone, reading; the figures of his storybooks appear; Grimwald weeps and wishes he
+  had given the carol singer something'
+- 'c03.p064-c03.p079: another Christmas: his little sister Nell comes to take him home for good, their father being kinder now; the schoolmaster
+  sends them off; she died a woman, leaving one child, his nephew'
+- 'c03.p080-c03.p092: a city on Christmas Eve: the warehouse where he was apprenticed; old Haverstock stops work and the two apprentices clear
+  the floor for a ball'
+- 'c03.p093-c03.p096: the Haverstocks'' Christmas ball with a fiddler, family, staff and neighbours; the hosts wish everyone a merry Christmas
+  at the door'
+- 'c03.p097-c03.p108: the spirit belittles the few pounds Haverstock spent; Grimwald answers that a master''s power to make service happy is worth
+  a fortune, and wishes he could say a word to his clerk'
+- 'c03.p109-c03.p121: Grimwald in his prime, greed taking root; a young woman in mourning says a golden idol has displaced her; he defends the
+  pursuit of wealth'
+- 'c03.p122-c03.p131: she releases him from their old engagement because he has changed and weighs everything by Gain; they part'
+- 'c03.p132-c03.p138: he begs to go home; one more shadow: the same woman years later as a mother in a warm house full of children, her husband
+  arriving with presents; Grimwald thinks of the daughter he might have had'
+- 'c03.p139-c03.p151: the husband calls her Rosalind and says he saw Grimwald alone in his office while his partner lay dying; Grimwald wrestles
+  the spirit, presses the cap down on its light, and sinks asleep in his own bed'
+- 'c04.p001-c04.p004: he wakes at one again; no spirit comes, only a ruddy light; he follows it to the next room'
+- 'c04.p005-c04.p019: his room hung with greenery, a throne of Christmas food, and on it the Ghost of Christmas Present, a jolly giant with a
+  torch, in a green fur-trimmed robe, with an empty rusted scabbard; Grimwald asks to be taught and holds its robe'
+- 'c04.p020-c04.p023: Christmas morning in the snowy city: people shovelling snow, snowballs, crowded fruiterers'' and grocers'' shops'
+- 'c04.p024-c04.p040: churchgoers, and the poor carrying their dinners to the bakers; the spirit sprinkles blessings from its torch and calms
+  quarrels; it disowns those who do selfish deeds in its name; they go on, invisible'
+- 'c04.p041-c04.p049: the spirit blesses the four-roomed house of the clerk, Walter Pennock; Mrs. Pennock and the children prepare dinner; the
+  daughter Harriet arrives and hides'
+- 'c04.p050-c04.p058: Walter comes home carrying Little Ned, who has a crutch and an iron frame on his limbs; Ned''s thoughtful words at church;
+  Walter says he is growing stronger'
+- 'c04.p059-c04.p063: the goose and the pudding: a small dinner celebrated as a feast'
+- 'c04.p064-c04.p069: round the hearth Walter toasts ''A merry Christmas to us all''; Little Ned adds ''God bless us every one!''; Walter holds
+  his hand as if afraid to lose him'
+- 'c04.p070-c04.p076: asked whether Ned will live, the spirit sees an empty seat and a kept crutch: if these shadows remain unaltered by the Future,
+  the child will die; it throws Grimwald''s ''surplus population'' back at him'
+- 'c04.p077-c04.p085: Walter toasts Grimwald, ''the Founder of the Feast''; Mrs. Pennock calls him odious and stingy; the toast casts a shadow;
+  then talk of jobs, Harriet''s work, Ned''s song: a poor but happy family'
+- 'c04.p086-c04.p095: dusk and snow, fires and gatherings in every house; then a miners'' hut on a moor, a lighthouse on a reef, a ship at sea:
+  everywhere people keep Christmas'
+- 'c04.p096-c04.p115: the nephew Edmund''s house: they laugh at the uncle who called Christmas humbug; Edmund pities him, will invite him every
+  year and hopes it might make him leave his clerk fifty pounds'
+- 'c04.p116-c04.p118: music (the niece plays an air his sister knew, which softens him), blind man''s buff, forfeits; Grimwald joins the guessing
+  aloud, unheard'
+- 'c04.p119-c04.p129: he begs to stay; in the game Yes and No the answer is the nephew''s uncle; Edmund toasts Uncle Grimwald; the scene vanishes'
+- 'c04.p130-c04.p136: many more visits, always with a happy end; the night seems to hold the whole holiday; the spirit grows old: its life ends
+  at midnight'
+- 'c04.p137-c04.p147: from its robe two wretched children, the boy Ignorance and the girl Want, Man''s children: beware them, the boy most; ''Are
+  there no prisons? Are there no workhouses?''; the bell strikes twelve'
+- 'c04.p148-c05.p013: a hooded Phantom comes like mist: the Ghost of Christmas Yet to Come, shrouded in black, only one hand visible, silent,
+  pointing; Grimwald fears it most but follows'
+- 'c05.p014-c05.p040: on ''Change merchants joke about the cheap funeral of an unnamed dead man; two rich acquaintances dismiss the death in a
+  word; Grimwald cannot find himself in his usual place and hopes this means his changed life'
+- 'c05.p041-c05.p060: a foul quarter; in old Gabe''s junk shop the charwoman, the laundress Mrs. Marsh and the undertaker''s man meet to sell
+  things taken from the dead man'
+- 'c05.p061-c05.p077: the charwoman sells his bed curtains, blankets and burial shirt; they laugh that he frightened everyone away in life to
+  profit them in death; Grimwald sees that the case might be his own'
+- 'c05.p078-c05.p088: a dark room: the plundered body on a bare bed, unwatched and unwept; the Phantom points at the covered face, Grimwald cannot
+  lift the cover; he asks to see anyone moved by this death'
+- 'c05.p089-c05.p103: a young couple in debt to the dead man rejoice that he is dead: the only emotion his death causes is relief'
+- 'c05.p104-c05.p124: asked for tenderness in a death, the Phantom shows the Pennock home, very quiet: Little Ned has died; Walter has been to
+  his grave and weeps by the child upstairs'
+- 'c05.p125-c05.p140: Walter tells of the kindness of Grimwald''s nephew; the family promise never to forget Little Ned or quarrel among themselves'
+- 'c05.p141-c05.p150: Grimwald asks who the dead man was; in his own office another man sits; the Phantom leads him to an overgrown, crowded churchyard'
+- 'c05.p151-c05.p166: he asks whether these are shadows of what will be or only may be; on the neglected stone he reads his own name; he vows
+  to honour Christmas and live in the Past, the Present and the Future; the hand trembles; the Phantom shrinks into his bedpost'
+- 'c06.p001-c06.p012: in his own bed, the curtains still there: the shadows may be dispelled; he laughs and capers; church bells, a clear bright
+  morning'
+- 'c06.p013-c06.p034: a boy tells him it is Christmas Day (the spirits did it all in one night); he has the prize turkey bought and sent anonymously
+  by cab to Walter Pennock'
+- 'c06.p035-c06.p047: dressed in his best he walks out; he asks the charity gentleman''s pardon and pledges a large sum with back-payments; church
+  and streets give him pleasure'
+- 'c06.p048-c06.p059: he goes to his nephew''s house and asks to come to dinner; he is welcomed warmly'
+- 'c06.p060-c06.p069: next morning he catches Walter arriving late, feigns anger, then raises his salary and promises to help his family'
+- 'c06.p070-c06.p071: he does all that and more and becomes a second father to Little Ned, who did not die; he is known ever after as a man who
+  keeps Christmas well; ''God Bless Us, Every One!'''
+instructions_meta:
+  requirement_groups:
+    opening and setup:
+    - CR1
+    - CR2
+    - FP1
+    - VP2
+    story stages:
+    - CR3
+    - CR4
+    - FP2
+    turning point:
+    - CR5
+    - FP3
+    - VP3
+    - VP4
+    resolution and ending:
+    - FP4
+    settings and atmosphere:
+    - VP1
+  explicit_requirements:
+  - type: specify
+    text: Make it clear that the visions of the future only show what will happen if he stays the way he is, so changing his ways can still alter
+      them.
+    covers:
+    - CR5
+rubric:
+  content_realization:
+  - id: CR1
+    item: 'Grimwald is a rich, solitary miser who puts gain above people and turns away those around him: his nephew''s goodwill, his clerk''s
+      claims and the plea for the poor'
+    anchors:
+      '1': a wealthy, cold, solitary miser shown turning away the people around him (family, clerk, those asking for the poor)
+      '0.5': a rich or grumpy old man, without the coldness toward the people around him that the story is about, or turning away only one of
+        them
+      '0': missing
+    evidence:
+    - - c02.p006
+      - c02.p011
+    - - c02.p028
+      - c02.p043
+    - - c02.p057
+      - c02.p064
+  - id: CR2
+    item: 'Carrow''s ghost, Grimwald''s dead partner, states the world''s moral law: a man whose spirit never went out among his fellow men in
+      life must wander after death in remorse, bound by what he did, and Grimwald is on the same path'
+    anchors:
+      '1': the dead partner tells him that the selfish dead wander in remorse, bound by their own life, and that he is heading for the same doom
+      '0.5': a warning from the dead partner, but the doom not tied to how one lived, or not applied to Grimwald
+      '0': missing, or the ghost is only a scare with no law behind it
+    evidence:
+    - - c02.p128
+      - c02.p136
+    - c02.p141
+    - c02.p148
+    - c02.p170
+  - id: CR3
+    item: 'Three spirits are announced as Grimwald''s one chance to escape that fate, each with its own domain: the spirit of the past shows his
+      own earlier life, the spirit of the present how others keep this holiday, the spirit yet to come the time after his death'
+    anchors:
+      '1': three distinct spirits, introduced as his chance of escape, each showing its own time (his past, others' present holiday, the future
+        after his death)
+      '0.5': three spirits whose domains are confused or not told apart, or fewer than three, or no link to his chance of escape
+      '0': missing
+    evidence:
+    - c02.p156
+    - c02.p163
+    - c03.p026
+    - c04.p008
+    - c05.p006
+  - id: CR4
+    item: Walter Pennock, Grimwald's poorly paid clerk, heads a poor but loving family whose frail child, Little Ned, is the life at stake
+    anchors:
+      '1': the underpaid clerk, his poor and loving family, and frail Little Ned as the child whose life is in question
+      '0.5': the clerk or Little Ned present without the other, or Ned's frailty / the danger to him missing
+      '0': missing
+    evidence:
+    - c02.p043
+    - c04.p041
+    - c04.p050
+    - c04.p069
+    - c04.p085
+  - id: CR5
+    item: 'The foretold future is conditional: the game makes clear that the deaths the visions foretell follow only if Grimwald keeps his present
+      course, and that an altered life can change them'
+    anchors:
+      '1': the future is shown as what will happen if he stays as he is, and it is made clear that his change of conduct can alter it
+      '0.5': the future is presented as open to change, but not linked to his conduct
+      '0': missing, or the future is presented as fixed fate
+    evidence:
+    - c04.p071
+    - c05.p153
+    - c05.p162
+    - c06.p004
+    - c06.p070
+  functions_playability:
+  - id: FP1
+    item: 'Setup before the haunting: the opening with the miser''s hardness comes first, and the dead partner''s warning then turns the coming
+      visits into his chance to escape his fate, setting the story in motion'
+    anchors:
+      '1': an opening that establishes his hardness toward others is played first, and the warning that follows sets up the visits and what is
+        at stake
+      '0.5': the warning comes without a preceding opening, or the opening is followed by no warning that motivates what follows
+      '0': 'no setup: the visions begin unmotivated'
+    evidence:
+    - - c02.p012
+      - c02.p078
+    - - c02.p128
+      - c02.p165
+  - id: FP2
+    item: The three vision stages are gone through in the order past, present, future, with clear transitions, and each confronts the protagonist
+      with what his conduct has cost him or others
+    anchors:
+      '1': three distinct stages played in this order with clear transitions, each bearing on his conduct
+      '0.5': fewer stages, the order changed, the stages blur into one, or the stages are shown without any bearing on his conduct
+      '0': no vision stages
+    evidence:
+    - - c03.p053
+      - c03.p145
+    - - c04.p041
+      - c04.p129
+    - - c05.p014
+      - c05.p124
+  - id: FP3
+    item: The future stage builds to the revelation, at the grave, that the unmourned dead man is the protagonist himself; the revelation brings
+      his resolve to change and ends the visions
+    anchors:
+      '1': the dead man's identity is kept open, then revealed as the protagonist at the grave, leading to his resolve and the end of the visions
+      '0.5': the death or the grave shown, but with no build-up (identity known from the start) or with no resolve following from it
+      '0': missing
+    evidence:
+    - - c05.p014
+      - c05.p103
+    - - c05.p141
+      - c05.p166
+  - id: FP4
+    item: After waking, the protagonist makes amends to those he wronged, and the ending shows the foretold outcome changed (Little Ned alive),
+      closing the story
+    anchors:
+      '1': amends to the people wronged at the start lead to an ending in which the foretold outcome is changed
+      '0.5': a happy ending that ignores the people he wronged, or amends that change nothing that was foretold
+      '0': no transformation or no ending
+    evidence:
+    - - c06.p001
+      - c06.p004
+    - c06.p029
+    - c06.p042
+    - c06.p058
+    - c06.p069
+    - c06.p070
+  visual_presentation:
+  - id: VP1
+    cat: style
+    item: 'The town''s look carries the turn: dark and gloomy on Christmas Eve, clear and bright on Christmas morning after his change'
+    anchors:
+      '1': both looks shown, and the contrast between them readable
+      '0.5': one of the two looks, or no visible change between before and after
+      '0': neither
+    evidence:
+    - c02.p010
+    - c02.p066
+    - c06.p012
+  - id: VP2
+    cat: key_moment
+    item: Carrow's ghost appears as his dead partner bound by a chain
+    anchors:
+      '1': a recognisably ghostly partner bound by a chain
+      '0.5': a ghost without the chain, or a chain without a recognisable ghost
+      '0': missing
+    evidence:
+    - c02.p096
+    - c02.p097
+    - c02.p131
+  - id: VP3
+    cat: key_moment
+    item: The spirit yet to come looks ominous and faceless
+    anchors:
+      '1': an ominous spirit whose face is never shown
+      '0.5': an ominous spirit that shows a face, or a faceless figure that does not read as ominous
+      '0': missing
+    evidence:
+    - - c05.p001
+      - c05.p011
+  - id: VP4
+    cat: key_moment
+    item: The grave with the protagonist's own name readable on it
+    anchors:
+      '1': a grave on which his own name can be read
+      '0.5': a grave shown, but the name not readable or not clearly his
+      '0': missing
+    evidence:
+    - c05.p150
+    - c05.p155
+play_suggestions:
+  FP1:
+  - 'play the opening: is it clear, before anything supernatural, how the miser treats the people around him?'
+  - after the warning, is it clear what the visits are for and what is at stake?
+  FP2:
+  - 'go through the whole night: are the three stages distinct and in order past, present, future?'
+  - 'in each stage: does what is shown bear on how he has treated people?'
+  - 'try to skip ahead or go back: does the order still hold?'
+  FP3:
+  - in the future stage, is the dead man's identity left open before the grave?
+  - 'at the grave: does the revelation lead to his resolve and end the visions?'
+  FP4:
+  - after waking, try to make amends to each person he wronged at the start
+  - check whether the ending shows Little Ned alive and the clerk's family helped; ignore the amends and see what the ending does
+  robustness:
+  - 'leave a vision early or idle in it: does the story still move on or offer a way to continue?'
+  - 'replay from the start: is the arc start to end coherent the second time?'
+  - 'talk to or touch the figures in a vision: does anything break?'
+v4_map:
+  U1: CR2
+  U2: CR5
+  U3: CR1
+  U4: CR4
+  U5: CR3 (the order of the stages is scored in FP2)
+  U6: 'dropped: FP3 already scores the grave revelation and the vow it causes'
+  U7: 'dropped: FP4 already scores amends to the wronged and Little Ned living'
+  FP1: FP1 (existence of the miser's hardness to CR1, of the warning to CR2)
+  FP2: FP2 (existence of the three spirits and their domains to CR3)
+  FP3: FP3
+  FP4: FP4
+  FP5: 'dropped: editing request (Feast of the Winter Star instead of Christmas), moved to editing_seed.yaml'
+  VP1: VP1
+  VP2: VP2
+  VP3: VP3
+  VP4: VP4
+provenance:
+  source_yaml: T-TO-txt_d42ee53fb2bc.e1.yaml
+  source_sha256: 33d3c1efcd3547d857900af9d0ea1750b253974e767439f26482207b7ad9a887
+  size_waiver: null
+  size_max: null
+  sources:
+  - ref: t01
+    title: A Christmas Carol
+    author: Charles Dickens
+    text_id: txt_d42ee53fb2bc
+    excerpt_id: e1

@@ -1,0 +1,267 @@
+# GameAnything-Bench scoring material: never shown to agents during a trial.
+task_id: T-HY-vid_d958cf2529d4.t1
+source_inventory:
+- 'clip 00:43.1-00:44.0: a car drives off down a dusk street (transition, not part of the place)'
+- 'clip 00:44.1-00:45.0: black card ''FROM DISNEY'' (overlay continues to about 00:45.5)'
+- 'clip 00:45.1-00:46.5: establishing view of the market: a large green welcome sign ''Welcome to the MARSH MARKET, Jewel of the City'' on posts
+  at the water''s edge; behind it wooden buildings on stilts and piers over green canal water, boats with animals, docks, umbrellas, huge tree
+  trunks and hanging greenery; a giant green tube arches across the top of the view'
+- 'clip 00:46.6-00:50.5: a service kiosk with a ''BLUE LINE'' sign, a green traffic light and pictogram signs; aquatic animals (a seal holding
+  a fish, a walrus) wait at its counter while the fox and the rabbit pass; a round porthole hatch in the wall bulges and a round animal squeezes
+  out through it; afterwards the hatch shows a dark swirling hole'
+- 'clip 00:50.6-00:51.5: teal transparent tube slides looping on tall wooden scaffolds above the market, animals below at water level'
+- 'clip 00:51.6-00:52.5: wall mural of two dolphins around a red heart with a crown; small animals on a contraption beside it'
+- 'clip 00:52.6-00:55.0: a large hippo in a denim vest wades through bright green water past a green-roofed shop (''The Shell Hut'' sign); the
+  fox and the rabbit on a dock behind; a wave from the hippo rocks a small boat'
+- 'clip 00:55.1: black frame (cut)'
+- 'clip 00:55.6-00:57.1: the fox, the rabbit and a beaver-like companion walk down a dim greenish corridor with wall lamps and round porthole-like
+  doors; pink light glows at its end'
+- 'clip 00:57.6-00:58.6: the club seen past a large reptile in the foreground: a dark interior lit magenta and purple, neon signs, a crowd of
+  lizards'
+- 'clip 00:59.1-01:02.1: the fox, nervous, in the magenta light; lizards and a scaly tail around him'
+- 'clip 01:02.6: a long snake tail slides across the wooden floor between feet'
+- 'clip 01:03.1-01:07.4: the fox is pulled onto a stool beside a red crested lizard at a dark curved counter or piano with glasses and bottles
+  on it; the room behind dark and magenta'
+- 'clip audio: no usable speech in the range (no transcript)'
+- 'img01: concept-art book spread: a dense waterfront market seen from above at an angle: arched-roof buildings (''Sardines'', ''Merlion Ranch
+  Market'', a domed ''Shell Hut'' with a beer sign) on piers over blue water, boardwalks and stairs going down into the water, slides from the
+  buildings into the water, many umbrellas and awnings over stalls on the water, boats, a crane, utility poles, a willow tree'
+- 'img02: top: concept panorama of the district skyline: an enormous green segmented tube arches over the buildings, red and teal slides wind
+  down from towers, cranes, a ''Magic Moon'' billboard, giant tree trunks behind; bottom: a film still of the ''MARSH MARKET'' welcome sign over
+  the canal market (same view as the clip at 00:46)'
+- 'img03: concept-art book spread: left, four single-building designs each standing on its own platform in the water (a long boathouse with a
+  crane, the domed ''Shell Hut'' with a beer sign and a pool, a leaf-shaped green building, a multi-level building with stairs and slides down
+  to floating platforms); right, the panorama of img02 with the giant arching tube in front of huge tree trunks'
+- 'img04: photo of a built facade: a wooden building on a boardwalk with round red doors with portholes, round windows, a copper pipe running
+  along the wall with transparent sections showing blue water, an ''EAST MARKET'' sign with a traffic light, ''BAR'' and ''SLOW-NO WAKE ZONE''
+  signs'
+- 'img05: illustration: at a market by the water a yellow boat is moored with tyres as fenders; a fish stall, a walrus and seals at a counter
+  with bottles, a manatee and a beaver in the water among lily pads; the fox and the rabbit run through'
+instructions_meta:
+  requirement_groups:
+    movement through the place:
+    - FP1
+    layout and landmarks:
+    - CR1
+    - CR2
+    - CR5
+    - VP2
+    connected parts:
+    - CR4
+    - FP2
+    setting and lighting:
+    - CR3
+    - VP1
+    - VP3
+  explicit_requirements:
+  - type: specify
+    text: The club should be a dark, enclosed place that you reach from the sunny market by walking down a dim corridor with round doors and a
+      pink glow at its end, just like in the clip.
+    covers:
+    - CR4
+    - VP3
+rubric:
+  content_realization:
+  - id: CR1
+    item: 'The market is built on the water: its buildings stand on their own stilts, piers or platforms over open water, joined by boardwalks
+      and by stairs down to the water, and the water between them is the district''s street, with boats moored at the docks'
+    anchors:
+      '1': a dense district of buildings on piers or platforms over open water, linked by boardwalks and stairs to the water, with boats at the
+        docks
+      '0.5': buildings by the water, but standing on land or along a quay, or not linked to each other over the water
+      '0': missing, or an ordinary dry-land market
+    evidence:
+    - - '00:45.1'
+      - '00:46.5'
+    - - '00:52.6'
+      - '00:55.0'
+    - img01
+    - img03
+    - img05
+  - id: CR2
+    cross: true
+    item: 'Tubes thread the whole district: an enormous tube arches over the market from one side to the other (images, glimpsed behind the welcome
+      sign in the clip), and slide tubes on scaffolds run down from the buildings into the water (clip and images)'
+    anchors:
+      '1': both a giant tube arching over the market and slide tubes descending from buildings or scaffolds into the water
+      '0.5': only one of the two (only slides, or only the arch), or the arch stands off to the side instead of over the market
+      '0': missing
+    evidence:
+    - - '00:45.1'
+      - '00:46.5'
+    - - '00:50.6'
+      - '00:51.5'
+    - img01
+    - img02
+    - img03
+  - id: CR3
+    item: The club is an enclosed nightclub interior whose patrons are reptiles (lizards, a snake)
+    anchors:
+      '1': an enclosed club room with a crowd of reptile patrons
+      '0.5': a club or bar room exists but without reptiles, or it is an open-air space
+      '0': missing
+    evidence:
+    - - '00:57.6'
+      - '00:58.6'
+    - - '00:59.1'
+      - '01:02.1'
+    - '01:02.6'
+  - id: CR4
+    item: The club is reached from the open market through a dim corridor lined with round doors, with a pink glow at its end where it opens into
+      the club
+    anchors:
+      '1': a corridor leading from the market into the club, with round doors along it and a pink glow at the club end
+      '0.5': a passage into the club exists but without the round doors or the glow, or it does not start from the market
+      '0': no corridor; the club is entered directly or not at all
+    evidence:
+    - - '00:55.6'
+      - '00:57.1'
+    - - '00:57.6'
+      - '00:58.6'
+  - id: CR5
+    item: A large welcome sign naming the market stands at the water's edge, with the pier-built market spread out behind it
+    anchors:
+      '1': a prominent name sign at the water's edge, seen together with the market behind it
+      '0.5': a name sign exists but is small, hidden or placed away from the market view
+      '0': missing
+    evidence:
+    - - '00:45.1'
+      - '00:46.5'
+    - img02
+  functions_playability:
+  - id: FP1
+    item: 'The player can move through the water market: along boardwalks and docks between the pier-built buildings, with the water as part of
+      the route (wading, swimming or by boat), and reach its stalls and landmarks'
+    anchors:
+      '1': free movement through the district along boardwalks and across the water, with the stalls and landmarks reachable
+      '0.5': the boardwalks can be walked but the water only blocks or is only scenery, or large parts cannot be reached
+      '0': the market cannot be moved through
+    evidence:
+    - - '00:45.1'
+      - '00:46.5'
+    - - '00:52.6'
+      - '00:55.0'
+    - img01
+    - img03
+  - id: FP2
+    cross: true
+    item: 'One continuous place joining both references: the player can walk from the market laid out as in the images through the clip''s dim
+      corridor into the club, and back again, without a break in the world'
+    anchors:
+      '1': the player walks from the pier-built market through the corridor into the club and back, all in one continuous world
+      '0.5': the zones are joined only by a teleport or a break, or the way back is missing or blocked
+      '0': the player cannot get between the market and the club
+    evidence:
+    - - '00:55.6'
+      - '00:58.6'
+    - img01
+    - img03
+  visual_presentation:
+  - id: VP1
+    cat: style
+    keyframes:
+    - '00:46.1'
+    - '00:52.6'
+    item: 'Marsh character: a lush, overgrown, waterlogged place, with huge tree trunks and hanging greenery over green-tinted water and weathered
+      wooden buildings'
+    anchors:
+      '1': 'an overgrown swamp setting: big trees and greenery over the water, weathered wood'
+      '0.5': water and buildings but a clean or urban harbour look, no marsh vegetation
+      '0': none
+    evidence:
+    - - '00:45.1'
+      - '00:46.5'
+    - - '00:52.6'
+      - '00:55.0'
+    - img02
+    - img03
+    - img05
+  - id: VP2
+    cat: spatial
+    keyframes:
+    - '00:45.6'
+    - '00:50.6'
+    - '00:51.1'
+    item: 'The tubes read as the district''s landmarks: the giant arching tube dominates the skyline high above the market, and the slides are
+      translucent teal tubes on tall wooden scaffolds'
+    anchors:
+      '1': from the market the giant arch dominates the view overhead and the slides look like translucent teal tubes on tall scaffolds
+      '0.5': the tubes are there but too small, hidden or plain to read as landmarks, or look unlike the references
+      '0': the tubes do not read as tubes at all
+    evidence:
+    - - '00:45.1'
+      - '00:46.5'
+    - - '00:50.6'
+      - '00:51.5'
+    - img02
+    - img03
+  - id: VP3
+    cat: style
+    keyframes:
+    - '00:52.6'
+    - '00:56.6'
+    - '00:58.1'
+    item: 'Two lighting zones: the market in bright daylight, the club dark and saturated magenta-purple neon, with a dim corridor between them'
+    anchors:
+      '1': a clear daylight market and a clearly dark magenta-neon club, with a dim transition
+      '0.5': the club differs in colour but is not dark or neon, or the two zones look alike
+      '0': none
+    evidence:
+    - - '00:52.6'
+      - '00:55.0'
+    - - '00:55.6'
+      - '00:57.1'
+    - - '00:57.6'
+      - '01:07.4'
+play_suggestions:
+  FP1:
+  - 'walk from the welcome sign to the far side of the market: which boardwalks and stairs connect the buildings?'
+  - 'step off a boardwalk into the water: can you wade, swim or take a boat to another dock?'
+  - try to reach a stall that sits out on the water
+  FP2:
+  - 'find the way from the market to the club: do you enter the club through the corridor?'
+  - go back from the club to the market
+  - check that no loading break or teleport separates the zones
+  robustness:
+  - 'fall or jump into the water at several places: can you always get back onto a boardwalk?'
+  - 'look up from the market and from the corridor entrance: is the giant arching tube readable?'
+  - 'check the club''s lighting in daytime and at night in the target game: does it stay dark and magenta?'
+  - 'optional, unscored: if a tube, slide or hatch can be entered, where does it take you, and do you come out through a hatch or into the water?'
+hybrid:
+  modality: video+image
+  roles:
+    video: 'the eye-level look of the place: the green marsh water and overgrown setting, the welcome sign, the teal slide tubes, the round-hatch
+      tube station, and the walk down a dim corridor into a magenta-neon reptile club'
+    images: 'the wider layout and building design of the water market: buildings on their own piers and platforms over open water, joined by boardwalks
+      and stairs, slides running down into the water, and an enormous tube arching over the whole district'
+  cross_reference_requirement: The market must be laid out as the images show it (pier-built buildings over open water, boardwalks, slides into
+    the water, a giant tube arching overhead) with the clip's marsh look, and the neon reptile club, entered through a dim corridor as only the
+    clip shows, must belong to the same explorable place.
+v4_map:
+  U1: CR1
+  U2: CR3 (its magenta-neon lighting is VP3)
+  U3: 'dropped: peripheral (one brief hatch-arrival shot at a single kiosk)'
+  U4: CR2
+  U5: CR4 (bright / dark contrast is VP3)
+  FP1: FP1 (existence of the connected district split to CR1)
+  FP2: FP2 (existence of the corridor into the club split to CR4)
+  FP3: 'removed: editing request (walkable giant tube), moved to editing_seed.yaml'
+  VP1: CR1
+  VP2: VP1
+  VP3: CR2 + VP2 (existence and arrangement to CR2; look stays VP2)
+  VP4: CR5
+  VP5: VP3
+provenance:
+  source_yaml: T-HY-vid_d958cf2529d4.t1.yaml
+  source_sha256: 6f1f3da5317388dbe213945290bbcf168bd4299dd28d5992614bcad4c8c6e00f
+  size_waiver: null
+  size_max: null
+  sources:
+  - refs:
+    - img01
+    - img02
+    - img03
+    - img04
+    - img05
+    images:
+    - hybrid/q27_ref0

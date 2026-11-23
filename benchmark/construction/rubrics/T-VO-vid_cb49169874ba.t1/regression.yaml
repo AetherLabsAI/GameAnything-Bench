@@ -1,0 +1,21 @@
+# GameAnything-Bench scoring material: never shown to agents during a trial.
+task_id: T-VO-vid_cb49169874ba.t1
+game: terraria
+status: pending
+picks:
+- TR-MOVE
+- TR-CONTENT
+- TR-DIG-PLACE
+- TR-INVENTORY
+- TR-SAVE
+- TR-PERF
+changed: []
+kept_borderline:
+- id: TR-MOVE
+  note: Board riding redefines how the player moves; this may be mounted, a separate state, so the on-foot vanilla movement is not clearly required
+    to change. Kept tested for human review.
+summary: Skateboarding experience with board riding, jumps, rail grinds, trick completion and a skate spot.
+task_checks: []
+note: 'policy (A): excluded only when the instruction explicitly requires the change; plausible side effects stay tested; adding
+  new content is never a reason to exclude. Proposed by claude-sonnet-5-5 via `gab task picks` 2026-11-06; a maintainer checks (set status: checked).
+  The evaluator tests the pool''s always items (unless in changed) + picks.'

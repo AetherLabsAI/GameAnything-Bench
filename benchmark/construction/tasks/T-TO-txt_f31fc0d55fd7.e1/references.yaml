@@ -1,0 +1,16 @@
+# Reference material: fetched from the HF dataset into $GAB_MEDIA_DIR/<task>/ by `gab media fetch` (sha256 checked).
+# The agent gets the files only (no title, author, caption or source): this file is never shown to it.
+task_id: T-TO-txt_f31fc0d55fd7.e1
+refs:
+- id: t01
+  kind: text
+  file: text_01.md
+  words: 9813
+  paragraphs: 125
+  anchors: c08.p001 .. c08.p125
+  judge_file: judge/text_01.anchored.md
+  judge_sha256: 1ac79f789e2fad4617869b58de0619a40802d05ff6c012050ae6232c4d59aeff
+  format: plain text (UTF-8)
+  hf_path: media/T-TO-txt_f31fc0d55fd7.e1/text_01.md
+  sha256: 4fb5a83cc7ef05a30d1940e51b18ab4527418305405d542143ea31da65da0c5b
+  size_bytes: 59050

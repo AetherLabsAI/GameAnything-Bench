@@ -1,0 +1,18 @@
+# STATE_SPEC self-check (gab selfcheck xonotic --state): format in gab/setup/selfcheck.py state_check
+vanilla:
+  steps:
+    - {do: wait, seconds: 3}
+  engine: [map, gametype, time_s, match, screen, player.class, player.pos, player.health, player.weapons, player.weapon]
+  mod_allow: []
+mod:
+  dir: testmod
+  steps:
+    - {do: wait, seconds: 3}
+  expect:
+    - "mod: gab_test_quest"
+    - "mod: stage_two"
+    - "mod: g_balance_health_start"
+    - "mod: gab_test_hello"
+    - "mod: weapon_shotgun"
+    - "mod: item_health_mega"
+    - "screen_text: GAB TEST CENTER"

@@ -1,0 +1,11 @@
+{
+  "schemaVersion": 1,
+  "id": "gabbridge",
+  "version": "1.0.0",
+  "name": "GameAnything-Bench bridge",
+  "description": "Harness mod of GameAnything-Bench: enters the start world, answers state / command / probe queries on 127.0.0.1 (GAB_MC_PORT). Not part of any deliverable.",
+  "license": "MIT",
+  "environment": "client",
+  "entrypoints": {"client": ["org.gameanything.gabbridge.GabBridge"]},
+  "depends": {"fabricloader": ">=0.19", "minecraft": "26.3", "fabric-api": "*"}
+}

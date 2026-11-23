@@ -1,0 +1,299 @@
+# GameAnything-Bench scoring material: never shown to agents during a trial.
+task_id: T-HY-vid_3c178cfd1133.t1
+source_inventory:
+- 'clip 00:11-00:23: full moon over a sea of clouds; a horseless carriage piled with trunks, books and cases, lanterns lit, a barn owl perched
+  on top, flies through the clouds; the owl takes off ahead of it'
+- 'clip 00:23-00:27: fade to near black'
+- 'clip 00:27-00:37: a many-towered castle with lit windows on a cliff above a lake, in mist; the carriage flies toward it and between its spires;
+  caption ''Hogwarts, Late 1800s'' (00:32-00:36)'
+- 'clip 00:37-00:43: the carriage passes close to the castle walls and descends into a cloistered courtyard at night (a driver on the box); 00:44-00:45
+  black'
+- 'clip 00:46-00:48: doors open onto a great hall: long parallel tables with seated students in robes, hundreds of floating candles, a tall stained-glass
+  window at the far end'
+- 'clip 00:49-00:55: a library with tall shelves and a large portrait; a spiral stair tower with books flying in a swarm; a reading room with
+  long tables, lamps and a globe; a student takes a book from the air'
+- 'clip 00:56-00:57: a robed student walks along a panelled corridor with suits of armour'
+- 'clip 00:58-01:01: in the hall, before the seated tables, an adult places a pointed hat on a new student''s head while an older teacher watches'
+- 'clip 01:02-01:07: a sunlit cloister courtyard with a fountain, trees and students on benches; a lawn where a yellow-trimmed student swings
+  a long staff'
+- 'clip 01:08-01:11: a potions room: a cauldron, a bottle set on a table'
+- 'clip 01:12-01:13: a glass greenhouse classroom with flowering planters and a teacher at the front'
+- 'clip 01:14-01:18: two students stir a cauldron with wands; purple sparks rise into a column of light and a bright burst'
+- 'clip 01:19-01:20: a row of blue big-eyed creatures in a night forest, a student facing them'
+- 'clip 01:21-01:22: a common room with tall arched windows, armchairs and a fire'
+- 'clip 01:23-01:25: a wand lights up; a spell swirls in a classroom; a mannequin-like figure on a wheeled stand'
+- 'clip 01:26-01:27: a half-timbered village gate with a carved sign and a cobbled street beyond'
+- 'audio: narrator (Whisper): ''Magic ... binds together our long history ... the legacy of Hogwarts. Now it is time to add your own story to
+  these hallowed halls ... Every corridor, every portrait, every stone in this castle tells the story of witches and wizards who came before.
+  Here you will meet lifelong friends and grow into your own magical abilities in the classrooms of the world''s most talented professors. And
+  while your journey begins at Hogwarts, brewing potions, taming fantastic beasts and mastering spells ...''; orchestral music'
+- 'text p001-p003: chapter heading ''The Stage Coach''; at an inn before 3 a.m. in November the boots wakes Tom; he and his father came up the
+  day before and chose the early coach that passes through the school town itself'
+- 'text p004-p011: the night before, his father (the Squire) reminds him he goes at his own request, warns of cruel things at school, and charges
+  him to tell the truth and keep a brave and kind heart so he will never be ashamed to come home; checks his money and keys'
+- 'text p012-p020: coffee by the fire; the coach arrives, the guard loads the luggage, Tom climbs up, a last handshake, and the coach leaves into
+  the darkness; Tom looks back at his father; three cold hours before dawn'
+- 'text p021: (after a gap) the coach passes parties of boys and comes in sight of the town; Tom thinks it the greatest day he will ever spend'
+- 'text p022-p024: chapter heading ''Rugby and Football''; the coach passes the school field with football games, the long line of grey buildings
+  from chapel to School-house with a flag on its tower, and the school gates with boys standing there; Tom is already proud'
+- 'text p025-p031: a boy scrambles onto the coach, asks if he is Brown: his aunt, who knows Tom''s family, asked him to give Tom a lift; Tom resents
+  his patronising air but admires his coolness; East has a porter carry the luggage up'
+- 'text p032-p038: East makes Tom swap his cap for a hat, gets him a proper one at the hatter''s; explains that a great deal depends on how a
+  new fellow carries himself at first, and that he helps because his father knows Tom''s and to please his aunt; East is frank and good-natured,
+  one half-year at the school; Tom feels friends with him at once'
+- 'text p039-p040: East acts as guide: through the gates (boys ask the stock questions), the quadrangle and a small courtyard, to the matron''s
+  room; shows him the schools, predicts they will be in the same form; proposes his study before dinner and the close after'
+- 'text p041-p050: through the School-house hall (two great tables running its length, two fireplaces) into dark passages lined with studies;
+  East''s small study, shared with another boy, with its furniture and prints; Tom will be given a study of his own with a chum on Monday; Jones
+  the praepostor holds the study at the fire end and watches the passage at night'
+- 'text p051: the dinner bell; in the hall Tom sits at the bottom of the second table next to the praepostor, who keeps order; the school comes
+  in; a big-bearded man calls over the names, Tom''s last; grace'
+- 'text p052-p053: neighbours question Tom; East takes him out past the fives court to the close: the chapel, the place for fights, the little-side
+  and big-side grounds, the island; the two race across and arrive together at the island moat'
+instructions_meta:
+  requirement_groups:
+    story progression and goal:
+    - CR3
+    - CR5
+    - FP1
+    characters and guidance:
+    - CR1
+    - CR2
+    - FP2
+    key moments:
+    - CR4
+    - VP1
+    settings and their layout:
+    - CR6
+    - FP3
+    - VP2
+    world look:
+    - VP3
+  explicit_requirements:
+  - type: specify
+    text: The boy who shows the newcomer round should do it because his aunt knows the newcomer's family and asked him to.
+    covers:
+    - CR2
+rubric:
+  content_realization:
+  - id: CR1
+    item: 'The game contains the two main characters: the newcomer (Tom), the player''s character arriving at the school, and East, a boy of about
+      his age who has been there a little longer and becomes his guide and friend'
+    anchors:
+      '1': 'both characters present with these roles: the newcomer as the arriving player character, East as the slightly senior boy who guides
+        and befriends him'
+      '0.5': both present but East's guide role or the friendship is missing or confused
+      '0': missing, or the roles are wrong
+    evidence:
+    - - p025
+      - p038
+    - p052
+  - id: CR2
+    item: 'The game shows that East takes the newcomer in hand because of a family connection: his aunt, who knows the newcomer''s family, asked
+      him to'
+    anchors:
+      '1': the guidance is given this cause in the game (the aunt's request, or the families' acquaintance)
+      '0.5': East helps him but the reason is missing or invented
+      '0': missing
+    evidence:
+    - p028
+    - p036
+  - id: CR3
+    item: 'The game contains the first day''s situations in the text''s order: the farewell from the father and the night departure by coach,
+      the arrival at the school where East meets him, East showing him round (with his study) before the first dinner in the hall, and afterwards
+      the school grounds'
+    anchors:
+      '1': departure, arrival and meeting East, the tour with the study, the dinner in the hall and then the grounds, all present in this order
+      '0.5': most of these present in order, with one missing or misplaced
+      '0': missing, or the order is largely wrong
+    evidence:
+    - - p002
+      - p020
+    - - p023
+      - p030
+    - - p039
+      - p053
+  - id: CR4
+    cross: true
+    item: 'The text''s story is told in the video''s world: the school is the video''s castle school, where students learn magic (lessons, brewing,
+      spells, magical creatures), the newcomer''s journey (text) ends with the arrival coming down into its courtyard, and the first dinner with
+      the whole school (text) is held in its great hall'
+    anchors:
+      '1': 'all three found in the game: the school presented as a place where magic is learned, the arrival ending in the castle''s courtyard,
+        and the dinner held in its great hall'
+      '0.5': one of the three missing (a castle with no sign that magic is taught there, or the arrival or the dinner set somewhere else)
+      '0': 'two or more missing: the text''s events set in places with nothing of the video''s world'
+    evidence:
+    - - p018
+      - p024
+    - p040
+    - p051
+    - - 00:37
+      - 00:43
+    - - 00:46
+      - 00:48
+    - - 01:02
+      - 01:25
+  - id: CR5
+    item: 'The game states what is at stake on the first day: the newcomer must make good at the school, as the father''s charge (tell the truth,
+      keep a brave and kind heart) or East''s rule (how a new boy carries himself at first decides how he gets on) says'
+    anchors:
+      '1': the first day is framed in the game as a test of making good, with at least one of the two sources (the father's charge or East's first-impressions
+        rule), and this goal is shown at the start
+      '0.5': a vague goal of settling in without what is at stake, or the stakes only appear late
+      '0': missing
+    evidence:
+    - - p004
+      - p011
+    - p036
+  - id: CR6
+    item: 'The school''s places exist and connect as the text walks them: the gates lead into a courtyard, the hall opens onto it, small studies
+      lie off passages beyond the hall, and the grounds lie outside'
+    anchors:
+      '1': gates, courtyard, hall, studies off passages and the grounds all present and connected in this arrangement
+      '0.5': the places exist but are not connected this way, or one of them is missing
+      '0': missing
+    evidence:
+    - p039
+    - p041
+    - p053
+  functions_playability:
+  - id: FP1
+    item: 'The story advances through play: each situation of the day opens once the player has finished the one before (by walking, talking,
+      following the guide), from the departure to the close'
+    anchors:
+      '1': the player goes through the situations in sequence by normal play, each one triggered by finishing the previous
+      '0.5': 'the progression works only in part: a step must be forced or skipped, or the steps can be taken in any order so the sequence breaks'
+      '0': no story progression, or only free roaming
+    evidence:
+    - - p012
+      - p053
+  - id: FP2
+    item: A guide companion meets the newcomer on arrival and leads them from place to place, talking about the school, so the player always has
+      a next step
+    anchors:
+      '1': a guide character who meets the player at the arrival, leads or sends them to each next place and explains it
+      '0.5': the guide appears but only once, or the next step is unclear without him
+      '0': no guide character
+    evidence:
+    - - p025
+      - p030
+    - - p039
+      - p041
+    - - p052
+      - p053
+  - id: FP3
+    item: 'The player walks the day''s route on foot through normal play: from the arrival courtyard through the gates and courtyard into the
+      hall, along the passages to the study, and out to the grounds, each place reached by walking from the one before'
+    anchors:
+      '1': every place of the route can be reached by walking from the previous one (map transitions work both ways where the route needs it),
+        without teleporting or getting stuck
+      '0.5': most of the route is walkable but one link is missing, one-way when the story needs a return, or a transition is broken
+      '0': the places cannot be walked between, or are reached only by cuts
+    evidence:
+    - - p039
+      - p041
+    - p053
+  visual_presentation:
+  - id: VP1
+    cat: key_moment
+    keyframes:
+    - '00:19.0'
+    - '00:29.0'
+    - '00:42.0'
+    item: 'The night arrival: a carriage laden with luggage flies through the moonlit night sky to a many-towered castle on a height and comes
+      down into its courtyard'
+    anchors:
+      '1': a recognisable night approach of a flying, luggage-laden carriage to the towered castle, ending in its descent into the courtyard (flight
+        shown in any way the game allows)
+      '0.5': a night arrival, but the flight, the carriage, the castle or the arrival in the courtyard is missing
+      '0': no arrival moment
+    evidence:
+    - - 00:11
+      - 00:43
+    - p018
+  - id: VP2
+    cat: spatial
+    keyframes:
+    - '00:47.0'
+    - '00:58.0'
+    item: 'The hall: a large hall with long parallel tables running its length where the school sits together, lit by many lights above the tables'
+    anchors:
+      '1': a large hall with long parallel tables and many lights above them
+      '0.5': a hall with tables but not long parallel rows, or without the lights
+      '0': no such hall
+    evidence:
+    - - 00:46
+      - 00:48
+    - - 00:58
+      - 01:01
+    - p041
+    - p051
+  - id: VP3
+    cat: style
+    keyframes:
+    - '00:35.0'
+    - '00:51.0'
+    - '01:02.0'
+    item: A gothic stone castle school with towers and courtyards, in which magic shows in the everyday surroundings
+    anchors:
+      '1': the castle school's gothic look with visible everyday magic
+      '0.5': a castle or school without the magic, or magic in a setting that is not a castle school
+      '0': neither
+    evidence:
+    - - 00:27
+      - 00:43
+    - - 00:49
+      - 00:52
+    - - 01:02
+      - 01:04
+    - - 01:14
+      - 01:18
+play_suggestions:
+  FP1:
+  - 'play from the start and note the order of the situations: farewell and departure, arrival, meeting the guide, the study, the dinner, the
+    grounds'
+  - 'try to go to the hall before the guide has shown you round: what happens?'
+  FP2:
+  - after each scene, check whether the guide tells or leads you to the next place
+  - 'walk away from the guide: does he wait, call you back or follow?'
+  FP3:
+  - 'walk from the arrival courtyard to the grounds without skipping: is every link a walkable transition?'
+  - 'walk back from the study to the hall and from the grounds to the courtyard: do the transitions work in reverse?'
+  robustness:
+  - 'talk to the guide repeatedly at each stage: does the dialogue stay consistent with the story step?'
+  - 'save and reload in the middle of the day: is the story state kept?'
+  - 'skip optional talk: can the story still be finished?'
+hybrid:
+  modality: video+text
+  roles:
+    video: 'the world and its look: a night arrival of a luggage-laden carriage at a many-towered castle school on a cliff, its courtyards, a
+      long-table hall lit by floating candles, a hall reception of a new student, and school life in which magic is everyday'
+    text: 'the story: the characters (the new boy Tom, his guide East, his father), the cause of the guidance, the stakes of a new boy''s first
+      day, and the order of the events from the night departure to the first dinner in the hall and the walk over the grounds'
+  cross_reference_requirement: 'The text''s first-day story (departure, arrival, being taken in hand by East, his study, the first dinner in the
+    hall, the grounds) must be told in the video''s world: the arrival staged as the video''s night approach to the castle school and the dinner
+    in its long-table hall.'
+v4_map:
+  U1: CR1
+  U2: CR4 (that the school teaches magic, merged into the cross item); the visible magic stays in VP3
+  U3: CR2
+  U4: CR3
+  U5: CR5
+  U6: CR4
+  FP1: FP1, CR4
+  FP2: FP2
+  FP3: CR5
+  FP4: 'removed: editing split (modify requirement, see editing_seed.yaml)'
+  VP1: VP1
+  VP2: VP2
+  VP3: VP3
+  VP4: CR6, FP3
+provenance:
+  source_yaml: T-HY-vid_3c178cfd1133.t1.yaml
+  source_sha256: 74d22c72b2036823f5f7981d971050de407385b436d525ba01ea23127cb0123f
+  size_waiver: null
+  size_max: null
+  sources:
+  - ref: t01
+    text: /Volumes/USB-500G/gameanything_local/hf/curation/hybrid_texts/T-HY-vid_3c178cfd1133.t1/final.md

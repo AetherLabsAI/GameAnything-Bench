@@ -1,0 +1,248 @@
+# GameAnything-Bench scoring material: never shown to agents during a trial.
+task_id: T-HY-vid_12db0e81e39e.t1
+source_inventory:
+- 'clip 01:02.0-01:03.5: a boy in green runs away from the camera along a dirt path through tall grass across a wide green field; a walled castle
+  on a hill on the horizon ahead, a lone tree, scattered rocks; a small glowing fairy follows him'
+- 'clip 01:04.0-01:05.0: he swims in a clear turquoise lake; a tall round stone tower with a platform on top stands on rocks at the left shore
+  beside cliffs and buildings; a flat-topped red rock pillar rises from the water on the right'
+- 'clip 01:05.5-01:07.0: a forested gorge with grass-topped round rock pillars; he glides from pillar to pillar holding a white bird above his
+  head; a stone arch in the background'
+- 'clip 01:07.5-01:08.5: a paved town square with gabled half-timbered houses, red roofs, a large tree, a stone fountain basin, flower pots and
+  banners; townspeople, a dancing couple, a girl in a blue dress, a running white bird; he runs across it'
+- 'clip 01:09.0-01:10.0: a fenced grass paddock in low golden backlight; three horses and the boy standing among them; a tall ruined rock or tower
+  silhouette and hills behind the wooden fence'
+- 'clip 01:10.5-01:13.0: he rides a brown horse with a white mane across rolling green hills under a blue sky with clouds; a mesa and distant
+  mountains on the horizon; a tall wooden plank fence on a hill at 01:12.5-01:13.0'
+- 'clip 01:13.5-01:14.0: the horse rears on the grassland; behind it a lone, tall cone volcano with a white smoke plume and a pink cloud above
+  the summit'
+- 'clip 01:14.5-01:16.5: a girl in a white-and-purple headdress and pink tunic looks through a window in a stone wall with ivy, then turns to
+  the camera'
+- 'clip 01:17.0-01:18.0: a bald moustached man in blue overalls clutches his head; dialogue box ''Talon: Oh— Oh NO! I left her all on her own!''
+  with ''Hide'' and ''Conversation Log'' prompts'
+- 'clip 01:18.5-01:19.5: a bald man with a hand organ in a warm-lit room with purple music notes; dialogue box ''Music Man: What the heck! How
+  dare you!'''
+- 'audio (Whisper): narration 01:03.9-01:07.0 ''Your quest takes place in the vast kingdom of Hyrule.''; from 01:17.2 ''Meet lively characters,
+  battle ferocious monsters, and solve puzzles scattered throughout dungeons.'' (the segment runs past the clip end); music not transcribed'
+- 'img01: hand-drawn parchment map, top-down with pictorial landmarks; labelled CASTLE (towered castle on a rocky hill, north centre), TOWN (walled
+  town, west, with a small harbour), LAKE (large lake, south-west, with a round tower on an island and jetties on the shore), RANCH (fenced paddocks
+  with barns and horses, centre), VOLCANO (erupting cone with smoke and lava, north-east), FOREST (dense wood with tree huts, south-east); snowy
+  mountains north-west, hills around; dirt roads meet at the ranch and lead to the castle, the town, the lake, the volcano and the forest; compass
+  rose (north up) and a 0-100 miles scale bar'
+instructions_meta:
+  requirement_groups:
+    region layout and connections:
+    - CR1
+    - CR2
+    - CR3
+    - FP1
+    ways of crossing the place:
+    - FP2
+    landmarks seen across the land:
+    - CR4
+    - VP1
+    - VP5
+    area settings:
+    - VP2
+    - VP3
+    - VP4
+  explicit_requirements:
+  - type: keep
+    text: I want the castle on its hill and the smoking volcano to tower over the grassland so I can see them from far away.
+    covers:
+    - CR4
+    - VP1
+    - VP5
+rubric:
+  content_realization:
+  - id: CR1
+    item: 'The region contains the five distinct zones the clip shows, each an area of its own: a castle, a lake, a town, a horse ranch and a
+      volcano'
+    anchors:
+      '1': all five zones present as separate, identifiable areas
+      '0.5': three or four of the five zones
+      '0': fewer than three, or the place built as one undifferentiated landscape
+    evidence:
+    - - '01:02.0'
+      - '01:14.0'
+    - img01
+  - id: CR2
+    cross: true
+    item: 'The zones the clip shows (video) are placed in img01''s relative arrangement (map): castle to the north, town to the west, lake to
+      the south-west, ranch at the centre, volcano to the north-east'
+    anchors:
+      '1': at least four zones present and every present zone placed relative to the others as in img01 (north up)
+      '0.5': one or two zones out of img01's arrangement, or fewer than four zones to place
+      '0': no distinct zones, most zones out of img01's arrangement, or an arrangement unrelated to img01
+    evidence:
+    - img01
+    - - '01:02.0'
+      - '01:14.0'
+  - id: CR3
+    item: Wide open, rolling green grassland lies between the zones (video), crossed by routes that link the zones and meet in a central area
+      at or near the ranch (img01)
+    anchors:
+      '1': open grassland between the zones, with routes across it joining at a central meeting area at or near the ranch
+      '0.5': open land without routes, or routes that only run zone to zone without a central meeting point
+      '0': no open land between the zones and no routes
+    evidence:
+    - - '01:02.0'
+      - '01:03.5'
+    - - '01:10.5'
+      - '01:13.0'
+    - img01
+  - id: CR4
+    item: The castle and the volcano are both visible from far away across the open grassland
+    anchors:
+      '1': standing on the grassland, both the castle and the volcano are visible in the distance
+      '0.5': only one of them is visible from afar
+      '0': neither is visible from the grassland, or they are missing
+    evidence:
+    - - '01:02.0'
+      - '01:03.5'
+    - - '01:13.5'
+      - '01:14.0'
+  functions_playability:
+  - id: FP1
+    item: Following the routes across the open land, the player can travel from any zone to any other
+    anchors:
+      '1': every zone can be reached from every other over connected routes
+      '0.5': most zones are reachable but one cannot be reached, or only by leaving the routes
+      '0': the zones are not connected or not reachable
+    evidence:
+    - img01
+    - - '01:02.0'
+      - '01:03.5'
+  - id: FP2
+    item: The place can be crossed on foot, swum in the lake, and ridden across on a rideable mount over the open grassland
+    anchors:
+      '1': walking, swimming in the lake and riding a mount across the grassland all work in the place
+      '0.5': two of the three
+      '0': walking only
+    evidence:
+    - - '01:02.0'
+      - '01:03.5'
+    - - '01:04.0'
+      - '01:05.0'
+    - - '01:10.5'
+      - '01:14.0'
+  visual_presentation:
+  - id: VP1
+    cat: spatial
+    keyframes:
+    - '01:02.0'
+    - '01:03.5'
+    item: A walled castle stands on high ground at the edge of wide green grassland
+    anchors:
+      '1': a walled castle on a hill above open grassland
+      '0.5': a castle without the high ground or without open grassland before it
+      '0': no castle
+    evidence:
+    - - '01:02.0'
+      - '01:03.5'
+    - img01
+  - id: VP2
+    cat: spatial
+    keyframes:
+    - '01:04.0'
+    - '01:05.0'
+    item: The lake is a broad stretch of clear, bright turquoise water with a tall round stone tower standing at or in it
+    anchors:
+      '1': clear, light-coloured open water with a stone tower rising at or in it
+      '0.5': a lake without the tower, or a tower by dark, murky water
+      '0': no lake
+    evidence:
+    - - '01:04.0'
+      - '01:05.0'
+    - img01
+  - id: VP3
+    cat: style
+    keyframes:
+    - '01:07.5'
+    - '01:08.0'
+    item: The town centre is an open paved square ringed by gabled, half-timbered houses
+    anchors:
+      '1': an open paved square enclosed by half-timbered gabled houses
+      '0.5': a town of other buildings, or houses without an open square
+      '0': no town
+    evidence:
+    - - '01:07.5'
+      - '01:08.5'
+  - id: VP4
+    cat: spatial
+    keyframes:
+    - '01:09.0'
+    - '01:10.0'
+    item: The ranch is a grass paddock enclosed by a wooden fence with horses in it
+    anchors:
+      '1': a fenced grass paddock with horses
+      '0.5': a fence or horses, not both
+      '0': no ranch
+    evidence:
+    - - '01:09.0'
+      - '01:10.0'
+    - img01
+  - id: VP5
+    cat: spatial
+    keyframes:
+    - '01:13.5'
+    - '01:14.0'
+    item: A lone, tall cone-shaped volcano with a smoking summit rises above the grassland
+    anchors:
+      '1': a single tall cone with smoke rising from its summit
+      '0.5': a mountain without the cone shape or without smoke
+      '0': no volcano
+    evidence:
+    - - '01:13.5'
+      - '01:14.0'
+    - img01
+play_suggestions:
+  CR2:
+  - 'from a high point or an overhead view, compare the zone positions with img01 (north up): castle north, town west, lake south-west, ranch
+    centre, volcano north-east'
+  - walk to each zone and screenshot it next to the clip frame
+  FP1:
+  - 'travel castle -> ranch -> lake -> town -> volcano along the routes: is any leg blocked?'
+  - check whether the routes really meet near the ranch or only run zone to zone (CR3)
+  FP2:
+  - swim out to the lake tower and back
+  - mount and ride from the ranch across the grassland to the volcano zone
+  robustness:
+  - 'try to leave the region at its edges: is there a sensible boundary?'
+  - 'dismount in the lake and in the town: does the mount behave sensibly?'
+  - 'stand on the grassland and turn around: are the castle and the volcano both visible from afar?'
+hybrid:
+  modality: video+image
+  roles:
+    video: the look of each zone (castle on a hill over grassland, turquoise lake with a stone tower, timber-framed town square, fenced horse
+      ranch, smoking volcano), the open grassland between them, what stays visible from afar, and how the place is crossed (on foot, swimming,
+      on horseback)
+    images: 'img01 is an independent top-down map of a kingdom with the same kinds of zones (castle, town, lake with a tower, ranch, volcano,
+      plus a forest) and the roads between them: it gives the arrangement and connections the 1-2 s cuts cannot show'
+  cross_reference_requirement: The zones the clip shows must be placed in the relative arrangement and road network of the map in img01 (castle
+    north, town west, lake south-west, ranch at the central crossroads, volcano north-east), each looking like its counterpart in the clip.
+v4_map:
+  U1: 'dropped: mechanism already scored by FP2 (on foot, swimming, riding)'
+  U2: CR1 (zone existence; the landmarks that mark each zone scored by VP1-VP5)
+  U3: CR3
+  U4: CR2
+  U5: CR4
+  FP1: CR2 (merged with U4; zone placement is checked by inspection)
+  FP2: CR3 (central meeting of routes), FP1 (travel between zones)
+  FP3: FP2
+  FP4: 'dropped: editing request (modify: climbable hollow lake tower), moved to editing_seed.yaml'
+  VP1: VP1 (look), CR4 (visibility from afar)
+  VP2: VP2
+  VP3: VP3 (fountain dropped as detail)
+  VP4: VP4
+  VP5: VP5 (look), CR4 (visibility from afar)
+provenance:
+  source_yaml: T-HY-vid_12db0e81e39e.t1.yaml
+  source_sha256: 4171df2ad273e34e6de0ebaa98334d41fda3b4fc97456fb9a57efd016a2b92dd
+  size_waiver: null
+  size_max: null
+  sources:
+  - refs:
+    - img01
+    images:
+    - hybrid/q05_ref0
+  revision: 'curator review: img02 / img03 removed from the task; rubric unchanged otherwise (they scored nothing)'

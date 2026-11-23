@@ -1,0 +1,291 @@
+# GameAnything-Bench scoring material: never shown to agents during a trial.
+task_id: T-HY-vid_7cbfa34ef827.t1
+source_inventory:
+- 'clip 00:08.2-00:09.0: night garden, hedges and a stone fountain, no people'
+- 'clip 00:09.2-00:12.2: a short pointed-hat woman in a dark blue robe points a wand at a blonde girl in a yellow dress; a large cloud of blue
+  sparkles swirls and forms a silver ornate carriage with white plumed horses; the girl rises in a glowing pink-white gown'
+- 'clip 00:12.7-00:13.7: blue sparkles form glowing, translucent glass slippers on the girl''s feet'
+- 'clip 00:14.2-00:16.2: close-up of the pointed-hat woman (blue robe with chains, wand); a dark-haired girl in purple peers from behind a hedge,
+  watching'
+- 'clip 00:16.7-00:18.2: an illustrated storybook page shows the same scene (a fairy godmother with a wand and the girl in a sparkling gown);
+  pages flip'
+- 'clip 00:18.7-00:19.2: the dark-haired girl crouches on the grass amid blue sparkles'
+- 'clip 00:20.2-00:22.7: the dark-haired girl holds a glowing blue crystal wand and smiles slyly'
+- 'clip 00:23.2: the blonde girl in a pink layered gown on a grand palace staircase; 00:23.7: the dark-haired girl, restyled, glares (ball setting)'
+- 'clip 00:34.5-00:35.0: ballroom with chandeliers and a patterned floor; a prince in a teal jacket; a blonde girl in green runs past him covering
+  her face'
+- 'clip 00:35.5-00:38.0: the pointed-hat woman, between two girls, holds open a large glowing storybook showing a glass slipper and a girl in
+  a gown, and a small glowing blue slipper'
+- 'clip 00:38.5-00:39.0: the palace at night on a height, lit, with a clock tower'
+- 'clip 00:39.5: a grand palace entrance staircase with a king-like figure at the top and a figure hurrying down'
+- 'clip 00:40.0-00:40.5: the prince at a staircase holds a glowing glass slipper and looks at it'
+- 'clip 00:41.0-00:41.5: the prince dances with the blonde girl in a purple gown among guests'
+- 'clip 00:42.0-00:45.0: the pointed-hat woman gestures dramatically in a red-pink lit room; in a candle-lit room pink smoke bursts and fills
+  the frame'
+- 'clip 00:45.5-00:47.5: a small blue-green frog held in a girl''s arms (purple sleeves)'
+- 'clip 00:48.0-00:49.0: text card ''From the studio that brought you K-Pop Demon Hunters'' (not scorable)'
+- 'clip 00:49.5-00:50.0: bare twisted trees on a ridge at sunset'
+- 'clip 00:50.5-00:51.0: sunlit forest: the dark-haired girl in purple and the blonde girl in green, who holds the glowing slipper; the frog sits
+  on a rock between them'
+- 'clip 00:51.5-00:54.0: the blonde girl crosses a fallen log over a stream with the slipper and pulls at a branch'
+- 'clip 00:54.5-00:56.5: the dark-haired girl wobbles on a log and falls off while the blonde girl watches'
+- 'clip 00:57.0-01:01.0: the blonde girl at the branch; the dark-haired girl, recovered, talks and smirks'
+- 'clip audio: the material gives no transcript inside the clip ranges (Stage-2 notes mention dialogue about a slipper, midnight and frogs at
+  00:35.8-00:47.7; unverified, not used)'
+- 'text p001-p003: a gentleman remarries a proud woman with two daughters like her; his own good daughter is made the house drudge, sleeps in
+  a garret, sits in the cinders and is called Cinderwench / Cinderella; she is far handsomer than her sisters'
+- 'text p004-p012: the King''s son gives a ball; the sisters are invited and prepare with Cinderella''s help; they mock her wish to go; they leave
+  and she cries'
+- 'text p013-p026: her godmother, a fairy, offers to send her; with her wand she turns a pumpkin into a gilded coach, mice into horses, a rat
+  into a coachman and lizards into footmen'
+- 'text p027-p028: she turns Cinderella''s rags into cloth of gold and silver and gives her glass slippers; she commands her to leave before midnight,
+  or everything turns back; Cinderella promises and drives off'
+- 'text p028-p033: the prince receives the unknown princess; the court falls silent at her beauty; he dances with her and cannot eat; she is kind
+  to her sisters, who do not know her; at a quarter to twelve she leaves'
+- 'text p034-p041: at home she thanks the godmother; the sisters return and praise the unknown princess; Cinderella teasingly asks to borrow a
+  sister''s clothes and is refused'
+- 'text p042-p046: at the next ball she forgets the time, flees as twelve strikes, the prince cannot catch her, she drops a glass slipper which
+  he picks up; she arrives home in rags with only the other slipper; the guards saw only a poor girl leave; the sisters report the prince is in
+  love with the slipper''s owner'
+- 'text p047-p051: the prince proclaims he will marry the woman whose foot the slipper fits; court ladies and the sisters fail; Cinderella asks
+  to try, it fits, she shows the other slipper; the godmother appears and makes her clothes even finer'
+- 'text p052-p054: the sisters recognise her, beg pardon and are forgiven; she marries the prince and gives her sisters lodgings and matches with
+  lords'
+instructions_meta:
+  requirement_groups:
+    story progression:
+    - CR1
+    - CR3
+    - FP1
+    world rule in play:
+    - FP2
+    resolution:
+    - CR4
+    - CR5
+    - FP3
+    key moments:
+    - CR2
+    - VP1
+    - VP4
+    story settings:
+    - VP2
+    - VP3
+  explicit_requirements:
+  - type: specify
+    text: At the end, once her stepsisters recognise her and beg her pardon, the heroine should forgive them and marry the prince.
+    covers:
+    - CR5
+rubric:
+  content_realization:
+  - id: CR1
+    item: The game contains the heroine as a good girl kept as the household drudge by her stepmother and two stepsisters, who go to the ball
+      and leave her behind
+    anchors:
+      '1': the heroine, a stepmother and two stepsisters present, the stepfamily treating her as their servant and going to the ball without her
+      '0.5': the stepfamily present but their role unclear (no mistreatment shown, or not the ones who leave her behind)
+      '0': no stepfamily, or the heroine not mistreated
+    evidence:
+    - - p001
+      - p003
+    - p011
+    - p012
+  - id: CR2
+    cross: true
+    item: The heroine's magical helper is the fairy godmother of the text in the form of the clip's pointed-hat woman with a wand, and she transforms
+      the heroine for the ball, giving her a carriage, a gown and glass slippers
+    anchors:
+      '1': a pointed-hat wand woman in the role of the godmother, who provides the carriage, the gown and the glass slippers that send the heroine
+        to the ball
+      '0.5': a godmother who transforms the heroine but without the clip's pointed-hat wand figure, or the transformation missing one of carriage,
+        gown or slippers
+      '0': no helper or no transformation
+    evidence:
+    - - '00:09.2'
+      - '00:14.7'
+    - - '00:16.7'
+      - '00:18.2'
+    - - p015
+      - p027
+  - id: CR3
+    item: At the ball the prince receives the heroine as an unknown princess and dances with her, while her stepsisters there do not recognise
+      her
+    anchors:
+      '1': the prince at the ball singling out and dancing with the heroine, and the stepsisters present without knowing who she is
+      '0.5': the prince and the heroine together at the ball, but the stepsisters absent or knowing her
+      '0': no ball with the prince
+    evidence:
+    - - p028
+      - p033
+    - - '00:34.5'
+      - '00:35.0'
+    - - '00:41.0'
+      - '00:41.5'
+  - id: CR4
+    item: 'Turning point: absorbed in the prince, the heroine forgets the time, so in her flight at midnight she leaves one glass slipper behind,
+      the prince keeps it, and she keeps the matching one'
+    anchors:
+      '1': her time with the prince shown as the reason she misses the deadline, and a slipper left at the palace and held by the prince afterwards,
+        with the heroine still having the other
+      '0.5': the slipper left with the prince but the missed deadline given no cause, or the slipper not ending up with the prince, or the heroine
+        not keeping the matching one
+      '0': no slipper left behind
+    evidence:
+    - - p042
+      - p046
+    - - '00:40.0'
+      - '00:40.5'
+  - id: CR5
+    item: 'The ending is a reconciliation: the stepsisters recognise the heroine and beg her pardon, she forgives them, and she marries the prince'
+    anchors:
+      '1': the sisters' recognition and plea, her forgiveness, and the marriage
+      '0.5': the marriage only, or forgiveness without the recognition and plea that prompt it
+      '0': no ending, or a revenge ending
+    evidence:
+    - - p052
+      - p054
+  functions_playability:
+  - id: FP1
+    item: The story is played through the text's key situations in its order (left behind at home, the godmother's transformation, the ball with
+      the prince, the midnight flight losing a slipper, the fitting, the forgiving ending) to a clear ending
+    anchors:
+      '1': the situations reached in the text's order to a clear ending
+      '0.5': the order holds but key situations are skipped or the ending is missing
+      '0': no progression, or the situations out of order
+    evidence:
+    - - p004
+      - p054
+  - id: FP2
+    item: 'The midnight limit is a rule in play: set at the transformation, the time runs during the ball and the player can tell how close midnight
+      is; when it passes the magic ends and the heroine must flee'
+    anchors:
+      '1': a deadline given at the transformation, readable time at the ball, and passing it ending the magic and forcing the flight
+      '0.5': a deadline shown but with no consequence, or the flight scripted with no relation to the time
+      '0': no deadline
+    evidence:
+    - p027
+    - p033
+    - p042
+    - - '00:38.5'
+      - '00:39.0'
+  - id: FP3
+    item: 'The lost slipper resolves the story: it is used to find its owner, others try it and fail, it fits the heroine and reveals her as the
+      unknown princess, which leads to the ending'
+    anchors:
+      '1': a search by the slipper in which others fail and the fit reveals the heroine and triggers the ending
+      '0.5': the slipper fits her but without the search or the others' failure, or the reveal has no effect
+      '0': no fitting
+    evidence:
+    - - p047
+      - p052
+  visual_presentation:
+  - id: VP1
+    cat: key_moment
+    keyframes:
+    - '00:09.7'
+    - '00:11.7'
+    item: 'The transformation looks like the clip: a wand-cast swirl of glowing blue sparkles out of which the carriage and the gown appear around
+      the girl'
+    anchors:
+      '1': a recognisable blue sparkle burst from the wand that visibly produces the carriage and the gown
+      '0.5': a magic effect but in another look, or the items simply appear without the burst
+      '0': no visible transformation
+    evidence:
+    - - '00:09.2'
+      - '00:12.2'
+  - id: VP2
+    cat: spatial
+    keyframes:
+    - '00:08.2'
+    - '00:14.7'
+    item: The transformation's setting is a garden at night, enclosed by hedges, with a fountain
+    anchors:
+      '1': a recognisably nocturnal hedged garden with a fountain
+      '0.5': a garden but not at night, or without hedges or the fountain
+      '0': no such place
+    evidence:
+    - - '00:08.2'
+      - '00:09.2'
+    - - '00:14.2'
+      - '00:16.2'
+    - p017
+  - id: VP3
+    cat: spatial
+    keyframes:
+    - '00:34.5'
+    - '00:39.5'
+    item: 'The ball takes place in a grand palace hall: a large ballroom with chandeliers and a wide staircase'
+    anchors:
+      '1': a grand ballroom with chandeliers and a wide staircase
+      '0.5': an indoor hall without the grandeur, the chandeliers or the staircase
+      '0': no ball setting
+    evidence:
+    - - '00:34.5'
+      - '00:35.0'
+    - - '00:39.5'
+      - '00:41.5'
+    - '00:23.2'
+  - id: VP4
+    cat: key_moment
+    keyframes:
+    - '00:13.7'
+    - '00:40.0'
+    item: 'The glass slipper looks like the clip''s: a glowing, translucent blue slipper'
+    anchors:
+      '1': a recognisably glowing, translucent glass-like slipper
+      '0.5': a slipper but not glass-like or not glowing
+      '0': no visible slipper
+    evidence:
+    - - '00:12.7'
+      - '00:13.7'
+    - - '00:40.0'
+      - '00:40.5'
+    - p027
+play_suggestions:
+  FP1:
+  - 'play from the start to the end: note each situation and the order they come in'
+  - try to reach the ball before the transformation, or the fitting before the ball
+  FP2:
+  - stay at the ball and watch how the time to midnight is shown
+  - 'leave before midnight once, then stay past it: does the magic end and the flight follow?'
+  FP3:
+  - 'watch the slipper search: do others try it before the heroine?'
+  - check that the fit reveals her and leads on to the ending
+  robustness:
+  - leave the ball area at once after arriving
+  - 'skip or rush the dialogue during the transformation: is the midnight limit still known?'
+  - 'save and reload during the ball: is the time kept?'
+hybrid:
+  modality: video+text
+  roles:
+    video: 'the look of the story: the pointed-hat helper whose wand casts a blue sparkle burst in a night garden, the glowing glass slippers,
+      the palace ballroom and its staircase, and a second, dark-haired girl who secretly watches the magic'
+    text: 'the story itself: the heroine and her stepfamily, the fairy godmother''s transformation and its midnight limit, the ball and the prince,
+      the flight that loses a slipper, the slipper fitting that reveals her, and the forgiving ending'
+  cross_reference_requirement: The story must follow the text's characters, rule and event order (transformation with a midnight limit, ball,
+    flight losing a slipper, fitting, forgiveness), while its helper, its transformation and its settings are the ones the clip shows (the pointed-hat
+    wand woman's blue sparkle burst in a night garden, the palace ballroom).
+v4_map:
+  U1: CR1
+  U2: CR2 (the night garden moved to VP2)
+  U3: 'dropped: mechanism already scored by FP2 (deadline set, readable, enforced)'
+  U4: CR4 (her absorption in the prince as the cause of the missed deadline, the slipper left with the prince); the flight at midnight stays in
+    FP2
+  U5: 'dropped: slipper-fitting relation already scored by FP3 as played'
+  U6: CR5
+  U7: 'dropped: peripheral (clip side character''s unexplained sub-thread, not in the story''s arc)'
+  FP1: FP1
+  FP2: FP2 (losing the slipper moved to CR4)
+  FP3: FP3
+  FP4: 'dropped: editing request (farm chores before the transformation), moved to editing_seed.yaml'
+  VP1: VP1
+  VP2: VP2 (sole item for the transformation's garden setting)
+  VP3: VP3
+  VP4: VP4 (the prince holding the slipper moved to CR4)
+provenance:
+  source_yaml: T-HY-vid_7cbfa34ef827.t1.yaml
+  source_sha256: 33e9338d699ba1c85cd2361781942a9223406ef1c5d7ad87094125dad2d7c331
+  size_waiver: null
+  size_max: null
+  sources:
+  - ref: t01
+    text: /Volumes/USB-500G/gameanything_local/hf/curation/hybrid_texts/T-HY-vid_7cbfa34ef827.t1/final.md

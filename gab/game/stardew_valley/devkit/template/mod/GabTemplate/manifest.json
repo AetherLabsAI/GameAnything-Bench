@@ -1,0 +1,10 @@
+{
+  "Name": "GabTemplate",
+  "Author": "gab",
+  "Version": "1.0.0",
+  "Description": "Template: say hello when a save is loaded.",
+  "UniqueID": "yourname.GabTemplate",
+  "EntryDll": "GabTemplate.dll",
+  "MinimumApiVersion": "4.0.0",
+  "UpdateKeys": []
+}

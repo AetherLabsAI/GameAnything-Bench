@@ -1,0 +1,335 @@
+# GameAnything-Bench scoring material: never shown to agents during a trial.
+task_id: T-HY-vid_b5be7373833d.t1
+source_inventory:
+- 'clip 01:20.8-01:22.7: a crowd of costumed characters bursts out in a flash of flying paper in a checkered palace hall'
+- 'clip 01:22.7-01:26.8: title ''The Hunter'' on a rock in a snowy pine forest; a hunter with a feathered hat and a gun stalks; the boy (golden
+  hair, green outfit) plays a flute nearby; then the hunter waves in a hut of barrels with a crossbow and a gun'
+- 'clip 01:26.8-01:30.3: a white burst of paper; the businessman (checked suit, red tie) appears with arms out, a briefcase at his feet, the boy
+  and a small purple fox watching; a white-uniformed armoured figure bows beside him'
+- 'clip 01:30.8-01:34.8: title ''The Businessman'': he and the boy on a small bare rocky planet under stars with floating asteroids; he opens
+  his briefcase into a drawer of coloured flowers and seeds; he holds up a counting machine printing a ticker tape, talking to the boy'
+- 'clip 01:35.3-01:38.3: a flash in a green-and-blue corridor; a trench-coated figure in a hat reads a large book'
+- 'clip 01:38.8-01:42.0: title ''The Geographer'': a map unrolled on a table under the stars; the geographer (hat, coat, bow tie) studies it with
+  the boy at his side (the hunter also present); he peers through a magnifier among tall towers of books'
+- 'clip 01:42.3-01:46.0: a burst of light in a lit-up hall between two tall robed figures reveals the king (crown, red beard, white ruff, ermine
+  robe, gold sceptre), who poses grandly'
+- 'clip 01:46.3-01:52.8: title ''The King'': the king climbs to the top of a tall stone stair tower, raises his arm, topples and slides down the
+  stairs on his cape to the foot of a blue-and-white building'
+- 'clip 01:53.3-01:55.8: small planets in starry space; a bubble around a planet streaks with blue light; the boy looks out, worried'
+- 'clip 01:56.3-01:59.0: the boy with the hunter, the geographer, the king and the businessman stand together looking out at space; fade to black'
+- 'clip audio: music only, no speech'
+- 'text p001: the prince tells the narrator (repairing his plane) his story: he lived alone on a house-sized asteroid (B-612; an anecdote about
+  the Turkish astronomer who found it), with three tiny volcanoes and baobabs he had to uproot; a vain, demanding rose grew there and he cared
+  for her (screen, glass globe); feeling used, he resolved to leave and explore; at the goodbye she apologised and said she would protect herself;
+  he then visited six other planets, each inhabited by one adult'
+- 'text p002: the six inhabitants in order: a king who claims everyone as his subject but only gives orders that can be obeyed (the sun to set
+  at sunset); a conceited man who wants only to be admired; a tippler who drinks to forget the shame of drinking; a businessman who counts and
+  catalogues the stars to own them, blind to their beauty; a lamplighter on a planet so small a day lasts a minute, lighting and putting out his
+  lamp every 30 seconds by orders (the prince liked this planet most, for its sunsets); an elderly geographer who has never been anywhere and
+  only records what explorers report; he persuades the prince to visit Earth next'
+- 'img01: the little prince in storybook watercolour: wild golden hair, a long green coat lined red, a sash, boots and a small sword'
+- 'img02: a single red rose on the curve of a small planet, a yellow sun behind'
+- 'img03: a king in a crown and a huge star-patterned ermine robe sitting on a throne, the robe covering his tiny yellow planet'
+- 'img04: a businessman in a suit and tie at a desk on a small planet, pointing at a written sheet of figures, stars around'
+- 'img05: a lamplighter on a tiny planet lighting a lamp post with a long pole, a red sun beside the planet'
+- 'img06: an old bearded geographer at a desk on a planet with a large open book and a magnifying glass'
+instructions_meta:
+  requirement_groups:
+    opening and departure:
+    - CR1
+    - CR2
+    - FP1
+    progression through the settings:
+    - CR3
+    - CR4
+    - FP2
+    - VP1
+    - VP4
+    character encounters:
+    - FP3
+    - VP2
+    - VP3
+    ending:
+    - CR5
+    - FP4
+  explicit_requirements:
+  - type: keep
+    text: I really want to keep the old geographer who has never been anywhere himself and talks the prince into going to Earth next.
+    covers:
+    - CR5
+    - FP4
+  - type: specify
+    text: The prince should leave home because he feels his vain, demanding rose is taking advantage of him, so he sets off to explore.
+    covers:
+    - CR2
+    - FP1
+rubric:
+  content_realization:
+  - id: CR1
+    item: The game contains the prince as a lone young traveller with a tiny home planet of his own, the single rose growing on it, and he is
+      the visitor in every encounter
+    anchors:
+      '1': a boy / prince with his own tiny home planet on which the rose grows, travelling alone as the visitor of the other worlds
+      '0.5': the boy visitor is there, but without his own tiny home world or without the rose on it (or the home world without him as the visitor)
+      '0': no such protagonist, or the visitor is one of the inhabitants
+    evidence:
+    - - '01:28.3'
+      - '01:34.8'
+    - - '01:39.8'
+      - '01:42.0'
+    - p001
+    - img01
+    - img02
+  - id: CR2
+    item: 'The game shows that the prince leaves home because of the vain, demanding rose: feeling she takes advantage of him, he sets out to
+      explore'
+    anchors:
+      '1': the rose shown as vain and demanding with the prince caring for her, and the departure explicitly caused by feeling used by her, with
+        exploring as his aim
+      '0.5': the rose or the departure present, but the link between them missing, or the rose without her demanding character
+      '0': no reason given for leaving, or another cause
+    evidence:
+    - p001
+    - img02
+  - id: CR3
+    item: The game contains separate tiny worlds, each inhabited by a single adult defined by one role or obsession, among them the king, the
+      businessman and the geographer
+    anchors:
+      '1': one inhabitant per world, each defined by one role or fixation, with at least the king, the businessman and the geographer present
+      '0.5': role-defined inhabitants present but sharing one place, or only some of the three shared inhabitants present
+      '0': no role-defined inhabitants on worlds of their own
+    evidence:
+    - - '01:30.8'
+      - '01:34.8'
+    - - '01:38.8'
+      - '01:42.0'
+    - - '01:46.3'
+      - '01:49.3'
+    - p001
+    - p002
+    - img03
+    - img04
+    - img05
+    - img06
+  - id: CR4
+    cross: true
+    item: The planet chain follows the text's order of visits (the king first, the businessman between, the geographer last) and its stations
+      are the clip's role-named King, Businessman and Geographer, not the clip's montage order
+    anchors:
+      '1': 'the clip''s King, Businessman and Geographer met in the text''s order: king first, businessman between, geographer last (the other
+        text stations need not all be there)'
+      '0.5': part of the text's order kept (the king first or the geographer last) but the rest out of order, or the text's order with inhabitants
+        that are not the clip's role-named characters
+      '0': no order, or the clip's shot order (king last)
+    evidence:
+    - p002
+    - - '01:30.8'
+      - '01:34.8'
+    - - '01:38.8'
+      - '01:42.0'
+    - - '01:46.3'
+      - '01:49.3'
+  - id: CR5
+    item: The game contains the old geographer who has never been anywhere and only records what explorers report, and he is the one who persuades
+      the prince to go to Earth next
+    anchors:
+      '1': an old geographer whose trait (records others' reports, has never explored himself) is shown, and who sends the prince on to Earth
+      '0.5': the geographer with his trait but without sending the prince to Earth, or Earth as the next goal without the geographer sending him
+      '0': no geographer
+    evidence:
+    - p002
+    - img06
+    - - '01:38.8'
+      - '01:42.0'
+  functions_playability:
+  - id: FP1
+    item: The game starts playably on the prince's home planet and leaving it is a step of the story the player takes, leading on to the first
+      world
+    anchors:
+      '1': a playable start on the home planet, and the departure a story step reached through play that leads to the journey
+      '0.5': a start on the home planet, but the departure happens arbitrarily or only as text, without a step the player plays
+      '0': the game starts at the first visited world, or no start
+    evidence:
+    - p001
+    - img02
+  - id: FP2
+    item: The player travels from world to world through play, reaching the inhabitants' worlds one after another
+    anchors:
+      '1': separate worlds reached in turn by the player, each inhabitant met at their own world
+      '0.5': travel exists, but some worlds cannot be reached or the travel between them breaks the progression
+      '0': no travel between separate worlds
+    evidence:
+    - p001
+    - p002
+    - - '01:30.8'
+      - '01:34.8'
+    - - '01:38.8'
+      - '01:42.0'
+    - - '01:53.3'
+      - '01:55.8'
+  - id: FP3
+    item: Each encounter is a short exchange in which the inhabitant shows their single trait as the text gives it, after which the player can
+      move on
+    anchors:
+      '1': every encounter makes the inhabitant's trait evident (e.g. the king's orders that can be obeyed, the businessman counting stars to
+        own them) and lets the player continue
+      '0.5': exchanges exist but are generic greetings, or the trait shows for only some inhabitants, or an encounter blocks the way on
+      '0': no exchange with the inhabitants
+    evidence:
+    - p002
+    - - '01:32.8'
+      - '01:34.8'
+    - - '01:39.8'
+      - '01:42.0'
+  - id: FP4
+    item: 'Finishing the geographer''s encounter ends the planet journey: a clear end of the chain with the move on to Earth as the next step'
+    anchors:
+      '1': after the geographer's encounter the chain ends clearly, with Earth named or reached as the next step
+      '0.5': the journey ends, but not after the geographer, or without Earth as the next destination
+      '0': no end; the journey stops arbitrarily or loops
+    evidence:
+    - p002
+  visual_presentation:
+  - id: VP1
+    cat: spatial
+    keyframes:
+    - '01:30.8'
+    - '01:53.8'
+    item: Each planet is its own small, separate map or area, set apart from the others as a world of its own (a sphere shape is not required)
+    anchors:
+      '1': each world a small separate map or area, visibly set apart as its own world, e.g. by a dark or starry surround, its own title or a
+        clear boundary; it need not be round or copy the references' look
+      '0.5': separate areas, but they read as ordinary parts of one map, with nothing setting each world apart
+      '0': none
+    evidence:
+    - - '01:30.8'
+      - '01:31.3'
+    - - '01:53.3'
+      - '01:55.3'
+    - img02
+    - img03
+    - img05
+  - id: VP2
+    cat: style
+    keyframes:
+    - '01:33.8'
+    - '01:41.3'
+    - '01:44.3'
+    item: 'The inhabitants are recognisable by the look the references give them: the king crowned in an ermine robe with a sceptre, the businessman
+      in a suit with his figures or counting machine, the geographer with a magnifier'
+    anchors:
+      '1': each shared inhabitant identifiable at a glance by these attributes
+      '0.5': some inhabitants recognisable, others generic
+      '0': generic characters only
+    evidence:
+    - - '01:32.8'
+      - '01:34.8'
+    - - '01:39.8'
+      - '01:42.0'
+    - - '01:44.3'
+      - '01:46.0'
+    - img03
+    - img04
+    - img06
+  - id: VP3
+    cat: presentation
+    item: 'On arriving at a world the player can read whose world it is: the inhabitant''s role name is shown, as the clip names each world with
+      a title'
+    anchors:
+      '1': each inhabitant's role name visible on arrival or at the first exchange
+      '0.5': role names for only some inhabitants, or only in a menu or log
+      '0': inhabitants are never named by role
+    evidence:
+    - - '01:23.3'
+      - '01:25.3'
+    - - '01:30.8'
+      - '01:32.3'
+    - - '01:38.8'
+      - '01:40.3'
+    - - '01:46.3'
+      - '01:48.3'
+  - id: VP4
+    cat: spatial
+    keyframes:
+    - '01:31.3'
+    - '01:39.3'
+    - '01:47.3'
+    item: 'Each shared inhabitant''s world has the setting the references give it: the king''s lofty seat of rule, the businessman''s bare rocky
+      planet, the geographer''s map table among towers of books'
+    anchors:
+      '1': the three settings recognisable (the king's tall stone stair tower or his throne on a tiny planet, the businessman's bare rocky world
+        under the stars, the geographer's table with a map or large book among stacks of books)
+      '0.5': one or two of the settings recognisable, the others generic
+      '0': generic settings only
+    evidence:
+    - - '01:30.8'
+      - '01:31.8'
+    - - '01:38.8'
+      - '01:42.0'
+    - - '01:46.3'
+      - '01:49.3'
+    - img03
+    - img04
+    - img06
+play_suggestions:
+  FP1:
+  - 'start a new game: where are you, is the rose there, and is it clear why you leave?'
+  - 'try to leave the home planet at once: is the departure still a step of the story?'
+  FP2:
+  - visit every world and note the order the inhabitants are met in
+  - 'try to reach the geographer before the king: is it blocked, or does the order still hold?'
+  - compare each setting with the clip's version of it
+  FP3:
+  - 'talk to each inhabitant: what does each say or do that shows their trait?'
+  - after each exchange, can you go on to the next world?
+  FP4:
+  - 'finish the geographer''s encounter: is Earth named or reached next, and does the journey end there?'
+  robustness:
+  - 'talk to an inhabitant twice: does the exchange still make sense?'
+  - leave a world mid-exchange and come back
+  - try to travel back to an earlier world after the geographer
+hybrid:
+  modality: video+text+image
+  roles:
+    video: 'the look of the inhabitants and of their worlds: role-named characters, each on their own small setting in starry space, with the
+      boy as the visitor'
+    text: 'the story: the prince''s tiny home asteroid and the rose, why he leaves, the inhabitants of the six planets and their single traits,
+      the order of the visits and the geographer sending him to Earth'
+    images: the storybook look of the prince, the rose on his asteroid and four inhabitants (king, businessman, lamplighter, geographer), each
+      alone on a tiny planet
+  cross_reference_requirement: The text's chain of visits (order, each inhabitant's trait, the geographer sending the prince to Earth) must be
+    staged with the inhabitants and worlds as the clip shows them; the clip's King, Businessman and Geographer are the text's king, businessman
+    and geographer, and their props show the traits the text gives.
+v4_map:
+  U1: CR1
+  U2: CR3
+  U3: CR3, FP2
+  U4: CR2
+  U5: CR4
+  U6: CR5
+  U7: CR4, VP2
+  FP1: FP1, CR2
+  FP2: FP2, CR4, VP4
+  FP3: FP3
+  FP4: FP4, CR5
+  VP1: VP1
+  VP2: VP2, VP4
+  VP3: CR1
+  VP4: VP3
+provenance:
+  source_yaml: T-HY-vid_b5be7373833d.t1.yaml
+  source_sha256: 1a63434f3257f3d0712f8056c4edc2b942aa4650ed4a2810dfac03c1cc51c16a
+  size_waiver: null
+  size_max: null
+  sources:
+  - ref: t01
+    text: /Volumes/USB-500G/gameanything_local/hf/curation/hybrid_texts/T-HY-vid_b5be7373833d.t1/final.md
+  - refs:
+    - img01
+    - img02
+    - img03
+    - img04
+    - img05
+    - img06
+    images:
+    - hybrid/q22_ref1

@@ -1,0 +1,211 @@
+# GameAnything-Bench scoring material: never shown to agents during a trial.
+task_id: T-IO-afedff0bf3
+source_inventory:
+- 'img01: old engraved floor plan of the whole abbey (title ''Plan du Mont St Michel'', numbered legend in French, two coats of arms); the church
+  in the centre (a long nave of pillars, a rounded choir with radiating chapels at the top), surrounded on all sides by smaller rooms, crypts
+  and halls drawn with rib vaults; a range of long pillared, rib-vaulted halls along the left side next to a curving outer wall; walled terraces
+  / gardens at the lower left'
+- 'img02: old plan of one level (title ''Abbaye du Mont St Michel'', ''Plan du 1er étage''): two long rectangular halls in a row (''Salle d''Aumônes'',
+  ''Cellier des Moines'') with rows of pillars and vaults, built directly against the bare rock (''Rocher'') along their back wall, buttressed
+  front wall, a wall-walk (''Chemin de ronde'') running along the outside, spiral stairs and stairways at both ends, a rampart and a round tower
+  at the lower left'
+- 'img03: aerial photo at high water, golden evening light: a small steep rocky island standing in calm water; a ring of rampart walls with round
+  towers at the waterline, a village of tightly packed stone and half-timbered houses with slate roofs climbing the slope, trees on the slopes,
+  massive stone abbey buildings on top, the church with a tall pointed spire at the summit; a sandy strip / causeway leading off to the left'
+- 'img04: high aerial photo at low water: the island on an immense expanse of grey-beige sand flats cut by meandering water channels; a long straight
+  causeway / road with car parks runs from the island to the mainland, whose shore is green salt meadow crossed by creeks; a second small islet
+  far off in the bay'
+- 'img05: the summit seen from below, blue sky: the church with a square Romanesque bell tower, a steep slate roof and a tall slender green-and-gilt
+  spire topped by a golden winged statue; a Gothic east end bristling with pinnacles; below, tall sheer granite walls of the abbey buildings with
+  small windows, partly under scaffolding; an arcaded buttress wall on the left; rock and greenery at the foot'
+- 'img06: panorama inside the cloister: a covered walkway with a wooden barrel-vaulted roof running round a square garden of clipped hedges and
+  lawn open to the sky; the inner side is a double row of slender columns carrying pointed arches with carved friezes above; stone-flag floor,
+  sunlight casting column shadows'
+instructions_meta:
+  requirement_groups:
+    approach and entry:
+    - CR2
+    - FP1
+    route to the summit:
+    - FP2
+    abbey interiors:
+    - CR5
+    - CR6
+    - FP3
+    - VP3
+    island silhouette and bay:
+    - CR1
+    - VP1
+    walls, village and abbey architecture:
+    - CR3
+    - CR4
+    - VP2
+  explicit_requirements:
+  - type: keep
+    text: I definitely want the long causeway across the bay, so I can walk from the mainland all the way to the island.
+    covers:
+    - CR2
+    - FP1
+rubric:
+  content_realization:
+  - id: CR1
+    item: The island stands alone as a steep rock in the middle of a wide, flat bay
+    anchors:
+      '1': an isolated island rising out of a wide flat expanse of water and / or sand, with no other high ground around it
+      '0.5': an island in water, but the surroundings are not a wide flat bay (a narrow channel, a coast of cliffs or hills close by)
+      '0': no bay round the island, or the island is plain land
+    evidence:
+    - img03
+    - img04
+  - id: CR2
+    item: A single long causeway joins the island to a mainland shore across the bay
+    anchors:
+      '1': a mainland shore exists and one long land link runs from it across the bay to the island
+      '0.5': a link exists but is short or does not reach a mainland (the island is joined to nothing in particular), or a mainland exists with
+        no link
+      '0': no mainland and no link
+    evidence:
+    - img04
+    - img03
+  - id: CR3
+    item: 'The island is built up in layers on a steep rock: rampart walls ring the waterline, a dense village climbs the slope inside them, the
+      abbey''s buildings stand above, and the church with its spire is at the summit'
+    anchors:
+      '1': all four layers exist in the bottom-to-top order walls -> packed village -> abbey -> church / spire at the top
+      '0.5': an abbey on top of the island, but the walled base or the village on the slope is missing, the village is scattered, or the order
+        is wrong
+      '0': missing
+    evidence:
+    - img03
+    - img04
+    - img05
+  - id: CR4
+    item: 'The abbey is one compact mass wrapped round the summit: the church sits in the middle and highest, and the other halls are built around
+      it and lower down'
+    anchors:
+      '1': the church at the centre / top with the other abbey buildings packed around and below it as one mass
+      '0.5': several abbey buildings on top, but not wrapped round the church (the church to one side, or the rest at the same height)
+      '0': missing, or the abbey laid out as separate buildings spread on flat ground
+    evidence:
+    - img01
+    - img02
+    - img05
+  - id: CR5
+    item: 'The abbey contains a cloister: a garden square open to the sky, enclosed on all sides by a covered arcaded walkway'
+    anchors:
+      '1': inside the abbey, an open garden square with a roofed arcaded walk round all of its sides
+      '0.5': a courtyard or an arcade exists, but not a garden enclosed on all sides by a covered walk, or it stands apart from the abbey
+      '0': no cloister
+    evidence:
+    - img06
+  - id: CR6
+    item: 'Besides the cloister, the abbey holds interior spaces: the church and long halls with rows of pillars'
+    anchors:
+      '1': the church has an interior, and at least one long hall divided by rows of pillars exists inside the abbey
+      '0.5': interiors exist, but no church interior or no pillared hall (plain rooms only)
+      '0': the abbey has no interiors besides the cloister
+    evidence:
+    - img01
+    - img02
+  functions_playability:
+  - id: FP1
+    item: The player can walk from the mainland along the causeway all the way to the island and get inside through its walls
+    anchors:
+      '1': the player walks the whole land link from the mainland side to the island and passes through a way in the walls into the walled base
+      '0.5': the island is reached, but the way is broken (a gap to swim or fly across) or there is no way in through the walls
+      '0': the island cannot be reached or entered on foot
+    evidence:
+    - img04
+    - img03
+  - id: FP2
+    item: A connected route leads from the walled base up through the village to the abbey and the church at the summit
+    anchors:
+      '1': the player can travel a connected route from the foot of the island up through the village to the abbey at the summit
+      '0.5': the summit abbey can be reached, but not by a route through the island's layers (the route skips the village, ends below the abbey,
+        or the summit is cut off from the rest)
+      '0': the abbey cannot be reached
+    evidence:
+    - img03
+    - img05
+  - id: FP3
+    item: 'The abbey''s interiors are connected: the player can walk between the church, the halls and the cloister without leaving the building'
+    anchors:
+      '1': the player walks between several connected interior spaces of the abbey, among them the full round of the cloister walk
+      '0.5': some interiors are enterable but isolated from each other, or only one interior can be entered
+      '0': no interior can be entered (the abbey is only a facade)
+    evidence:
+    - img01
+    - img02
+    - img06
+  visual_presentation:
+  - id: VP1
+    cat: spatial
+    item: From outside, the built-up island reads as one steep, compact pyramid tapering to a single high point
+    anchors:
+      '1': seen from outside, the island and its buildings form one steep compact silhouette that narrows to a single peak
+      '0.5': an island with buildings, but the outline is flat, spread out or has no single peak
+      '0': not recognisable
+    evidence:
+    - img03
+    - img04
+  - id: VP2
+    cat: style
+    item: The abbey on top is made of massive, sheer stone walls rising from the rock, crowned by a church with a tall slender pointed spire
+    anchors:
+      '1': tall fortress-like stone buildings on the rock and a church with a slender spire above them
+      '0.5': a church on top but without the massive walls below, or a generic building without a spire
+      '0': not recognisable
+    evidence:
+    - img05
+    - img03
+  - id: VP3
+    cat: spatial
+    item: 'The cloister walk looks light and open: a roofed walkway whose garden side is an arcade of slender columns carrying pointed arches'
+    anchors:
+      '1': a roofed walk opening onto the garden through a row of slender columns with pointed arches
+      '0.5': the walk opens onto the garden through plain walls with openings, heavy piers or round-headed openings without slender columns
+      '0': the cloister does not look like an arcaded walk
+    evidence:
+    - img06
+play_suggestions:
+  FP1:
+  - 'start on the mainland side if possible and walk to the island: is there one clear land route, and where does it enter the walls?'
+  FP2:
+  - go from the gate to the summit; note whether the route passes among houses and how the abbey is entered
+  FP3:
+  - enter the abbey and try to go from the church to the cloister and to a large hall without leaving the building
+  - walk the full round of the cloister walk
+  robustness:
+  - 'walk off the edge of the walls, the causeway and the summit terraces: is falling or the water handled sensibly?'
+  - walk around the outside of the island at the foot of the walls
+  - 'look back at the island from the far end of the causeway: is the silhouette still recognisable?'
+v4_map:
+  U1: CR1 (island alone in a wide flat bay; the bay's change between water and sand dropped by the reviewer)
+  U2: CR5
+  U3: CR3
+  U4: CR2
+  U5: CR4
+  FP1: CR2 (mainland and causeway exist) + FP1 (walk it and enter)
+  FP2: FP2
+  FP3: CR6 (church and pillared halls exist) + FP3 (connected interiors)
+  VP1: VP1 (trimmed to the silhouette; isolation in the bay -> CR1, spire at the summit -> CR3)
+  VP2: CR3 (walls and village layers are arrangement, merged)
+  VP3: VP2
+  VP4: CR5 (cloister exists) + VP3 (look of the arcade)
+  VP5: 'dropped: reviewer (the still images cannot show the tide as a dynamic process; the former FP4 was deleted)'
+  VP6: 'removed: editing (the night-time modify request and its item moved to editing_seed.yaml)'
+provenance:
+  source_yaml: T-IO-afedff0bf3.yaml
+  source_sha256: e7d71e18485797e4985ab63bada4d67c8b7ccb3f71538ce6d10d665760df128d
+  size_waiver: null
+  size_max: null
+  sources:
+  - refs:
+    - img01
+    - img02
+    - img03
+    - img04
+    - img05
+    - img06
+    bundle: afedff0bf3
+    title: 圣米歇尔山（6 张：平面图、全景、外观、回廊）

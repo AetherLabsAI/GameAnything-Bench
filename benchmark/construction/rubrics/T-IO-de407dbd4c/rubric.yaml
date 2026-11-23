@@ -1,0 +1,188 @@
+# GameAnything-Bench scoring material: never shown to agents during a trial.
+task_id: T-IO-de407dbd4c
+source_inventory:
+- 'img01: site plan of the monastery (French legend, title ''Monastère de Skellig Michael''): a narrow terraced ledge bounded by walls; a cluster
+  of cells A-G (one only a curved fragment), a church (1) and two oratories (2, 3), a cemetery, leachts, crosses and cisterns on the upper part;
+  ''Jardin inférieur'' and ''Jardin supérieur'' terraces below; two dotted access paths arriving from below; contour labels 120-180 m; north arrow,
+  scale bar and an inset of the whole island marking the site'
+- 'img02: shaded-relief map of the island in the Atlantic Ocean: two high masses joined by a low ''Christ''s Saddle''; ''Monastery'' on the north-eastern
+  mass, ''Hermitage'' on the higher south-western mass (about 200 m contour); ''Lighthouse'' and ''Old Lighthouse'' on the south; coves around
+  the shore; a small separate ''Blue Man''s Rock''; a grey rendering of the rock''s jagged profile at the bottom'
+- 'img03: photo from a boat: the island as a single steep, roughly pyramidal rock rising straight from grey open sea, dark rock with green turf
+  patches, waves breaking at its foot, overcast sky'
+- 'img04: photo at the landing: a small concrete pier with a crane at the waterline between dark rock outcrops, a boat at the pier and one arriving
+  through choppy blue sea; on the horizon a second jagged rock island and a distant mainland coast; visitors climbing up from the pier'
+- 'img05: photo inside the monastery: several corbelled dry-stone huts of flat stacked slabs tapering to rounded domes, small dark rectangular
+  doorways, stone-paved terraces and low retaining walls, a standing stone slab at the right; visitors on an upper terrace'
+- 'img06: photo of the climb: a rough stairway of flat stones running up a steep grassy, rock-strewn slope toward jagged grey crags under a clear
+  blue sky; a line of visitors on the steps'
+instructions_meta:
+  requirement_groups:
+    overall form of the place:
+    - CR1
+    - CR2
+    - VP1
+    arrival and route to the landmark:
+    - CR3
+    - CR4
+    - FP1
+    - VP2
+    - VP3
+    exploring the landmark:
+    - VP4
+    - VP5
+    - FP2
+  explicit_requirements:
+  - type: keep
+    text: I definitely want those round huts of stacked flat stones that narrow up into a domed top.
+    covers:
+    - VP4
+rubric:
+  content_realization:
+  - id: CR1
+    item: The island has two high masses joined by a lower saddle
+    anchors:
+      '1': two summits with a clearly lower saddle between them
+      '0.5': an island with high ground, but a single summit or a two-summit shape that cannot be made out
+      '0': missing, or a low, flat island
+    evidence:
+    - img02
+  - id: CR2
+    item: The monastery sits high up on one of the two masses, far above the sea
+    anchors:
+      '1': the monastery placed high on one of the summit masses, well above the shore
+      '0.5': the monastery placed above the shore, but low on the slope or on the saddle
+      '0': missing, or the monastery placed at the shore
+    evidence:
+    - img02
+    - img01
+  - id: CR3
+    item: A landing at the waterline at the foot of the rock is the point where the player arrives
+    anchors:
+      '1': a landing at sea level at the foot of the rock, where the visit starts
+      '0.5': a landing exists, but not at the waterline or not where the player arrives
+      '0': no landing
+    evidence:
+    - img04
+  - id: CR4
+    item: A stone-stepped path runs from the landing up the steep slope to the monastery
+    anchors:
+      '1': a stepped stone path that connects the landing with the monastery high above
+      '0.5': a stepped path exists, but does not start at the landing or stops short of the monastery
+      '0': no path from the landing to the monastery
+    evidence:
+    - img06
+    - img04
+    - img01
+  functions_playability:
+  - id: FP1
+    item: The player can follow the stepped route from the landing up the steep slope to the monastery, so reaching it is a climb with a felt
+      gain in height
+    anchors:
+      '1': the route can be followed on foot from the landing to the monastery and climbs well above the sea
+      '0.5': the monastery is reachable, but the way up is not along the route or has no real climb (near the shore or on flat ground)
+      '0': the monastery cannot be reached on foot
+    evidence:
+    - img06
+    - img04
+    - img01
+  - id: FP2
+    item: 'At the top the monastery can be explored on foot: the player walks its terraces among the clustered huts'
+    anchors:
+      '1': the terraces and paths among the huts are walkable
+      '0.5': the monastery is reached but only seen from outside or walked around, not among the huts
+      '0': no monastery to explore
+    evidence:
+    - img05
+    - img01
+  visual_presentation:
+  - id: VP1
+    cat: spatial
+    item: Seen from the sea, the island looks like a single steep, peaked mass of dark rock rising straight out of open ocean
+    anchors:
+      '1': from the water or the shore the island reads as a steep, peaked rock mass like img03
+      '0.5': an island seen from outside, but low, rounded or wooded
+      '0': no view of the island from outside
+    evidence:
+    - img03
+    - img04
+  - id: VP2
+    cat: key_moment
+    item: The landing looks like a small pier at the waterline set tightly at the foot of steep rock, facing open sea
+    anchors:
+      '1': a small pier at sea level hemmed in by rock, facing open water
+      '0.5': the landing looks like an ordinary harbour or beach
+      '0': no visible landing
+    evidence:
+    - img04
+  - id: VP3
+    cat: key_moment
+    item: The climb looks like a rough stone stairway running up a steep, exposed slope
+    anchors:
+      '1': rough stone steps visibly climbing a steep open slope
+      '0.5': a path up the island, but not looking like stepped stone or not steep
+      '0': missing
+    evidence:
+    - img06
+  - id: VP4
+    cat: style
+    item: 'The monastery''s cells are beehive huts: round huts of stacked flat stones that taper to a domed top'
+    anchors:
+      '1': several round huts built of stacked flat stones whose walls narrow upward into a domed top
+      '0.5': stone huts or cells exist, but square, flat-roofed, not of stacked flat stones or otherwise not beehive-shaped
+      '0': no huts, or ordinary buildings
+    evidence:
+    - img05
+    - img01
+  - id: VP5
+    cat: spatial
+    item: The huts form a compact cluster on a narrow ledge held up by walled terraces
+    anchors:
+      '1': the huts stand close together on a narrow ledge of walled / stepped terraces
+      '0.5': the huts are clustered together, but on open ground with no ledge or terraces
+      '0': missing, or the huts scattered over the island
+    evidence:
+    - img01
+    - img05
+play_suggestions:
+  FP1:
+  - start a new game and find the landing at the shore
+  - 'follow the steps from the landing to the monastery: is the route continuous and does it gain clear height?'
+  - try to reach the monastery without the steps, straight up the slope
+  FP2:
+  - walk the terraces between the huts
+  - walk around the whole cluster of huts
+  robustness:
+  - leave the stairway halfway and walk back down to the landing
+  - 'walk to the island''s edge: do cliffs and sea stop the player or end in a fall?'
+  - 'jump or walk off a terrace edge and off a cliff: is the player recovered sensibly?'
+  - 'look back from the monastery toward the sea: is the island''s height readable?'
+v4_map:
+  U1: 'dropped: duplicate of VP1 (isolated rock island in open sea; review 2026-11-05, Yuru Feng)'
+  U2: CR1 (island shape) and CR2 (monastery placement), split 2026-11-05
+  U3: CR3 (landing) and CR4 (stepped path), split 2026-11-05 (the climb itself is scored by FP1)
+  U4: VP4 (moved from CR to VP on review 2026-11-05)
+  U5: VP5 (moved from CR to VP on review 2026-11-05)
+  FP1: FP1 (existence of landing and stepped route split off to CR3 / CR4)
+  FP2: FP2
+  VP1: VP1
+  VP2: CR1 / CR2 (spatial arrangement of summits and monastery, merged with U2)
+  VP3: VP2
+  VP4: VP3
+  VP5: VP4 (beehive shape and stacked flat-stone build) and VP5 (cluster on terraces)
+  VP6: 'dropped: editing (winter modify requirement, moved to editing_seed.yaml)'
+provenance:
+  source_yaml: T-IO-de407dbd4c.yaml
+  source_sha256: 6484aacd4dde1d5c4ddc1e5ce640f544c62d07fe9aa266b81452efb961d5c235
+  size_waiver: null
+  size_max: null
+  sources:
+  - refs:
+    - img01
+    - img02
+    - img03
+    - img04
+    - img05
+    - img06
+    bundle: de407dbd4c
+    title: 爱尔兰斯凯利格迈克尔岩石修道院岛

@@ -1,0 +1,163 @@
+# GameAnything-Bench scoring material: never shown to agents during a trial.
+task_id: T-IO-c07d6e7c93
+source_inventory:
+- 'img01: a red-and-white banded lighthouse on dark high ground at night, its lamp room lit and throwing rays into a deep blue sky; a keeper''s
+  building with a few lit windows and a lattice mast beside it'
+- 'img02: hazy sunset over open water; a single dark beacon buoy with a topmark stands offshore in the sun''s reflection; reeds and a rocky shore
+  in the foreground'
+- 'img03: two red buoys on dead-calm blue water, mirrored in it: a round one with a lifting ring on top, and one lying on its side with a fouled
+  chain / ring arm'
+- 'img04: a long line of yellow cylindrical floats linked end to end across green water in front of reeds, curving away; gulls and a cormorant
+  perch on them'
+- 'img05: high aerial view of a harbour on a narrow channel: ships with cranes and a container barge moored along the quays, small yachts at the
+  far quay; on the near quay a yard of buoys laid out in rows (red, green, yellow, grey; cones, spars, cylinders); town behind'
+- 'img06: view from low on the water (a boat wake at right) of a red-and-white floating buoy topped by a small domed shrine with a figure and
+  signboards; wide lake, wooded shore with houses'
+instructions_meta:
+  requirement_groups:
+    vessel control:
+    - FP1
+    marks in the water:
+    - CR1
+    - CR2
+    - FP2
+    - FP3
+    - FP4
+    - VP2
+    water play space:
+    - VP1
+  explicit_requirements:
+  - type: keep
+    text: I want that long line of floats linked end to end across the water, and my boat must not be able to get through it.
+    covers:
+    - CR2
+    - FP3
+rubric:
+  content_realization:
+  - id: CR1
+    item: The water contains floating marks of several visibly distinct kinds
+    anchors:
+      '1': several floating marks in the water, of at least two kinds that are clearly told apart by their look (colour or shape)
+      '0.5': floating marks present, but all of one kind or differing only barely
+      '0': no floating marks in the water
+    evidence:
+    - img03
+    - img04
+    - img05
+    - img06
+  - id: CR2
+    item: A long line of floats linked end to end runs unbroken across the water
+    anchors:
+      '1': a long line of floats joined end to end, continuous with no gaps, stretching across the water
+      '0.5': a row of floats, but spaced apart or with gaps, so it does not read as one linked line
+      '0': no line of floats
+    evidence:
+    - img04
+  functions_playability:
+  - id: FP1
+    item: The player steers a vessel over open water among the marks
+    anchors:
+      '1': a controllable vessel moves freely on the water
+      '0.5': a vessel moves, but only on a fixed track
+      '0': no steerable vessel
+    evidence:
+    - img05
+    - img06
+  - id: FP2
+    item: 'The marks are moored: they stay at their set positions in the water while the vessel moves among or bumps them'
+    anchors:
+      '1': marks keep their positions over time and when the vessel approaches or bumps them
+      '0.5': some marks hold their positions, but others drift or get pushed away when bumped
+      '0': no marks, or the marks drift or are pushed around freely
+    evidence:
+    - img02
+    - img03
+    - img06
+  - id: FP3
+    item: 'The vessel does not get through the linked float line: it is a barrier across the water'
+    anchors:
+      '1': the vessel cannot pass or slip through the float line anywhere along it
+      '0.5': the line stops the vessel in places, but it slips through at gaps or joints
+      '0': the vessel passes through the float line as if absent, or there is no float line
+    evidence:
+    - img04
+  - id: FP4
+    item: 'A single buoy stands free in open water: the vessel can sail up to it and round it on either side'
+    anchors:
+      '1': the vessel can come close to a single mark and sail all the way round it, open water on every side
+      '0.5': the vessel can reach a single mark but cannot get round it (it stands against a bound or is hemmed in by other marks)
+      '0': no single marks in open water, or the vessel cannot get near them
+    evidence:
+    - img02
+    - img03
+    - img06
+  visual_presentation:
+  - id: VP1
+    cat: spatial
+    item: The play space is open water with marks standing in it, each clearly readable against the water
+    anchors:
+      '1': an open water surface with marks that stand out clearly against it
+      '0.5': water and marks, but the marks are hard to make out
+      '0': no recognisable water space with marks
+    evidence:
+    - img02
+    - img04
+    - img06
+  - id: VP2
+    cat: style
+    item: The marks look like the painted buoys and floats of the images, riding at the waterline
+    anchors:
+      '1': marks read as brightly painted buoys and floats (as red, red-and-white or yellow in the images) sitting in the water at the waterline
+      '0.5': marks read as floating objects but look generic (plain blocks or posts, no buoy shape or paint), or hover above / sink below the
+        surface
+      '0': marks do not read as buoys or floats
+    evidence:
+    - img03
+    - img04
+    - img06
+play_suggestions:
+  FP1:
+  - steer in circles in open water, then head out among the marks
+  - 'head straight for the shore at full speed: what happens?'
+  - 'sail into a harbour, if there is one: does arriving have any effect?'
+  FP2:
+  - 'ram a buoy: does it stay in place?'
+  - 'wait a while near a mark: does it drift?'
+  - 'list the mark kinds you see: are they handled differently?'
+  FP3:
+  - drive straight at the float line at full speed
+  - try to slip through a gap between two floats
+  FP4:
+  - sail a full circle round a single buoy
+  - 'pass a mark on one side, then on the other: does play react differently?'
+  robustness:
+  - 'wait for or switch to night, if available: are the marks still visible?'
+  - run aground and try to get free
+  - leave the marked area entirely and try to come back
+v4_map:
+  U1: 'dropped: mechanism already scored by FP2 (marks moored); existence in CR1'
+  U2: CR2
+  U3: 'dropped: peripheral (lighthouse, img01 only, scenery outside the floating-mark system)'
+  U4: CR1
+  U5: 'dropped: peripheral (lighthouse on the shore, img01 only; not needed by the mark system)'
+  FP1: FP1
+  FP2: CR1, FP2
+  FP3: CR2, FP3
+  FP4: 'dropped: editing request (two float lines forming a channel), moved to editing_seed.yaml'
+  VP1: VP1
+  VP2: 'dropped: peripheral (lighthouse at night; v3.6: mechanics VP scores no scenery)'
+provenance:
+  source_yaml: T-IO-c07d6e7c93.yaml
+  source_sha256: 64d540f968f359795bde0fd543c258387e0abf764d04ec1c237d20a03d91e28e
+  size_waiver: null
+  size_max: null
+  sources:
+  - refs:
+    - img01
+    - img02
+    - img03
+    - img04
+    - img05
+    - img06
+    bundle: c07d6e7c93
+    title: 灯塔和航标：灯光信号、浮标颜色定航道

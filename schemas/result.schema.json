@@ -1,0 +1,264 @@
+{
+ "$schema": "https://json-schema.org/draft/2020-12/schema",
+ "title": "result.json (rubric v4)",
+ "type": "object",
+ "required": [
+  "trial",
+  "versions",
+  "status",
+  "gate",
+  "scores",
+  "items",
+  "explicit_requirements",
+  "cost",
+  "timestamps"
+ ],
+ "properties": {
+  "trial": {
+   "type": "object",
+   "required": [
+    "task",
+    "level",
+    "agent",
+    "model",
+    "framework",
+    "seed"
+   ],
+   "properties": {
+    "level": {
+     "enum": [
+      "fine"
+     ]
+    },
+    "seed": {
+     "type": "integer"
+    }
+   }
+  },
+  "versions": {
+   "type": "object",
+   "required": [
+    "task",
+    "rubric",
+    "game",
+    "gab",
+    "judges"
+   ]
+  },
+  "status": {
+   "enum": [
+    "completed",
+    "timeout",
+    "build_failed",
+    "load_failed",
+    "unstable",
+    "host_removed",
+    "error",
+    "infra_error"
+   ]
+  },
+  "gate": {
+   "type": "object",
+   "required": [
+    "pass"
+   ],
+   "properties": {
+    "pass": {
+     "type": [
+      "boolean",
+      "null"
+     ]
+    },
+    "log": {
+     "type": [
+      "string",
+      "null"
+     ]
+    },
+    "fail": {
+     "enum": [
+      "build",
+      "load",
+      "unstable",
+      "host_removed",
+      "infra",
+      null
+     ],
+     "description": "why the gate failed (2026-11-06); infra = undecided because a check could not run (the trial is infra_error)"
+    },
+    "build": {
+     "type": [
+      "boolean",
+      "null"
+     ]
+    },
+    "load": {
+     "type": [
+      "boolean",
+      "null"
+     ]
+    },
+    "reason": {
+     "type": [
+      "string",
+      "null"
+     ]
+    },
+    "errors": {
+     "type": "array"
+    },
+    "probes": {
+     "type": "object",
+     "description": "gate probes (gab/eval/regression.py): raw evidence for diagnostics",
+     "properties": {
+      "pass": {
+       "type": [
+        "boolean",
+        "null"
+       ]
+      },
+      "fail": {
+       "type": [
+        "string",
+        "null"
+       ]
+      },
+      "verified": {
+       "type": "boolean"
+      },
+      "baseline": {
+       "type": [
+        "string",
+        "null"
+       ]
+      },
+      "checks": {
+       "type": "array",
+       "items": {
+        "type": "object",
+        "required": [
+         "id",
+         "kind",
+         "probe",
+         "ok"
+        ],
+        "properties": {
+         "id": {
+          "type": "string"
+         },
+         "kind": {
+          "enum": [
+           "stable",
+           "host"
+          ]
+         },
+         "probe": {
+          "type": "string"
+         },
+         "ok": {
+          "type": [
+           "boolean",
+           "null"
+          ]
+         }
+        }
+       }
+      }
+     }
+    }
+   }
+  },
+  "scores": {
+   "type": "object",
+   "required": [
+    "C"
+   ],
+   "additionalProperties": false,
+   "properties": {
+    "C": {
+     "type": "object",
+     "required": [
+      "content_realization",
+      "functions_playability",
+      "visual_presentation"
+     ],
+     "additionalProperties": false,
+     "properties": {
+      "content_realization": {
+       "type": [
+        "number",
+        "null"
+       ]
+      },
+      "functions_playability": {
+       "type": [
+        "number",
+        "null"
+       ]
+      },
+      "visual_presentation": {
+       "type": [
+        "number",
+        "null"
+       ]
+      }
+     }
+    },
+    "overall": {
+     "type": [
+      "number",
+      "null"
+     ],
+     "description": "equal-weight mean of the three columns"
+    }
+   }
+  },
+  "items": {
+   "type": "array",
+   "items": {
+    "type": "object",
+    "required": [
+     "id",
+     "column",
+     "score",
+     "scored",
+     "could_not_test"
+    ],
+    "properties": {
+     "score": {
+      "type": [
+       "number",
+       "null"
+      ]
+     },
+     "scored": {
+      "type": "boolean"
+     },
+     "could_not_test": {
+      "type": "boolean"
+     },
+     "column": {
+      "enum": [
+       "content_realization",
+       "functions_playability",
+       "visual_presentation"
+      ]
+     }
+    }
+   }
+  },
+  "explicit_requirements": {
+   "type": "array"
+  },
+  "cost": {
+   "type": "object",
+   "required": [
+    "agent",
+    "eval"
+   ]
+  },
+  "timestamps": {
+   "type": "object"
+  }
+ }
+}

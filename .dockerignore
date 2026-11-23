@@ -1,0 +1,3 @@
+# image builds (docker build -f docker/<game>/Dockerfile .) need only docker/; keep site config, runs and caches out of the context
+*
+!docker/

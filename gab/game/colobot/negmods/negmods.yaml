@@ -1,0 +1,5 @@
+# negative mods for `gab selfcheck colobot` (from the game's pool verification)
+# each must fail exactly its expected pool items (vs a fresh vanilla instance)
+neg_ants: {expect_fail: [CB-ALIENS], quick_probes: [aliens]}
+neg_level: {expect_fail: [CB-LEVELS, CB-STABLE], quick_probes: [stock_levels]}
+neg_tcell1: {expect_fail: [CB-STOCK-PROGRAM], quick_probes: [stock_program]}

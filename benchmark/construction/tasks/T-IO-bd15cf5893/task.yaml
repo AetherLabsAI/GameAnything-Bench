@@ -1,0 +1,19 @@
+# GameAnything-Bench task T-IO-bd15cf5893 (public part). Instruction: instruction_fine.md.
+task_id: T-IO-bd15cf5893
+version: '0.2'
+category: scene_world
+modality: image
+domain: travel
+track: core
+target_game: xonotic
+references:
+- img01
+- img02
+- img03
+- img04
+- img05
+- img06
+provenance:
+  pipeline: reference_curation ga_author (v3 draft -> crosscheck -> reconcile -> instruct -> explicit) -> restructure_v4
+  rules_version: v4.2
+  review_status: pending

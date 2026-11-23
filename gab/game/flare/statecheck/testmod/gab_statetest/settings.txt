@@ -1,0 +1,4 @@
+description=GameAnything-Bench state self-check mod (a campaign flag, an NPC, an enemy, an event, HUD text)
+game=flare-game
+version=1.0
+requires=empyrean_campaign

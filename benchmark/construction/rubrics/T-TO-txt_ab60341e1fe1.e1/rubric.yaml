@@ -1,0 +1,269 @@
+# GameAnything-Bench scoring material: never shown to agents during a trial.
+task_id: T-TO-txt_ab60341e1fe1.e1
+source_inventory:
+- 'c38.p001: the party''s stay at Abou Simbel (31 Jan - 18 Feb): fourteen days at the foot of the great temple''s rock, four on an excursion to
+  Wady-Halfeh'
+- 'c38.p002-c38.p003: waking under the steep bank to the row of giant faces against the sky; at dawn they seem to flush, glow and come alive,
+  then turn to stone in the daylight'
+- 'c38.p004-c38.p006: the colossi are hard to see properly (too near from the bank, too far from the island, only a side view from the sand-slope);
+  they are four portraits of the same man, Rameses the Great; his features'
+- 'c38.p007-c38.p011: comparison with youthful portraits of the king in reliefs elsewhere; the facade colossus shows him in his prime, serene
+  and implacable'
+- 'c38.p013-c38.p017: profile of the southernmost colossus, the only nearly perfect one; the one true viewpoint is where the sand-slope meets
+  the northern buttress, at the level of the beards; foreshortened from below; the badly placed cast in the British Museum'
+- 'c38.p018-c38.p019: the artists hollowed a mountain into one great hall and fifteen chambers, smoothed the cliff toward the river and cut four
+  seated statues facing the sunrise, two on each side of the doorway; their dimensions'
+- 'c38.p020-c38.p023: how they are carved: heads finished as portraits, bodies treated broadly as decoration; seated side by side, hands on knees;
+  the huge scale of the features; carved straight from the rock'
+- 'c38.p024-c38.p026: state of the four: southernmost nearly whole, the second shattered to the waist with its head at its feet, the third nearly
+  perfect, the fourth badly broken; old inscriptions on the legs; dress, double-crowns, collars, cartouches'
+- 'c38.p027-c38.p028: probably never painted, natural sandstone; the colossi sit in a light vein against darker rock, like a cameo at noon seen
+  from the island; above the door a statue of Ra in a niche, then an inscription, cartouches, a frieze of apes and a cornice; the ''Nubia'' sign
+  with the cartouches'
+- 'c38.p029-c38.p031: the two temples are cut into two adjacent mountains divided by a cataract of sand; the small temple''s front runs parallel
+  to the Nile, the great facade faces due east toward boats coming upriver; the sand-drift fans out and slants down across the great facade, endlessly
+  accumulating, only to be cleared, never stopped; its level in 1813 and at the visit (to the lap of the northernmost colossus, the doorway clear)'
+- 'c38.p032-c38.p034: first day: the painter''s tent on the brink of the bank facing the colossi, the writer''s higher up on the sand-slope, its
+  pole sunk in stones against the steady north wind; the other travellers leave'
+- 'c38.p035-c38.p037: the small temple of Hathor: a first hall with six square pillars, a transverse corridor, side chambers and a small sanctuary
+  with a broken cow-headed Hathor; its facade a frame of six recesses with thirty-foot standing statues of Rameses II and his queen Nefertari,
+  with their children at their knees; buttresses, a porch, deep hieroglyphs readable from the island'
+- 'c38.p038-c38.p040: the small temple''s dedications: built by the king for his queen and by the queen for him; their names coupled everywhere;
+  the writer''s musing on their love'
+- 'c38.p041-c38.p043: the great temple: a first hall in twilight with eight 25-foot Osiride statues of the king, four on each side down the centre,
+  darkness beyond; a second hall on four pillars, a transverse chamber with coloured reliefs of gods, the sanctuary with four seated figures (Ptah,
+  Amen-Ra, Ra, Rameses deified) and a rock-cut altar; lingering smoke of magnesium wire'
+- 'c38.p044-c38.p047: wandering hall to hall by faint daylight and candles; wall reliefs of war, triumph and worship: the king''s chariot attack
+  on a fortress, prisoners, captives presented to the gods, the procession of the sacred bark'
+- 'c38.p048-c38.p052: the wonder of the place, a huge battle-piece filling the north wall of the great hall: a whole campaign with a river, a
+  besieged city, the Egyptian camp in great detail, a frieze of charging chariots; low, damaged relief with patches of colour; the horses'
+- 'c38.p053-c38.p055: the subject identified (Kadesh, the Orontes, the Kheta, the poem of Pentaur); the combatants told apart by their features;
+  a group of Sardinian soldiers uncovered by scraping away sand'
+- 'c38.p056-c38.p058: only at sunrise does daylight stream through the doorway enough to make out the battle-piece; on certain mornings one level
+  sunbeam pierces through the doorway to the sanctuary and falls on the altar at the feet of the gods, clearly a calculated alignment'
+- 'c38.p059-c38.p061: repeated visits at all hours; the temple''s dark, silent, ancient atmosphere, eerier the farther in; the writer''s panic
+  in the sanctuary; eight pitch-dark side chambers at odd angles, some with rock benches, one with unfinished inscriptions'
+- 'c38.p062-c38.p063: hunting for secret hiding places; the view from the dark hall out through the doorway onto the sunlit river, sand-island,
+  palms and eastern mountains in the afternoon'
+- 'c38.p064-c38.p065: the days pass; heat on shore, a steady north breeze from after sunrise to before sunset, cool on the boat; the happy couple''s
+  boat trips and a feast at a local sheik''s'
+- 'c38.p066-c38.p068: a fresh crocodile trail on the island and the idle man''s vain ambush in a sand-pit; the sailors grow bored and the companion
+  boat leaves'
+- 'c38.p069-c38.p074: the crew cleans old plaster from the face of the northernmost colossus from a scaffolding of spars and oars, tinting it
+  with coffee; the first week passes'
+- 'c38.p075-c38.p079: difficulties of sketching: the great temple about twenty-five yards and the small one twenty-five feet from the bank''s
+  brink, so the small temple is sketched from the boat; everything but sky and river is one sandstone yellow; heat, glare, sand and flies; leaving
+  for Wady Halfeh'
+instructions_meta:
+  requirement_groups:
+    site layout and exterior routes:
+    - CR1
+    - FP1
+    structure fronts:
+    - CR2
+    - CR3
+    - VP1
+    - VP2
+    interior and light:
+    - CR4
+    - CR5
+    - FP2
+    - FP3
+    - VP4
+    materials and palette:
+    - VP3
+  explicit_requirements:
+  - type: keep
+    text: I want the small temple to keep its front of tall standing statues of the king and his queen set in recesses on both sides of its door.
+    covers:
+    - CR3
+    - VP2
+  - type: specify
+    text: 'Inside the great temple, the rooms should run along one straight axis from the doorway: first a hall lined with two rows of standing
+      statues of the king, then the further halls, and the sanctuary at the far end.'
+    covers:
+    - CR4
+    - FP2
+rubric:
+  content_realization:
+  - id: CR1
+    item: The site has two rock-cut temples, a great one and a small one, side by side in neighbouring cliffs at the river bank, with a slope
+      of drifted sand between them that slants down across the great temple's front
+    anchors:
+      '1': two temples cut into neighbouring cliffs at the river's edge, the sand-slope between them, slanting down across the great temple's
+        front
+      '0.5': both temples at the river, but the sand-slope between them is missing or does not reach across the great front, or the temples are
+        not side by side
+      '0': only one temple, or the temples are free-standing buildings away from the river
+    evidence:
+    - - c38.p029
+      - c38.p031
+    - c38.p033
+    - c38.p075
+  - id: CR2
+    item: The great temple's front is the cliff itself, facing east toward the sunrise and carved into four colossal seated statues of the same
+      king, two on each side of the central doorway
+    anchors:
+      '1': an east-facing cliff front with four seated statues of one king cut into it, two on each side of the door
+      '0.5': giant statues on the great front, but not seated, not two either side of the door, the wrong number, free-standing figures placed
+        before the cliff rather than cut into it, or the front does not face east
+      '0': no statued front on the great temple
+    evidence:
+    - c38.p005
+    - c38.p018
+    - c38.p020
+    - c38.p023
+    - c38.p029
+  - id: CR3
+    item: The small temple's front is a row of recesses holding colossal standing statues of the king and his queen, on both sides of the doorway
+    anchors:
+      '1': standing statues of both a king and a queen set in recesses along the small temple's front, on both sides of its door
+      '0.5': statues on the small temple's front, but not standing, not in recesses, only on one side, or the queen is missing
+      '0': no statues on the small temple's front
+    evidence:
+    - c38.p036
+    - c38.p037
+  - id: CR4
+    item: 'Inside the great temple the rooms follow one axis from the doorway: a first hall lined with two rows of standing statues of the king,
+      then further halls, and at the far end the sanctuary with seated figures and an altar before them'
+    anchors:
+      '1': a straight sequence from the door through the statue-lined first hall and further chambers to the sanctuary, which holds seated figures
+        with an altar
+      '0.5': halls and a sanctuary exist, but not in a line from the door, the first hall's statue rows are missing, or the sanctuary has no seated
+        figures and altar
+      '0': no interior, or a single room
+    evidence:
+    - c38.p041
+    - c38.p042
+  - id: CR5
+    item: One wall of the great temple's first hall is filled from floor to ceiling by a single huge battle relief
+    anchors:
+      '1': a wall of the first hall carries one wall-filling battle scene (armies, chariots, a besieged city or the like)
+      '0.5': reliefs or images on the first hall's walls, but no single wall-filling battle scene
+      '0': no battle relief in the first hall
+    evidence:
+    - c38.p048
+    - c38.p049
+    - c38.p056
+  functions_playability:
+  - id: FP1
+    item: The player can move around the outside of the site between the two temple fronts at the river bank, and can climb the sand-slope that
+      lies between them
+    anchors:
+      '1': both temple fronts can be reached on foot from each other along the outside, and the sand-slope between them can be climbed
+      '0.5': only one temple front is reachable, or the sand-slope is scenery that cannot be walked
+      '0': no walkable exterior
+    evidence:
+    - c38.p016
+    - c38.p029
+    - c38.p032
+    - c38.p033
+    - c38.p075
+  - id: FP2
+    item: The player can enter the great temple through its doorway and walk its halls in order, from the first hall deeper in to the sanctuary
+      at the end
+    anchors:
+      '1': the interior is entered from the front door and traversed through successive halls to the sanctuary
+      '0.5': an interior exists but is a separate scene not entered from the front, or the sanctuary cannot be reached
+      '0': the temple cannot be entered
+    evidence:
+    - c38.p041
+    - c38.p042
+    - c38.p044
+    - c38.p061
+  - id: FP3
+    item: 'The sunrise alignment works in play: at dawn a beam of sunlight comes through the doorway, along the halls, and lights the sanctuary
+      altar, and the player can be there to see it'
+    anchors:
+      '1': a sunrise (by a day cycle or a triggered event) sends light along the temple axis to the altar, and the player can witness it inside
+      '0.5': a sunbeam effect exists but stops short of the sanctuary, does not depend on sunrise, or cannot be witnessed by the player
+      '0': no sunrise light event
+    evidence:
+    - - c38.p056
+      - c38.p058
+  visual_presentation:
+  - id: VP1
+    cat: spatial
+    item: The great front's seated colossi tower far above a person standing at their feet
+    anchors:
+      '1': the colossi are clearly enormous relative to the player, many times a person's height, and dominate the front
+      '0.5': the colossi are larger than the player but not much taller than their surroundings, so they do not dominate the front
+      '0': the statues are near human scale
+    evidence:
+    - c38.p018
+    - c38.p019
+    - c38.p025
+  - id: VP2
+    cat: spatial
+    item: 'The small temple''s front looks boldly sculpted: tall figures well above a person, framed by massive buttress walls that throw strong
+      light and shadow'
+    anchors:
+      '1': figures well above the player's height, set between deep, massive buttress-like walls whose projection gives the front strong light
+        and shadow
+      '0.5': the figures are tall but the front reads flat (shallow or no buttress walls), or the buttresses are there but the figures are near
+        human scale
+      '0': a flat front with near-human-scale figures, without a monumental look
+    evidence:
+    - c38.p036
+    - c38.p037
+  - id: VP3
+    cat: style
+    item: 'One warm sandstone yellow dominates the whole place: mountains, temples and sand alike'
+    anchors:
+      '1': cliffs, statues, temples and sand share one warm yellow-orange sandstone palette
+      '0.5': sandstone colours present on some of the main structures, but the place does not read as one dominant sandstone hue
+      '0': no sandstone look
+    evidence:
+    - c38.p027
+    - c38.p076
+  - id: VP4
+    cat: style
+    item: 'The great temple''s interior grows darker the deeper one goes: twilight in the first hall, near-total darkness in the rooms beyond'
+    anchors:
+      '1': dim light near the entrance fading to darkness toward the inner halls and sanctuary
+      '0.5': the interior is dark, but evenly so, or only slightly dimmer inside than out
+      '0': the interior is evenly lit like the outside
+    evidence:
+    - c38.p041
+    - c38.p044
+    - c38.p061
+    - c38.p063
+play_suggestions:
+  FP1:
+  - walk from one temple front to the other
+  - 'climb the sand-slope between the temples: how high does it reach against the great facade?'
+  FP2:
+  - 'enter the great temple from the facade door and walk straight on: which rooms come in which order?'
+  - check that the sanctuary is reachable and holds seated figures with an altar before them
+  FP3:
+  - 'wait or advance time to sunrise and stand in the sanctuary: does the beam arrive through the doorway and fall on the altar?'
+  - check at another time of day that the beam does not appear
+  robustness:
+  - try to walk into the river and off the edge of the site
+  - climb onto the colossi or up the cliff above the facade
+  - go back and forth between inside and outside several times, and leave and return to the site
+v4_map:
+  U1: CR1
+  U2: CR2
+  U3: CR3
+  U4: CR4
+  U5: FP3 (sunrise beam mechanism), CR2 (east-facing front)
+  FP1: FP1
+  FP2: FP2
+  FP3: FP3
+  VP1: CR1 (which places exist and their arrangement)
+  VP2: CR2 (seated four, two either side, cut from the cliff), VP1 (colossal scale)
+  VP3: CR3 (standing king and queen in recesses), VP2 (bold buttressed look and scale)
+  VP4: VP3
+  VP5: VP4
+provenance:
+  source_yaml: T-TO-txt_ab60341e1fe1.e1.yaml
+  source_sha256: 584fb6192a061a72c6985ee082957e86c23befbce2440d86356927b0673c16f6
+  size_waiver: null
+  size_max: null
+  sources:
+  - ref: t01
+    title: A thousand miles up the Nile
+    author: Amelia B. Edwards
+    text_id: txt_ab60341e1fe1
+    excerpt_id: e1

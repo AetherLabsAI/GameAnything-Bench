@@ -1,0 +1,190 @@
+# GameAnything-Bench scoring material: never shown to agents during a trial.
+task_id: T-IO-fe70d98f43
+source_inventory:
+- 'img01: engraved city plan (labels ''Plano ... Barcelona ... Reforma y Ensanche'', ''Mar Mediterraneo''): a vast regular grid of square blocks
+  with cut corners fills the coastal plain; a dense, irregular, darkly drawn old town sits at the port inside the grid''s seaward edge; two long
+  avenues cross the grid diagonally and meet at a large open square; a hill with a fortress on the coast at the left by the harbour; scattered
+  village nuclei and lanes at the inland edge; a large park area and a river at the right; harbour moles, a rail line along the shore; coats of
+  arms, title cartouche, legend and signatures'
+- 'img02: technical plate ''Encrucijadas en las calles de las poblaciones'' (22 figures): intersection types from square and rounded corners (Fig.
+  1-10) to blocks with cut, chamfered corners making an octagonal crossing (Fig. 11-12); Fig. 13 the crossing of the old city, Fig. 14-16 turning
+  paths of vehicles curving through the chamfered crossing; Fig. 17-22 chamfered crossings with sidewalks, small islands and dimensions'
+- 'img03: plan of two blocks (''Fomento del Ensanche de Barcelona'', scale 1:1250): each block a square with cut corners, lettered building plots
+  along the perimeter around a planted interior garden with a central round feature; trees lining the sidewalks; neighbouring blocks and chamfered
+  crossings around; small kiosks at the corners'
+- 'img04: modern aerial view inland: dense mid-rise city of warm tan and terracotta buildings; straight tree-lined streets run in parallel up
+  toward a ridge of hills; a large multi-spired church rises out of the grid; a bullet-shaped glass tower at the right; a telecom tower and a
+  hilltop church on the ridge at the left; mixed newer buildings in the foreground'
+- 'img05: modern aerial view from the sea: harbour with a cruise ship, marina and a long breakwater; a sail-shaped tall building at the harbour
+  mouth; a curved sandy beach along the shore at the right; behind it a dense uniform grid of mid-rise blocks with tree-lined streets running
+  up toward the ridge with the telecom tower and the hilltop church; a green hill at the far left by the port'
+- 'img06: modern aerial view along the shore: long curved sandy beach with many people, a wide palm-lined promenade beside it; dense low and mid-rise
+  neighbourhood behind; the sail-shaped building at the far end of the beach; port cranes and a cable-car tower; a wooded hill rising beside the
+  port at the right'
+instructions_meta:
+  requirement_groups:
+    street network and block layout:
+    - CR1
+    - CR2
+    - CR3
+    - FP1
+    natural setting and reachable edges:
+    - CR4
+    - CR5
+    - FP2
+    - VP3
+    urban fabric and landmarks:
+    - VP1
+    - VP2
+  explicit_requirements:
+  - type: keep
+    text: I want to keep that tangled, tightly packed old quarter right by the port, with the newer streets wrapping around it.
+    covers:
+    - CR3
+rubric:
+  content_realization:
+  - id: CR1
+    item: The city's main fabric is one large, regular grid of near-identical square blocks with cut (chamfered) corners, so that every crossing
+      opens into an octagonal space
+    anchors:
+      '1': a uniform grid of equal square blocks covers most of the city, and the block corners are cut so the crossings form octagonal openings
+      '0.5': a regular grid of square blocks, but with square corners; or chamfered blocks only in a small part of the city or of clearly unequal
+        size
+      '0': no grid; an organic or arbitrary street pattern
+    evidence:
+    - img01
+    - 'img02: Fig. 11-12, the chamfered octagonal crossing'
+    - img03
+    - img05
+  - id: CR2
+    item: The grid blocks are built along their edges around an open interior space
+    anchors:
+      '1': the typical grid block has buildings along its perimeter enclosing an open courtyard / garden in the middle
+      '0.5': some blocks have an open interior, but most are filled solid or built as a single mass
+      '0': blocks are solid throughout, or no blocks
+    evidence:
+    - 'img03: lettered plots along the perimeter around the planted interior garden'
+  - id: CR3
+    item: A dense, irregular old core sits at the port, at the grid's seaward edge, and the grid wraps around it on its landward sides
+    anchors:
+      '1': a tightly packed quarter of irregular, narrow streets lies at the harbour, clearly distinct from the grid, with the grid enclosing
+        it on the land side
+      '0.5': an irregular quarter exists, but away from the harbour, or not enclosed by / distinguishable from the grid
+      '0': no irregular core; the grid runs uninterrupted to the port
+    evidence:
+    - 'img01: the darkly drawn irregular old town at the port inside the grid''s seaward edge'
+  - id: CR4
+    item: The city fills a coastal plain between the sea on one side and a ridge of hills inland on the other
+    anchors:
+      '1': sea along one side of the city and a hill ridge behind it on the opposite side, with the city spread over the plain between them
+      '0.5': only one of the sea or the hill ridge placed relative to the city
+      '0': 'neither: an inland or flat featureless site'
+    evidence:
+    - img01
+    - 'img04: the streets running up toward the ridge'
+    - 'img05: the grid between the shore and the ridge'
+  - id: CR5
+    item: The sea front holds a harbour protected by long breakwaters and, beside it along the shore, a long sandy beach
+    anchors:
+      '1': both a harbour with breakwater(s) and a long beach are present next to each other along the city's shore
+      '0.5': only one of harbour or beach, or both present but far apart / not on the city's shore
+      '0': no harbour and no beach
+    evidence:
+    - 'img05: harbour with breakwater and the curved beach at the right'
+    - 'img06: the long beach ending at the port'
+  functions_playability:
+  - id: FP1
+    item: 'The streets work as one connected network: continuous routes run through the grid and its crossings, linking the old core by the port
+      and the city''s edges'
+    anchors:
+      '1': the player can follow continuous main routes through the grid, and the old core, the grid and the city edges are all connected
+      '0.5': the network is broken into disconnected parts, or the old core is unreachable from the grid
+      '0': no traversable street network
+    evidence:
+    - img01
+    - img02
+    - img05
+  - id: FP2
+    item: 'The waterfront is reachable from the city''s streets: both the port and the beach'
+    anchors:
+      '1': the player can get from the grid down to both the port and the beach
+      '0.5': only one of port or beach can be reached, or the sea front is only scenery
+      '0': no part of the waterfront can be reached
+    evidence:
+    - img05
+    - img06
+  visual_presentation:
+  - id: VP1
+    cat: style
+    item: The city reads as a dense, even mid-rise fabric
+    anchors:
+      '1': dense, predominantly mid-rise buildings of fairly even height across the city
+      '0.5': a dense city, but of a different character (e.g. high-rise towers throughout, or sparse low-rise)
+      '0': no resemblance
+    evidence:
+    - img04
+    - img05
+    - img06
+  - id: VP2
+    cat: key_moment
+    item: Distinctive landmarks resembling those in the images stand out above the even roofscape
+    anchors:
+      '1': landmarks recognisably matching ones in the images stand out above an otherwise level roofscape
+      '0.5': tall or distinctive buildings stand out, but do not resemble those in the images
+      '0': no distinctive landmark
+    evidence:
+    - 'img04: the multi-spired church in the grid, the bullet-shaped tower at the right'
+    - 'img05: the sail-shaped building at the harbour, the tower on the ridge'
+    - 'img06: the sail-shaped building at the end of the beach'
+  - id: VP3
+    cat: spatial
+    item: 'The beach looks like the images'': a broad, curved sweep of sand along the shore'
+    anchors:
+      '1': a broad sandy beach curving along the shore, recognisable against the images
+      '0.5': a beach present but a thin or straight generic strip
+      '0': no beach, or a beach of a different kind (rocky, cliff)
+    evidence:
+    - 'img05: the curved beach at the right'
+    - 'img06: the long curved beach'
+play_suggestions:
+  FP1:
+  - 'route from a block deep in the grid to the irregular core by the port and to the inland edge: is the path continuous?'
+  - pick two far-apart blocks and check they connect along the grid streets
+  - 'watch traffic at a few chamfered crossings: do vehicles turn through the open octagonal space?'
+  FP2:
+  - go from the centre of the grid down to the beach, then along the shore to the port
+  - check whether the beach and port are places you can reach, not only a backdrop
+  robustness:
+  - 'try to leave the city past the hills or out over the sea: what happens at the edges?'
+  - 'look at the grid from a low view and a high view: does the block and crossing pattern stay readable?'
+  - 'turn around at several places in the grid: are sea and hills always on opposite sides, and can the landmarks be found without a map?'
+  - 'build on the city through normal play (add a road onto the grid, zone a block): does the game accept it and keep the city working?'
+v4_map:
+  U1: CR1 (the cut corners and octagonal crossings; their turning effect is not scored separately -> play_suggestions FP1)
+  U2: CR1
+  U3: CR2
+  U4: CR3
+  U5: CR4
+  FP1: FP1 (existence of the grid -> CR1)
+  FP2: FP2, CR5 (existence of port and beach)
+  VP1: CR1 (grid of chamfered blocks is structure)
+  VP2: CR3
+  VP3: CR5 (harbour and beach exist side by side), VP3 (look of the beach)
+  VP4: VP2
+  VP5: VP1 (fabric), CR4 (sea-hills frame)
+  VP6: 'dropped: editing (canal modify request moved to editing_seed.yaml)'
+provenance:
+  source_yaml: T-IO-fe70d98f43.yaml
+  source_sha256: c8c9dc90357ae21c5e961d63660432e283caff47ca93a607bff6adea7a2abc9b
+  size_waiver: null
+  size_max: null
+  sources:
+  - refs:
+    - img01
+    - img02
+    - img03
+    - img04
+    - img05
+    - img06
+    bundle: fe70d98f43
+    title: 巴塞罗那扩展区（塞尔达规划网格）

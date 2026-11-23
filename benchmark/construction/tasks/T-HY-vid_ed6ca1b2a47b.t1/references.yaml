@@ -1,0 +1,131 @@
+# Reference material: fetched from the HF dataset into $GAB_MEDIA_DIR/<task>/ by `gab media fetch` (sha256 checked).
+# The agent gets the files only (no title, author, caption or source): this file is never shown to it.
+task_id: T-HY-vid_ed6ca1b2a47b.t1
+refs:
+- id: c01
+  kind: video
+  file: clip_01.mp4
+  video_id: vid_ed6ca1b2a47b
+  source:
+    title: 03 - HOWL'S MOVING CASTLE ｜ Official English Trailer
+    url: null
+    channel: null
+    youtube_id: null
+  range:
+    start: 2.4
+    end: 22.9
+    text: 0:02.40-0:22.90
+  duration_s: 20.5
+  size_bytes: 3264582
+  format: mp4 H.264 720p, AAC audio
+  hf_path: media/T-HY-vid_ed6ca1b2a47b.t1/clip_01.mp4
+  sha256: 831f8b5fdcccb306985366c2230958be2cf97bbc7c5a98ea647281529045f7d5
+  rights_note: null
+- id: c02
+  kind: video
+  file: clip_02.mp4
+  video_id: vid_ed6ca1b2a47b
+  source:
+    title: 03 - HOWL'S MOVING CASTLE ｜ Official English Trailer
+    url: null
+    channel: null
+    youtube_id: null
+  range:
+    start: 41.0
+    end: 47.4
+    text: 0:41.00-0:47.40
+  duration_s: 6.4
+  size_bytes: 680176
+  format: mp4 H.264 720p, AAC audio
+  hf_path: media/T-HY-vid_ed6ca1b2a47b.t1/clip_02.mp4
+  sha256: cef5fbf874b35a1ae7a70a87a0695b761f9a18c881b5672bce4397163cd53deb
+  rights_note: null
+- id: t01
+  kind: text
+  file: text_01.md
+  words: 1194
+  paragraphs: 12
+  anchors: p001 .. p012
+  judge_file: judge/text_01.anchored.md
+  judge_sha256: b7e70fee1e0b1eb34c615d240af300e245335b2658681650cef9f2fbf2a311fd
+  format: plain text (UTF-8)
+  hf_path: media/T-HY-vid_ed6ca1b2a47b.t1/text_01.md
+  sha256: 360082d14b9267b594e137c2cdab89eb61ff8d3cf39d365a577276477eec3439
+  size_bytes: 6926
+- id: img01
+  kind: image
+  file: img01.jpg
+  format: jpg
+  hf_path: media/T-HY-vid_ed6ca1b2a47b.t1/img01.jpg
+  sha256: f7e091b1bed871e3b7a744e4c56e5047d4174644e2fc2b6d335f786beb26ae61
+  size_bytes: 756603
+- id: img02
+  kind: image
+  file: img02.jpg
+  format: jpg
+  hf_path: media/T-HY-vid_ed6ca1b2a47b.t1/img02.jpg
+  sha256: 6f7ff5e7d91a7607be9e3ac526564618040f640cddf39c29e2ae3cc7dfe62a4d
+  size_bytes: 359785
+- id: img03
+  kind: image
+  file: img03.jpg
+  format: jpg
+  hf_path: media/T-HY-vid_ed6ca1b2a47b.t1/img03.jpg
+  sha256: b66ed2809ad121586e913beeddd6dd215e01c710dd1a0b05aa8b3f0fc7a5fd35
+  size_bytes: 388914
+- id: img04
+  kind: image
+  file: img04.jpg
+  format: jpg
+  hf_path: media/T-HY-vid_ed6ca1b2a47b.t1/img04.jpg
+  sha256: b63127a89236a2d08da66d6cea86e3eaf5d71a55b4114f9bcdbe1f726e72d585
+  size_bytes: 292754
+- id: img05
+  kind: image
+  file: img05.jpg
+  format: jpg
+  hf_path: media/T-HY-vid_ed6ca1b2a47b.t1/img05.jpg
+  sha256: d1f9f125b168ce28c648acb531cbaa59d2049569944eadbe0e6c023a87fa93f0
+  size_bytes: 105760
+- id: img06
+  kind: image
+  file: img06.jpg
+  format: jpg
+  hf_path: media/T-HY-vid_ed6ca1b2a47b.t1/img06.jpg
+  sha256: e204d6b5a969a9316a61ab68e8659402a4d8c937ba831f04034002f987fc5f7b
+  size_bytes: 264738
+- id: img07
+  kind: image
+  file: img07.jpg
+  format: jpg
+  hf_path: media/T-HY-vid_ed6ca1b2a47b.t1/img07.jpg
+  sha256: 7a46cd4e9fccf34fcb248af826f0aa9f0be01d8538bc803a60542f0d9d0e274d
+  size_bytes: 193509
+- id: img08
+  kind: image
+  file: img08.jpg
+  format: jpg
+  hf_path: media/T-HY-vid_ed6ca1b2a47b.t1/img08.jpg
+  sha256: 94b36d1430708448d6c284c4a7e4a4dbd8da598f1869aadf91db283577c77b8e
+  size_bytes: 140656
+- id: img09
+  kind: image
+  file: img09.jpg
+  format: jpg
+  hf_path: media/T-HY-vid_ed6ca1b2a47b.t1/img09.jpg
+  sha256: 82b1165f3282eaf5584024cd8176a866aa4ea0010c14ab862bf74f4d541cb0a6
+  size_bytes: 43978
+- id: img10
+  kind: image
+  file: img10.jpg
+  format: jpg
+  hf_path: media/T-HY-vid_ed6ca1b2a47b.t1/img10.jpg
+  sha256: efcb010445a46ef7d1dfa71977724faee873da4182fa06e09ca06636cc3cf4e5
+  size_bytes: 297665
+- id: img11
+  kind: image
+  file: img11.jpg
+  format: jpg
+  hf_path: media/T-HY-vid_ed6ca1b2a47b.t1/img11.jpg
+  sha256: 171615d0103898b3a1e9cf0a682bcf59e3fbadbd3771e7ba818e7f670ffbc3ef
+  size_bytes: 239767

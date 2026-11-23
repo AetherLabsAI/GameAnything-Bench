@@ -1,0 +1,10 @@
+# negative mods for `gab selfcheck cities_skylines` (NegRoadCost / NegWind: sources from 2026-10-30, compiled 2026-10-31; NegNight /
+# NegBus: 2026-11-05, not compiled yet). NONE HAS RUN IN GAME: the expected items are guesses -- confirm them in the first selfcheck,
+# then set may_fail where a side effect shows only sometimes (). Each must fail all its expected pool items
+# and nothing else (vs a fresh vanilla session).
+NegRoadCost: {expect_fail: [CS-ROADS, CS-CONTENT], quick_probes: [roads, content]}
+NegWind: {expect_fail: [CS-SERVICES], quick_probes: [services, growth]}
+# NegNight may_fail CS-SERVICES (2026-11-15, selfcheck 20261115-072225): with the day / night cycle off the wind turbines' output
+# changes (power_capacity 4000 -> 4720), a real side effect
+NegNight: {expect_fail: [CS-DAYNIGHT], may_fail: [CS-SERVICES], quick_probes: [daynight]}
+NegBus: {expect_fail: [CS-TRANSPORT], quick_probes: [transport]}

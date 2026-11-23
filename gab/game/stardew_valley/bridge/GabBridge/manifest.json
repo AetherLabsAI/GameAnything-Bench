@@ -1,0 +1,10 @@
+{
+  "Name": "GAB Bridge",
+  "Author": "GameAnything-Bench",
+  "Version": "1.0.0",
+  "Description": "Benchmark harness: reads the running game's state for the evaluator and runs probe setup steps. Changes no game behaviour.",
+  "UniqueID": "gab.GabBridge",
+  "EntryDll": "GabBridge.dll",
+  "MinimumApiVersion": "4.0.0",
+  "UpdateKeys": []
+}

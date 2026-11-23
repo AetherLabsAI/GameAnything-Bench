@@ -1,0 +1,24 @@
+# Reference material: fetched from the HF dataset into $GAB_MEDIA_DIR/<task>/ by `gab media fetch` (sha256 checked).
+# The agent gets the files only (no title, author, caption or source): this file is never shown to it.
+task_id: T-VO-vid_d958cf2529d4.t1
+refs:
+- id: c01
+  kind: video
+  file: clip_01.mp4
+  video_id: vid_d958cf2529d4
+  source:
+    title: 21 - Zootopia 2 ｜ International Trailer [sEgPQ7HKoBA]
+    url: https://www.youtube.com/watch?v=sEgPQ7HKoBA
+    channel: null
+    youtube_id: sEgPQ7HKoBA
+  range:
+    start: 43.1
+    end: 67.4
+    text: 0:43.10-1:07.40
+  duration_s: 24.3
+  size_bytes: 3976822
+  format: mp4 H.264 720p, AAC audio
+  hf_path: media/T-VO-vid_d958cf2529d4.t1/clip_01.mp4
+  sha256: da5b73c1c9f2b8696244d35f32cc5ddc1a2f7cdca0d509fc0142cff346a50012
+  rights_note: 'Copyrighted film trailer: private reference only, do not redistribute. The task must transfer the layout idea, not reproduce the
+    film''s characters, logos or mural.'

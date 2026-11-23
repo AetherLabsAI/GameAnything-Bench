@@ -1,0 +1,203 @@
+# GameAnything-Bench scoring material: never shown to agents during a trial.
+task_id: T-TO-txt_11f912532ada.e3
+source_inventory:
+- 'c07.p001-c07.p002: Edith Ashby''s journal, 24 July, Whitby. Rosalind meets her; they stay at the Crescent. The Esk runs through a deep, steep,
+  green valley that broadens toward the harbour; a high viaduct crosses it. The red-roofed old town is piled up on the far side; the huge abbey
+  ruin stands right over the town (legend of a white lady in a window); between abbey and town the parish church with a big graveyard on the cliff
+  over the harbour, with a view up the bay to the Kettleness headland. The bank has fallen away and some graves are destroyed; walks with seats
+  run through the churchyard, where old men sit all day'
+- 'c07.p003-c07.p004: the harbour below: a long granite pier on the far side curving out with a lighthouse, an elbowed pier on the near side also
+  ending in a lighthouse, a narrow mouth that widens inside. Nice at high water; at low tide only the Esk stream between sandbanks and rocks.
+  A reef runs out about half a mile from behind the south lighthouse, with a bell buoy at its end that swings and sounds in bad weather; legend
+  of bells heard at sea when a ship is lost'
+- 'c07.p005-c07.p008: the very old man (nearly a hundred, once a Greenland whaler) dismisses the legends as tales for trippers; at six he leaves
+  for home down the steps: hundreds of steps from the town up to the church, winding in a gentle curve, so shallow a horse could use them'
+- 'c07.p009-c07.p015: 1 August, Edith and Rosalind with the old man (Mr. Tolliver) and his two cronies; his dialect sermon that ghosts and omens
+  are invented and the tombstones are lies, since many graves are empty: the sailors named on them were lost at sea; Edith reads a stone for a
+  mariner murdered by pirates'
+- 'c07.p016-c07.p024: argument about what tombstones are for; the stone laid flat under the seat at the cliff edge (a ''thruff-stean'') is read:
+  George Canon, fell from the rocks at Kettleness; Tolliver says it was a suicide to spite his mother; Rosalind is upset that her favourite seat
+  is over a suicide''s grave; Tolliver jokes and leaves when the clock strikes'
+- 'c07.p025-c07.p026: Rosalind talks about Edmund and her marriage; Edith misses Gerald. The same day at nine, alone on the cliff: town lights
+  scattered and in rows along the streets, running up the Esk and dying away in the valley''s curve; the roofline of the old house next to the
+  abbey on her left; sheep behind, a donkey on the paved road below, a band on the pier and a Salvation Army meeting in a back street, both heard
+  from up here'
+- 'c07.p027-c07.p034: Dr. Hartley''s diary, 5 June-19 July: his patient Pelham collects flies, feeds them to spiders, then the spiders to sparrows,
+  keeps a notebook of summed figures, and begs for a kitten, then a cat; the doctor refuses and sees a look of killing'
+- 'c07.p035-c07.p041: 19-20 July: Pelham begs again; the sparrows are gone and he vomits feathers; the doctor drugs him, reads the notebook and
+  names him a ''zoophagous'' (life-eating) maniac who absorbs lives cumulatively; he is tempted to complete the experiment, and reflects on losing
+  Rosalind and on work'
+- 'c07.p042-c07.p045: Edith''s journal, 26 July-3 August: a strange short letter from Gerald from Castle Valerian; Rosalind has resumed sleepwalking,
+  so Edith locks their door at night; Rosalind''s fiance Edmund Brackenridge is delayed by his father''s illness; Rosalind, though well, searches
+  the room for the key in her sleep'
+- 'c07.p046: 6 August: a storm is expected; a grey day: grey rock, clouds and sea with only the grass green, sun hidden over Kettleness, sea roaring
+  over the shallows and sandy flats in drifting mist, figures on the beach, fishing boats racing into the harbour'
+- 'c07.p047-c07.p049: Tolliver, changed and gentle, apologises for his talk about the dead, says he is not afraid of dying, and feels death coming
+  in the wind from the sea'
+- 'c07.p050-c07.p051: the coastguard with his spyglass watches a strange ship, Russian by the look of her, steered erratically as the storm approaches,
+  unable to decide whether to run north or put in here'
+instructions_meta:
+  requirement_groups:
+    movement and routes:
+    - CR4
+    - FP1
+    vantage points:
+    - CR3
+    - FP2
+    landmarks and their arrangement:
+    - CR2
+    - CR5
+    - VP1
+    - VP3
+    terrain, water and structures:
+    - CR1
+    - VP2
+  explicit_requirements:
+  - type: keep
+    text: I definitely want to keep the long flight of steps that climbs from the town up to the church, and that should be the way you get up
+      there.
+    covers:
+    - CR4
+    - FP1
+rubric:
+  content_realization:
+  - id: CR1
+    item: The game contains a river valley that divides the place into two sides and broadens into the harbour, crossed by a viaduct
+    anchors:
+      '1': a river in a valley separating two sides of the place, widening into the harbour, with a viaduct spanning the valley
+      '0.5': the river and valley present but not dividing the place into two sides or not running into the harbour, or no viaduct across it
+      '0': no river valley
+    evidence:
+    - c07.p002
+    - c07.p026
+  - id: CR2
+    item: 'On the far side of the valley the game shows the landmarks stacked in order: the old town on the slope, the parish church with its
+      graveyard above it, and the abbey ruin above everything'
+    anchors:
+      '1': the old town, the church with its graveyard and the abbey ruin all present on one side, in that order from bottom to top
+      '0.5': the three landmarks present but their order wrong or unclear, or one of them missing
+      '0': missing or a different layout
+    evidence:
+    - c07.p002
+    - c07.p026
+  - id: CR3
+    item: The churchyard sits on a steep cliff directly over the harbour, facing out along the bay to a headland reaching into the sea
+    anchors:
+      '1': a churchyard on a steep cliff right above the harbour, with the bay and a headland out to sea in front of it
+      '0.5': the churchyard on high ground or a cliff but not over the harbour, or no bay with a headland in front of it
+      '0': missing, or an ordinary level churchyard
+    evidence:
+    - c07.p002
+    - c07.p020
+    - c07.p043
+    - c07.p046
+  - id: CR4
+    item: A long flight of very many steps runs from the town up to the church on the cliff
+    anchors:
+      '1': a long flight of many steps whose foot is in the town and whose top is at the church
+      '0.5': steps near the church, but short or not running from the town up to it
+      '0': no stair between the town and the church
+    evidence:
+    - c07.p007
+    - c07.p008
+    - c07.p021
+  - id: CR5
+    item: The harbour is enclosed by two piers reaching out from either side, each ending in a lighthouse, with a narrow mouth between them that
+      widens inside
+    anchors:
+      '1': two piers, a lighthouse at the end of each, and a narrow entrance opening into a wider harbour
+      '0.5': a harbour with piers or lighthouses, but not the pair of lighthouse-tipped piers or not the narrow mouth
+      '0': missing or a different harbour
+    evidence:
+    - c07.p003
+  functions_playability:
+  - id: FP1
+    item: 'The player can walk between the place''s two levels: from the town by the river and harbour up the long stair to the cliff-top churchyard,
+      and back down'
+    anchors:
+      '1': the player climbs from the town up the stair to the churchyard and walks back down the same way on foot, and the stair is the way between
+        them
+      '0.5': only one direction works, or the cliff top is reached without the stair (teleport, a plain slope, a shortcut that makes the stair
+        irrelevant)
+      '0': the player cannot move between the town and the cliff top
+    evidence:
+    - c07.p002
+    - c07.p007
+    - c07.p008
+  - id: FP2
+    item: 'The cliff-top churchyard works as a lookout: the player can reach its edge and see the harbour, the town and the bay laid out below'
+    anchors:
+      '1': a reachable spot at the churchyard's cliff edge from which the harbour, the town and the bay are all in view
+      '0.5': the edge can be reached, but from it the harbour or the town cannot be seen; or it is seen only from a spot the player cannot reach
+      '0': no reachable lookout over the harbour
+    evidence:
+    - c07.p002
+    - c07.p026
+    - c07.p043
+  visual_presentation:
+  - id: VP1
+    cat: spatial
+    item: 'The far side reads as one composition: houses piled up one over another on the hillside, crowned by a vast abbey ruin'
+    anchors:
+      '1': the old town piles up the slope with the church below a huge ruined abbey on top, visible together as one view
+      '0.5': the landmarks are there but do not read together as one view, or the abbey looks like an intact or small building rather than a vast
+        ruin
+      '0': missing
+    evidence:
+    - c07.p002
+  - id: VP2
+    cat: spatial
+    item: The valley looks deep and steep-sided, and the viaduct crossing it stands tall on high piers
+    anchors:
+      '1': steep valley sides falling deep to the river, spanned by a tall viaduct on high piers
+      '0.5': a valley that is shallow or gently sloped, or a low bridge instead of a tall viaduct
+      '0': missing
+    evidence:
+    - c07.p002
+  - id: VP3
+    cat: spatial
+    item: The churchyard looks like a big old graveyard, its gravestones spread across the cliff top right out to the edge above the harbour
+    anchors:
+      '1': a large graveyard filled with many gravestones that reaches out to the cliff edge, reading as a big old churchyard on the cliff top
+      '0.5': a graveyard is there but small or with only a few scattered stones, or it stops well short of the cliff edge
+      '0': missing, or no visible graves by the church
+    evidence:
+    - c07.p002
+    - c07.p009
+    - c07.p016
+play_suggestions:
+  FP1:
+  - walk from the river and harbour to the foot of the stair and climb it to the churchyard
+  - 'come back down the same way: is the stair the connection, or is there a shortcut that makes it irrelevant?'
+  - from the churchyard, try to walk on to the abbey ruin (unscored)
+  FP2:
+  - 'walk to the cliff edge of the churchyard and look out: are the harbour, the town and the bay all visible from there?'
+  robustness:
+  - 'walk to the churchyard''s cliff edge and try to go over it: what happens?'
+  - try to leave the town area or walk out along the piers to the lighthouses
+  - climb the stair halfway, turn back, then climb again
+v4_map:
+  U1: CR1, CR2 | valley as divide -> CR1, stacked order of landmarks -> CR2
+  U2: CR3
+  U3: CR4
+  U4: CR5
+  U5: 'dropped: peripheral (tidal states of the harbour, one passing remark, not a landmark)'
+  FP1: FP1, CR4 | existence of the stair -> CR4, traversal and the stair as the only way up stay FP1
+  FP2: FP2, CR3 | the cliff-over-harbour placement -> CR3, reaching and viewing stays FP2
+  VP1: VP1, CR2 | stacked order -> CR2, the look of the stack stays VP1
+  VP2: CR1, VP2 | valley structure and viaduct existence -> CR1, depth, steepness and the viaduct's height -> VP2
+  VP3: 'CR5 | two lighthouse piers and mouth are existence -> CR5; the look of the piers dropped: peripheral (the exact pier forms are details
+    under v3.6)'
+  VP4: 'dropped: user modification (deep winter), moved to editing_seed.yaml (editing split 2026-11-05)'
+  new: 'VP3 | added in v4 (no v3 source): the look of the cliff-top graveyard, to meet the scene VP size'
+provenance:
+  source_yaml: T-TO-txt_11f912532ada.e3.yaml
+  source_sha256: 578b9b31063c85e8d3f002b75bf523482310ac9c864c5d3bb2a12f26cb8041af
+  size_waiver: null
+  size_max: null
+  sources:
+  - ref: t01
+    title: Dracula
+    author: Bram Stoker
+    text_id: txt_11f912532ada
+    excerpt_id: e3

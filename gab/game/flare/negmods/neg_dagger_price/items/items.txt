@@ -1,0 +1,5 @@
+APPEND
+
+[item]
+id=8
+price=300

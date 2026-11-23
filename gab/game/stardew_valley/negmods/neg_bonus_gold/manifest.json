@@ -1,0 +1,10 @@
+{
+  "Name": "NegBonusGold",
+  "Author": "gab",
+  "Version": "1.0.0",
+  "Description": "gab negative mod: 1000 extra gold once at the first load",
+  "UniqueID": "gab.neg.BonusGold",
+  "EntryDll": "NegBonusGold.dll",
+  "MinimumApiVersion": "4.0.0",
+  "UpdateKeys": []
+}

@@ -1,0 +1,205 @@
+# GameAnything-Bench scoring material: never shown to agents during a trial.
+task_id: T-IO-38d193ed23
+source_inventory:
+- 'img01: a young woman in a long patterned yellow gown sits on the rim of a garden fountain''s pool, head resting on her hand, looking downcast;
+  a frog sits at the water''s edge to the left; fountain with a sculpted figure, trees, irises and flowers'
+- 'img02: the same woman peers out from behind a half-open palace door, looking down at a frog sitting on the tiled hallway floor; an orange tree
+  in a blue pot, a staircase with two figures in the background'
+- 'img04: a bedchamber; a young man in a green doublet with ermine trim and a sword bows towards the woman, who sits on a canopy bed raising her
+  hand in surprise; above him a cloud with frog figures leaping away'
+- 'img05: a street procession: a golden coach drawn by plumed white horses with liveried riders, the curly-haired young man looking out of the
+  coach, another figure partly hidden behind him, a footman standing behind; flowers strewn on the cobbles, banners overhead; a broken curved
+  band lies on the ground'
+instructions_meta:
+  requirement_groups:
+    story progression:
+    - CR5
+    - FP1
+    turning point:
+    - CR2
+    - CR6
+    - FP2
+    ending:
+    - FP3
+    - VP3
+    settings and characters:
+    - CR1
+    - CR3
+    - CR4
+    - VP1
+    - VP2
+  explicit_requirements:
+  - type: keep
+    text: I want her home to be a grand palace, with its big doorways and her bedchamber with the canopy bed.
+    covers:
+    - CR3
+    - VP1
+rubric:
+  content_realization:
+  - id: CR1
+    item: 'The two main characters: one recurring heroine, a young woman who is the same character throughout the story, and a frog as the other
+      main character, her counterpart throughout the story'
+    anchors:
+      '1': the heroine and the frog both present as the main characters, and the heroine is one and the same character in every situation she
+        appears in
+      '0.5': only one of the two is a main character (e.g. the frog a passing creature), or the situations are carried by different women
+      '0': neither character, or no recurring heroine
+    evidence:
+    - img01
+    - img02
+    - img04
+  - id: CR2
+    item: 'The world rule: the frog is an enchanted man, and the game contains his human form, a courtly young man shown to be the same being
+      as the frog'
+    anchors:
+      '1': the frog is presented as an enchanted man, and a courtly young man exists who is clearly the frog's human form
+      '0.5': a young man exists but nothing establishes that he was the frog, or the frog's enchantment is stated but no human form appears
+      '0': no enchantment and no human form
+    evidence:
+    - img04
+  - id: CR3
+    item: The heroine's home is a grand palace with big doorways and her bedchamber with a canopy bed, and she is clearly the one who lives there
+    anchors:
+      '1': a palace exists as her home, with grand doorways and a bedchamber with a canopy bed
+      '0.5': a palace or grand house exists, but the big doorways or the canopied bedchamber are missing, or it is not shown to be her home
+      '0': no palace home
+    evidence:
+    - img02
+    - img04
+  - id: CR4
+    item: An outdoor garden with a fountain exists as its own place, apart from the palace interiors, and it is where the heroine first meets
+      the frog
+    anchors:
+      '1': a garden with a fountain, distinct from the palace interiors, and the first encounter with the frog happens there
+      '0.5': a garden or a fountain exists but the encounter happens elsewhere, or it is not set apart from the palace
+      '0': no garden fountain
+    evidence:
+    - img01
+  - id: CR5
+    item: 'The key events in the reference''s order: the meeting at the fountain, the frog coming to her at the palace, the transformation, the
+      departure in a procession'
+    anchors:
+      '1': all four events present in this order
+      '0.5': most events present, but one is missing or out of order, or the transformation is not placed late
+      '0': fewer than two of the events, or the transformation comes first
+    evidence:
+    - img01
+    - img02
+    - img04
+    - img05
+  - id: CR6
+    item: 'The reversal: when the frog comes to her home she holds back from it, and after the transformation she receives the young man in her
+      own chamber'
+    anchors:
+      '1': her reluctance towards the frog at her home and her receiving the young man after the transformation are both there
+      '0.5': only one side (the reluctance or the receiving) is there, so nothing changes between the two
+      '0': no reluctance and no change, or she welcomes the frog from the start
+    evidence:
+    - img02
+    - img04
+  functions_playability:
+  - id: FP1
+    item: 'The key situations are played as one connected progression through the story''s settings: the player moves from the garden into the
+      palace and on to the final departure to reach each situation, each leads on to the next, and they cannot be skipped or taken out of order'
+    anchors:
+      '1': the player reaches each situation by moving through the settings in play, and each one unlocks the next
+      '0.5': the situations can be skipped, reordered freely, or are disconnected scenes switched without moving through the places
+      '0': no progression, or only one situation playable
+    evidence:
+    - img01
+    - img02
+    - img04
+    - img05
+  - id: FP2
+    item: 'The transformation is the turning point: a distinct event in play changes the frog into the young man, and the story continues with
+      him in human form'
+    anchors:
+      '1': a distinct transformation event happens in play, after which the young man carries the story on
+      '0.5': the young man appears without a transformation event, or the change has no effect on what follows
+      '0': no transformation
+    evidence:
+    - img04
+  - id: FP3
+    item: 'The experience has a clear ending: the celebratory departure resolves the story and play ends or offers to continue'
+    anchors:
+      '1': a recognisable final resolution after the transformation, with a clear end or continuation
+      '0.5': the story stops after the transformation without a resolution, or the ending is unclear
+      '0': no ending
+    evidence:
+    - img05
+  visual_presentation:
+  - id: VP1
+    cat: spatial
+    item: 'The two settings look like the reference''s: a lush garden around a sculpted fountain, and stately, richly decorated palace interiors'
+    anchors:
+      '1': the garden fountain and the grand palace interiors both recognisable when compared with img01, img02, img04
+      '0.5': one of the two settings recognisable, or both generic
+      '0': neither
+    evidence:
+    - img01
+    - img02
+    - img04
+  - id: VP2
+    cat: presentation
+    item: 'The protagonists keep a consistent look across scenes: the heroine recognisable by the same appearance in every scene, the frog clearly
+      identifiable wherever it appears'
+    anchors:
+      '1': the heroine identifiable by her look in every scene and the frog clearly identifiable where it is present
+      '0.5': one of the two hard to identify in some scenes
+      '0': characters not recognisable from scene to scene
+    evidence:
+    - img01
+    - img02
+    - img04
+  - id: VP3
+    cat: key_moment
+    item: 'The final departure: a festive, ceremonial procession carrying the young man away'
+    anchors:
+      '1': a recognisable grand, festive procession, judged against img05
+      '0.5': a departure shown, but plain or without the sense of ceremony
+      '0': not shown
+    evidence:
+    - img05
+play_suggestions:
+  FP1:
+  - play from start to end and list the situations in the order met
+  - 'walk from the garden to the palace and into her chamber: are these places reached by moving, not by a scene cut only?'
+  - try to reach the transformation or the ending before the frog has reached her home
+  FP2:
+  - 'watch the transformation: is it a distinct event that links the frog and the young man?'
+  - after the transformation, do the remaining scenes use the young man?
+  FP3:
+  - 'finish the story: is there a set-apart final scene, then an end or a way to replay?'
+  robustness:
+  - leave the starting area in the wrong direction or wander off before meeting the frog
+  - 'replay the start after finishing: does the story reset cleanly?'
+  - 'idle in each scene: does the story stall without a hint how to continue?'
+v4_map:
+  U1: CR1
+  U2: CR3
+  U3: CR2, FP2 (existence of the enchanted frog / young man to CR2; the transformation itself is FP2)
+  U4: CR5, CR6 (the frog coming to her home to CR5; her reluctance to CR6)
+  U5: CR5
+  U6: CR6 (the reversal; the celebratory ending is scored by FP3 / VP3)
+  FP1: FP1, CR5 (order of the events split off to CR5; FP1 keeps the playable linkage and the movement through the settings)
+  FP2: FP2, CR2 (existence of the young man as the frog's human form split off to CR2)
+  FP3: FP3
+  VP1: CR3, CR4, VP1 (which settings exist, incl. the big doorways, to CR3 / CR4; VP1 keeps their look)
+  VP2: merged into CR2, CR6, FP2 (the frog visibly tied to the young man to CR2; the heroine receiving him in her chamber to CR6; the transformation
+    event to FP2)
+  VP3: VP3
+  VP4: VP2 (the protagonists' consistent look across scenes; their identity and roles stay in CR1)
+  VP5: 'dropped: editing request (the night setting moved to editing_seed.yaml)'
+provenance:
+  source_yaml: T-IO-38d193ed23.yaml
+  source_sha256: a1bc1003c6d33a04ddb997319e8057d9947326937e6443d2682be66458fbb76d
+  size_waiver: null
+  size_max: null
+  sources:
+  - refs:
+    - img01
+    - img02
+    - img04
+    - img05
+    bundle: 38d193ed23
+    title: 青蛙王子（沃尔特·克兰）

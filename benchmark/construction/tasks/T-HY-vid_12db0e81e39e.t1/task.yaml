@@ -1,0 +1,16 @@
+# GameAnything-Bench task T-HY-vid_12db0e81e39e.t1 (public part). Instruction: instruction_fine.md.
+task_id: T-HY-vid_12db0e81e39e.t1
+version: '0.3'
+category: scene_world
+modality: video+image
+domain: games
+track: commercial
+target_game: valheim
+references:
+- c01
+- img01
+provenance:
+  pipeline: reference_curation ga_author (v3 draft -> crosscheck -> reconcile -> instruct -> explicit) -> restructure_v4
+  rules_version: v4.2
+  review_status: revised
+  revision: '0.3 (curator review): removed img02 / img03 (maps of other places that conflict with img01); map img01 + clip_01 only'

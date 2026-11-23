@@ -1,0 +1,44 @@
+# Reference material: fetched from the HF dataset into $GAB_MEDIA_DIR/<task>/ by `gab media fetch` (sha256 checked).
+# The agent gets the files only (no title, author, caption or source): this file is never shown to it.
+task_id: T-VO-vid_7cbfa34ef827.t1
+refs:
+- id: c01
+  kind: video
+  file: clip_01.mp4
+  video_id: vid_7cbfa34ef827
+  source:
+    title: '10 - Steps Trailer #1 (2026)'
+    url: null
+    channel: null
+    youtube_id: null
+  range:
+    start: 8.2
+    end: 24.2
+    text: 0:08.20-0:24.20
+  duration_s: 16.0
+  size_bytes: 2458482
+  format: mp4 H.264 720p, AAC audio
+  hf_path: media/T-VO-vid_7cbfa34ef827.t1/clip_01.mp4
+  sha256: 66216fef0303ea1c07a5c0ad34f4261e1cd7ac40afd07e29d15174f381ade124
+  rights_note: 'Copyrighted film trailer clips: private reference only, do not redistribute. The built task must transfer the ideas (deadline
+    quest, companion, transformation burst) with new assets, not copy characters or scenes.'
+- id: c02
+  kind: video
+  file: clip_02.mp4
+  video_id: vid_7cbfa34ef827
+  source:
+    title: '10 - Steps Trailer #1 (2026)'
+    url: null
+    channel: null
+    youtube_id: null
+  range:
+    start: 34.5
+    end: 61.6
+    text: 0:34.50-1:01.60
+  duration_s: 27.1
+  size_bytes: 3841794
+  format: mp4 H.264 720p, AAC audio
+  hf_path: media/T-VO-vid_7cbfa34ef827.t1/clip_02.mp4
+  sha256: 16d16b4bc8bed29382873e877722cdb80874a5872cf84109beadd2fc796850a0
+  rights_note: 'Copyrighted film trailer clips: private reference only, do not redistribute. The built task must transfer the ideas (deadline
+    quest, companion, transformation burst) with new assets, not copy characters or scenes.'

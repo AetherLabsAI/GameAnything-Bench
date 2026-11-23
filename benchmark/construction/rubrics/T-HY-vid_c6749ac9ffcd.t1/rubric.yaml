@@ -1,0 +1,282 @@
+# GameAnything-Bench scoring material: never shown to agents during a trial.
+task_id: T-HY-vid_c6749ac9ffcd.t1
+source_inventory:
+- 'clip 00:47-00:49: three Minions stand behind a book on a stand in a cluttered room full of lit candles; a poster behind them reads ''Monstras'''
+- 'clip 00:49.5-00:50: close-up of the open book: a large menacing tentacle-faced winged monster drawn on an aged page, a circle diagram on the
+  facing page, a line of text glowing green'
+- 'clip 00:50.5-00:52: the middle Minion reads aloud, green light rising from the page onto the readers'' faces'
+- 'clip 00:52.5-00:54: wide high view of the chamber: a dense field of candles on the floor, the three Minions at the book on one side, a green
+  glow growing at the centre of a floor circle'
+- 'clip 00:54.5-01:02.5: green smoke and lightning burst out and fill the whole room, objects and papers fly; cut-ins of the Minions flinching
+  (00:55.5) and cheering with raised arms behind the book (00:58.5-01:00)'
+- 'clip 01:03-01:05: the smoke settles to a low haze; a small green figure stands alone in the centre of the room, the three Minions seen from
+  behind in the foreground'
+- 'clip 01:05-01:06: the Minions look on, deadpan; 01:06: cut back to the book''s monster page'
+- 'clip 01:06.5-01:07: the small creature stands on a chalk-drawn circle with lines and markings on the stone floor'
+- 'clip 01:07.5-01:11: a Minion stands next to the creature (green, tentacled face, white gown, about half his height), then hugs and holds it
+  while it squirms'
+- 'clip 01:11.5-01:15: wide shot, the Minion holds and carries the creature, which wriggles; the two other Minions at the book look on'
+- 'audio: music; Minion gibberish chanting and shouts (no reliable speech)'
+- 'img01: engraved book plate of a colossal octopus wrapping its tentacles around a sailing ship, with plate number and printed caption on an
+  aged page'
+- 'img02: painted manuscript page of a standing monster (cat-like face with long ears, scaly green body, feathered legs, bird feet) with handwritten
+  inscriptions around it, in an open old book'
+- 'img03: ink diagram of a magic circle: concentric rings with a band of handwritten names and crosses, the inner disc quartered by two lines,
+  captions ''The Magic Circle'' and ''Magic Ring'''
+- 'img04: page of four ink circle / seal diagrams in Hebrew script, with stars, a square, sigils and dividing lines; a small drawing of birds
+  on a beam below'
+- 'img05: rows of lit votive candles in glass cups receding into darkness'
+- 'img06: a dense bank of tall white candles in glass, lit, in a dark interior'
+- 'img07: a floor covered with many lit candles of mixed sizes and red, white and dark holders, seen from above'
+instructions_meta:
+  requirement_groups:
+    characters:
+    - CR2
+    - CR3
+    event trigger:
+    - FP1
+    event sequence and key moment:
+    - FP2
+    - VP4
+    outcome and ending:
+    - CR4
+    - FP3
+    setting and story objects:
+    - CR1
+    - CR5
+    - VP1
+    - VP2
+    - VP3
+  explicit_requirements:
+  - type: keep
+    text: I want the ending where the summoners keep the creature, with one of them hugging it and holding on to it.
+    covers:
+    - CR4
+    - FP3
+rubric:
+  content_realization:
+  - id: CR1
+    item: 'The ritual chamber exists with its defining arrangement: a floor circle in the middle of the room and the summoning book on a stand
+      at its edge'
+    anchors:
+      '1': one room holding a floor circle at its centre and the book on a stand beside it
+      '0.5': the circle and the book both exist, but in separate places or without the circle as the room's centre
+      '0': no chamber with both a floor circle and a book
+    evidence:
+    - - '00:47.0'
+      - '00:49.0'
+    - - '00:52.5'
+      - '00:54.0'
+    - - '01:03.0'
+      - '01:05.0'
+    - - '01:06.5'
+      - '01:07.0'
+  - id: CR2
+    item: The summoners are a small group of characters who perform the ritual together at the book and want it to succeed
+    anchors:
+      '1': several summoners together at the book, shown as wanting the summoning (eager, cheering or pleased while it happens)
+      '0.5': only one summoner, or a group whose intent is missing or reversed (e.g. an accident they fear)
+      '0': no summoner characters
+    evidence:
+    - - '00:47.0'
+      - '00:52.0'
+    - - '00:58.5'
+      - '01:00.0'
+  - id: CR3
+    item: The summoned creature is a small, harmless-looking version of the large menacing tentacled monster the book shows
+    anchors:
+      '1': the creature has the book monster's tentacled face but is much smaller than the summoners and unthreatening, while the book's monster
+        is large and menacing
+      '0.5': a small harmless creature with no link to the book's monster, or the link without the contrast in size and menace
+      '0': no summoned creature, or it is the full menacing monster
+    evidence:
+    - - '00:49.5'
+      - '00:50.0'
+    - - '01:05.0'
+      - '01:11.0'
+  - id: CR4
+    item: 'The ending shows the summoners taking the creature in: one of them hugs it and holds on to it'
+    anchors:
+      '1': a summoner visibly hugs or holds the creature after it appears
+      '0.5': the summoners and the creature are together afterwards, but no hug or hold is shown
+      '0': missing, or the creature leaves or is fought
+    evidence:
+    - - '01:07.5'
+      - '01:15.0'
+  - id: CR5
+    cross: true
+    item: 'The objects the clip''s summoning turns on are the image-designed ones: the book read to summon carries a bestiary-style monster page
+      (img01-02) and the creature arrives in an inscribed magic circle (img03-04)'
+    anchors:
+      '1': the bestiary-style book and the inscribed circle are the very book that is read and the circle where the creature appears in the clip's
+        sequence
+      '0.5': only one of the two image-designed objects plays its role in the summoning, or image-style art is present only as decoration beside
+        the ritual
+      '0': the images ignored, or turned into separate scenes or extra monsters
+    evidence:
+    - - '00:49.5'
+      - '00:52.0'
+    - - '01:03.0'
+      - '01:07.0'
+    - img01
+    - img02
+    - img03
+    - img04
+  functions_playability:
+  - id: FP1
+    item: The player starts the summoning by acting at the book (reading or using it)
+    anchors:
+      '1': an interaction with the book triggers the ritual
+      '0.5': the ritual is triggered, but not through the book (e.g. by entering the room or talking to anyone)
+      '0': no ritual can be triggered
+    evidence:
+    - - '00:49.5'
+      - '00:52.0'
+  - id: FP2
+    item: 'Once started, the summoning plays out as the clip''s sequence centred on the floor circle: the circle glows, a burst of smoke and lightning,
+      and when it clears a creature is standing in the circle'
+    anchors:
+      '1': glow at the circle, a burst, then the creature present in the circle, in that order
+      '0.5': the creature appears, but without the build-up (glow or burst) or not in the circle
+      '0': no creature results, or it is simply there from the start
+    evidence:
+    - - '00:52.5'
+      - '00:54.0'
+    - - '00:54.5'
+      - '01:02.5'
+    - - '01:03.0'
+      - '01:07.0'
+  - id: FP3
+    item: 'The beat reaches a clear outcome: after the ritual the summoned creature stays with the summoners (or the player) and the scene closes
+      on that, instead of the creature vanishing or the scene resetting'
+    anchors:
+      '1': after the ritual the creature remains and the beat closes clearly on that outcome
+      '0.5': the creature remains, but the beat never closes (no clear end or way to continue)
+      '0': the creature disappears, or the game breaks or resets after the ritual
+    evidence:
+    - - '01:07.5'
+      - '01:15.0'
+  visual_presentation:
+  - id: VP1
+    cat: spatial
+    keyframes:
+    - '00:52.5'
+    - '01:03.0'
+    item: The ritual chamber looks crowded with lit candles, the candles its main light, as in the candle images
+    anchors:
+      '1': a dense field of lit candles fills the chamber around the circle and gives it its light
+      '0.5': a few candles present, but the candle-crowded, candle-lit character is missing
+      '0': no candles, or no recognisable ritual chamber
+    evidence:
+    - - '00:47.0'
+      - '00:49.0'
+    - - '00:52.5'
+      - '00:54.0'
+    - - '01:03.0'
+      - '01:05.0'
+    - img05
+    - img06
+    - img07
+  - id: VP2
+    cat: style
+    keyframes:
+    - '01:06.5'
+    item: 'The floor circle is drawn in the manner of the circle diagrams: concentric rings with a band of inscriptions or symbols and lines dividing
+      the inner disc'
+    anchors:
+      '1': concentric rings, an inscribed band and inner divisions recognisable
+      '0.5': a single ring or a plain glowing spot with few markings
+      '0': no circle, or one with none of these features
+    evidence:
+    - img03
+    - img04
+    - - '01:06.5'
+      - '01:07.0'
+  - id: VP3
+    cat: style
+    keyframes:
+    - '00:49.5'
+    - '01:06.0'
+    item: 'The book''s creature page looks like an old bestiary plate: a monster illustration on an aged page with lettering'
+    anchors:
+      '1': an aged-page monster illustration with lettering is shown
+      '0.5': a page or book is shown but not as an illustrated monster page
+      '0': the book's content is never shown
+    evidence:
+    - img01
+    - img02
+    - - '00:49.5'
+      - '00:50.0'
+    - - '01:06.0'
+      - '01:06.5'
+  - id: VP4
+    cat: key_moment
+    keyframes:
+    - '00:54.5'
+    - '00:55.0'
+    item: 'The summoning burst: glowing green smoke and lightning swamp the whole chamber'
+    anchors:
+      '1': a room-filling burst of glowing smoke and lightning, the chamber visibly overwhelmed
+      '0.5': a burst effect limited to a small spot, or smoke without the lightning
+      '0': no burst
+    evidence:
+    - - '00:54.5'
+      - '01:02.5'
+play_suggestions:
+  FP1:
+  - 'walk around the chamber and wait without touching the book: does anything start?'
+  - 'use the book: does the ritual begin from that action?'
+  FP2:
+  - 'watch the whole ritual once: is the order glow, burst, creature in the circle?'
+  - stand inside the circle while triggering the ritual, and far from it
+  FP3:
+  - 'after the ritual watch the scene close: is the creature still there, with the summoners or the player?'
+  - check that the scene ends or lets the player continue instead of resetting
+  robustness:
+  - 'use the book again after the creature has appeared: does it duplicate, break or respond sensibly?'
+  - leave the chamber in the middle of the ritual and come back
+  - 'save and reload after the summoning: does the creature persist?'
+hybrid:
+  modality: video+image
+  roles:
+    video: 'the story beat and its order: a small group reads a monster book on a stand in a candle-crowded chamber, the page and then a floor
+      circle glow, a burst of smoke and lightning fills the room, a small tentacle-faced creature is left standing in the circle and is taken
+      in by the summoners'
+    images: 'the design of the props the clip shows only briefly: old bestiary / grimoire plates of monsters (img01-02) for the book''s creature
+      page, inscribed magic-circle diagrams (img03-04) for the floor circle, masses of lit candles (img05-07) for the chamber''s lighting'
+  cross_reference_requirement: The summoning must follow the clip's sequence and outcome (book read, circle glows, burst, small creature in the
+    circle, kept by the summoners) while the book's creature page, the floor circle and the candle-lit chamber are designed after the images (bestiary
+    plates, inscribed concentric-ring circles, dense fields of candles).
+v4_map:
+  U1: FP1, FP2 (reading triggers; glow -> burst -> creature in circle played)
+  U2: 'dropped: world rule already scored by FP1 (book triggers) and FP2 (circle)'
+  U3: CR2
+  U4: CR3
+  U5: CR3
+  U6: CR4
+  U7: CR5 (candle part -> VP1)
+  FP1: FP1
+  FP2: FP2
+  FP3: FP3 (tie to summoners -> CR4)
+  FP4: CR3
+  FP5: 'dropped: editing request (modify, creature joins the party), moved to editing_seed.yaml'
+  VP1: CR1 (layout), VP1 (candle-lit look)
+  VP2: VP2
+  VP3: VP3 (link to the summoned monster -> CR3)
+  VP4: VP4
+provenance:
+  source_yaml: T-HY-vid_c6749ac9ffcd.t1.yaml
+  source_sha256: f93fc6daf23b871dcdc014048fb5c8c6c255f448eb38f26f2573b75b8921c7a7
+  size_waiver: null
+  size_max: null
+  sources:
+  - refs:
+    - img01
+    - img02
+    - img03
+    - img04
+    - img05
+    - img06
+    - img07
+    images:
+    - hybrid/q23_ref0

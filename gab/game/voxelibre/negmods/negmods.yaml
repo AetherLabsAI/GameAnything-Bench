@@ -1,0 +1,2 @@
+# negative mods for `gab selfcheck voxelibre` (from the game's pool verification)
+neg_slow: {expect_fail: [VL-MOVE], quick_probes: [move_jump, player_start, game_rules, place_break]}

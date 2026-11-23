@@ -1,0 +1,261 @@
+# GameAnything-Bench scoring material: never shown to agents during a trial.
+task_id: T-TO-txt_6469bcc4c8d9.e1
+source_inventory:
+- 'c03.p001-c03.p003: the narrator wakes in heat; it was winter last night, now a bright early-June morning by the Thames; a landing-stage before
+  his house, a bathers'' boat with a sculler'
+- 'c03.p004-c03.p012: the water is strikingly clear; he swims, sees the bridge and is astonished; the waterman is described (friendly, strong,
+  fourteenth-century-like dress, wrought buckle)'
+- 'c03.p013-c03.p014: plank stages with windlasses on the Surrey bank are for salmon nets'
+- 'c03.p015-c03.p019: the soap, engine and lead works are gone; the bridge is of solid stone arches with small booth-like buildings and gilded
+  vanes along the parapet, unsooted; built 2003, replacing a plain timber bridge'
+- 'c03.p020-c03.p022: both banks have low red-brick tiled houses set back behind a continuous flowering garden down to the water, great plane
+  trees behind; the reaches toward Putney look like a lake with a forest shore'
+- 'c03.p023-c03.p031: back at the landing-stage the narrator offers money; the waterman does not understand payment for his work; the coins belong
+  in a museum; he works in gold'
+- 'c03.p032-c03.p039: the waterman offers to guide the stranger; a weaver friend will take over his ferrying; a hay-harvest trip upstream is planned;
+  the friend lodges at the Guest House'
+- 'c03.p040-c03.p046: a bugle call brings Bob the weaver from the house on the site of the narrator''s old dwelling; the sculler is Dick; they
+  go into the Guest House for breakfast'
+- 'c04.p001-c04.p003: the Guest House, a long red-brick building with lead roof, gables away from the road, traceried windows and a baked-clay
+  figure frieze; inside a hall with marble mosaic floor, open timber roof, arches to chambers and frescoes'
+- 'c04.p004-c04.p006: three young women serve breakfast (roses, strawberries, several breads); their dress is described'
+- 'c04.p007-c04.p009: a gilded inscription says the hall stands on the site of the Hammersmith Socialists'' lecture-room (May 1962)'
+- 'c04.p010-c04.p024: the narrator is named Guest, claims to come from Epping Forest; Dick says its trees regrew after the great clearing of houses
+  in 1955; Bob asks about pollards and is teased for questioning'
+- 'c04.p025-c04.p035: Guest is 56 and looks older; Annie is 42 and looks 20; she leaves for her work'
+- 'c04.p036-c04.p040: Bob''s work (weaving, dying-out machine printing, mathematics, an antiquarian history); Dick works gold and steel'
+- 'c04.p041-c04.p046: Boffin, a showily dressed man, wants to question Guest; Dick sends him for a carriage, as he will take Guest to his great-grandfather
+  in Bloomsbury'
+- 'c04.p047-c04.p053: Boffin is Henry Johnson, a dustman who writes reactionary novels; a light graceful carriage with a grey horse; they drive
+  off'
+- 'c05.p001: the main road through Hammersmith runs through meadows and garden tillage; the Creek is open with boats; houses of brick or timber
+  and plaster in gardens; gaily dressed, happy people'
+- 'c05.p002-c05.p007: at the Broadway, low ornate buildings and a great hall (the winter Mote-House) north of the road, an octagonal high-roofed
+  theatre with an arcade south of it; market carts with produce; Dick made the theatre''s bronze doors'
+- 'c05.p008-c05.p015: Guest sees no sellers and no poor people; Dick does not understand; they drive on eastward'
+- 'c06.p001-c06.p002: a brook, Kensington Market, a short street of timber-and-plaster houses with an arcade'
+- 'c06.p003-c06.p007: Dick describes the forest strip running from Kensington north and west and on round to the Lea; the road plunges into a
+  wood of big trees; children camp in tents; small houses in the forest'
+- 'c06.p008-c06.p032: conversation on education: no schools; children learn swimming, riding, cooking, crafts, read early, pick up languages and
+  follow their tastes'
+- 'c06.p033-c06.p036: down a glade on the right Westminster Abbey, cleaned, its monuments cleared out'
+- 'c06.p037-c06.p039: the Houses of Parliament are kept as a subsidiary market and manure store; old buildings are kept as a foil to the new ones;
+  Dick on building and ornament'
+- 'c07.p001-c07.p004: out of the wood into Piccadilly, a street of handsome houses with shop-like fronts and arcades, guest-houses above, a big
+  public building; a market for the handsomer goods'
+- 'c07.p005-c07.p014: Guest has left his money behind; Dick says anything left can be got again in the market; he should keep his old clothes
+  for the great-grandfather'
+- 'c07.p015-c07.p022: a woman holds the horse; Dick speaks of love and a recent fatal quarrel'
+- 'c07.p023-c07.p049: in a booth two children serve Guest: tobacco, an embroidered bag and a jewelled carved pipe, all given without weighing
+  or payment; a lost pipe would be found and used by someone; they offer wine'
+- 'c07.p050-c07.p054: an old man has taken over holding the horse and rides along toward Bloomsbury'
+- 'c07.p055-c07.p063: children often serve in the markets; a mock history of the disease Idleness; Dick laughs at it'
+- 'c08.p001: ornate houses each in a flowering garden full of fruit trees; children offer fruit; the main roads follow the old lines'
+- 'c08.p002-c08.p003: a large open space sloping south, planted as an apricot orchard with a small gilded wooden stall; a pear-shaded road south
+  to the Parliament tower (Dung Market); Guest recalls the old Trafalgar Square'
+- 'c08.p004-c08.p026: the old name kept; a battle there in 1952; the 1887 attack on a meeting; prisons, which no longer exist'
+- 'c08.p027-c08.p028: the National Gallery at the end of a plane grove on the left, an old building kept for its pictures'
+- 'c08.p029-c08.p035: the pipe as a toy; almost everyone carves; work may become scarce'
+- 'c08.p036-c08.p043: a Banded-workshop where people make pottery and glass by hand together; no smoke from the furnaces'
+- 'c08.p044-c08.p049: a cheerful road-mending gang eases the carriage past; work as sport'
+- 'c09.p001-c09.p008: Long Acre, a lane under meeting plane trees with low close-set houses, still being built on; the old man (about ninety)
+  gets down'
+- 'c09.p009-c09.p010: down through rose gardens on the site of Endell Street; across Holborn / Oxford Road with scattered houses'
+- 'c09.p011-c09.p012: a wide road with a long gabled public building (the Museum Market) on one side and open unfenced greenery opposite, through
+  which the British Museum portico shows; the great-grandfather lives there'
+- 'c09.p013-c09.p016: through an archway into a large paved quadrangle with a sycamore in each corner, a fountain in the middle, a few awninged
+  stalls and an arcade round it; busy and musical on Fridays; a stable; people greet Guest'
+- 'c09.p017-c09.p022: the Museum forecourt without railings, among trees, pigeons on the pediment; the old building is kept for its collections
+  and library; Dick leads Guest to the great-grandfather''s dwelling'
+instructions_meta:
+  requirement_groups:
+    route and traversal:
+    - CR1
+    - FP1
+    - FP2
+    starting landmark:
+    - CR2
+    - VP1
+    landmarks along the way:
+    - CR3
+    - CR4
+    - CR5
+    - VP2
+    destination:
+    - CR6
+    overall look of the place:
+    - VP3
+  explicit_requirements:
+  - type: keep
+    text: I really want to keep the big open square that's been planted over as an orchard.
+    covers:
+    - CR5
+rubric:
+  content_realization:
+  - id: CR1
+    item: 'The course is laid out as one route whose main areas follow the text''s order: the riverside start at Hammersmith, the Hammersmith
+      market, the wood, Piccadilly, the orchard square, and the Museum at the end'
+    anchors:
+      '1': all these areas are present along the course and in this order, starting by the river and ending at the Museum
+      '0.5': start by the river and end at the Museum are right, but areas in between are missing or out of order
+      '0': the areas are not arranged as one route, or the start or the end is wrong or missing
+    evidence:
+    - c04.p044
+    - c05.p015
+    - c06.p005
+    - c07.p001
+    - c08.p002
+    - - c09.p011
+      - c09.p012
+  - id: CR2
+    item: The course starts on the river bank, where the river is crossed by a solid stone-arched bridge with small buildings along its parapet
+    anchors:
+      '1': a river at the start crossed by an arched stone bridge carrying small buildings along its parapet
+      '0.5': a bridge over the river at the start, but without buildings on it or not arched
+      '0': no river or no bridge at the start
+    evidence:
+    - c03.p015
+    - c03.p019
+  - id: CR3
+    item: Between the Hammersmith market and the centre the road runs through a wood of big trees, a forest belt across the former city
+    anchors:
+      '1': a clearly wooded stretch of big trees that the road passes through, between the Hammersmith market and Piccadilly
+      '0.5': a few trees or a park beside the road, not a stretch of wood the road runs through, or the wood in the wrong place
+      '0': no wood on the course
+    evidence:
+    - - c06.p003
+      - c06.p005
+    - c07.p001
+  - id: CR4
+    item: 'The district centres on the way are market places with their own public buildings: at the Hammersmith market a great hall and a theatre
+      face each other across the main road, and Piccadilly is a market street with a big public building'
+    anchors:
+      '1': both Hammersmith and Piccadilly are built as market places with their public buildings, the Hammersmith hall and theatre on opposite
+        sides of the road
+      '0.5': only one of the two market centres is realised, or the markets lack their public buildings, or the Hammersmith hall and theatre do
+        not face each other across the road
+      '0': neither place is built as a market centre with public buildings
+    evidence:
+    - - c05.p002
+      - c05.p005
+    - - c07.p001
+      - c07.p004
+  - id: CR5
+    item: A large open square on the way to the Museum is planted over as an orchard
+    anchors:
+      '1': a large open space filled with orchard trees, on the route before the Museum
+      '0.5': an orchard or an open square, but not an open square planted as an orchard
+      '0': missing
+    evidence:
+    - c08.p002
+    - c08.p003
+  - id: CR6
+    item: 'The course ends at the old Museum standing in open, unfenced greenery, beside its market quadrangle: a paved court ringed by an arcade
+      with a fountain in the middle and stalls'
+    anchors:
+      '1': at the end both the Museum building set in open greenery and the arcaded market court with a central fountain and stalls
+      '0.5': only one of the two, or the court lacks the arcade or the fountain
+      '0': neither at the end of the course
+    evidence:
+    - c09.p011
+    - c09.p012
+    - c09.p013
+    - c09.p017
+  functions_playability:
+  - id: FP1
+    item: The place can be driven as one continuous course from the riverside start to the Museum without breaks or dead ends, and the drive has
+      a clear end there
+    anchors:
+      '1': a continuous drive from the start by the river to the Museum, with no gaps, and the course ends (or completes its lap) at the Museum
+      '0.5': drivable, but broken into disconnected parts, or the drive stops before the centre or the Museum
+      '0': no drivable route, or only one location
+    evidence:
+    - - c04.p053
+      - c05.p002
+    - c05.p015
+    - - c06.p001
+      - c06.p005
+    - c07.p001
+    - c08.p002
+    - - c09.p001
+      - c09.p013
+  - id: FP2
+    item: 'The signature places are driven through, not just passed as backdrops: the road runs into the wood, across the orchard square and in
+      through an archway into the Museum Market court'
+    anchors:
+      '1': the driver passes through the wood, crosses the orchard square and enters the market court
+      '0.5': one or two of these are only seen beside the road or cannot be entered
+      '0': none of them can be driven through
+    evidence:
+    - c06.p005
+    - c08.p002
+    - c09.p013
+  visual_presentation:
+  - id: VP1
+    cat: style
+    item: 'The bridge looks like a wonder: clean, graceful stonework, its parapet buildings fanciful and topped with painted and gilded vanes
+      and spirelets'
+    anchors:
+      '1': 'the bridge reads as ornate and fanciful: clean stone and decorated parapet buildings with gilded tops'
+      '0.5': some ornament, but the bridge otherwise looks plain, utilitarian or grimy
+      '0': a plain, utilitarian or grimy bridge with no ornament, or no bridge
+    evidence:
+    - c03.p015
+  - id: VP2
+    cat: style
+    item: The public buildings at the market places are ornate and handsome, standing out against the low, modest houses around them
+    anchors:
+      '1': the market-place public buildings are visibly richer and grander than the low houses around them
+      '0.5': public buildings present but no different in look from the houses, or only one of them stands out
+      '0': no distinct public buildings, or all plain boxes
+    evidence:
+    - - c05.p002
+      - c05.p005
+    - c07.p001
+    - c09.p011
+    - c09.p013
+  - id: VP3
+    cat: style
+    item: 'A garden-city look: houses stand apart in gardens among meadows and trees, not in continuous streets'
+    anchors:
+      '1': the route is visibly green throughout, with houses set in gardens and stretches of meadow
+      '0.5': some greenery, but mostly continuous streets or bare urban surfaces
+      '0': a dense or industrial city look
+    evidence:
+    - c03.p020
+    - c05.p001
+    - c08.p001
+    - c09.p009
+play_suggestions:
+  FP1:
+  - 'drive from the start by the river to the Museum without skipping: note where the course breaks or dead-ends'
+  - check that the course ends (or closes its lap) at the Museum
+  FP2:
+  - 'leave the racing line inside the wood, the orchard square and the market court: are they spaces you drive in, or scenery beside the road?'
+  robustness:
+  - 'drive off the road into the gardens, the wood or along the river bank: is the space coherent there?'
+  - 'drive back from the Museum toward the river: do the places come in reverse order?'
+  - leave and come back mid-route
+v4_map:
+  U1: CR3, VP3
+  U2: CR4, CR6, VP2
+  U3: CR1
+  U4: 'CR5, CR6 | dropped: Abbey and Parliament examples peripheral (only glimpsed down glades)'
+  FP1: CR1, FP1
+  VP1: CR2, VP1
+  VP2: CR4, VP2
+  VP3: CR5
+  VP4: CR6
+  VP5: VP3
+  VP6: 'dropped: editing request (sunset lighting), moved to editing_seed.yaml'
+provenance:
+  source_yaml: T-TO-txt_6469bcc4c8d9.e1.yaml
+  source_sha256: 6a72bef74ad7c84719cc31fa187f6df9ff62ba321a687483e3af227ec1b7eac5
+  size_waiver: null
+  size_max: null
+  sources:
+  - ref: t01
+    title: News from Nowhere; Or, An Epoch of Rest
+    author: William Morris
+    text_id: txt_6469bcc4c8d9
+    excerpt_id: e1

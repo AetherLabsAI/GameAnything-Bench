@@ -1,0 +1,22 @@
+# GameAnything-Bench scoring material: never shown to agents during a trial.
+task_id: T-IO-67997fb0ac
+game: valheim
+status: pending
+picks:
+- VH-CONTENT
+- VH-CRAFT
+- VH-BUILD
+- VH-INVENTORY
+- VH-SAVE
+- VH-PERF
+changed: []
+kept_borderline:
+- id: VH-CONTENT
+  note: Vanilla charcoal kiln/recipes might be modified; new kiln behaviour is not required to alter vanilla.
+- id: VH-CRAFT
+  note: Process may touch recipes; additions allowed, changes not required.
+summary: Kiln charcoal-making process with smoke when burning and sealed kilns.
+task_checks: []
+note: 'policy (A): excluded only when the instruction explicitly requires the change; plausible side effects stay tested; adding
+  new content is never a reason to exclude. Proposed by claude-sonnet-5-5 via `gab task picks` 2026-11-06; a maintainer checks (set status: checked).
+  The evaluator tests the pool''s always items (unless in changed) + picks.'

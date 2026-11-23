@@ -1,0 +1,275 @@
+# GameAnything-Bench scoring material: never shown to agents during a trial.
+task_id: T-VO-vid_0885d9e061b2.t1
+source_inventory:
+- '00:00.9-00:03.9 title shot, static: inside a glass-and-steel lattice dome, a tall cylindrical waterfall falls from a round opening in the centre
+  of the roof into a round basin; dense terraced jungle greenery fills the walls all around; a pedestrian bridge crosses in front of the waterfall
+  at mid-height, with tiny visitors below near the basin; sunny, warm grade'
+- 00:01.9-00:03.9 yellow text overlay 'SINGAPORE' slides in and out with a yellow bar (title card, not part of the place)
+- '00:04.4 whip-cut: a woman with a long braided ponytail seen from behind at a railing, a white petal-shaped building and glass towers behind
+  her (bayfront)'
+- '00:04.9 whip-cut, blurred: a man in white walks past in front of the three linked glass towers'
+- '00:05.4 whip-cut: a man with a backpack raises a phone to photograph, blurred lit towers behind at dusk'
+- '00:05.9 whip-cut: a woman in a red-patterned dress stands among large leaves (indoor garden)'
+- '00:06.4 whip-cut, rotated overhead view: a crowd of visitors beside a curved planted structure'
+- '00:06.9-00:08.9 view up from the dark forest floor of the dome: tree canopies and palms framing the bright lattice roof, small warm lights
+  in the foliage'
+- '00:09.4-00:10.9 high view down through palms: a small white two-car train runs along an elevated track through the greenery, the waterfall
+  and its basin behind it'
+- '00:11.4-00:12.4 a woman in black pulls a blue suitcase through a bright covered plaza under the glass roof: tall trees in round planters, cafe
+  tables with red-framed and wicker chairs, a queue barrier, a wood-panelled shopfront at left; other visitors walk toward the camera'
+- '00:12.9-00:14.9 frontal view across the dome: a glass-railed bridge with two visitors high up under the lattice roof, the waterfall falling
+  below it, a wall of jungle behind, and the small train passing low in front of the waterfall base on its track'
+- '00:15.4-00:15.9 outdoors, low angle up: a giant lattice ''tree'' tower, trunk clad in climbing plants, opening into a wide branching steel
+  canopy, a second one behind; palms; blue sky with clouds'
+- 00:16.4-00:16.9 a calm green lake with a single fountain jet in the middle, banks of trees, and the tops of the lattice trees beyond; blue sky
+- '00:17.4-00:18.4 low angle: two lattice trees in front of the three linked towers with the long rooftop deck; overcast bright sky'
+- 00:18.9 a woman in a patterned dress poses in front of an ornate pink-and-cream gate and wall with a red mailbox
+- '00:19.4-00:21.9 static wide shot: a continuous row of two-storey shophouses with facades in alternating pastel colours (pink, beige, teal,
+  grey, coral), shuttered windows, a red-tiled roofline, low walls with pillars and gates in front, a few pedestrians on the pavement; a teal
+  car crosses in front on the road (00:20.9-00:21.4)'
+- '00:22.4 street corner: a yellow colonnaded building labelled ''JK CENTRE'', a traffic light, a white car passing, more shophouses down the
+  street'
+- 00:23.0 whip-pan blur (clip 2 starts)
+- 00:23.5-00:25.0 the braided-ponytail woman stands at a white railing on the promenade with her back to camera, looking across the water at a
+  white petal (lotus)-shaped building low by the water, glass towers rising behind it; hazy grey daylight
+- 00:25.5-00:27.0 a dense cluster of blue-glass office skyscrapers with bank logos across the bay, a taller slim tower at right; water in the
+  foreground; hazy grey sky
+- 00:27.5 visitors sit on the stone edge of the promenade over the water, one with a pink backpack photographing with a phone; across the water
+  a long columned colonial building, trees and a small white statue with a crowd on the far promenade
+- 00:28.0-00:31.0 the three tall glass towers with splayed bases, joined at the top by one long ship-shaped rooftop deck overhanging both ends;
+  the white petal-shaped building in the foreground at left; visitors in the foreground walk past and one points (00:28.0)
+- 00:31.5 whip-pan blur over a street
+- '00:32.0-00:35.0 blue hour / dusk: a white lion-headed statue with a fish-scale body spouts an arc of water from its mouth out toward the bay;
+  behind it the office skyscrapers with lit windows and red / white logo signs; a crowd around it, visitors taking photos with phones and a camera
+  (man with backpack 00:34.5-00:35.0)'
+- '00:35.5 night: a dark park path with silhouetted visitors, trees lit in glowing teal / blue, warm lamps'
+- 'camera: cinematic static or slow shots joined by whip-pan transitions; the montage never shows how the places connect to each other'
+- 'audio: music track only (no diegetic sound identifiable); the transcript''s ''Thank you.'' at 00:05.5-00:06.3 is a Whisper artifact over music'
+instructions_meta:
+  requirement_groups:
+    walkable places:
+    - FP1
+    - FP4
+    working features:
+    - FP2
+    - FP3
+    landmark views and layout:
+    - CR1
+    - CR2
+    - CR3
+    - CR4
+    - CR5
+    - CR6
+    - VP1
+    - VP2
+    style, lighting and atmosphere:
+    - VP3
+  explicit_requirements:
+  - type: specify
+    text: In the dome, the footbridge should cross in front of the waterfall up high, with the little train running past near the bottom of the
+      falls, just like in the clip.
+    covers:
+    - CR2
+    - FP2
+rubric:
+  content_realization:
+  - id: CR1
+    item: The game contains a glass lattice dome filled with dense terraced greenery, whose centrepiece is a tall cylindrical waterfall falling
+      from a round opening in the centre of the roof into a basin below
+    anchors:
+      '1': an enclosed dome with a lattice / glass roof, dense greenery all around, and a waterfall that falls from a central roof opening into
+        a basin
+      '0.5': an indoor garden with a waterfall, but the waterfall does not come from the roof (e.g. a cliff or wall waterfall) or there is no
+        dome enclosure
+      '0': no dome or no waterfall
+    evidence:
+    - - '00:00.9'
+      - '00:03.9'
+    - - '00:06.9'
+      - '00:08.9'
+    - - '00:12.9'
+      - '00:14.9'
+  - id: CR2
+    item: 'Inside the dome the features stack vertically around the waterfall: a footbridge crosses in front of it high up, and a track with a
+      small train on it passes in front of its base'
+    anchors:
+      '1': a bridge crossing in front of the waterfall high up and a track carrying a train laid past it near the bottom
+      '0.5': bridge and train track both exist but only one is placed correctly relative to the waterfall, or the track has no train
+      '0': neither a bridge nor a train track near the waterfall
+    evidence:
+    - - '00:00.9'
+      - '00:03.9'
+    - - '00:09.4'
+      - '00:10.9'
+    - - '00:12.9'
+      - '00:14.9'
+  - id: CR3
+    item: 'The game contains the landmark hotel: three tall glass towers standing side by side, joined at the top by one long ship-shaped deck
+      that overhangs both ends'
+    anchors:
+      '1': three separate towers and a single rooftop deck spanning all three and overhanging the ends
+      '0.5': tall towers with a rooftop element, but the count is wrong, the deck does not join them, or it does not overhang
+      '0': no such towers
+    evidence:
+    - - '00:17.4'
+      - '00:18.4'
+    - - '00:28.0'
+      - '00:31.0'
+  - id: CR4
+    item: 'The bayfront is laid out across water: a promenade at the water''s edge faces across the bay to the three linked towers, with the white
+      petal-shaped building low at the water in front of them at left, and the blue-glass office cluster rising as a separate group on another
+      stretch of the bay'
+    anchors:
+      '1': a promenade on the water's edge looking across water at the towers, the petal building low in front / left of them, and the office
+        cluster as its own group across the water
+      '0.5': promenade and landmarks across water exist, but the petal building or the office cluster is missing or misplaced relative to the
+        towers
+      '0': no waterfront, or the landmarks are not set across water from a promenade
+    evidence:
+    - - '00:23.5'
+      - '00:31.0'
+  - id: CR5
+    item: At the bayfront stands a white statue with a lion's head and a fish-scale body at the water's edge, with the office skyline behind it
+    anchors:
+      '1': a white lion-headed, fish-bodied statue on the water's edge with the office towers behind it
+      '0.5': a statue or fountain at the water, but not recognisably lion-headed and fish-bodied, or not at the bayfront
+      '0': no such statue
+    evidence:
+    - - '00:32.0'
+      - '00:35.0'
+  - id: CR6
+    item: The game contains an outdoor garden where several giant artificial lattice trees stand together, rising high above it
+    anchors:
+      '1': several tall tree-like structures grouped together in an outdoor garden
+      '0.5': only a single such structure, or ordinary (natural) trees in their place
+      '0': no outdoor lattice-tree garden
+    evidence:
+    - - '00:15.4'
+      - '00:18.4'
+  functions_playability:
+  - id: FP1
+    item: 'The dome interior is walkable as a place: the player can move through the ground level under the trees and up onto the bridge, and
+      see the waterfall from both below and the bridge'
+    anchors:
+      '1': an enclosed dome interior with walkable ground paths and a reachable bridge, the waterfall visible from both levels
+      '0.5': the dome can be entered but only one level is reachable, or the bridge is decorative and cannot be walked
+      '0': no enterable dome interior
+    evidence:
+    - - '00:00.9'
+      - '00:03.9'
+    - - '00:11.4'
+      - '00:14.9'
+  - id: FP2
+    item: 'The dome''s small train runs: it moves along its track past the waterfall on its own'
+    anchors:
+      '1': the train visibly moves along its track past the waterfall by itself, repeatedly or continuously
+      '0.5': the train moves only when the player drives or pushes it, or moves once and stops for good
+      '0': the train never moves along its track
+    evidence:
+    - - '00:09.4'
+      - '00:10.9'
+    - - '00:12.9'
+      - '00:14.9'
+  - id: FP3
+    item: 'The lion statue fountain runs: water arcs continuously from the statue''s mouth into the bay, and the player can stand on the promenade
+      beside it'
+    anchors:
+      '1': continuous flowing water from the statue's mouth into the water, statue reachable on foot from the promenade
+      '0.5': the water is static (a frozen arc of blocks), does not come from the mouth, or the statue cannot be reached on foot
+      '0': no water flows from the statue
+    evidence:
+    - - '00:32.0'
+      - '00:35.0'
+  - id: FP4
+    item: 'The lattice-tree garden is explorable on foot, not just a backdrop: the player can walk on the ground among the giant trees'
+    anchors:
+      '1': the garden can be reached and walked through at ground level among the tree structures (adjacent, a separate area or a travel link
+        all count)
+      '0.5': the trees are only reachable at the edge or seen as a distant backdrop
+      '0': the garden cannot be walked in
+    evidence:
+    - - '00:15.4'
+      - '00:18.4'
+  visual_presentation:
+  - id: VP1
+    cat: key_moment
+    keyframes:
+    - '00:02.4'
+    - '00:13.4'
+    item: 'The hero view of the dome: from in front, the waterfall falls from the roof opening into its basin, framed by the lattice roof, the
+      bridge across it and walls of greenery'
+    anchors:
+      '1': one view shows roof, waterfall into basin, bridge and surrounding greenery together, recognisably as in the keyframes
+      '0.5': a waterfall in greenery but no dome roof or no bridge in the view
+      '0': no such view
+    evidence:
+    - - '00:00.9'
+      - '00:03.9'
+    - - '00:12.9'
+      - '00:14.9'
+  - id: VP2
+    cat: spatial
+    keyframes:
+    - '00:15.9'
+    - '00:17.9'
+    item: 'The lattice trees look like the reference: each a plant-clad trunk opening into a wide, open, branching lattice canopy'
+    anchors:
+      '1': trunks covered in greenery that widen into open branching lattice canopies, recognisable as in the keyframes
+      '0.5': tall tree structures but solid, unplanted or without the open branching canopy
+      '0': absent
+    evidence:
+    - - '00:15.4'
+      - '00:18.4'
+  - id: VP3
+    cat: style
+    keyframes:
+    - '00:33.5'
+    - '00:34.0'
+    item: 'Blue-hour bayfront: the white lion statue against a darkening blue sky with the office skyscrapers behind it lit by window lights and
+      glowing signs'
+    anchors:
+      '1': dusk or night lighting at the statue with lit windows / signs on the towers behind
+      '0.5': the statue and towers exist but only in flat daylight, or the towers are unlit at night
+      '0': absent
+    evidence:
+    - - '00:32.0'
+      - '00:35.0'
+play_suggestions:
+  FP1:
+  - enter the dome and walk the ground level, then find the way up onto the bridge
+  - look at the waterfall from the basin and from the bridge
+  FP2:
+  - 'stand still near the track for a minute: does the train pass, and pass again?'
+  FP3:
+  - 'walk up to the statue and watch the water for a while: does it keep flowing into the bay?'
+  - check from the promenade that the skyline is across the water
+  FP4:
+  - walk among the lattice trees at ground level
+  - 'unscored: note how the places are linked (one walkable district, separate areas, a travel link or only commands)'
+  robustness:
+  - 'jump into the waterfall basin and the bay: can you get out again?'
+  - try to fall off the bridge or the promenade edge
+  - check that the world loads with the places intact after leaving and rejoining
+  - 'wait through a day-night cycle at the bayfront: do the lights read at dusk?'
+v4_map:
+  U1: CR1
+  U2: CR2 (placement of bridge and train track); the train's motion is scored in FP2
+  U3: CR3
+  U4: CR4
+  U5: CR5 (statue exists); the spouting is scored in FP3
+  FP1: FP1
+  FP2: FP2; train existence and placement in CR2
+  FP3: FP3; statue existence in CR5
+  FP4: 'FP4 (garden walkability); dropped: peripheral (lake shore and shophouse pavement, brief one-shot places)'
+  FP5: 'dropped: editing request (riding the train; moved to editing_seed.yaml)'
+  VP1: VP1
+  VP2: CR4 (towers and petal building placement across water)
+  VP3: 'CR6 (trees exist) + VP2 (their look); lake with fountain dropped: peripheral (one brief shot)'
+  VP4: 'dropped: peripheral (shophouse row glimpsed in passing; reviewer''s binding example)'
+  VP5: VP3
+provenance:
+  source_yaml: T-VO-vid_0885d9e061b2.t1.yaml
+  source_sha256: 049b55506e8d6be1457aec5744c1f8bc5b9595dadba6964cf37925eb9acd6bda
+  size_waiver: null
+  size_max: null
+  sources: []

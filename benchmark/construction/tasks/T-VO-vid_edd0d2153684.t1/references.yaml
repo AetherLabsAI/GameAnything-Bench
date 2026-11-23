@@ -1,0 +1,24 @@
+# Reference material: fetched from the HF dataset into $GAB_MEDIA_DIR/<task>/ by `gab media fetch` (sha256 checked).
+# The agent gets the files only (no title, author, caption or source): this file is never shown to it.
+task_id: T-VO-vid_edd0d2153684.t1
+refs:
+- id: c01
+  kind: video
+  file: clip_01.mp4
+  video_id: vid_edd0d2153684
+  source:
+    title: 'A Rollercoaster of a Game! 🇨🇦 Canada vs. Czechia 🇨🇿 ｜ Men''s Ice Hockey #MilanoCortina [9g3wqKuLL48]'
+    url: https://www.youtube.com/watch?v=9g3wqKuLL48
+    channel: null
+    youtube_id: 9g3wqKuLL48
+  range:
+    start: 32.0
+    end: 90.0
+    text: 0:32.00-1:30.00
+  duration_s: 58.0
+  size_bytes: 12303328
+  format: mp4 H.264 720p, AAC audio
+  hf_path: media/T-VO-vid_edd0d2153684.t1/clip_01.mp4
+  sha256: 7ea129dc5129ab9051f13f0e362c7cedec0e6aa6545124c0f64726da05bca81d
+  rights_note: Real broadcast footage of an Olympic event with IOC branding, team marks and identifiable players. Use as private reference only,
+    do not redistribute frames or clips, and do not reproduce player names or likenesses, logos or the Olympic marks in the built content.

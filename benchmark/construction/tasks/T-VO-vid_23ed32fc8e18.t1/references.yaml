@@ -1,0 +1,44 @@
+# Reference material: fetched from the HF dataset into $GAB_MEDIA_DIR/<task>/ by `gab media fetch` (sha256 checked).
+# The agent gets the files only (no title, author, caption or source): this file is never shown to it.
+task_id: T-VO-vid_23ed32fc8e18.t1
+refs:
+- id: c01
+  kind: video
+  file: clip_01.mp4
+  video_id: vid_23ed32fc8e18
+  source:
+    title: 02 - Kirby and the World Beyond launches spring 2027! (Nintendo Switch 2)
+    url: null
+    channel: null
+    youtube_id: null
+  range:
+    start: 43.2
+    end: 49.8
+    text: 0:43.20-0:49.80
+  duration_s: 6.6
+  size_bytes: 8939944
+  format: mp4 H.264 720p, AAC audio
+  hf_path: media/T-VO-vid_23ed32fc8e18.t1/clip_01.mp4
+  sha256: 5c59eee122bbc4f683e83d46cc4910e2060c39a30a1722be686072d995a9a058
+  rights_note: Publisher promotional game trailer (Nintendo). Private reference only; do not redistribute frames or clips, and do not copy character
+    designs into released benchmark assets without a rights check.
+- id: c02
+  kind: video
+  file: clip_02.mp4
+  video_id: vid_23ed32fc8e18
+  source:
+    title: 02 - Kirby and the World Beyond launches spring 2027! (Nintendo Switch 2)
+    url: null
+    channel: null
+    youtube_id: null
+  range:
+    start: 68.2
+    end: 78.5
+    text: 1:08.20-1:18.50
+  duration_s: 10.3
+  size_bytes: 6075183
+  format: mp4 H.264 720p, AAC audio
+  hf_path: media/T-VO-vid_23ed32fc8e18.t1/clip_02.mp4
+  sha256: d7febd457f6e4075f99ace34f9a189ee72e4268719c5f7a2aef7bfc6ca0d4976
+  rights_note: Publisher promotional game trailer (Nintendo). Private reference only; do not redistribute frames or clips, and do not copy character
+    designs into released benchmark assets without a rights check.

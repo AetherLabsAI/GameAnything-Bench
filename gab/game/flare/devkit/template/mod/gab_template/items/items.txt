@@ -1,0 +1,12 @@
+APPEND
+
+# a new item (new ids: pick from 9000 up so you never override a stock one)
+[item]
+id=9001
+name=Template Token
+flavor=Proof that the template mod is loaded.
+icon=1
+quality=normal
+item_type=gem
+price=5
+max_quantity=99

@@ -1,0 +1,202 @@
+# GameAnything-Bench scoring material: never shown to agents during a trial.
+task_id: T-IO-67fe772a74
+source_inventory:
+- 'img01: looking up a steep sunlit rock face; a line of U-shaped iron rungs climbs it with a steel cable running beside them, fixed to the rock
+  by an anchor at the bottom right; the rungs and cable lead up to the top of the rock (a pine on the summit, autumn leaves at right)'
+- 'img02: a forest adventure park; a person in a helmet and harness with two lanyards and carabiners stands on a wooden start platform; wooden
+  climbing walls with steel cables, STOP signs, a hanging rainbow-letter sign, picnic benches'
+- 'img03: a climber in a helmet, harness and backpack on a steep wet rock wall, clipped by a lanyard to a steel cable; the cable runs up to the
+  left and across to the right and is held to the rock by eyelet anchors at intervals; the climber''s hand is at a carabiner near an anchor; a
+  small metal peg in the rock at lower right'
+- 'img04: inside a dark cave, a climber with a headlamp traverses a rock wall clipped to a horizontal steel cable fixed by anchors; the feet stand
+  on a fixed beam / pipe along the wall; green-lit water in the dark at left'
+- 'img05: view from high on a cliff down into a deep forested gorge with a river and a road far below; a sheer limestone wall at right; no equipment
+  or person visible'
+- 'img06: an old quarry: tiers of sheer rock walls with tiny climbers on them, a gravel path along the base with walkers, scree and shrubs, forest
+  beyond'
+- 'not shown: no route sign, ladder, bridge, fall or rescue is visible; the collector''s note is not reference content'
+instructions_meta:
+  requirement_groups:
+    climbing interaction:
+    - CR3
+    - FP1
+    - FP3
+    - FP5
+    safety system:
+    - CR2
+    - FP2
+    goal and progression:
+    - CR4
+    - FP4
+    play space and readable state:
+    - CR1
+    - VP1
+    - VP2
+  explicit_requirements:
+  - type: keep
+    text: Keep the steel cable the climber stays clipped to the whole way, so it protects them from falling.
+    covers:
+    - CR2
+    - FP2
+rubric:
+  content_realization:
+  - id: CR1
+    item: The level contains a fixed climbing route installed along sheer rock walls high above a large drop
+    anchors:
+      '1': a set, installed route line on steep walls with a large drop below it
+      '0.5': steep walls with a route but no real height / drop, or high walls with no fixed route on them
+      '0': no installed route on steep walls
+    evidence:
+    - img01
+    - img03
+    - img05
+  - id: CR2
+    item: A steel safety cable runs along the whole route
+    anchors:
+      '1': a steel / metal cable present along the full length of the route
+      '0.5': a cable on only some sections of the route, or a safety line along the route that is not a metal cable (e.g. a rope)
+      '0': no safety cable
+    evidence:
+    - img01
+    - img03
+    - img04
+  - id: CR3
+    item: Installed holds (rungs, beams or the like) are fixed along the steep sections of the route
+    anchors:
+      '1': artificial holds placed along the route's steep sections
+      '0.5': a few holds, not along the route's steep sections
+      '0': no installed holds
+    evidence:
+    - img01
+    - img04
+  - id: CR4
+    item: The route combines upward climbs with sideways traverses and leads to an end at the top of the rock
+    anchors:
+      '1': both vertical and sideways sections on the route, and a marked end at the top
+      '0.5': only one of the two (no traverse or no end at the top)
+      '0': neither
+    evidence:
+    - img01
+    - img03
+    - img04
+  functions_playability:
+  - id: FP1
+    item: The player climbs along the fixed route on the steep wall, movement following the route
+    anchors:
+      '1': the player climbs the wall by following the installed route
+      '0.5': climbing not tied to the route (the whole wall climbable anywhere), or the route is walked without climbing
+      '0': the route cannot be climbed
+    evidence:
+    - img01
+    - img03
+    - img04
+  - id: FP2
+    item: The player stays attached to the safety cable while moving along the route, and the attachment protects them from falling
+    anchors:
+      '1': the player stays attached as they move along the route, and a slip or fall while attached is caught or made clearly safer than one
+        while detached
+      '0.5': attached throughout but the attachment has no effect on falls, or it protects but is attached only at some places / lost while moving
+      '0': the player is never attached to the cable
+    evidence:
+    - img02
+    - img03
+    - img04
+  - id: FP3
+    item: 'The installed holds support the player''s climbing: the player uses them to get through the steep sections'
+    anchors:
+      '1': the holds let the player move through steep sections
+      '0.5': holds present but decorative (no effect on movement)
+      '0': no hold has any role in play
+    evidence:
+    - img01
+    - img04
+  - id: FP4
+    item: The player can follow the route through to its end at the top
+    anchors:
+      '1': the end at the top can be reached by climbing the route, and reaching it registers
+      '0.5': the end can be reached only by leaving the route, or reaching it has no effect
+      '0': the end cannot be reached
+    evidence:
+    - img01
+  - id: FP5
+    item: The player can both climb up and traverse sideways along the route
+    anchors:
+      '1': the player climbs the vertical sections and traverses across the sideways ones
+      '0.5': only one direction of movement along the route works
+      '0': no movement along the route
+    evidence:
+    - img01
+    - img03
+    - img04
+  visual_presentation:
+  - id: VP1
+    cat: presentation
+    item: The player can see where the route's cable runs ahead and whether their character is attached to it
+    anchors:
+      '1': the line ahead and the attachment state both readable during play
+      '0.5': only one of the two readable
+      '0': neither
+    evidence:
+    - img03
+    - img04
+  - id: VP2
+    cat: style
+    item: The walls the route crosses look like bare natural rock faces in a wooded outdoor setting
+    anchors:
+      '1': the route's walls read as bare, natural rock (grey / pale stone with cracks and ledges, plants in places) with forest or greenery around
+        or below them
+      '0.5': rock walls that do not look natural (uniform blocks, flat untextured faces), or natural rock with no outdoor / wooded surroundings
+      '0': the walls do not read as rock
+    evidence:
+    - img01
+    - img03
+    - img05
+play_suggestions:
+  FP1:
+  - follow the route for a while
+  - 'try to leave the route across the wall: what happens?'
+  FP2:
+  - 'move along the whole route: does the attachment hold throughout?'
+  - 'let go or jump off while attached; then (if possible) detach and fall: compare the outcomes'
+  - 'move along the line up to an anchor: is there a step to pass it, and do you stay attached the whole time?'
+  FP3:
+  - try to climb a section without using the installed holds
+  - find a section where the holds let you through
+  FP4:
+  - 'climb the route start to end: is the end marked and does it complete?'
+  - after completing it, can you play again or continue?
+  FP5:
+  - climb a vertical section, then a sideways traverse
+  - where the route turns from climbing up to traversing, does movement and the line connection carry over?
+  robustness:
+  - 'fall repeatedly at the same hard section: is progress kept sensibly?'
+  - stand still on the wall for a long time
+  - climb back down the route the wrong way
+v4_map:
+  U1: CR1
+  U2: CR2 (existence); the attachment mechanism is scored by FP2
+  U3: CR3
+  U4: CR1
+  FP1: CR1 (route exists) + FP1
+  FP2: CR2 (cable exists) + FP2
+  FP3: CR3 (holds exist) + FP3
+  FP4: CR4 (end at the top exists) + FP4
+  FP5: CR4 (up and sideways sections exist) + FP5
+  VP1: CR1
+  VP2: VP1
+  VP3: VP2
+provenance:
+  source_yaml: T-IO-67fe772a74.yaml
+  source_sha256: 6c363ab9908013880fdf2c5a75ccacb395049762cf4114388ddb86fa056e1a23
+  size_waiver: null
+  size_max: null
+  sources:
+  - refs:
+    - img01
+    - img02
+    - img03
+    - img04
+    - img05
+    - img06
+    bundle: 67fe772a74
+    title: 铁索攀岩道：锚点、横移、铁梯、索桥

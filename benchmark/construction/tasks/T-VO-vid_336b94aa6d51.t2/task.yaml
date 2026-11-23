@@ -1,0 +1,16 @@
+# GameAnything-Bench task T-VO-vid_336b94aa6d51.t2 (public part). Instruction: instruction_fine.md.
+task_id: T-VO-vid_336b94aa6d51.t2
+version: '0.2'
+category: mechanics_behavior
+modality: video
+domain: sports
+track: core
+target_game: flare
+references:
+- c01
+- c02
+provenance:
+  pipeline: v2g2 pilot task flare__sports -> converted to rubric
+    v4 (2026-11-09)
+  rules_version: v4
+  review_status: pending

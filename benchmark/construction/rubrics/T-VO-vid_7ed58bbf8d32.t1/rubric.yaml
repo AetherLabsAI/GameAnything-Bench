@@ -1,0 +1,233 @@
+# GameAnything-Bench scoring material: never shown to agents during a trial.
+task_id: T-VO-vid_7ed58bbf8d32.t1
+source_inventory:
+- 02:16.5 night sky with pink clouds (cut-in)
+- '02:17-02:18 low-angle shot: Toad on a big-wheeled motorbike with a headlight speeds along a glowing rainbow-striped road'
+- 02:18.5 motion-blurred rainbow road surface
+- 02:19-02:20.5 a pack of karts races on the rainbow road; a rainbow arch rises over the track; several karts carry large cannon / barrel hardware;
+  night sky, pink clouds
+- 02:21-02:22.5 Mario drives his small open red-cap kart, sparks under the wheels; behind him a large dark vehicle with spikes, zig-zag trim and
+  bright pink-white lights
+- 02:23-02:23.5 behind Mario a stair-like, spike-lined ramp of the large vehicle; Mario looks back
+- '02:24 close-up: Mario looks back in alarm'
+- 02:24.5-02:26 Mario's kart is inside a narrow channel of the large vehicle, walls lined with spikes and zig-zag trim, light at the far end (shot
+  from front and from behind)
+- 02:26.5-02:28 Mario, still in the kart, braces both arms against the channel walls; large metal spikes on both sides; a triangular opening with
+  rainbow light behind him
+- 02:28.5-02:30.5 the large vehicle's driver, a Koopa in a blue spiked helmet, sits on top and grins / laughs
+- '02:31 close-up: the driver''s hand pushes a lever on the controls'
+- 02:31.5 Mario, shocked, with the spikes very close around him
+- 02:32-02:32.5 white flash fills the frame
+- 02:33-02:35.5 the driver between two large spiked cannons; a row of three glowing hexagonal lights on the vehicle's front; the driver laughs
+- 02:36-02:38.5 Mario tumbles backward against the vehicle's dark zig-zag exterior beside rows of spikes, arms flailing (no longer in his kart)
+- 02:39-02:40 Mario hangs on to the vehicle with one hand; a pink smoke trail and the rainbow road behind
+- 02:40.5-02:42 Mario pulls himself over an edge of the vehicle; another racer is visible ahead on the track
+- 02:42.5-02:43.5 Mario peeks around the edge of the moving vehicle beside a big wheel; rainbow road behind
+- 02:44-02:45 a hand grips the top edge of a spiked block; Mario pulls himself up and looks over it
+- '02:45.5-02:46.5 from behind Mario: the driver on top ahead of him, bright lights'
+- 02:47 Mario stands on top of the vehicle and springs off; 02:47.5 the rainbow road curves away over the clouds
+- 02:48-02:48.5 Mario jumps up past the driver and the spiked cannons on top of the vehicle
+- '02:49-02:50 wide shot: Mario small and airborne between the large spiked vehicle (right) and a kart with barrel-shaped hardware and a headlight
+  (left), over the rainbow road'
+- 02:50.5 blurred landing on the barrel kart
+- 02:51-02:52 Mario rides behind the driver, a gorilla (Donkey Kong), who steers the barrel kart
+- 02:52.5-02:53 the barrels on the kart fire flames backward like rocket thrusters
+- 02:53.5 smoke and a flash around the kart
+- 02:54-02:54.5 view along the rainbow road toward a vehicle ahead with round cannons and lights, over a red rounded shape in the foreground
+- 'not visible: how the kart is drawn into the channel, what exactly the flash does, what happens to Mario''s own kart, any damage from the spikes,
+  any race HUD, position or lap, whether the barrel kart actually speeds up'
+- 'audio: music only (curator assessment; no speech in the range); sound effects not verifiable from the material'
+instructions_meta:
+  requirement_groups:
+    race and track:
+    - FP1
+    - CR3
+    - VP2
+    capture by the opponent vehicle:
+    - CR1
+    - FP2
+    - VP1
+    dismount and on-foot play:
+    - FP3
+    - FP4
+    vehicle-to-vehicle transfer:
+    - CR2
+    - FP5
+  explicit_requirements:
+  - type: keep
+    text: I want to keep the part where you get from the big vehicle to another racer's moving kart and ride along on or with it while they drive.
+    covers:
+    - CR2
+    - FP5
+rubric:
+  content_realization:
+  - id: CR1
+    item: 'The capturing vehicle is on the track among the racers: far larger than a kart, a spike-covered body, a spike-lined channel at its
+      rear that a kart fits into, and a driver seated on top'
+    anchors:
+      '1': a vehicle clearly larger than the karts, covered in spikes, with a spike-lined rear channel big enough for a kart and a driver on top
+      '0.5': a large spiked vehicle, but without the rear channel or without the driver on top
+      '0': no such vehicle
+    evidence:
+    - - 02:21
+      - 02:35
+    - - 02:48
+      - 02:50
+  - id: CR2
+    item: Another racer's kart with its own driver is on the track near the capturing vehicle and is the carrier the player ends up on or rides
+      with, in the opposite role to the hostile capturing vehicle
+    anchors:
+      '1': a second racer's kart with its own driver close to the capturing vehicle that serves as the friendly carrier, clearly distinct from
+        the hostile vehicle
+      '0.5': a second vehicle exists, but it has no driver of its own (an empty kart the player takes over) or its role is not distinct from the
+        hostile vehicle
+      '0': no second racer's vehicle for the transfer
+    evidence:
+    - - '02:40.5'
+      - 02:42
+    - - 02:49
+      - 02:54
+  - id: CR3
+    item: The track is a narrow road suspended in open sky, with no ground or walls beside it
+    anchors:
+      '1': a narrow track floating in open sky with empty space on both sides
+      '0.5': a sky-themed or elevated track, but with ground, walls or wide surfaces beside it
+      '0': an ordinary ground-level track
+    evidence:
+    - - 02:17
+      - '02:20.5'
+    - - 02:47
+      - 02:50
+    - - 02:54
+      - 02:55
+  functions_playability:
+  - id: FP1
+    item: 'A race in progress: the player drives a kart along a track among other moving racers'
+    anchors:
+      '1': the player drives a kart among AI racers that move and race along the track
+      '0.5': a drivable kart, but the other racers are static or absent
+      '0': no drivable race
+    evidence:
+    - - 02:17
+      - 02:22
+  - id: FP2
+    item: 'Capture: the larger opponent vehicle can take the player''s kart into its spike-lined channel and hold it there, where the player cannot
+      simply drive free'
+    anchors:
+      '1': the player's kart is taken in and held by the opponent vehicle, and player control is clearly constrained while held
+      '0.5': the kart is stopped or bumped by the vehicle but not held inside it, or the player can simply drive out
+      '0': no capture
+    evidence:
+    - - 02:22
+      - 02:31
+  - id: FP3
+    item: 'Escape from the capture: while captured, a readable event from the opponent vehicle (e.g. a flash or blast) ends the capture, and
+      the player gets free of the channel, on foot or in their kart, with play continuing'
+    anchors:
+      '1': a readable event from the opponent vehicle ends the capture and the player escapes from the channel (on foot onto the vehicle, or in
+        their kart, e.g. released or thrown clear), with play continuing
+      '0.5': the player gets free, but without any visible event or feedback
+      '0': no escape; the capture just resets or play stops
+    evidence:
+    - - 02:30
+      - 02:40
+  - id: FP4
+    item: 'After the escape the player stays with the moving opponent vehicle under their own control: on foot holding on and climbing it, or
+      in their kart keeping pace with or riding on it'
+    anchors:
+      '1': the player, on foot or in their kart, stays with the moving vehicle at speed and can move along / across it (e.g. climb to its top
+        or drive up beside it) under their own control
+      '0.5': the player is carried but cannot move, or keeps sliding off / clipping through it
+      '0': the player cannot stay with the moving vehicle after the escape
+    evidence:
+    - - 02:36
+      - 02:47
+  - id: FP5
+    item: 'Vehicle-to-vehicle transfer: from the opponent vehicle the player reaches another racer''s moving kart (by a jump, by kart, or by a
+      cut-scene / scripted transfer) and rides on or with it while that racer drives'
+    anchors:
+      '1': the player gets from the opponent vehicle to the other racer's moving kart (jump, kart manoeuvre or scripted transfer) and is then
+        carried on it or rides along with it while the other driver drives
+      '0.5': the player reaches the other kart but is not carried along or does not ride with it
+      '0': no transfer
+    evidence:
+    - - 02:47
+      - 02:52
+  visual_presentation:
+  - id: VP1
+    cat: key_moment
+    keyframes:
+    - '02:25.5'
+    - '02:27.0'
+    - '02:31.5'
+    item: 'Trapped: the player''s racer seen inside the narrow channel, spikes pointing in from both walls close around them'
+    anchors:
+      '1': a recognisable view of the racer enclosed by spike-lined walls of the larger vehicle
+      '0.5': the racer near or behind the vehicle, but the enclosing spiked channel is not readable
+      '0': none
+    evidence:
+    - - 02:24
+      - 02:32
+  - id: VP2
+    cat: spatial
+    keyframes:
+    - '02:19.5'
+    - '02:47.5'
+    - '02:49.5'
+    item: 'The track has the reference''s look: a glowing rainbow-striped road with rainbow arches over it and clouds below, set against a night
+      sky'
+    anchors:
+      '1': a glowing multicoloured striped road with arches or clouds, under a night sky
+      '0.5': a colourful or glowing track without the multicoloured striped look, or the striped road without the night setting
+      '0': an ordinary-looking track
+    evidence:
+    - - '02:16.5'
+      - '02:20.5'
+    - - 02:47
+      - 02:50
+    - - 02:54
+      - 02:55
+play_suggestions:
+  FP1:
+  - 'drive a lap before the sequence: do the other racers move and race, and is the larger vehicle among them?'
+  - 'after the escape, keep driving: does the race continue?'
+  FP2:
+  - 'drive next to, behind and in front of the large vehicle: when and how does the capture happen?'
+  - 'while captured, steer and accelerate hard: can you drive out?'
+  FP3:
+  - 'wait while captured: is the dismount triggered, and is it clear what happened?'
+  - 'check where you end up: on the opponent vehicle, or elsewhere?'
+  FP4:
+  - 'once free (on foot or in the kart), hold still: do you stay with the vehicle at speed?'
+  - 'climb toward the top; move toward the edges and the spikes: what happens, and are the spikes treated consistently (hazard or handhold)?'
+  FP5:
+  - 'try the transfer early, late and away from the other kart: what happens on a miss?'
+  - 'after landing, give no input: are you carried along?'
+  - 'during the leap: can you see both vehicles and the gap between them?'
+  robustness:
+  - 'repeat the whole sequence twice: does it trigger again or break?'
+  - 'fall off the track or the vehicle at each stage: is there a recovery or restart?'
+  - 'avoid the large vehicle entirely: does the game still run and make sense?'
+v4_map:
+  U1: 'dropped: mechanism scored by FP2; capturing vehicle''s existence in CR1'
+  U2: 'dropped: mechanism scored by FP3'
+  U3: 'dropped: mechanism scored by FP4'
+  U4: 'dropped: mechanism scored by FP5; carrier kart''s existence in CR2'
+  U5: CR1
+  U6: CR2
+  FP1: FP1
+  FP2: FP2, CR1 (existence of the spike-lined channel split off)
+  FP3: FP3
+  FP4: FP4
+  FP5: FP5, CR2 (existence of the other racer's kart split off)
+  VP1: VP1
+  VP2: CR3 (track floating in open sky), VP2 (look)
+  VP3: 'dropped: VP size limit 2-3 for mechanics (v4); the jump itself must be visible to the player to be scored by FP5, so its readability adds
+    little beyond FP5'
+  VP4: 'dropped: editing request (daytime instead of night), moved to editing_seed.yaml for a separate Editing task'
+provenance:
+  source_yaml: T-VO-vid_7ed58bbf8d32.t1.yaml
+  source_sha256: 3b8f1ea8d306687a9ac36b53a625627ef261341c4fd675fdc705ec27123d5dce
+  size_waiver: null
+  size_max: null
+  sources: []

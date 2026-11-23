@@ -1,0 +1,244 @@
+# GameAnything-Bench scoring material: never shown to agents during a trial.
+task_id: T-TO-txt_772670af5456.e1
+source_inventory:
+- 'c04.p001-c04.p005: after a week of storm the ship strikes a rock; the crew leaves in the boats without the family; the stern with the cabin
+  is wedged between two rocks above the water; barren land is visible to the south'
+- 'c04.p006-c04.p009: night on the wreck; the eldest (Anselm) wants floats for those who cannot swim; the father ties small empty barrels in pairs
+  as swimming floats and pockets small necessaries; at dawn the wind drops'
+- 'c04.p010-c04.p013: the boys propose swimming or a raft; the father finds a raft too hard and dangerous and sends everyone to search the wreck'
+- 'c04.p014-c04.p019: the search: provisions and water (father), livestock (mother), guns and powder (Anselm), carpenter''s tools (Leopold), two
+  large dogs (Tobias), fish-hooks (Matthias, judged the most valuable find); finds are weighed by their use for survival'
+- 'c04.p020-c04.p023: Tobias suggests floating in tubs; empty casks floating in the hold are brought up and sawn in half into eight tubs of equal
+  height; the mother refuses to trust them'
+- 'c04.p024: the tubs are set close together on a long flexible plank whose ends curve upward like a keel, nailed to it and to each other, with
+  a side plank on each side: a boat of eight compartments, fit for a short trip on calm water'
+- 'c04.p025-c04.p030: the boat is too heavy to move by combined effort; a jack-screw lifts the bow and a roller cut from a pole goes under it;
+  the father explains the lever and mechanics: what is gained in force is lost in time, the heavier the load the slower, turning the handle faster
+  does not help'
+- 'c04.p031: a long cord from the stern to a firm beam on the wreck; more rollers and the jack launch the boat, which runs out so fast that only
+  the cord holds it; it lists heavily and nobody will board until heavy ballast levels it; to keep it from capsizing with restless children, out-riggers
+  (topsail-yard pieces ending in empty brandy casks) are fixed over bow and stern'
+- 'c04.p032-c04.p033: the boat is brought into a cleft in the ship''s side as a haven and the obstructions are cut away; oars are secured; a second
+  night on the wreck with the floats worn; the mother puts on a sailor''s clothes'
+- 'c05.p001-c05.p002: the livestock is fed and left behind for a later trip; the cargo is limited to necessities (arms and powder, game-bags,
+  portable soup, biscuit, an iron pot, fishing-rod, nails, tools, sailcloth for a tent); more was collected than fits, so some is left, and the
+  useless ballast is exchanged for necessities; hens and cocks go in a covered tub, the other birds are freed to reach shore themselves'
+- 'c05.p003-c05.p008: the embarkation, one compartment each: mother, Matthias (6), Anselm, the powder cask with the fowls and sailcloth, the provisions,
+  Tobias (10), Leopold (12), the father at the helm; each has tools, an oar and a float at hand; the tide is rising'
+- 'c05.p008-c05.p009: out-riggers turned lengthways to pass out of the cleft; rowing, the boat keeps turning round and makes no progress until
+  the father learns to steer it straight; the dogs, not allowed aboard for fear of upsetting it, swim after it and rest their forepaws on the
+  out-riggers'
+- 'c05.p010-c05.p012: a dreary rocky coast strewn with floating wreckage; two hogsheads are caught and towed with cords; trees are seen; Tobias
+  produces a small telescope; a current drives the boat away from the better-looking shore on the left toward the rocky one; the geese lead to
+  a creek at the mouth of a rivulet, a small bay of smooth water just deep enough, where the bank is at the height of the tubs; a triangular slope
+  runs inland'
+- 'c05.p013-c05.p014: landing; the dogs and birds already ashore; noise of penguins and flamingoes; the family kneels in thanks'
+- 'c05.p015: unloading; a tent under the rocks from a pole in a rock fissure resting on a pole in the ground, sailcloth pegged and weighted with
+  provision boxes, hooks to close the entrance; moss and grass dried for beds; a stone hearth near the stream for fresh water; soup from portable
+  soup'
+- 'c05.p016-c05.p019: the boys go foraging (river, shore, rocks); the towed hogsheads cannot be hauled up the steep landing; Tobias is caught
+  by a lobster and the father takes it; at the gentler spot where it was caught the hogsheads are drawn ashore and set on end'
+- 'c05.p020-c05.p031: oysters on a rock; salt from rock fissures, mixed with sand, is dissolved in fresh water and filtered through canvas for
+  the soup (sea-water would spoil it); there are no plates or spoons, so oyster shells are fetched as spoons'
+- 'c05.p032-c05.p037: Anselm returns with an agouti and reports a low shore across the river covered with stranded casks and planks, pasture and
+  a wood; he proposes a trip back to the wreck for the cow; no trace of the sailors'
+- 'c05.p038: oysters opened on the fire; the soup is eaten with shells; Leopold''s selfishly saved portion is given to the dogs; the dogs tear
+  the agouti and Anselm''s anger is reproved'
+- 'c05.p039-c05.p041: the mother''s bag of grain and vegetable seeds; the birds roost; arms loaded, prayers, the tent closed; darkness falls suddenly
+  (near the equator); a cold night, the family huddled together'
+instructions_meta:
+  requirement_groups:
+    salvage and building:
+    - CR1
+    - CR3
+    - FP1
+    launching and seaworthiness:
+    - FP2
+    - FP3
+    loading:
+    - FP4
+    - VP2
+    crossing and landing:
+    - FP5
+    play space and craft presentation:
+    - CR2
+    - VP1
+  explicit_requirements:
+  - type: keep
+    text: I want to keep the part where the finished boat is too heavy to shove into the water by hand and has to be moved with a jack that is
+      strong but slow.
+    covers:
+    - FP2
+  - type: specify
+    text: 'Rowing should work like in the text: if you just row without steering, the boat keeps turning round and gets nowhere, and only once
+      you steer does it go straight.'
+    covers:
+    - FP5
+rubric:
+  content_realization:
+  - id: CR1
+    item: The craft is made of separate compartments joined into one hull, and people and cargo are carried in its compartments
+    anchors:
+      '1': the game contains a craft whose hull is a row of separate compartments joined together, and people and cargo are put into its compartments
+        (that they are sawn casks is not required)
+      '0.5': an improvised boat of casks, tubs or similar exists, but its compartments are not the units people and cargo are put into
+      '0': missing, or an ordinary raft or boat
+    evidence:
+    - c04.p022
+    - c04.p024
+    - - c05.p003
+      - c05.p008
+  - id: CR2
+    item: The play space contains the wreck offshore, open water between it and the land, and a shore with a distinct place where the boat can
+      land, reached from the wreck across the water
+    anchors:
+      '1': wreck, the water gap and a shore with a distinct landing place all exist and form one connected space across the water
+      '0.5': wreck and shore exist but there is no distinct landing place, or they are not connected as one space across the water
+      '0': missing
+    evidence:
+    - c04.p003
+    - c05.p010
+    - c05.p012
+  - id: CR3
+    item: The wreck holds the materials and the tools the craft is made from
+    anchors:
+      '1': both building materials (e.g. containers that can become compartments, planks) and tools are present on the wreck
+      '0.5': the wreck holds only materials or only tools for the build
+      '0': nothing usable for the build is on the wreck, or the parts are only found elsewhere
+    evidence:
+    - - c04.p013
+      - c04.p016
+    - c04.p022
+    - c04.p024
+  functions_playability:
+  - id: FP1
+    item: 'Building is required: the craft is built from what was salvaged on the wreck, and leaving is possible only once it is built'
+    anchors:
+      '1': the player builds the craft out of the salvaged parts and tools, and departure is impossible before it is built
+      '0.5': a craft must be built but the build does not use what was salvaged (given or from nothing), or it is built but departure does not
+        wait for it
+      '0': the craft is simply available, or there is no craft
+    evidence:
+    - c04.p013
+    - - c04.p021
+      - c04.p024
+  - id: FP2
+    item: 'Moving the hull: the built hull cannot be moved by strength alone and reaches the water only with a mechanical aid that is strong but
+      slow'
+    anchors:
+      '1': pushing alone fails, and a mechanical aid moves the hull slowly
+      '0.5': a special step is needed but it is instant or ordinary (no force-for-speed cost)
+      '0': the hull is pushed or placed into the water freely
+    evidence:
+    - c04.p025
+    - - c04.p027
+      - c04.p031
+  - id: FP3
+    item: 'Balance matters in play: the boat lists until it is weighted level and can capsize until it is stabilised sideways, and setting out
+      without either has a consequence'
+    anchors:
+      '1': an unweighted boat visibly lists and is unfit to board, weighting levels it, sideways stabilisation keeps it from capsizing, and skipping
+        either has an effect
+      '0.5': only one of the two works, or balance is shown but has no consequence
+      '0': the boat is always stable
+    evidence:
+    - c04.p031
+    - c05.p009
+  - id: FP4
+    item: 'Loading is a choice under a limit: the boat holds only so much, so the player decides what goes aboard and leaves the rest behind,
+      and what is loaded also weighs on the boat''s balance'
+    anchors:
+      '1': limited room forces a choice and things are left behind, and the chosen load changes the boat's balance
+      '0.5': a real choice under the limit but the load has no effect on balance, or the load affects balance but everything useful fits anyway
+      '0': everything can be taken, or the limit is only stated
+    evidence:
+    - c05.p001
+    - c05.p002
+    - - c05.p003
+      - c05.p008
+    - c05.p009
+  - id: FP5
+    item: 'Crossing to shore is a controlled voyage: the boat makes headway only when steered, the moving water pushes it off course, and reaching
+      a landing place on the shore completes the crossing'
+    anchors:
+      '1': steering is needed to make progress, the water affects the course, and landing on the shore ends the crossing
+      '0.5': the boat is controllable but the water has no effect, or the crossing has no clear landing or end
+      '0': the crossing is automatic or a cutscene
+    evidence:
+    - c05.p008
+    - c05.p012
+  visual_presentation:
+  - id: VP1
+    cat: style
+    item: 'The craft looks like what it is: separate compartments joined in one hull, with its sideways stabilisers visible once fitted'
+    anchors:
+      '1': the compartments are visibly separate within one hull and the stabilisers are visible once fitted
+      '0.5': a recognisably improvised boat, but the compartments or the stabilisers are not visible
+      '0': an ordinary boat, or none
+    evidence:
+    - c04.p024
+    - c04.p031
+    - c05.p009
+  - id: VP2
+    cat: presentation
+    item: 'The load can be seen on the boat: which compartments hold people and which hold cargo is visible'
+    anchors:
+      '1': the player can tell by looking at the loaded boat where people and cargo are and what was taken along
+      '0.5': the loaded boat is shown, but its contents are hidden or only listed elsewhere
+      '0': the load is not shown at all
+    evidence:
+    - - c05.p003
+      - c05.p008
+play_suggestions:
+  CR3:
+  - 'look over the wreck: are both materials and tools for the craft there?'
+  FP1:
+  - try to leave the wreck before building anything
+  - check that the parts and tools of the craft come from searching the wreck
+  FP2:
+  - push the finished hull by hand
+  - 'move the hull with the mechanical aid: is it slow, and slower with a heavier hull?'
+  FP3:
+  - launch and board without weighting the boat
+  - level it but skip the stabilisers, then move occupants around
+  - fit both and compare
+  FP4:
+  - collect more than the boat can hold and try to load everything
+  - 'load unevenly or overload: does the balance change?'
+  - see what is left behind on the wreck
+  FP5:
+  - row without steering
+  - steer against the current
+  - try to land at different points of the shore
+  - check that landing ends the crossing
+  robustness:
+  - 'capsize the boat on purpose: is the result sensible and can you continue or retry?'
+  - leave the boat mid-crossing
+  - go back to the wreck after landing
+  - do the build steps out of order
+v4_map:
+  U1: 'dropped: paired mechanism, scored by FP2 (heavy hull, strong but slow aid)'
+  U2: 'dropped: paired mechanism, scored by FP3 (list, ballast, sideways stabilisers)'
+  U3: 'dropped: paired mechanism, scored by FP5 (no headway without steering)'
+  U4: 'dropped: paired mechanism, scored by FP5 (moving water deflects the course)'
+  U5: CR1
+  U6: 'dropped: paired relation, scored by FP4 (load limit and the load-balance link)'
+  FP1: FP1, CR3 (presence of materials and tools on the wreck split off into CR3)
+  FP2: FP2
+  FP3: FP3
+  FP4: FP4 (load-balance link from U6 added)
+  FP5: FP5
+  VP1: 'CR2 (places and connection); the look of wreck and shore dropped: peripheral (scenery in a mechanics task, rules v3.6)'
+  VP2: VP1
+  VP3: VP2
+provenance:
+  source_yaml: T-TO-txt_772670af5456.e1.yaml
+  source_sha256: 21ccff4699074da379a3ab8560da912e971e0b4e541740ad9b943240d795b283
+  size_waiver: null
+  size_max: null
+  sources:
+  - ref: t01
+    title: The Swiss Family Robinson; or Adventures in a Desert Island
+    author: Johann David Wyss
+    text_id: txt_772670af5456
+    excerpt_id: e1

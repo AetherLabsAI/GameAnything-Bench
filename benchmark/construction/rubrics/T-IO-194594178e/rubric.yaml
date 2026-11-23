@@ -1,0 +1,197 @@
+# GameAnything-Bench scoring material: never shown to agents during a trial.
+task_id: T-IO-194594178e
+source_inventory:
+- 'img01: a village lane of old dark weathered timber chalets (snow on the roofs, shop signs, a Swiss flag), stone stairs and a cobbled square
+  in the foreground; above the steep wooded slope behind, a lone pyramid-shaped snow peak with a cloud banner dominates the sky'
+- 'img02: a station entrance under a sign ''matterhorn gotthard bahn'' between large chalet-style hotels with flower-box balconies; a steep rocky,
+  wooded slope rises right behind; small electric taxis, a yellow-hatched forecourt, signs ''Heliport'' and ''Taxi'', a pizzeria terrace, pedestrians
+  (summer)'
+- 'img03: an orange-red electric railcar train (lettering ''gornergrat bahn'') at a station / passing loop among larches and pines; overhead catenary,
+  a toothed rack rail between the running rails, the track curving uphill; behind, a bare rocky mountain with a building on its summit'
+- 'img04: a slender steel truss viaduct on two tall concrete piers spanning a steep forested gorge with a rocky torrent / waterfall; a two-car
+  orange-red train crossing it; a crane at the lower left'
+- 'img05: high above the treeline: an orange railcar on a curving electrified rack track through deep open snowfields, a small concrete bridge
+  in front; across a deep valley the lone pyramid peak (the same as in img01) towers over glaciers and snowy ridges'
+- 'img06: the summit: a rocky top with a large stone building with two silver-domed round towers (observatory domes), a concrete station building
+  with platform signs 1 and 2, a fenced track and a paved walkway with visitors; bare rock, no snow, blue sky'
+instructions_meta:
+  requirement_groups:
+    settlement:
+    - CR2
+    - FP1
+    - VP2
+    ascent route:
+    - CR3
+    - CR4
+    - FP2
+    - VP3
+    landmarks and skyline:
+    - CR1
+    - CR5
+    - VP1
+    summit destination:
+    - CR6
+  explicit_requirements:
+  - type: keep
+    text: I really want that lone, sharp pyramid-shaped peak towering over everything as the main landmark.
+    covers:
+    - CR1
+    - VP1
+  - type: specify
+    text: 'The way up shouldn''t climb that peak itself: it goes up a different mountain, and from its upper part you look across a valley at
+      the peak.'
+    covers:
+    - CR5
+rubric:
+  content_realization:
+  - id: CR1
+    item: The game contains a single lone peak, separate from the other mountains, that towers over the whole place and is visible from the village
+    anchors:
+      '1': one distinct peak clearly higher than everything around it, seen over the village
+      '0.5': high mountains present, but no single peak stands out, or it is not visible from the village
+      '0': no such peak
+    evidence:
+    - img01
+    - img05
+  - id: CR2
+    item: The game contains a dense village on a narrow valley floor hemmed in by steep slopes, with a railway station in it
+    anchors:
+      '1': a closely built village confined by steep slopes on a valley floor, with a station inside it
+      '0.5': a village present, but on open ground (no confining slopes), or without a station
+      '0': no village
+    evidence:
+    - img01
+    - 'img02: the station between hotels, steep slope behind'
+  - id: CR3
+    item: The way up the mountain is a railway line that climbs from the lower slopes to a station on the summit
+    anchors:
+      '1': a mountain railway runs up the slopes and ends at a summit station
+      '0.5': a railway present but not leading to the summit (e.g. only in the valley), or the way up is another means with the railway incidental
+      '0': no railway way up
+    evidence:
+    - img03
+    - img04
+    - img05
+    - 'img06: the summit station'
+  - id: CR4
+    item: 'Along the line the terrain changes with height in order: forested slopes lower down with a steep gorge crossed by a high bridge, then
+      open treeless terrain, then a bare rocky summit'
+    anchors:
+      '1': forest with the gorge crossing, open treeless high terrain and the rocky summit, met in this order going up
+      '0.5': a change with height present but a stage missing (e.g. no gorge crossing) or out of order
+      '0': no progression along the line
+    evidence:
+    - img03
+    - img04
+    - img05
+    - img06
+  - id: CR5
+    item: 'The line climbs a different mountain from the pyramid peak: from its upper part the peak stands across a valley'
+    anchors:
+      '1': the peak is a separate mountain seen across a valley from the upper line
+      '0.5': the peak is visible from the line, but not clearly across a valley (e.g. directly above the track)
+      '0': the line goes up the pyramid peak itself, or the peak is not seen from the line
+    evidence:
+    - img05
+    - 'img03: the line''s own bare summit with its building, not the peak'
+  - id: CR6
+    item: The summit holds a large building with domed round towers next to the upper station
+    anchors:
+      '1': a building with domed round towers on the summit beside the station
+      '0.5': a summit station or building, but without the domed towers or not beside the station
+      '0': no summit landmark
+    evidence:
+    - img06
+    - 'img03: the building on the summit seen from below'
+  functions_playability:
+  - id: FP1
+    item: The village can be explored on foot as a connected place, and its railway station is reachable from it
+    anchors:
+      '1': the player walks through a connected village and reaches the station from it
+      '0.5': the village is only a backdrop, or the station cannot be reached on foot from it
+      '0': the village cannot be explored
+    evidence:
+    - img01
+    - img02
+  - id: FP2
+    item: 'One connected ascent: the player travels the mountain line (riding or following it) from its lower end up to the summit station without
+      a break and can step out there'
+    anchors:
+      '1': a continuous climb along the whole line, ending at a summit the player can walk out onto
+      '0.5': most of the climb is skipped or broken into disconnected pieces, or it ends without a summit the player can step out onto
+      '0': no route up to the summit
+    evidence:
+    - img03
+    - img04
+    - img05
+    - img06
+  visual_presentation:
+  - id: VP1
+    cat: style
+    item: 'The landmark peak has the shape of a sharp pyramid / horn: steep faces rising to a single pointed top'
+    anchors:
+      '1': a recognisable sharp pyramid-shaped horn
+      '0.5': a large peak, but rounded, flat-topped or multi-topped rather than a horn
+      '0': no such peak
+    evidence:
+    - img01
+    - img05
+  - id: VP2
+    cat: style
+    item: The village buildings look like dark weathered timber chalets with pitched roofs and balconies
+    anchors:
+      '1': recognisable timber chalets of this kind make up the village
+      '0.5': some chalet-like buildings mixed with generic ones
+      '0': a generic or modern settlement
+    evidence:
+    - img01
+    - img02
+  - id: VP3
+    cat: style
+    item: The viaduct looks like a truss bridge carried on tall piers
+    anchors:
+      '1': a truss-like span on tall piers
+      '0.5': a bridge on the line, but without a truss structure like the one in the image
+      '0': no viaduct
+    evidence:
+    - img04
+play_suggestions:
+  FP1:
+  - start in the village and walk to the station without using the line
+  - 'try the stairs and side lanes: are they walkable or only scenery?'
+  FP2:
+  - ride or follow the line from its bottom to the top and note the order of forest, viaduct, open high terrain and summit
+  - check whether any part of the ascent is skipped
+  - at the top, step out and walk to the domed building
+  robustness:
+  - 'leave the train or the track midway: can you rejoin it or go on?'
+  - go back down from the summit to the bottom of the line and the village
+  - 'look for the pyramid peak from the village, the line and the summit: is it consistently placed?'
+v4_map:
+  U1: CR1
+  U2: CR2
+  U3: CR3
+  U4: CR4, CR6
+  U5: CR5
+  FP1: FP1, CR2
+  FP2: FP2, CR4
+  VP1: VP1, CR1
+  VP2: VP2, CR2
+  VP3: VP3, CR4
+  VP4: CR5, CR4
+  VP5: 'CR6, CR4 (merged: the domed-tower building is scored in CR6, the rocky top in CR4; no separate VP item)'
+provenance:
+  source_yaml: T-IO-194594178e.yaml
+  source_sha256: 976da56c9b82267d159ed11c05d491ab27ea992b43e999d4b29b374a70cef9d4
+  size_waiver: null
+  size_max: null
+  sources:
+  - refs:
+    - img01
+    - img02
+    - img03
+    - img04
+    - img05
+    - img06
+    bundle: 194594178e
+    title: 采尔马特：谷底村庄到戈尔内格拉特山顶的登山铁路

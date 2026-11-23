@@ -1,0 +1,20 @@
+# GameAnything-Bench scoring material: never shown to agents during a trial.
+task_id: T-IO-194594178e
+game: valheim
+status: pending
+picks:
+- VH-MOVE
+- VH-WORLDGEN
+- VH-BUILD
+- VH-WEATHER
+- VH-SAVE
+- VH-PERF
+changed: []
+kept_borderline:
+- id: VH-WORLDGEN
+  note: Terrain placement may touch worldgen but not required; stays tested.
+summary: Mountain settlement with a way up and a pyramid peak landmark.
+task_checks: []
+note: 'policy (A): excluded only when the instruction explicitly requires the change; plausible side effects stay tested; adding
+  new content is never a reason to exclude. Proposed by claude-sonnet-5-5 via `gab task picks` 2026-11-06; a maintainer checks (set status: checked).
+  The evaluator tests the pool''s always items (unless in changed) + picks.'

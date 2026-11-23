@@ -1,0 +1,34 @@
+# STATE_SPEC self-check of the Tuxemon adapter (gab selfcheck tuxemon --state); format: gab/setup/selfcheck.py state_check
+# both runs: title -> New Game -> Spyder campaign -> first character -> HE/HIM -> the new game's first frame in spyder_bedroom
+vanilla:
+  steps:
+    - {do: key, keys: Return}               # press any key
+    - {do: wait, seconds: 1.5}
+    - {do: key, keys: Return}               # New Game
+    - {do: wait, seconds: 1.5}
+    - {do: key, keys: Return}               # TUXEMON: SPYDER AND THE CATHEDRAL
+    - {do: wait, seconds: 2}
+    - {do: key, keys: Return}               # first character
+    - {do: wait, seconds: 2}
+    - {do: key, keys: Return}               # HE/HIM -> spyder_bedroom ("Do you want to skip the intro?")
+    - {do: wait, seconds: 3}
+  engine: [screen, states, map, tile, facing, player_name, money, steps, bag, party, variables_total]
+  mod_allow: []
+mod:                                        # testmod: an event on spyder_bedroom sets a variable, creates an NPC, shows a dialog
+  dir: testmod
+  steps:
+    - {do: key, keys: Return}
+    - {do: wait, seconds: 1.5}
+    - {do: key, keys: Return}
+    - {do: wait, seconds: 1.5}
+    - {do: key, keys: Return}
+    - {do: wait, seconds: 2}
+    - {do: key, keys: Return}
+    - {do: wait, seconds: 2}
+    - {do: key, keys: Return}
+    - {do: wait, seconds: 3}
+  expect:
+    - "mod: statecheck_marker_42"                         # game variable gab_test_flag
+    - "mod: gab_test_keeper"                              # NPC created on the stock map
+    - "mod: GAB State Test"                               # the added map event
+    - "screen_text: the keeper waits by the bed"          # the dialog on screen

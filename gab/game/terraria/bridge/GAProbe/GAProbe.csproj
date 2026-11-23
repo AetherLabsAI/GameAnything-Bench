@@ -1,0 +1,4 @@
+<Project Sdk="Microsoft.NET.Sdk">
+  <Import Project="..\tModLoader.targets" />
+  <PropertyGroup><AssemblyName>GAProbe</AssemblyName><NoWarn>$(NoWarn);CS0168;CS0219;CS0414</NoWarn></PropertyGroup>
+</Project>

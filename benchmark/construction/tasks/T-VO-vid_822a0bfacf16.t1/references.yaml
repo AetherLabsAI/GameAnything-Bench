@@ -1,0 +1,24 @@
+# Reference material: fetched from the HF dataset into $GAB_MEDIA_DIR/<task>/ by `gab media fetch` (sha256 checked).
+# The agent gets the files only (no title, author, caption or source): this file is never shown to it.
+task_id: T-VO-vid_822a0bfacf16.t1
+refs:
+- id: c01
+  kind: video
+  file: clip_01.mp4
+  video_id: vid_822a0bfacf16
+  source:
+    title: 08 - An Unexpected Journey to Turkey's Most Magical Landscape ｜ Cinematic
+    url: null
+    channel: null
+    youtube_id: null
+  range:
+    start: 85.9
+    end: 103.3
+    text: 1:25.90-1:43.30
+  duration_s: 17.4
+  size_bytes: 902434
+  format: mp4 H.264 720p, AAC audio
+  hf_path: media/T-VO-vid_822a0bfacf16.t1/clip_01.mp4
+  sha256: 69d0caa78e3375b25b840661c054b24486cec777f9609f377733243fcb32c039
+  rights_note: Real-world travel film with a named creator. Balloons in the footage show operator branding and text, and a car shows a badge and
+    plate. Use the clip as a private reference only and do not redistribute it. The task should rebuild the idea, not copy the shots.

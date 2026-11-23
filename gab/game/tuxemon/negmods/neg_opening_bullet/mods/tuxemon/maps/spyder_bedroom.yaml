@@ -1,0 +1,14 @@
+# negative mod for `gab selfcheck tuxemon` (2026-11-06): neg_opening's opening AND neg_bullet's bullet power 3.0. The probes that
+# start from a stock state (probes.stock_start) must still catch the battle change (TX-BATTLE, TX-DATA), besides TX-NEWGAME and
+# TX-MAPS from the opening.
+events:
+  Skip Opening:
+    type: event
+    conditions:
+      - not variable_set negopening:yes
+    actions:
+      - set_variable negopening:yes
+      - change_bg
+      - translated_dialog spyder_intro_question
+      - transition_teleport player,spyder_paper_town.tmx,10,8,0.3
+      - char_face player,down

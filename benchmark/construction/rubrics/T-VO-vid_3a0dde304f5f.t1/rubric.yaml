@@ -1,0 +1,257 @@
+# GameAnything-Bench scoring material: never shown to agents during a trial.
+task_id: T-VO-vid_3a0dde304f5f.t1
+source_inventory:
+- '02:56.8-02:57.8 title card: yellow banner ''Knockout Tour'' with a cup/crown emblem, characters and karts over a tropical backdrop'
+- '02:58.3-02:59.3 high aerial fly-over of a jungle/ruins region: racers crossing a stone bridge, a road continuing through the landscape'
+- '02:59.8-03:00.3 aerial view of a desert region: a long straight road with a pack of racers, sponsor flags and an item box by the road'
+- 03:00.8-03:01.8 aerial view of a farmland region with a checkered flag and a dirt road, racers spread along it
+- '03:02.3-03:03.8 world map screen: a route drawn as a line linking several stops (track thumbnails) across differently coloured regions; a row
+  of 8 cup/rally icons along the bottom, the first one selected'
+- '03:04.3-03:05.3 the second rally icon is selected: a different route on another part of the same map, again linking several stops'
+- 03:05.8 crossfade from the map to in-race footage
+- '03:06.3-03:10.3 in-race, third-person behind the kart: HUD shows item slot (green shell) top left, coin count 20 and a checkered-flag counter
+  ''4/6'' bottom left, placement ''5th'' bottom right with the line ''Be 8th or better!'' directly beneath it; several racers ahead on a grassy
+  road'
+- '03:10.8-03:12.8 wide shot of a snowy road: an arch/banner gate across the road with colourful flame effects and a large ''16'' displayed at
+  the gate; racers drive through it'
+- '03:13.3-03:14.3 another run in an indoor castle/hall course: placement ''11th'', ''Be 8th or better!'', 11 coins, ''4/6''; rainbow speed-line
+  boost effect around the screen edges'
+- 03:14.8-03:16.8 the kart approaches an arch gate at the end of the hall; a large '8' appears at the gate (03:16.3); a row of small circular
+  slots at top right fills with racer icons one by one as other racers reach the gate (reading not certain at this resolution)
+- '03:17.3-03:18.3 at the gate: big ''FINISH!'' banner, confetti, the placement HUD is gone; caption at the bottom ''You weren''t in the top 8.'''
+- '03:18.8-03:22.3 unrelated cut: night city street, racers on a bike and a carpet-kart, a wall-ride trick, a bump between racers with a star
+  burst, coins on the road (no Knockout HUD visible)'
+- 'audio (offline transcript, narration): ''Introducing Knockout Tour.'' (02:55-03:01, starts before the clip); ''Race non-stop from one corner
+  of the world to another.'' (03:01-03:05); ''There are multiple checkpoints along the way.'' (03:05-03:13); ''If you''re below the placement
+  shown when you hit a checkpoint, you''ll be eliminated.'' (03:13-03:18); ''Can you make it all the way to the finish line?'' (03:18-03:22.6)'
+- 'audio not verifiable from the material: music and sound effects under the narration'
+- 'not shown: how many racers start, how many checkpoints a full tour has beyond the ''/6'' counter, what happens to eliminated opponents, a successful
+  finish'
+instructions_meta:
+  requirement_groups:
+    course and race structure:
+    - CR1
+    - CR2
+    - FP1
+    - VP3
+    competing field and standings:
+    - CR3
+    - FP2
+    progression rules and end of a run:
+    - FP3
+    - FP4
+    race choice:
+    - CR4
+    - FP5
+    race interface and result moments:
+    - VP1
+    - VP2
+  explicit_requirements:
+  - type: specify
+    text: Like in the clip, each checkpoint should have its own required placement instead of one cut-off for the whole race.
+    covers:
+    - CR2
+    - FP3
+rubric:
+  content_realization:
+  - id: CR1
+    item: 'Course: the race course is one route made of several sections joined in sequence from a start to a finish, the sections lying in different
+      regions of one world; a point-to-point route or a multi-lap circuit both count'
+    anchors:
+      '1': a route of several sections joined in order from start to finish, the sections set in different regions
+      '0.5': a single track with no distinct sections or regions, or the sections are unrelated separate tracks
+      '0': no race course
+    evidence:
+    - - '03:01.4'
+      - '03:05.3'
+    - - '02:58.3'
+      - '03:01.8'
+    - - '03:13.3'
+      - '03:16.8'
+  - id: CR2
+    item: 'Checkpoints with their own cut-offs: several checkpoint gates split the route, and each gate carries its own required placement, shown
+      at the gate, with different values at different gates'
+    anchors:
+      '1': several checkpoint gates along the route, each with its own cut-off shown at the gate, the values differing between gates
+      '0.5': checkpoints exist but share one cut-off for the whole race, or the cut-off is not attached to the gates
+      '0': no checkpoints with a required placement
+    evidence:
+    - - '03:05.4'
+      - '03:13.0'
+    - - '03:10.8'
+      - '03:12.8'
+    - - '03:14.8'
+      - '03:16.8'
+  - id: CR3
+    item: 'Competing field: the race has a field of computer-controlled racers large relative to the cut-offs, so that the required placements
+      lie deep in the field and each gate can remove a sizeable group'
+    anchors:
+      '1': a large AI field with the cut-offs well inside it, racers still behind the player when the player is below a cut-off
+      '0.5': several AI opponents, but so few that a gate can remove only one or two
+      '0': no AI opponents, or fewer racers than the cut-offs so no one can be eliminated
+    evidence:
+    - - '03:10.8'
+      - '03:12.8'
+    - - '03:13.3'
+      - '03:16.8'
+  - id: CR4
+    item: 'Tour selection: the game offers several tours to pick from, each presented as its own route linking several stops across the world'
+    anchors:
+      '1': several tours on offer, each shown with its route through the world (e.g. on a map)
+      '0.5': several tours offered by name only, without showing their routes
+      '0': one fixed tour, or no selection at all
+    evidence:
+    - - '03:02.3'
+      - '03:05.3'
+  functions_playability:
+  - id: FP1
+    item: 'Continuous race: a race is driven from the start through every section to the finish as one continuous race, without loading or restarting
+      between sections'
+    anchors:
+      '1': start to finish is driven as one continuous race across all sections
+      '0.5': the sections play as separate races with loading or restarts between them
+      '0': no race can be driven from start to finish
+    evidence:
+    - - '03:01.4'
+      - '03:05.3'
+    - - '02:58.3'
+      - '03:01.8'
+  - id: FP2
+    item: 'Live standings: the computer-controlled racers actually race the route and the player''s placement is computed live, changing as the
+      player passes or is passed'
+    anchors:
+      '1': the AI racers drive the route competitively and the placement updates correctly during the race
+      '0.5': the placement updates wrongly or only at checkpoints, or the AI barely compete
+      '0': no working placement
+    evidence:
+    - - '03:06.3'
+      - '03:16.8'
+  - id: FP3
+    item: 'Passing a checkpoint: when the player crosses a checkpoint, the placement at that moment is checked against that gate''s own cut-off;
+      at the cut-off placement or better, the race continues into the next section'
+    anchors:
+      '1': the check is made at the crossing against that gate's cut-off, and a placement at or better than it continues the race
+      '0.5': a check is made but against one value for every gate, or at the wrong moment (e.g. only at the finish)
+      '0': crossing a checkpoint checks nothing
+    evidence:
+    - - '03:05.4'
+      - '03:13.0'
+    - - '03:12.9'
+      - '03:16.8'
+  - id: FP4
+    item: 'Elimination: crossing a checkpoint in a worse placement than its cut-off ends the player''s run at once, and the game then offers a
+      way to retry or return (no soft-lock)'
+    anchors:
+      '1': worse than the cut-off at a checkpoint, the run reliably ends there, and play can continue (retry / menu)
+      '0.5': elimination happens but late, inconsistently, or leaves the player stuck
+      '0': no elimination; the player always continues
+    evidence:
+    - - '03:12.9'
+      - '03:18.3'
+  - id: FP5
+    item: 'Tour choice: choosing a tour starts a race along that tour''s route, and different choices lead along different routes'
+    anchors:
+      '1': starting two different tours gives races on two different routes
+      '0.5': a choice is offered but every option starts the same route
+      '0': no way to choose and start a tour
+    evidence:
+    - - '03:02.3'
+      - '03:05.3'
+  visual_presentation:
+  - id: VP1
+    cat: presentation
+    keyframes:
+    - '03:07.3'
+    - '03:14.3'
+    item: 'Readable stakes: during the race the current placement and the required placement are shown together in one HUD spot, with the section
+      progress, so the player can tell at a glance whether they are safe'
+    anchors:
+      '1': placement and cut-off side by side and legible while driving, plus section progress
+      '0.5': only one of placement / cut-off visible, or the cut-off only appears at the gate
+      '0': neither shown
+    evidence:
+    - - '03:06.3'
+      - '03:10.3'
+    - - '03:13.3'
+      - '03:16.8'
+  - id: VP2
+    cat: key_moment
+    keyframes:
+    - '03:17.3'
+    - '03:18.3'
+    item: 'Knock-out moment: a set-apart result moment at the gate (large banner over the scene, the race HUD cleared) with a caption stating
+      the missed cut-off'
+    anchors:
+      '1': a set-apart banner/result moment with a caption naming the cut-off
+      '0.5': a plain text or console message, or a banner without the reason
+      '0': nothing marks the elimination
+    evidence:
+    - - '03:17.3'
+      - '03:18.3'
+  - id: VP3
+    cat: style
+    keyframes:
+    - '02:59.8'
+    - '03:11.3'
+    - '03:16.3'
+    item: 'Route look: the sections of the tour show visibly different landscapes, so the change of region is seen while driving, and the checkpoints
+      are large arch gates spanning the road with their cut-off number displayed at the gate'
+    anchors:
+      '1': the sections look clearly different from one region to the next, and the checkpoints are arch gates across the road with their numbers
+        visible on approach
+      '0.5': 'only one of the two: the regions look alike, or the checkpoints are plain markers or invisible lines without a gate across the road
+        or a number at it'
+      '0': neither distinct-looking regions nor visible checkpoint gates
+    evidence:
+    - - '02:58.3'
+      - '03:01.8'
+    - - '03:10.8'
+      - '03:12.8'
+    - - '03:14.8'
+      - '03:16.8'
+play_suggestions:
+  CR3:
+  - count the opponents at the start and compare with the cut-offs shown at the gates
+  CR4:
+  - 'open the tour selection: is each tour''s route shown?'
+  FP1:
+  - note whether there is a load/restart between sections
+  FP2:
+  - 'deliberately slow down and then overtake: does the placement update each time?'
+  FP3:
+  - 'pass the first checkpoint in a safe position: does the race simply continue?'
+  - compare the cut-off shown at two different checkpoints
+  FP4:
+  - 'fall behind on purpose and cross a checkpoint worse than its cut-off: does the run end right there?'
+  - after elimination, retry or go back to the menu
+  FP5:
+  - 'start two different tours: are the routes different?'
+  robustness:
+  - 'drive backwards or off-route through a checkpoint area: is the check still fair?'
+  - cross a checkpoint exactly at the cut-off placement (e.g. 8th of 'top 8')
+  - 'pause or quit mid-tour and start again: is the state reset?'
+  - 'drive into a wall and stop for a long time: do the AI keep racing and does elimination still trigger?'
+v4_map:
+  U1: CR1, CR4 (route through regions; tours as routes on a map); play side in FP1, FP5; 'no laps' not carried over (reviewer allows laps)
+  U2: 'dropped: mechanism already scored by FP3, FP4; checkpoint existence in CR2'
+  U3: CR2
+  U4: 'dropped: mechanism already scored by FP4 and VP2 (end of run, reason caption)'
+  U5: 'dropped: HUD placement, cut-off line and section counter already scored by VP1'
+  U6: CR3
+  U7: CR2 (cut-off tied to the gate), FP3 (check made at the crossing)
+  FP1: CR1 (route structure), FP1 (continuous play)
+  FP2: CR3 (large AI field), FP2 (live placement)
+  FP3: CR2 (gates with own cut-offs), FP3 (check at crossing, continue)
+  FP4: FP4
+  FP5: 'dropped: curator decision, survive-to-finish item deleted'
+  FP6: CR4 (several tours with routes), FP5 (choice starts that route)
+  VP1: VP1
+  VP2: CR1 (regions along the route), CR2 (gates exist); look in VP3
+  VP3: VP2
+  VP4: moved to editing_seed.yaml (night setting, user modification; curator decision); VP3 keeps the look of old VP2
+provenance:
+  source_yaml: T-VO-vid_3a0dde304f5f.t1.yaml
+  source_sha256: 6dc3f0b641be06f10303317dbadb20188bbff0290bc89f3cb5024472292ff3f3
+  size_waiver: null
+  size_max: null
+  sources: []

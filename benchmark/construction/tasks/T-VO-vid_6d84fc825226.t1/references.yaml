@@ -1,0 +1,24 @@
+# Reference material: fetched from the HF dataset into $GAB_MEDIA_DIR/<task>/ by `gab media fetch` (sha256 checked).
+# The agent gets the files only (no title, author, caption or source): this file is never shown to it.
+task_id: T-VO-vid_6d84fc825226.t1
+refs:
+- id: c01
+  kind: video
+  file: clip_01.mp4
+  video_id: vid_6d84fc825226
+  source:
+    title: Rome, Italy in 4K ｜ The Eternal City [pM0J3ciu8lc]
+    url: https://www.youtube.com/watch?v=pM0J3ciu8lc
+    channel: null
+    youtube_id: pM0J3ciu8lc
+  range:
+    start: 0.0
+    end: 57.5
+    text: 0:00.00-0:57.50
+  duration_s: 57.5
+  size_bytes: 7836719
+  format: mp4 H.264 720p, AAC audio
+  hf_path: media/T-VO-vid_6d84fc825226.t1/clip_01.mp4
+  sha256: 0349722437143b816bb1a298a6d6587ab58dff6675bd3d753cbb3cceb7c78a75
+  rights_note: Third-party travel footage (4K YouTube drone and street montage with title overlay and music). Use as a private reference only;
+    do not redistribute frames or clips. The rebuilt content should be an original re-creation.

@@ -1,0 +1,362 @@
+# GameAnything-Bench scoring material: never shown to agents during a trial.
+task_id: T-TO-txt_3d7bba04a8dc.e1
+source_inventory:
+- 'c10.p001-c10.p004: a merry dinner (Holmes brilliant after days of gloom, Jones sociable); a toast to the expedition; Watson is told to bring
+  his revolver'
+- 'c10.p005-c10.p014: at Westminster wharf they board a fast police launch, its green police lamp removed; crew of four plus Jones, Holmes, Watson;
+  heading for the Tower, opposite Jacobson''s Yard; the launch outpaces barges and a steamer'
+- 'c10.p015-c10.p019: Holmes explains his reasoning: the Aurora was at no wharf; Small needed time to settle his affairs and his companion''s
+  look would draw gossip, so they did not go far and kept the launch for a final night escape to a ship at Gravesend'
+- 'c10.p020-c10.p023: the launch must be hidden close by: handed to a boat-builder for a trifling repair; Holmes searched the yards in disguise
+  and found it at the sixteenth, Jacobson''s; Mordecai Smith, the drunk owner, ordered it for eight o''clock; a boy is posted as sentry to wave
+  a handkerchief when they start'
+- 'c10.p024-c10.p027: Jones would have put police in the yard, Watson would have followed Smith; Holmes rejects both (Small would scout and lie
+  low; Smith knows nothing)'
+- 'c10.p028-c10.p034: the launch runs under the bridges past St Paul''s at sunset; at twilight it cruises off Jacobson''s Yard behind a string
+  of lighters; Holmes watches the sentry through night-glasses; talk about the yard workers and the riddle of man'
+- 'c10.p035-c10.p040: Holmes on Winwood Reade (individuals unpredictable, averages certain); the handkerchief flutters; the Aurora has slipped
+  out and is flying downstream; Jones doubts they can catch her; Holmes orders every pound of steam'
+- 'c10.p041-c10.p044: the night chase: roaring furnaces, the bow lantern''s beam, the Aurora a dark blur ahead with white foam; weaving past barges,
+  steamers and merchant ships; they gain a little'
+- 'c10.p045 (first half): a tug with three barges cuts across; they swerve and lose about two hundred yards; the run goes through the Pool, past
+  the West India Docks, Deptford Reach, round the Isle of Dogs; the search-light shows the figures on the Aurora''s deck (a crouching man, a dark
+  bundle, the boy at the tiller, Smith stoking)'
+- 'c10.p045 (second half): they close yard by yard (three hundred paces at Greenwich, two hundred and fifty at Blackwall); Jones hails them between
+  Barking Level and Plumstead Marshes; the man in the stern stands and curses: he has a wooden right leg; the bundle rises as a small man with
+  tangled hair; Holmes and Watson draw revolvers'
+- 'c10.p046-c10.p048: the small man raises a blow-pipe, both pistols fire; the wooden-legged man runs the launch onto the southern mud-bank of
+  a moonlit marsh; he jumps out, his stump sinks in the mud and he is hauled aboard with a rope; the Smiths surrender; a heavy, keyless Indian
+  iron chest is taken; no trace of the Islander, whose bones lie in the river ooze; a dart is found stuck just behind where they stood'
+- 'c11.p001-c11.p007: the captive, Jonathan Small, described (sunburned, about fifty, bearded jutting chin, grey-shot curly hair, more sorrow
+  than anger); he swears Tonga killed Mr. Sholto with a dart without his part; he says he would gladly have killed the old major; he calls the
+  Agra treasure a curse on everyone who held it'
+- 'c11.p008-c11.p012: Jones congratulates them, regrets the other was not taken alive; Smith innocent and the Aurora among the fastest launches;
+  Small says they were to reach the Esmeralda at Gravesend, bound for Brazil'
+- 'c11.p013-c11.p018: Jones lets Watson take the chest to Miss Morstan with an inspector; the key is at the bottom of the river, says Small; Watson
+  drives to Mrs. Cecil Forrester''s house'
+- 'c11.p019-c11.p031: Miss Morstan, melancholy by the lamp, brightens at Watson''s arrival; he presents the treasure (half hers, half Thaddeus
+  Sholto''s) with forced joy; she is cool; he tells the chase and she pales at the dart'
+- 'c11.p032-c11.p037: the heavy Benares-work chest is levered open at its Buddha hasp with a poker: it is completely empty; ''The treasure is
+  lost,'' she says'
+- 'c11.p038-c11.p041: Watson feels relief, the ''golden barrier'' gone; he says he loves her; she returns it'
+- 'c12.p001-c12.p006: the inspector mourns his lost reward; at Baker Street Jones is dismayed by the empty box; Small laughs aloud'
+- 'c12.p007-c12.p009: Small: the treasure is his and three men''s in the Andaman convict-barracks; ''the sign of four''; he threw it in the Thames
+  when the launch had to catch them, rather than let Sholto''s or Morstan''s kin have it; scattered over some five miles, harder to recover than
+  a box'
+- 'c12.p010-c12.p013: Jones invokes justice; Small erupts: twenty years in a fever swamp earned the treasure; Holmes asks to hear his story and
+  Small agrees to tell the truth'
+- 'c12.p014-c12.p016: Small''s youth near Pershore; joins the army for India; loses his right leg while swimming in the Ganges, saved by his sergeant;
+  invalided out, becomes an overseer on an indigo plantation'
+- 'c12.p017: the mutiny breaks out; his fellow workers found dead, the bungalow burning, rebels around it; he flees across paddy-fields to Agra'
+- 'c12.p018-c12.p019: Agra a precarious refuge; Small joins the volunteers; after a failed sortie they fall back on the city, in the heart of
+  the revolt'
+- 'c12.p020-c12.p022: the garrison holds the old fort: a modern part and a vast, deserted old quarter of halls and twisting passages; each gate
+  held by one white man and two or three natives; Small guards an isolated south-west door with two Sikhs, far from the central guard'
+- 'c12.p023-c12.p026: on a rainy third night the two Sikhs seize him with musket and knife; ''with us or silenced''; he refuses anything against
+  the fort''s safety'
+- 'c12.p027-c12.p035: Abdullah Khan offers a quarter of a treasure by an unbreakable oath; a rajah has split his hoard and sent his jewels in
+  an iron box with a servant disguised as the merchant Achmet; Dost Akbar will lead Achmet to this postern to be killed'
+- 'c12.p036-c12.p041: Small, thinking of riches, agrees ''heart and soul''; his musket is returned; the plan is Dost Akbar''s'
+- 'c12.p042-c12.p049: in rain and darkness a shaded lantern crosses the moat; Small challenges and lights up a giant Sikh and a small, frightened
+  fat man with a bundle who begs protection'
+- 'c12.p050-c12.p054: the bundle holds an iron box; the Sikhs lead the merchant in; a scuffle; the merchant runs back past Small chased by the
+  giant with a knife; Small throws his musket between his legs and he falls'
+- 'c12.p055-c12.p057: Watson''s horror at Small and his flippancy; Small argues it was his life or the merchant''s'
+- 'c12.p058-c12.p059: the body is buried under loose bricks in a sunken floor of a ruined hall; the chest opened by lantern light holds a dazzling
+  counted list of gems (diamonds including the ''Great Mogul'', emeralds, rubies, sapphires, pearls; a pearl coronet later missing)'
+- 'c12.p060: the four renew their oath, hide the chest in a hollow in the best-preserved wall of the same hall to divide when peace comes; Small
+  draws four plans signed with the sign of the four: each always acts for all'
+- 'c12.p061-c12.p062: the mutiny is crushed; a second servant of the rajah, set to shadow Achmet, raises the alarm; the body is found; the four
+  are tried for murder (the jewels never mentioned): the Sikhs get life, Small''s death sentence is commuted to the same'
+- 'c12.p063-c12.p064: imprisoned with their secret; Small moved to the Andamans (Blair Island, Hope Town), trusted, dispenses drugs for the surgeon,
+  always looking for escape'
+- 'c12.p065-c12.p066: through a window Small watches the officers'' card games; the soldiers (Major Sholto, Captain Morstan, Lieutenant Bromley
+  Brown) lose to the prison officials; Sholto worst, drinking'
+- 'c12.p067-c12.p080: Sholto, ruined, is overheard with his friend Morstan; Small offers him the secret of hidden treasure ''for the authorities'';
+  Sholto is tempted and hears the (disguised) story'
+- 'c12.p081-c12.p099: Sholto and Morstan bargain at night: Small asks freedom for himself and his three companions in return for a fifth share;
+  Sholto wants only Small freed; ''None or all ... four or none'''
+- 'c12.p100: agreement with all four present: charts given to the officers; Sholto to verify the treasure, send a yacht to Rutland Island and
+  return; Morstan to meet them at Agra for the division; two charts signed with the sign of four'
+- 'c12.p101: Sholto goes to India and never returns (an uncle''s fortune, leaves the army); Morstan finds the treasure gone; Small lives only
+  for vengeance on Sholto'
+- 'c12.p102-c12.p104: Small nurses a dying Andaman Islander, Tonga, who becomes devoted to him; Tonga brings his canoe; at the wharf Small unstraps
+  his leg and attacks a hated guard; they escape to sea under a mat sail and are picked up by a pilgrim ship'
+- 'c12.p105-c12.p106: years of wandering; in England Small finds Sholto guarded by prize-fighters, sons and a servant; Sholto dies before he can
+  reach him; Small searches his papers in vain and pins the sign of the four on his body'
+- 'c12.p107-c12.p108: the treasure is found in Bartholomew Sholto''s roof laboratory; Tonga climbs in by the roof with a rope and kills Bartholomew
+  uninstructed; Small beats him with the rope''s end, takes the box, leaves the sign of the four; he hires Smith''s fast Aurora; he tells all
+  to show how Sholto wronged him and that he is innocent of the son''s death'
+- 'c12.p109-c12.p116: Holmes says the account adds only the rope; Tonga''s last dart was the one in his blow-pipe; Jones takes Small away under
+  guard'
+- 'c12.p117-c12.p128: Watson announces his engagement to Miss Morstan; Holmes cannot congratulate him (love clouds reason), praises her; reaction
+  sets in; the butler Lal Rao was the confederate; Watson: he gets a wife, Jones the credit; Holmes: ''the cocaine-bottle'''
+instructions_meta:
+  requirement_groups:
+    locating the quarry:
+    - FP1
+    pursuit and capture:
+    - FP2
+    - VP1
+    after the chase:
+    - CR1
+    - CR2
+    - CR3
+    - FP3
+    - FP4
+    - VP2
+    the account of the past:
+    - CR4
+    - CR5
+    - CR6
+    - FP5
+    - VP3
+    story ending:
+    - FP6
+  explicit_requirements:
+  - type: keep
+    text: I definitely want the moment where the treasure chest recovered after the chase is opened and turns out to be completely empty.
+    covers:
+    - CR2
+    - FP3
+    - VP2
+  - type: specify
+    text: Tonga should kill Bartholomew Sholto on his own during the theft, without Small ever ordering it, and Small should disown that killing.
+    covers:
+    - CR6
+rubric:
+  content_realization:
+  - id: CR1
+    item: The game contains Jonathan Small, the captured fugitive, as a one-legged former soldier and convict who holds the treasure to be rightfully
+      his, earned by his years of suffering in prison
+    anchors:
+      '1': Small is in the game as the wooden-legged ex-soldier / ex-convict who claims the treasure by right of what he suffered for it
+      '0.5': Small is in the game as the wooden-legged fugitive or thief without his claim to the treasure, or the claim is given without who
+        he is
+      '0': Small is missing, or confused with another character
+    evidence:
+    - c10.p045
+    - c11.p007
+    - - c12.p007
+      - c12.p011
+    - c12.p015
+  - id: CR2
+    item: 'The game shows why the recovered chest is empty: Small, seeing that the pursuers would catch him, threw the treasure into the river
+      so that nobody outside the four sworn men could have it'
+    anchors:
+      '1': the empty chest is explained in the game by Small disposing of the treasure in the river during the chase, with his motive (no one
+        outside the four, in particular no Sholto or Morstan kin, shall have it)
+      '0.5': the game says Small got rid of the treasure, but the motive is missing or wrong
+      '0': no explanation of the empty chest, or the treasure is found / still in the chest
+    evidence:
+    - - c11.p035
+      - c11.p037
+    - - c12.p005
+      - c12.p009
+  - id: CR3
+    item: The game shows the loss of the treasure freeing Watson to declare his love to Miss Morstan, since her coming fortune had kept him silent;
+      she accepts him
+    anchors:
+      '1': 'the causal link is in the game: the empty chest removes the barrier of her wealth, Watson declares his love and she accepts'
+      '0.5': the romance or engagement is in the game without its link to the lost treasure
+      '0': no romance between Watson and Miss Morstan in the game
+    evidence:
+    - - c11.p021
+      - c11.p023
+    - - c11.p038
+      - c11.p041
+    - c12.p117
+  - id: CR4
+    item: 'The game contains the treasure''s origin: at the Agra fort during the mutiny, Small, under threat and for a share, joins three conspirators
+      in murdering the man carrying the hoard into the fort, and the four men swear an oath to share it and always act together'
+    anchors:
+      '1': the game shows the hoard-carrier's murder at the fort by Small and his three accomplices, and the oath binding the four to share and
+        act as one
+      '0.5': the murder and theft without the binding oath of the four, or the oath without how the treasure was obtained
+      '0': no origin of the treasure in the game, or a different one (e.g. found, inherited, or first stolen by Sholto)
+    evidence:
+    - - c12.p023
+      - c12.p041
+    - - c12.p053
+      - c12.p054
+    - c12.p060
+  - id: CR5
+    item: 'The game contains, in order and cause, Small''s road to London: convicted of the merchant''s murder, he sells the secret to the officers
+      Sholto and Morstan for the freedom of all four; Sholto takes the treasure and breaks the bargain, which turns Small to vengeance'
+    anchors:
+      '1': 'in order in the game: conviction, the bargain with Sholto and Morstan (freedom for all four for a share), Sholto''s betrayal, Small''s
+        turn to revenge on Sholto'
+      '0.5': Sholto's betrayal is in the game, but the bargain or the resulting revenge motive is missing, or the order is wrong
+      '0': missing, or the betrayer is someone else (e.g. Morstan or the Sikhs)
+    evidence:
+    - - c12.p061
+      - c12.p062
+    - - c12.p086
+      - c12.p100
+    - c12.p101
+    - c12.p105
+  - id: CR6
+    item: The game contains Tonga, the Islander devoted to Small, killing Bartholomew Sholto on his own during the theft; Small did not order
+      it and disowns the killing
+    anchors:
+      '1': Tonga is in the game as Small's devoted companion, and the son's death is shown as Tonga's unordered act that Small disowns
+      '0.5': Tonga is the killer acting unbidden, but his bond to Small or Small's disowning of the killing is missing
+      '0': missing, Small or someone else is the killer, or Small orders the killing
+    evidence:
+    - c11.p003
+    - - c12.p102
+      - c12.p104
+    - c12.p107
+    - c12.p108
+  functions_playability:
+  - id: FP1
+    item: 'The hunt moves from locating the fugitives to the chase: the hidden boat is first found by Holmes''s reasoning about where it must
+      be kept concealed yet ready, a watch is set on it, and the pursuit starts from its departure'
+    anchors:
+      '1': a locating phase (reasoning, search or watch) that finds the hidden boat, and the pursuit begins when the watched boat moves
+      '0.5': a locating phase exists but the pursuit does not follow from it, or the transition into the chase is unclear
+      '0': no locating phase; the chase simply starts with the quarry already in sight, or the boat is found by chance or a tip-off
+    evidence:
+    - - c10.p017
+      - c10.p023
+    - - c10.p029
+      - c10.p038
+  - id: FP2
+    item: A river pursuit of a fast fugitive boat in which catching up is not a foregone outcome, and closing in on the quarry leads to its capture
+    anchors:
+      '1': the player pursues the fugitive boat on the river, catching up is not automatic (the quarry can pull away or the pursuit can be held
+        up), and closing in ends in Small being caught
+      '0.5': a pursuit exists but closes on its own regardless of play, or the capture does not follow from closing in
+      '0': no pursuit, or the capture happens without a chase
+    evidence:
+    - - c10.p038
+      - c10.p045
+    - c10.p047
+    - c11.p010
+  - id: FP3
+    item: The recovered chest is opened after the capture and turns out to be empty, a reversal the player reaches through the story's flow
+    anchors:
+      '1': after the chase the chest is opened in play and found empty
+      '0.5': the chest is found empty but out of the story's flow (e.g. before the capture, or only outside normal play)
+      '0': no chest opening, or the treasure is recovered
+    evidence:
+    - - c11.p035
+      - c11.p037
+    - c12.p005
+  - id: FP4
+    item: Watson's declaration of love to Miss Morstan and her acceptance are a story beat the player reaches in normal play after the empty-chest
+      reveal
+    anchors:
+      '1': the declaration and acceptance are reached in normal play, after the chest has been opened empty
+      '0.5': the romance is present but cannot be reached through normal play, or comes before the chest reveal
+      '0': no romance beat in the experience
+    evidence:
+    - - c11.p038
+      - c11.p041
+    - c12.p117
+  - id: FP5
+    item: Small's account of the past is a story stage of its own that the player reaches after the empty-chest reveal and can follow through
+      to its end (told, read or played)
+    anchors:
+      '1': the account is reached in normal play after the chest reveal and can be followed to its end before the story closes
+      '0.5': the account is present but cannot be reached through normal play, comes out of sequence, or breaks off before its end
+      '0': no account of the past in the experience
+    evidence:
+    - - c12.p013
+      - c12.p108
+  - id: FP6
+    item: 'The story closes after the account: Small is taken into custody and the experience reaches a clear ending'
+    anchors:
+      '1': after the account the culprit is taken away and the story reaches a clear ending
+      '0.5': the experience stops after the capture or the account without a clear close (e.g. Small's fate left hanging)
+      '0': no ending; the experience breaks off or loops without closure
+    evidence:
+    - - c12.p114
+      - c12.p117
+    - c12.p128
+  visual_presentation:
+  - id: VP1
+    cat: spatial
+    item: The chase space looks like a river at night whose surroundings change from a busy city reach to a desolate, empty stretch where the
+      chase ends
+    anchors:
+      '1': a night river with the change readable from an active city reach upstream to an empty, isolated stretch downstream
+      '0.5': a night river but the same along its length (no busy city reach or no isolated downstream stretch)
+      '0': no river setting, or a daylight / open-sea setting
+    evidence:
+    - c10.p028
+    - c10.p041
+    - c10.p045
+    - c10.p047
+  - id: VP2
+    cat: key_moment
+    item: 'The empty chest: the recovered treasure chest opened to show nothing inside'
+    anchors:
+      '1': a set-apart moment of the chest opened and visibly empty
+      '0.5': the emptiness given only as text or a message
+      '0': no chest-opening moment
+    evidence:
+    - - c11.p032
+      - c11.p036
+  - id: VP3
+    cat: spatial
+    item: 'The Agra fort''s old quarter: a deserted, labyrinthine part of the fort where the murder and the hiding of the treasure take place'
+    anchors:
+      '1': the fort's old quarter shown as a deserted, maze-like place where the backstory takes place
+      '0.5': a fort or stronghold shown without its deserted, maze-like character, or the place only named
+      '0': the fort is not shown
+    evidence:
+    - - c12.p020
+      - c12.p022
+    - c12.p054
+    - c12.p058
+    - c12.p060
+play_suggestions:
+  FP1:
+  - 'start the hunt: is the hidden boat found first, and does the chase start from that discovery?'
+  - 'try to start the pursuit before the boat is located or has moved: what happens?'
+  FP2:
+  - 'fall behind on purpose (slow down, steer badly): can the quarry pull away or escape?'
+  - 'push hard all the way: does closing in lead to the capture?'
+  FP3:
+  - 'after the capture, open the chest: is it empty?'
+  - 'try to reach the chest before the capture: what happens?'
+  FP4:
+  - 'after the chest reveal, go on: do Watson and Miss Morstan reach the declaration and acceptance in normal play?'
+  FP5:
+  - 'after the chest reveal, go on: is Small''s account reached, and can it be followed to its end?'
+  FP6:
+  - 'play to the end: is Small taken away and does the story close?'
+  - 'after the ending: can the experience be ended or replayed?'
+  robustness:
+  - 'lose the chase: is there a sensible failure and a retry?'
+  - 'skip or rush through dialogue: does the story still progress coherently?'
+  - 'quit mid-chase and resume: is the state kept or cleanly restarted?'
+v4_map:
+  U1: FP1 | mechanism merged into FP1 (reasoned discovery and watch added to its item)
+  U2: CR1
+  U3: CR2
+  U4: CR3, FP4 | content and causal link in CR3; reaching the romance in normal play is the new FP4 (v4 check)
+  U5: CR4
+  U6: CR5
+  U7: CR6
+  FP1: FP1
+  FP2: FP2
+  FP3: FP3, CR2 | explanation part (Small threw it away) moved to CR2
+  FP4: FP5, CR4, CR5, CR6 | content and causal order moved to CR4-CR6
+  FP5: FP6
+  VP1: VP1
+  VP2: 'dropped: peripheral (running the boat aground on the bank is sub-episode staging of the capture, which FP2 already scores; v4 check)'
+  VP3: VP2
+  VP4: VP3
+provenance:
+  source_yaml: T-TO-txt_3d7bba04a8dc.e1.yaml
+  source_sha256: a5428139af05c81d2f8096847f1c51a56977b56e85cadfc6f8e51d4a57c789fb
+  size_waiver: null
+  size_max: null
+  sources:
+  - ref: t01
+    title: The Sign of the Four
+    author: Arthur Conan Doyle
+    text_id: txt_3d7bba04a8dc
+    excerpt_id: e1

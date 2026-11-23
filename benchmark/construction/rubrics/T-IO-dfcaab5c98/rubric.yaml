@@ -1,0 +1,209 @@
+# GameAnything-Bench scoring material: never shown to agents during a trial.
+task_id: T-IO-dfcaab5c98
+source_inventory:
+- 'img01: overhead view of a wide roundabout with a landscaped central island; cars circulate counter-clockwise; at the left exit a red pickup
+  (outer position) and a black car (inner position) drive side by side, with a red arrow drawn from the black car into the left exit, crossing
+  in front of the pickup, and a yellow arrow from the pickup continuing round; a zebra crossing and a splitter island on the left leg'
+- 'img02: ground-level view at a roundabout entry; a red-and-white triangular YIELD sign with the plate ''YIELD TO TRAFFIC IN ROUNDABOUT''; a
+  white SUV in the circulating roadway beyond the entry; landscaped islands, palms'
+- 'img03: straight-down view of a three-leg single-lane roundabout among fields; small raised central island (paved apron, grass centre); dashed
+  give-way lines with painted triangles (shark teeth) across every entry; splitter islands on the legs; one car on the right leg'
+- 'img04: elevated view of a street layout with two red-painted circular islands, zebra crossings, painted give-way triangles and dashed lines
+  at the entries, bollards, a blue roundabout sign and a pedestrian-crossing sign; two pedestrians on one red island'
+- 'img05: high aerial view of an arterial road with two roundabouts in series; the near one has a two-lane circulating roadway around a round
+  central island, four legs with splitter islands, lane arrows on the approaches and crossings set back from the circle; town, car parks and a
+  river around'
+- 'img06: elevated view of a single-lane four-leg roundabout in a village; planted central island with a blue keep-right arrow sign; dashed give-way
+  lines at the entries, a triangular yield sign and a blue sign on a splitter island; houses and gardens above'
+instructions_meta:
+  requirement_groups:
+    traffic flow through the junction:
+    - FP1
+    - FP3
+    - FP4
+    entry priority:
+    - FP2
+    movement within the circulating roadway:
+    - CR2
+    - FP5
+    junction layout:
+    - CR1
+    - VP1
+    readable control and traffic state:
+    - VP2
+    - VP3
+  explicit_requirements:
+  - type: specify
+    text: Cars coming in should always give way to the traffic already going round the ring.
+    covers:
+    - FP2
+  - type: specify
+    text: Build the ring with at least two circulating lanes; on approaches with more than one lane, vehicles take the lane for the exit they
+      are heading to
+    covers:
+    - CR2
+    - FP4
+  - type: specify
+    text: a vehicle on the inner lane must not cut across one on the outer lane to leave the ring
+    covers:
+    - FP5
+rubric:
+  content_realization:
+  - id: CR1
+    item: 'The game contains a roundabout: a ring of circulating roadway around a central island that is not part of the roadway, with several
+      roads joining the ring'
+    anchors:
+      '1': a ring road around a central island that vehicles cannot drive on, with more than two roads connected to the ring
+      '0.5': a ring road, but the island is drivable or missing, or only one or two roads join it
+      '0': no roundabout
+    evidence:
+    - img01
+    - img03
+    - img05
+    - img06
+  - id: CR2
+    item: The roundabout's circulating roadway has at least two separate lanes side by side
+    anchors:
+      '1': a ring with two or more separate circulating lanes
+      '0.5': a wide ring whose lanes are not separate (no lane division)
+      '0': single-lane ring only
+    evidence:
+    - img01
+    - img05
+  functions_playability:
+  - id: FP1
+    item: Vehicles enter the roundabout, circulate one way round the central island and leave, so traffic actually passes through the junction
+    anchors:
+      '1': vehicles circulate in one direction round the island and leave the ring
+      '0.5': vehicles go round but some drive against the direction or across the island
+      '0': no working roundabout traffic
+    evidence:
+    - img01
+    - img05
+    - img06
+  - id: FP2
+    item: Entering vehicles wait for a gap in the circulating traffic before they enter
+    anchors:
+      '1': entries visibly yield to circulating vehicles
+      '0.5': entries stop sometimes but not in relation to circulating traffic, or circulating vehicles also stop for entering ones
+      '0': 'no priority rule: vehicles enter regardless'
+    evidence:
+    - img02
+    - img03
+    - img04
+    - img06
+  - id: FP3
+    item: Traffic from any leg can reach any other leg through the roundabout, leaving at the leg its route needs
+    anchors:
+      '1': vehicles from one entry leave at different legs according to where they go, and every leg can be reached
+      '0.5': traffic always leaves at the same leg, or some legs cannot be reached from some entries
+      '0': traffic does not pass between legs through the ring
+    evidence:
+    - img03
+    - img05
+    - img06
+  - id: FP4
+    item: On an approach with more than one lane, vehicles take the approach lane assigned to the direction they leave the roundabout in
+    anchors:
+      '1': on a multi-lane approach, the lanes are assigned to directions and vehicles queue in and enter from the lane that matches their exit
+      '0.5': lanes are assigned, but many vehicles ignore the assignment or change lanes at the entry
+      '0': lane use on the approaches is unrelated to where vehicles leave, or no approach has more than one lane
+    evidence:
+    - 'img05: lane arrows on the approaches to the two-lane roundabout'
+  - id: FP5
+    item: 'Vehicles leave the ring from the outer lane: no vehicle on the inner lane cuts across one on the outer lane to exit (the conflict img01
+      marks)'
+    anchors:
+      '1': inner-lane vehicles move to the outer lane before exiting, and no cut-across exit is seen
+      '0.5': cut-across exits happen now and then
+      '0': inner-lane vehicles routinely exit across the outer lane, or the ring has a single lane
+    evidence:
+    - img01
+  visual_presentation:
+  - id: VP1
+    cat: spatial
+    item: 'The junction looks like the reference roundabouts: a round central island visibly set apart from the carriageway, with the ring of
+      road around it'
+    anchors:
+      '1': round ring and a visibly distinct central island (raised, planted or otherwise set apart) recognisable as a roundabout in one view
+      '0.5': a circular road, but the island is hard to tell from the roadway or the shape does not read as a ring
+      '0': not recognisable as a roundabout
+    evidence:
+    - img03
+    - img05
+    - img06
+  - id: VP2
+    cat: presentation
+    item: The yield control is visible at every entry (road markings, sign props or a mod overlay icon all count), so who has to wait is readable
+    anchors:
+      '1': a clear entry-priority indication at all entries
+      '0.5': at some entries only, or hard to read
+      '0': none
+    evidence:
+    - img02
+    - img03
+    - img04
+    - img06
+  - id: VP3
+    cat: presentation
+    item: 'The traffic state is readable in play: lane or direction arrows on the ring or the approaches, and entering vehicles visibly waiting
+      at the give-way line'
+    anchors:
+      '1': direction or lane arrows and visibly waiting entering vehicles are both readable
+      '0.5': only one of the two
+      '0': neither
+    evidence:
+    - img01
+    - img05
+play_suggestions:
+  FP1:
+  - 'watch vehicles from several entries: do they all circulate the same way?'
+  - look for any vehicle driving against the flow or across the island
+  FP2:
+  - 'load the ring with traffic and watch an entry: do entering vehicles wait for a gap?'
+  - check that circulating vehicles do not stop for entering ones
+  FP3:
+  - send traffic between all pairs of legs of the roundabout
+  FP4:
+  - 'on a multi-lane approach, follow vehicles heading for different exits: do they line up in the lane for their exit?'
+  - 'watch the entry line: do vehicles cut across lanes at the last moment?'
+  robustness:
+  - 'overload the roundabout until it jams: does it recover when demand drops?'
+  - remove or block one leg while traffic is running
+  - build a roundabout with an unusual number of legs or a very small island
+  - 'put two roundabouts in a row on one road: does traffic pass through both?'
+  - 'watch the entries under heavy traffic: do queues build and clear with the circulating flow?'
+  FP5:
+  - 'follow vehicles on the inner lane to their exit: do they move to the outer lane first?'
+  - 'watch an exit with traffic on both lanes: does an inner-lane vehicle ever cut in front of an outer-lane one?'
+v4_map:
+  U1: 'dropped: mechanism already scored by FP1'
+  U2: 'dropped: mechanism already scored by FP2'
+  U3: CR2
+  U4: CR1
+  U5: CR1, FP3
+  FP1: FP1
+  FP2: FP2
+  FP3: CR2
+  FP4: CR1, FP3
+  FP5: 'dropped: modify requirement (slip lane), moved to editing_seed.yaml'
+  VP1: CR1, VP1
+  VP2: VP2
+  VP3: VP3
+provenance:
+  source_yaml: T-IO-dfcaab5c98.yaml
+  source_sha256: 9b672a9a8cd1b11767a4486ae1d7ed7ce848676af673ffc5d4e26e173cf6a116
+  size_waiver: null
+  size_max: null
+  sources:
+  - refs:
+    - img01
+    - img02
+    - img03
+    - img04
+    - img05
+    - img06
+    bundle: dfcaab5c98
+    title: 环岛通行规则：让行、单向、分流
+  revision: 'curator review: explicit two-lane ring, lane-by-exit and no inner-lane cut-across rules; own mod (no TM:PE); FP5 added,
+    VP2 / VP3 made objective'

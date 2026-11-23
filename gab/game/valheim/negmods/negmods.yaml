@@ -1,0 +1,5 @@
+# negative mods for `gab selfcheck valheim` (sources from the pool verification 2026-10-30,
+# the verification logs; built by the adapter: net462 against the game's assemblies)
+# each must fail exactly its expected pool items (vs a fresh vanilla instance); every probe comes from one ~7 min session
+NegRun: {expect_fail: [VH-MOVE], quick_probes: ["move,swim"]}
+NegClub: {expect_fail: [VH-CONTENT, VH-CRAFT], quick_probes: [content, "craft,content"]}

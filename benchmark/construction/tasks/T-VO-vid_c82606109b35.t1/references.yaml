@@ -1,0 +1,24 @@
+# Reference material: fetched from the HF dataset into $GAB_MEDIA_DIR/<task>/ by `gab media fetch` (sha256 checked).
+# The agent gets the files only (no title, author, caption or source): this file is never shown to it.
+task_id: T-VO-vid_c82606109b35.t1
+refs:
+- id: c01
+  kind: video
+  file: clip_01.mp4
+  video_id: vid_c82606109b35
+  source:
+    title: 04 - New York Drone Video Tour ｜ Expedia
+    url: null
+    channel: null
+    youtube_id: null
+  range:
+    start: 6.3
+    end: 48.3
+    text: 0:06.30-0:48.30
+  duration_s: 42.0
+  size_bytes: 6221422
+  format: mp4 H.264 720p, AAC audio
+  hf_path: media/T-VO-vid_c82606109b35.t1/clip_01.mp4
+  sha256: c22d93677af87c9bdb600793a16a05d2f223e5bc9cd9d0a466b282f8f06b1c1b
+  rights_note: Commercial travel promo (Expedia) with a logo and end card. Use as a private reference only; do not redistribute frames or the
+    footage. Real landmarks and a statue appear, so rebuild by abstraction, not as exact copies.

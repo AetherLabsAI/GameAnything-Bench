@@ -1,0 +1,174 @@
+# GameAnything-Bench scoring material: never shown to agents during a trial.
+task_id: T-IO-3c3de9e523
+source_inventory:
+- 'img01: elevated view down a valley onto a fjord: steep, partly forested mountain walls on both sides; a flat green valley floor with fields,
+  scattered farm houses (red, white) and a cluster of village houses; a river winding across the floor toward the fjord; a road with a bridge
+  and a tunnel portal in the left mountainside, a campsite and a gravel area; the fjord water at the valley mouth continues between the mountains
+  into the distance; overcast sky'
+- 'img02: elevated view of a small harbour village at the water: a concrete quay with a docking edge and flags on the fjord, small boats at a
+  pier; wooden buildings with dark and red pitched roofs right behind the quay; railway tracks and platforms running inland directly behind the
+  quay buildings, a yellow station-style building (''KAFE'' sign), a large white hotel with a glass-fronted section; car parks, a footpath along
+  the rocky shore with people walking; a forested mountainside rising behind'
+- 'img03: elevated view (from a moving train or road, blurred foliage at right) of a hamlet beside a broad stony river: a small dark wooden church
+  with a steeple and a walled churchyard, white and red wooden houses along a road, a new red barn-like building; at the time of the photo the
+  riverbanks are under construction (gravel, trucks, a loader, cones); a bridge over the river at the left'
+- 'img04: a railway station at the foot of steep mountains: several tracks with switches, a low platform with steps, overhead catenary on steel
+  gantries, a red electric locomotive with a train of green passenger carriages, another carriage on a siding; ochre-yellow wooden buildings including
+  a two-door engine shed; valley and mountains behind'
+- 'img05: a coloured relief map (Cyrillic labels, ''Карта на Согнефиорд'', R. Botev 2020) of a long fjord running in from the coast with many
+  branching arms reaching deep inland between high ground; towns marked as circles, roads as red lines, ferry crossings as dotted lines, church
+  symbols, a glacier and spot heights; no marker identifies the village of the photos'
+- 'img06: from the water: a near-vertical grey rock wall, forested at its base, plunging straight into dark fjord water; low cloud and mist cling
+  to the cliff; the shoreline recedes into haze'
+instructions_meta:
+  requirement_groups:
+    traversable layout:
+    - CR1
+    - FP1
+    reachable landmark areas:
+    - CR3
+    - CR4
+    - FP2
+    surrounding terrain and atmosphere:
+    - CR2
+    - VP1
+    settlement character:
+    - VP2
+    - VP3
+  explicit_requirements:
+  - type: keep
+    text: I definitely want the little church with a steeple among the houses by the river.
+    covers:
+    - CR4
+rubric:
+  content_realization:
+  - id: CR1
+    item: The village lies on a flat valley floor at the head of the fjord, with a river running down the valley into the fjord water
+    anchors:
+      '1': valley floor with the village opening onto the fjord, the river flowing across it into the water
+      '0.5': a valley or a fjord with a village, but not the valley opening onto the fjord, or no river into it
+      '0': no valley-and-fjord arrangement
+    evidence:
+    - img01
+    - img02
+  - id: CR2
+    item: The fjord is narrow water hemmed in by very high, steep rock walls that drop directly into it
+    anchors:
+      '1': narrow fjord water with high, steep walls rising straight from it
+      '0.5': water with mountains, but gentle slopes, a shore strip between, or an open coast
+      '0': no fjord
+    evidence:
+    - img01
+    - img06
+  - id: CR3
+    item: 'The waterfront joins harbour and railway: a quay on the fjord where boats dock, with the railway station and its tracks right behind
+      it running inland'
+    anchors:
+      '1': a quay on the water and a station with tracks adjacent to it as one waterfront
+      '0.5': harbour and station both present but apart or unrelated
+      '0': neither, or only one of them
+    evidence:
+    - img02
+    - img04
+  - id: CR4
+    item: A small steepled church stands among the houses of a settlement beside the river
+    anchors:
+      '1': a small church with a steeple among houses by the river
+      '0.5': a church but not with a steeple, large, or not in a riverside settlement
+      '0': no church
+    evidence:
+    - img03
+  functions_playability:
+  - id: FP1
+    item: 'The player can drive and race through the place as a valley corridor: a continuous route from the fjord shore across the valley floor
+      and up the valley, with the steep mountain walls bounding it'
+    anchors:
+      '1': a continuous route from the shore up the valley floor that can be driven through as a race, enclosed by the mountain sides
+      '0.5': drivable, but not as a shore-to-up-valley route (e.g. a flat open map or a strip that ignores the valley), the route breaks off so
+        a race cannot be driven through, or the sides do not bound it believably
+      '0': the place cannot be driven through
+    evidence:
+    - img01
+    - img06
+  - id: FP2
+    item: 'The landmark areas are places the player reaches and recognises in play: the harbour-and-railway waterfront and the church settlement'
+    anchors:
+      '1': both the waterfront and the church settlement are reached by driving and recognisable on arrival
+      '0.5': only one reachable, or the landmarks present only as unreachable backdrop
+      '0': no landmark reachable
+    evidence:
+    - img02
+    - img03
+    - img04
+  visual_presentation:
+  - id: VP1
+    cat: style
+    item: 'The fjord walls look like the reference: bare grey rock above dark water, with low cloud or mist clinging to them'
+    anchors:
+      '1': grey rock faces over dark water under a misty, low-cloud atmosphere
+      '0.5': rock by water but green or brightly coloured, or no mist / low cloud
+      '0': none
+    evidence:
+    - img06
+    - img01
+  - id: VP2
+    cat: style
+    item: 'The village character: small painted wooden houses with pitched roofs scattered among green fields'
+    anchors:
+      '1': painted wooden buildings with pitched roofs among fields
+      '0.5': buildings present but generic (e.g. concrete blocks or one uniform model)
+      '0': none
+    evidence:
+    - img01
+    - img02
+    - img03
+    - img04
+  - id: VP3
+    cat: style
+    item: 'The church looks like the reference: dark wooden, in keeping with the wooden village around it'
+    anchors:
+      '1': a dark wooden church that fits the wooden houses around it
+      '0.5': a church generic in look or out of keeping with the village (e.g. white stone chapel, grey cathedral-like building)
+      '0': none
+    evidence:
+    - 'img03: the dark church with steeple among the houses'
+play_suggestions:
+  FP1:
+  - 'drive from the water''s edge up the valley as far as it goes: does the valley floor continue and do the mountain sides enclose it?'
+  - 'start a race on the location: can it be driven through along the route without dead ends or getting lost?'
+  - 'try to leave sideways: do the mountain walls bound the space in a believable way?'
+  FP2:
+  - 'find the waterfront with the quay and the station, then the church settlement by the river: can each be reached and recognised without being
+    told where it is?'
+  robustness:
+  - 'leave the main route at several points (onto fields, into the river, toward the water): does the game recover sensibly?'
+  - 'restart from different points: is the layout consistent?'
+v4_map:
+  U1: CR3 | harbour and railway existence kept; arrival by boat / train not drivable, dropped
+  U2: CR2
+  U3: CR4
+  U4: CR1
+  U5: CR3
+  FP1: FP1 | valley-floor existence moved to CR1
+  FP2: FP2 | landmark existence moved to CR3, CR4
+  VP1: CR1 | spatial layout of valley and fjord
+  VP2: CR3 | spatial arrangement of quay and station
+  VP3: VP1 | steepness and rising from the water moved to CR2; rock colour, dark water and mist stay
+  VP4: CR4, VP3 | church existence, size, steeple and riverside placement -> CR4; dark wooden look -> VP3
+  VP5: VP2
+  VP6: 'dropped: modify request (dusk, lit windows) moved to the Editing task (editing_seed.yaml)'
+provenance:
+  source_yaml: T-IO-3c3de9e523.yaml
+  source_sha256: 5fb5df1a979d72e05297c87cdf7f9f045d4f6dfc967bca0c48d40a0716c81130
+  size_waiver: null
+  size_max: null
+  sources:
+  - refs:
+    - img01
+    - img02
+    - img03
+    - img04
+    - img05
+    - img06
+    bundle: 3c3de9e523
+    title: 挪威弗洛姆峡湾村

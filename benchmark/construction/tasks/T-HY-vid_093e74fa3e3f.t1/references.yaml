@@ -1,0 +1,65 @@
+# Reference material: fetched from the HF dataset into $GAB_MEDIA_DIR/<task>/ by `gab media fetch` (sha256 checked).
+# The agent gets the files only (no title, author, caption or source): this file is never shown to it.
+task_id: T-HY-vid_093e74fa3e3f.t1
+refs:
+- id: c01
+  kind: video
+  file: clip_01.mp4
+  video_id: vid_093e74fa3e3f
+  source:
+    title: Disney's Frozen ＂Let It Go＂ Sequence Performed by Idina Menzel [moSFlvxnbgk]
+    url: https://www.youtube.com/watch?v=moSFlvxnbgk
+    channel: null
+    youtube_id: moSFlvxnbgk
+  range:
+    start: 137.4
+    end: 174.7
+    text: 2:17.40-2:54.70
+  duration_s: 37.3
+  size_bytes: 9066781
+  format: mp4 H.264 720p, AAC audio
+  hf_path: media/T-HY-vid_093e74fa3e3f.t1/clip_01.mp4
+  sha256: 0e04ce488c62dfc2d219e8083ea55d36c470c32d7515e47b952f87d0776acf4c
+  rights_note: null
+- id: img01
+  kind: image
+  file: img01.jpg
+  format: jpg
+  hf_path: media/T-HY-vid_093e74fa3e3f.t1/img01.jpg
+  sha256: 6bc68cca664631cc34397ab81b49c76a6a0460b0f6e37634846e737167f28340
+  size_bytes: 342070
+- id: img02
+  kind: image
+  file: img02.jpg
+  format: jpg
+  hf_path: media/T-HY-vid_093e74fa3e3f.t1/img02.jpg
+  sha256: 741d99137ed24c8682c5da3ee9d9e9dcac7715836c3af721c4506bb9cfa73415
+  size_bytes: 212811
+- id: img03
+  kind: image
+  file: img03.jpg
+  format: jpg
+  hf_path: media/T-HY-vid_093e74fa3e3f.t1/img03.jpg
+  sha256: 36b2ac51955149df6321761c6daf425c97e35f3dbdf17d2f9f34e09b238583fc
+  size_bytes: 301967
+- id: img04
+  kind: image
+  file: img04.jpg
+  format: jpg
+  hf_path: media/T-HY-vid_093e74fa3e3f.t1/img04.jpg
+  sha256: a6b433df76fd444bf8d5c360955f2c93af3aa27ebf2aa56da85423a352cbe278
+  size_bytes: 155516
+- id: img05
+  kind: image
+  file: img05.jpg
+  format: jpg
+  hf_path: media/T-HY-vid_093e74fa3e3f.t1/img05.jpg
+  sha256: c360eb06383800ecd56657e866679425f2d7189908143439cd8a6038c9ca9ab4
+  size_bytes: 353591
+- id: img06
+  kind: image
+  file: img06.jpg
+  format: jpg
+  hf_path: media/T-HY-vid_093e74fa3e3f.t1/img06.jpg
+  sha256: 35f33c9f8935ac0feb44c31e095fcbd0a0de748ef1e24cd6c6d547b56cd3f109
+  size_bytes: 315233

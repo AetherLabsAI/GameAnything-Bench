@@ -1,0 +1,27 @@
+# GameAnything-Bench task T-HY-vid_ed6ca1b2a47b.t1 (public part). Instruction: instruction_fine.md.
+task_id: T-HY-vid_ed6ca1b2a47b.t1
+version: '0.2'
+category: narrative_event
+modality: video+text+image
+domain: film
+track: core
+target_game: tuxemon
+references:
+- c01
+- c02
+- t01
+- img01
+- img02
+- img03
+- img04
+- img05
+- img06
+- img07
+- img08
+- img09
+- img10
+- img11
+provenance:
+  pipeline: reference_curation ga_author (v3 draft -> crosscheck -> reconcile -> instruct -> explicit) -> restructure_v4
+  rules_version: v4.2
+  review_status: pending

@@ -1,0 +1,29 @@
+{
+    "name": "my_campaign",
+    "title": "My campaign",
+    "icon": "book",
+    "missions": [
+        {
+            "name": "my_mission_1",
+            "title": "First mission",
+            "map": "my_mission_1.tofmap.json",
+            "description": "A template mission.",
+            "marker": [
+                400,
+                300
+            ],
+            "players": [
+                {
+                    "side": "blue",
+                    "ap": 0,
+                    "type": "human"
+                },
+                {
+                    "side": "red",
+                    "ap": 0,
+                    "type": "ai"
+                }
+            ]
+        }
+    ]
+}

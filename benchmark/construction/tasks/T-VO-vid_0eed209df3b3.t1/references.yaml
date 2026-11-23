@@ -1,0 +1,24 @@
+# Reference material: fetched from the HF dataset into $GAB_MEDIA_DIR/<task>/ by `gab media fetch` (sha256 checked).
+# The agent gets the files only (no title, author, caption or source): this file is never shown to it.
+task_id: T-VO-vid_0eed209df3b3.t1
+refs:
+- id: c01
+  kind: video
+  file: clip_01.mp4
+  video_id: vid_0eed209df3b3
+  source:
+    title: Tom & Jerry ｜ Trapping Jerry ｜ Classic Cartoon ｜ WB Kids [dVNBWvmRqpE]
+    url: https://www.youtube.com/watch?v=dVNBWvmRqpE
+    channel: null
+    youtube_id: dVNBWvmRqpE
+  range:
+    start: 186.1
+    end: 255.0
+    text: 3:06.10-4:15.00
+  duration_s: 68.9
+  size_bytes: 9241393
+  format: mp4 H.264 720p, AAC audio
+  hf_path: media/T-VO-vid_0eed209df3b3.t1/clip_01.mp4
+  sha256: e5c0bfe869b26e1eb57b7acfa52a8b230fad04967eb18ea650bfce40603456be
+  rights_note: Copyrighted animated film from an official WB Kids upload. Use it as a private reference only and do not redistribute it. The task
+    should transfer the beat structure with original characters and assets, not copy the characters.

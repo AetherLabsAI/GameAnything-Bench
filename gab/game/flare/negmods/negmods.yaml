@@ -1,0 +1,6 @@
+# negative mods for `gab selfcheck flare` (from the game's pool verification)
+# each must fail exactly its expected pool items (vs a fresh vanilla instance)
+neg_slow_hero: {expect_fail: [FL-MOVE, FL-DATA], quick_probes: [move, data]}
+neg_tough_zombie: {expect_fail: [FL-COMBAT, FL-POWERS, FL-DATA], quick_probes: [fight, powers, data]}
+neg_dagger_price: {expect_fail: [FL-SHOP, FL-DATA], quick_probes: [town, data]}
+neg_udana_portrait: {expect_fail: [FL-NPC, FL-DATA], quick_probes: [town, data]}

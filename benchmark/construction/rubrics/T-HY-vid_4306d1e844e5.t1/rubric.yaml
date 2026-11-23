@@ -1,0 +1,270 @@
+# GameAnything-Bench scoring material: never shown to agents during a trial.
+task_id: T-HY-vid_4306d1e844e5.t1
+source_inventory:
+- 'clip 00:43.5-00:53.2: slow low-angle move up the front of a sandstone temple pylon. A tall narrow central doorway with a projecting cornice
+  over it, large carved relief figures on both sides, two small falcon statues at the base, a paved forecourt, columns of an inner court visible
+  through the door; from 00:49 the gap between the two towers above the gateway shows sky; corner caption ''Edfu temple'''
+- 'clip 00:53.2-00:58.0: a large smooth steep pyramid with a lighter tip on flat sandy ground, a second, much smaller pyramid far away at right,
+  hazy warm sky; caption ''Pyramids'''
+- 'clip 00:58.0-01:05.1: the Sphinx (lion body, human head with headdress) at left in front of a large pyramid, broken stone blocks in the foreground,
+  saturated blue sky with clouds'
+- 'clip 01:05.1-01:11.2: a long straight corridor (CG-looking) seen from inside, with red-and-white painted figures on both walls, a dark flat
+  panelled ceiling, door frames receding to a doorway at the far end, warm lamp light; caption ''Ancient egypt'''
+- 'clip 01:11.2-01:17.4: the Sphinx head in profile against moving clouds, a pyramid corner at lower left; caption ''Sphinx'''
+- 'audio: music only, no speech'
+- 'img01: colour site plan of the pyramid plateau with labels, a compass and a 200 m scale bar. Three pyramids lie on a NE-SW diagonal: Khufu
+  (largest) at NE, Khafre in the middle, Menkaure (much smaller, with three small queens'' pyramids) at SW. The Great Sphinx is at the east edge
+  beside the Khafre valley temple, with a causeway running from Khafre''s funerary temple down to it. Cemeteries of mastabas lie west and east
+  of Khufu; modern roads and a village are on the east'
+- 'img02: survey/contour map of the same plateau with a coordinate grid. The same three pyramid squares on a diagonal, the Sphinx labelled at
+  the east, sandy plain and a wadi to the south, rock formations named'
+- 'img03: engraved elevation of the Edfu pylon. Two tall tapering towers with cornices flank a lower central gateway with a winged disc above
+  its door; huge relief figures, registers of seated figures, vertical flagpole slots'
+- 'img04: frontal photo of the same pylon. A straight paved way runs across a sandy forecourt to the single central door, two falcon statues stand
+  at the door, the columns of a court are seen through it, visitors give the scale'
+- 'img05: angled photo of the pylon from its foot: relief-covered towers, the cornice over the gateway, falcon statues, small visitors'
+- 'img06: a long straight tomb corridor with painted relief walls and a painted ceiling; a modern walkway with glass panels leads to a lit chamber
+  at the end'
+- 'img07: a tomb corridor descending by stairs with a wooden handrail, walls covered in painted figures and hieroglyphs, a painted ceiling (vulture,
+  sun disc); people at the bottom'
+- 'img08: a tomb corridor with a wooden walkway, walls and ceiling densely painted, several door frames receding one behind another to a chamber
+  at the end'
+instructions_meta:
+  requirement_groups:
+    site layout and open ground:
+    - CR2
+    - CR3
+    - FP1
+    entrance structure:
+    - CR1
+    - CR5
+    - FP2
+    - VP1
+    interior space:
+    - CR4
+    - FP3
+    - VP2
+    palette and atmosphere:
+    - VP3
+  explicit_requirements:
+  - type: keep
+    text: I definitely want that temple gateway with the two big tapering towers covered in carved figures and the one tall, narrow door in the
+      middle that my units go through.
+    covers:
+    - CR1
+    - FP2
+    - VP1
+  - type: specify
+    text: The Sphinx should be a lion lying down with a human head in a headdress, and much smaller than the pyramids, not the same size.
+    covers:
+    - CR2
+rubric:
+  content_realization:
+  - id: CR1
+    item: 'The temple front is a pylon: two massive towers flank a lower central gateway with one tall, narrow doorway'
+    anchors:
+      '1': two towers on either side of a lower central gateway with a single tall, narrow doorway
+      '0.5': a large temple wall or gate, but not the two-tower form around one central doorway (e.g. a single block wall, several doors)
+      '0': no temple gateway, or an arch, a colonnade or a pyramid in its place
+    evidence:
+    - - '00:43.5'
+      - '00:53.2'
+    - img03
+    - img04
+    - img05
+  - id: CR2
+    item: 'The site has the Sphinx: a recumbent lion-bodied statue with a human head in a headdress, far smaller than the pyramids'
+    anchors:
+      '1': a lying lion body with a human head wearing a headdress, clearly much smaller than the pyramids
+      '0.5': a statue meant as the Sphinx, but its lion-and-human form is not recognisable, or it is about as large as the pyramids
+      '0': no Sphinx
+    evidence:
+    - - '00:58.0'
+      - '01:05.1'
+    - - '01:11.2'
+      - '01:17.4'
+  - id: CR3
+    cross: true
+    item: 'The pyramid field joins the clip''s pyramids with the plans'' layout: large, smooth, steep-sided pyramids (clip) stand as the plans
+      place them (img01, img02), three in a diagonal row with the end one clearly smaller, and the Sphinx on the east side in front of the middle
+      pyramid'
+    anchors:
+      '1': three large smooth steep-sided pyramids in a diagonal row, the end one clearly smaller, and the Sphinx on the east side in front of
+        the middle one
+      '0.5': the plans' arrangement with stepped, terraced or flat-topped pyramids, or smooth steep pyramids whose diagonal row, smaller end pyramid
+        or Sphinx position is wrong or missing
+      '0': no pyramid field, or the monuments scattered with no relation to one another
+    evidence:
+    - img01
+    - img02
+    - - '00:53.2'
+      - '01:05.1'
+  - id: CR4
+    item: The tomb is a long, straight, narrow corridor that leads through successive doorways to its end
+    anchors:
+      '1': a long, narrow, straight passage with door frames along it, leading to an end doorway or chamber
+      '0.5': an interior passage, but short, wide like a hall, or without the doorways leading to an end
+      '0': no tomb corridor
+    evidence:
+    - - '01:05.1'
+      - '01:11.2'
+    - img06
+    - img08
+  - id: CR5
+    item: 'The temple is laid out along one axis: a straight approach across the forecourt leads to the pylon''s central door, with an inner court
+      behind it'
+    anchors:
+      '1': a straight approach to the central door and a court or inner area behind the gateway on the same axis
+      '0.5': 'only one of the two: the straight approach or the area behind the gateway'
+      '0': the gateway stands alone, with neither an approach nor anything behind it
+    evidence:
+    - - '00:43.5'
+      - '00:48.0'
+    - img04
+  functions_playability:
+  - id: FP1
+    item: 'The outdoor site is one connected space: the player''s units can move over connected ground between the pyramid field and the temple
+      gateway, reach each pyramid and the Sphinx, and get from the site to the tomb''s entrance'
+    anchors:
+      '1': the pyramid field and the temple lie on one connected ground, every pyramid and the Sphinx can be reached over it, and the tomb is
+        entered from the site (a doorway, a descent or a transition to a separate map all count)
+      '0.5': the monuments can be reached within their own areas, but the areas are not joined (separate maps with no way between them, the tomb
+        only as a separate view), or some monuments are cut off
+      '0': the site cannot be moved through
+    evidence:
+    - img01
+    - img02
+    - - '00:43.5'
+      - '01:11.2'
+  - id: FP2
+    item: 'The pylon works as the temple''s gateway: the player''s units move through the central gate opening on the map to the area beyond,
+      while the towers themselves are solid'
+    anchors:
+      '1': units move through the gate opening on the map to the area behind, and the towers block movement
+      '0.5': the doorway can be passed, but the towers can also be passed through
+      '0': the doorway cannot be passed, or the gateway is decoration only
+    evidence:
+    - - '00:43.5'
+      - '00:53.2'
+    - img04
+  - id: FP3
+    item: The tomb corridor is a long walkable corridor / passage on the map that the player's units can move along from its entrance to its far
+      end (seeing it from inside is not required)
+    anchors:
+      '1': units can move into the corridor / passage on the map and along it to its end
+      '0.5': units can move into the corridor / passage but not along it to its end
+      '0': units cannot move into the corridor / passage
+    evidence:
+    - - '01:05.1'
+      - '01:11.2'
+    - img06
+    - img08
+  visual_presentation:
+  - id: VP1
+    cat: spatial
+    keyframes:
+    - '00:44.0'
+    - '00:51.0'
+    item: 'The pylon looks like the reference: its towers taper upward, their faces are covered with large carved figures, and the front dominates
+      its forecourt'
+    anchors:
+      '1': tapering, relief-covered towers, the front much taller than the units or figures before it
+      '0.5': a large gateway, but the tapering or the carved figures are not readable, or it is not much taller than the units
+      '0': none
+    evidence:
+    - - '00:43.5'
+      - '00:53.2'
+    - img03
+    - img04
+  - id: VP2
+    cat: spatial
+    keyframes:
+    - '01:07.0'
+    item: The tomb corridor's walls are covered with painted figures, seen receding to a doorway at the end
+    anchors:
+      '1': painted walls along the passage and a doorway visible at its end
+      '0.5': a corridor with plain or barely decorated walls, or decorated but with no visible end
+      '0': none
+    evidence:
+    - - '01:05.1'
+      - '01:11.2'
+    - img06
+    - img08
+  - id: VP3
+    cat: style
+    keyframes:
+    - '00:55.0'
+    - '01:02.0'
+    - '01:07.0'
+    item: 'The site has the desert palette of the reference: sand- and ochre-coloured stone and ground under a bright sky outside, and a dimmer,
+      warmly lit interior'
+    anchors:
+      '1': a sandstone and sand palette under a bright sky, and an interior clearly darker and warmer than the outside
+      '0.5': the desert palette without the interior contrast, or the other way round
+      '0': no desert look
+    evidence:
+    - - '00:53.2'
+      - '01:05.1'
+    - - '01:05.1'
+      - '01:11.2'
+    - img04
+play_suggestions:
+  FP1:
+  - 'move from the largest pyramid to the smallest and to the Sphinx: is each reachable over open ground?'
+  - 'move from the pyramid field to the temple gateway and to the tomb entrance: is there a way, and does it stay on connected ground?'
+  - check from above or on the map view whether the areas form one site
+  FP2:
+  - try to pass through the towers instead of the door
+  - 'go through the door: do the units arrive in the area behind the gateway?'
+  - if the gateway can also be walked around, note it; do not penalise it (the references do not show what flanks the pylon)
+  FP3:
+  - enter the corridor and walk to its far end
+  - check whether the corridor is reached from somewhere in the site or only exists as a separate view
+  robustness:
+  - leave the site area and come back
+  - approach each monument from the side the reference does not show (the back of the pylon, the far side of the pyramids)
+  - note how the agent connects the three areas (the references give no route between them); any reasonable connection counts for FP1
+hybrid:
+  modality: video+image
+  roles:
+    video: 'the look of each monument: the pylon gateway seen from its foot, a pyramid on open desert, the Sphinx before a pyramid, a painted
+      tomb corridor; sandstone colour, bright desert sky against a dim interior'
+    images: 'img01-img02: site plans of the pyramid plateau (where the three pyramids and the Sphinx lie relative to each other); img03-img05:
+      the full front of the pylon temple and its straight approach; img06-img08: tomb corridors (length, painted walls and ceilings, successive
+      doorways, a descent)'
+  cross_reference_requirement: 'The pyramid field joins the plans'' layout with the clip''s monuments: the pyramids are the clip''s smooth, steep-sided
+    pyramids, placed as the plans show (img01, img02) in a diagonal row with the last clearly smaller, and the Sphinx on the east side in front
+    of the middle one.'
+v4_map:
+  U1: CR1, VP1 (two-tower form with central door to CR1; tapering and reliefs to VP1)
+  U2: CR2
+  U3: CR4, VP2 (corridor structure to CR4; painted walls to VP2)
+  U4: CR3
+  U5: CR5, CR4 (temple axis to CR5; tomb's successive doorways to CR4; passage scored in FP2, FP3)
+  FP1: CR3, FP1 (plan layout split off to CR3, cross moved with it; FP1 widened to the connection of the whole site, v4check)
+  FP2: FP2, CR5 (space behind the gateway split off to CR5)
+  FP3: FP3, CR4 (corridor length split off to CR4)
+  VP1: VP1 (two-tower form moved to CR1)
+  VP2: CR3 (smooth steep pyramid form merged into the cross item as its clip part; sand colour scored in VP3; flat open desert no longer scored
+    separately, v4check duplicate)
+  VP3: CR2 (Sphinx form merged with U2; one property scored once)
+  VP4: VP2
+  VP5: VP3
+provenance:
+  source_yaml: T-HY-vid_4306d1e844e5.t1.yaml
+  source_sha256: 7280d5b1484a4288fbfcc3c73a97757509ac5d2b4100f61b42f407ed73345904
+  size_waiver: null
+  size_max: null
+  sources:
+  - refs:
+    - img01
+    - img02
+    - img03
+    - img04
+    - img05
+    - img06
+    - img07
+    - img08
+    images:
+    - hybrid/q13_ref0
+    - hybrid/q13_ref1

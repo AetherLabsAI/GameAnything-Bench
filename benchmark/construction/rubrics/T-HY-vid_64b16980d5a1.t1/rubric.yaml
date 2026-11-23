@@ -1,0 +1,262 @@
+# GameAnything-Bench scoring material: never shown to agents during a trial.
+task_id: T-HY-vid_64b16980d5a1.t1
+source_inventory:
+- 'clip 00:00-00:03: a red multi-tier pagoda with a tall spire in the right foreground, a hazy city plain below and a snow-capped conical mountain
+  far behind; subtitle ''some day / when this scenery'''
+- 'clip 00:03-00:05: from close below, a large red gate with sweeping dark tiled roofs and a big hanging lantern, a five-storey pagoda to its
+  left, blue sky'
+- 'clip 00:05-00:07: tree-lined park path under green canopy, a small round red-and-blue emblem overlay; subtitle ''becomes a memory'''
+- 'clip 00:07-00:08: lawn with a large, wide-spreading pruned pine, visitors on a path, glass high-rises behind the trees'
+- 'clip 00:08-00:09: a wooden bridge with railings over a stone-walled moat, a person crossing, trees and a tower behind; subtitle ''what would
+  you want to remember?'''
+- 'clip 00:09-00:10: flowering red-pink shrubs in green'
+- 'clip 00:10-00:12.9: the snow-capped mountain seen through the frame of a swing set on a railed wooden deck over a town'
+- 'clip 00:12.9-00:13.8: a city street between mid-rise buildings with a red-and-white lattice tower at its end; subtitle ''i want to remember
+  you'''
+- 'clip 00:13.8-00:15.4: a busy crossing with large billboards and glass towers'
+- 'clip 00:15.5-00:18.3: park trees with an office block behind, a couple on a bench'
+- 'clip 00:18.4-00:19.3: a narrow shopping street crowded with vertical shop signs and billboards; subtitle ''forever'''
+- 'clip 00:19.4-00:20.9: pedestrians passing a row of brightly lit vending machines; subtitle ''and ever'''
+- 'clip 00:21-00:22.4: white paper strips tied in rows on cords (a shrine rack)'
+- 'clip 00:22.4-00:24.4: the snow-capped mountain framed by a red torii with a thick rope and hanging tassels'
+- 'clip 00:24.4-00:26.8: a kaleidoscopic mirror distortion of a plaza with a tree and crowds (transition); subtitle ''some day'''
+- 'audio: no transcript in the material; the burned-in subtitles are a poetic narration about memory, no place names, rules or plot'
+- 'img01: an old hand-coloured woodblock map: a temple compound with drawn halls and a pagoda (yellow) among dense town blocks (red / grey), wide
+  green fields, canals and a river along the bottom edge'
+- 'img02: aerial view at dusk: a long straight lane lined on both sides by low continuous shop rows with green tiled roofs, crowded and lit, ending
+  at a large two-storey red gate; a five-storey pagoda stands to the left of the gate; dense modern buildings and high-rises all around'
+- 'img03: a modern street map: the temple grounds with the main hall, a straight pedestrian approach running south from them to a gate on the
+  main road, a pond garden to the west, an amusement park to the north-west, a river with bridges to the east, a dense street grid around'
+- 'img04: at night, a lit two-storey red gate with large hanging lanterns at the end of a wide paved path, low red-posted buildings flanking the
+  plaza, the five-storey pagoda rising to the right'
+- 'img05: ground view along the shop lane by day: a straight paved walkway between continuous rows of small shops with shutters, red posts and
+  long name boards, the big gate at the far end'
+- 'img06: a bank of blue and red drink vending machines under a large beer banner and a red fence with ivy'
+instructions_meta:
+  requirement_groups:
+    walkable approach and layout:
+    - CR1
+    - CR3
+    - FP1
+    landmark structures:
+    - CR2
+    - VP1
+    connected district areas:
+    - CR5
+    - FP2
+    - VP3
+    - VP4
+    distant backdrop:
+    - CR4
+    - VP2
+  explicit_requirements:
+  - type: specify
+    text: The old temple quarter should sit low inside a ring of dense modern blocks and high-rises, with a snow-capped mountain rising far beyond
+      the city behind it.
+    covers:
+    - CR4
+    - VP2
+rubric:
+  content_realization:
+  - id: CR1
+    item: 'The precinct''s approach: a straight pedestrian lane lined on both sides by continuous rows of small shops leads from the street to
+      the large gate, and the path continues through the gate into the temple grounds'
+    anchors:
+      '1': a straight lane with continuous shop rows on both sides runs from the street to the gate, with temple grounds beyond the gate
+      '0.5': the lane and the gate exist but not as one straight approach (the lane does not end at the gate, shops only on one side or scattered,
+        or nothing beyond the gate)
+      '0': no shop lane leading to the gate
+    evidence:
+    - img02
+    - img03
+    - img04
+    - img05
+  - id: CR2
+    item: 'The precinct has its two traditional landmarks: a large two-storey gate and a five-storey pagoda'
+    anchors:
+      '1': both landmarks present with their defining form (a large two-storey gate; a five-storey pagoda)
+      '0.5': only one of them, or both present without their defining form (a small single-storey gate, a pagoda of a few tiers)
+      '0': neither
+    evidence:
+    - - 00:03
+      - 00:05
+    - img02
+    - img04
+  - id: CR3
+    item: The pagoda stands right beside the gate, to one side of the approach axis
+    anchors:
+      '1': the pagoda next to the gate and off the line of the approach
+      '0.5': the pagoda in the precinct but away from the gate, or its placement relative to the axis unclear
+      '0': no pagoda, or the pagoda on the axis / far from the gate
+    evidence:
+    - - 00:03
+      - 00:05
+    - img02
+    - img04
+  - id: CR4
+    cross: true
+    item: 'Old within new under a mountain: the low traditional precinct is enclosed by dense modern city blocks and high-rises (images), and
+      a mountain rises far beyond the city behind the precinct (clip)'
+    anchors:
+      '1': 'both parts: modern blocks and high-rises around the precinct on its sides, and a distant mountain beyond the city behind it'
+      '0.5': only one of the two parts (or the city only on one side of the precinct)
+      '0': neither
+    evidence:
+    - - 00:00
+      - 00:03
+    - - 00:10
+      - '00:12.9'
+    - - '00:22.4'
+      - '00:24.4'
+    - img01
+    - img02
+    - img03
+  - id: CR5
+    item: The district has a park whose moat or water channel is crossed by a footbridge (clip)
+    anchors:
+      '1': a park area with a moat or channel crossed by a bridge
+      '0.5': a park without water and bridge, or a bridge over water with no park around it
+      '0': no park
+    evidence:
+    - - 00:05
+      - 00:10
+  functions_playability:
+  - id: FP1
+    item: 'The precinct can be walked along its approach: from the street end of the shop lane, between the shop rows, through the gate and on
+      into the temple grounds, with the pagoda reachable on foot beside the gate'
+    anchors:
+      '1': a continuous walkable route street -> shop lane -> gate -> temple grounds, the gate passable, the pagoda reachable on foot
+      '0.5': the route can be walked only in part (gate blocked, lane cut off from the street or the grounds, pagoda unreachable)
+      '0': the precinct cannot be walked through
+    evidence:
+    - img02
+    - img03
+    - img04
+    - img05
+  - id: FP2
+    cross: true
+    item: 'One district, not separate scenes: the clip''s park and signage-dense modern streets are reached on foot from the image-laid-out precinct
+      in one continuous space'
+    anchors:
+      '1': the player walks from the precinct to the park and to the modern streets without teleporting or leaving the world
+      '0.5': only one of the two areas is reachable on foot, or the areas are separate builds / need teleporting
+      '0': only the precinct, or only isolated vignettes
+    evidence:
+    - - 00:05
+      - 00:10
+    - - '00:12.9'
+      - '00:20.9'
+    - img02
+    - img03
+  visual_presentation:
+  - id: VP1
+    cat: style
+    keyframes:
+    - '00:03.5'
+    - '00:04.5'
+    item: 'The gate and the pagoda look like the clip''s: red walls and posts, dark sweeping tiled roofs, a big lantern hanging in the gate'
+    anchors:
+      '1': both read as red-and-dark temple structures with sweeping tiled roofs, the gate with its lantern
+      '0.5': recognisable shapes but wrong colours / roofs, or only one structure right
+      '0': generic buildings
+    evidence:
+    - - 00:03
+      - 00:05
+    - img04
+  - id: VP2
+    cat: spatial
+    keyframes:
+    - '00:01.0'
+    - '00:11.0'
+    - '00:23.0'
+    item: 'The distant mountain looks like the clip''s: a snow-capped peak on the horizon, seen beyond the traditional structures and the city'
+    anchors:
+      '1': a distant snow-capped peak visible on the horizon behind the pagoda / gate from inside the world
+      '0.5': a mountain on the horizon, but without snow or hard to make out from the precinct
+      '0': no mountain on the horizon
+    evidence:
+    - - 00:00
+      - 00:03
+    - - 00:10
+      - '00:12.9'
+    - - '00:22.4'
+      - '00:24.4'
+  - id: VP3
+    cat: style
+    keyframes:
+    - '00:14.5'
+    - '00:18.5'
+    item: 'The modern streets are dense with signage: billboards and shop signs crowd the facades'
+    anchors:
+      '1': streets whose facades are crowded with signs and billboards
+      '0.5': modern streets with only sparse or generic signage
+      '0': none
+    evidence:
+    - - '00:13.8'
+      - '00:19.3'
+  - id: VP4
+    cat: spatial
+    keyframes:
+    - '00:07.5'
+    - '00:08.5'
+    item: 'The park looks like the clip''s: green trees and lawn, a wooden bridge over a stone-walled moat, tall modern buildings rising beyond
+      the trees'
+    anchors:
+      '1': a green park with a wooden bridge over stone-edged water, and towers visible above the trees
+      '0.5': a green park, but the bridge / moat look unlike the clip's (not wooden, natural banks) or no towers seen beyond it
+      '0': the park does not resemble the clip's (no greenery, or no bridge and water to be seen)
+    evidence:
+    - - 00:07
+      - 00:09
+play_suggestions:
+  FP1:
+  - 'start at the street end of the shop lane and walk straight in: do you reach the gate without leaving the lane, and can you pass through it?'
+  - 'from the gate, walk to the pagoda: can you reach it on foot?'
+  FP2:
+  - from the temple grounds, walk to the park and to a signage street without teleporting
+  VP2:
+  - look toward the horizon from the gate, the pagoda and the park
+  robustness:
+  - 'walk the perimeter of the district: are there holes, floating blocks or dead ends?'
+  - 'try to enter the shops, the gate and the pagoda: solid where they should be, passable where the path goes'
+  - 'visit at night as well as by day: are the landmarks still readable?'
+hybrid:
+  modality: video+image
+  roles:
+    video: 'the look of the place and its motif set: the red-and-dark temple gate and five-storey pagoda, a snow-capped mountain as the far backdrop,
+      a green park with a moat bridge and towers behind, signage-dense modern streets with vending machines; no layout (shots joined by cuts)'
+    images: 'the layout and scale of one temple precinct in its city (two maps, an aerial view, two ground views): a straight shop-lined approach
+      lane ending at a large gate, the pagoda beside the gate, the temple grounds and a pond garden beyond, dense city blocks all around; plus
+      a bank of vending machines'
+  cross_reference_requirement: The clip's temple gate and pagoda must be built in the precinct arrangement the images give (shop lane straight
+    to the gate, pagoda beside it, dense city around), with the clip's park and signage streets joined to it on foot as one district and the clip's
+    snow-capped mountain on the horizon behind the precinct and the city.
+v4_map:
+  U1: CR1
+  U2: CR2 (presence and storey counts), VP1 (colour)
+  U3: CR1
+  U4: CR3
+  U5: CR4
+  FP1: FP1, CR1 (arrangement part)
+  FP2: FP2, CR5 (park existence), CR4 (streets around the precinct)
+  FP3: 'removed: editing request (pagoda climb), kept in editing_seed.yaml'
+  VP1: VP1
+  VP2: CR1
+  VP3: CR4 (existence and placement), VP2 (look)
+  VP4: CR5 (park, water, bridge), VP4 (look)
+  VP5: VP3
+provenance:
+  source_yaml: T-HY-vid_64b16980d5a1.t1.yaml
+  source_sha256: ab9ce3304d57594b63d76bf5c1b2ff309c6798bc05373228f1a7e199a7bbf3c0
+  size_waiver: null
+  size_max: null
+  sources:
+  - refs:
+    - img01
+    - img02
+    - img03
+    - img04
+    - img05
+    - img06
+    images:
+    - hybrid/q15_ref0

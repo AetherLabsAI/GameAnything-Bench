@@ -1,0 +1,60 @@
+# Base-capability pool, Minecraft Java Edition (verified in game 2026-10-31, Minecraft 26.3 + Fabric Loader 0.19.5 + Fabric API
+# 0.162.0+26.3, a test machine with an L40S). Rewritten for gab from the original pool_minecraft.yaml (draft v0.2,
+# 2026-10-15; that file is unchanged): the draft's 23 items + MC-RULE-WORLD; the draft's 4 todo items (MC-MOVE, MC-INVENTORY,
+# MC-CONTAINERS, MC-SAVE) now have real-input probes. Same rules as the other pools: atomic base capabilities a task's change
+# could break; pass = same result as a vanilla instance. Per task 4-6 relevant items; avoid correlated picks (MC-RULE-DAYCYCLE /
+# MC-DAYNIGHT: a stopped clock fails both; MC-RULE-KEEPINV / MC-DEATH: keep_inventory fails both; MC-JOIN-* share one join).
+# Mod surface: Fabric mods (jars / source projects built with javac), datapacks, resource packs, config, saves.
+# Probes: gab/game/minecraft/mcprobes.py (in the sandbox, against the harness mod gabbridge: state / cmd / query, + real input with
+# xdotool on the game window), compare in gab/game/minecraft/probes.py; `probe: x.y` = field y of probe x (fields joined with +).
+# Runtime: a fresh offline instance per probe run in the default world (seed 2024, survival, normal; the deliverable's start.yaml
+# is ignored), the at-load probes at the spawn, the others on a sky pad (300, 200, 300); one session ~103 s.
+# A/A 2026-10-31: two runs of two fresh vanilla instances each (seed 20261030 in run 1, seed 2024 in run 2): every item agrees.
+#   Noise: terrain around the spawn 0.7% / 0.8% of the 97x97 columns differ by > 1 block (tol 8%); tick time 10.7 / 10.2 and
+#   10.1 / 11.9 ms (tol <= 2x or + 8 ms); the join position varies inside respawn_radius 10 (-6.5,2.5 vs -4.5,-1.5: compared as
+#   "within 12 blocks of the world spawn"); game-log ERROR entries 0 after the offline-network noise filter (Realms, authlib).
+# Negative mods (gab/game/minecraft/negmods/, both runs): neg_daycycle (datapack: advance_time false) -> MC-RULE-DAYCYCLE +
+#   MC-DAYNIGHT; neg_keepinv (Fabric: keep_inventory true) -> MC-RULE-KEEPINV + MC-DEATH; neg_nobuild (Fabric: block items cannot
+#   be placed) -> MC-BUILD; neg_starter (Fabric: 2 sticks on join) -> MC-JOIN-INVENTORY. Exactly these, nothing else.
+# Evidence: the verification logs.
+
+game: minecraft
+version: 26.3 (Fabric 0.19.5, Fabric API 0.162.0+26.3)
+default_picks: [MC-JOIN-STATE, MC-BUILD, MC-COMBAT, MC-DAYNIGHT, MC-PERF]
+
+# gate (gab/eval/regression.py): the STABLE item (no real crash / hang, no new fatal error kind) + the host-present
+# item(s): the stock content they reach must still be there on the modded game (numbers NOT compared with vanilla; only a mod that
+# removes / replaces the host game wholesale fails). Scores are 0 unless the gate passes. Not chosen per task.
+gate: [MC-STABLE, MC-JOIN-STATE, MC-MOVE]
+
+always:
+  - {id: MC-STABLE, capability: "no crash, and no more error entries in the game log than vanilla (offline-network noise left out)", probe: log_errors, status: ready}
+
+pool:
+  # global settings
+  - {id: MC-DIFFICULTY, capability: "world difficulty unchanged", probe: difficulty, status: ready}
+  - {id: MC-RULE-DAYCYCLE, capability: "game rule advance_time unchanged", probe: game_rules.advance_time, status: ready}
+  - {id: MC-RULE-WEATHERCYCLE, capability: "game rule advance_weather unchanged", probe: game_rules.advance_weather, status: ready}
+  - {id: MC-RULE-SPAWNING, capability: "game rules spawn_mobs / spawn_monsters unchanged", probe: game_rules.spawn_mobs+spawn_monsters, status: ready}
+  - {id: MC-RULE-KEEPINV, capability: "game rule keep_inventory unchanged", probe: game_rules.keep_inventory, status: ready}
+  - {id: MC-RULE-REGEN, capability: "game rule natural_health_regeneration unchanged", probe: game_rules.natural_health_regeneration, status: ready}
+  - {id: MC-RULE-DAMAGE, capability: "game rules fall_damage / fire_damage / drowning_damage unchanged", probe: game_rules.fall_damage+fire_damage+drowning_damage, status: ready}
+  - {id: MC-RULE-WORLD, capability: "the other world rules unchanged (mob_griefing, pvp, block_drops, random_tick_speed, raids, spawn_patrols, respawn_radius, players_sleeping_percentage, show_death_messages, immediate_respawn)", probe: game_rules.mob_griefing+pvp+block_drops+random_tick_speed+raids+spawn_patrols+respawn_radius+players_sleeping_percentage+show_death_messages+immediate_respawn, status: ready}
+  # world behaviour
+  - {id: MC-DAYNIGHT, capability: "the day-night cycle actually runs", probe: time_advances, status: ready}
+  - {id: MC-WEATHER, capability: "weather can change (rain starts when triggered)", probe: weather_changes, status: ready}
+  - {id: MC-MOBS, capability: "hostile mobs can exist in the world", probe: monsters_allowed, status: ready}
+  - {id: MC-PERF, capability: "server tick time not much slower than vanilla (<= 2x, or + 8 ms)", probe: tick_time, status: ready}
+  - {id: MC-SPAWN-TERRAIN, capability: "natural terrain around the world spawn unchanged (not for tasks that build their site near spawn)", probe: terrain_spawn, status: ready}
+  # player
+  # MC-JOIN-POSITION removed: the vanilla spawn height of seed 2024 is not repeatable (y 73 or 70: a tree
+  # leaf from a neighbouring chunk may or may not exist when the spawn is set), so it failed A/A on docker
+  - {id: MC-JOIN-INVENTORY, capability: "a new player starts with an empty inventory", probe: player_start.items, status: ready}
+  - {id: MC-JOIN-STATE, capability: "a new player starts in survival with full health and food", probe: player_start.game_mode+health+food, status: ready}
+  - {id: MC-MOVE, capability: "walking and jumping work (real keys)", probe: move_jump, status: ready}
+  - {id: MC-BUILD, capability: "the player can place and break blocks (real mouse)", probe: place_break, status: ready}
+  - {id: MC-COMBAT, capability: "melee attacks damage mobs (real mouse)", probe: combat, status: ready}
+  - {id: MC-INVENTORY, capability: "the inventory screen opens (E) and held food can be eaten (use button)", probe: inventory_use, status: ready}
+  - {id: MC-CONTAINERS, capability: "a chest opens with the use button and keeps its items", probe: containers, status: ready}
+  - {id: MC-SAVE, capability: "save and quit to the title, reopen the world: a placed block and the player position are kept", probe: save_reload, status: ready}
+  - {id: MC-DEATH, capability: "dying outside the experience behaves like vanilla (items drop, respawn near the world spawn)", probe: death_respawn, status: ready}

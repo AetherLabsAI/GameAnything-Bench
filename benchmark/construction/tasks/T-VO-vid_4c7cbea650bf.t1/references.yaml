@@ -1,0 +1,25 @@
+# Reference material: fetched from the HF dataset into $GAB_MEDIA_DIR/<task>/ by `gab media fetch` (sha256 checked).
+# The agent gets the files only (no title, author, caption or source): this file is never shown to it.
+task_id: T-VO-vid_4c7cbea650bf.t1
+refs:
+- id: c01
+  kind: video
+  file: clip_01.mp4
+  video_id: vid_4c7cbea650bf
+  source:
+    title: 02 - Women's Park Skateboarding Final 🛹 ｜ Paris Champions
+    url: null
+    channel: null
+    youtube_id: null
+  range:
+    start: 42.0
+    end: 74.0
+    text: 0:42.00-1:14.00
+  duration_s: 32.0
+  size_bytes: 4978963
+  format: mp4 H.264 720p, AAC audio
+  hf_path: media/T-VO-vid_4c7cbea650bf.t1/clip_01.mp4
+  sha256: e9b04381de8dc52da38a1c81568c76763f9024ed6c8d524a8cab29531b93d804
+  rights_note: Olympic broadcast footage with Olympic rings, Paris 2024 branding, Omega timing logos and an identifiable real athlete. Use as
+    a private reference only; do not redistribute frames or clips. Do not reproduce Olympic logos or the athlete's likeness or name in the built
+    content.

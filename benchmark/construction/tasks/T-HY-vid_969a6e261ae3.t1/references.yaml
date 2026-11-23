@@ -1,0 +1,96 @@
+# Reference material: fetched from the HF dataset into $GAB_MEDIA_DIR/<task>/ by `gab media fetch` (sha256 checked).
+# The agent gets the files only (no title, author, caption or source): this file is never shown to it.
+task_id: T-HY-vid_969a6e261ae3.t1
+refs:
+- id: c01
+  kind: video
+  file: clip_01.mp4
+  video_id: vid_969a6e261ae3
+  source:
+    title: 01 - MY NEIGHBOR TOTORO ｜ Official English Trailer
+    url: null
+    channel: null
+    youtube_id: null
+  range:
+    start: 2.5
+    end: 14.0
+    text: 0:02.50-0:14.00
+  duration_s: 11.5
+  size_bytes: 1250246
+  format: mp4 H.264 720p, AAC audio
+  hf_path: media/T-HY-vid_969a6e261ae3.t1/clip_01.mp4
+  sha256: 8dd5b1e5ff1e469ffd81dd3701d24b0fc5a548286f97c8d3faae5da2f01c316c
+  rights_note: null
+- id: c02
+  kind: video
+  file: clip_02.mp4
+  video_id: vid_969a6e261ae3
+  source:
+    title: 01 - MY NEIGHBOR TOTORO ｜ Official English Trailer
+    url: null
+    channel: null
+    youtube_id: null
+  range:
+    start: 12.5
+    end: 26.0
+    text: 0:12.50-0:26.00
+  duration_s: 13.5
+  size_bytes: 1406450
+  format: mp4 H.264 720p, AAC audio
+  hf_path: media/T-HY-vid_969a6e261ae3.t1/clip_02.mp4
+  sha256: e25c2331693afa7d8253c5640da932056cdfc3da741d2f3d508e899b7e44f834
+  rights_note: null
+- id: t01
+  kind: text
+  file: text_01.md
+  words: 159
+  paragraphs: 1
+  anchors: p001 .. p001
+  judge_file: judge/text_01.anchored.md
+  judge_sha256: 64c5a15bca1b46ad33749d01593538542107fb055c952dc9c2b427c7d0189a11
+  format: plain text (UTF-8)
+  hf_path: media/T-HY-vid_969a6e261ae3.t1/text_01.md
+  sha256: 2a72a525ef25a202f76478011eff1ebccf1f5960ff5abb7781c31aeb0e853945
+  size_bytes: 957
+- id: img01
+  kind: image
+  file: img01.jpg
+  format: jpg
+  hf_path: media/T-HY-vid_969a6e261ae3.t1/img01.jpg
+  sha256: 07752b2ab142110debb366a589bbf50716385782edb130f97279ae68d564a60d
+  size_bytes: 351822
+- id: img02
+  kind: image
+  file: img02.jpg
+  format: jpg
+  hf_path: media/T-HY-vid_969a6e261ae3.t1/img02.jpg
+  sha256: 14fe58cc643f8cb459700b2d7226570ee73455a9ffa3255b6996f19f4ed5bbf8
+  size_bytes: 248481
+- id: img03
+  kind: image
+  file: img03.jpg
+  format: jpg
+  hf_path: media/T-HY-vid_969a6e261ae3.t1/img03.jpg
+  sha256: a2f1cd66b10d95d97215dcccbbff1dd27cab3e8d888b6601352d0558313330ed
+  size_bytes: 204139
+- id: img04
+  kind: image
+  file: img04.jpg
+  format: jpg
+  hf_path: media/T-HY-vid_969a6e261ae3.t1/img04.jpg
+  sha256: 9074d4236f3d0b40ed6f211985924405918964a345581bd7a2cd9f39c82420de
+  size_bytes: 325569
+- id: img05
+  kind: image
+  file: img05.jpg
+  format: jpg
+  hf_path: media/T-HY-vid_969a6e261ae3.t1/img05.jpg
+  sha256: b7ef9454119d805c191b8027aa94898a02528d1729e4f18ee50f452f61eb6c89
+  size_bytes: 332368
+- id: img06
+  kind: image
+  file: img06.jpg
+  format: jpg
+  hf_path: media/T-HY-vid_969a6e261ae3.t1/img06.jpg
+  sha256: 4cb0860a4ae8044af0574d86e4c24e63b76d32aa075410fd60f52d712b1261c9
+  size_bytes: 246468

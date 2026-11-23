@@ -1,0 +1,186 @@
+# GameAnything-Bench scoring material: never shown to agents during a trial.
+task_id: T-IO-43b34cf1fa
+source_inventory:
+- 'img01: diagram of a two-lamp colour-light signal on black: a green lamp above a red lamp, a grey post below'
+- 'img02: a real colour-light signal hung from a steel gantry over electrified tracks: a red lamp above a green lamp (both lit), an LED number
+  ''3'' indicator below, signs ''LT ETCS'', a yellow arrow and ''20 CASTELFRANCO''; the side of a train in the left foreground'
+- 'img03: view along a ballasted line where one track splits into two at a turnout (switch rails and frog visible); a colour-light signal mast
+  beyond the junction, catenary masts, distance boards, greenery'
+- 'img04: close-up of a switch (point) machine on the sleepers beside a rail: a grey housing with a hand throw lever, padlocks and ''MOTOR'' plate,
+  rods running under the rail to the switch'
+- 'img05: interior of a signal box: a row of large levers (red, blue, black handles) on pulley wheels with cables going down through the floor,
+  label plates on each lever, some levers pulled over and others upright; a block instrument panel on the right'
+- 'img06: station platform end with two cantilever signal gantries: one shows green (with a ''DM'' indicator), the other red; further red signals
+  over the tracks ahead, curved tracks and junction trackwork, a diesel train on the right-hand track'
+instructions_meta:
+  requirement_groups:
+    track network and junctions:
+    - CR1
+    - FP1
+    - VP1
+    route setting:
+    - FP2
+    signals and vehicle control:
+    - CR2
+    - FP3
+    - VP2
+    control place:
+    - CR3
+    - FP4
+    - VP3
+  explicit_requirements:
+  - type: keep
+    text: 'Keep the red and green signals by the track: a train has to stop at red and move on once it turns green.'
+    covers:
+    - CR2
+    - FP3
+rubric:
+  content_realization:
+  - id: CR1
+    item: The game contains a rail network in which a line splits into two branches at a junction, with a rail vehicle placed on it
+    anchors:
+      '1': a rail line that divides into two branches at a switchable junction, with at least one vehicle placed on the rails
+      '0.5': rails and a vehicle exist, but there is no junction (only a single line or loose parallel tracks), or no vehicle is placed on the
+        network
+      '0': no rail network or no rail vehicle
+    evidence:
+    - 'img03: one track splitting into two at a turnout'
+    - 'img06: junction trackwork with a train'
+  - id: CR2
+    item: Each track leading into a junction has its own trackside signal that can show red or green
+    anchors:
+      '1': red / green signals stand by the track ahead of the junctions, one for each approaching track
+      '0.5': red / green signals exist, but one signal serves all tracks, or they stand away from the junctions they guard
+      '0': no red / green trackside signals (only decoration or road-style lights unrelated to the track)
+    evidence:
+    - img01
+    - img02
+    - 'img03: the signal mast at the turnout'
+    - 'img06: separate green and red signals over neighbouring tracks ahead of the junction trackwork'
+  - id: CR3
+    item: The game contains a control place away from the track that holds a grouped set of controls, one for each switch and each signal
+    anchors:
+      '1': one place set apart from the track with a row or group of controls, each tied to one switch or one signal
+      '0.5': controls exist but only at the devices themselves, or the place covers only the switches or only the signals
+      '0': no controls for the switches and signals
+    evidence:
+    - 'img05: a row of labelled levers in a signal box, cables leaving through the floor'
+  functions_playability:
+  - id: FP1
+    item: A vehicle runs over the junction and can continue onto either branch
+    anchors:
+      '1': a moving vehicle passes the junction and, on different runs, reaches each of the two branches
+      '0.5': a vehicle moves on the rails but cannot pass the junction, or only ever reaches one branch
+      '0': no vehicle can run on the rails
+    evidence:
+    - img03
+    - img06
+  - id: FP2
+    item: The player sets the turnout through a control, and the vehicle follows the branch that is set
+    anchors:
+      '1': changing the control changes the switch, and the next vehicle takes the newly set branch
+      '0.5': the control changes something visible but the route taken does not follow it reliably
+      '0': the branch cannot be changed by the player
+    evidence:
+    - img03
+    - img04
+    - img05
+  - id: FP3
+    item: 'Signals govern the vehicles on their track: a signal can be switched between red and green, and a vehicle is held at red and goes on
+      at green'
+    anchors:
+      '1': a signal changes between red and green during play and a vehicle halts at red and moves on after green
+      '0.5': the signal changes but vehicles obey it only partly (stop without resuming, or only sometimes)
+      '0': signals are fixed or have no effect on vehicles
+    evidence:
+    - img01
+    - img02
+    - img06
+  - id: FP4
+    item: Each control at the control place acts on its own switch or signal from there, without the player going to the track
+    anchors:
+      '1': using a control at the control place changes the one switch or signal it belongs to, and nothing else
+      '0.5': the controls act from the control place only for some devices, or one control changes several devices
+      '0': the devices can only be changed on the spot, or the controls have no effect
+    evidence:
+    - 'img05: levers whose cables run out of the signal box to the track'
+  visual_presentation:
+  - id: VP1
+    cat: spatial
+    item: At the junction the switch is visibly set to one branch
+    anchors:
+      '1': looking at the junction, one can see which branch the switch is set to
+      '0.5': the junction is visible but its setting cannot be told apart, or only by trying it
+      '0': no junction visible
+    evidence:
+    - img03
+    - img04
+  - id: VP2
+    cat: style
+    item: Each signal's current red or green state is clearly readable from the track
+    anchors:
+      '1': a signal's current colour is recognisable at a glance from a vehicle's or player's view on the track
+      '0.5': the colour can be told only from close by or with effort (small, dim, similar-looking states)
+      '0': the signal's state cannot be seen
+    evidence:
+    - img01
+    - img02
+    - img06
+  - id: VP3
+    cat: presentation
+    item: The current state of each control is visible to the player
+    anchors:
+      '1': the controls' current states are readily distinguishable at a glance
+      '0.5': the state is shown only for some controls or only after using them
+      '0': control states are not visible
+    evidence:
+    - img05
+play_suggestions:
+  FP1:
+  - drive or send a vehicle over the junction from both directions
+  - check that the vehicle can reach both branches
+  FP2:
+  - 'set the turnout, send a vehicle, then reset it and send another: does each take the set branch?'
+  - 'throw the switch while a vehicle is on it: what happens?'
+  FP3:
+  - toggle each signal several times and watch its lamp
+  - 'set a signal to red ahead of a moving vehicle: does it stop before the signal?'
+  - 'turn the signal green after the stop: does the vehicle move on?'
+  - check a vehicle on a parallel track with a green signal while the other is red
+  FP4:
+  - from the control place, set a full route (switch + signal) without walking to the track
+  - check that each control acts on only its own device
+  robustness:
+  - send two vehicles toward the same junction with conflicting settings
+  - break or remove a control or rail piece and see whether the system still behaves sensibly
+  - 'leave and return: are switch and signal states kept?'
+v4_map:
+  U1: CR2 (signals exist, red / green); behaviour already in FP3
+  U2: 'dropped: peripheral (the rod-linked trackside drive is the form of the switch, not its function); switch setting scored by CR1 / FP2 /
+    VP1'
+  U3: 'dropped: manual switch setting already in FP2; control states in VP3'
+  U4: CR2 (one signal per track)
+  U5: CR2 (signals stand ahead of the junctions)
+  FP1: CR1 (network, junction, a vehicle placed on it) + FP1 (vehicle runs over the junction onto either branch)
+  FP2: FP2
+  FP3: FP3
+  FP4: CR3 (grouped control place exists) + FP4 (each control acts remotely on its device)
+  FP5: 'dropped: editing request (modify requirement, moved to editing_seed.yaml)'
+  VP1: CR1 (the junction exists) + VP1 (set branch visible)
+  VP2: CR2 (signals stand at their track) + VP2 (red / green state readable)
+  VP3: VP3
+provenance:
+  source_yaml: T-IO-43b34cf1fa.yaml
+  source_sha256: 71848ecf9cb72ab5b3fa3a9f528e026fa5218f4ebf769d72582706f0f8e89af6
+  size_waiver: null
+  size_max: null
+  sources:
+  - refs:
+    - img01
+    - img02
+    - img03
+    - img04
+    - img05
+    - img06
+    bundle: 43b34cf1fa
+    title: 铁路信号与道岔：红绿灯、扳道岔、列车改道

@@ -1,0 +1,25 @@
+# the reference venv (/home/player/oss-tuxemon/venv, Python 3.12.3), exact versions
+PyTMX==3.32
+annotated-types==0.8.0
+babel==2.18.0
+cbor==1.0.0
+certifi==2026.10.23
+charset-normalizer==3.5.2
+idna==3.20
+natsort==8.4.0
+packaging==26.3
+pillow==13.0.0
+prompt_toolkit==3.0.53
+pydantic==2.14.1
+pydantic_core==2.50.1
+pygame-ce==2.5.7
+pygame-menu-ce==4.5.2
+pyperclip==1.11.0
+pyscroll==2.31
+PyYAML==6.0.3
+requests==2.34.2
+typing_extensions==4.16.0
+typing-inspection==0.4.4
+urllib3==2.8.0
+wcwidth==0.9.4
+websockets==17.3

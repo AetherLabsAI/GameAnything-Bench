@@ -1,0 +1,176 @@
+# GameAnything-Bench scoring material: never shown to agents during a trial.
+task_id: T-IO-0fd083ef5d
+source_inventory:
+- 'img01: wall painting: a richly dressed woman seated on a chair, holding a sceptre-like staff in one hand, reaches with the other to a piece
+  standing on a long low board set on a light stand; on the board''s top stands a row of pieces: tall dark pointed ones on her side and squat
+  green spool-shaped ones further away; hieroglyphic columns and a name ring above, a pitched frame around the scene; only one player is shown'
+- 'img02: the game box seen at an angle: a long wooden box whose top is a board of light squares: a block of three rows at the far end and a single
+  row of squares running down the middle of the rest, flanked by two long panels carved with running animals; a drawer at the near end with a
+  wooden pull bar on metal rings'
+- 'img03: the same board top seen straight from above: a 3 x 4 block of squares at the left end, its middle row continuing as a single lane of
+  8 squares to the right end (20 squares), the upper and lower long panels carved with animals; a drawer handle at the right end'
+- 'img04: the box from the other end (block of squares at the far right, drawer at the near left) with the pieces laid out beside it: five tall
+  pointed (conical) pieces, three short cylindrical / spool-like pieces, and two irregular knobbly bone-like objects unlike the pieces'
+instructions_meta:
+  requirement_groups:
+    piece movement:
+    - FP1
+    - FP3
+    players and their pieces:
+    - CR2
+    - CR3
+    - FP2
+    board layout and paths:
+    - CR1
+    - FP4
+    - VP1
+    readable board state:
+    - VP2
+  explicit_requirements:
+  - type: specify
+    text: Pieces should travel the board like in the pictures, from the three-row block at one end into the single lane that runs out of its middle
+      row.
+    covers:
+    - CR1
+    - FP4
+rubric:
+  content_realization:
+  - id: CR1
+    item: The board is a track of squares shaped as a three-row block at one end whose middle row continues as a single lane down the rest of
+      the board
+    anchors:
+      '1': the board has a three-row block of squares and a single lane joined to the block's middle row (the exact square count not required)
+      '0.5': a board of squares exists but its shape is otherwise (a full rectangle, a single row, or a lane joined to an outer row)
+      '0': no board of squares
+    evidence:
+    - img02
+    - img03
+    - img04
+  - id: CR2
+    item: There are two kinds of playing pieces, told apart at sight by their shape, with several pieces of each kind on the board
+    anchors:
+      '1': two piece kinds that look clearly different in shape, several of each
+      '0.5': only one kind of piece, or two kinds told apart by colour or a label only, or only one piece of each kind
+      '0': no playing pieces
+    evidence:
+    - img01
+    - img04
+  - id: CR3
+    item: 'The two sets of pieces together make up one game: two distinguishable sets of pieces are deployed at the same time on the same logical
+      board, as parts of the same game'
+    anchors:
+      '1': both sets of pieces are on the same logical board at the same time and take part in the same game
+      '0.5': both sets exist but only one is deployed on the board and the other is only on display, or the two sets are on separate, unconnected
+        boards
+      '0': no two distinguishable sets of pieces, or no recognisable board game
+    evidence:
+    - 'img01: the two piece sets grouped apart on the board, the dark pointed set on the player''s side'
+    - img04
+  functions_playability:
+  - id: FP1
+    item: Pieces stand on distinct squares of the board and are moved from square to square
+    anchors:
+      '1': pieces occupy the board's squares and moves land on squares
+      '0.5': squares exist but pieces move freely between or off them
+      '0': no square-based movement of pieces
+    evidence:
+    - img01
+    - img03
+  - id: FP2
+    item: Two sides play against each other in the same space of squares, each moving only its own set of pieces (the player against an opponent
+      or a second player)
+    anchors:
+      '1': both sides' pieces move during play, each side only its own, and they move through the same squares
+      '0.5': the opponent never moves, or either side can move the other's pieces, or the two sets are kept in areas that never meet
+      '0': only one side plays
+    evidence:
+    - img01
+    - img04
+  - id: FP3
+    item: Each piece is moved on its own
+    anchors:
+      '1': a side's pieces are moved individually, moving one leaves the others in place
+      '0.5': only one piece per side ever moves, or the pieces move as a block
+      '0': pieces cannot be moved
+    evidence:
+    - img01
+    - img04
+  - id: FP4
+    item: 'Movement follows the board''s layout: pieces travel between the three-row block and the single lane through the block''s middle row'
+    anchors:
+      '1': pieces move along the board's connections and can pass between the block and the lane
+      '0.5': pieces stay in one part of the board only, or move between squares the layout does not connect (e.g. jumping from an outer block
+        row straight into the lane)
+      '0': movement ignores the board's layout
+    evidence:
+    - img02
+    - img03
+  visual_presentation:
+  - id: VP1
+    cat: spatial
+    item: 'The board looks like the reference''s play space: one long, narrow board, many times longer than it is wide, with its squares laid
+      out along its length'
+    anchors:
+      '1': the board's overall look is recognisable as the reference's long, narrow board
+      '0.5': a board of squares but its overall look is unlike the reference (e.g. roughly square, an open field, or squares scattered over the
+        map)
+      '0': no recognisable board
+    evidence:
+    - img02
+    - img03
+    - img04
+  - id: VP2
+    cat: presentation
+    item: 'The board state is readable: the player can see which square every piece stands on and which of the two piece kinds it is'
+    anchors:
+      '1': every piece's square and kind readable together
+      '0.5': pieces visible but their kind or their square is hard to tell
+      '0': the board state cannot be read
+    evidence:
+    - img01
+    - img04
+play_suggestions:
+  FP1:
+  - 'move a piece several times: does it always land on a square?'
+  - try to place a piece off the board or between squares
+  FP2:
+  - try to move an opponent's piece
+  - 'watch several opponent moves: does it move its own pieces?'
+  - 'try to move twice in a row: are turns kept?'
+  - watch whether pieces of the two sides ever come near each other on the track
+  FP3:
+  - on several turns, try to move a different own piece each time
+  - check that moving one piece leaves the others where they stand
+  FP4:
+  - 'play long enough for a piece to pass from the block into the lane: is the whole board used?'
+  - try to move a piece from an outer row of the block straight into the lane
+  robustness:
+  - 'play a match to the end: is there a goal, a winner and a way to play again?'
+  - 'try an illegal move: is there feedback?'
+  - leave in the middle of a match and come back
+v4_map:
+  U1: 'dropped: mechanism already scored by FP1 (square-to-square movement)'
+  U2: CR1
+  U3: CR2
+  U4: CR3
+  FP1: FP1
+  FP2: FP2 (existence of two sides -> CR3)
+  FP3: FP3 (several pieces per side -> CR2)
+  FP4: FP4 (block-lane connection as structure -> CR1)
+  FP5: CR3 (both sets on one board) + FP2 (same space during play)
+  FP6: 'dropped: editing request (trap squares), moved to a separate Editing task (editing_seed.yaml)'
+  VP1: VP1 (elongated overall look) + CR1 (block-into-lane shape and connection)
+  VP2: VP2
+provenance:
+  source_yaml: T-IO-0fd083ef5d.yaml
+  source_sha256: 44f287f0b1eaf4d21877165de8375a4e57849e83e6e6a0b3776f13076e8f7235
+  size_waiver: null
+  size_max: null
+  sources:
+  - refs:
+    - img01
+    - img02
+    - img03
+    - img04
+    bundle: 0fd083ef5d
+    title: 古埃及塞尼特棋：壁画、棋盒两面与棋子

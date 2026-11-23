@@ -1,0 +1,24 @@
+# Reference material: fetched from the HF dataset into $GAB_MEDIA_DIR/<task>/ by `gab media fetch` (sha256 checked).
+# The agent gets the files only (no title, author, caption or source): this file is never shown to it.
+task_id: T-VO-vid_7ed58bbf8d32.t1
+refs:
+- id: c01
+  kind: video
+  file: clip_01.mp4
+  video_id: vid_7ed58bbf8d32
+  source:
+    title: 18 - Mario Races on Rainbow Road! 🌈 ｜ The Super Mario Bros. Movie ｜ Adventure & Play [o1i0y_aDQlc]
+    url: https://www.youtube.com/watch?v=o1i0y_aDQlc
+    channel: null
+    youtube_id: o1i0y_aDQlc
+  range:
+    start: 136.5
+    end: 175.0
+    text: 2:16.50-2:55.00
+  duration_s: 38.5
+  size_bytes: 9642756
+  format: mp4 H.264 720p, AAC audio
+  hf_path: media/T-VO-vid_7ed58bbf8d32.t1/clip_01.mp4
+  sha256: 0bc3a3c1a4a57f8d979ba05e4bb77f99846a7bb7fd03d475f71be66296cc3793
+  rights_note: 'Copyrighted animated film footage (a promotional clip): use as a private reference only and do not redistribute. The task must
+    transfer the mechanic with original or generic assets rather than reproduce the film''s characters or vehicles.'

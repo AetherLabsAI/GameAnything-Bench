@@ -1,0 +1,24 @@
+# Reference material: fetched from the HF dataset into $GAB_MEDIA_DIR/<task>/ by `gab media fetch` (sha256 checked).
+# The agent gets the files only (no title, author, caption or source): this file is never shown to it.
+task_id: T-VO-vid_b4f7eeb6be71.t1
+refs:
+- id: c01
+  kind: video
+  file: clip_01.mp4
+  video_id: vid_b4f7eeb6be71
+  source:
+    title: Archers at the Olympics shoot with recurve bows ｜ #ArcheryatTokyo [fQ8oi8dhZjU]
+    url: https://www.youtube.com/watch?v=fQ8oi8dhZjU
+    channel: null
+    youtube_id: fQ8oi8dhZjU
+  range:
+    start: 88.6
+    end: 149.1
+    text: 1:28.60-2:29.10
+  duration_s: 60.5
+  size_bytes: 4434043
+  format: mp4 H.264 720p, AAC audio
+  hf_path: media/T-VO-vid_b4f7eeb6be71.t1/clip_01.mp4
+  sha256: 64fc88eca1722095676a0a8aadf0f418476e06805621432b91f6cffdc530d7a7
+  rights_note: Real broadcast and tournament footage with sponsor branding (Hyundai, Errea) and identifiable athletes, edited by a third party.
+    Use as a private reference only, with no redistribution of the footage or frames.

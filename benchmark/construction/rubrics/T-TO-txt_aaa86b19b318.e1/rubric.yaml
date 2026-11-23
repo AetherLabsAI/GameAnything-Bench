@@ -1,0 +1,310 @@
+# GameAnything-Bench scoring material: never shown to agents during a trial.
+task_id: T-TO-txt_aaa86b19b318.e1
+source_inventory:
+- 'c19.p001-c19.p018: at his cabin in the snow Edmund Hale despairs of the chained, ferocious wolf-dog Silvertooth; the dog-musher Dan points
+  out harness marks (he was a sled-dog) and advises turning him loose, with a club'
+- 'c19.p019-c19.p026: Dan unchains him holding a club, which the dog watches; freed for the first time in months, Silvertooth is perplexed and
+  does not run; Hale says he needs kindness and brings meat'
+- 'c19.p027-c19.p032: the sled-dog Major tries to take the meat and is killed; Dan kicks Silvertooth and is bitten'
+- 'c19.p033-c19.p046: Hale calls him untamable and readies his revolver; Dan pleads for a fair chance and promises to kill him himself if it fails;
+  Hale approaches unarmed, talking gently'
+- 'c19.p047-c19.p049: Silvertooth, expecting punishment and hating to be touched, lets the unarmed man come near but bites the descending hand'
+- 'c19.p050-c19.p067: Dan fetches a rifle to keep his promise; Silvertooth snarls at him, not at Hale, and leaps out of sight as the rifle is
+  levelled; both men agree he is too intelligent to kill'
+- 'c20.p001-c20.p007: next day Hale sits unarmed nearby and talks for a long time; he offers meat, tosses it when refused, then keeps proffering
+  it until Silvertooth eats from his hand, growling'
+- 'c20.p008-c20.p020: the hand descends; torn between distrust and the soothing voice, Silvertooth submits to patting while growling; Dan interrupts
+  in disbelief and the dog keeps tolerating the hand'
+- 'c20.p021-c20.p025: the end of the reign of hate; he stays because he needs a god and prefers Hale to Silas Crane; he guards the master''s property
+  at night and learns to tell thieves from honest visitors'
+- 'c20.p026-c20.p031: daily petting; his growl gains a croon only Hale hears; like grows into love; his love is silent and undemonstrative (he
+  never barks, never runs to meet the master, only waits and watches)'
+- 'c20.p032-c20.p036: he thrashes the team into accepting him, tolerates Dan as the master''s possession, works in harness once the master puts
+  it on him and becomes lead dog; Dan praises the purchase'
+- 'c20.p037-c20.p041: in late spring the master leaves without warning; Silvertooth waits, stops eating, falls sick and lets the team thrash him;
+  Dan writes that he may die'
+- 'c20.p042-c20.p052: the master returns at night; Silvertooth stands waiting, then comes, his eyes alight, and for the first time snuggles his
+  head under the master''s arm'
+- 'c20.p053-c20.p057: rapid recovery; he beats the whole team that attacks him; snuggling as his final expression of absolute trust'
+- 'c20.p058-c20.p070: one night Silas Crane, come with a chain and a club to steal him, is pulled down by Silvertooth, rescued by Hale and sent
+  away in silence'
+- 'c21.p001-c21.p024: Silvertooth senses an impending change and whines at the door; Hale and Dan argue that a wolf in California would never
+  do, Hale unsure of his own mind'
+- 'c21.p025-c21.p042: the packing; Silvertooth howls and stops eating; a goodbye inside the cabin (he snuggles instead of growling); he is locked
+  in and howls as for the dead'
+- 'c21.p043-c21.p062: on the deck of the steamer Aurora Silvertooth appears (he broke through the window); he evades Dan but comes at once to
+  Hale''s voice; Hale decides at the last moment to take him'
+- 'c22.p001-c22.p006: San Francisco overwhelms him with power, noise and traffic; chained in a baggage car, he guards the master''s bags; he emerges
+  into quiet sunlit country'
+- 'c22.p007-c22.p018: he attacks when the master''s mother embraces him; Hale commands him down and makes him watch the embraces repeated unharmed;
+  he runs after the carriage'
+- 'c22.p019-c22.p027: the estate (stone gateway, tree-lined drive, lawns and oaks, hayfields and hills, a deep-porched house on a rise); the sheepdog
+  Bonnie blocks him; he cannot attack a female, so he bowls her over and outruns her'
+- 'c22.p028-c22.p041: the deerhound Rufus knocks him over, Bonnie again; the master holds him; the family meets him; he follows the master into
+  the house and lies down at his feet, wary'
+- 'c23.p001-c23.p004: at Oak Hollow the dogs accept him once the gods admit him to the house; he keeps aloof from Rufus; Bonnie, from inherited
+  fear of the wolf, wages a petty feud he cannot answer'
+- 'c23.p005-c23.p011: he learns the household (Judge Hale and his wife, the sisters Nell and Rosalind, the master''s wife Ruth, the children)
+  as the master''s possessions, ranked by their favour with him; snuggling and the croon are kept for the master alone; servants get neutrality'
+- 'c23.p012-c23.p014: a domain of many laws he learns by experience; the master''s voice, more than his rare cuff, is the compass of his conduct'
+- 'c23.p015-c23.p019: he eats a stray chicken, rushes a groom who comes with a whip, and Bonnie drives him off; the master needs to catch him
+  in the act'
+- 'c23.p020-c23.p030: he raids a chicken-house at night; the master shows him the dead hens, scolds and cuffs him, then checks him by voice in
+  the chicken yard until he ignores the hens; the judge says a chicken-killer can never be cured and loses a wager when Silvertooth spends an
+  afternoon locked in with the chickens unharmed'
+- 'c23.p031-c23.p036: the complete law: tame animals (the gods'' property) are protected, creatures of the Wild are prey; in town he must restrain
+  every impulse and endure strangers; the master punishes the boys who stone him'
+- 'c23.p037-c23.p042: three saloon dogs harass him while he is forbidden to fight; set on him one day, he waits for the master''s permission,
+  then defeats them; dogs no longer molest the Fighting Wolf'
+- 'c24.p001-c24.p007: prosperous, happy Southland months; he keeps the law yet a lurking ferocity remains; no fellowship with dogs; Bonnie still
+  hounds him; faint longing for the snow'
+- 'c24.p008-c24.p010: he learns to laugh at the master''s banter and to romp with him, a liberty he allows no one else'
+- 'c24.p011-c24.p019: he runs beside the master''s horse; once barks to warn about a plunging horse; when the master is thrown and breaks his
+  leg, he is ordered home'
+- 'c24.p020-c24.p037: on the porch the family misreads him (the mother fears for the children, the judge says a wolf cannot be trusted); he tears
+  Ruth''s dress, barks, and leads them to the master; he wins a warmer place, though the judge holds to his opinion'
+- 'c24.p038-c24.p039: in his second Southland winter Bonnie''s nips turn playful; he leaves the master''s ride to run with her in the woods'
+- 'c25.p001-c25.p008: the convict Tom Garrick, made a beast by a lifetime of brutal treatment, kills his guards to escape San Quentin; a manhunt
+  with a price on his head; he disappears'
+- 'c25.p009-c25.p011: Judge Hale had sentenced him in a case framed by the police, unaware of the frame; Garrick, believing the judge complicit,
+  swore vengeance in court; the women of Oak Hollow are afraid'
+- 'c25.p012: each night Ruth secretly lets Silvertooth sleep in the big hall and lets him out before dawn'
+- 'c25.p013-c25.p019: at night he scents a stranger, follows him silently and, as the man starts up the great staircase toward the family, attacks
+  without warning; shots, a crash of furniture; in the light the man on the floor is Tom Garrick'
+- 'c25.p020-c25.p029: Silvertooth lies gravely injured; the surgeon gives him almost no chance; the judge spares no expense, the sisters nurse
+  him, and the vitality of the Wild pulls him through'
+- 'c25.p030-c25.p032: weeks in plaster casts, dreaming of the Northland and his past, and a recurring nightmare of the electric cars'
+- 'c25.p033-c25.p039: the casts come off; he stands, tottering; the women name him the Blessed Wolf and the judge, saying no mere dog could have
+  done it, adopts the name'
+- 'c25.p040-c25.p045: led outside by all Oak Hollow, he finds Bonnie with her puppies at the stable; a puppy licks him, he licks it back and lets
+  the puppies tumble over him in the sun'
+instructions_meta:
+  requirement_groups:
+    character relationships:
+    - CR1
+    - CR2
+    - FP1
+    major transitions:
+    - CR4
+    world rules:
+    - FP2
+    resolution:
+    - CR5
+    - CR6
+    - FP3
+    - VP3
+    recognisable environments:
+    - CR3
+    - VP1
+    - VP2
+  explicit_requirements:
+  - type: specify
+    text: 'The move south should happen like in the text: Hale means to leave Silvertooth behind, but the dog breaks out and follows him onto
+      the steamer, so Hale changes his mind and takes him along.'
+    covers:
+    - CR4
+rubric:
+  content_realization:
+  - id: CR1
+    item: The game contains Silvertooth as a wolf-dog hardened by past abuse into a fierce, distrustful fighter, yet intelligent and perceptive
+      of human intent
+    anchors:
+      '1': Silvertooth is shown fierce and distrustful from past mistreatment AND intelligent in reading people's intent
+      '0.5': only the ferocity or only the intelligence is shown
+      '0': missing, or he is a friendly or ordinary dog
+    evidence:
+    - c19.p003
+    - c19.p047
+    - - c19.p057
+      - c19.p067
+    - c20.p022
+  - id: CR2
+    item: 'The game shows the master (Hale) as Silvertooth''s one god: his full trust goes to the master alone, and the others around him count
+      only as the master''s people'
+    anchors:
+      '1': a single bond with the master, the others treated as the master's people, full trust reserved for the master
+      '0.5': loyalty to the master is shown, but not how he relates to the others through the master
+      '0': missing, or he bonds equally with everyone
+    evidence:
+    - c20.p033
+    - - c23.p005
+      - c23.p011
+    - c24.p010
+    - c21.p051
+  - id: CR3
+    item: 'The game has the story''s two settings as distinct places in order: the Northland frontier cabin where it begins and the Southland
+      country estate Oak Hollow where it continues'
+    anchors:
+      '1': both the northern cabin and the southern estate exist as distinct places, the cabin first and the estate later
+      '0.5': only one of the two settings, or both without a clear order
+      '0': neither setting
+    evidence:
+    - c19.p002
+    - c22.p006
+    - c22.p019
+  - id: CR4
+    item: 'The move south happens as in the text: Hale means to leave Silvertooth behind, the dog breaks out and follows him onto the steamer,
+      and this makes Hale change his mind and take him along'
+    anchors:
+      '1': Hale's decision to leave him, the dog's breakout and following onto the steamer, and Hale reversing his decision because of it, in
+        that order
+      '0.5': the move south is there, but Hale never means to leave him or the dog's following is not what changes his mind
+      '0': missing, or the order / cause is wrong
+    evidence:
+    - - c21.p006
+      - c21.p012
+    - - c21.p025
+      - c21.p042
+    - - c21.p043
+      - c21.p058
+  - id: CR5
+    item: The game contains Tom Garrick, a brutalised escaped convict who swore vengeance on Judge Hale for sentencing him
+    anchors:
+      '1': an escaped, dangerous convict whose motive is revenge on the judge who sentenced him
+      '0.5': a dangerous intruder or convict without the revenge motive against the judge
+      '0': missing
+    evidence:
+    - - c25.p001
+      - c25.p006
+    - - c25.p009
+      - c25.p011
+  - id: CR6
+    item: 'The household''s view of Silvertooth changes because of his defence: before the climax they distrust him as a wolf, after it they honour
+      him'
+    anchors:
+      '1': the family's distrust of the wolf is shown before the night defence, and their honour of him after it, as its consequence
+      '0.5': he is honoured at the end, but no earlier distrust is shown, or the change is not tied to the defence
+      '0': missing
+    evidence:
+    - - c24.p023
+      - c24.p025
+    - - c25.p020
+      - c25.p028
+    - - c25.p033
+      - c25.p039
+  functions_playability:
+  - id: FP1
+    item: 'Taming: the creature starts hostile and distrustful, and its trust has to be earned step by step through patient, non-threatening actions;
+      it is not tame at the start, nor won in one action'
+    anchors:
+      '1': a hostile creature whose trust visibly grows over several patient, non-threatening interactions, and which, when threatened or attacked,
+        shows wariness, backs away or fights back
+      '0.5': trust grows, but in one step, or the creature is never really hostile
+      '0': 'no taming: the creature is friendly from the start, or there is no creature to win over'
+    evidence:
+    - - c19.p019
+      - c19.p021
+    - c19.p031
+    - - c19.p043
+      - c19.p049
+    - - c19.p063
+      - c19.p065
+    - - c20.p001
+      - c20.p020
+  - id: FP2
+    item: 'Adapting to the new home: the creature has to learn the household''s law of restraint under the master''s guidance (the home''s tame
+      animals are protected, wild creatures stay prey), and its conduct visibly changes afterwards'
+    anchors:
+      '1': a stage in the new home where the creature learns, through the master's voice / disapproval rather than beatings, to leave the tame
+        alone, and then behaves accordingly
+      '0.5': rules exist but there is no learning (the creature is correct from the start or never), or the rule has nothing to do with sparing
+        the tame
+      '0': no household rules
+    evidence:
+    - - c23.p012
+      - c23.p014
+    - - c23.p020
+      - c23.p032
+  - id: FP3
+    item: 'Climax and ending: after the bond and the new home are established, an intruder threatens the family at night, the creature defends
+      them at a heavy cost to itself, and the story comes to an ending'
+    anchors:
+      '1': a playable night defence of the household against an intruder that comes after the earlier stages, costs the creature dearly and leads
+        to an ending
+      '0.5': a defence happens, but out of order, without a cost to the creature or without an ending
+      '0': no defence climax and no ending
+    evidence:
+    - - c25.p013
+      - c25.p020
+    - - c25.p028
+      - c25.p039
+  visual_presentation:
+  - id: VP1
+    cat: style
+    item: 'The look of the Northland setting: an isolated frontier cabin in the snow'
+    anchors:
+      '1': a snowy, isolated frontier cabin, recognisably cold and remote
+      '0.5': snow or a cabin, but not a cold frontier place
+      '0': no northern look
+    evidence:
+    - c19.p002
+    - c19.p003
+    - c20.p029
+  - id: VP2
+    cat: spatial
+    item: 'The look of Oak Hollow: a sunny, spacious country estate, with a large house looking down over its lawns and grounds'
+    anchors:
+      '1': a warm, open, sunlit estate with a large house above its grounds
+      '0.5': a house, but not a spacious sunny estate
+      '0': no southern home
+    evidence:
+    - c22.p006
+    - c22.p019
+    - c23.p012
+    - c24.p001
+  - id: VP3
+    cat: key_moment
+    item: 'The night defence: inside the house at night, the wolf-dog stops the intruder on his way to where the family sleeps'
+    anchors:
+      '1': a house interior at night where the wolf-dog visibly stands between the intruder and the family's part of the house (e.g. the stairs
+        up to them), recognisable as a night defence of the home
+      '0.5': a night fight, but not inside the house or not between the intruder and the family
+      '0': no such moment
+    evidence:
+    - - c25.p013
+      - c25.p018
+play_suggestions:
+  FP1:
+  - 'approach the creature quickly, or with a weapon / threat, or attack it: does it show wariness, back away or fight back, unlike with a calm,
+    patient approach?'
+  - 'count how many interactions it takes before the creature accepts touch: is it more than one?'
+  FP2:
+  - act against a household rule (go for a tame animal) and observe the master's response
+  - 'after the guidance, repeat the situation: does the creature now leave the tame animal alone?'
+  FP3:
+  - 'try to reach the climax before the earlier stages: is it locked or out of order?'
+  - 'play the night defence through: is there an ending with the creature''s cost, and can you continue or replay?'
+  robustness:
+  - 'leave the creature alone for a long time during taming: does its state stay consistent?'
+  - 'repeat friendly actions many times in a row: does trust grow sensibly, without breaking?'
+  - 'lose or fail the night defence on purpose: is the outcome sensible?'
+v4_map:
+  U1: 'dropped: mechanism already scored by FP1 (patient, non-threatening taming)'
+  U2: 'dropped: mechanism scored by FP2; the tame / wild law moved into FP2'
+  U3: CR1
+  U4: CR5
+  U5: CR2
+  U6: 'CR4 (move south cause); separation distress dropped: peripheral (the late-spring separation is a sub-episode proving the bond, which CR2
+    scores)'
+  U7: CR6 (distrust to honour); revenge motive in CR5, the defence in FP3
+  FP1: FP1
+  FP2: 'dropped: peripheral (the late-spring departure, sickness and reunion are a sub-episode, not a spine turning point); relocation cause moved
+    to CR4'
+  FP3: FP2 (tame / wild law added from U2)
+  FP4: FP3 (playable climax, ending); household acceptance moved to CR6
+  FP5: 'dropped: editing (player-chosen name, a modify requirement) moved to editing_seed.yaml'
+  VP1: VP1 (look); existence of the northern setting moved to CR3
+  VP2: VP2 (look); existence and order of the settings moved to CR3
+  VP3: 'dropped: duplicate (the dog''s visible hostility is CR1, its gradual acceptance of a calm person is FP1)'
+  VP4: VP3 (generalised from the staircase foot to the intruder stopped between him and the family)
+provenance:
+  source_yaml: T-TO-txt_aaa86b19b318.e1.yaml
+  source_sha256: 9a9e880a407491ac205da512acad809719bdc6940a0140f1e82cf4a901932a96
+  size_waiver: null
+  size_max: null
+  sources:
+  - ref: t01
+    title: White Fang
+    author: Jack London
+    text_id: txt_aaa86b19b318
+    excerpt_id: e1

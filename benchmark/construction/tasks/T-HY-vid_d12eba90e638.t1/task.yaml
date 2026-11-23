@@ -1,0 +1,16 @@
+# GameAnything-Bench task T-HY-vid_d12eba90e638.t1 (public part). Instruction: instruction_fine.md.
+task_id: T-HY-vid_d12eba90e638.t1
+version: '0.2'
+category: mechanics_behavior
+modality: video+text
+domain: film
+track: core
+target_game: godot-tps
+references:
+- c01
+- c02
+- t01
+provenance:
+  pipeline: reference_curation ga_author (v3 draft -> crosscheck -> reconcile -> instruct -> explicit) -> restructure_v4
+  rules_version: v4.2
+  review_status: pending

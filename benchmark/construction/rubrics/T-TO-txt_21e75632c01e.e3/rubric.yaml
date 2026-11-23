@@ -1,0 +1,265 @@
+# GameAnything-Bench scoring material: never shown to agents during a trial.
+task_id: T-TO-txt_21e75632c01e.e3
+source_inventory:
+- 'c33.p001-c33.p017: next morning Tom Harker regrets the failed escape; the Orion heads S.S.W., surfaces briefly in a gale, its position is pricked
+  far from any coast; no means of flight'
+- 'c33.p018-c33.p028: at night Captain Hargrave invites Marchand alone on a walk over the sea bottom in darkness (''we must climb a mountain'');
+  diving-dresses and iron-pointed sticks, no electric lamps'
+- 'c33.p029-c33.p031: on the Atlantic floor near midnight, black water; a reddish light about two miles off lights the way; rain patters on the
+  surface above; the soil turns stony, faint phosphorescence, slippery seaweed; the Orion''s lantern pales behind'
+- 'c33.p032-c33.p034: the rosy light grows; Marchand wonders if men made it; the glow is a reflection over the top of a mountain about 800 feet
+  high, its source on the far side; the Captain leads surely through the stony maze'
+- 'c33.p035-c33.p036: at one in the morning, the first slopes: a copse of dead, leafless, petrified trees overtopped by pines, hung with seaweed,
+  branches black against the water, upper parts tinted red; dark galleries and glades'
+- 'c33.p037-c33.p038: a perilous climb over narrow passes above gulfs, crevices, trunks thrown across abysses; leaning rocks and natural towers
+  that seem to defy gravity'
+- 'c33.p039: above the tree line, a hundred feet below the top; fractures and grottoes with giant crustacea and poulps, their eyes shining in
+  the dark'
+- 'c33.p040-c33.p043: a first platform with ruins of castles and temples overgrown with zoophytes and seaweed; the Captain points higher; the
+  summit, a ten-yard circle commanding the rock mass'
+- 'c33.p044-c33.p046: the far side drops twice as deep; the mountain is a volcano: a crater fifty feet above the peak pours lava in a cascade
+  of fire, no flames under water, lighting the lower plain to the horizon'
+- 'c33.p047-c34.p002: on the plain below lies a ruined town: fallen temples, columns, arches, an aqueduct, an acropolis, a quay, sunken walls
+  and streets; the Captain writes one word on basalt: Atlantis'
+- 'c34.p003-c34.p004: an hour of contemplation; tremors and rumbling from the mountain; moonlight through the water; quick descent through the
+  mineral forest back to the Orion''s lantern at dawn'
+- 'c35.p001-c35.p003: next day the Orion runs south at fifty fathoms; giant rays, sharks, swordfish and sea-dragons'
+- 'c35.p004-c35.p005: the seabed turns stony and volcanic; a high wall closes the southern horizon (an island, perhaps the Canaries or Cape Verde);
+  the Orion stops by it; next morning it floats on the surface in total darkness'
+- 'c35.p006-c35.p015: ''Underground'', says the Captain; a faint circular gleam overhead; the lantern is lit: the Orion lies by a mountain forming
+  a quay, on a lake enclosed by a circle of walls two miles across, level with the sea, the walls leaning into a funnel-shaped vault with a circular
+  opening of daylight at the top'
+- 'c35.p016-c35.p021: the heart of an extinct volcano invaded by the sea; reached by a natural canal about ten yards below the ocean surface;
+  a hidden harbour sheltered from all storms; the crater now lets in air; an island that seems a sandbank to vessels'
+- 'c35.p022-c35.p027: its use: drowned forests turned to coal are mined under the water by the crew in diving-dresses to make sodium for the Orion''s
+  electricity; the smoke from the crater makes the volcano look active; one day''s stay, time to make the round of the lagoon'
+- 'c35.p028-c35.p037: Marchand brings Gaspard and Tom, who looks for an exit; a sandy shore up to five hundred feet wide rings the lake below
+  stony slopes of volcanic blocks and pumice; slippery inclined slopes climb; talk of how the sea flooded the crater'
+- 'c35.p038: a steeper, harder climb; black basalt prisms like a colonnade supporting the vault, cold lava streams, sulphur; light from the crater
+  above; stopped at about 250 feet under the overhanging vault, the ascent becomes a circular walk; sparse shrubs and flowers'
+- 'c35.p039-c35.p046: at some dragon-trees Tom finds a hive of bees and smokes out the honey'
+- 'c35.p047: the lit, motionless lake seen at every turn, the crew working on the platform and the mountain; hawks, kestrels and bustards; the
+  crater gapes like a well, clouds visible through it; descent to the shore, sea-fennel and shellfish; back on board; the Orion leaves the next
+  day beneath the waves'
+instructions_meta:
+  requirement_groups:
+    night route and climb:
+    - CR1
+    - CR2
+    - CR3
+    - FP1
+    - VP1
+    summit view:
+    - CR4
+    - VP2
+    - VP3
+    lagoon access:
+    - CR6
+    - FP3
+    lagoon exploration and enclosure:
+    - CR5
+    - FP2
+    - VP4
+  explicit_requirements:
+  - type: keep
+    text: Keep the underwater volcano pouring glowing lava from the mountain top, because its red glow should be the main light you walk toward
+      across the dark seabed.
+    covers:
+    - VP2
+    - CR2
+  - type: specify
+    text: The lagoon should connect to the open sea only through a natural tunnel below the water's surface, like in the text.
+    covers:
+    - CR6
+    - FP3
+rubric:
+  content_realization:
+  - id: CR1
+    item: 'The game contains the night route: a sea floor plain from which a mountain rises, with a way leading across the plain and up the mountain
+      to its summit'
+    anchors:
+      '1': a sea floor plain, a mountain rising from it, and a route running from the plain up to a summit
+      '0.5': the sea floor and the mountain both present but no route between them or no summit, or the mountain not under water
+      '0': neither the sea floor plain nor the mountain
+    evidence:
+    - c33.p029
+    - - c33.p033
+      - c33.p035
+    - c33.p043
+  - id: CR2
+    item: The distant reddish glow the night walk heads toward is the light of the mountain's own volcano, an active underwater volcano at its
+      top
+    anchors:
+      '1': the red glow seen from the sea floor comes from an active volcano at the mountain's top
+      '0.5': a red glow and a volcano both present but the glow has another source (lamps, a fire, a lit city), or the volcano is not on the mountain
+        the route climbs
+      '0': no volcano at the mountain
+    evidence:
+    - c33.p029
+    - - c33.p032
+      - c33.p033
+    - - c33.p044
+      - c33.p045
+  - id: CR3
+    item: The mountain's lower slopes are covered by a forest of dead, petrified trees that the route passes through
+    anchors:
+      '1': a stand of bare, dead, stone-like trees on the lower slopes, on the way up
+      '0.5': trees present but living and leafy, or not on the mountain's slopes / not on the route
+      '0': no forest on the mountain
+    evidence:
+    - - c33.p035
+      - c33.p036
+    - c34.p004
+  - id: CR4
+    item: Beyond the mountain, on the plain below the summit, lies a sunken ruined ancient city
+    anchors:
+      '1': a ruined city on the plain on the far side of the mountain, below and in view of the summit
+      '0.5': a ruined city present but not placed on the plain below the summit (e.g. only ruins passed on the way up)
+      '0': no ruined city
+    evidence:
+    - - c33.p043
+      - c33.p044
+    - c33.p047
+    - c34.p001
+  - id: CR5
+    item: 'The game contains the lagoon: a sea-flooded lake inside an extinct volcano, closed in all round by walls that lean inward into a vault
+      with an opening at its top'
+    anchors:
+      '1': a lake enclosed all round by crater walls closing into a rock vault, with an opening to the sky at the apex
+      '0.5': a cave or underground lake without the volcanic crater form, or a crater lake open to the sky without the enclosing vault
+      '0': no lagoon
+    evidence:
+    - c35.p015
+    - c35.p017
+    - c35.p035
+    - c35.p038
+  - id: CR6
+    item: The lagoon is joined to the open sea only by a natural passage below the water's surface
+    anchors:
+      '1': a submerged natural passage between the open sea and the lagoon, and no other way in from the sea
+      '0.5': a passage present but above water or an obvious open gap in the walls, or the link to the sea left unclear
+      '0': no connection between the lagoon and the open sea
+    evidence:
+    - c35.p015
+    - c35.p017
+    - - c35.p035
+      - c35.p037
+  functions_playability:
+  - id: FP1
+    item: 'The night walk can be travelled on foot: across the sea floor and up the mountain to its summit, and back down'
+    anchors:
+      '1': a connected walkable route across the sea floor up the mountain to a reachable summit, with a way back
+      '0.5': the summit cannot be reached on foot, the parts of the route are not connected in order, or there is no way back
+      '0': no traversable route
+    evidence:
+    - c33.p029
+    - c33.p031
+    - - c33.p035
+      - c33.p039
+    - c33.p043
+    - c34.p004
+  - id: FP2
+    item: 'The lagoon can be explored on foot: round the lake along its shore and up the walls to a high path under the vault'
+    anchors:
+      '1': walking the shore round the lake and climbing to a high path
+      '0.5': only the shore walk or only the climb, or the lagoon only seen and not walked
+      '0': the lagoon cannot be entered or explored
+    evidence:
+    - c35.p031
+    - c35.p038
+    - c35.p047
+  - id: FP3
+    item: The lagoon is reached from the open sea by travelling through the underwater passage into the enclosed crater
+    anchors:
+      '1': the player (or the vessel carrying the player) passes from the open sea through the submerged passage into the lagoon
+      '0.5': the lagoon is reached, but the passage is only told and never travelled or seen
+      '0': no way from the sea to the lagoon
+    evidence:
+    - c35.p004
+    - c35.p005
+    - c35.p017
+    - c35.p047
+  visual_presentation:
+  - id: VP1
+    cat: style
+    item: The night sea floor is deep darkness with one distant reddish glow as its main light
+    anchors:
+      '1': a dark underwater scene lit mainly by a distant red / orange glow
+      '0.5': dark but evenly lit, or the glow is not reddish or not the main light
+      '0': neither the darkness nor the glow
+    evidence:
+    - c33.p029
+    - c33.p032
+    - c33.p033
+    - c33.p036
+  - id: VP2
+    cat: key_moment
+    item: 'The eruption: glowing lava pours from a crater at the mountain''s top and cascades down under water'
+    anchors:
+      '1': a crater at the top with visible streams of glowing lava running down
+      '0.5': a volcano shown but without a visible lava flow
+      '0': none
+    evidence:
+    - - c33.p044
+      - c33.p046
+    - c34.p003
+  - id: VP3
+    cat: spatial
+    item: The ruined city seen from the summit looks like an ancient city of classical architecture fallen into ruin
+    anchors:
+      '1': recognisably classical ruins (temples, columns, arches) spread over the plain, seen from the summit
+      '0.5': ruins visible but generic rubble, or the city's look cannot be made out from the summit
+      '0': nothing of the city visible
+    evidence:
+    - c33.p044
+    - c33.p047
+  - id: VP4
+    cat: style
+    item: Inside the lagoon, the light is the daylight falling through the bright opening at the top of the vault
+    anchors:
+      '1': the lake and walls visibly lit by daylight coming from the bright opening overhead
+      '0.5': the opening present but the inside evenly lit, or the opening not visible from the lake
+      '0': no light from an overhead opening visible
+    evidence:
+    - c35.p005
+    - c35.p015
+    - c35.p038
+    - c35.p047
+play_suggestions:
+  FP1:
+  - 'start on the sea floor and walk to the summit without leaving the route: is every stretch connected?'
+  - from the summit, try to get back down to where you started
+  FP2:
+  - start on the lagoon shore and walk all the way round the lake
+  - 'climb the walls as high as possible: is there a high path under the vault, and a way back down?'
+  FP3:
+  - 'arrive from the open sea: is the passage into the lagoon travelled or seen, and is it below the surface?'
+  robustness:
+  - 'leave the route on the mountain (off a ledge, into a crevice): can you recover?'
+  - walk into the lake water from the shore and come back
+  - leave in the middle of a walk and come back
+v4_map:
+  U1: CR2 | look of the darkness and glow stays in VP1
+  U2: CR4
+  U3: CR5
+  U4: CR6
+  U5: CR5, VP4 | opening exists in CR5; daylight through it is VP4; air dropped
+  FP1: FP1 | existence of plain, mountain and route split off to CR1
+  FP2: FP2
+  FP3: FP3 | existence and submerged position of the passage moved to CR6
+  VP1: VP1
+  VP2: CR3 | spatial item about which place exists and where
+  VP3: VP2
+  VP4: CR4, VP3 | placement on the plain to CR4; classical look stays VP3
+  VP5: CR5, VP4 | enclosure, vault and round lake to CR5 only; VP4 keeps only the daylight from the opening
+provenance:
+  source_yaml: T-TO-txt_21e75632c01e.e3.yaml
+  source_sha256: 3f9c54d485d863e6df4b6c3a029fa22656e61529d5eb1674e3ed7c1ab61ba429
+  size_waiver: null
+  size_max: null
+  sources:
+  - ref: t01
+    title: Twenty Thousand Leagues under the Sea
+    author: Jules Verne
+    text_id: txt_21e75632c01e
+    excerpt_id: e3

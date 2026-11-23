@@ -1,0 +1,46 @@
+# Reference material: fetched from the HF dataset into $GAB_MEDIA_DIR/<task>/ by `gab media fetch` (sha256 checked).
+# The agent gets the files only (no title, author, caption or source): this file is never shown to it.
+task_id: T-IO-43b34cf1fa
+refs:
+- id: img01
+  kind: image
+  file: img01.jpg
+  format: jpg
+  hf_path: media/T-IO-43b34cf1fa/img01.jpg
+  sha256: 380e3500e2092690f8df8104820a2a8faed934415e67d663b4f66751deabde5d
+  size_bytes: 37069
+- id: img02
+  kind: image
+  file: img02.jpg
+  format: jpg
+  hf_path: media/T-IO-43b34cf1fa/img02.jpg
+  sha256: 4d28de2ec45a6dd84a641024c9fa931e7d6e8038771e3c1dd3ca46b8466b7669
+  size_bytes: 419410
+- id: img03
+  kind: image
+  file: img03.jpg
+  format: jpg
+  hf_path: media/T-IO-43b34cf1fa/img03.jpg
+  sha256: cb8f6317df7e1957ef1bc074d83c2d02e44955810b90733208624c2d0d1a9e4e
+  size_bytes: 668301
+- id: img04
+  kind: image
+  file: img04.jpg
+  format: jpg
+  hf_path: media/T-IO-43b34cf1fa/img04.jpg
+  sha256: 983b0e57d69630c504f7c08a8039e7a29d6774e608e31c2f9bf3b0d903030bee
+  size_bytes: 905424
+- id: img05
+  kind: image
+  file: img05.jpg
+  format: jpg
+  hf_path: media/T-IO-43b34cf1fa/img05.jpg
+  sha256: d0f636b5c2edf130fe997d2c8fa5162587b3a85fb041ece7910a968e9ab7d479
+  size_bytes: 612684
+- id: img06
+  kind: image
+  file: img06.jpg
+  format: jpg
+  hf_path: media/T-IO-43b34cf1fa/img06.jpg
+  sha256: bd639d001e11cd654f1caeb999315266bd0249e5ced5004702c154271da88aa5
+  size_bytes: 497020

@@ -1,0 +1,15 @@
+# GameAnything-Bench task T-VO-vid_ed6ca1b2a47b.t1 (public part). Instruction: instruction_fine.md.
+task_id: T-VO-vid_ed6ca1b2a47b.t1
+version: '0.2'
+category: narrative_event
+modality: video
+domain: film
+track: core
+target_game: tuxemon
+references:
+- c01
+- c02
+provenance:
+  pipeline: reference_curation ga_author (v3 draft -> crosscheck -> reconcile -> instruct -> explicit) -> restructure_v4
+  rules_version: v4.2
+  review_status: pending

@@ -1,0 +1,300 @@
+# GameAnything-Bench scoring material: never shown to agents during a trial.
+task_id: T-VO-vid_3a02ca02cf88.t1
+source_inventory:
+- '00:04-00:08 third-person view from behind: a hooded runner (grey hood, denim jacket with a graffiti-style logo on the back) walks slowly along
+  a parked carriage painted with a large ''HIPHOP'' graffiti piece; night, lit carriage windows'
+- '00:09 motion-blurred shot: a uniformed guard with a cap seen beside a passing carriage'
+- 00:10 a uniformed guard with a German-shepherd-type dog stands on the tracks beside a carriage and points toward the runner
+- 00:11 the runner by the graffiti carriage turns the head back toward the guard (a small red object near the face, not identifiable)
+- 00:12 the runner sets off running along the track beside the carriage
+- 00:13-00:15 chase camera low behind the runner, looking straight down a corridor of several parallel tracks; the dog runs just behind the runner
+  (00:13-00:14); a train with lit headlights stands / approaches head-on on the runner's track; Eiffel Tower at the far end, string lights over
+  the tracks, warm street lamps, Paris-style buildings; a raised bar barrier on the left track (00:14)
+- 00:16 the runner is now on the right-hand track while the train from 00:15 goes past on the left track
+- 00:17-00:18 a yellow train moves past on the left adjacent track; benches and a red-lined pavement on the right
+- 00:19 the runner passes low under a raised yellow bar barrier spanning the track (slide / duck)
+- '00:20-00:22 roadworks along the tracks: red-white striped barriers, traffic cones, a work cart, traffic lights, bicycles, pedestrians on the
+  pavement; the runner keeps to the track'
+- 00:23-00:24 a train with lit headlights approaches head-on on the runner's track
+- 00:25 the runner is on the left track while a yellow train goes past on the right
+- 00:26-00:27 a red-fronted passenger train approaches head-on on the runner's track; at 00:27 its front door is open showing the lit interior
+- 00:28-00:30 the runner runs down the inside of a passenger carriage (seats on both sides, ceiling lights, posters)
+- 00:31 the runner is airborne back on the street track, orange plastic barriers lining the right side
+- 00:32-00:33 the runner runs past metal crowd barriers and orange barriers; a train approaches head-on (00:33)
+- 00:34 the runner is on another track while the train passes on the left; a tanker car ahead on the right
+- 00:35-00:36 a ramp rises from the track between a passenger train and tanker cars, red-white striped barrier and cones at its foot; the runner
+  runs up it
+- 00:37-00:38 the runner runs along an elevated flat surface above the tracks between tanker cars, string lights and the tower ahead; a bright
+  tunnel / shed opening ahead with an 'ELECTRONICS' sign
+- 00:39 the runner lands / rolls down onto the track beside a tanker car toward the bright opening
+- 00:40-00:41 the runner runs along the track past stacked lumber, a train passing on the left
+- 00:42 the runner jumps up from the track onto a station platform
+- '00:43-00:45 foggy station platform: yellow tactile edge strip, benches, bin, kiosk, departure boards, pedestrians, a man in a red jacket at
+  00:45; the runner runs along the platform'
+- 00:46 the runner tumbles / rolls down from the platform back onto the tracks
+- 00:47-00:48 track running; a yellow train passes on the left; a red-white striped barrier ahead on the runner's track (00:48)
+- 00:49 the runner vaults over a low red-white striped barrier, hands on it
+- 00:50-00:52 tracks with a train with headlights ahead, tanker cars on the left, a green train passing on the right
+- 00:53-00:54 a boxcar stands ahead on the runner's track with a red-white striped barrier in front of it
+- 00:55 the runner vaults the striped barrier toward the boxcar
+- 00:56 the runner hangs from an overhead bar on a gantry in front of the boxcar
+- 00:57 the runner climbs up onto the boxcar roof
+- 00:58-01:00 the runner runs along train roofs; trains with headlights / red tail lights move on adjacent tracks below; 00:59 the runner is mid-jump
+  between roofs
+- 01:01 the runner jumps sideways from one train roof to the roof of a train on the adjacent track
+- 01:02-01:04 the runner keeps running along the roofs, trains on both sides
+- 01:05 the runner drops off the front end of a train toward the track
+- 01:06-01:08 the runner runs on the track again; tanker cars and a passing train alongside; steps and string lights on the right
+- 'not visible: no HUD, score, coins, timer, lives or distance counter; no collision with a train or barrier, no fail state and no end of the
+  run; the dog / guard are not seen after 00:15; whether forward running is automatic or player-controlled cannot be told'
+- 'audio: music only (annotation; no speech in the range); no sound effects could be verified from the frames'
+instructions_meta:
+  requirement_groups:
+    run course and start of the run:
+    - FP1
+    - FP5
+    moving hazards:
+    - CR2
+    - FP2
+    - VP1
+    obstacles and moves:
+    - CR3
+    - FP3
+    route structure:
+    - CR4
+    - FP4
+    - FP6
+    course layout and readability:
+    - CR1
+    - VP2
+  explicit_requirements:
+  - type: keep
+    text: Definitely keep the part where you climb up onto the trains, run along their roofs, jump across to a train on the next track and then
+      drop back down to the tracks.
+    covers:
+    - FP4
+rubric:
+  content_realization:
+  - id: CR1
+    item: The course is a corridor of several parallel tracks side by side used as the running lanes, with the street sides running alongside
+      rather than being the running surface
+    anchors:
+      '1': several parallel tracks side by side form the course, the street sides lying along its edges
+      '0.5': a track course, but a single track, or an open area without track lanes
+      '0': no track course
+    evidence:
+    - - 00:13
+      - 00:27
+    - - 00:20
+      - 00:22
+    - - 00:47
+      - 00:54
+  - id: CR2
+    item: 'Trains appear in two roles: traffic trains on the running tracks and standing trains / freight cars placed along the route as terrain
+      to climb onto or run beside'
+    anchors:
+      '1': both traffic trains on the running tracks and standing trains / freight cars used as route terrain are present
+      '0.5': trains in only one of the two roles
+      '0': no trains
+    evidence:
+    - - 00:13
+      - 00:18
+    - - 00:23
+      - 00:27
+    - - 00:34
+      - 00:38
+    - - 00:53
+      - 00:57
+  - id: CR3
+    item: 'Two kinds of track barriers are placed on the course and told apart by height: low barriers standing on the track and raised bar barriers
+      spanning it'
+    anchors:
+      '1': both kinds are on the running tracks and clearly distinguishable by height
+      '0.5': only one kind, or two kinds that cannot be told apart
+      '0': no barriers on the tracks
+    evidence:
+    - - 00:14
+      - 00:14
+    - - 00:19
+      - 00:19
+    - - 00:48
+      - 00:49
+    - - 00:53
+      - 00:55
+  - id: CR4
+    item: Besides the track and the train roofs, the route includes sections off the track level (enclosed or raised, e.g. through a train, up
+      onto an elevated section, along a platform), joined into one continuous course with each section leading back down to the track
+    anchors:
+      '1': at least two such sections, both on the running route and both leading back to the track
+      '0.5': only one such section, or sections that are separate places not joined to the running route
+      '0': the course is track only (apart from train roofs)
+    evidence:
+    - - 00:26
+      - 00:31
+    - - 00:35
+      - 00:39
+    - - 00:42
+      - 00:46
+  functions_playability:
+  - id: FP1
+    item: 'Forward run: the player keeps moving forward along a long course with a clear forward direction and steady progress'
+    anchors:
+      '1': a long course that the player runs forward along, the forward direction always clear and progress steady
+      '0.5': a forward course exists but it is so short / open that there is no sense of a run, or the direction is often unclear
+      '0': no forward course
+    evidence:
+    - - 00:13
+      - 00:27
+    - - 00:47
+      - 00:54
+  - id: FP2
+    item: 'Moving trains as hazards: trains travel along the tracks, some toward the player on the player''s track, and the player avoids them
+      by switching to another track'
+    anchors:
+      '1': trains move along the tracks including toward the player on the player's track, and the player can avoid them by switching to a free
+        track
+      '0.5': trains move but never come toward the player, or there is no free track to dodge to
+      '0': trains do not move
+    evidence:
+    - - 00:13
+      - 00:18
+    - - 00:23
+      - 00:27
+    - - 00:33
+      - 00:34
+  - id: FP3
+    item: 'Each barrier kind needs its own move: low barriers must be jumped or vaulted over and raised barriers slid or ducked under, each blocking
+      the player until the right move is used'
+    anchors:
+      '1': each kind blocks the player until its own move is used, and that move gets the player past it
+      '0.5': only one kind needs its move, or barriers can be passed without the move (walked through or trivially around)
+      '0': barriers do not block the player or cannot be passed at all
+    evidence:
+    - - 00:19
+      - 00:19
+    - - 00:48
+      - 00:49
+    - - 00:54
+      - 00:55
+  - id: FP4
+    item: 'Train-top route: the player can get up onto trains, run along the roofs, jump from roof to roof including onto a train on the next
+      track, and drop back to the track to continue'
+    anchors:
+      '1': a way up onto a train, roof running with roof-to-roof jumps, and a drop back to the track all work
+      '0.5': the roofs can be reached but there is no roof-to-roof jumping, or the player cannot get back down and continue
+      '0': train roofs cannot be reached
+    evidence:
+    - - 00:55
+      - 01:06
+  - id: FP5
+    item: 'Chase start: the run begins when a guard / dog-like pursuer spots the player, and the pursuer then follows from behind, giving a reason
+      to run'
+    anchors:
+      '1': a pursuer appears at the start, triggers the run and moves after the player
+      '0.5': a pursuer is present but static or decorative, or does not start the run
+      '0': no pursuer
+    evidence:
+    - - 00:09
+      - 00:15
+  - id: FP6
+    item: 'Off-track sections can be run through: the player can enter each raised or enclosed section from the run, cross it and get back down
+      to the track to continue'
+    anchors:
+      '1': every off-track section can be entered from the run, crossed and left back to the track in normal play
+      '0.5': some sections can be run through, but at least one cannot be entered, crossed or left back to the track in normal play
+      '0': no off-track section can be run through
+    evidence:
+    - - 00:26
+      - 00:31
+    - - 00:35
+      - 00:39
+    - - 00:42
+      - 00:46
+  visual_presentation:
+  - id: VP1
+    cat: key_moment
+    keyframes:
+    - '00:15.0'
+    - '00:24.0'
+    - '00:27.0'
+    item: 'Oncoming train: a train approaching head-on down the player''s track with lit headlights, visible from far ahead so it reads as a coming
+      threat'
+    anchors:
+      '1': a head-on train clearly recognisable (front, lights) and visible from a distance
+      '0.5': trains approach but are hard to notice in time or not recognisable as trains
+      '0': none
+    evidence:
+    - - 00:13
+      - 00:15
+    - - 00:23
+      - 00:27
+  - id: VP2
+    cat: presentation
+    keyframes:
+    - '00:17.0'
+    - '00:47.0'
+    - '01:02.0'
+    item: 'Readable run: the view keeps the runner and the trains and barriers ahead readable together, in time to react, also on the train roofs'
+    anchors:
+      '1': the runner and upcoming trains and barriers are readable together in time to react, on the track and on the roofs
+      '0.5': the runner is followed but obstacles ahead are often out of view or hidden
+      '0': the view hides the run
+    evidence:
+    - - 00:13
+      - 00:27
+    - - 00:58
+      - 01:04
+play_suggestions:
+  CR1:
+  - count the parallel tracks at several points along the course
+  CR4:
+  - 'inspect each off-track section (e.g. a train interior, an elevated section, a platform): is it on the running route and does it lead back
+    down to the track?'
+  FP1:
+  - 'run the course from start to the furthest reachable point: is the forward direction ever unclear?'
+  FP2:
+  - 'stand on a track with an oncoming train and wait: what happens?'
+  - dodge a train by switching tracks at the last moment
+  - check whether trains really move (watch one from a fixed spot)
+  FP3:
+  - try to walk or jump through a raised barrier instead of sliding under it
+  - try to slide under a low barrier and to go around barriers at the side
+  FP4:
+  - reach a train roof by each available way up
+  - jump from a roof to a train on the next track, also while it moves
+  - drop off the roof and keep running
+  FP5:
+  - start a new run and watch who triggers it
+  - 'stop running right after the start: does the pursuer come after you?'
+  FP6:
+  - run through each raised or enclosed section (e.g. a train interior, an elevated section, a platform) from end to end
+  - after each section, check that it leads back down to the track and the run continues
+  robustness:
+  - 'fail on purpose (hit a train, fall off a roof): can you continue or restart sensibly?'
+  - run backwards against the course direction
+  - try to leave the corridor sideways over the street edge
+  - stand still on a moving train roof for a while
+v4_map:
+  U1: CR1
+  U2: 'dropped: mechanism scored by FP2 (sideways track change)'
+  U3: 'CR3 | dropped: the move rule itself is scored by FP3'
+  U4: 'dropped: mechanism scored by FP4 (train-top route)'
+  U5: CR2 (how the trains move is scored by FP2)
+  U6: 'dropped: chase start and pursuer scored by FP5'
+  U7: CR4
+  FP1: FP1
+  FP2: FP2 (existence of the trains split into CR2)
+  FP3: FP3 (existence of the two barrier kinds split into CR3)
+  FP4: FP4
+  FP5: CR4 (sections exist and are joined) + FP6 (sections can be run through)
+  FP6: FP5
+  VP1: CR1
+  VP2: VP1
+  VP3: VP2
+  VP4: 'dropped: user modification (daytime instead of night), moved to the Editing task (editing_seed.yaml)'
+provenance:
+  source_yaml: T-VO-vid_3a02ca02cf88.t1.yaml
+  source_sha256: 756cce182aabe3c1f53e1a4c9d598af66e662cbed382ae9f19d4328222424401
+  size_waiver: null
+  size_max: null
+  sources: []

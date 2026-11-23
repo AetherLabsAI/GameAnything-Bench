@@ -1,0 +1,24 @@
+# Reference material: fetched from the HF dataset into $GAB_MEDIA_DIR/<task>/ by `gab media fetch` (sha256 checked).
+# The agent gets the files only (no title, author, caption or source): this file is never shown to it.
+task_id: T-VO-vid_3a0dde304f5f.t1
+refs:
+- id: c01
+  kind: video
+  file: clip_01.mp4
+  video_id: vid_3a0dde304f5f
+  source:
+    title: Mario Kart World – Announcement Trailer (Nintendo Switch 2) [RLogERrKOrU]
+    url: https://www.youtube.com/watch?v=RLogERrKOrU
+    channel: null
+    youtube_id: RLogERrKOrU
+  range:
+    start: 176.8
+    end: 202.8
+    text: 2:56.80-3:22.80
+  duration_s: 26.0
+  size_bytes: 12591393
+  format: mp4 H.264 720p, AAC audio
+  hf_path: media/T-VO-vid_3a0dde304f5f.t1/clip_01.mp4
+  sha256: 66967bf46c60bc12e0143ce94e8da62bc3ed818ff483cdb5f3606f8f9af7e548
+  rights_note: 'Official Nintendo trailer: use as a private reference only, do not redistribute frames or clips; the task must transfer the rule
+    rather than reproduce Mario Kart World.'

@@ -1,0 +1,5 @@
+extern void object::Attack( )
+{
+	// negative check: the stock patrol ant (ai/antics.txt) never attacks, it just stands still
+	while ( true ) wait(1);
+}

@@ -1,0 +1,216 @@
+# GameAnything-Bench scoring material: never shown to agents during a trial.
+task_id: T-IO-bd15cf5893
+source_inventory:
+- 'img01: aerial view of a long walled fort along the top of a steep rocky ridge; a tall palace block at the upper-left end, open ground, terraces
+  and a small white shrine on a bastion toward the lower end; walls with bastions follow the cliff edge; arched gateways in walls on the lower-left
+  approach; a dense town of small flat-roofed houses, many painted blue, fills the ground below on the right; hills, a pond and a white domed
+  building in the distance'
+- 'img02: a bronze relief model of the fort site (photographed rotated, seen from above): the rocky ridge with the walled enclosure along its
+  edge, round bastions, a dense block of palace buildings at one end, an inner walled enclosure with round corner towers, and a zigzag route with
+  gate structures at the far end; a visitor''s shoe at the edge'
+- 'img03: a street map: the fort as an elongated walled outline on open hill ground, a road and parking approaching from the north, a green walled
+  garden on its west side, a temple symbol at its southern tip, dense streets of the town wrapping round the south and east; small labels mostly
+  illegible at this size'
+- 'img04: view up from the foot of the walls: sheer stone walls with crenellations, a massive round bastion, a tall square tower with a projecting
+  balcony, and multi-storey palace fronts with carved projecting balconies and windows rising above the battlements against a blue sky; bushes
+  at the bottom'
+- 'img05: a paved inner courtyard of the palace enclosed on all sides by tall stone facades covered with carved projecting balconies, curved eaves
+  and lattice-screened windows; cusped arches and doorways at ground level, a green carved door, steps up to a terrace on the left'
+- 'img06: interior of a narrow hall whose walls and vaulted ceiling are covered with small mirror panels and painted panels in cusped arched frames,
+  a crystal chandelier, a carpet runner; a doorway at the far end with visitors behind a rope'
+instructions_meta:
+  requirement_groups:
+    traversal into and through the place:
+    - FP1
+    - FP2
+    - FP3
+    overall layout:
+    - CR2
+    - CR3
+    main structures:
+    - CR1
+    - VP2
+    interiors:
+    - CR4
+    - CR5
+    - VP3
+    - VP4
+    surroundings:
+    - CR6
+    - VP1
+  explicit_requirements:
+  - type: specify
+    text: The fort should be long and narrow along the top of the hill, with the palace packed together at one end and open walled ground stretching
+      away to the other.
+    covers:
+    - CR2
+rubric:
+  content_realization:
+  - id: CR1
+    item: A fortress stands on top of a steep rocky ridge, its bastioned stone walls rising directly from the cliffs
+    anchors:
+      '1': a hilltop fort whose walls, with bastions, rise straight from steep cliffs
+      '0.5': a walled fort on a hill, but no sheer cliffs under the walls or no bastions
+      '0': no fort, or a fort on flat ground
+    evidence:
+    - img01
+    - img02
+    - img04
+  - id: CR2
+    item: The walled enclosure is long and narrow along the ridge, with the palace massed at one end and open walled ground stretching to the
+      other
+    anchors:
+      '1': an elongated enclosure following the ridge, the palace buildings concentrated at one end and open walled ground toward the other end
+      '0.5': an enclosure on the hill, but not elongated, or the palace placed in the middle / spread throughout
+      '0': no walled enclosure, or a layout contradicting the images
+    evidence:
+    - img01
+    - img02
+    - img03
+  - id: CR3
+    item: An approach route climbs the side of the hill from below and passes through gateways in successive walls before reaching the fort
+    anchors:
+      '1': a climbing route from the foot of the hill with more than one gateway in successive walls along it
+      '0.5': a climbing route with a single gate, or gates without any climb
+      '0': no approach route; the fort is entered at ground level or from anywhere
+    evidence:
+    - 'img01: arched gateways on the lower-left approach'
+    - 'img02: the zigzag route with gate structures'
+    - 'img03: the road approaching the fort'
+  - id: CR4
+    item: Inside the palace there is a courtyard enclosed on all sides by the tall palace buildings
+    anchors:
+      '1': an open courtyard within the palace, closed in on every side by multi-storey palace buildings
+      '0.5': an open space by the palace, but only partly enclosed or bounded by low walls
+      '0': no courtyard
+    evidence:
+    - img05
+  - id: CR5
+    item: The palace contains an interior hall, a long room inside the building rather than an open space
+    anchors:
+      '1': a roofed hall inside the palace building
+      '0.5': an interior that is only a small niche or passage, not a hall
+      '0': no palace interior
+    evidence:
+    - img06
+  - id: CR6
+    item: A dense town spreads right up to the foot of the hill, with the fort high above it
+    anchors:
+      '1': a densely built town directly below the fort's hill, with a clear height difference up to the fort
+      '0.5': a town present, but sparse, distant, or not at the foot of the fort's hill
+      '0': no town
+    evidence:
+    - img01
+    - img03
+  functions_playability:
+  - id: FP1
+    item: 'The climb to the fort is playable: the player can travel from the foot of the hill up the approach route and through its gates into
+      the fort'
+    anchors:
+      '1': a continuous route from below up the hill through gates into the walled enclosure, with the fort as the evident goal
+      '0.5': the fort can be entered, but the climb or the gates are skipped (e.g. the player starts inside or teleports)
+      '0': the fort cannot be reached or entered
+    evidence:
+    - img01
+    - img02
+    - img03
+  - id: FP2
+    item: The walled enclosure can be explored along the ridge, from the open ground at one end to the palace at the other, within its walls
+    anchors:
+      '1': the player moves through the length of the walled enclosure and reaches the palace end
+      '0.5': only part of the enclosure is explorable, or the palace end cannot be reached through it
+      '0': no explorable enclosure
+    evidence:
+    - img01
+    - img02
+  - id: FP3
+    item: 'The palace can be entered from the fort: its inner courtyard and its interior hall are both reachable on foot'
+    anchors:
+      '1': the player can walk into the palace and explore both the courtyard and at least one interior room
+      '0.5': only one of them can be walked into, or the palace interior is shown but cannot be entered
+      '0': the palace is an exterior only
+    evidence:
+    - img05
+    - img06
+  visual_presentation:
+  - id: VP1
+    cat: style
+    item: The town looks like a dense mass of largely blue-painted houses
+    anchors:
+      '1': a dense spread of houses with clearly blue walls
+      '0.5': a town present, but not dense or not blue
+      '0': no town
+    evidence:
+    - img01
+  - id: VP2
+    cat: style
+    item: 'The fort looks sheer and massive: towering stone walls with the palace storeys rising directly above them'
+    anchors:
+      '1': towering, massive stone walls with palace storeys rising above them
+      '0.5': walls present but low or thin, or no palace visible above them
+      '0': no fortified walls
+    evidence:
+    - img04
+  - id: VP3
+    cat: style
+    item: The palace courtyard's facades are tall and densely carved, with projecting balconies and screened windows
+    anchors:
+      '1': tall, richly carved facades round the courtyard, with projecting balconies / screened windows
+      '0.5': tall facades round the courtyard, but plain or only lightly decorated
+      '0': plain walls, or no courtyard to judge
+    evidence:
+    - img05
+  - id: VP4
+    cat: style
+    item: The palace hall's walls and ceiling are densely clad in mirror panels
+    anchors:
+      '1': a room clad all over, walls and ceiling, in reflective / mirror-like ornament
+      '0.5': a decorated room, but without the mirror cladding or only partly covered
+      '0': no such room
+    evidence:
+    - img06
+play_suggestions:
+  FP1:
+  - 'start where the game places you: is the fort visible above as a goal?'
+  - 'walk up the approach: does it climb, and how many gates do you pass?'
+  - 'try to shortcut up the cliffs or over the walls: are you blocked or does it still lead in sensibly?'
+  FP2:
+  - 'walk the enclosure from end to end: where is the palace relative to the open ground?'
+  - 'walk to the walls'' edge: can you look out over the town below?'
+  FP3:
+  - from the fort grounds, find the way into the palace
+  - inside the palace, find the courtyard and the mirror-clad room
+  robustness:
+  - 'go back down from the palace to the foot of the hill: is the route consistent both ways?'
+  - 'wander off the main route on the hillside and into the town edge: can you return?'
+  - leave and re-enter a gate and the palace repeatedly
+v4_map:
+  U1: CR3
+  U2: CR1 (wall mass left to VP2)
+  U3: CR4 (enclosed courtyard), VP3 (carved facades)
+  U4: CR2
+  U5: CR6 (town at the foot), VP1 (blue houses)
+  FP1: FP1 (gate existence split off to CR3)
+  FP2: FP2
+  FP3: FP3 (courtyard / hall existence split off to CR4, CR5)
+  VP1: CR1, CR2 (ridge-top position and layout are arrangement, now CR)
+  VP2: CR6 (position below the fort), VP1 (dense blue look)
+  VP3: VP2 (bastion existence left to CR1)
+  VP4: CR4 (enclosed courtyard), VP3 (facade look)
+  VP5: VP4 (hall existence split off to CR5)
+  VP6: 'removed: editing request (night setting), moved to editing_seed.yaml'
+provenance:
+  source_yaml: T-IO-bd15cf5893.yaml
+  source_sha256: 001b3c02c879b6d2d1ca1620ff3ca1e19fdc1b08b696dca01ec8b561ea3f7d11
+  size_waiver: null
+  size_max: null
+  sources:
+  - refs:
+    - img01
+    - img02
+    - img03
+    - img04
+    - img05
+    - img06
+    bundle: bd15cf5893
+    title: 焦特布尔梅兰加尔堡（山顶堡垒）

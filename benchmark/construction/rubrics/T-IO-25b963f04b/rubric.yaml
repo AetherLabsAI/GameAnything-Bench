@@ -1,0 +1,213 @@
+# GameAnything-Bench scoring material: never shown to agents during a trial.
+task_id: T-IO-25b963f04b
+source_inventory:
+- 'img01: colour self-portrait of a six-wheeled rover on a plain of flat, layered tan rock slabs and loose stones under a hazy sky, a ridge in
+  the distance; a camera mast with a head of cameras at the front left, a deck of equipment, a robotic arm folded at the front ending in a large
+  tool turret'
+- 'img02: black-and-white wide-angle view from the rover''s front: the arm reaches down and holds its turret just above a patch of broken flat
+  rock ahead of the rover, front wheels at the image edges, wheel tracks curving away, a rocky mound on the right, the rover''s shadow in the
+  foreground'
+- 'img03: close-up from above of a round drill hole in rock, surrounded by a wide ring of grey drilled powder over the orange-tan rock; a small
+  round pressed mark next to the hole; the arm''s shadow across the scene'
+- 'img04: annotated map ''Drill sites at Gale Crater'': a white rover traverse line running across the terrain from a plain up onto a mountain,
+  red dots for drill sites, orange dots for scoop sites, blue triangles for geologic waypoints, all named; some drill sites lie in close clusters,
+  others far apart; at the left a grid of 15 close-ups of the drill holes, each a round hole ringed by powder in rock of a different colour and
+  texture, labelled with name, sol and elevation; legend, scale bar (km), note ''drill hole diameter = ~1.6 cm'''
+- 'img05: ten side-by-side photo strips, each showing one sample tube (white tube with a metal end) lying on the sandy, pebbly ground in the rover''s
+  shadow, each at its own spot on the surface; one tube has a lighter cap'
+- 'img06: labelled CAD diagram of a rover: the robotic arm and its turret (coring drill, SHERLOC / WATSON instrument, PIXL instrument), a bit
+  carousel and an Adaptive Caching Assembly inside the rover; inset ''Caching Assembly'' with ''~42 sample tubes'' in a storage rack, a sample
+  handling arm, a sealing station, seal / plug dispensers, an imaging station and a drop-off station'
+instructions_meta:
+  requirement_groups:
+    moving through the play space:
+    - CR1
+    - FP1
+    sampling interaction and feedback:
+    - FP2
+    - FP3
+    sample management:
+    - CR3
+    - FP4
+    - FP5
+    activity structure and progress view:
+    - CR2
+    - FP6
+    environment and in-world feedback:
+    - VP1
+    - VP2
+  explicit_requirements:
+  - type: specify
+    text: Each sample should go into its own tube from a limited stock kept inside the machine, so I can only collect as many samples as there
+      are tubes.
+    covers:
+    - CR3
+    - FP4
+rubric:
+  content_realization:
+  - id: CR1
+    item: The player's machine is a wheeled vehicle that carries its drill in a tool head at the end of a jointed arm
+    anchors:
+      '1': a wheeled vehicle with a movable, jointed arm whose end holds the drill
+      '0.5': a wheeled vehicle, but the drill is fixed to its body (or an arm with a drill, but not on a wheeled vehicle, e.g. held by the character
+        on foot)
+      '0': no such machine (the player samples on foot, or with a walking / flying / static machine)
+    evidence:
+    - img01
+    - 'img06: the robotic arm with the coring-drill turret'
+    - 'img02: the arm reaching down ahead of the front wheels'
+  - id: CR2
+    item: The play space holds several separate drill sites laid out along one route across the terrain
+    anchors:
+      '1': several distinct drill sites, spread out along one route the machine travels
+      '0.5': several targets, but bunched in one spot or not along any route
+      '0': a single target, or no drill sites
+    evidence:
+    - 'img04: the traverse line with drill sites along it'
+  - id: CR3
+    item: The machine carries sample tubes for holding samples, and each collected sample is clearly matched to a tube
+    anchors:
+      '1': a tube stock that clearly belongs to the machine, with each collected sample held in its own tube; shown through the model, the inventory
+        or a clear UI state
+      '0.5': only part of this, e.g. an onboard stock of empty tubes but samples go into a generic backpack, or samples are put into tubes but
+        the tubes are not the machine's own stock
+      '0': 'sample tubes and their storage role are not shown: only a plain sample count or a generic inventory'
+    evidence:
+    - 'img06: the caching assembly with the tube storage rack inside the rover'
+    - 'img05: the sample tubes'
+  functions_playability:
+  - id: FP1
+    item: The player drives the rover across the terrain to bring it to sampling targets that lie apart from each other
+    anchors:
+      '1': the rover is driven over the ground and has to be brought to each target
+      '0.5': targets are reached without travelling to them (teleport, menu selection)
+      '0': the rover cannot be moved
+    evidence:
+    - img01
+    - img02
+    - img04
+  - id: FP2
+    item: To sample, the player places the arm's tool onto a chosen rock target within the arm's reach; a target out of reach needs the rover
+      to be moved closer
+    anchors:
+      '1': an arm (or equivalent tool) is positioned onto the target, and reach depends on where the rover stands
+      '0.5': sampling needs the rover near the target, but there is no arm placement step (one button anywhere nearby)
+      '0': sampling triggered from anywhere, or no sampling action
+    evidence:
+    - img02
+    - img06
+  - id: FP3
+    item: Drilling a target completes a sample there, and the player can tell that it worked
+    anchors:
+      '1': drilling at a target yields a collected sample, with readable feedback that it succeeded
+      '0.5': drilling plays an effect, but no sample is gained or there is no sign whether it succeeded
+      '0': no drilling
+    evidence:
+    - img03
+    - img04
+  - id: FP4
+    item: Each sample uses up one tube from the finite onboard supply, so the number of samples the rover can hold is limited
+    anchors:
+      '1': every new sample takes one empty tube away and adds one filled tube; once the empty tubes run out, no new sample can be taken
+      '0.5': samples are counted one per tube, but the finite stock is not enforced (e.g. sampling still works after the empty tubes run out)
+      '0': samples are not tied to using up tubes; using up only battery, time or the like does not count
+    evidence:
+    - img06
+  - id: FP5
+    item: The player can deposit sample tubes on the ground, where they are visibly left lying
+    anchors:
+      '1': a deposit action puts a tube on the surface and the tube is visibly there afterwards
+      '0.5': a deposit action exists, but the tube vanishes or is only removed from a counter with nothing left on the ground
+      '0': no depositing
+    evidence:
+    - 'img05: tubes on the ground in the rover''s shadow'
+    - 'img06: the drop-off station in the caching assembly'
+  - id: FP6
+    item: 'Play proceeds from site to site along the route, and the player can see the progress: an overview shows the route and which sites have
+      been sampled'
+    anchors:
+      '1': several sites reached and sampled in turn over one traverse, and a map or overview shows the route with the sampled sites marked on
+        it
+      '0.5': which sites are done is recorded, but shown only as a list; or a spatial overview exists, but its done state does not update, updates
+        wrongly or is incomplete
+      '0': 'no record of which sites are done: only a total sample count, or no progress record at all'
+    evidence:
+    - 'img04: the traverse line with the drill sites marked along it'
+  visual_presentation:
+  - id: VP1
+    cat: key_moment
+    item: 'A drilled target looks like the reference: a clearly visible drill hole left in the rock'
+    anchors:
+      '1': a clearly visible hole (or lasting drill mark) in the rock at the drilled spot
+      '0.5': only a transient effect (particles, flash) or a generic decal that does not read as a hole
+      '0': no visible trace of drilling
+    evidence:
+    - img03
+    - img04
+  - id: VP2
+    cat: spatial
+    item: 'The play space looks like the reference terrain: open rocky ground whose exposed rock surfaces read as the drill targets'
+    anchors:
+      '1': open ground with recognisable rock (slabs, outcrops, boulders) at the drill sites, spread over terrain the rover drives across
+      '0.5': open ground, but the targets do not read as rock (abstract markers, a featureless floor)
+      '0': no rocky ground (e.g. a small room or an empty void)
+    evidence:
+    - 'img01: the plain of flat rock slabs and stones'
+    - 'img02: broken flat rock ahead of the rover'
+    - 'img04: the drill-hole close-ups in rock'
+play_suggestions:
+  FP1:
+  - 'drive over rock slabs, stones and slopes: does the rover handle uneven ground?'
+  - 'try to reach a far target: must you actually drive there?'
+  FP2:
+  - try to sample a rock just out of the arm's reach, then move closer
+  - place the tool on sand or on the rover's own wheel instead of a rock target
+  FP3:
+  - drill a target and check that a sample is gained and the site is shown as done
+  - 'drill the same spot a second time: what happens?'
+  FP4:
+  - 'keep sampling until the tubes run out: what happens next?'
+  - check whether the number of free tubes is visible before you choose a target
+  FP5:
+  - 'deposit two tubes at different places, drive away and come back: are they still there?'
+  - try to deposit an empty tube, or one when none is filled
+  FP6:
+  - 'follow the route to several sites: does the game keep track of which are done?'
+  - 'open the map / overview before and after sampling a site: are the route and the newly sampled site shown?'
+  - 'complete all sites: is there a clear end or conclusion (unscored: the images show none)?'
+  robustness:
+  - 'drill a target that is not rock (sand, a pebble) or a poor target: is it handled sensibly (unscored: the images show no failed drill)'
+  - drive into a steep slope or a large rock, and try to drive while the arm is deployed
+  - leave in the middle of drilling and come back
+v4_map:
+  U1: FP2, CR1 | mechanism scored by FP2; the arm's existence goes to CR1
+  U2: FP3, VP1 | drilling scored by FP3; the hole's look by VP1
+  U3: CR3, FP4 | tube store exists (CR3); limited consumption (FP4)
+  U4: FP5 | depositing scored by FP5
+  U5: CR2, FP6 | sites along a route (CR2); progressing through them (FP6)
+  U6: CR1
+  FP1: FP1 | the rover's existence split off to CR1
+  FP2: FP2
+  FP3: FP3
+  FP4: FP4, CR3 | the onboard tube store's existence split off to CR3
+  FP5: FP5
+  FP6: FP6, CR2 | the sites' existence and layout split off to CR2
+  VP1: CR2, VP2 | the sites' arrangement along the route to CR2; the rocky ground's look stays VP (VP2 spatial)
+  VP2: VP1
+  VP3: 'FP6 | the progress overview updates with play: folded into FP6'
+  VP4: 'dropped: modify request (night setting), split off to the Editing task (editing_seed.yaml)'
+provenance:
+  source_yaml: T-IO-25b963f04b.yaml
+  source_sha256: 3ccea752b143adaebb40f2887842f21bccde4290f5095b953926b5906c47e0cb
+  size_waiver: null
+  size_max: null
+  sources:
+  - refs:
+    - img01
+    - img02
+    - img03
+    - img04
+    - img05
+    - img06
+    bundle: 25b963f04b
+    title: 火星车采样：行驶、扫描、钻取、封存

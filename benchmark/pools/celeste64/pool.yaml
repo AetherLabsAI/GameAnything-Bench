@@ -1,0 +1,65 @@
+# Copied from the original pool_celeste64.yaml (2026-10-30) + game / version / default_picks for gab.
+# default_picks: used for a task whose regression.yaml has no checked picks yet; cheap, uncorrelated probes
+# (all probes run in one ~4 min session anyway).
+# Probes: gab/game/celeste64/probes.py + the bridge gab/game/celeste64/bridge/C64Probe.cs; mods = Content/ and Source/ overlays
+# (gab/game/celeste64/devkit/README.md); a Source/ change is rebuilt with the bridge.
+# Base-capability pool, Celeste 64: Fragments of the Mountain (v0.2, verified in game 2026-10-30, Celeste 64 version 1.1.1 =
+# github ExOK/Celeste64 tag v1.1.1, Foster 0.1.18, .NET 8; probes run on a probe build of that source)
+# Same rules as pool_minecraft.yaml: atomic base capabilities a task's change could break. Pass = same result as a vanilla
+# instance. Per task the drafter picks the 4-6 relevant ones and may add 0-2 task-specific items; a maintainer checks. Avoid
+# correlated picks: C6-JUMP / C6-CLIMB (the wall kick uses the jump speed), C6-DASH / C6-DASH-REFILL (a dash change can move both).
+# Mod surface: Content files (maps in Valve/Quake .map brush format under Maps/, Levels.json, Text/*.json dialog, models, textures)
+#   overlaid on the instance's Content/; a C# change is a source tree that is rebuilt with the probe bridge (--src).
+# Probes (origin): probes_celeste64.py (host side, docker exec into the test sandboxes) + the in-game bridge
+#   /home/player/oss-celeste64/probe/C64Probe.cs (a Foster module, active only with $C64_PROBE; one hook line in Program.cs).
+#   `probe: x.y` = field y of probe x (fields joined with +). The bridge presses the game's own keys (Foster Input.OnKey),
+#   teleports the player onto real actors of the stock map "1" (strawberry, crystal, spring, feather, checkpoint, NPCs,
+#   cassette, death blocks, spikes) or into a small probe arena map added to every instance (flat floor + one wall) for the
+#   movement numbers, and reads state by reflection. Fixed 60 Hz step -> movement numbers are deterministic.
+# Runtime: software GL (llvmpipe) on the seat's Xvfb at 60 updates/s, audio to an ALSA null device; vglrun on the shared GPU
+#   X server :99 also works but ran at 5-9 updates/s on 2026-10-30. One full session ~4.5 min (3 game starts: probes, save, reload).
+# A/A calibration 2026-10-30 (3 fresh vanilla instances aa1/aa2/aa3, pairs aa1-aa2, aa1-aa3, aa2-aa3): all 19 ready items pass.
+#   Everything is bit-identical (fixed 60 Hz step) except perf: update 0.38-0.44 ms, render 6.9-20 ms (software GL, depends on
+#   the pod's load; 47-55 ms with 3 sessions at once), 59.8-60 updates/s. Movement / event tolerances stay small (1-2 frames).
+# Negative checks 2026-10-30 (vs aa1): Maps/1.map without 2 strawberries -> only C6-LAYOUT fails (Strawberry 20 -> 18);
+#   Text/English.json with Granny's first line changed -> only C6-NPC fails; C# DashSpeed 140 -> 110 -> only C6-DASH fails
+#   (speed 140 -> 110, distance 32.8 -> 25.8). Evidence: the verification logs (results/, reproduce.sh).
+
+game: celeste64
+version: 1.1.1 (Foster 0.1.18, .NET 8)
+default_picks:
+- C6-CONTENT
+- C6-LEVELS
+- C6-RUN
+- C6-DASH
+- C6-NPC
+# gate (gab/eval/regression.py): the STABLE item (no real crash / hang, no new fatal error kind) + the host-present
+# item(s): the stock content they reach must still be there on the modded game (numbers NOT compared with vanilla; only a mod that
+# removes / replaces the host game wholesale fails). Scores are 0 unless the gate passes. Not chosen per task.
+gate: [C6-STABLE, C6-LEVELS, C6-RUN]
+
+always:
+  - {id: C6-STABLE, capability: "no crash or hang, and no more error/exception lines in the game log than vanilla, through the whole evaluation", probe: log_errors, status: ready}
+
+pool:
+  # content and flow
+  - {id: C6-CONTENT, capability: "the stock level list (Forsaken City, map 1, 30 strawberries), all 12 stock map files, textures / models / fonts / shaders and the English text still load (additions allowed)", probe: boot, status: ready}
+  - {id: C6-HUB, capability: "title screen -> overworld -> level card -> the first level, with the Confirm key only", probe: hub.entered+map+level_id+scenes+player_state, status: ready}
+  - {id: C6-LEVELS, capability: "every stock map (1 and the 10 cassette sub-levels 1-1..1-10) loads, the player spawns and is alive after 2 s", probe: maps.loaded+player+player_alive+player_state, status: ready}
+  - {id: C6-LAYOUT, capability: "the stock maps keep their entities: per-map counts of strawberries, crystals, springs, feathers, spikes, blocks, NPCs, cassettes and the checkpoint names (flags any edit of a stock map, intended ones too)", probe: maps.counts+checkpoints, status: ready}
+  # movement (probe arena, deterministic)
+  - {id: C6-RUN, capability: "running: top speed 64, reaches it in 9 frames, 59.4 units in 1 s, stops in 6 frames", probe: move.run_top_speed+run_frames_to_95pct+run_dist_1s+stop_frames+stop_dist, status: ready}
+  - {id: C6-JUMP, capability: "jumping and falling: full jump 23.3 high / 48 frames, short hop 7.5 (variable height), running jump 53 units, max fall speed 120", probe: move.jump_height+jump_air_frames+hop_height+run_jump_dist+fall_terminal+fall_frames_150, status: ready}
+  - {id: C6-DASH, capability: "the dash: speed 140 for 15 frames, ~33 units", probe: dash.dash_frames+dash_speed+dash_dist, status: ready}
+  - {id: C6-DASH-REFILL, capability: "one dash: spent in the air, no second air dash, refilled on landing (and right away on the ground)", probe: dash.dashes_start+dashes_after_ground_dash+dashes_after_rest+air_dashes_after_dash+second_air_dash_state+landed+refill_frames_after_landing, status: ready}
+  - {id: C6-CLIMB, capability: "climbing: grab a wall with the climb button, climb up (20 units in 0.5 s), hang without sliding, wall-kick off (83 away / 90 up)", probe: climb, status: ready}
+  - {id: C6-CAMERA, capability: "the camera follows ~101 units behind and above, keeps up while running, and the camera keys rotate it (~114 deg in 0.5 s)", probe: camera, status: ready}
+  # level objects (real actors of map 1)
+  - {id: C6-OBJECTS, capability: "a dash crystal refills the dash (4 s cooldown), a spring launches at 160, a feather starts feather flight", probe: interact.refill+spring+feather, status: ready}
+  - {id: C6-COLLECT, capability: "touching a strawberry plays the collect state and adds it to the level record", probe: interact.strawberry, status: ready}
+  - {id: C6-HAZARDS, capability: "falling into a pit, a death block and spikes kill (+1 death) and respawn at the checkpoint after 1.2 s", probe: hazards.pit+deathblock+spikes, status: ready}
+  - {id: C6-CHECKPOINT, capability: "touching a checkpoint flag sets it (level entry + save record) and the next death respawns there", probe: hazards.checkpoint_respawn, status: ready}
+  - {id: C6-NPC, capability: "the stock NPCs talk with the talk button: Badeline, Granny, Theo and the signposts start their conversation, show the vanilla lines and end", probe: npc, status: ready}
+  - {id: C6-CASSETTE, capability: "a cassette in map 1 takes the player into its sub-level (1-1)", probe: cassette, status: ready}
+  - {id: C6-SAVE, capability: "Pause -> Save & Quit writes the strawberry and checkpoint to save.json; a fresh start reads them, resumes at that checkpoint and hides the collected strawberry", probe: save, status: ready}
+  - {id: C6-PERF, capability: "frame cost in map 1 not much higher than vanilla (update CPU ms median <= 2x or +1 ms, render (software GL) <= 3x or +25 ms, >= 85% of vanilla updates/s; run sessions one at a time)", probe: perf, status: ready}

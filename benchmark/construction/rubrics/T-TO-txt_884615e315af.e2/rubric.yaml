@@ -1,0 +1,300 @@
+# GameAnything-Bench scoring material: never shown to agents during a trial.
+task_id: T-TO-txt_884615e315af.e2
+source_inventory:
+- 'c07.p005-c07.p007: chapter heading (revenue and the agricultural estate); Garden City''s entire revenue comes from rents, which are to pay
+  (a) interest on the purchase money, (b) a sinking fund, (c) all works usually paid from compulsory rates, and (d) after redemption a surplus
+  for pensions and insurance'
+- 'c07.p008-c07.p010: town rent vs farm rent (£30,000 vs £4 an acre); the difference is due to population (the ''collectively-earned increment'');
+  migration raises land value, and because the land is held in trust for the community, the whole rise goes to the municipality in relief of rates'
+- 'c07.p011-c07.p012: worked example: site bought at £40 an acre (£240,000), 4 per cent interest £9,600 a year; per head this falls from £8 (1,000
+  people) to 6s. (32,000 people); this is all the rent ever ''paid away'', the rest is rates'
+- 'c07.p013-c07.p014: if each person pays £2 in all, the Board receives £54,400 after interest, enough for a £4,400 sinking fund and all local-tax
+  costs; comparison with national averages (£4 10s. for rent and rates)'
+- 'c07.p015-c07.p016: farm rents will rise: 30,000 townspeople give farmers a market at their doors, cutting rail and middleman costs (milk example:
+  over £1,900 a year saved)'
+- 'c07.p017-c07.p018: town waste returned to the soil on a clean-sheet sewage plan raises fertility; more, well-placed allotments raise total
+  rent'
+- 'c07.p019: just tenure: farms let at fair rents; the sitting tenant stays while paying what any rival offers less, say, 10 per cent; the incoming
+  tenant compensates the outgoing one for unexhausted improvements; this encourages cultivation and higher rent'
+- 'c07.p020-c07.p021: the nature of the payment: part is interest on debentures, part redemption, the rest spent locally under shared administration;
+  new terms ''landlord''s rent'', ''sinking fund'', ''rates'', total ''rate-rent''; the farmer will pay more rate-rent than rent to a private
+  landlord, getting it back as roads, schools, markets'
+- 'c07.p022-c07.p026: four reasons the rate-rent exceeds the old rent; prudent estimate: old rent £6,500 plus 50 per cent = £9,750 rate-rent from
+  the agricultural estate; the town estate follows in the next chapter'
+- 'c08.p001-c08.p002: footnotes (electric light and glass-houses; book references)'
+- 'c09.p001-c09.p003: epigraph (Marshall on moving London workers out); town site of 1,000 acres cost £40,000, interest £1,600 a year, under 1s.
+  1d. per head: all the landlord''s rent the town will pay; the rest goes to sinking fund or rates'
+- 'c09.p004: what the town gets for this: home lots (20 by 130 feet), wide roads, sites for all public buildings, central park, a wide circular
+  avenue, land for a circular railway, factory and market sites'
+- 'c09.p005-c09.p007: leases carry no tenant covenant to pay rates; instead the landlord covenants to apply all receipts first to debenture interest,
+  second to redemption, third the balance to a public fund (including outside authorities'' rates); home lots: avenue and boulevard frontages
+  draw the highest tenders; average 6s. a foot frontage, £6 a lot, 5,500 lots = £33,000'
+- 'c09.p008-c09.p009: business sites estimated at £2 per employee as a gauge only, the actual rent being raised by competition among tenants;
+  10,625 employed = £21,250'
+- 'c09.p010-c09.p019: gross revenue table £64,000 (£2 a head); applied as £9,600 interest, £4,400 sinking fund, £50,000 for purposes elsewhere
+  paid from rates; question whether £50,000 suffices'
+- 'c10.p001-c10.p004: footnote on leases; chapter heading (general observations on expenditure); public-works money borrowed on ''B'' debentures
+  secured on the rate-rent, behind the interest and sinking fund of the ''A'' debentures that bought the estate; unlike the land, the works need
+  not be funded in full at the outset'
+- 'c10.p005: bridge vs town: a bridge earns nothing until complete, a town''s roads and schools earn rate-rent as soon as lots are let, so money
+  is raised in stages and gets cheaper; each ward is a complete town, schools serve as halls at first, one ward is finished before the next, and
+  unbuilt land earns as allotments, pasture or brickfields'
+- 'c10.p006-c10.p008: a given revenue goes further: the first economy is that site costs (''landlord''s rent'') hardly enter municipal spending,
+  since park and public-building sites were covered by the purchase; £50,000 is net revenue'
+- 'c10.p009-c10.p010: second economy vs London: no purchase of old buildings, disturbance claims or legal costs; London school sites at £9,500
+  an acre vs £40; argument that the comparison is fair because the workers should move'
+- 'c10.p011-c10.p012: school-site saving restated (11s. 6d. a head, £517 a year); the two expedients: buy before migration raises value, and build
+  on a clear site; the migrants themselves become the landowners'
+- 'c10.p013-c10.p014: third economy: the town is planned as a whole, growing with unity at every stage; a new instrument is cheaper than patching
+  an old one'
+- 'c10.p015: illustration: the Holborn-Strand street rehousing (£1,400 a family in London vs seven cottages with gardens in Garden City)'
+- 'c10.p016: fourth economy: services subways dug by machinery on a clear site before people arrive; machinery giving work'
+- 'c10.p017-c10.p022: summary of the four economies (no site rent, no clearance costs, a definite plan, modern machinery)'
+- 'c10.p023-c10.p027: footnotes (references; Shaw-Lefevre on London''s chaotic growth)'
+- 'c11.p001-c11.p002: aim of the chapter: show that the £50,000 net revenue covers what rates usually pay for'
+- 'c11.p003: expenditure table: capital and maintenance for city roads, country roads, circular railway, schools, town hall, library, museum,
+  parks, sewage (capital £263,000, upkeep £29,000); interest on the works loan at 4-1/2 per cent, sinking fund over 30 years, and a balance for
+  outside local rates, totalling £50,000'
+- 'c11.p004-c11.p007: revenue-yielding works (markets, water, lighting, tramways) are left out as they make profits for the rates; notes on roads:
+  builders usually pay for new streets, part of the roads count as park, subways would pay for themselves through the utilities'
+- 'c11.p008-c11.p016: notes on country roads, the circular railway (charges to traders, rail rebates) and schools (cost per place, upkeep; Garden
+  City bears the whole cost, ''proving more than I set out to prove'')'
+- 'c11.p017-c11.p024: notes on management salaries, library and museum, parks (deferred until finances are sound, used meanwhile as farm land,
+  clubs may contribute), sewage'
+- 'c11.p025-c11.p031: interest on the works loan and the lenders'' security: money well spent, raised only as private building proceeds, on land
+  turning from farm to town; a 3 per cent security later, 4-1/2 assumed at first'
+- 'c11.p032-c11.p036: sinking fund clears the works debt in 30 years; little burden on outside authorities, so their rate per head falls; police
+  and poor-law cannot be taken over, but pensions after the estate is paid for, sites given to institutions'
+- 'c11.p037-c11.p039: conclusion: the rate-rent suffices for landlord''s rent, a sinking fund that abolishes it, and all municipal needs, with
+  no compulsory rates; revenue-bearing undertakings would further lighten rates'
+instructions_meta:
+  requirement_groups:
+    income sources and collection:
+    - CR1
+    - CR2
+    - FP1
+    - FP4
+    application of income and long-run finances:
+    - FP2
+    - FP6
+    growth and financing of public works:
+    - CR3
+    - CR4
+    - FP3
+    - FP5
+    estate and accounts presentation:
+    - VP1
+    - VP2
+  explicit_requirements:
+  - type: keep
+    text: I want sitting tenants to keep their plots as long as they pay what the best rival offers, less a small margin.
+    covers:
+    - FP4
+rubric:
+  content_realization:
+  - id: CR1
+    item: The land of the estate is owned by the community, and the people on it hold their plots as the community's tenants
+    anchors:
+      '1': the town authority owns the estate's land and lets it, and occupiers hold their plots as its tenants, not as owners
+      '0.5': plots are let, but the landlord is not the community (private landlords), or community-let plots sit beside privately owned land
+        as an equal part of the town
+      '0': 'no community ownership of the land: plots are simply private property'
+    evidence:
+    - c07.p007
+    - c07.p010
+    - c09.p005
+    - c10.p012
+  - id: CR2
+    item: The estate is let as rent-paying holdings of two kinds, farm land as well as town lots
+    anchors:
+      '1': both farm holdings and town lots exist on the community's land, and each kind is let to tenants and pays rent
+      '0.5': rent-paying holdings exist, but only town lots or only farm land
+      '0': no lettable holdings
+    evidence:
+    - c07.p015
+    - c07.p019
+    - - c09.p007
+      - c09.p009
+    - - c09.p010
+      - c09.p013
+  - id: CR3
+    item: 'There are two distinct debts: the loan that bought the land, and a separate loan for public works'
+    anchors:
+      '1': both loans exist, each with its own balance and purpose (buying the land, building public works)
+      '0.5': works borrowing is folded into the land debt, or only one of the two debts exists
+      '0': no debt at all
+    evidence:
+    - c10.p004
+    - c11.p003
+    - c11.p026
+    - c11.p033
+  - id: CR4
+    item: The town land is divided into sections that are built one after another, and finished sections can be told apart from land not yet built
+      on
+    anchors:
+      '1': the town is laid out in sections, and on the estate itself the built-out sections are distinguishable from those not yet built as the
+        town grows
+      '0.5': sections exist but the build-out state is given only as a list or label, not visible on the estate
+      '0': no sections, or no difference between built and unbuilt land
+    evidence:
+    - c10.p005
+    - c11.p029
+  functions_playability:
+  - id: FP1
+    item: Each occupied plot pays a recurring rent into one common fund, and that single payment pays for the settlement's public needs in place
+      of compulsory rates
+    anchors:
+      '1': recurring rent from each occupied plot flows into one fund, and that fund, not a separate compulsory tax, is what pays for public works
+        and services
+      '0.5': rent is collected once only, or it does not reach the fund that pays for public works, or a usual compulsory tax remains a separate
+        main charge beside the rent
+      '0': no rent from land, or the town is funded by the usual taxes only
+    evidence:
+    - c07.p007
+    - c07.p012
+    - - c07.p020
+      - c07.p021
+    - c09.p005
+    - - c09.p010
+      - c09.p014
+    - c11.p037
+  - id: FP2
+    item: 'Each period the income is applied in priority order: land-debt interest, then its repayment, then the balance to public purposes, so
+      a shortfall is felt first in public spending'
+    anchors:
+      '1': debt charges are always met first and only the remainder is available for public works, and a fall in income shrinks that remainder
+      '0.5': the income is split among these uses but without priority, or the split is a fixed share regardless of income
+      '0': no division of income
+    evidence:
+    - c09.p005
+    - c07.p020
+    - - c09.p015
+      - c09.p018
+  - id: FP3
+    item: 'Growth raises land value: as people settle and the town develops, the rents plots fetch rise and the gain goes to the common fund'
+    anchors:
+      '1': rents respond to population and development over play, and the increase visibly adds to the common fund
+      '0.5': rents rise over time but not because of growth, or the gain does not reach the fund
+      '0': rents never change
+    evidence:
+    - - c07.p008
+      - c07.p010
+    - c07.p015
+    - c07.p022
+    - c10.p012
+  - id: FP4
+    item: Plots go to the best offer, but a sitting tenant keeps the holding while matching a rival offer less a margin
+    anchors:
+      '1': competing offers decide rents, and the sitting tenant's preference works in play
+      '0.5': competing offers exist but without the sitting tenant's preference
+      '0': rents are fixed, or no competition for plots
+    evidence:
+    - c07.p019
+    - c09.p007
+    - c09.p008
+  - id: FP5
+    item: 'Public works are paid for by borrowing against the rent income in stages: a new section is built as its plots are let, and the loan''s
+      charges come out of the public share before the rest can be spent'
+    anchors:
+      '1': works are financed by loans raised as the town expands, section by section, and their interest and repayment reduce the money left
+        for further spending
+      '0.5': 'only one of the two: borrowing staged with letting but without an ongoing cost, or loan charges taken from the public share but
+        all works funded at once'
+      '0': no staged borrowing tied to expansion and no loan charges on the public share, or no way to build public works
+    evidence:
+    - - c10.p004
+      - c10.p005
+    - c11.p003
+    - c11.p029
+  - id: FP6
+    item: The land debt is paid off over play through its repayment share, and once it is, the money that serviced it is freed for the town's
+      public purposes
+    anchors:
+      '1': the land debt falls through its repayment share until it is paid off in play, after which its interest and repayment no longer come
+        out of the income and the freed amount visibly adds to the money for public purposes
+      '0.5': the land debt falls but is never paid off in play, or it is paid off but its charges still come out of the income or the freed amount
+        does not reach public purposes
+      '0': the land debt is never repaid
+    evidence:
+    - c07.p005
+    - c07.p007
+    - c11.p035
+    - c11.p037
+  visual_presentation:
+  - id: VP1
+    cat: spatial
+    item: The estate looks like land divided into lettable plots, with farm land and town lots recognisable by their look
+    anchors:
+      '1': the plot divisions are visible on the land, and farm holdings look like farmland and town lots like town ground
+      '0.5': plots are visible but farm and town holdings look the same, or the two uses look different but no plot divisions are visible
+      '0': no visible estate
+    evidence:
+    - c07.p015
+    - c09.p004
+    - c09.p007
+    - - c09.p008
+      - c09.p009
+  - id: VP2
+    cat: presentation
+    item: 'The common fund''s accounts are readable: income by source and how it is divided among interest, repayment and the public share'
+    anchors:
+      '1': the player can read the total income, where it comes from, and how much goes to each use
+      '0.5': a total is shown, but not its sources or not its division
+      '0': no readable account
+    evidence:
+    - - c09.p010
+      - c09.p018
+    - c11.p003
+    - c07.p025
+    - c09.p008
+play_suggestions:
+  FP1:
+  - 'let several plots and watch the fund over a few periods: does each occupied plot add rent?'
+  - 'build a public work: is it paid from the rent fund, with no separate tax needed?'
+  FP2:
+  - lower income (leave plots empty) and check which use loses money first
+  - check that debt interest is paid even when the public balance is small
+  FP3:
+  - grow the population and compare a plot's rent before and after
+  - check that the increase reaches the common fund, not a private owner
+  FP4:
+  - 'make a rival offer slightly above and then well above a sitting tenant''s rent: when does the tenant lose the plot?'
+  FP5:
+  - 'start a new section before its plots are let, and after: does borrowing follow letting?'
+  - compare money left for spending before and after a works loan is taken
+  FP6:
+  - 'play until the land debt is repaid (or fast-forward): do its interest and repayment stop coming out of the income?'
+  - 'compare the public share just before and after repayment: does it grow by the freed amount?'
+  robustness:
+  - 'let no plots at all: does the fund handle zero income sensibly?'
+  - 'borrow far beyond the income: what happens?'
+  - 'save and resume mid-period: are the fund and debts consistent?'
+v4_map:
+  U1: CR1 (community landlord, tenants hold plots); rent-in-place-of-rates moved to FP1
+  U2: 'dropped: mechanism already scored by FP2 (paired on purpose)'
+  U3: 'dropped: mechanism already scored by FP4 (paired on purpose)'
+  U4: 'dropped: mechanism already scored by FP3 (paired on purpose)'
+  U5: CR2 (farm and town holdings); location-raises-rent clause dropped as peripheral
+  U6: CR3 (two distinct debts); ranking behind the land loan and servicing from the public share scored in FP2 / FP5
+  U7: CR4 (sections built in turn); staged borrowing scored in FP5
+  FP1: FP1 (community ownership part moved to CR1; rent replacing compulsory rates added from U1)
+  FP2: FP2
+  FP3: FP3
+  FP4: FP4
+  FP5: FP5
+  FP6: FP6 (repayment freeing the landlord's share for public purposes)
+  FP7: 'dropped: user modification (player''s choice after the land debt is paid off), moved to editing_seed.yaml (curator decision 2026-11-05)'
+  VP1: CR2 (existence of farm and town holdings) + VP1 (their look)
+  VP2: CR4 (built vs unbuilt sections is structure, judged by inspection)
+  VP3: VP2
+provenance:
+  source_yaml: T-TO-txt_884615e315af.e2.yaml
+  source_sha256: e5080579ba98910c49777b806493cb1f36dba7f081466262b43bc8aae5b2b00e
+  size_waiver: null
+  size_max: null
+  sources:
+  - ref: t01
+    title: Garden Cities of To-Morrow
+    author: Sir Ebenezer Howard
+    text_id: txt_884615e315af
+    excerpt_id: e2

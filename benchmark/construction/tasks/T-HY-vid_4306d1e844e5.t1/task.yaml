@@ -1,0 +1,22 @@
+# GameAnything-Bench task T-HY-vid_4306d1e844e5.t1 (public part). Instruction: instruction_fine.md.
+task_id: T-HY-vid_4306d1e844e5.t1
+version: '0.2'
+category: scene_world
+modality: video+image
+domain: travel
+track: core
+target_game: tof2
+references:
+- c01
+- img01
+- img02
+- img03
+- img04
+- img05
+- img06
+- img07
+- img08
+provenance:
+  pipeline: reference_curation ga_author (v3 draft -> crosscheck -> reconcile -> instruct -> explicit) -> restructure_v4
+  rules_version: v4.2
+  review_status: pending

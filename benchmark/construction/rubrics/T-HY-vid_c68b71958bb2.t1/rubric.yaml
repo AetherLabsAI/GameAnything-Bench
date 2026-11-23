@@ -1,0 +1,295 @@
+# GameAnything-Bench scoring material: never shown to agents during a trial.
+task_id: T-HY-vid_c68b71958bb2.t1
+source_inventory:
+- 'clip 00:00-00:01: night, aerial view of a lit, flower-covered house on a hillside'
+- 'clip 00:01-00:05: a large crowd fills a courtyard below a curved staircase; an elderly white-haired woman stands on the stairs holding a lit
+  candle; a girl with round glasses and an embroidered blouse watches (00:03); a group of family members looks on (00:05)'
+- 'clip 00:05-00:09: black frame, then in a dark field a woman in red stands at the centre of a golden glowing ring that spreads into a large
+  mandala-like pattern'
+- 'clip 00:09-00:14: a fire-like golden light runs along the wall and arch around a green door while a woman stands on the steps; then a daylight
+  view of the house, now bright, multi-storey, pink and yellow, covered in flowering vines in a green mountain valley, a rainbow and yellow butterflies;
+  Disney logo'
+- 'clip 00:14-00:21: the girl in glasses waves, dances on an arcaded courtyard with a circular patterned floor, gestures in a tiled kitchen, drawers
+  open by themselves, she runs down a stair with terracotta tiled steps and a turquoise railing'
+- 'clip 00:21-00:24: the whole family poses together, one woman holding a boulder overhead, a rainbow, flowers and birds around them'
+- 'clip 00:24-00:26: village people at dusk outside the house; a child carried on shoulders'
+- 'clip 00:26-00:28: in a sunny plaza with arcades a young woman in lilac spins; from above she stands in concentric rings of flowers'
+- 'clip 00:28-00:31.5: a small boy with a toucan on his arm amid golden sparkles; the girl in glasses looks on, startled, in front of a glowing
+  golden image on a door'
+- 'clip 00:32-00:33: the village street at night lit with candles, the house at the top of the hill'
+- 'clip 00:33-00:38: a strong woman holds a slab overhead, lifts and moves a stone bridge with people on it, a man points, she carries a pile
+  of donkeys along a village lane while the girl in glasses watches'
+- 'clip 00:38.5-00:42.5: the girl in glasses talks excitedly with a woman; a girl in lilac swings from a balcony; the girl in glasses holds party
+  things (pinwheels, a party hat) beside relatives; the young woman in lilac on a flowered staircase'
+- 'clip 00:43-00:45.5: in dark blue light a hand touches cracked, peeling stone tiles; the girl in glasses, eyes closed, hand on her chest'
+- 'clip 00:46-00:55.5: warm candle-lit close two-shot: the girl in glasses wipes a tear; a woman in a green apron touches her face and hand and
+  talks to her; the girl answers, gestures, holds up a small pastry and smiles'
+- 'clip 00:55.5: title card ''From the studio that brought you Moana'' (end of clip)'
+- 'clip audio: no transcript in the material (Stage-2 annotations cite speech about the candle''s miracle and the girl being the only one without
+  a gift; unverified here)'
+- 'text p001: a woman''s daughters One-eye (one eye in her forehead), Two-eyes (two eyes like other people) and Three-eyes (a third eye in her
+  forehead); mother and sisters hate Two-eyes for being ordinary, starve and mistreat her; tending the goat she weeps; a wise woman appears and
+  asks why'
+- 'text p001-p009: the wise woman teaches a rhyme: spoken to the goat it sets a table of food, a second rhyme takes it away; Two-eyes tries it,
+  eats and is glad'
+- 'text p010-p016: Two-eyes leaves her home scraps untouched; the sisters grow suspicious and send One-eye to the pasture; Two-eyes sings her
+  to sleep with a song, eats in secret, wakes her; One-eye cannot report anything'
+- 'text p017-p033: Three-eyes is sent; Two-eyes'' song by mistake names only two of her eyes, so the third stays awake and sees the charm; Three-eyes
+  tells the mother, who kills the goat out of envy'
+- 'text p034: Two-eyes weeps again; the wise woman returns and tells her to ask for the goat''s entrails and bury them before the house door;
+  the sisters laugh and give them'
+- 'text p035: next morning a tree with silver leaves and golden fruit stands there; the mother, One-eye and Three-eyes cannot pick the fruit,
+  it escapes them; it comes into Two-eyes'' hand; the family takes the apples and treats her worse'
+- 'text p036: a knight comes; the sisters hide Two-eyes under a barrel and claim the tree but cannot break off a branch; Two-eyes rolls golden
+  apples to his feet; he calls her out, she breaks a branch with ease, asks him to free her from hunger and want; he takes her to his father''s
+  castle and marries her; the tree vanishes and reappears before her window'
+- 'text p037: long after, two poor beggar women come to her castle: her sisters, fallen into poverty; she welcomes and cares for them, and they
+  repent'
+- 'img01: a narrow colonial street: yellow and white facades, overhanging wooden balconies hung with red flowers, clay-tile roofs, lanterns, people
+  walking'
+- 'img02: a white courtyard with round arches under a clay-tile roof, a flowering tree, plants and painted animal sculptures on a cobbled floor'
+- 'img03: a courtyard seen from under a wooden eave: an iron dome gazebo wound with pink bougainvillea, terracotta tile floor, low white house
+  with clay-tile roof and wooden columns, palms'
+- 'img04: a corner house with white walls, red doors, windows and balconies trimmed in yellow, a deep wooden eave, a street clock, a rainy street'
+- 'img05: a close view of a painted wall base: yellow wall, red band with yellow and white crosses, green panels with white relief animals'
+- 'img06: a narrow stair with patterned painted tile risers, an iron scroll railing, potted plants on the steps, an arch and skylight above'
+instructions_meta:
+  requirement_groups:
+    story progression:
+    - CR1
+    - CR3
+    - CR4
+    - CR5
+    - FP1
+    character introduction:
+    - CR6
+    - VP1
+    story magic in play:
+    - CR2
+    - FP2
+    - FP3
+    - VP3
+    home and village:
+    - VP2
+    emotional key moments:
+    - VP4
+  explicit_requirements:
+  - type: specify
+    text: The secret should come out the way the story tells it, with the three-eyed sister sent to watch me, my song putting only two of her
+      eyes to sleep so the third one sees the charm, and the mother killing my animal because of it.
+    covers:
+    - CR3
+rubric:
+  content_realization:
+  - id: CR1
+    item: Two-eyes, the heroine, is despised and starved by her mother and her sisters One-eye and Three-eyes because she is the ordinary one
+    anchors:
+      '1': the mother and both sisters visibly reject and deprive her, and the game makes clear the reason is that she is ordinary among them
+      '0.5': the family mistreats her but the reason (her being ordinary) is missing or different
+      '0': no mistreated heroine in an eye-marked family
+    evidence:
+    - p001
+  - id: CR2
+    item: When she weeps, a wise woman gives Two-eyes a food charm that works through her magic animal, the goat she tends
+    anchors:
+      '1': the wise woman as the giver of the charm, and the goat the heroine tends as the magic animal it works through
+      '0.5': the charm and the magic animal present but no helper gives the charm
+      '0': no charm and no magic animal
+    evidence:
+    - - p001
+      - p009
+  - id: CR3
+    item: 'Her secret is found out and lost: her untouched food makes the family suspicious, Three-eyes is sent to watch her, her song lulls only
+      two of Three-eyes'' eyes so the third stays awake and sees the charm, and the mother then kills the animal'
+    anchors:
+      '1': suspicion, Three-eyes sent to watch, the third eye left awake as the cause of the discovery, and the animal killed as its consequence,
+        in this order
+      '0.5': the animal is killed but the discovery chain is missing or wrong
+      '0': no discovery and no loss of the animal
+    evidence:
+    - - p010
+      - p033
+  - id: CR4
+    item: 'The loss turns into her rescue: the animal''s remains, buried before the house door on the wise woman''s advice, grow the magic tree,
+      and the tree is what shows the knight she is the one, so he takes her away and marries her'
+    anchors:
+      '1': the chain remains -> tree -> the tree proves to the knight that she is the one -> he takes her away
+      '0.5': the tree and the knight both present but not how one leads to the other
+      '0': neither the tree from the remains nor the knight's rescue
+    evidence:
+    - p034
+    - p035
+    - p036
+  - id: CR5
+    item: 'The ending reverses the roles: the sisters, fallen into poverty, come to her castle as beggars, and she takes them in kindly, so they
+      repent'
+    anchors:
+      '1': the sisters' return as beggars and her kindness leading to their repentance
+      '0.5': a happy ending for her without the sisters' return, or the return without her kindness
+      '0': no ending, or a different one
+    evidence:
+    - p037
+  - id: CR6
+    cross: true
+    item: 'The family is introduced the way the clip introduces its gifted household: a night rite before the gathered household whose magic wakes
+      the home (clip), then the relatives shown each with their own trait, the sisters'' single or third eye (text), with the heroine set apart
+      as the one without (text)'
+    anchors:
+      '1': an opening rite that transforms the home, followed by a presentation of the relatives with their distinct traits in which the heroine
+        stands apart as the ordinary one
+      '0.5': the traits and the ordinary heroine presented without a rite, or a rite without the presentation of the relatives
+      '0': neither
+    evidence:
+    - - 00:01
+      - 00:14
+    - - 00:21
+      - '00:42.5'
+    - p001
+  functions_playability:
+  - id: FP1
+    item: 'The story can be played from start to end: each of its situations is reached through the player''s own play in the text''s order, each
+      following from the one before, up to a clear ending'
+    anchors:
+      '1': the situations are reached in order through play, each caused by the one before, and the story ends
+      '0.5': the story can be played but situations can be skipped or reached out of order, are disconnected, or it stops before the ending
+      '0': no playable story progression, or a different story
+    evidence:
+    - - p001
+      - p037
+  - id: FP2
+    item: 'The food charm works in play: used at the magic animal, one charm sets out food for the heroine and the other clears it away'
+    anchors:
+      '1': the player performs the charm and the food visibly appears and is cleared
+      '0.5': the food appears only in a cut-scene with no player action, or only one half of the charm works
+      '0': the charm does not work
+    evidence:
+    - - p001
+      - p009
+  - id: FP3
+    item: 'The magic tree yields to the heroine alone in play: the other characters'' attempts at its fruit or branches fail, while hers succeed'
+    anchors:
+      '1': the player harvests the tree and the others visibly fail at it
+      '0.5': the tree can be harvested but nobody is seen to fail, or it only happens in a cut-scene with no player action
+      '0': no working tree
+    evidence:
+    - p035
+    - p036
+  visual_presentation:
+  - id: VP1
+    cat: key_moment
+    keyframes:
+    - '00:04.0'
+    - '00:08.5'
+    - '00:09.5'
+    item: 'The rite''s magic looks like the clip''s: a warm golden glow that spreads from the rite and lights up the home'
+    anchors:
+      '1': a recognisable spreading golden light reaching the house
+      '0.5': a light effect that does not spread or does not reach the home
+      '0': no visible magic
+    evidence:
+    - - 00:04
+      - 00:11
+  - id: VP2
+    cat: style
+    keyframes:
+    - '00:12.0'
+    - '00:16.5'
+    item: 'The home and village have the look of the images'' colonial architecture: an arcaded courtyard under clay-tile roofs, brightly painted
+      walls and balconies hung with flowers'
+    anchors:
+      '1': 'the setting reads as this architecture as a whole: arcades or a courtyard together with clay-tile roofs and colourful facades with
+        balconies or flowers'
+      '0.5': only isolated elements of it, and the setting otherwise reads as a generic farm or town
+      '0': unrelated look
+    evidence:
+    - img01
+    - img02
+    - img03
+    - img04
+    - img06
+    - - 00:11
+      - 00:17
+  - id: VP3
+    cat: key_moment
+    item: The magic tree before the house door is set apart by its silver leaves and golden fruit
+    anchors:
+      '1': a distinct silver-and-gold tree at the house
+      '0.5': a special tree that does not look precious or is not at the house
+      '0': no tree
+    evidence:
+    - p035
+  - id: VP4
+    cat: key_moment
+    keyframes:
+    - '00:46.0'
+    - '00:47.5'
+    - '00:54.0'
+    item: The consolation is shown as an intimate, warmly lit talk in which the heroine's sadness and the comfort she receives are readable
+    anchors:
+      '1': a close, warm-lit consolation with her distress and the comfort both visible
+      '0.5': the talk happens but the emotion is not readable, or it is shown only as plain text
+      '0': no consolation scene
+    evidence:
+    - - 00:46
+      - '00:55.5'
+    - p001
+    - p034
+play_suggestions:
+  FP1:
+  - 'play from the start: note each story situation and what caused it'
+  - 'try to skip ahead (go to the tree spot or meet the knight early): does the order hold?'
+  - 'finish the story: is the sisters'' return and her kindness shown?'
+  FP2:
+  - 'go to the goat and use the charm: does food appear, and does the second charm clear it?'
+  - use the charm while a watcher is awake and asleep
+  FP3:
+  - watch the other characters try the tree, then try it as the heroine
+  robustness:
+  - leave the area during the spying or the knight's visit and come back
+  - 'talk to every family member at each stage: do their attitudes fit the story so far?'
+  - 'save and reload mid-story: does progress hold?'
+hybrid:
+  modality: video+text+image
+  roles:
+    video: 'the staging of a gifted family: a night candle rite before the gathered household whose magic wakes the home, relatives each shown
+      with a distinct gift, the girl in glasses set apart from them and consoled by an older woman; the look of the magic'
+    text: 'the story: characters, their relations, the magic the plot depends on, the turning points with their order and causes, and the ending'
+    images: 'the look of the home and village: Latin American colonial architecture (arcaded courtyards, clay-tile roofs, painted facades with
+      balconies and flowers, patterned tiled stairs)'
+  cross_reference_requirement: Tell the text's story of the ordinary sister despised by a family marked by special traits, presenting that family
+    the way the clip presents its gifted household (a rite whose magic wakes the home, each relative shown with a distinct trait, the heroine
+    as the one without), in a home and village that look like the images' colonial architecture.
+v4_map:
+  U1: CR1
+  U2: CR2, FP2, FP3
+  U3: 'CR3 (One-eye''s first, failed watch dropped: peripheral (a sub-episode before the discovery; the explicit requirement and the plot turn
+    on Three-eyes))'
+  U4: CR4, FP3
+  U5: CR5
+  U6: CR6, VP1
+  U7: CR6, CR2, VP4
+  FP1: FP1
+  FP2: CR6
+  FP3: FP2, FP3
+  FP4: CR2, FP2 (the animal's later roles scored as events in CR3, CR4)
+  VP1: VP1
+  VP2: VP2
+  VP3: VP3
+  VP4: VP4
+provenance:
+  source_yaml: T-HY-vid_c68b71958bb2.t1.yaml
+  source_sha256: f9fa7c248809a2f942675e2f1541afc9c4968c1b512ba97b15a13266c6a745ef
+  size_waiver: null
+  size_max: null
+  sources:
+  - ref: t01
+    text: /Volumes/USB-500G/gameanything_local/hf/curation/hybrid_texts/T-HY-vid_c68b71958bb2.t1/final.md
+  - refs:
+    - img01
+    - img02
+    - img03
+    - img04
+    - img05
+    - img06
+    images:
+    - hybrid/q24_ref1

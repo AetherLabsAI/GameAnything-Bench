@@ -1,0 +1,15 @@
+# negative mod for `gab selfcheck tuxemon` (2026-11-06): a mod that replaces the new-game opening, as the devkit allows
+# ("change the start"): the bedroom's intro question, name entry and starter pick are gone; the first event clears the start
+# screen's background, shows one line and sends the player to Paper Town. Only the opening (TX-NEWGAME) and this map's events
+# (TX-MAPS) may differ from vanilla: the probes that need a game in progress start from a stock state (probes.stock_start).
+events:
+  Skip Opening:
+    type: event
+    conditions:
+      - not variable_set negopening:yes
+    actions:
+      - set_variable negopening:yes
+      - change_bg
+      - translated_dialog spyder_intro_question
+      - transition_teleport player,spyder_paper_town.tmx,10,8,0.3
+      - char_face player,down

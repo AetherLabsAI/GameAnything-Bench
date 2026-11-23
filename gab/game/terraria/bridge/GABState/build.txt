@@ -1,0 +1,4 @@
+displayName = GameAnything state
+author = GameAnything-Bench
+version = 0.1
+side = Both

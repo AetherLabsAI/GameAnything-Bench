@@ -1,0 +1,231 @@
+# GameAnything-Bench scoring material: never shown to agents during a trial.
+task_id: T-VO-vid_1d8d10692142.t1
+source_inventory:
+- 00:27.4-00:33.9 elevated drone view straight down a wide avenue to a monumental stone arch standing in a large roundabout; the low sun sits
+  inside the arch opening and throws a bright orange strip of light down the centre of the avenue; cars drive on the avenue and circle the roundabout;
+  rows of trees line both sides of the avenue; streetlamps (unlit); pale uniform buildings at the edge of the roundabout; a single tall building
+  on the horizon to the right of the arch; pink-orange horizon under a blue-grey sky; camera slowly descends / pushes in
+- 00:31.9-00:33.9 a faint, illegible watermark text at the bottom right of the frame
+- '00:34.4-00:40.9 close-up of the arch: carved relief panels with crowds of figures, a sculpted group on the pillar, inscribed pillar faces,
+  a decorated cornice; a very large flag hangs inside the arch opening and waves in the wind (red and white clearly, a dark blue stripe visible
+  from 00:38.4); warm side light on the stone; city buildings and trees glimpsed through the opening'
+- '00:41.4-00:47.4 high aerial, near top-down: the arch at the centre of a large circular roundabout with about a dozen straight avenues radiating
+  out like a star; wedge-shaped blocks of uniform pale mid-rise buildings with grey roofs fill the spaces between the avenues; trees (some yellowing)
+  along the avenues and in a ring around the circle; very long shadows from a low sun at the upper left, orange haze on the horizon; the camera
+  slowly rotates / drifts'
+- '00:47.9-00:54.4 rooftop-level view: grey zinc mansard roofs with round dormer windows and red chimney pots, a white blank gable wall and tree
+  tops in the foreground; the lattice iron tower stands in the distance on the left third, its lights on (warm gold), rising far above the low
+  uniform skyline; teal sky with a pink-red band at the horizon; slow lateral drift'
+- 00:54.9-01:01.4 dusk, elevated view along a long straight avenue lined by two dark rows of trees toward a distant cluster of modern high-rise
+  towers on the horizon; a large cube-shaped open gate building sits in the middle of the cluster, on the avenue's axis; red tail-lights and white
+  headlights stream along the avenue, a few windows lit; a dark wooded park area on the left; the city below is blue-teal, the sky solid orange
+- 01:01.9-01:07.9 the lattice tower centred in frame, fully lit in warm orange-gold, against streaky red-orange clouds; the dense city below is
+  dark with scattered lights; from about 01:06.4 a white searchlight beam appears from the top of the tower and is clearly visible at 01:06.9-01:07.9,
+  pointing to the upper right
+- '01:08.4-01:18.4 night aerial, nearly static: a wide avenue lit orange runs straight from the foreground to a large rectangular plaza / garden
+  whose perimeter is outlined by lights, the axis continuing beyond it; dark tree rows flank the avenue; a large glass-roofed hall on the right,
+  a small domed building on the left; the surrounding city is dark blue with sparse lit windows'
+- 'editing: hard cuts between the shots at about 00:34.3, 00:41.2, 00:47.9, 00:54.9, 01:01.7 and 01:08.4; the light gets darker shot by shot (low
+  sun -> dusk -> night)'
+- 'on-screen text: none apart from the faint watermark'
+- 'audio: music only, no speech (annotation audio_relevance music_only; the Whisper transcript of the range is empty)'
+- 'not visible: no people at readable scale, no interaction or rules; the connection between the shots (one route or separate places) and the
+  real distances are not shown'
+instructions_meta:
+  requirement_groups:
+    road network and traffic:
+    - FP1
+    - FP2
+    time of day and lighting:
+    - FP3
+    street layout and views:
+    - CR2
+    - CR3
+    - CR4
+    landmarks:
+    - CR1
+    - CR5
+    - VP1
+    - VP2
+    building fabric:
+    - VP3
+  explicit_requirements:
+  - type: keep
+    text: I want to keep that big carved stone arch with the huge flag hanging and waving inside its opening.
+    covers:
+    - CR1
+    - VP1
+rubric:
+  content_realization:
+  - id: CR1
+    item: The game contains a monumental stone arch with carved relief / sculpture on its faces and a very large flag hanging inside its opening,
+      moving in the wind
+    anchors:
+      '1': a monumental arch with visible carved relief / sculpture and a large flag hanging inside the opening that moves
+      '0.5': an arch without the carving or without the flag, or the flag placed elsewhere (on top, beside it) or rigid
+      '0': no monumental arch
+    evidence:
+    - - 00:34
+      - 00:41
+    - - 00:27
+      - 00:34
+  - id: CR2
+    item: The arch stands at the centre of a large circular roundabout from which about a dozen straight avenues radiate in a star, with wedge-shaped
+      building blocks filling the spaces between them
+    anchors:
+      '1': the arch centred in a circle with many (about 10 or more) straight radiating avenues and built blocks between them
+      '0.5': a roundabout around the arch with fewer (fewer than about 10, e.g. 4-9) or irregular radial roads, empty wedges, or the arch not
+        at the centre
+      '0': no radial hub around the arch
+    evidence:
+    - - 00:41
+      - 00:48
+    - - 00:27
+      - 00:34
+  - id: CR3
+    item: A long straight avenue runs continuously to a distinct cluster of modern high-rise towers, with a large cube-shaped open gate building
+      standing in the cluster on the avenue's axis
+    anchors:
+      '1': one continuous straight avenue ending on a distinct high-rise cluster with a cube-like gate building on its axis
+      '0.5': a high-rise cluster at the end of the avenue but no gate on the axis, or the avenue is broken / bends so the cluster is off its axis
+      '0': no high-rise cluster at the end of a long avenue
+    evidence:
+    - - 00:55
+      - 01:02
+  - id: CR4
+    item: Another long straight avenue leads to a large rectangular plaza / garden that sits on its axis
+    anchors:
+      '1': a straight avenue ending on a large rectangular plaza or garden on its axis
+      '0.5': a plaza exists but not at the end of a straight avenue, or it is small / not rectangular
+      '0': no such plaza
+    evidence:
+    - - 01:08
+      - 01:19
+  - id: CR5
+    item: A tall lattice iron tower stands in the city and rises far above the buildings around it
+    anchors:
+      '1': a tall lattice tower that clearly towers over the surrounding city
+      '0.5': a tall tower that is not a lattice form, or one that does not stand out (surrounded by buildings of similar height)
+      '0': no tower landmark
+    evidence:
+    - - 00:48
+      - 00:55
+    - - 01:02
+      - 01:08
+  functions_playability:
+  - id: FP1
+    item: 'Hub junction works: the radial roads are actually connected to the circular junction around the monument, and vehicles drive around
+      the circle and enter and leave it by the radial roads'
+    anchors:
+      '1': radial roads connected to the circle, with vehicles circulating and passing through it over time
+      '0.5': the roads are drawn next to the circle but not all connected, or vehicles appear but stand still / do not pass through
+      '0': no working junction, or no traffic on it
+    evidence:
+    - - 00:27
+      - 00:34
+    - - 00:41
+      - 00:48
+  - id: FP2
+    item: 'Long avenue as a working link: vehicles travel the long avenue along its length to the high-rise area at its far end'
+    anchors:
+      '1': moving vehicles use the avenue end to end, reaching the high-rise area
+      '0.5': traffic only on part of it, or vehicles stuck / not reaching the far end
+      '0': no traffic on the avenue, or no such avenue
+    evidence:
+    - - 00:55
+      - 01:02
+  - id: FP3
+    item: 'Time-of-day progression: the experience passes from a low-sun daylight through dusk into night, and street and vehicle lights turn
+      on as it darkens'
+    anchors:
+      '1': observable day -> dusk -> night change with street and vehicle lights switching on in the dark phases
+      '0.5': the light changes but the lights do not come on (or are always on), or only a fixed sunset / fixed night
+      '0': a single static lighting state with no lights
+    evidence:
+    - - 00:27
+      - 00:34
+    - - 00:55
+      - 01:02
+    - - 01:08
+      - 01:19
+  visual_presentation:
+  - id: VP1
+    cat: key_moment
+    keyframes:
+    - '00:29.4'
+    - '00:37.9'
+    item: 'The arch looks like the reference''s: a massive, blocky pale-stone arch that dominates the view at the end of its tree-lined avenue'
+    anchors:
+      '1': a massive pale stone arch of the reference's heavy, square-built proportions, dominating the view down the avenue
+      '0.5': an arch of a different look (slender, a gate or modern structure, wrong material) or one lost in the view
+      '0': no arch visible
+    evidence:
+    - - 00:27
+      - 00:41
+  - id: VP2
+    cat: key_moment
+    keyframes:
+    - '01:02.4'
+    - '00:50.4'
+    item: 'The lit tower at dusk: the lattice tower glowing warm gold over a darker city'
+    anchors:
+      '1': the lattice tower lit warm gold against a dusk sky, standing out over a darker city
+      '0.5': the tower lit but not with a warm glow, or not standing out from an equally bright city
+      '0': the tower never seen lit
+    evidence:
+    - - 01:02
+      - 01:08
+    - - 00:48
+      - 00:55
+  - id: VP3
+    cat: style
+    keyframes:
+    - '00:49.4'
+    - '00:42.9'
+    item: 'Uniform historic city fabric: pale stone mid-rise buildings of even height with grey mansard roofs, dormer windows and chimney pots,
+      forming a low, even skyline'
+    anchors:
+      '1': even-height pale buildings with grey pitched / mansard roofs giving a uniform low skyline
+      '0.5': even height but a modern / mixed look, or the right look with very uneven heights
+      '0': unrelated building style
+    evidence:
+    - - 00:48
+      - 00:55
+    - - 00:41
+      - 00:48
+play_suggestions:
+  FP1:
+  - 'watch the hub for a few in-game minutes: do vehicles enter, circle and leave by different radial roads?'
+  - check that each radial road is connected to the circle, not just drawn next to it
+  FP2:
+  - 'follow one vehicle from the district along the long avenue: does it reach the high-rise area?'
+  - check from above that the avenue is one continuous straight road
+  FP3:
+  - 'advance time from late afternoon into night: when do street and vehicle lights turn on?'
+  - check that lights are off (or not prominent) in full daylight
+  robustness:
+  - 'pause and unpause, and run at the fastest speed for a while: does the hub still flow without gridlock?'
+  - 'save and reload: are the monument, tower, high-rise cluster and lighting state intact?'
+  - 'bulldoze one radial road: does traffic reroute instead of the whole hub locking up?'
+  - 'let the simulation run for a while: do the blocks between the avenues stay built (no abandoned or empty lots)?'
+v4_map:
+  U1: 'dropped: paired mechanism; the lighting progression is scored by FP3'
+  U2: CR1
+  U3: CR2
+  U4: 'CR3, CR4 | dropped: peripheral (the sun inside the arch opening is a one-off sight)'
+  U5: 'CR5, VP2, VP3 (the low mansard-roof skyline) | dropped: peripheral (the searchlight beam appears only in the last 1-2 s of the tower shot)'
+  FP1: FP1
+  FP2: FP2, CR3 (existence of the continuous avenue split off)
+  FP3: FP3
+  FP4: 'dropped: editing request (the bus line), moved to editing_seed.yaml'
+  VP1: CR2 (which avenues exist and how they meet is layout)
+  VP2: VP1, CR1 (carving and flag existence split off)
+  VP3: 'VP2 | dropped: peripheral (the searchlight beam from the tower top, a one-off sight)'
+  VP4: CR3, CR4 (avenue-to-landmark arrangement is layout)
+  VP5: VP3
+provenance:
+  source_yaml: T-VO-vid_1d8d10692142.t1.yaml
+  source_sha256: 860ce4f7843510a18ded797ecf14a3ea182db6c0b58676e32c7cb074a13e1909
+  size_waiver: null
+  size_max: null
+  sources: []

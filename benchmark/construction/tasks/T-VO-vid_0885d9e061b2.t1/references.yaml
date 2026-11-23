@@ -1,0 +1,48 @@
+# Reference material: fetched from the HF dataset into $GAB_MEDIA_DIR/<task>/ by `gab media fetch` (sha256 checked).
+# The agent gets the files only (no title, author, caption or source): this file is never shown to it.
+task_id: T-VO-vid_0885d9e061b2.t1
+refs:
+- id: c01
+  kind: video
+  file: clip_01.mp4
+  video_id: vid_0885d9e061b2
+  source:
+    title: 07 - SINGAPORE ｜ FX30 Cinematic Travel Film
+    url: null
+    channel: null
+    youtube_id: null
+  range:
+    start: 0.9
+    end: 23.0
+    text: 0:00.90-0:23.00
+  duration_s: 22.1
+  size_bytes: 3713580
+  format: mp4 H.264 720p, AAC audio
+  hf_path: media/T-VO-vid_0885d9e061b2.t1/clip_01.mp4
+  sha256: f362a88006b96c41bf18acd37370e255ff564020eff5dcc4f53e5c1fd1ad2d67
+  rights_note: Copyrighted travel film by an individual creator. Use as private reference only and do not redistribute the footage or frames.
+    The shown places are real, specific landmarks (a dome garden with waterfall, tree-shaped towers, a hotel complex, a lotus-shaped museum, a
+    lion statue) with possible architecture or trademark claims. Build abstracted, restyled versions rather than replicas, and use no real names
+    or logos in the game.
+- id: c02
+  kind: video
+  file: clip_02.mp4
+  video_id: vid_0885d9e061b2
+  source:
+    title: 07 - SINGAPORE ｜ FX30 Cinematic Travel Film
+    url: null
+    channel: null
+    youtube_id: null
+  range:
+    start: 23.0
+    end: 36.0
+    text: 0:23.00-0:36.00
+  duration_s: 13.0
+  size_bytes: 1211627
+  format: mp4 H.264 720p, AAC audio
+  hf_path: media/T-VO-vid_0885d9e061b2.t1/clip_02.mp4
+  sha256: 67d05a49dc3c81782ed274a0c88fde9ab316c5b65015a879ed7efd4290a55394
+  rights_note: Copyrighted travel film by an individual creator. Use as private reference only and do not redistribute the footage or frames.
+    The shown places are real, specific landmarks (a dome garden with waterfall, tree-shaped towers, a hotel complex, a lotus-shaped museum, a
+    lion statue) with possible architecture or trademark claims. Build abstracted, restyled versions rather than replicas, and use no real names
+    or logos in the game.

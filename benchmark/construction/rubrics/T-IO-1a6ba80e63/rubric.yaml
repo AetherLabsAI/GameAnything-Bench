@@ -1,0 +1,173 @@
+# GameAnything-Bench scoring material: never shown to agents during a trial.
+task_id: T-IO-1a6ba80e63
+source_inventory:
+- 'img01: night view over a valley; a turbulent deep-blue sky with large swirling currents, a bright crescent moon (upper right) and large haloed
+  stars; a tall dark flame-shaped cypress in the near left foreground reaching into the sky; below on the right a small village among trees, houses
+  with a few lit yellow windows, a church whose thin pointed steeple rises above the roofs; behind, a line of blue hills rising to a higher dark
+  ridge on the right'
+- 'img02: daytime view of a green crop field in the foreground, bounded by a wall / fence running across the middle ground from the left; beyond
+  it a few scattered farmhouses with red roofs; green hills in the middle distance, rising on the right to bare, rocky mountains; a sky filled
+  with heavy, swirling white clouds over patches of blue'
+- 'img03: daytime view of a ripe golden wheat field being harvested: a single reaper with a sickle on the left among cut and standing wheat; a
+  low stone wall crosses the view behind the field; beyond the wall farmhouses (red and grey roofs), a few trees and a tall thin tree at the far
+  left; hills rising on the right to pale rocky mountains; a large yellow sun in a yellow sky'
+- 'shared by the views: a settlement / farmhouses at the foot of a line of hills that rises to its highest, rockiest part on the right; img02
+  and img03 show the same arrangement (field in front, wall across, houses beyond, mountains rising on the right)'
+instructions_meta:
+  requirement_groups:
+    exploring the place:
+    - FP1
+    sky and lighting states:
+    - CR5
+    - FP2
+    atmosphere of each state:
+    - VP1
+    - VP2
+    landmarks and layout:
+    - CR1
+    - CR2
+    - CR3
+    - CR4
+    - VP3
+  explicit_requirements:
+  - type: specify
+    text: The village should sit at the foot of a line of hills that climbs to a higher ridge on the right, just like in the pictures.
+    covers:
+    - CR4
+rubric:
+  content_realization:
+  - id: CR1
+    item: The game contains a small village of houses with a church whose pointed steeple rises above the roofs
+    anchors:
+      '1': a cluster of village houses with a church and a pointed steeple clearly higher than the roofs around it
+      '0.5': a village without a recognisable steeple, or a lone church / tower with no village around it
+      '0': no village
+    evidence:
+    - 'img01: the village lower right, the church steeple above the roofs'
+  - id: CR2
+    item: A tall dark tapering tree stands on the near side of the village and towers far above its houses and steeple
+    anchors:
+      '1': a single tall, dark, narrow tapering tree near the village, much taller than the houses and the steeple
+      '0.5': a tall tree present but ordinary in shape (broad / not tapering) or not clearly taller than the village
+      '0': no such tree
+    evidence:
+    - 'img01: the flame-shaped cypress in the left foreground'
+  - id: CR3
+    item: The game contains an open field bounded by a wall that crosses it, with farmhouses on the far side of the wall
+    anchors:
+      '1': a field, a wall running across its far edge, and farmhouses beyond that wall
+      '0.5': a field and farmhouses without the wall between them, or a wall without a field in front
+      '0': no field
+    evidence:
+    - 'img02: the field, the wall / fence across the middle ground, the farmhouses beyond'
+    - 'img03: the wheat field, the low stone wall, the farmhouses beyond'
+  - id: CR4
+    item: The settlement sits at the foot of a line of hills that climbs to a higher ridge on the right
+    anchors:
+      '1': hills directly behind the village / farmhouses, rising to a clearly higher ridge on the right side, consistently from the settlement's
+        views
+      '0.5': hills behind the settlement but flat or generic, or rising on the wrong / an inconsistent side
+      '0': no hills behind the settlement
+    evidence:
+    - 'img01: the blue hills rising to the dark ridge on the right'
+    - 'img02: the hills rising on the right to rocky mountains'
+    - 'img03: the hills rising on the right to pale mountains'
+  - id: CR5
+    item: The place has both a night state and a day state
+    anchors:
+      '1': a full night and a full day both exist for the place
+      '0.5': one state exists and the other only as an in-between (e.g. dusk / twilight instead of night or day)
+      '0': only one time of day
+    evidence:
+    - img01
+    - img02
+    - img03
+  functions_playability:
+  - id: FP1
+    item: The player can move freely through one coherent, connected place and reach or clearly see each of its landmarks
+    anchors:
+      '1': free movement through a connected place in which the village, the tall tree, the walled field and the hills can all be reached or seen
+      '0.5': movement is possible but the place is fragmented or some landmarks cannot be reached or seen
+      '0': no exploration, or a static view only
+    evidence:
+    - img01
+    - img02
+    - img03
+  - id: FP2
+    item: Night and day can both be reached in play within the same place, with the landmarks staying where they are
+    anchors:
+      '1': the player can get from day to night and back (by waiting or a switch) inside one coherent place
+      '0.5': both exist but only as disconnected separate scenes, or the change is only a colour tint with no night sky or daylight
+      '0': only one time of day reachable
+    evidence:
+    - img01
+    - img02
+    - img03
+  visual_presentation:
+  - id: VP1
+    cat: style
+    item: 'The night look: the place under a turbulent, swirling night sky with large glowing stars and moon'
+    anchors:
+      '1': a recognisable swirling, star-filled night sky with a moon over the place
+      '0.5': a night sky with moon and stars but calm or generic
+      '0': no night sky shown, or a night without moon and stars
+    evidence:
+    - img01
+  - id: VP2
+    cat: style
+    item: 'The day look: the open field in bright daylight under a large sky'
+    anchors:
+      '1': a bright, open day over the field
+      '0.5': daylight present but the field hardly visible or the scene dim / enclosed
+      '0': no day state shown
+    evidence:
+    - img02
+    - img03
+  - id: VP3
+    cat: style
+    item: The high ridge on the right looks like bare, rocky mountains, set apart from the lower rolling hills in front of it
+    anchors:
+      '1': the right-hand heights read as bare, rocky mountain peaks, clearly different in look from the softer, lower hills
+      '0.5': the ridge is higher but looks like the same rolling hills, or only part of it looks rocky
+      '0': no distinct high ridge visible
+    evidence:
+    - 'img02: the bare, rocky mountains on the right'
+    - 'img03: the pale rocky mountains on the right'
+    - 'img01: the dark ridge on the right (does not contradict)'
+play_suggestions:
+  FP1:
+  - 'walk from the field to the village and toward the hills: is it one connected place?'
+  - 'look for the tall dark tree, the steeple and the wall: can each be found and recognised?'
+  FP2:
+  - 'switch or wait from day to night and back: do the landmarks stay where they were?'
+  - at night, check the sky and the village; by day, check the field and the light
+  robustness:
+  - 'walk to the edges of the place: is there a sensible boundary?'
+  - try to climb the wall or the hills, and walk into the tall tree
+  - change time of day repeatedly in a short time
+v4_map:
+  U1: CR5 (night and day states exist)
+  U2: VP1 (moon, stars and swirling night sky)
+  U3: CR1 (village with steeple), CR2 (tall tree near and above the village)
+  U4: CR3
+  U5: CR4
+  FP1: FP1 (landmark existence split off to CR1-CR4)
+  FP2: FP2 (existence of both states split off to CR5)
+  VP1: VP1
+  VP2: CR2, CR1 (which landmarks exist and their near / far relation)
+  VP3: CR3 (field, wall, farmhouses arrangement)
+  VP4: VP2
+  VP5: CR4 (hills rising to the right behind the settlement); the ridge's rocky look added as new VP3 (size fix)
+  VP6: 'removed: winter modification (editing split 2026-11-05, see editing_seed.yaml)'
+provenance:
+  source_yaml: T-IO-1a6ba80e63.yaml
+  source_sha256: 8a8c0ac5e06425659d15c75df128d88ba47567fad079ddc017131fe0f551e7fb
+  size_waiver: null
+  size_max: null
+  sources:
+  - refs:
+    - img01
+    - img02
+    - img03
+    bundle: 1a6ba80e63
+    title: 梵高《星空》与同一扇窗外的麦田

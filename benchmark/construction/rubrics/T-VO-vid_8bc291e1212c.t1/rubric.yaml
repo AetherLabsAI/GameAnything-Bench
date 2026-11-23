@@ -1,0 +1,293 @@
+# GameAnything-Bench scoring material: never shown to agents during a trial.
+task_id: T-VO-vid_8bc291e1212c.t1
+source_inventory:
+- '00:11.9-00:12.4 close-up: Mario stands in a grassy area (trees, green and yellow pillars, fence, a blue fish-like prop), squares up to run'
+- '00:12.9-00:13.9 third-person chase camera from behind and above: Mario sprints along a grass strip with fences, white dust puffs behind him;
+  a ring marker floats over his head; ahead a gray tiled slab bridge and a raised wooden platform with coins; a red ring appears on the ground
+  under him while airborne (00:13.9)'
+- 00:14.4-00:15.4 Mario runs over the bridge through a cluster of floating coins; a yellow glow / ring burst and yellow speed streaks around him
+  (00:14.9-00:15.4); a pink Toad-like character in the foreground
+- 00:15.9-00:16.9 grass area with arrow signs, blue/green spotted pillars, a ? block row in the air; a Toad-like racer with a name tag runs beside
+  Mario; several other racers with name tags ahead on a far platform with a mushroom
+- 00:17.4-00:20.9 Mario jumps from a grass block across open sky to the next grass island (ring marker on the ground under him in the air at 00:18.4,
+  00:19.9, 00:20.9); green cube steps, a mushroom tree, a brown block house with coloured blocks, other racers with name tags far ahead; yellow
+  spark at 00:18.9
+- '00:21.4-00:22.9 tilted fast-moving camera: a racer on a grass strip along the edge, yellow ring bursts, yellow star burst and speed streaks;
+  a green shell flies past (00:22.4-00:22.9); a yellow bar platform with red pieces in the background'
+- 00:23.4-00:24.9 grass area with floating blue and orange checkered cubes in the air; Mario jumps onto the floating blue cube and stands on top
+  of it; another racer by the blue cube; a coin in the air
+- '00:25.4-00:27.9 narrow shaft of two facing blue checkered walls: Mario runs in (green swoosh), then rises by bouncing from one wall to the
+  other (wall jumps), red ring on the floor below; emerges at the top (00:27.9)'
+- '00:27.9-00:29.4 top of the blue checkered blocks: a dark flag with a Bowser emblem on a pole, mushrooms, a translucent purple box with a ?
+  symbol, coins on poles; Mario climbs over the edge; a Yoshi-like racer runs nearby'
+- '00:29.9-00:31.4 grass blocks floating over sky: Mario and Luigi (name tags) jump between them, Luigi with a yellow glow at 00:29.9; coins on
+  the blocks'
+- 00:31.9-00:33.4 Luigi runs up a broad yellow ramp; red and orange checkered blocks tumble down / across the ramp around him; coins and a green
+  shell beside the ramp; a white spiked block at the top left
+- '00:33.9-00:35.4 blue checkered block area with a purple mushroom: a bright burst / slash effect, a glowing green circle on the ground (00:34.9),
+  a stick-like object stuck in the floor next to a Toad racer, a translucent blue box with a ? symbol (00:35.4); Luigi runs ahead'
+- 00:35.9-00:36.9 Mario sits in a green pipe on a grass path, then the pipe is empty (he went down it)
+- 00:37.4 black frame (cut)
+- '00:37.9-00:39.4 dark purple / red room with large green and red pipes: Mario sprints with a yellow streak trail along a gray path lined with
+  coins'
+- '00:39.9-00:41.4 dark area: a pack of racers drawn as neon glowing silhouettes (green, pink, yellow, cyan) with speed lines, name tags with
+  numbers above distant racers'
+- '00:41.9-00:43.9 foggy blue stone area: Luigi runs with a yellow ring burst at his feet while a column of neon-trailed racers runs beside; coins
+  ahead'
+- '00:44.4-00:46.4 fog area with stone tile floor and stone slabs: pack of racers with neon trails, white dust and coins; Luigi and Mario jump
+  up onto a stone slab; stepped slabs rise into the fog; a burst of neon sparks and stars (00:46.4)'
+- '00:46.9-00:49.9 blue void: Mario hops between small separated stone slabs, coins hovering over the slabs; a racer with a name tag ahead; red
+  ring on the slab where he lands (00:48.4)'
+- '00:50.4-00:51.9 cloud course: Mario rises out of a red pipe; a stack of ? blocks and a cross of blocks above; blue blocks beside the cloud
+  path; a dark Bowser-emblem flag on the path; another racer emerges from the red pipe (00:51.4)'
+- '00:52.4-00:53.9 tall blue and purple walls with small blue / purple ledges with white rims over a pink haze: racers (Mario, Luigi, Toadette,
+  others) crowd and bump on a small ledge and jump to the next'
+- '00:54.4-00:55.9 two tall red pillars over clouds: Mario, Luigi, Toadette and a dark character jump and cling between the pillars, kicking off
+  one pillar toward the other'
+- '00:56.4-00:57.9 cloud summit: a red flag with the M emblem on a golden pole; Luigi stands next to it, rainbow sparkle effect at the pole; a
+  blue block structure behind; a Toad racer arrives afterwards (00:57.4-00:57.9)'
+- 'not visible: no HUD, timer, lap counter, placement list or score; no fall into the void and no respawn; what the ? boxes, the shell and the
+  stick-like object do is not shown; what triggers the yellow speed bursts is not shown; whether rivals are players or AI'
+- 'audio: music only, no speech in the range (transcript empty)'
+instructions_meta:
+  requirement_groups:
+    course and traversal:
+    - CR1
+    - FP1
+    - FP6
+    - VP2
+    movement abilities:
+    - CR2
+    - FP2
+    - FP3
+    competition:
+    - CR3
+    - FP4
+    - VP3
+    finish and goal:
+    - FP5
+    - VP1
+  explicit_requirements:
+  - type: keep
+    text: I definitely want the climbs where you get up by jumping back and forth between two facing walls.
+    covers:
+    - CR2
+    - FP2
+rubric:
+  content_realization:
+  - id: CR1
+    item: The course is a start-to-goal route of separate platforms over open sky / void, made of several different challenge sections (e.g. jumps
+      between floating islands, stepping-stone hops over the void, a climb) and ending at a goal on a raised summit
+    anchors:
+      '1': a route of separated floating platforms from a start to a raised summit goal, with more than one kind of challenge section along it
+      '0.5': a course exists but is one uniform stretch, or lies on solid ground without gaps over a void, or has no clear raised goal
+      '0': no course
+    evidence:
+    - - '00:12.9'
+      - '00:20.9'
+    - - '00:25.4'
+      - '00:27.9'
+    - - '00:46.9'
+      - '00:49.9'
+    - - '00:56.4'
+      - '00:57.9'
+  - id: CR2
+    item: 'The course contains a wall-jump climb: a vertical section formed by two facing walls (a narrow shaft or a pair of pillars) that leads
+      up to the next part of the course'
+    anchors:
+      '1': a vertical section between two facing walls, placed on the route and leading on
+      '0.5': a climbing section exists but has only a single wall, a ramp or a ladder instead of two facing walls
+      '0': none
+    evidence:
+    - - '00:25.4'
+      - '00:27.9'
+    - - '00:54.4'
+      - '00:55.9'
+  - id: CR3
+    item: 'A run has several racers: rival runners besides the player take part in the same run, on the same course, heading for the same goal'
+    anchors:
+      '1': rival racers present on the course during the player's run, heading for the same goal
+      '0.5': other characters present but not as racers in the run (bystanders, decoration, or only in a separate mode)
+      '0': the player runs alone
+    evidence:
+    - - '00:16.4'
+      - '00:16.9'
+    - - '00:39.9'
+      - '00:46.4'
+    - - '00:52.4'
+      - '00:55.9'
+    - - '00:57.4'
+      - '00:57.9'
+  functions_playability:
+  - id: FP1
+    item: 'The course plays as one continuous run: the gaps between platforms must be jumped (they cannot be walked across) and the course can
+      be completed from the start to the goal'
+    anchors:
+      '1': the course can be run to the goal and its gaps require jumps
+      '0.5': the course can be run but gaps can be walked across or skipped, or a part of it is broken
+      '0': the goal cannot be reached by running the course
+    evidence:
+    - - '00:12.9'
+      - '00:20.9'
+    - - '00:46.9'
+      - '00:49.9'
+  - id: FP2
+    item: 'Wall-jump climbing works: the facing-walls section is climbed by jumping from wall to wall and cannot be passed otherwise'
+    anchors:
+      '1': the runner rises by wall-to-wall jumps and reaches the next part of the course; plain jumps or walking around do not get past
+      '0.5': wall jumps work but the section can be skipped or climbed with plain jumps, or the climb does not lead on
+      '0': the section cannot be climbed by wall jumps, or there is none
+    evidence:
+    - - '00:25.4'
+      - '00:27.9'
+    - - '00:54.4'
+      - '00:55.9'
+  - id: FP3
+    item: 'Speed boost: the runner can get a temporary, clearly noticeable speed increase with a visible effect on the runner, which then wears
+      off (how it is activated is up to the build)'
+    anchors:
+      '1': a boost that is noticeably faster, visibly signalled and temporary
+      '0.5': a boost exists but is permanent, invisible, or barely changes speed
+      '0': none
+    evidence:
+    - - '00:14.4'
+      - '00:15.9'
+    - - '00:37.9'
+      - '00:38.9'
+    - - '00:41.9'
+      - '00:43.4'
+  - id: FP4
+    item: 'Rivals actually race: they traverse the course concurrently with the player, progress along it toward the goal and can get ahead of
+      or fall behind the player'
+    anchors:
+      '1': rivals run the course (jumping its gaps, using its route) during the player's run and visibly compete for position
+      '0.5': rivals move but follow no course, cannot reach the goal, or never change position relative to the player
+      '0': rivals do not race, or there are none
+    evidence:
+    - - '00:16.4'
+      - '00:16.9'
+    - - '00:39.9'
+      - '00:46.4'
+    - - '00:52.4'
+      - '00:55.9'
+  - id: FP5
+    item: 'Finish at the goal flag: reaching the flag ends the player''s run with clear finish feedback, and the game can be replayed or continued'
+    anchors:
+      '1': touching the flag gives a clear finish state plus a way to restart / continue
+      '0.5': a finish state exists but there is no way to continue, or the feedback is unclear
+      '0': reaching the flag does nothing
+    evidence:
+    - - '00:56.4'
+      - '00:57.9'
+  - id: FP6
+    item: 'Landing marker: while the runner is in the air, a ring on the surface below shows where it will land and follows the jump to the actual
+      landing spot'
+    anchors:
+      '1': a clear marker under the airborne runner that tracks the landing spot
+      '0.5': only a faint shadow, or a marker that does not follow the runner reliably
+      '0': none
+    evidence:
+    - - '00:13.9'
+      - '00:13.9'
+    - - '00:18.4'
+      - '00:20.9'
+    - - '00:48.4'
+      - '00:48.4'
+  visual_presentation:
+  - id: VP1
+    cat: key_moment
+    keyframes:
+    - '00:56.4'
+    - '00:57.4'
+    item: 'Finish moment: a flag on a pole at the top of a summit platform, with a set-apart celebration effect as a runner reaches it'
+    anchors:
+      '1': a recognisable goal flag on a raised summit and a distinct finishing effect
+      '0.5': a goal marker without a summit or without any finishing effect
+      '0': none
+    evidence:
+    - - '00:56.4'
+      - '00:57.9'
+  - id: VP2
+    cat: style
+    keyframes:
+    - '00:13.4'
+    - '00:19.4'
+    - '00:56.4'
+    item: 'Open-sky course: the open-sky parts of the course are set under a bright daytime sky, with the platforms and the gaps ahead clearly
+      readable from the play view'
+    anchors:
+      '1': the course is set under a bright open sky and the platforms and gaps ahead are easy to read
+      '0.5': the platforms and gaps ahead are readable but the setting does not look like a bright open sky (e.g. dark or enclosed), or the open-sky
+        look is there but the platforms / gaps ahead are hard to read
+      '0': no open-sky look and the platforms / gaps ahead are hard to read
+    evidence:
+    - - '00:12.9'
+      - '00:20.9'
+    - - '00:29.9'
+      - '00:31.4'
+    - - '00:50.4'
+      - '00:57.9'
+  - id: VP3
+    cat: presentation
+    item: 'The race is readable from the play view: the player''s own runner and the rival racers are each marked so they can be told apart, and
+      rivals ahead on the course stay visible and identifiable'
+    anchors:
+      '1': the player's runner and each rival are clearly marked and distinguishable, and rivals further ahead remain identifiable in the view
+      '0.5': rivals are visible but not marked or hard to tell apart from each other or from the player, or they become unidentifiable at a distance
+      '0': rivals cannot be picked out in the view, or there are none
+    evidence:
+    - - '00:12.9'
+      - '00:13.9'
+    - - '00:15.9'
+      - '00:20.9'
+    - - '00:39.9'
+      - '00:41.4'
+    - - '00:46.9'
+      - '00:49.9'
+play_suggestions:
+  FP1:
+  - 'run the whole course from the start: can the goal be reached?'
+  - try to walk across each gap without jumping, and look for shortcuts that skip the course
+  FP2:
+  - try to climb the wall section with plain jumps or by walking around it
+  - climb it by wall jumps and check that it leads on
+  FP3:
+  - time a stretch with and without the boost
+  - check that the boost wears off and that its effect is visible
+  FP4:
+  - 'stand still at the start: do rivals run the course and reach the goal?'
+  - 'race at full speed: can you overtake and be overtaken?'
+  FP5:
+  - 'finish first, then finish after the rivals: does the finish state reflect placement? (unscored)'
+  - after finishing, restart or continue
+  FP6:
+  - 'jump across gaps and onto higher and lower platforms: does the marker appear under the runner and match where it lands?'
+  - 'steer mid-air: does the marker follow?'
+  robustness:
+  - 'fall off the course into the void: is there a respawn (checkpoint) or a sensible reset?'
+  - 'jump against walls outside the wall-jump section: can the course be climbed out of bounds?'
+  - touch the goal flag from an odd angle or while boosted
+  - pause or leave mid-race and come back
+v4_map:
+  U1: CR2, FP2
+  U2: CR3, FP4, CR1
+  U3: FP3
+  U4: 'dropped: peripheral (pipe transit seen once, no Construction item)'
+  U5: 'dropped: peripheral (tumbling blocks of a single ramp section)'
+  U6: FP6
+  U7: CR1
+  FP1: CR1, FP1
+  FP2: CR2, FP2
+  FP3: FP3
+  FP4: CR3, FP4
+  FP5: FP5
+  VP1: VP1
+  VP2: CR1, VP2
+  VP3: FP6
+  VP4: 'dropped: user modification (night-time sky), moved to editing_seed.yaml'
+provenance:
+  source_yaml: T-VO-vid_8bc291e1212c.t1.yaml
+  source_sha256: 3c918abe6ebbb593aabc80a89d9e551cc09a6b10e3da55b8b711e501f7c11352
+  size_waiver: null
+  size_max: null
+  sources: []

@@ -1,0 +1,271 @@
+# GameAnything-Bench scoring material: never shown to agents during a trial.
+task_id: T-VO-vid_a54a88754425.t1
+source_inventory:
+- 'throughout: semi-transparent ''DRONE SNAP'' watermark at the bottom right; no other text or UI inside the ranges'
+- 'audio: music only; the offline transcript at 00:15-00:39 (''Father, save my son, come on back'', ''Much trouble I must leave behind'') is song
+  vocals or a Whisper invention and carries no information'
+- '00:15.5-00:28.0 high, wide, slowly drifting daytime view across deep-blue harbour water: the shell-roofed opera house sits on the tip of a
+  headland left of centre, a wooded park and a few mid-rise blocks behind it on the right, a low city skyline with scattered towers and more harbour
+  arms on the horizon; a speedboat crosses the foreground leaving a long white wake, a smaller boat with a wake further back'
+- '00:28.0-00:37.0 cut: sunny with white clouds, teal water; the opera house shells fill the lower left foreground; behind, across the water,
+  a long steel arch bridge with stone pylons spans the harbour, a cluster of downtown towers rises beyond its right end, a residential point with
+  trees and apartment blocks lies on the right shore; several ferries and speedboats cross at once in different directions, each leaving a long
+  white wake; the drone moves forward and turns'
+- 00:37.0-00:46.0 a large white cruise ship is moored at a quay on the left, across the water from the opera house; the opera house podium with
+  its broad paved forecourt and steps and the trees of the park appear in the lower left; ferries cross between the opera house and the bridge;
+  dark office blocks behind the forecourt at 00:43-00:46
+- '00:46.5-00:54.0 cut: long, nearly static view across deep-blue open water to the arch bridge seen broadside with a stone pylon at each end,
+  waterfront buildings and long finger wharves on the shore at the right, a tall tower at the far right edge; small boats cross leaving short
+  wakes'
+- '00:54.5-01:03.0 cut: high oblique flight from over a park (lawns, large trees, paths) along a curving seawall promenade toward the opera house
+  at the top of the frame; small jetties / pontoons at the corner of the forecourt; a small yellow boat on teal water; boats with wakes in the
+  distance'
+- '01:03.0-01:12.0 the drone closes on the opera house: the forecourt, steps and jetties below, the shell roofs in a large and a smaller group
+  plus a small separate shell, on a raised podium with dark sides dropping into the water'
+- 01:12.0-01:22.0 the drone climbs over the roofs to a near top-down view of the shell tips and the podium edge with people-sized dots; a speedboat
+  wake crosses the water beyond
+- '01:22.8-01:36.5 cut (second clip): nearly static daytime view; a green-and-cream harbour ferry crosses calm blue water toward a cove, a broad
+  foamy wake behind it; the cove is lined by a low waterfront terminal and wharves with a moored vessel and older low-rise buildings on the right;
+  a dense skyline of glass and sandstone towers stands behind; a low modern building and trees on the left shore'
+- '01:36.8-01:49.6 cut: dusk with an orange-pink sky and calm grey-blue water; the opera house in the lower left foreground, its podium lit warm
+  orange; across the water a white cruise ship moored at a quay in front of the downtown towers (left), a stone bridge pylon and the bridge arch
+  to the right; the camera drifts sideways and reveals more of the bridge'
+- '01:49.8-01:57.0 cut: darker dusk over a wide stretch of harbour water; a small wooded island in the middle distance, a dark headland at the
+  right, and the distant downtown skyline with a tall spire tower and the bridge arch along the horizon under a warm glow; a few boats and a ship
+  leave wakes'
+- '01:57.8-02:11.0 cut: golden-hour low flight just above the surf at an ocean beach; waves build, break and throw spray, white foam washes over
+  dark rocks in the foreground; a sand beach with a row of low beachfront buildings and a few taller blocks along the shore behind (no downtown
+  skyline in view)'
+- '02:11.8-02:20.0 cut: sunset with a strong red colour cast; a wide view over dense low suburban rooftops and trees, a bay with small islands
+  and the downtown skyline on the horizon under an orange-yellow band of sky'
+- '02:20.5-02:31.0 a white lighthouse rises into the bottom of the frame as the camera moves toward it; from 02:25 it is seen whole: a tall white
+  tower with a lantern on a low, stepped white base, a row of low white cottages / outbuildings to its left, lawn around it, suburbs behind and
+  the skyline on the horizon'
+instructions_meta:
+  requirement_groups:
+    exploration of the place:
+    - FP1
+    ambient activity:
+    - FP2
+    lighting and time of day:
+    - FP3
+    - VP2
+    landmarks and spatial layout:
+    - CR1
+    - CR2
+    - CR3
+    - CR4
+    - CR5
+    - VP1
+    palette and materials:
+    - VP3
+  explicit_requirements:
+  - type: keep
+    text: I really want to keep that landmark with the white overlapping shell roofs sitting on a raised paved podium with a forecourt and steps
+      right at the water's edge.
+    covers:
+    - CR1
+  - type: specify
+    text: Besides the harbour, give me the outer coast from the clip as separate spots, a small wooded island out on the water, an ocean surf
+      beach with rocks and beachfront buildings, and a white lighthouse on a grassy headland in the suburbs, with the city skyline far off on
+      the horizon from the island and the lighthouse.
+    covers:
+    - CR5
+rubric:
+  content_realization:
+  - id: CR1
+    item: 'The game contains the landmark: a cluster of white, pointed, overlapping shell roofs in groups (a large group, a smaller group and
+      a small separate shell) on a broad raised podium with a paved forecourt and steps, whose sides drop straight into the water'
+    anchors:
+      '1': white overlapping pointed shells in groups, on a raised paved podium with forecourt and steps, at the water's edge
+      '0.5': shell roofs present but the podium / forecourt or the grouping missing or wrong, or the building set back from the water
+      '0': missing, or a generic building
+    evidence:
+    - - '00:28.0'
+      - '00:46.0'
+    - - '01:03.0'
+      - '01:22.0'
+  - id: CR2
+    item: The game contains a long steel arch bridge spanning the harbour, with a stone pylon at each end
+    anchors:
+      '1': a long arch bridge across the harbour water with a pylon at each end
+      '0.5': a bridge across the harbour but without the arch or without the pylons
+      '0': no bridge across the harbour
+    evidence:
+    - - '00:28.0'
+      - '00:54.0'
+    - - '01:36.8'
+      - '01:49.6'
+  - id: CR3
+    item: 'The game contains the downtown cove: a cove lined by a low ferry terminal and wharves, with a dense cluster of high-rise towers directly
+      behind it'
+    anchors:
+      '1': a cove with a terminal / wharf front and a dense tower downtown rising directly behind it
+      '0.5': a tower downtown by the water but no cove or terminal front, or the towers sparse and scattered
+      '0': no downtown on the harbour
+    evidence:
+    - - '01:22.8'
+      - '01:36.5'
+    - - '01:36.8'
+      - '01:49.6'
+  - id: CR4
+    item: 'Harbour-core layout: the landmark sits on the tip of a headland; the cove with the downtown and a quay for large ships lies across
+      the water on one side; the bridge spans the water behind the landmark; a park with a curving seawall promenade adjoins the landmark along
+      the shore on the other side'
+    anchors:
+      '1': headland tip, cove / downtown and large-ship quay across the water to one side, bridge behind, park with seawall on the other side
+      '0.5': the landmark and bridge relation right, but the cove / quay side or the park side missing or misplaced
+      '0': the parts not arranged around one harbour, or the landmark inland / away from the water
+    evidence:
+    - - '00:15.5'
+      - '00:28.0'
+    - - '00:37.0'
+      - '00:46.0'
+    - - '00:54.5'
+      - '01:03.0'
+    - - '01:36.8'
+      - '01:49.6'
+  - id: CR5
+    item: 'Beyond the harbour core the game contains three separate outer coastal settings: open water with a small wooded island, from which
+      the downtown skyline is seen far off on the horizon; an ocean surf beach with rocks and a row of beachfront buildings; a white lighthouse
+      tower on a grassy headland amid low suburbs, with the skyline on the horizon'
+    anchors:
+      '1': all three settings present and recognisable, away from the harbour core, with the skyline seen far off from the island and the lighthouse
+      '0.5': one or two of them, or present but generic (a beach without rocks or buildings, a tower that does not read as a lighthouse), or built
+        right next to the harbour core with no distance to the skyline
+      '0': only the harbour core
+    evidence:
+    - - '01:49.8'
+      - '01:57.0'
+    - - '01:57.8'
+      - '02:11.0'
+    - - '02:11.8'
+      - '02:31.0'
+  functions_playability:
+  - id: FP1
+    item: 'The place can be explored: with the player''s own camera / movement every part of it (the harbour core and each outer coastal setting)
+      can be reached and viewed both from afar and up close, without meeting broken or missing geometry; no particular route or continuous geography
+      between the harbour core and the outer settings is required'
+    anchors:
+      '1': every part reachable and viewable from afar and up close by the player's own camera / movement, every part intact
+      '0.5': only the harbour core is reachable, or some parts can only be seen through fixed cutscenes / cannot be approached closely, or visible
+        holes / unfinished areas
+      '0': no free viewing or movement, or the place is missing
+    evidence:
+    - - '00:15.5'
+      - '00:28.0'
+    - - '01:12.0'
+      - '01:22.0'
+    - - '01:49.8'
+      - '02:31.0'
+  - id: FP2
+    item: 'Living harbour: vessels keep moving on the water over time, several at once, leaving wakes, and ferries keep serving the terminal in
+      the downtown cove'
+    anchors:
+      '1': continuous multi-vessel traffic with wakes and working ferry service to the cove terminal
+      '0.5': boats move but only one, or they stop / vanish after a while, or no ferry service to the cove
+      '0': no moving vessels
+    evidence:
+    - - '00:28.0'
+      - '00:46.0'
+    - - '01:22.8'
+      - '01:36.5'
+  - id: FP3
+    item: 'Time of day: the place can be experienced both in daylight and at dusk in normal play (time passes or can be set)'
+    anchors:
+      '1': both a day and a dusk state reachable in play, across the whole place
+      '0.5': only a dusk state (no day), or the change between the two needs tools outside normal play
+      '0': only daylight (or one fixed non-dusk look), with no dusk state reachable
+    evidence:
+    - - '00:28.0'
+      - '00:46.0'
+    - - '01:36.8'
+      - '01:57.0'
+    - - '02:11.8'
+      - '02:31.0'
+  visual_presentation:
+  - id: VP1
+    cat: spatial
+    keyframes:
+    - '00:35.5'
+    - '00:42.5'
+    - '01:39.8'
+    item: 'The signature harbour view: from over the water, the white shells in the foreground with the bridge arch and the downtown towers across
+      the water behind, reading as one picture like the reference'
+    anchors:
+      '1': a view exists in which landmark, bridge arch and towers read together much like the keyframes
+      '0.5': the three can be framed together but the picture reads differently (e.g. the bridge hidden behind towers, the landmark lost in the
+        skyline)
+      '0': no view shows them together
+    evidence:
+    - - '00:28.0'
+      - '00:46.0'
+    - - '01:36.8'
+      - '01:49.6'
+  - id: VP2
+    cat: style
+    keyframes:
+    - '01:39.8'
+    - '01:53.8'
+    item: 'The place at dusk: a warm orange-pink sky and glow over grey-blue water, with the landmark, bridge and skyline still readable'
+    anchors:
+      '1': a warm-coloured dusk in which landmark, bridge and skyline read clearly, much like the keyframes
+      '0.5': a dusk that is not warm-coloured (grey / blue night), or so dark that the landmarks cannot be read
+      '0': no dusk look at all
+    evidence:
+    - - '01:36.8'
+      - '01:57.0'
+    - - '02:11.8'
+      - '02:31.0'
+  - id: VP3
+    cat: style
+    keyframes:
+    - '00:32.5'
+    - '00:58.5'
+    - '01:28.8'
+    item: 'Palette and materials of the place: deep-blue to teal harbour water, white roofs over a tan stone podium, green park lawns and trees,
+      a skyline mixing glass and sandstone towers'
+    anchors:
+      '1': the water, landmark materials, greenery and mixed skyline read as in the reference
+      '0.5': partly (e.g. right water but a uniform glass skyline, or a grey landmark)
+      '0': a palette unrelated to the reference
+    evidence:
+    - - '00:28.0'
+      - '01:03.0'
+    - - '01:22.8'
+      - '01:36.5'
+play_suggestions:
+  FP1:
+  - look across the water at the harbour core from afar
+  - zoom close to the landmark's roofs and podium
+  - 'go to the island view, the surf beach and the lighthouse: are they reachable, intact and viewable up close?'
+  FP2:
+  - 'watch the harbour for a few in-game minutes: how many vessels move at once, do they leave wakes?'
+  - 'follow a ferry: does it reach the terminal in the cove and keep running?'
+  FP3:
+  - advance or set the time to dusk and back to day
+  - check that the change applies to the harbour core and the outer settings alike
+  robustness:
+  - 'leave the region and come back: is it unchanged?'
+  - 'let the game run unattended for a while: do traffic and lighting keep working without errors?'
+  - 'move the camera to the map edges and under / through the landmark: no holes or missing faces'
+v4_map:
+  U1: 'dropped: mechanism already scored by FP2 (paired item); vessels'' existence judged there'
+  U2: CR1
+  U3: 'CR2, CR3, CR4 | dropped part: peripheral (finger wharves near the bridge, passed in one shot)'
+  U4: CR4
+  U5: CR5
+  FP1: FP1
+  FP2: FP2
+  FP3: FP3 (reaching day and dusk), VP2 (the look of the dusk)
+  VP1: CR4 (arrangement), VP1 (look of the combined view)
+  VP2: 'CR1 | dropped as a VP item: duplicate of CR1 (shell form and grouping on the podium)'
+  VP3: 'CR3 | dropped part: peripheral (older low-rise buildings at the cove side)'
+  VP4: CR5
+  VP5: 'VP3 | dropped part: peripheral (red-roofed suburbs, only a red-tinted sunset shot)'
+provenance:
+  source_yaml: T-VO-vid_a54a88754425.t1.yaml
+  source_sha256: 972762725300264b70a7a6dd57768845c6d705d8817f583dd0fd1d2fc9fdff69
+  size_waiver: null
+  size_max: null
+  sources: []

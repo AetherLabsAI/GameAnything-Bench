@@ -1,0 +1,10 @@
+{
+  "Name": "GAB State Check",
+  "Author": "gab",
+  "Version": "1.0.0",
+  "Description": "gab state self-check mod: a mod variable, a new character, HUD text",
+  "UniqueID": "gab.statecheck",
+  "EntryDll": "GabStateCheck.dll",
+  "MinimumApiVersion": "4.0.0",
+  "UpdateKeys": []
+}

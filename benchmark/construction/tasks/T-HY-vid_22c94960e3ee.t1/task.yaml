@@ -1,0 +1,20 @@
+# GameAnything-Bench task T-HY-vid_22c94960e3ee.t1 (public part). Instruction: instruction_fine.md.
+task_id: T-HY-vid_22c94960e3ee.t1
+version: '0.2'
+category: scene_world
+modality: video+image
+domain: sports
+track: commercial
+target_game: minecraft
+references:
+- c01
+- img01
+- img02
+- img03
+- img04
+- img05
+- img06
+provenance:
+  pipeline: reference_curation ga_author (v3 draft -> crosscheck -> reconcile -> instruct -> explicit) -> restructure_v4
+  rules_version: v4.2
+  review_status: pending

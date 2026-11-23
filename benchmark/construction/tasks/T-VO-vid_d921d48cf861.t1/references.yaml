@@ -1,0 +1,23 @@
+# Reference material: fetched from the HF dataset into $GAB_MEDIA_DIR/<task>/ by `gab media fetch` (sha256 checked).
+# The agent gets the files only (no title, author, caption or source): this file is never shown to it.
+task_id: T-VO-vid_d921d48cf861.t1
+refs:
+- id: c01
+  kind: video
+  file: clip_01.mp4
+  video_id: vid_d921d48cf861
+  source:
+    title: Holiday Overdrive Season - Trailer [-u80WkOiX2Y]
+    url: https://www.youtube.com/watch?v=-u80WkOiX2Y
+    channel: null
+    youtube_id: -u80WkOiX2Y
+  range:
+    start: 22.0
+    end: 52.5
+    text: 0:22.00-0:52.50
+  duration_s: 30.5
+  size_bytes: 9320893
+  format: mp4 H.264 720p, AAC audio
+  hf_path: media/T-VO-vid_d921d48cf861.t1/clip_01.mp4
+  sha256: 4133172f7218b29254211dd7e3d912292624129c31585e363aa44016a9379521
+  rights_note: Commercial game trailer with licensed car brands visible. Use as a private reference only, do not redistribute frames or clips.

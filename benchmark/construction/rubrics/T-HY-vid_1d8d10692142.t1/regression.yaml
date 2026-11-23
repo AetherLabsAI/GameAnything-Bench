@@ -1,0 +1,22 @@
+# GameAnything-Bench scoring material: never shown to agents during a trial.
+task_id: T-HY-vid_1d8d10692142.t1
+game: cities_skylines
+status: pending
+picks:
+- CS-ROADS
+- CS-TRAFFIC
+- CS-CONTENT
+- CS-DAYNIGHT
+- CS-SAVE
+- CS-ZONING
+changed: []
+kept_borderline:
+- id: CS-ROADS
+  note: Agent builds roads and a ring, but the vanilla road tool routine is not required to change.
+- id: CS-DAYNIGHT
+  note: Lighting and atmosphere requested, but the vanilla day/night cycle need not change.
+summary: Build a district around a round place with arch, twelve avenues, ring road, lighting.
+task_checks: []
+note: 'policy (A): excluded only when the instruction explicitly requires the change; plausible side effects stay tested; adding
+  new content is never a reason to exclude. Proposed by claude-sonnet-5-5 via `gab task picks` 2026-11-06; a maintainer checks (set status: checked).
+  The evaluator tests the pool''s always items (unless in changed) + picks.'

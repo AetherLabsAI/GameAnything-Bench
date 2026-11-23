@@ -1,0 +1,72 @@
+# Reference material: fetched from the HF dataset into $GAB_MEDIA_DIR/<task>/ by `gab media fetch` (sha256 checked).
+# The agent gets the files only (no title, author, caption or source): this file is never shown to it.
+task_id: T-HY-vid_6c26a6e7f165.t1
+refs:
+- id: c01
+  kind: video
+  file: clip_01.mp4
+  video_id: vid_6c26a6e7f165
+  source:
+    title: ELDEN RING - Official Gameplay Reveal [E3Huy2cdih0]
+    url: https://www.youtube.com/watch?v=E3Huy2cdih0
+    channel: null
+    youtube_id: E3Huy2cdih0
+  range:
+    start: 25.0
+    end: 62.3
+    text: 0:25.00-1:02.30
+  duration_s: 37.3
+  size_bytes: 7493119
+  format: mp4 H.264 720p, AAC audio
+  hf_path: media/T-HY-vid_6c26a6e7f165.t1/clip_01.mp4
+  sha256: 393312274a1df8fc37cfa16647f1479f21c285e88ac4e213723164f48ac6fb7a
+  rights_note: null
+- id: img01
+  kind: image
+  file: img01.jpg
+  format: jpg
+  hf_path: media/T-HY-vid_6c26a6e7f165.t1/img01.jpg
+  sha256: fa3d57e7560cc9b5beb6a121c50e3a867aebc919f4e081a5b938e6ec9499c008
+  size_bytes: 820873
+- id: img03
+  kind: image
+  file: img03.jpg
+  format: jpg
+  hf_path: media/T-HY-vid_6c26a6e7f165.t1/img03.jpg
+  sha256: edb3b3100ca449193d4f2de93fc86d6250d7b59c4600576e2fc3223fe2cea017
+  size_bytes: 316449
+- id: img04
+  kind: image
+  file: img04.jpg
+  format: jpg
+  hf_path: media/T-HY-vid_6c26a6e7f165.t1/img04.jpg
+  sha256: c9cbbe03c9064c54b8ed28a64d386a61ee38f922ac93e8cf68f0e6cfefcb85ad
+  size_bytes: 630747
+- id: img05
+  kind: image
+  file: img05.jpg
+  format: jpg
+  hf_path: media/T-HY-vid_6c26a6e7f165.t1/img05.jpg
+  sha256: f726af53119cf547ae82537f6c12114b72ab55655388bd274465a86b475603c2
+  size_bytes: 94835
+- id: img06
+  kind: image
+  file: img06.jpg
+  format: jpg
+  hf_path: media/T-HY-vid_6c26a6e7f165.t1/img06.jpg
+  sha256: 09947d1f109e2cae4ca9a8f0a90cb8e850f0ff870e3fdffd101484d627426eb3
+  size_bytes: 507016
+- id: img07
+  kind: image
+  file: img07.jpg
+  format: jpg
+  hf_path: media/T-HY-vid_6c26a6e7f165.t1/img07.jpg
+  sha256: 9f167c72451bb00609a130ac9397b462799b580cb0d212fea28db20138966dc2
+  size_bytes: 484283
+- id: img08
+  kind: image
+  file: img08.jpg
+  format: jpg
+  hf_path: media/T-HY-vid_6c26a6e7f165.t1/img08.jpg
+  sha256: 6089de2fb853c4251b6a9807b725a01e6398e428b62c02637adebdddd1522758
+  size_bytes: 826169

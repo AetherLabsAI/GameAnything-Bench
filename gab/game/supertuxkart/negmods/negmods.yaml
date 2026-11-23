@@ -1,0 +1,19 @@
+# negative mods for `gab selfcheck supertuxkart` (copied from the pool verification 2026-10-30,
+# the verification logs); each is one mod (<name>/data/...: files laid over the
+# game data) and must fail exactly its expected pool items vs a fresh vanilla instance. The tux kart is the probe kart, so a
+# tux change fails every tux driving item (expected correlation, pool header).
+# Not used: the pool's neg_heavy_scene (60 extra lighthouse track meshes, the SK-FRAMETIME negative on a test sandbox: 0.73x). On
+# sandbox A (gab adapter check 2026-10-30) it does not slow rendering (96.7 vs 102.2 fps; 200 copies 40 m below the road: 106.8)
+# but its copies on the road stop the karts, so it fails 13 items (all lighthouse driving / race items). SK-FRAMETIME has no
+# negative mod here; its recorded p4 result stays a unit test (tests/data/supertuxkart/neg_heavy_scene.json).
+# (neg_rescue failed SK-STORY in 3 early gab selfcheck runs: the ui probe then shot the overworld too early -- an intro
+# cutscene part or the loading screen; fixed in the probe, since then neg_rescue fails exactly its verified items)
+# 2026-10-31: still failed SK-STORY in 3 of 4 usable runs after the probe fix -- story mode starts with the kart's rescue drop,
+# so a longer rescue really changes the overworld shot when it is taken before the kart settles: may_fail
+neg_rescue: {expect_fail: [SK-GAME-SETTINGS, SK-RESCUE], may_fail: [SK-STORY], quick_probes: [settings, physics]}
+neg_track: {expect_fail: [SK-STABLE, SK-TRACKS], quick_probes: [tracks]}
+neg_tux_heavy: {expect_fail: [SK-GAME-SETTINGS, SK-KARTS, SK-ACCEL, SK-BRAKE, SK-STEER, SK-DRIFT, SK-JUMP], quick_probes: [settings, karts, drive, physics]}
+# 2026-11-05 docker (1280x720 seat, L40S GPU): the game survives the click where Story Mode was (no crash, no
+# error lines either) -> SK-STABLE passes; it crashed on the pool seats (pool header): may_fail
+neg_menu: {expect_fail: [SK-MENU, SK-STORY], may_fail: [SK-STABLE], quick_probes: [ui]}
+neg_arena: {expect_fail: [SK-STABLE, SK-BATTLE], quick_probes: [modes]}

@@ -1,0 +1,62 @@
+# Copied from the original pool_godot-tps.yaml (2026-10-30) + game / version / default_picks for gab.
+# default_picks: used for a task whose regression.yaml has no checked picks yet; cheap, uncorrelated probes
+# (no GT-SETTINGS: it flags every edited constant, intended ones too). All headless probes share ONE ~90 s run; GT-MENU adds
+# one windowed run on the seat display (retried once if the GL game hangs on a loaded GPU).
+# gab runs: gab/game/godot_tps/probes.py (GTProbes), a fresh instance under <root>/inst/gab-<label>-<time> per call.
+# Base-capability pool, Godot TPS Demo (v0.2, verified in game 2026-10-30, Godot 4.7.2.stable (ed1daf0bf), tps-demo master as shipped in the reference install)
+# Same rules as pool_minecraft.yaml: atomic base capabilities a task's change could break. Pass = same result as a vanilla
+# instance. Per task the drafter picks the 4-6 relevant ones and may add 0-2 task-specific items; a maintainer checks. Avoid
+# correlated picks (GT-SETTINGS catches every edited constant / export default, so a JUMP_SPEED edit fails GT-SETTINGS and
+# GT-JUMP; a robot health edit fails GT-SETTINGS and GT-ROBOT-DAMAGE).
+# Mod surface: Godot 4 text scenes and resources (.tscn/.tres/.gd, project.godot), no compile; a mod = files overlaid on the project.
+# Probes: gab/game/godot_tps/probes.py (+ the in-game bridge gt_probe.gd). `probe: x.y` = field y of probe x (fields joined with +).
+# Runtime: each instance is a hard-link copy of the demo in <sandbox>:/home/player/oss-godot-tps/inst/<name> + the mod + `godot --import`;
+#   the bridge is an extra autoload added through override.cfg. Headless (the demo auto-hosts an ENet server and loads the level):
+#   input through the game's own actions (Input.action_press), state from the game's nodes. Render mode (render.*): windowed on the
+#   seat display via VirtualGL, Compatibility (OpenGL) renderer, because Forward+/Vulkan loses the device on Xvfb.
+# The draft's facts that were not true in this game: the player has no health (a robot laser hit only shakes the camera),
+#   there are no loose physics props (the only rigid bodies are the robots' death debris), and there is no pause menu
+#   (Esc goes back to the main menu). Those items were rewritten (GT-DAMAGE -> GT-ROBOT-DAMAGE, GT-PHYSICS -> GT-DEBRIS, GT-UI -> GT-MENU).
+# A/A calibration 2026-10-30 (3 fresh vanilla instances): every headless number identical between runs (fixed 60 Hz physics),
+#   except the online client's walk distance seen on the host (2.0 / 7.0 m, only "walked > 1 m" is compared). Render numbers:
+#   menu state identical in every run; screenshots / frame time depend on the shared seat's load (GT-VIEW, GT-PERF blocked, see their notes).
+#   Tolerances in probes_godot_tps.py (TOL, EXACT, FT_*, IMG_DIFF_MAX). The sandbox A sandbox is a 10-core cgroup shared with other agents.
+# Negative checks 2026-10-30 (player.gd JUMP_SPEED 5 -> 7; red_robot.gd health 5 -> 2; menu.tscn Settings button hidden):
+#   see the verification logs (results/*.json, compare_*.txt).
+
+game: godot-tps
+version: tps-demo master (a82f154) on Godot 4.7.2
+default_picks: [GT-LEVEL, GT-MOVE, GT-AIM-SHOOT, GT-ENEMY, GT-MENU]
+
+# gate (gab/eval/regression.py): the STABLE item (no real crash / hang, no new fatal error kind) + the host-present
+# item(s): the stock content they reach must still be there on the modded game (numbers NOT compared with vanilla; only a mod that
+# removes / replaces the host game wholesale fails). Scores are 0 unless the gate passes. Not chosen per task.
+gate: [GT-STABLE, GT-LEVEL, GT-MOVE]
+
+always:
+  - {id: GT-STABLE, capability: "no crash, the probe run finishes, and no more ERROR / SCRIPT ERROR lines in the console than vanilla", probe: log_errors, status: ready}
+
+pool:
+  # what scene / script / project edits change directly
+  - {id: GT-SETTINGS, capability: "project settings and gameplay tunables unchanged: gravity, physics tick, main scene, autoloads, the input map (every action and binding), audio bus layout, player/camera/bullet/robot constants (JUMP_SPEED, fire cooldown 0.4 s, spring arm 2.4, bullet 20 m/s, robot health 5, SHOOT_WAIT 6 s ...)", probe: settings, status: ready}
+  - {id: GT-RESOURCES, capability: "every game scene, script, resource and shader still loads (112 game files), scripts compile and scenes instantiate", probe: resources, status: ready}
+  # world
+  - {id: GT-LEVEL, capability: "the level loads with its geometry and collision as vanilla (1763-cell vertical ray grid, 36 horizontal rays at the spawn), 4 player and 4 robot spawn points, 4 robots at start, node counts per class, the two flying forklifts animating", probe: level, status: ready}
+  # player
+  - {id: GT-MOVE, capability: "third-person walking: from spawn point 1, 2 s forward and 1.5 s to the right go the vanilla distance and direction (root-motion speed), and the player stops when released", probe: move, status: ready}
+  - {id: GT-JUMP, capability: "jumping: jump height (~1.23 m), air time (~1.04 s), gravity 9.8 fitted from the arc, lands on the floor, jump sound", probe: jump, status: ready}
+  - {id: GT-FALL-RESPAWN, capability: "falling out of the world (below y -40) fades the screen and puts the player back at its start position", probe: fall_respawn, status: ready}
+  - {id: GT-CAMERA, capability: "orbit camera: active, behind the player, moves to the over-the-shoulder spot with the crosshair when aiming and back when released; the spring arm shortens at a wall instead of going through it", probe: camera, status: ready}
+  # combat
+  - {id: GT-AIM-SHOOT, capability: "aiming and shooting: holding fire while aiming shoots ~2.4 bullets/s (0.4 s cooldown), bullets fly at 20 m/s and hit a robot 6 m away", probe: shoot.bullets+fire_rate+bullet_speed, status: ready}
+  - {id: GT-ROBOT-DAMAGE, capability: "robots take damage: 5 health, one per bullet, destroyed after 5 hits (exploded signal)", probe: shoot.health_start+hits_to_kill+killed+exploded_signal, status: ready}
+  - {id: GT-DEBRIS, capability: "physics: a destroyed robot's 3 debris parts (rigid bodies) are thrown up, fall and come to rest on the floor", probe: shoot.parts+parts_max_up, status: ready}
+  - {id: GT-ROBOT-RESPAWN, capability: "a destroyed robot respawns at its spawn point 15 s later", probe: shoot.robot_respawn_s, status: ready}
+  - {id: GT-ENEMY, capability: "enemy robot AI: a robot notices the player 9 m in front, approaches, aims after ~6 s, fires its laser (~2 shots in 20 s), the hit shakes the player's camera; a far robot stays idle", probe: enemy, status: ready}
+  # audio, online
+  - {id: GT-AUDIO, capability: "level music plays; jump, land, shoot and robot-hit sounds trigger; all player and robot sound streams present (dummy audio driver: play state, not loudness)", probe: audio, status: ready}
+  - {id: GT-ONLINE, capability: "Play Online: a second game instance joins the host on 127.0.0.1:4383, sees both players and the 4 robots, its input moves its player on the host, and the host removes it when it leaves", probe: online, status: ready}
+  # rendered (seat display, VirtualGL, OpenGL Compatibility renderer)
+  - {id: GT-MENU, capability: "main menu shows Play / Play Online / Settings / Quit; Settings opens the 15-row settings panel and Cancel closes it; Play loads the level (menu node state in the real GL window; screenshots kept as evidence only)", probe: render.menu, status: ready}
+  - {id: GT-VIEW, capability: "the in-level third-person view and the aiming view (crosshair shown) look as vanilla from a fixed spot (screenshot difference)", probe: render.hud, status: blocked, note: "the probe works (A/A on a quiet seat: 0.0001 mean grey difference), but on the shared sandbox A GPU/CPU (10-core quota, other agents' GL games through the same VirtualGL Xorg) the game's viewport readback returned stale / garbled frames in 4 of 10 render runs (one of them vanilla: 0.06-0.20 difference vs 0.0001), unsettled lighting in another (0.06), and the GL game hung or aborted in 3 more runs, so a mod could fail it by chance. Needs a quiet seat or a non-shared GPU; the crosshair state is already checked by GT-CAMERA"}
+  - {id: GT-PERF, capability: "frame time in the level (median over 8 s at spawn and next to a robot) not much slower than vanilla (<= 1.5x + 2 ms)", probe: render.frametime, status: blocked, note: "works on a quiet seat (A/A medians 6.1 / 6.5 ms at spawn, 13.4 / 15.0 ms at the robot), but under other agents' load the same vanilla build went to 17.7 ms and to 5 s stalls (4 frames in 8 s). compare() returns n/a when a run had < 100 frames or no warm-up; needs a dedicated seat before it can be scored"}

@@ -1,0 +1,220 @@
+# GameAnything-Bench scoring material: never shown to agents during a trial.
+task_id: T-VO-vid_57ac138b5e64.t1
+source_inventory:
+- '01:26.8-01:30.8 high overhead drone shot looking down on the bridge across a wide river: two stone towers, light-blue suspension spans and
+  walkway, road deck, city blocks on both banks, a round glass building at bottom right; several small dark rectangular platforms float on the
+  river on the far side of the bridge (top of frame); two coloured smoke trails (pink) move near the bridge, one near the right tower, one low
+  on the near side'
+- 01:31.3-01:33.8 the drone descends and closes in on the bridge; a pink smoke trail sits at the right tower between the high walkway and the
+  road deck (in the opening); a second white/pink trail crosses the water on the near side; boats moored along the banks
+- 01:34.3-01:34.8 camera passes under the high walkway beside a tower; beyond the bridge a flyer trailing pink smoke heads down-river over the
+  water toward the dark floating platforms; a second small flyer lower left
+- 01:35.3 flyer with pink trail low over the river, platforms and boats below, skyline in haze
+- '01:35.8-01:37.3 sky shots: flyer with pink smoke against blue sky with aircraft contrails, tilted horizon; at 01:37.3 the tower tops appear
+  at the bottom of frame below the flyer (flyer above tower-top height); a second smoke trail at right edge'
+- 01:37.8-01:39.3 elevated wide view of the bridge with a tall pointed glass tower and city behind; the flyer with pink smoke descends from above
+  the towers to the level of the walkway and then into the opening between the towers (01:38.8-01:39.3); a second flyer at the right edge (01:38.3)
+- 01:39.8-01:41.3 low river-level views of the bridge from the bank, small red boats on the water
+- 01:41.8 fisheye view from underneath the high walkway along the bridge axis, tower and deck below, sunrise skyline
+- '01:42.3-01:44.8 helmet-camera POV: blue/yellow/red wingsuit arms, pink smoke from the suit; 01:42.8 passing under the high walkway arch beside
+  a tower (through the opening); 01:43.3-01:44.8 the bridge seen with the river below as the flyer continues'
+- 01:45.3-01:46.3 river-level view of the bridge, tiny flyer high in the sky, boats
+- 01:46.8-01:48.8 flyer with pink smoke passes in front of tall glass office towers (curved bullet-shaped tower, angular towers) and then a very
+  tall pointed glass tower beside a church spire; at 01:48.8 a small object (pilot chute) at the flyer's hand
+- '01:49.3-01:51.3 helmet-camera POV over the river: a large burst of red/pink smoke, the parachute pulls out and opens overhead; the view fills
+  with red smoke'
+- 01:51.8-01:53.3 looking up at an open white canopy with red edges and Red Bull logo, red smoke below, the bridge small in the distance; slow
+  descent
+- '01:53.8 river-level view: canopy descending over the river toward the camera, the bridge behind, a dark platform edge in the foreground'
+- 01:54.3-01:55.3 the flyer touches down and stands on the corner of a large dark rectangular floating platform on the water, canopy collapsing
+  beside, pink smoke still flowing; a lifeboat behind
+- 'not visible in the range: the launch (out of range), the exact continuous line through the opening (fast cuts), any score, timer, HUD or text
+  overlay, any failure or retry, the second flyer''s landing'
+- 'audio: no speech transcribed in the range; music / wind cannot be verified from the material'
+instructions_meta:
+  requirement_groups:
+    gliding flight:
+    - FP1
+    gate pass:
+    - FP2
+    - VP2
+    canopy and landing:
+    - CR2
+    - FP3
+    - FP4
+    continuous run:
+    - FP5
+    landmark and effects:
+    - CR1
+    - VP3
+  explicit_requirements:
+  - type: specify
+    text: The run should end with a precision touchdown on a small platform floating on the river, just like in the clip, not on the bank.
+    covers:
+    - CR2
+    - FP4
+rubric:
+  content_realization:
+  - id: CR1
+    item: 'The setting contains the gate landmark: a bridge over a river with two towers, a high walkway joining their tops and a lower deck,
+      so that an opening bounded by the towers at the sides, the walkway above and the deck below lies over the water'
+    anchors:
+      '1': two towers, the high walkway above, the deck below and the opening between them over the water are all present
+      '0.5': a bridge or arch with an opening exists, but the towers, the walkway above or the deck below are missing, or it does not stand over
+        water
+      '0': no such landmark
+    evidence:
+    - - '01:26.8'
+      - '01:34.8'
+    - - '01:41.8'
+      - '01:42.8'
+  - id: CR2
+    item: A small platform floats on the river near the bridge, on the course beyond the gate, as the landing target
+    anchors:
+      '1': a small platform on the water of the river, near the bridge and reachable along the river after the gate
+      '0.5': a landing target exists, but it is on the bank / open ground, a large area rather than a small platform, or far from the river and
+        the bridge
+      '0': no landing target
+    evidence:
+    - - '01:26.8'
+      - '01:30.8'
+    - - '01:34.3'
+      - '01:35.3'
+    - - '01:53.8'
+      - '01:55.6'
+  functions_playability:
+  - id: FP1
+    item: 'Controllable flight: the player steers the flyer forward through the air, using Colobot''s native jet flight (climbing and hovering
+      allowed) or a glide, well enough to thread the gate and set up the landing'
+    anchors:
+      '1': responsive steering (turn and climb / descend, or turn and pitch in a glide) during flight
+      '0.5': the character flies, but steering is minimal / on rails
+      '0': no controllable flight or glide
+    evidence:
+    - - '01:35.8'
+      - '01:39.3'
+    - - '01:42.3'
+      - '01:48.8'
+  - id: FP2
+    item: 'Gate: the landmark''s opening can be flown through and passing through it is registered; flying over, around or beside the landmark
+      is not'
+    anchors:
+      '1': a pass through the opening is detected with feedback, and a miss (over / around) is not counted
+      '0.5': the opening can be flown through but the pass is not registered, or any pass near the landmark counts
+      '0': the opening cannot be flown through
+    evidence:
+    - - '01:31.3'
+      - '01:34.8'
+    - - '01:42.3'
+      - '01:42.8'
+  - id: FP3
+    item: 'Canopy deployment: the player triggers the switch from glide to slow descent, after which speed and sink rate drop and the player can
+      still steer toward the target'
+    anchors:
+      '1': player-triggered deployment, a clear change to slow, steerable descent
+      '0.5': deployment exists but is automatic, or the descent afterwards cannot be steered, or nothing changes in the flight
+      '0': the canopy cannot be deployed in play
+    evidence:
+    - - '01:48.8'
+      - '01:53.8'
+  - id: FP4
+    item: 'Precision landing: touching down on the floating platform ends the run with clear success feedback'
+    anchors:
+      '1': a touchdown on the platform ends the run with a clear success
+      '0.5': touchdown on the platform gives no clear end or feedback, or a landing anywhere else counts the same
+      '0': landing on the platform does nothing / the run never ends
+    evidence:
+    - - '01:53.8'
+      - '01:55.6'
+  - id: FP5
+    item: 'One continuous run in the reference order: approach and glide -> gate -> canopy -> landing, played start to end without breaks'
+    anchors:
+      '1': gate, canopy and landing happen in one continuous run in this order, from the approach to the landing that ends it
+      '0.5': the parts exist but as separate segments (reset, teleport or separate scenes between them), or the run follows a different order
+      '0': no coherent run
+    evidence:
+    - - '01:26.8'
+      - '01:55.6'
+  visual_presentation:
+  - id: VP2
+    cat: presentation
+    keyframes:
+    - '01:33.8'
+    - '01:34.3'
+    - '01:42.8'
+    item: 'The pass through the gate is readable: at that moment the player can see that the flyer is going through the opening, with the bounds
+      of the opening visible around it'
+    anchors:
+      '1': at the moment of the pass it is clearly visible that the flyer is inside / going through the opening
+      '0.5': the pass happens but is not readable (hidden by geometry, too far away, not on screen)
+      '0': the pass is never visible
+    evidence:
+    - - '01:33.3'
+      - '01:34.8'
+    - - '01:42.3'
+      - '01:42.8'
+  - id: VP3
+    cat: spatial
+    keyframes:
+    - '01:31.3'
+    - '01:38.3'
+    - '01:40.3'
+    item: 'The gate landmark looks like the reference''s twin-tower bridge: tall, massive towers rising out of the river, a high walkway between
+      their tops and spans reaching out to both banks'
+    anchors:
+      '1': seen in the game, the landmark is recognisable as the reference's twin-tower bridge over the river (towers, high walkway between their
+        tops, spans to the banks)
+      '0.5': a bridge with an opening, but it looks generic (a flat beam, a single arch, thin posts) and is not recognisable as the reference's
+        twin-tower bridge
+      '0': the landmark does not resemble the reference bridge at all, or there is none
+    evidence:
+    - - '01:26.8'
+      - '01:41.8'
+play_suggestions:
+  FP1:
+  - 'fly toward the gate and line up with the opening: does the flyer go where you steer it?'
+  - 'turn left and right and pitch down: do the controls respond?'
+  FP2:
+  - 'fly cleanly through the opening: is the pass registered (message, sound, state)?'
+  - 'fly over the high walkway, around a tower and under the deck if possible: is any of these counted?'
+  - 'clip a tower or the walkway: what happens?'
+  FP3:
+  - 'deploy right after the gate and again late, near the water: does speed / sink rate change?'
+  - 'steer under canopy: can you correct toward the platform?'
+  - 'try deploying before the gate: what happens?'
+  FP4:
+  - land in the centre and on the edge of the platform
+  - land in the water beside it and on the river bank
+  - touch down without deploying the canopy
+  FP5:
+  - complete a full clean run and note the outcome
+  - skip the gate and land on the platform
+  - 'pass the gate and land in the water: are the outcomes different?'
+  robustness:
+  - after a run ends (success or failure), can a new run be started?
+  - 'fly far away from the river and the landmark: is there a boundary or a sensible end?'
+  - hit the ground or a building during the glide
+  - 'stall: pull up hard until the speed is gone'
+v4_map:
+  U1: 'dropped: descending-glide mechanism already scored by FP1 (paired item)'
+  U2: 'dropped: gate objective scored by FP2; gate geometry in CR1'
+  U3: 'dropped: phase switch scored by FP3'
+  U4: CR2
+  U5: CR1
+  U6: 'dropped: phase order already scored by FP5'
+  U7: CR2
+  FP1: FP1
+  FP2: CR1, FP2
+  FP3: FP3
+  FP4: CR2, FP4
+  FP5: FP5
+  FP6: 'dropped: editing request (drifting platform), moved to editing_seed.yaml'
+  VP1: CR1, CR2 (layout), VP3 (look of the bridge)
+  VP2: 'dropped: coloured smoke not native to Colobot (edit 2026-11-09)'
+  VP3: VP2
+provenance:
+  source_yaml: T-VO-vid_57ac138b5e64.t1.yaml
+  source_sha256: b87fb4c3672316d5876c7a6c31eb0b97f875d886f1109eb6350ff17b5ec5c6e7
+  size_waiver: null
+  size_max: null
+  sources: []

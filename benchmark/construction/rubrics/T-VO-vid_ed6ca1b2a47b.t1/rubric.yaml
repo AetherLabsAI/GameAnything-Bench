@@ -1,0 +1,266 @@
+# GameAnything-Bench scoring material: never shown to agents during a trial.
+task_id: T-VO-vid_ed6ca1b2a47b.t1
+source_inventory:
+- 00:02.4-00:03.9 narrow cobbled alley between ochre and dark half-timbered walls, a clock tower at its far end; dark shadowy figures drop and
+  gather at the far end of the alley
+- '00:03.9-00:05.7 close-up: a girl in a straw hat with a red band, a brown braid and a green buttoned dress, looking startled; a man''s hand
+  rests on her shoulder; the man wears a white shirt, a blue teardrop pendant and a pink-and-grey diamond-patterned cloak with a red lining'
+- 00:05.9-00:06.4 the blond man walks the girl quickly toward the camera along the alley, arm round her; dark tendril-like arms reach in behind
+  them (00:06.4)
+- '00:06.9 close behind the man: several dark, gooey, faceless figures wearing straw boater hats; the man glances back, smiling, unconcerned'
+- '00:07.4 overhead close-up: the two hold hands above the cobbles'
+- 00:07.9-00:08.4 the pair are in the air above steep red-tiled roofs and half-timbered houses, the man holding the girl
+- '00:08.9-00:10.9 high view: the man strides through the air past a green conical spire; pink-and-yellow striped banners hang over a street packed
+  with a crowd below; text card ''FROM ACADEMY AWARD-WINNING DIRECTOR HAYAO MIYAZAKI'' (00:09.4-00:10.9)'
+- 00:11.4-00:11.9 covered wooden balcony with a railing over a sunlit street of timbered houses and banners; the girl, now on the balcony floor,
+  reaches up while the man, outside the railing in the air, lets go of her hand
+- 00:12.4-00:12.9 the man alone in open blue sky with clouds, a two-finger gesture at his face, then arms spread with the cloak billowing
+- 00:13.4-00:14.4 at a large arched wooden door in a purple stone wall, the girl (from behind, braid, straw hat, green dress) holds a startled
+  blonde young woman in a pink-red dress and white cap
+- '00:14.9-00:16.4 dim, cluttered hat shop: hats on shelves and stands, green patterned wallpaper, red curtains, a chandelier, a tall mirror,
+  candles; the girl stands in the middle of the room'
+- 00:16.9-00:17.4 a huge woman in dark furs and a wide dark hat, pearl necklace and red lips, looms out of the darkness of the shop, smiling
+- 00:17.9 the brown-haired girl in the green dress holds her straw hat and looks round, startled, by a glass door lettered 'HATTER' (reversed)
+- 00:18.4 nearly black frame with dark swirling smoke (transition)
+- 00:18.9-00:20.4 a hunched grey-haired old woman in the same green dress leans close to the shop mirror; the reflection shows a wrinkled old
+  face; at 00:19.9 she holds the straw hat with the red band
+- 00:20.9-00:21.9 text card 'THE CRITICALLY ACCLAIMED EPIC ADVENTURE' over grassy rocky hills under a red-orange sunset sky; an old woman in a
+  red head-scarf seen from behind looks out over the hills
+- 00:22.4-00:22.9 an old woman in a red head-scarf, white neckerchief and grey dress at the top of a staircase by a round door, a colour dial
+  (blue, green, red, black) on the wall
+- 00:41.0 close-up of a young woman with short silver-grey hair and a blue dress against a starry night sky, mouth open in surprise
+- 00:41.5-00:43.0 a young woman with a silver-grey braid (pink tie), blue dress and white apron leans over a stone-and-brick hearth; a small orange
+  flame creature with eyes and an open mouth sits on the logs, facing her as if talking
+- 00:43.5-00:44.0 the grey-haired young woman falls or floats, arms raised, in front of a tilted sunset sky with a bright sun flare
+- 00:44.5-00:45.5 a huge patchwork mechanical castle (turrets, chimneys, pipes, gun-like barrels) on thin legs stands on a dark hilltop at dusk;
+  smoke and steam pour out, searchlight beams sweep the sky, dark clouds over a pink horizon, a mountain to the right
+- '00:46.0-00:47.0 overhead view of a rocky, mossy slope: a scarecrow with a grinning turnip-like head, black top hat and black coat, arms outstretched
+  on a single pole, hops beside an old woman in a maroon shawl and straw hat with a walking stick'
+- 'audio (offline Whisper, speakers not shown on screen): 00:01.3-00:06.3 male voice ''Where to? I''ll be your escort this evening.''; 00:06.3-00:16.6
+  ''Now, Sophie, you need to be more careful. It''s dangerous out there.''; 00:16.6-00:19.6 ''His heart belongs to me.''; 00:19.6-00:27.9 ''I''m
+  going to help you break the spell that you''re under.''; 00:35.9-00:41.9 garbled line (''They say that the best plays brightest when circumstances
+  are at their worst'', likely mis-transcribed); 00:41.9-00:44.9 ''Yeah, but no one really believes that.''; 00:44.9-00:48.9 ''Look at that. They
+  call this a castle?'''
+- 'audio: trailer score under the voices (not separately verifiable from the material); no on-screen speech labels or subtitles'
+- 'not shown: who the dark figures are or why they pursue; how the pair leave the ground; how the curse is cast; that the grey-haired young woman,
+  the old woman and the girl are the same person (only the green dress and straw hat link the girl to the old woman); whether the hearth is inside
+  the castle; how the castle moves'
+instructions_meta:
+  requirement_groups:
+    characters and threat in play:
+    - CR1
+    - CR2
+    - FP1
+    events by the world's rules:
+    - FP2
+    - VP1
+    turning point:
+    - CR3
+    - FP3
+    - VP2
+    journey and wider world:
+    - CR4
+    - CR5
+    - FP4
+    - VP3
+  explicit_requirements:
+  - type: keep
+    text: I really want to keep the hat-shop curse, where right after that menacing woman shows up the girl turns into an old woman, sees her
+      aged face in the mirror and stays old from then on.
+    covers:
+    - CR3
+    - FP3
+    - VP2
+rubric:
+  content_realization:
+  - id: CR1
+    item: 'The game contains the story''s main cast as distinct characters of their kind: the heroine (a young girl), a stranger with magic powers,
+      faceless shadow-creature pursuers, and a huge menacing woman'
+    anchors:
+      '1': all four are present and told apart, the stranger shown as magical and the pursuers as shadow creatures rather than ordinary people
+      '0.5': three of them present, or all present but the stranger or the pursuers indistinguishable from ordinary NPCs
+      '0': two or fewer of them present
+    evidence:
+    - - '00:02.4'
+      - '00:07.4'
+    - - '00:16.9'
+      - '00:17.4'
+  - id: CR2
+    item: 'The game sets the opening roles toward the heroine: the shadow figures are hostile pursuers after her, and the stranger is her protector
+      who offers to escort her and takes her away from them'
+    anchors:
+      '1': the pursuers are presented as a threat to the heroine and the stranger as her escort and protector against them
+      '0.5': both are present, but their opposite roles toward the heroine are not made clear
+      '0': missing, or the stranger is presented as the threat
+    evidence:
+    - - '00:02.4'
+      - '00:07.9'
+  - id: CR3
+    item: 'The game contains the hat-shop curse: in a hat shop the menacing woman appears to the heroine, and the heroine is changed by a spell
+      into an old woman who is clearly still the heroine'
+    anchors:
+      '1': a hat shop, the menacing woman's appearance there, and the heroine's change into an old woman presented as a spell, with the old woman
+        recognisably the heroine
+      '0.5': the heroine is aged but not in the shop encounter, or not presented as a spell, or the old woman reads as a different character
+      '0': no curse or transformation
+    evidence:
+    - - '00:14.9'
+      - '00:20.4'
+  - id: CR4
+    item: The game's wider world beyond the town contains a huge magical castle that stands on legs
+    anchors:
+      '1': a castle standing on legs is present in the world beyond the town
+      '0.5': a large castle is present beyond the town but as an ordinary building without legs, or a legged castle only inside the town
+      '0': no such castle
+    evidence:
+    - - '00:44.5'
+      - '00:45.5'
+  - id: CR5
+    item: 'The game''s story keeps the reference''s order of key events: the rescue from the pursuers, then the hat-shop curse, then the aged
+      heroine out in the open hills beyond the town'
+    anchors:
+      '1': all three events are present in this order
+      '0.5': two of them present in the right order, or all three present but out of order
+      '0': fewer than two of them, or no order between them
+    evidence:
+    - - '00:02.4'
+      - '00:22.9'
+  functions_playability:
+  - id: FP1
+    item: 'Escape from a threat in play: the shadow pursuers are shown closing in on the player character (in real time, or through a scripted
+      event, cutscene or map transition) and the stranger companion stays with the player and leads them away'
+    anchors:
+      '1': the pursuers are shown advancing on the player or closing in (real-time movement, a scripted event, cutscene or map transition all count),
+        the companion accompanies the player away from them, and getting away is the goal of the beat
+      '0.5': the pursuers are static or harmless set dressing with no pursuit shown, or the companion does not stay with the player
+      '0': the escort or the pursuit is not present in play
+    evidence:
+    - - '00:02.4'
+      - '00:07.4'
+  - id: FP2
+    item: 'Magical escape and parting: the getaway is presented as the stranger''s magic (e.g. the pair leave the ground, or a scripted event,
+      cutscene or map transition such as a teleport shows the escape), it puts the pursuers behind them, and it ends with the stranger leaving the player'
+    anchors:
+      '1': the escape is presented as the stranger's magic (flight, or a scripted event, cutscene or map transition such as a teleport all count),
+        the pursuit is over afterwards, and the companion departs
+      '0.5': the escape happens but by ordinary walking with nothing marking it as magic, or the companion stays
+      '0': no escape; the escort just ends
+    evidence:
+    - - '00:07.4'
+      - '00:12.9'
+  - id: FP3
+    item: 'The curse as a lasting change in play: the aging is triggered by the encounter with the menacing visitor in the shop, and the player
+      character stays aged in all play that follows'
+    anchors:
+      '1': the aging follows directly on the visitor encounter, and the player remains aged in the later scenes (also after leaving the shop)
+      '0.5': the aging happens without being tied to the encounter, or it is undone right away or only shown in a cutscene
+      '0': no transformation happens in play
+    evidence:
+    - - '00:14.9'
+      - '00:20.4'
+  - id: FP4
+    item: 'Coherent guided journey from start to end: the key events unlock one another so they cannot be skipped or played out of order, the
+      player has clear direction at each step, after the curse the player can leave the town for the wider magical world, and the whole has an
+      ending or a way to continue'
+    anchors:
+      '1': the events play from start to finish in sequence, the player always knows where to go next, the player can leave the town after the
+        curse, and there is an ending or a sensible continuation
+      '0.5': events can be skipped or happen out of order, or the journey stops at the curse with nothing beyond the town, or the player gets
+        lost without guidance
+      '0': isolated scenes with no progression, or the sequence cannot be completed
+    evidence:
+    - - '00:02.4'
+      - '00:22.9'
+    - - '00:41.0'
+      - '00:47.4'
+  visual_presentation:
+  - id: VP1
+    cat: key_moment
+    keyframes:
+    - '00:08.4'
+    - '00:09.9'
+    item: 'The magical escape: a framed moment showing the pair getting away by magic, e.g. in the air above the town''s rooftops, or a scripted
+      event, cutscene or map transition (such as a teleport) that shows the escape'
+    anchors:
+      '1': a view where the pair are shown escaping by magic (airborne above the town, or a scripted event, cutscene or map transition showing the
+        escape)
+      '0.5': the pair shown leaving, but not readable as a magical escape
+      '0': none
+    evidence:
+    - - '00:07.9'
+      - '00:11.9'
+  - id: VP2
+    cat: key_moment
+    keyframes:
+    - '00:15.4'
+    - '00:19.4'
+    item: 'Mirror reveal: in a dim, cluttered shop full of hats, the player character faces a mirror and the reflection shows an aged face, set
+      apart as a reveal'
+    anchors:
+      '1': a shop interior with hats and a mirror, and a framed moment where the aged reflection or face is shown
+      '0.5': the shop or the aged look is shown, but not as a mirror / reveal moment
+      '0': none
+    evidence:
+    - - '00:14.9'
+      - '00:16.4'
+    - - '00:18.9'
+      - '00:20.4'
+  - id: VP3
+    cat: key_moment
+    keyframes:
+    - '00:44.5'
+    - '00:45.5'
+    item: 'The castle at dusk: a huge patchwork structure of turrets and chimneys, pouring smoke, with light beams, standing on a hilltop against
+      a dark sky with a pink horizon'
+    anchors:
+      '1': a large mismatched mechanical structure with chimneys and smoke on a hill under a dusk sky
+      '0.5': a large building but not patchwork / mechanical, or without the dusk setting
+      '0': none
+    evidence:
+    - - '00:44.5'
+      - '00:46.0'
+play_suggestions:
+  FP1:
+  - 'walk at normal pace, then stop: do the pursuers keep coming?'
+  - 'try to walk back toward the pursuers or away from the companion: what happens?'
+  FP2:
+  - watch whether the escape is presented as magic (flight, or a scripted event / cutscene / teleport) or is just an unexplained cut
+  - after the escape, check that the companion is gone and the pursuers do not return
+  FP3:
+  - 'talk to the visitor, and also try to avoid them: does the aging still follow the visitor''s appearance?'
+  - 'after the change, visit later scenes and reopen the game: does the player still look old?'
+  FP4:
+  - 'try to go straight to the shop or the hills before the escort: are later beats locked?'
+  - play the whole sequence once without hints and note any place where the next goal is unclear
+  - after the curse, check that the player can leave the town and what happens at the end of the content
+  robustness:
+  - save and reload in the middle of the escort and after the curse
+  - walk away from the scripted route at each beat and come back
+  - 'lose or fail any challenge on purpose: can the sequence still be completed?'
+  - check that the original game's normal start, menus and monsters still work
+v4_map:
+  U1: CR5
+  U2: CR2
+  U3: CR3
+  U4: 'CR4 (the castle) | dropped: peripheral (fire creature at the hearth and scarecrow, one brief montage shot each); the women''s identities
+    and unshown links (not shown, not required)'
+  U5: 'CR4 (castle on legs), FP2 (airborne magic) | dropped: peripheral (living fire creature and self-moving scarecrow, one brief montage shot
+    each)'
+  U6: 'CR1 | dropped: peripheral (blonde young woman at the door, fire creature, scarecrow: one-shot side characters)'
+  U7: 'dropped: not in the reference (the spell-breaking line is not audible inside the clip; human review 2026-11-04)'
+  FP1: FP1 (behaviour); existence of companion and pursuers to CR1, CR2
+  FP2: FP2
+  FP3: FP3 (trigger and persistence); the curse event itself to CR3
+  FP4: 'dropped: not in the reference (the spell-breaking line is not audible inside the clip; human review 2026-11-04)'
+  FP5: FP4 (guided progression); the order of events to CR5
+  VP1: 'dropped: pursuers closing in already scored by FP1 and CR2; VP over size'
+  VP2: VP1
+  VP3: VP2
+  VP4: VP3; castle existence and legs to CR4
+  VP5: 'dropped: editing request (night-time opening), moved to the Editing task (editing_seed.yaml, 2026-11-05)'
+provenance:
+  source_yaml: T-VO-vid_ed6ca1b2a47b.t1.yaml
+  source_sha256: d7931e71f60b3ce27438f85131b01dfe4b93e0d4f27a2322c7d2d3f5b9863fd1
+  size_waiver: null
+  size_max: null
+  sources: []

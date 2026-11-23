@@ -1,0 +1,227 @@
+# GameAnything-Bench scoring material: never shown to agents during a trial.
+task_id: T-TO-txt_6b6b5b7ebb21.e1
+source_inventory:
+- 'c05.p013-c05.p015: letter heading, written at the volcano of Kilauea; the writer is exhausted and elated after the visit'
+- 'c05.p016-c05.p017: the party (the writer, Miss Karpe, the guide Upa) sets out on horseback from Hilo with their gear; a gallop on the soft
+  grassy track out of town, the writer nearly falls; women swimming in a roadside pool laugh'
+- 'c05.p018: Hilo thins out into native houses, kalo patches and fish ponds; after some miles a narrow hard-lava track enters a belt of dense,
+  impassable tropical jungle (palms, ferns, lianas, flowering climbers), only crossable on the track'
+- 'c05.p019: the jungle opens onto a coconut grove in the glare of day; rest at two poor grass huts with natives, who part with aloha'
+- 'c05.p020-c05.p021: single file across an immense grey plain of pahoehoe (smooth, ropy, coiled lava, as opposed to jagged a-a), the cooled flow
+  from Kilauea toward Hilo, slippery where smooth; reflections on the volcanic building of the island; glimpses of Mauna Loa''s dome'
+- 'c05.p022: no water; ferns, ohias, ohelos and ti plants clothe the lava; the sea''s palm fringe on the left, the dense timber belt around Mauna
+  Loa on the right'
+- 'c05.p023: the track is a constant scramble over rock steps and ledges; the climb is so gradual that only the cooler air shows it, though it
+  rises a great deal over the whole route'
+- 'c05.p024-c05.p025: a locked, run-down grass hut at the halfway point; Upa hurries the party on with spurs; the country barely changes (ohia
+  only); a drove of half-wild cattle passes, their herders report the volcano active'
+- 'c05.p026-c05.p027: at dusk a strip of tree-fern forest, then total darkness and rain in a belt of ohias; the writer near collapse'
+- 'c05.p028-c05.p029: a red glare suddenly lights the whole sky, sulphur smell and a surf-like roar; at the crater-house, red vapour and flame
+  curl out of an invisible pit; a warm room with a fire; jets of flame seen through the night'
+- 'c05.p030-c05.p032: in the morning the mist lifts: the crater''s wall is a few yards from the house; not a cone but a vast pit on a rolling
+  plain, with a sunken lowest floor, steam cracks, sulphur and earthquakes; the lake Hale-mau-mau (home of the goddess Pele), a pit within the
+  pit, lies in the southern part, miles from this side; its spectacle varies daily; little sign of it this morning'
+- 'c05.p033-c05.p034: the descent with native guides: down the steep, vegetated terminal wall and a vegetated slope, then a second descent over
+  broken lava where vegetation ends; a black, glassy, sulphur-stained region, fissured and hot underneath'
+- 'c05.p035-c05.p036: crossing the lowest floor (ropy, cracked, steaming lava, a few ferns in a crack; a cooled lava fall on a ledge), then a
+  steep hot ascent up a recent flow from Hale-mau-mau (contorted lava, Pele''s hair); the crust grows hotter and weaker, single file behind the
+  guide, the writer falls into acid steam holes'
+- 'c05.p037-c05.p038: no sign of fire until, suddenly, red drops are tossed up and the party stands on the brink of Hale-mau-mau, a short drop
+  above the lake; overwhelming noise and sight; the lake rises, forms a cone, is never the same two minutes together'
+- 'c05.p039-c05.p041: the lake: irregular, nearly divided in two by a low lava bank that grows; low sheer near walls, high craggy far cliffs;
+  a field of blowing cones; surface crusting silver-grey with rose cracks; fire fountains merging and reappearing; waves driven southward over
+  the bank and against the far cliffs; a cone building just below the brink; intense heat burns boot soles; the only risk is the ledge giving
+  way'
+- 'c05.p042-c05.p045: a final surge overflows the lake''s rim; farewell; the long trudge back across the black crater and up the vegetated wall
+  into the green upper world'
+- 'c05.p046: the Volcano Book of visitors'' entries, mostly flippant jokes about Pele and boasts of travel times'
+- 'c05.p047: the inn: a nail-free grass and bamboo house with a steep roof, verandah, a centre room with a constant wood fire, side rooms and
+  a grass cookhouse; it stands in steaming, quaking ground, cooks with natural steam behind the house; supplies are brought from far away; host
+  Mr. Gilman'
+- 'c05.p048: evening in the inn: rainbound native travellers stringing leis and smoking by the fire'
+- 'c05.p049: a sulphur steam bath (a grass shed over a steam crack) a short walk away, and the Sulphur Banks with fragile sulphur crystals'
+- 'c05.p050: an old bullock-hunter tells of the 1868 eruption and the recent summit eruption of Mauna Loa; its snow-capped dome is visible from
+  the inn'
+instructions_meta:
+  requirement_groups:
+    approach route:
+    - CR1
+    - FP1
+    landmark access:
+    - FP2
+    layout and landmarks:
+    - CR2
+    - CR3
+    - CR4
+    environmental activity:
+    - FP3
+    - VP1
+    visual character:
+    - VP2
+    - VP3
+  explicit_requirements:
+  - type: specify
+    text: The lava lake should sit in its own pit inside the crater and be almost split in two by a low bank of lava.
+    covers:
+    - CR4
+rubric:
+  content_realization:
+  - id: CR1
+    item: 'The approach consists of successive zones in this order: a coastal town, a dense jungle belt crossed by a track, and a long lava plain
+      rising toward the crater'
+    anchors:
+      '1': all three zones are present and follow one another in this order, the lava plain rising toward the crater
+      '0.5': the zones are present but out of order, or one is missing, or the lava plain is flat / does not lead up to the crater
+      '0': no approach zones; the level starts at the crater
+    evidence:
+    - c05.p018
+    - c05.p020
+    - c05.p023
+    - - c05.p028
+      - c05.p030
+  - id: CR2
+    item: The crater is a vast pit sunk below the level of the surrounding plain, not a cone-shaped mountain, with the inn standing at its rim
+    anchors:
+      '1': a huge pit below the plain's level (not a summit cone), with the inn close to its edge
+      '0.5': a crater is present but it is small or built as a cone, or the inn is missing or far from the rim
+      '0': no recognisable crater
+    evidence:
+    - c05.p030
+    - c05.p047
+  - id: CR3
+    item: 'The lava lake lies inside the crater on its far side from the inn: between them are the crater wall, the crater floor and a rise ending
+      at a brink above the lake'
+    anchors:
+      '1': the lake is far across the crater from the inn, with the wall, the floor and a brink overlooking the lake arranged between them
+      '0.5': the lake is inside the crater but next to the inn, or the floor or the brink above the lake is missing
+      '0': no lake, or the lake is outside the crater
+    evidence:
+    - c05.p030
+    - c05.p031
+    - - c05.p034
+      - c05.p038
+    - c05.p041
+  - id: CR4
+    item: Hale-mau-mau is a lake of molten lava sunk in an inner pit of its own within the crater, nearly divided into two basins by a low lava
+      bank
+    anchors:
+      '1': a molten lava lake in its own inner pit, with a low bank nearly splitting it in two
+      '0.5': a molten lava lake inside the crater but as one undivided pool, or level with the crater floor instead of in its own pit
+      '0': no molten lava lake
+    evidence:
+    - c05.p031
+    - c05.p038
+    - c05.p039
+    - c05.p041
+  functions_playability:
+  - id: FP1
+    item: The player can travel the approach as one continuous route on foot, zone after zone, from the coastal town to the inn on the crater's
+      edge
+    anchors:
+      '1': the whole route is walkable without breaks and leads from the town through each zone to the inn at the crater
+      '0.5': the zones are disconnected (teleport, separate levels with no route), or part of the route cannot be walked
+      '0': no approach route can be travelled; the player starts at the crater
+    evidence:
+    - c05.p018
+    - c05.p020
+    - c05.p023
+    - - c05.p028
+      - c05.p030
+  - id: FP2
+    item: From the crater's edge the player can descend into the crater, cross its floor and reach the brink of the lava lake, and come back up
+    anchors:
+      '1': a traversable path down the wall, across the floor and up to the brink, and a way back out to the rim
+      '0.5': the lake brink is reachable only by a shortcut that skips the descent and the floor, or there is no way back
+      '0': the lake cannot be reached
+    evidence:
+    - c05.p034
+    - c05.p035
+    - c05.p038
+    - c05.p045
+  - id: FP3
+    item: 'Watched from the brink, the lava lake keeps changing: its surges, fountains and cones rise, merge and die away instead of holding one
+      state'
+    anchors:
+      '1': over a short observation at the brink the lake's activity visibly changes (outbursts, fountains or surges appear and subside)
+      '0.5': the lake moves, but as one constant loop with no visible change in its activity
+      '0': the lake is static
+    evidence:
+    - c05.p031
+    - c05.p038
+    - - c05.p039
+      - c05.p040
+    - c05.p042
+  visual_presentation:
+  - id: VP1
+    cat: key_moment
+    item: 'The lake seen from the brink looks violently alive: glowing lava thrown up in fountains and surging waves, its darkening crust broken
+      by glowing cracks'
+    anchors:
+      '1': a glowing lake surface with fire fountains or surging waves and a crust broken by glowing cracks
+      '0.5': a glowing surface with some movement (bubbling, ripples) but no fountains, surges or crust
+      '0': a flat, uniform lava surface with no visible activity
+    evidence:
+    - c05.p038
+    - - c05.p039
+      - c05.p040
+    - c05.p042
+  - id: VP2
+    cat: style
+    item: The inside of the crater is a barren expanse of dark lava, in stark contrast to the green vegetation of the land above the wall
+    anchors:
+      '1': a barren dark lava interior that clearly contrasts with green land on the rim / outside
+      '0.5': a barren lava interior without the contrast to the green land above
+      '0': no distinct crater interior
+    evidence:
+    - c05.p034
+    - c05.p035
+    - c05.p045
+  - id: VP3
+    cat: style
+    item: 'Each approach zone has its own look: the town with houses and cultivated plots, the jungle as a dense, lush green mass closing in on
+      the track, the lava plain as a wide expanse of grey ropy lava with only low, sparse plants'
+    anchors:
+      '1': the town, the jungle and the lava plain are each clearly recognisable by their look and distinct from one another
+      '0.5': only some zones look distinct (e.g. the jungle and the lava plain look alike, or the town has no look of its own)
+      '0': the approach zones look the same
+    evidence:
+    - c05.p018
+    - c05.p020
+    - c05.p022
+play_suggestions:
+  FP1:
+  - 'walk from the start to the crater without shortcuts: do the town, the jungle belt and the lava plain follow one another?'
+  - check whether the plain rises toward the crater rather than being flat (for CR1)
+  FP2:
+  - from the inn, find the way down into the crater and walk to the lake brink
+  - after reaching the brink, walk back up to the rim and the inn
+  FP3:
+  - stand at the brink for a minute or two and note whether the lake's activity changes or repeats one fixed loop
+  robustness:
+  - 'try to walk into the lava lake or off the brink: what happens?'
+  - try to leave the marked track in the jungle and on the crater floor
+  - 'reload or restart mid-route: does the player resume on the route?'
+v4_map:
+  U1: CR2 (merged with VP1)
+  U2: CR4 (merged with VP2)
+  U3: CR1 (route zones and order; continuity stays FP1)
+  U4: CR3 (lake's place in the crater; traversal stays FP2)
+  U5: FP3 (the lake's continual change, observed at the brink)
+  FP1: FP1 (continuity only) + CR1 (existence and order of the zones)
+  FP2: FP2 (traversal; arrangement of wall, floor, brink in CR3)
+  VP1: 'CR2 (spatial: crater as sunken pit with inn at rim)'
+  VP2: 'CR4 (spatial: lake in inner pit split by a bank)'
+  VP3: VP1 (look of the active lake) + FP3 (its change over time)
+  VP4: VP2
+  VP5: 'dropped: editing (daylight modify requirement moved to a separate Editing task, 2026-11-05; see editing_seed.yaml)'
+provenance:
+  source_yaml: T-TO-txt_6b6b5b7ebb21.e1.yaml
+  source_sha256: 9a6b2f5740b97650550326bdcd715c44759994fcd11289f593dca7222fdada5a
+  size_waiver: null
+  size_max: null
+  sources:
+  - ref: t01
+    title: The Hawaiian Archipelago
+    author: Isabella L. Bird
+    text_id: txt_6b6b5b7ebb21
+    excerpt_id: e1

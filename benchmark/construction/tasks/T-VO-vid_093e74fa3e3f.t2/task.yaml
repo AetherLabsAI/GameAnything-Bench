@@ -1,0 +1,15 @@
+# GameAnything-Bench task T-VO-vid_093e74fa3e3f.t2 (public part). Instruction: instruction_fine.md.
+task_id: T-VO-vid_093e74fa3e3f.t2
+version: '0.2'
+category: narrative_event
+modality: video
+domain: film
+track: core
+target_game: flare
+references:
+- c01
+provenance:
+  pipeline: v2g2 pilot task flare__film -> converted to rubric
+    v4 (2026-11-09)
+  rules_version: v4
+  review_status: pending

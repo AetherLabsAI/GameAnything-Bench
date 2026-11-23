@@ -1,0 +1,33 @@
+# GameAnything-Bench game images (host `docker`, gab/host/docker.py). Built from docker/base + docker/<game> (shared base layer),
+# published to the registry below under the licence conditions in docker/LICENSES.md (`public: false` images are not published).
+# digest = the pinned manifest the backend runs (repo@digest); `gab setup --set docker_tag <tag>` uses a tag instead.
+# gpu: the game prefers a GPU (docker_gpus=auto passes --gpus all when docker has the nvidia runtime; else Mesa software GL).
+# public: may the image be published once the licence conditions are met (docker/LICENSES.md)?  install: path in the image.
+registry: ghcr.io/aetherlabsai
+tag: "20261030"
+# steam: the game needs the machine's Steam hub (gab/host/steam.py); its image is built locally (docker/build.sh steam, tag local;
+# never pushed: steam-installer is under Valve's SSA). steam_hub = the image of the hub container itself.
+steam_hub: {repo: gameanything-bench-steam, tag: local}
+base: {repo: gameanything-bench-base, digest: sha256:da9a224d7c10d8280a105468a7e7d2665026cbba787f8c2270dbd6d0cd504573}
+games:
+  voxelibre:    {repo: gameanything-bench-voxelibre,    digest: sha256:bab95aebf3200787580c951d1002a35a5c926f46da5d897ab1dc7016ec8f1201, gpu: true,  public: true,  install: /home/player/oss-voxelibre, version: "0.92.4 / Luanti 5.17.0"}
+  xonotic:      {repo: gameanything-bench-xonotic,      digest: sha256:35af99aae03d40f1beefc0b5bce5cfbb29b4c657a928993afc35654eb9d3cee8, gpu: true,  public: true,  install: /home/player/oss-xonotic/Xonotic, version: "0.8.6"}
+  godot-tps:    {repo: gameanything-bench-godot-tps,    digest: sha256:d0d94013dd33609df3b4c6341b3ce6dce0a6b49ee75b07ae096a4320071d758a, gpu: true,  public: true,  install: /home/player/oss-godot-tps, version: "tps-demo a82f154 / Godot 4.7.2"}
+  flare:        {repo: gameanything-bench-flare,        digest: sha256:5c80704019dc9fda3adf0ed735e8d44a3d3bbc56bb998ef16303eb516025baab, gpu: false, public: true,  install: /home/player/oss-flare/squashfs-root, version: "1.15"}
+  tuxemon:      {repo: gameanything-bench-tuxemon,      digest: sha256:d9f637c642058ab2e17790fe3cf901915591dff5b0b3c604668e4824e723f121, gpu: false, public: review, install: /home/player/oss-tuxemon, version: "0.4.35 (9e6258f)"}
+  tof2:         {repo: gameanything-bench-tof2,         digest: sha256:3899e443a1e8646baaafeee7fff5b93d48b7970037d6b4db1f5ad8a935db784d, gpu: true,  public: true,  install: /home/player/oss-tof2, version: "1.0.9 (dbe629e) / Godot 4.4.1"}
+  colobot:      {repo: gameanything-bench-colobot,      digest: sha256:6cc31a8a87e02e45e78925cdf51f3a7939701c3e3664f0609533b06e2df994c7, gpu: false, public: true,  install: /home/player/oss-colobot, version: "0.2.1-1build3"}
+  celeste64:    {repo: gameanything-bench-celeste64,    digest: sha256:7b8178abc3733f5488937903582668551e72ca99a22e05f8b7c8dd3ff9f11e84, gpu: false, public: false, install: /home/player/oss-celeste64, version: "v1.1.1 (bfc7a3b)"}
+  supertuxkart: {repo: gameanything-bench-supertuxkart, digest: sha256:77cacc7c00860703a3ccb45df10ec6771e888975edff93f045a850465475b0a5, gpu: true,  public: true,  install: /home/player/oss-supertuxkart, version: "1.5"}
+  terraria:     {repo: gameanything-bench-steam, tag: local, gpu: true, steam: true, public: false, install: "Steam hub library (tModLoader 1281930 + Terraria 105600)", version: "Steam (tModLoader stable)"}
+  valheim:      {repo: gameanything-bench-steam, tag: local, gpu: true, steam: true, public: false, install: "Steam hub library (Valheim 892970)", version: "Steam"}
+  # Cities: Skylines: the same Steam image; trials --network none like every game. The one-time Legal Disclaimer container
+  # (gab/setup/citieslegal.py, `gab get-game cities_skylines`) is the only one with a network (the game fetches the documents online).
+  cities_skylines: {repo: gameanything-bench-steam, tag: local, gpu: true, steam: true, public: false, install: "Steam hub library (Cities: Skylines 255710)", version: "Steam"}
+  # commercial, bring your own copy: the image has NO game files (the .NET 8 SDK, the offline NuGet feed, the Content Patcher
+  # source); the user's game folder (config stardew_game_dir) is bind-mounted read-only at /lab/game. Built locally, not pushed yet.
+  stardew_valley: {repo: gameanything-bench-stardew_valley, tag: local, gpu: true, public: review, install: /lab/game (mount), version: "1.6.15 + SMAPI 4.5.2 (user's copy)"}
+  # commercial: the image is ONLY the runtime (Temurin JDK 25 + Fabric API); the game files are the user's own copy on the host,
+  # mounted read only at /mc/main (config minecraft_dir; docker/minecraft/fetch_game.py). Not pushed yet: build it locally
+  # (docker/build.sh minecraft -> tag local). No digest until it is pushed.
+  minecraft:    {repo: gameanything-bench-minecraft,    tag: local, gpu: true, public: false, install: "/mc/main (mounted from minecraft_dir; game files NOT in the image)", version: "26.3 + Fabric 0.19.5 (runtime: Temurin 25.0.5+8, Fabric API 0.162.0+26.3)"}

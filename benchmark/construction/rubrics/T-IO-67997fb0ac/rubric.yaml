@@ -1,0 +1,176 @@
+# GameAnything-Bench scoring material: never shown to agents during a trial.
+task_id: T-IO-67997fb0ac
+source_inventory:
+- 'img01: woodland clearing with two large stacks of cut logs in the foreground; behind them several dark metal kilns with short chimneys give
+  off white smoke'
+- 'img02: a round steel ring kiln, lid on, no smoke, on ash-darkened ground; next to it a neat stack of cut poles of even length; brushwood and
+  tarpaulins behind'
+- 'img03: a steel ring kiln with a conical lid in a beech wood, billowing thick white smoke; a rail fence around it; the ground around blackened
+  with charcoal dust'
+- 'img04: top view of an eight-sided steel hopper on legs, filled with black charcoal pieces that still keep the shape of twigs and sticks; sandy
+  ground'
+- 'img05: a row of conical (beehive) kilns built of stacked flat stones, each with an arched opening near the base and a small hole higher up;
+  snow and a dry mountain slope'
+- 'img06: a group of large buildings with walls of dark blocks, wooden plank roofs and tall chimney stacks, on a lawn; what happens inside is
+  not shown'
+instructions_meta:
+  requirement_groups:
+    loading and burn:
+    - CR1
+    - FP1
+    - FP2
+    charcoal output:
+    - CR2
+    - FP3
+    work site and parallel kilns:
+    - CR3
+    - FP4
+    kiln look and burning state:
+    - VP1
+    - VP2
+  explicit_requirements:
+  - type: keep
+    text: The kilns should put out smoke while they're burning, so I can see at a glance which ones are going.
+    covers:
+    - VP1
+  - type: specify
+    text: A kiln has to be sealed shut while it burns, not work like an open campfire.
+    covers:
+    - CR1
+rubric:
+  content_realization:
+  - id: CR1
+    item: 'The game contains closed kilns: the wood is sealed inside the kiln while it burns'
+    anchors:
+      '1': kilns exist as enclosed structures, and a burning kiln is shut with the wood inside
+      '0.5': kilns exist but are open or only partly closed while burning (the wood burns in view like a campfire)
+      '0': no kiln, or charcoal is made at an ordinary open fire
+    evidence:
+    - img02
+    - img03
+    - img05
+  - id: CR2
+    item: 'The game contains cut wood as the kiln''s input and charcoal as a separate output material: black, charred pieces of wood'
+    anchors:
+      '1': cut wood and charcoal both exist as distinct materials, the charcoal black and recognisably charred wood
+      '0.5': both exist but the output is not told apart from wood, or looks like ash or something unrelated to wood
+      '0': no charcoal material
+    evidence:
+    - img01
+    - img02
+    - img04
+  - id: CR3
+    item: 'The game contains a kiln work site: several kilns side by side in one area together with their stacked wood supply'
+    anchors:
+      '1': one site holding several kilns and stacks of cut wood next to them
+      '0.5': only a single kiln at the site, or kilns and wood stacks exist but apart from each other
+      '0': no recognisable kiln site
+    evidence:
+    - img01
+    - img02
+    - img05
+  functions_playability:
+  - id: FP1
+    item: 'Loading the kiln: the player supplies wood to a kiln and starts the burn; the kiln turns the wood into charcoal'
+    anchors:
+      '1': wood supplied to a kiln by the player and the burn started by the player; the kiln is where the wood is converted
+      '0.5': the kiln works without wood being supplied, or the player cannot start it
+      '0': no kiln interaction
+    evidence:
+    - img01
+    - img02
+    - img03
+  - id: FP2
+    item: 'The burn is a working phase: a loaded kiln goes through a burning state before charcoal is ready'
+    anchors:
+      '1': a distinct burning state between loading and output
+      '0.5': a burning state exists but is not tied to the output (charcoal does not depend on it)
+      '0': 'no burn phase: wood turns straight into charcoal'
+    evidence:
+    - img01
+    - img02
+    - img03
+  - id: FP3
+    item: 'Charcoal output: after the burn the player can obtain the charcoal from the kiln'
+    anchors:
+      '1': charcoal can be taken from the kiln once the burn is over
+      '0.5': the burn ends but the charcoal cannot be obtained, or can be taken before the burn has run
+      '0': no output
+    evidence:
+    - img04
+  - id: FP4
+    item: Several kilns can be run at the same time
+    anchors:
+      '1': multiple kilns working in parallel, each giving charcoal
+      '0.5': 'only one kiln can work at a time: a single working kiln, or several kilns of which only one can work at a time'
+      '0': no kiln can work
+    evidence:
+    - img01
+    - img05
+  visual_presentation:
+  - id: VP1
+    cat: presentation
+    item: A burning kiln visibly gives off smoke, so the player can tell at a glance which kilns are burning
+    anchors:
+      '1': smoke clearly rises from each burning kiln and not from idle ones
+      '0.5': smoke exists but is faint or hard to notice, or the burning state is shown only by another sign (a glow, a flame, a UI marker) without
+        smoke
+      '0': no visible sign of a burning kiln
+    evidence:
+    - img01
+    - img03
+  - id: VP2
+    cat: style
+    item: 'The kilns look like the reference''s kilns: squat, round-bodied, lidded or domed structures'
+    anchors:
+      '1': kilns recognisable at sight as kilns of the reference's kind
+      '0.5': a kiln object exists but looks generic (a box, a hut) and not like a kiln
+      '0': nothing that looks like a kiln
+    evidence:
+    - img02
+    - img03
+    - img05
+play_suggestions:
+  FP1:
+  - load a kiln with wood and start it
+  - 'try to start a kiln without having any wood: what happens?'
+  FP2:
+  - 'watch a kiln from loading to output: is there a burning state before charcoal is ready?'
+  - try to take charcoal out while the kiln is still burning
+  FP3:
+  - 'collect the output: is it charcoal, separate from wood in the inventory?'
+  - compare the amount of wood loaded with the charcoal received
+  FP4:
+  - 'build or use two kilns, load both and start them one after the other: do both burn and both give charcoal?'
+  robustness:
+  - 'leave the area while a kiln is burning and come back: is the burn still going or finished correctly?'
+  - save and reload during a burn
+  - load a kiln, then try to add more wood or remove wood mid-burn
+v4_map:
+  U1: CR1 (closed kiln exists); conversion itself scored by FP1
+  U2: 'dropped: step order already scored by FP1, FP2, FP3'
+  U3: CR2
+  U4: 'dropped: smoke as the burning sign is scored by VP1, which now requires smoke'
+  U5: CR3 (several kilns at one site); parallel running scored by FP4
+  FP1: FP1
+  FP2: FP2
+  FP3: FP3 (obtaining); charcoal distinct from wood moved to CR2
+  FP4: FP4
+  VP1: CR3 (work site arrangement is content, not look)
+  VP2: VP1 (now requires smoke, per the explicit keep requirement)
+  VP3: VP2 (look only; closed enclosure moved to CR1)
+provenance:
+  source_yaml: T-IO-67997fb0ac.yaml
+  source_sha256: 61240d082dd722010aa2d25e63582f992186cfead8ef663cebbbe11880342e44
+  size_waiver: null
+  size_max: null
+  sources:
+  - refs:
+    - img01
+    - img02
+    - img03
+    - img04
+    - img05
+    - img06
+    bundle: 67997fb0ac
+    title: 木炭到炼铁：烧炭、鼓风熔炼、出铁

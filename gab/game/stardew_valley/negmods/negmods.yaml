@@ -1,0 +1,6 @@
+# negative mods for `gab selfcheck stardew_valley` (C# SMAPI mods, built like a deliverable); each must fail exactly its items
+# (vs a fresh vanilla instance). quick_probes: what `--quick` runs for it.
+neg_slow_clock: {expect_fail: [SD-CLOCK], quick_probes: [clock]}
+neg_seed_price: {expect_fail: [SD-SHOP], quick_probes: [shop_buy]}
+neg_slow_walk: {expect_fail: [SD-WALK], quick_probes: [walk]}
+neg_bonus_gold: {expect_fail: [SD-MONEY], quick_probes: [player_start]}

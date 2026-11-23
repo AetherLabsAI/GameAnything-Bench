@@ -1,0 +1,48 @@
+# STATE_SPEC self-check (gab selfcheck flare --state): format in gab/setup/selfcheck.py state_check.
+# New game as a player: Play Game -> first class -> Create, Escape skips the backstory cutscene, Escape closes the tutorial
+# dialog (when the cutscene took the first Escape late, the second one skips it and `l` `l` -- log open + close -- closes the
+# dialog), a short walk south-east (the hero stays inside the test mod's HUD-message area).
+vanilla:
+  steps:
+    - {do: click, x: 830, y: 498}
+    - {do: wait, seconds: 2.5}
+    - {do: click, x: 757, y: 168}
+    - {do: click, x: 350, y: 690}
+    - {do: wait, seconds: 4}
+    - {do: key, keys: "Escape"}
+    - {do: wait, seconds: 4}
+    - {do: key, keys: "Escape"}
+    - {do: wait, seconds: 3}
+    - {do: key, keys: "l"}
+    - {do: wait, seconds: 0.5}
+    - {do: key, keys: "l"}
+    - {do: wait, seconds: 1}
+    - {do: hold, keys: [s, d], seconds: 1.0}
+    - {do: wait, seconds: 1}
+  engine: [screen, map, map_title, pos.x, pos.y, hp, hp_max, mp, mp_max, level, xp, class, alive, gold, inventory, equipped, statuses, menus_open, enemies, npcs]
+  mod_allow: []
+mod:
+  dir: testmod
+  steps:
+    - {do: click, x: 830, y: 498}
+    - {do: wait, seconds: 2.5}
+    - {do: click, x: 757, y: 168}
+    - {do: click, x: 350, y: 690}
+    - {do: wait, seconds: 4}
+    - {do: key, keys: "Escape"}
+    - {do: wait, seconds: 4}
+    - {do: key, keys: "Escape"}
+    - {do: wait, seconds: 3}
+    - {do: key, keys: "l"}
+    - {do: wait, seconds: 0.5}
+    - {do: key, keys: "l"}
+    - {do: wait, seconds: 1}
+    - {do: hold, keys: [s, d], seconds: 1.0}
+    - {do: wait, seconds: 1}
+  expect:
+    - "mod: gab_beacon_lit"
+    - "mod: GAB Beacon Keeper"
+    - "mod: enemies/"
+    - "mod: GAB signpost"
+    - "screen_text: GAB HUD: the beacon keeper waits nearby"
+    - "screen_text: GAB quest: talk to the beacon keeper"

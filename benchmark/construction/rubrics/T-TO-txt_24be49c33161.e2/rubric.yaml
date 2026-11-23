@@ -1,0 +1,281 @@
+# GameAnything-Bench scoring material: never shown to agents during a trial.
+task_id: T-TO-txt_24be49c33161.e2
+source_inventory:
+- 'c28.p001: the narrator is a ''job horse'' let out to anyone who hires him; being gentle and dependable, he is more often given to ignorant
+  drivers'
+- 'c28.p002-c28.p003: tight-rein drivers keep a constant hard pull on the mouth; tormenting for a sound horse with a tender mouth'
+- 'c28.p004-c28.p005: loose-rein drivers have no control when a horse shies, starts or stumbles; slovenly driving teaches bad habits that later
+  have to be whipped out; Squire Ashford kept his horses to their best paces and manners'
+- 'c28.p006-c28.p009: a careless driver chats with his passengers in the phaeton on a road full of loose stones; a sharp stone wedges in a fore
+  foot and works in deeper with every step; a good driver would have seen it or felt it through the rein; after half a mile the horse is lame,
+  and the driver blames the horse and whips'
+- 'c28.p010-c28.p018: a passing farmer reads the gait, lifts the foot and gets the stone out with a stone-pick; he explains that horses pick stones
+  up on such roads, that the foot is bruised and the lameness will last, and advises gentle driving'
+- 'c28.p019-c28.p020: the driver drives on regardless; the horse is relieved but still in pain; such treatment is common for job horses'
+- 'c29.p001-c29.p006: ''steam-engine'' drivers from town expect the same pace and load on any road, never walk up hills, misuse the brake (none
+  downhill, or left on uphill), start at full speed, stop and turn sharply; this wears a horse out faster than any other driving'
+- 'c29.p007-c29.p009: the narrator and Rory, a carriage pair with a considerate driver, are hit at a blind corner by a gig on the wrong side of
+  the road; Rory is badly hurt and later sold for coal-carting on steep hills'
+- 'c29.p010-c29.p019: Peggy, a strong, willing mare with short legs, has a broken, jumping pace from being hurried and whipped to keep up with
+  longer-legged horses and fast masters; sold to two ladies who drive at a steady pace, she goes well and is contented'
+- 'c29.p020-c29.p022: a young horse that shies explains that he was hurried and scolded when he looked at strange things; an old gentleman says
+  a horse shies from fear and whipping makes the habit worse; he is not afraid of what he knows'
+- 'c29.p023-c29.p029: good driving: a gentleman checks the bit and collar, has the curb taken off, drives with a light rein; the narrator goes
+  his best pace and is happy; he is sold to Mr. Barry as a riding horse'
+- 'c30.p001-c30.p002: Mr. Barry, who knows little of horses, orders plenty of good food; the groom Filcher keeps the stable well but replaces
+  most of the oats with bran; over weeks the horse loses strength and spirits and cannot tell anyone'
+- 'c30.p003-c30.p010: a farmer friend notices the horse has gone down, dismisses the groom''s excuse (horses are dull in autumn), feels him warm
+  and damp, concludes that he is not getting his corn and urges Barry to look into his stable'
+- 'c30.p011-c30.p014: the horse has watched the groom and his boy carry oats off in a basket; police catch the boy and find the empty bag at the
+  corn-bin; Filcher is taken away and imprisoned'
+- 'c31.p001-c31.p002: the new groom Alfred Smirk polishes the horse''s look for the master but neglects feet, tack and real grooming, and never
+  clears out the litter; the foul vapours make the eyes smart and spoil the appetite'
+- 'c31.p003-c31.p010: the master notices the smell; Smirk talks him out of washing the box and blames the drains; a bricklayer finds nothing;
+  standing on wet straw, the horse''s feet grow tender and he goes clumsily'
+- 'c31.p011: no exercise for days while being fed as for hard work disorders his health; no green food or bran mash; horse balls and draughts
+  given instead make him feel worse'
+- 'c31.p012-c31.p015: after two stumbles on fresh stones a farrier finds thrush, caused by a foul stable; the feet are cleaned and dressed, the
+  box is to be cleared daily, the diet changed (bran mashes, green food, less corn); the horse recovers; Barry gives up keeping a horse and sells
+  him'
+instructions_meta:
+  requirement_groups:
+    animal condition:
+    - CR1
+    - FP1
+    - VP1
+    driving on the road:
+    - CR2
+    - FP2
+    - FP3
+    - VP2
+    care and keeping:
+    - CR3
+    - FP4
+    - VP3
+    behaviour and habits:
+    - FP5
+    problem diagnosis and treatment:
+    - CR4
+    - FP6
+  explicit_requirements:
+  - type: specify
+    text: If the horse picks up a stone in its hoof on the road, it should get worse with every step until I stop and pick it out, and stay sore
+      for a while after that.
+    covers:
+    - CR4
+    - FP3
+rubric:
+  content_realization:
+  - id: CR1
+    item: The game contains a working horse with a condition of its own that has both a general side (strength and spirits) and the soundness
+      of its feet
+    anchors:
+      '1': a working horse is present, and its condition covers both its general strength / spirits and its feet (sound vs sore or lame)
+      '0.5': the horse has a condition, but only a single generic value with no separate state of the feet
+      '0': no horse with a condition of its own
+    evidence:
+    - c28.p008
+    - c29.p029
+    - c30.p002
+    - c31.p009
+    - c31.p015
+  - id: CR2
+    item: 'The roads the horse travels differ in the conditions the rules depend on: stony or loose stretches vs smooth ones'
+    anchors:
+      '1': the roads available include both stony / loose and smooth stretches
+      '0.5': the roads differ, but not in surface (e.g. only in gradient)
+      '0': a uniform road, or no road to travel
+    evidence:
+    - c28.p006
+    - c29.p002
+    - c29.p003
+    - c29.p005
+  - id: CR3
+    item: 'The horse has a keeping place in the game where its day-to-day care happens: its feed, the cleanliness of its litter and its exercise'
+    anchors:
+      '1': a keeping place exists, and feed, clean litter and exercise are all parts of the care that can be given or neglected
+      '0.5': a keeping place exists, but care covers only one or two of feed, litter and exercise
+      '0': no keeping place, or no care to be given
+    evidence:
+    - c30.p001
+    - c30.p002
+    - c31.p002
+    - c31.p011
+    - c31.p015
+  - id: CR4
+    item: 'The horse can suffer two distinct problems of the feet, told apart by where they come from: a stone picked up on the road and lodged
+      in the hoof, and a foot disease from standing in a foul box'
+    anchors:
+      '1': both problems exist in the game as different problems, one arising on stony road and one from foul litter
+      '0.5': only one of the two problems exists, or there is only one generic foot problem whatever its origin
+      '0': the horse has no such problems
+    evidence:
+    - - c28.p006
+      - c28.p008
+    - c28.p015
+    - c31.p009
+    - c31.p013
+  functions_playability:
+  - id: FP1
+    item: The animal's condition changes with how it is driven and kept, carries over between outings, and in turn affects how it performs
+    anchors:
+      '1': the condition is changed by handling and care, persists across sessions or outings, and feeds back into the animal's performance
+      '0.5': the condition changes but is cosmetic, resets each outing, or does not affect performance
+      '0': the condition never changes in play
+    evidence:
+    - c28.p008
+    - c29.p004
+    - c30.p002
+    - c31.p009
+    - c31.p015
+  - id: FP2
+    item: 'The way the horse is driven decides how it wears: driving that adapts to the road keeps it fresh and going well, while driving that
+      ignores the road wears or harms it faster'
+    anchors:
+      '1': how the horse is driven (pace, adapting to the road surface) changes its condition clearly differently, with adapting to the road
+        reducing wear
+      '0.5': driving changes the condition only weakly or uniformly (by distance or time alone, the road playing no part)
+      '0': the way the horse is driven has no effect on it
+    evidence:
+    - - c28.p002
+      - c28.p009
+    - - c29.p001
+      - c29.p006
+    - - c29.p023
+      - c29.p028
+  - id: FP3
+    item: A problem picked up while travelling keeps worsening while the animal is driven on, until someone stops and deals with it; afterwards
+      an after-effect lingers for a while
+    anchors:
+      '1': a problem from travelling that escalates while ignored, is removed by a deliberate action, and leaves a temporary after-effect
+      '0.5': such a problem happens, but it does not worsen while ignored, or is fixed instantly with no after-effect
+      '0': no such problem arises in play
+    evidence:
+    - - c28.p006
+      - c28.p008
+    - c28.p015
+    - c28.p017
+  - id: FP4
+    item: 'Care decides the animal''s health over time: sustained lapses produce a gradual decline, and correcting the cause brings recovery'
+    anchors:
+      '1': lapses in care lead to a gradual decline, and putting the cause right restores the animal over time
+      '0.5': care affects the animal, but the decline is instant or generic, or recovery does not depend on fixing the cause
+      '0': care has no effect
+    evidence:
+    - c30.p002
+    - c31.p002
+    - c31.p009
+    - c31.p011
+    - c31.p015
+  - id: FP5
+    item: 'The animal''s habits are shaped by its treatment: harsh or hurried treatment builds lasting bad habits, while patient, fitting treatment
+      lets them fade'
+    anchors:
+      '1': habits arise from treatment, persist across outings, and can be worsened or undone by later treatment
+      '0.5': habits exist but are fixed traits, or change immediately and do not persist
+      '0': no habits
+    evidence:
+    - c28.p005
+    - c29.p014
+    - c29.p019
+    - c29.p021
+  - id: FP6
+    item: 'Problems must be found from the animal''s signs: it cannot say what is wrong, attentive or knowledgeable inspection reveals the cause,
+      and only an identified cause can be treated properly'
+    anchors:
+      '1': problems show as observable signs, attention or inspection identifies the cause, and treatment works only when aimed at that cause
+      '0.5': problems are announced directly (e.g. a message names the cause), or any treatment fixes any problem
+      '0': no detection or treatment
+    evidence:
+    - c28.p007
+    - c28.p011
+    - c30.p010
+    - c31.p011
+    - c31.p013
+  visual_presentation:
+  - id: VP1
+    cat: presentation
+    item: The animal's condition is visible on the animal itself, in its movement or look, so the player can read that something is wrong
+    anchors:
+      '1': at least one condition problem is clearly visible in the animal's movement or look, not only in a number or a menu
+      '0.5': visible changes on the animal exist but are weak, intermittent or ambiguous
+      '0': condition is shown only as a number, bar or text, or not at all
+    evidence:
+    - c28.p008
+    - c28.p011
+    - c29.p010
+    - c30.p004
+    - c31.p009
+  - id: VP2
+    cat: spatial
+    item: 'The road surface can be read on sight: loose stones are recognisable, so the driver can keep to the smoother parts or ease off in time'
+    anchors:
+      '1': stony / loose stretches are clearly recognisable in the play space before the horse reaches them
+      '0.5': only slopes are recognisable, or stony stretches only once the horse is already on them
+      '0': the road surface cannot be told apart by looking
+    evidence:
+    - c28.p006
+    - c28.p007
+    - c29.p002
+    - c29.p005
+  - id: VP3
+    cat: spatial
+    item: The state of keeping (clean or foul) can be seen in the keeping place
+    anchors:
+      '1': a clean and a foul state of the keeping place look clearly different
+      '0.5': the state shows only weakly or only in text
+      '0': the keeping place looks the same whatever its state
+    evidence:
+    - c30.p002
+    - c31.p002
+    - c31.p015
+play_suggestions:
+  FP1:
+  - drive or keep the animal badly for a while, then check its condition in a later outing
+  - compare performance (speed, stamina, stumbling) of a fresh and a run-down animal
+  FP2:
+  - drive the same route once easing off on slopes and loose stones and once at full pace throughout; compare the wear
+  - 'drive a short stretch hard and a longer one gently: does the hard short drive take more out of the horse?'
+  FP3:
+  - 'drive carelessly over a rough stretch; keep going after the first sign of trouble: does it get worse?'
+  - 'remove the cause, then drive hard at once: is there an after-effect?'
+  FP4:
+  - 'skip one kind of care for several days: does a decline appear gradually?'
+  - apply the wrong remedy, then the right one
+  FP5:
+  - 'punish the animal each time it is frightened, then try patience: does the habit change over outings?'
+  FP6:
+  - 'look for a problem without being told: are the signs readable?'
+  - try to treat before identifying the cause
+  robustness:
+  - 'neglect the animal completely: does the game respond sensibly (a breakdown, a sale, a way to continue)?'
+  - do nothing for a long time, then return
+  - 'alternate good and bad treatment rapidly: do condition and habits stay consistent?'
+v4_map:
+  U1: 'dropped: peripheral (per-horse differences only in Peggy and curb sub-episodes; one horse)'
+  U2: FP2, CR2
+  U3: FP3, CR4
+  U4: FP4, CR3
+  U5: FP5
+  U6: FP6
+  FP1: FP1, CR1
+  FP2: 'FP2 (merged with v3 FP7: one driving-to-wear rule)'
+  FP3: FP3, CR4
+  FP4: FP4, CR3
+  FP5: FP5
+  FP6: FP6, CR4
+  FP7: FP2 (merged into it), CR1
+  VP1: VP1
+  VP2: CR2, VP2
+  VP3: CR3, VP3
+provenance:
+  source_yaml: T-TO-txt_24be49c33161.e2.yaml
+  source_sha256: f3129547515c78a72ce74e8ab15ab787ca10a2a1d5c0093d5e3f8f6557e64d71
+  size_waiver: null
+  size_max: null
+  sources:
+  - ref: t01
+    title: Black Beauty
+    author: Anna Sewell
+    text_id: txt_24be49c33161
+    excerpt_id: e2

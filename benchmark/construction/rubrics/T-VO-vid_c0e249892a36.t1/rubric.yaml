@@ -1,0 +1,269 @@
+# GameAnything-Bench scoring material: never shown to agents during a trial.
+task_id: T-VO-vid_c0e249892a36.t1
+source_inventory:
+- 01:14-01:17 sand spit into a calm blue sea; a blonde girl in a pink swimsuit (Sally) holds a red-and-cream beach ball, tosses it and it floats
+  away out to sea; she smiles
+- '01:18-01:21 a round-headed boy in black trunks (Charlie Brown) walks up beside her; she talks to him (transcript: ''Sally, have you seen my
+  beach ball?'' / ''it just left for Hawaii''); she walks off'
+- 01:22-01:24 Snoopy (white beagle, black sunglasses, orange-and-teal trunks) walks in carrying a long red surfboard with cream stripes overhead,
+  plants it upright in the sand; Woodstock (small yellow bird) lands on top of the board
+- '01:25-01:33 Charlie Brown stands beside Snoopy and the board, raises a finger and talks with a worried face (transcript: ''Snoopy, if you''re
+  going surfing I don''t want you going out too far, and no riding the big waves, only the small ones''); Snoopy sunglasses off, hand on the board,
+  listening'
+- 01:33-01:35 a freckled girl with brown hair in an orange life vest (Peppermint Patty) runs past carrying a cream board with a red stripe and
+  throws herself belly-down onto it in the water, paddling out with a splash
+- 01:35-01:36 empty sea with splash marks; 01:36-01:38 Snoopy looks out, Woodstock flies off, Snoopy lifts his board overhead and dashes off in
+  a dust cloud past Charlie Brown
+- 01:39-01:40 ripples on the water where they entered
+- 01:40-01:48 close-up of Charlie Brown on shore watching the sea, mouth open, wringing his hands and gesturing anxiously
+- 01:48-01:52 Peppermint Patty stands and surfs along a dark-blue wave face with a white spray wake, grinning, arms out
+- 01:51-01:58 Snoopy surfs on his red board next to / behind her, grinning; at 01:55-01:57 he rides just in front of a curling lighter-blue wave
+  lip; 01:57 on the open wave face again
+- 01:58-02:00 Peppermint Patty surfs, then puts her hands to her head looking surprised
+- 02:00-02:06 close-up of Snoopy grinning, arms spread; Woodstock flies in, bumps into him, flutters and settles on Snoopy's head
+- 02:06-02:10 several Woodstock-like small yellow birds each ride a tiny patch of white foam over the dark water, in formation
+- 02:10-02:14 Snoopy surfs with Woodstock on his head, the little surfing birds trailing around him; Snoopy shades his eyes with a paw looking
+  ahead
+- 02:14-02:18 on shore Lucy (black hair, green grass skirt), Linus (red trunks) and Charlie Brown watch; Linus smiles, Charlie Brown frets with
+  clasped hands
+- '02:18-02:19 Charlie Brown covers his face / eyes with both hands (transcript possibly: ''can''t bear to look'')'
+- 02:19-02:21 the small birds surfing again; 02:21-02:24 Snoopy surfing with Woodstock on his head and the birds around
+- '02:24-02:26 close-up: Snoopy looks up, his expression turns worried, ears lift; Woodstock flies off his head'
+- '02:26-02:28 wide shot: a huge dark-blue wave with a white curling crest towers over the tiny Snoopy on his board, foam at its base'
+- 02:28-02:29 Snoopy on the board in front of the foam, mouth wide open, arms up, Woodstock beside him
+- 02:29-02:30 Snoopy drawn grey (silhouette) tumbling in white foam on the board, Woodstock (grey) flying away
+- '02:30-02:35 on the sand spit the whole group watches: Sally, Schroeder, Lucy, Franklin, Linus, Charlie Brown covering his eyes, and Peppermint
+  Patty standing in the shallows with her board, back on shore; worried faces'
+- 02:35-02:37 the group winces / cries out, arms raised, Peppermint Patty shouting
+- 02:37-02:39 full-frame blurred blue water (camera inside the wave)
+- 02:39-02:40 full-screen sound-effect card 'BLOOSH!' in wobbly black letters
+- '02:40-02:45 new location with a yellow-green sky, turquoise water and a palm silhouette: Snoopy upside down in the surf, then stuck head-first
+  in the sand of a small golden sand island, legs and trunks in the air; no board visible'
+- 02:45-02:46 Snoopy pulls his head out and sits up dazed, sand flying
+- 'audio: dialogue 01:14-01:32 per transcript above; Whisper text after 01:32 (''surfs up ... hanging ten ... can''t bear to look ... Snoopy''s
+  about to ball'') is a long single segment and may be invented over music; music and sound effects are not verified from the frames'
+- 'not visible: how the wipeout carries Snoopy to the island (cut via blue water and the BLOOSH card); where the island lies relative to the beach;
+  whether the board is lost'
+instructions_meta:
+  requirement_groups:
+    opening situation and setting:
+    - CR1
+    - CR2
+    - CR3
+    - CR5
+    - FP1
+    main activity:
+    - FP2
+    turning point and payoff:
+    - CR4
+    - FP3
+    - VP1
+    - VP3
+    consequence and ending:
+    - FP4
+    - VP2
+  explicit_requirements:
+  - type: keep
+    text: I want to keep the warning on the shore before he goes surfing, telling him not to go out too far and to ride only the small waves,
+      never the big ones.
+    covers:
+    - CR3
+    - FP1
+rubric:
+  content_realization:
+  - id: CR1
+    item: 'The protagonist is Snoopy: a dog who surfs on his surfboard'
+    anchors:
+      '1': a recognisable Snoopy-like dog as the surfing protagonist with his surfboard
+      '0.5': a surfing protagonist exists but is a generic surfer, not recognisable as the dog
+      '0': no such protagonist
+    evidence:
+    - - 01:22
+      - 01:25
+    - - 01:51
+      - 01:58
+    - - 02:21
+      - 02:26
+  - id: CR2
+    item: 'Charlie Brown is the cautious friend: he is the one who warns the protagonist on the shore, and he stays behind on the shore watching
+      anxiously instead of going into the water'
+    anchors:
+      '1': a Charlie Brown-like boy who delivers the warning and stays on the shore watching with visible worry
+      '0.5': the boy is present but not the one who warns, or he goes into the water / surfs himself
+      '0': no such character
+    evidence:
+    - - 01:25
+      - 01:33
+    - - 01:40
+      - 01:48
+    - - 02:14
+      - 02:19
+  - id: CR3
+    item: 'The warning sets the stakes before the surf: don''t go out too far, and ride only the small waves, never the big ones'
+    anchors:
+      '1': the warning in the game states both limits (not too far; small waves only, no big ones)
+      '0.5': a warning exists but vague or with only one of the limits
+      '0': no warning, or a different one
+    evidence:
+    - - 01:27
+      - 01:33
+  - id: CR4
+    item: 'The outcome is the broken warning coming true: the protagonist goes out despite the warning, and the wave that brings the disaster
+      is the very kind of big wave the warning forbade'
+    anchors:
+      '1': the story makes it readable that the disaster wave is the big wave the warning was about, so the outcome reads as the warning ignored
+      '0.5': the warning and the big wave both exist but nothing in the story connects them (the disaster reads as random bad luck)
+      '0': no big wave, or no warning
+    evidence:
+    - - 01:27
+      - 01:39
+    - - 02:24
+      - 02:30
+  - id: CR5
+    item: 'Two places: the starting shore, a sand spit reaching into open sea where the friends stand, and a small sand island that is a separate
+      place from that shore'
+    anchors:
+      '1': a sandy shore jutting into open sea with the characters on it, and a distinct small sand island apart from it
+      '0.5': only one of the two places, or the island is just another part of the starting beach
+      '0': neither place
+    evidence:
+    - - 01:14
+      - 01:33
+    - - 02:30
+      - 02:37
+    - - 02:40
+      - 02:46
+  functions_playability:
+  - id: FP1
+    item: 'Warning before the surf: the warning is delivered on the shore before the protagonist enters the water, and the player can then still
+      choose to go out'
+    anchors:
+      '1': the warning reliably comes before the player is in the water, and going out afterwards is possible
+      '0.5': the warning comes only after the player is already out, can be skipped entirely, or blocks going out entirely
+      '0': no warning in play
+    evidence:
+    - - 01:25
+      - 01:39
+  - id: FP2
+    item: 'Surfing works: the protagonist takes a board into the sea and rides waves standing on it, with control over the ride and visible feedback
+      that they are riding (movement along the wave, spray)'
+    anchors:
+      '1': board riding on waves that the player controls and that reads as surfing
+      '0.5': the protagonist moves on water but without a board, without control, or it does not read as riding waves
+      '0': no surfing
+    evidence:
+    - - 01:37
+      - 01:39
+    - - 01:51
+      - 01:58
+    - - 02:10
+      - 02:14
+  - id: FP3
+    item: 'The turning point: after a calm stretch on small waves, a clearly bigger wave arrives, and riding it causes the protagonist to wipe
+      out (thrown off the board, tumbled in the water)'
+    anchors:
+      '1': small waves first, then a distinctly bigger wave that leads to the wipeout
+      '0.5': a big wave or a wipeout exists, but not linked (wipeout at random, or the big wave has no consequence), or there is no calm stretch
+        before it
+      '0': neither
+    evidence:
+    - - 01:51
+      - 02:24
+    - - 02:26
+      - 02:30
+  - id: FP4
+    item: 'Consequence and ending: the wipeout carries the protagonist away to the island, where they end up stranded alone, and the story closes
+      there (an end state or a clear way to continue)'
+    anchors:
+      '1': after the wipeout the protagonist is moved to the island, alone, and the story visibly reaches its end there
+      '0.5': the protagonist ends up somewhere after the wipeout but not on the island, or nothing marks the end
+      '0': no outcome after the wipeout
+    evidence:
+    - - 02:37
+      - 02:46
+  visual_presentation:
+  - id: VP1
+    cat: key_moment
+    keyframes:
+    - '02:26.9'
+    - '02:27.9'
+    - '02:29.9'
+    item: 'The huge wave: a curling wave many times the rider''s height towering over the small surfer, foam at its base'
+    anchors:
+      '1': a wave clearly towering over the rider in one view, with a crest and foam
+      '0.5': a bigger wave but not towering, or the rider not shown against it
+      '0': no big wave shown
+    evidence:
+    - - 02:26
+      - 02:30
+  - id: VP2
+    cat: style
+    keyframes:
+    - '01:24.9'
+    - '02:41.9'
+    - '02:43.9'
+    item: 'The island''s contrasting look: a warm yellow-green sky, turquoise water and golden sand, clearly set apart from the cooler blue sea
+      and pale sand of the starting shore'
+    anchors:
+      '1': the island has its own warmer palette that clearly differs from the starting shore
+      '0.5': some difference in look, but weak or easy to miss
+      '0': the island looks the same as the starting shore, or no island shown
+    evidence:
+    - - 01:14
+      - 01:33
+    - - 02:40
+      - 02:46
+  - id: VP3
+    cat: presentation
+    keyframes:
+    - '02:39.9'
+    item: 'The wipeout as a set-apart payoff: a strong impact cue (big sound-effect text, splash, cut or flash) separates the ride from the stranded
+      aftermath'
+    anchors:
+      '1': a distinct, readable impact moment at the wipeout before the aftermath
+      '0.5': a cue exists but is weak or easy to miss
+      '0': the wipeout passes without any marking
+    evidence:
+    - - 02:37
+      - 02:40
+play_suggestions:
+  FP1:
+  - 'walk toward the water without talking to anyone: is the warning still delivered before you go out?'
+  - 'after the warning, go out anyway: is that allowed?'
+  FP2:
+  - 'ride for a while on the small waves and steer: does the board follow your input?'
+  - 'leave the board / fall off on a small wave: what happens?'
+  FP3:
+  - 'play the calm stretch and note when the big wave comes: is it clearly bigger?'
+  - 'try to stay on the small waves or avoid the big one: is the wipeout tied to the big wave rather than random?'
+  FP4:
+  - 'after the wipeout, check where you are relative to the start: is it a separate island?'
+  - after landing, is there an end, a message or a way to continue?
+  robustness:
+  - 'stay on the shore and never go out: does the game stall or handle it?'
+  - paddle far out before the big wave
+  - 'replay the sequence twice: is the order warning -> surf -> big wave -> island the same?'
+v4_map:
+  U1: 'CR1 (the surfing dog); Woodstock as companion and the board''s colour dropped: peripheral (no causal role in the arc; colour is a detail)'
+  U2: CR2
+  U3: 'dropped: mechanism already scored by FP2; the surfing dog exists in CR1'
+  U4: CR3
+  U5: CR4 (link to the broken warning); the big wave causing the wipeout stays in FP3, the island outcome in FP4
+  U6: 'dropped: peripheral (second surfer is a sub-episode, not the main arc)'
+  U7: 'dropped: peripheral (the friends'' growing alarm emphasises the danger but does not drive the arc); Charlie Brown''s anxious watching stays
+    in CR2'
+  FP1: FP1 (timing and choice) + CR3 (the warning's content)
+  FP2: FP2
+  FP3: FP3
+  FP4: FP4 (being carried there, ending) + CR5 (the island exists apart from the shore)
+  VP1: CR5 (the starting shore, a sand spit into open sea)
+  VP2: VP1
+  VP3: VP2
+  VP4: VP3
+  VP5: 'dropped: editing request (stormy weather), moved to editing_seed.yaml'
+provenance:
+  source_yaml: T-VO-vid_c0e249892a36.t1.yaml
+  source_sha256: 8c13b3c9c3579b273970911a8f5275df6e12b1cf6f29284452a8b43fce53d9eb
+  size_waiver: null
+  size_max: null
+  sources: []

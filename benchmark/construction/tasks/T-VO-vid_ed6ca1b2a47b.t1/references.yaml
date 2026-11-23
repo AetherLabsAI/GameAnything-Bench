@@ -1,0 +1,44 @@
+# Reference material: fetched from the HF dataset into $GAB_MEDIA_DIR/<task>/ by `gab media fetch` (sha256 checked).
+# The agent gets the files only (no title, author, caption or source): this file is never shown to it.
+task_id: T-VO-vid_ed6ca1b2a47b.t1
+refs:
+- id: c01
+  kind: video
+  file: clip_01.mp4
+  video_id: vid_ed6ca1b2a47b
+  source:
+    title: 03 - HOWL'S MOVING CASTLE ｜ Official English Trailer
+    url: null
+    channel: null
+    youtube_id: null
+  range:
+    start: 2.4
+    end: 22.9
+    text: 0:02.40-0:22.90
+  duration_s: 20.5
+  size_bytes: 3264116
+  format: mp4 H.264 720p, AAC audio
+  hf_path: media/T-VO-vid_ed6ca1b2a47b.t1/clip_01.mp4
+  sha256: 3629343b52b24f990e8e73fdf21790a2c8a0bb2913cd7fbafd9c2912637069c3
+  rights_note: Copyrighted animated film trailer. Use as a private reference only and do not redistribute the clips or frames. Deliverables must
+    be original designs, not traced characters or the castle.
+- id: c02
+  kind: video
+  file: clip_02.mp4
+  video_id: vid_ed6ca1b2a47b
+  source:
+    title: 03 - HOWL'S MOVING CASTLE ｜ Official English Trailer
+    url: null
+    channel: null
+    youtube_id: null
+  range:
+    start: 41.0
+    end: 47.4
+    text: 0:41.00-0:47.40
+  duration_s: 6.4
+  size_bytes: 680447
+  format: mp4 H.264 720p, AAC audio
+  hf_path: media/T-VO-vid_ed6ca1b2a47b.t1/clip_02.mp4
+  sha256: 6f09eea770abd6651af60f13296617710393d7f906ca186a9f81e80ab20eb732
+  rights_note: Copyrighted animated film trailer. Use as a private reference only and do not redistribute the clips or frames. Deliverables must
+    be original designs, not traced characters or the castle.

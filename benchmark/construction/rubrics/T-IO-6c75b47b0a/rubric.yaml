@@ -1,0 +1,224 @@
+# GameAnything-Bench scoring material: never shown to agents during a trial.
+task_id: T-IO-6c75b47b0a
+source_inventory:
+- 'img01: palace courtyard; a bearded man in a grey robe, seated in front of a red-pillared pavilion, throws long arrows by hand at a narrow-necked
+  pot on a stand some distance away; a few arrows stand in the pot, several lie on the ground around it (misses); a man on the right holds a bundle
+  of arrows, attendants nearby carry trays and arrows; a table of vessels before an orange curtain at the back and a table of small piled items
+  in the pavilion (their purpose is not shown)'
+- 'img02: a ground laid out with rectangular raised-border lanes and open ground beyond; small holes in the ground each marked by a small coloured
+  flag (several holes, inside and outside the bordered lanes); a bearded man in an orange robe holds a club over a small ball, other men hold
+  clubs, one man crouches low near the ground looking along the lane; an attendant holds a large banner near the far lane; a pavilion with benches
+  at the left'
+- 'img03: open earthen ground beside a red palace wall with a gate; riders on horseback carry long-handled sticks; one rider gallops ahead swinging
+  his stick at a small red ball in the air, a group of four riders behind him; a bearded man in a dark robe sits on a mat under a canopy at the
+  right, attendants standing beside him'
+- 'img04: open ground with a white balustrade and pines; a tall red standing frame (a painted screen showing riders with sticks around a gate)
+  with a small arched opening at its foot, pennants on top; a rider on a white horse gallops past waving a triangular pennant; a group of men
+  stands watching at the left edge'
+- 'img05: a group of men on foot standing in a loose ring on open ground; one kicks a white ball near his foot, another holds a second white ball
+  in his hands; a bearded man in a dark robe sits on a platform under a yellow canopy, boys beside him; onlookers at the sides, a red wall and
+  pines at the right'
+- 'img06: a long open field between red walls; at the far left a small round target on a pole, flanked by two poles with pennants, with men standing
+  at the side near it and arrows flying toward it; at the right a man in a yellow robe sits in a green-roofed pavilion; in front of it an archer
+  in green draws a bow toward the target while other men hold bows and wear quivers; a saddled white horse with grooms at the far right'
+instructions_meta:
+  requirement_groups:
+    contest set:
+    - CR1
+    - CR2
+    - FP1
+    aimed attempts and outcomes:
+    - FP2
+    - FP6
+    ball play:
+    - CR3
+    - FP3
+    - FP4
+    - FP5
+    play spaces and readability:
+    - VP1
+    - VP2
+  explicit_requirements:
+  - type: keep
+    text: I definitely want to keep the game where riders on horseback chase a ball and hit it with sticks.
+    covers:
+    - CR2
+    - FP4
+  - type: specify
+    text: 'The club game should work like in the pictures: you hit a ball along the ground with a club, and the goal is to get it into a hole
+      in the ground.'
+    covers:
+    - CR2
+    - FP3
+rubric:
+  content_realization:
+  - id: CR1
+    item: The game contains the distinct contests the images show (pot throwing, club-and-hole, a mounted ball game, a kicking game, archery),
+      each in its own play area
+    anchors:
+      '1': all five contests are present, each with its own area and recognisably different from the others
+      '0.5': only some of the contests are present, or several share one area / are the same setup reskinned
+      '0': one contest or none
+    evidence:
+    - img01
+    - img02
+    - img03
+    - img05
+    - img06
+  - id: CR2
+    item: 'Each contest has its defining equipment and target: hand-thrown arrows and a pot at a distance; clubs, a ground ball and holes in the
+      ground; horses, long sticks and a ball; a ball played on foot; bows and a distant fixed target'
+    anchors:
+      '1': every contest has its defining equipment and target, including the arrows thrown by hand at the pot set apart from the bow-shot arrows
+        at the distant archery target
+      '0.5': most contests have their equipment and target, but one is missing or substituted (e.g. the ball game on foot instead of horseback,
+        the pot arrows shot with a bow, a goal frame instead of holes)
+      '0': the contests lack their defining equipment or targets
+    evidence:
+    - img01
+    - img02
+    - img03
+    - img05
+    - img06
+  - id: CR3
+    item: The club-and-hole ground is a course of several holes in the ground, each with a visible marker
+    anchors:
+      '1': several holes spread over the ground, each marked so it can be found
+      '0.5': a single hole only, or several holes without markers
+      '0': no hole in the ground
+    evidence:
+    - img02
+  functions_playability:
+  - id: FP1
+    item: Each contest is playable through normal play in one experience and runs as its own mechanic
+    anchors:
+      '1': the player can reach and play every contest present, and each plays by its own rules rather than as a reskin of one mechanic
+      '0.5': some contests present cannot be played, or several play as the same mechanic
+      '0': at most one contest can be played
+    evidence:
+    - img01
+    - img02
+    - img03
+    - img05
+    - img06
+  - id: FP2
+    item: 'Pot throwing plays: the player aims and throws arrows by hand at a pot at a distance, and whether each arrow lands in the pot or misses
+      depends on the throw and is shown'
+    anchors:
+      '1': aimed throws where in / miss follows from the player's aim or power and is shown per throw
+      '0.5': throwing exists but the outcome is random, automatic or not shown
+      '0': absent
+    evidence:
+    - img01
+  - id: FP3
+    item: 'Club-and-hole plays: the player strikes a ball along the ground with a club toward a hole, and the ball entering the hole counts'
+    anchors:
+      '1': player-directed strikes move the ball along the ground, and the ball dropping into a hole is recognised
+      '0.5': strikes whose direction the player does not control, or entry into the hole not recognised
+      '0': absent
+    evidence:
+    - img02
+  - id: FP4
+    item: 'Mounted ball game plays: the player on horseback chases and strikes a ball with a stick, and the ball moves from the strike'
+    anchors:
+      '1': riding, striking the ball while mounted, and the ball reacting to each strike
+      '0.5': the striking is on foot, or the ball does not react to the strike
+      '0': absent
+    evidence:
+    - img03
+  - id: FP5
+    item: 'Kicking game plays: the player kicks a ball among other participants on foot'
+    anchors:
+      '1': the player directs kicks of a ball in a game with other on-foot participants
+      '0.5': the player can kick a ball, but alone or without control of where it goes
+      '0': absent
+    evidence:
+    - img05
+  - id: FP6
+    item: 'Archery plays: the player draws and shoots at a distant target, and hits or misses follow from the aim and are shown'
+    anchors:
+      '1': aimed shots over distance where hit / miss depends on the player's aim and is shown
+      '0.5': shooting exists but hits are automatic or random, or the target is close and trivial
+      '0': absent
+    evidence:
+    - img06
+  visual_presentation:
+  - id: VP1
+    cat: spatial
+    item: Every play area shows a readable extent and bounds, and the club-and-hole ground reads as a laid-out course of bordered lanes and open
+      ground
+    anchors:
+      '1': in every contest's area the player can see where the play space ends, and the club ground reads as a laid-out course as in img02
+      '0.5': extent and bounds are readable in some areas only, or the club ground does not read as a laid-out course
+      '0': no area has a readable extent or bounds
+    evidence:
+    - img01
+    - 'img02: the raised-border lanes and the open ground beyond'
+    - img03
+    - img05
+    - 'img06: the long field between walls'
+  - id: VP2
+    cat: presentation
+    item: In each aiming contest the acting player, the implement or projectile and the target are readable together
+    anchors:
+      '1': in every aiming contest the player's character, what is thrown / struck / shot and the target are visible at once
+      '0.5': readable in some contests only
+      '0': the target or the projectile is not visible while acting
+    evidence:
+    - img01
+    - img02
+    - img06
+play_suggestions:
+  FP1:
+  - 'visit every game area in turn: are all games present and distinct, and is there a way to go from one to the next?'
+  - check whether a game's result is kept or summarised when moving on
+  FP2:
+  - 'throw deliberately short, long and wide: do misses land beside the pot?'
+  - 'throw the same way several times: is the outcome consistent with the aim?'
+  FP3:
+  - hit a weak shot and a strong shot toward the same hole
+  - finish one hole and look for the next one
+  FP4:
+  - try to strike the ball while standing still and while galloping
+  - 'if the game has a goal, drive the ball past it rather than through it: does it score?'
+  FP5:
+  - 'kick the ball to each participant in turn: does it come back?'
+  - kick it far away from everyone
+  FP6:
+  - aim off the target on purpose
+  - 'shoot several arrows: do hits depend on aim rather than chance?'
+  robustness:
+  - leave a game in the middle and start another one, then return
+  - throw, hit or shoot toward the onlookers or out of bounds
+  - 'play every game once in a row: does anything break or soft-lock?'
+v4_map:
+  U1: CR2 (pot and hand-thrown arrows) + FP2 (in / miss rule)
+  U2: CR2 (club, ground ball, holes) + FP3 (into-the-hole rule)
+  U3: CR2 (horses, sticks, ball) + FP4 (mounted striking)
+  U4: CR2 (ball played on foot) + FP5 (kicking)
+  U5: CR2 (bows, distant target) + FP6 (hit / miss rule)
+  U6: CR3
+  U7: CR2 (hand-thrown pot arrows told apart from bow-shot arrows)
+  FP1: CR1 (contests exist, own areas) + FP1 (each playable as its own mechanic)
+  FP2: FP2
+  FP3: FP3 (more-than-one-hole part moved to CR3)
+  FP4: FP4
+  FP5: FP5
+  FP6: FP6
+  VP1: CR3 (marked holes exist, their markers) + VP1 (course look and bounds; widened to every play area's extent and bounds)
+  VP2: VP2
+provenance:
+  source_yaml: T-IO-6c75b47b0a.yaml
+  source_sha256: 0049d5040c09d17b443f2f951d48f5b5c2196daf4c3ab933b9bf80e181ed562b
+  size_waiver: null
+  size_max: null
+  sources:
+  - refs:
+    - img01
+    - img02
+    - img03
+    - img04
+    - img05
+    - img06
+    bundle: 6c75b47b0a
+    title: 明宣宗行乐图：宫廷六种游戏（投壶、捶丸、马球、骑射、蹴鞠、射箭）

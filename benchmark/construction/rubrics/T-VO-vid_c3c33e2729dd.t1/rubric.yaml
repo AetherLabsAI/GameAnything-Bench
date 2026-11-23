@@ -1,0 +1,296 @@
+# GameAnything-Bench scoring material: never shown to agents during a trial.
+task_id: T-VO-vid_c3c33e2729dd.t1
+source_inventory:
+- '02:39-02:41 start house close-ups: racer in a US-flag suit (red/white sleeves, navy vest), red-white POC helmet, orange-mirrored goggles, poles;
+  officials in red jackets behind; a ''TEAM RADIO / United States of America'' text overlay with a coach message ending ''perfect condition. Let''s
+  go'''
+- '02:42-02:43 extreme close-up: white helmet with a US flag, orange goggles, yellow gloves on the poles'
+- 02:44 racer in the start gate (OMEGA timing wand, MILANO CORTINA 2026 panels, Dolomite rock behind); lower-third name bar 'USA 6 B. JOHNSON';
+  clock bottom-right 0.0
+- '02:45 push-out: racer drives forward out of the gate on her poles; clock still 0.0'
+- '02:46-02:48 wide view from the top: racer skates/tucks onto the slope, red netting along the sides, mountain panorama; clock 1.0, 2.0, 3.0
+  (counts up from the push-out)'
+- 02:48 a vertical course-profile bar appears at the right edge (house icon at the top = start, flag icon at the bottom = finish, a white dot
+  = racer position, dashed lines = sector marks)
+- '02:49-02:59 upper course: red gate flags with Olympic rings, blue painted guide lines on the snow, red safety netting and banner boards on
+  both sides, spectators/officials behind the fence (02:50); clock 4.0 to 14.0'
+- '02:52-02:53 racer is low and skidding sideways out of a turn, then recovers past a red gate (commentary: ''a little bit rough and tough on
+  the first traverse''); no penalty or time readout is shown'
+- '03:00-03:04 long wide shots of a curving section; a round speed dial appears at the top-left in km/h: 79, 86, 84, 81; clock 15.0-19.0'
+- 03:05-03:06 'SECTOR 1' label on the profile bar with a red '+0.03' tag; comparison banner bottom-left 'AUT 2 A. RAEDLER 21.60' over 'USA 6 B.
+  JOHNSON +0.03' (red); the clock holds the split time 21.63; speed 90.3
+- 03:07-03:14 steep straight section between red nets, filmed from above; speed rises 93, 96, 106, 117, 125, 129.1 km/h; clock resumes at 24.7
+  and runs to 31.7; the red +0.03 tag stays on the profile bar
+- 03:15-03:21 (broadcast cut, clock jumps to 48.6) side-on views of open slopes with trees, red gates, a snow spray in a turn (03:17); a second,
+  green '-0.44' tag on the profile bar; the speed dial is not shown; clock 48.6-54.6
+- 03:22-03:23 (cut, clock 1:01.6) racer airborne over a roll/jump, then lands in a tuck; a third, green '-0.14' tag appears; speed 105, 108
+- 03:24-03:33 mid/lower course in tree shadows, tuck and turns past red gates; speed 111-117; clock jumps again at 03:27 (1:05.6 -> 1:11.1) and
+  runs to 1:17.1; comparison banner shows 'AUT A. RAEDLER 1:18.83' at 03:33
+- '03:34-03:37 split: banner ''USA B. JOHNSON -0.84'' (green), clock holds 1:17.99, profile bar labelled ''SECTOR 4'' with a green -0.84 tag and
+  a small ''BEST'' tag next to the segment; speed 101.7-103 (commentary: ''Oh, wow. Point eight four ... the speed is back'')'
+- 03:37-03:41 clock resumes at 1:21.1 and runs on; the profile bar now shows four tags +0.03 (red), -0.44, -0.14, -0.84 (green) and the sector
+  segments are coloured red/green; small jump at 03:41; speed 103-107
+- 03:42-03:45 speed dial shows 110.9 with a 'TOP SPEED' badge; clock 1:26.1-1:29.1
+- 03:46-03:49 lower slope, front-on shots, red gates; clock 1:30.1-1:33.1
+- 03:50 last gate and small jump; banner 'AUT A. RAEDLER 1:37.20' marked rank 1 over 'USA B. JOHNSON'
+- 03:51-03:52 racer crosses between two blue 'FINISH' pillars on a wide finish slope with blue fencing; the clock stops at 1:36.10 (OMEGA tag)
+- '03:53 result: banner reorders to ''1 USA B. JOHNSON -1.10'' (green) and ''2 AUT A. RAEDLER 1:37.20''; a ranked leaderboard (5 racers with flags
+  and +gaps) appears top-left, a per-sector table with red/green deltas and sector ranks at the right; an extra figure next to the gap (about
+  ''29.44M'') is unclear; grandstand and spectators in the finish area'
+- 03:54 racer celebrates with a team member in a US jacket, arms up, crowd and stands behind
+- '03:55 close-up: racer smiling, one arm raised'
+- '03:56-03:57 crowd: fans filming with phones, one in a white robe with a red scarf'
+- 'audio (transcript; frames do not carry sound): English commentary throughout: ''Breezy Johnson, last training session ... originally from Idaho
+  ... resident of Park City ... looking to add Olympic gold to the World Championship gold'' (02:42-03:01), technique remarks on edges and turns
+  (03:01-03:14), ''she''s in trouble ... low and late'' (03:19-03:21), ''just 0.14 right side of the clock'' (03:21-03:25), ''final split will
+  be a real tell'' (03:32-03:35), ''Point eight four ... the speed is back'' (03:36-03:39), ''keep this clean and bring that speed to the finish
+  line'' (03:40-03:44), ''will take the lead from Austria ... into the gold medal position'' (03:44-03:52); some Whisper text is garbled (''Scarfdon'',
+  ''Romero'', ''take the meet''). No music cue or crowd sound can be confirmed from the material'
+- 'not shown: no gate-miss penalty or disqualification; parts of the run are cut out (clock jumps at 03:15, 03:22 and 03:27), so the whole course
+  is never seen continuously; the leader''s run itself is not shown, only its times; no second attempt is shown'
+instructions_meta:
+  requirement_groups:
+    run start and timing:
+    - FP1
+    course and descent:
+    - CR1
+    - FP2
+    - FP3
+    - FP6
+    splits, finish and ranking:
+    - CR2
+    - CR4
+    - FP4
+    - FP5
+    - VP2
+    run interface:
+    - CR3
+    - VP1
+  explicit_requirements:
+  - type: specify
+    text: At each split, show me my gap to the leader's split at that checkpoint, red with a plus when I'm behind and green with a minus when
+      I'm ahead.
+    covers:
+    - FP4
+rubric:
+  content_realization:
+  - id: CR1
+    item: 'The course contains the elements that define the race: a start gate at the top, one continuous route descending from it to the finish,
+      bounded on both sides, with gates marking the line, at least one roll or jump on the route, and a gate-like finish (e.g. two pillars) the
+      player passes through'
+    anchors:
+      '1': start gate, a bounded descending route connecting it to the finish, gate markers along the line, a roll/jump and a pass-through finish
+        structure all present
+      '0.5': a start and a finish joined by a descending route, but the side bounds, the gate markers or the roll/jump are missing
+      '0': no course connecting a start to a finish
+    evidence:
+    - - 02:44
+      - 02:45
+    - - 02:49
+      - 02:59
+    - - 03:07
+      - 03:14
+    - - 03:22
+      - 03:23
+    - - 03:51
+      - 03:52
+  - id: CR2
+    item: 'Intermediate sector checkpoints lie along the course, and the race has a leader whose times the player''s run is measured against:
+      the leader''s reference times are shown in the game (e.g. in the comparison display or the standings)'
+    anchors:
+      '1': several intermediate checkpoints on the route and a leader with visible reference times
+      '0.5': checkpoints exist but no leader or reference time can be found in the game, or a leader time exists but there are no intermediate
+        checkpoints
+      '0': neither intermediate checkpoints nor a leader reference
+    evidence:
+    - - 03:05
+      - 03:06
+    - - 03:15
+      - 03:23
+    - - 03:33
+      - 03:37
+    - - 03:50
+      - 03:50
+  - id: CR3
+    item: The run display contains a running clock, a current-speed readout, a course-progress indicator from start to finish showing the player's
+      position and the sector marks with their gaps, and a player-versus-leader comparison
+    anchors:
+      '1': clock, speed readout, progress indicator with position and sector gap marks, and a player-vs-leader comparison all present
+      '0.5': two or three of these present (e.g. clock and speed but no progress indicator or no leader comparison)
+      '0': no run display or only a clock
+    evidence:
+    - - 02:48
+      - 02:48
+    - - 03:05
+      - 03:06
+    - - 03:34
+      - 03:41
+  - id: CR4
+    item: 'After the finish the game shows ranked standings: a list of runs including the player''s and the leader''s, ordered by rank, each with
+      its time or its gap to the top'
+    anchors:
+      '1': a ranked list with the player's and the leader's runs and their times or gaps to the top
+      '0.5': only the player's own result with a rank or gap, no list of runs
+      '0': no standings after the finish
+    evidence:
+    - - 03:53
+      - 03:53
+  functions_playability:
+  - id: FP1
+    item: 'Run start: a run begins at a defined start point, the run timer reads zero there and starts only when the player leaves it, then counts
+      up during the run'
+    anchors:
+      '1': timer at zero at the start, starts on leaving it (not on load or on a key unrelated to leaving), counts up while moving
+      '0.5': a timer runs but starts at an arbitrary moment or not from zero
+      '0': no defined start or no timer
+    evidence:
+    - - 02:44
+      - 02:48
+  - id: FP2
+    item: 'A traversable downhill course: the player can ride the route from the start to the finish end to end in one run'
+    anchors:
+      '1': the route can be ridden downhill from start to finish in one run
+      '0.5': 'the route can be ridden only in parts: it is flat in stretches where the player stalls, or cannot be completed without leaving it
+        or getting stuck'
+      '0': the course cannot be ridden
+    evidence:
+    - - 02:46
+      - 03:14
+    - - 03:46
+      - 03:52
+  - id: FP3
+    item: 'Descent with momentum: the player''s speed builds on steep sections and drops in turns or flats'
+    anchors:
+      '1': 'speed clearly varies with the terrain: faster on steep stretches, slower in turns or on flats'
+      '0.5': speed varies but only weakly or inconsistently with the terrain
+      '0': speed constant or unrelated to the slope, or no downhill movement
+    evidence:
+    - - 03:00
+      - 03:14
+    - - 03:24
+      - 03:33
+  - id: FP4
+    item: 'Checkpoint splits: passing each intermediate checkpoint records a split and shows the signed gap to the leader''s split at that checkpoint,
+      a plus in red when behind and a minus in green when ahead'
+    anchors:
+      '1': each checkpoint gives a gap that matches the actual times against the leader's split, with plus/red when behind and minus/green when
+        ahead
+      '0.5': checkpoints record times but give no comparison, or the gap is wrong or fixed, or ahead/behind is not told apart by sign and colour
+        as asked
+      '0': no split at the checkpoints
+    evidence:
+    - - 03:05
+      - 03:08
+    - - 03:15
+      - 03:23
+    - - 03:34
+      - 03:41
+  - id: FP5
+    item: 'Finish and ranking: crossing the finish stops the timer on the final time, compares it with the leader''s time, and ranks the run (faster
+      than the leader takes first place, the leader moves down)'
+    anchors:
+      '1': timer stops at the finish, final time compared and the rank follows the times (a faster run goes first, a slower one below)
+      '0.5': the timer stops but no comparison or ranking, or the rank does not follow the times
+      '0': no finish detection
+    evidence:
+    - - 03:50
+      - 03:53
+  - id: FP6
+    item: 'Airborne over a roll: a roll or jump on the route sends the player airborne at speed and lands them back on the course so the run continues'
+    anchors:
+      '1': a roll/jump throws the player into the air and they land and carry on without the run breaking (no reset, stuck state or lost timer)
+      '0.5': the player barely leaves the ground on the jump, or the landing often breaks the run
+      '0': the player is never airborne on the route, or every landing breaks the run
+    evidence:
+    - - 03:22
+      - 03:23
+    - - 03:41
+      - 03:41
+    - - 03:50
+      - 03:50
+  visual_presentation:
+  - id: VP1
+    cat: presentation
+    keyframes:
+    - '03:05.0'
+    - '03:35.0'
+    item: 'Readable run state during the descent: elapsed time, current speed, progress along the course and the latest ahead/behind gap are on
+      screen at once and readable while moving, with ahead and behind told apart at a glance'
+    anchors:
+      '1': time, speed, progress and the split gap visible together during play, ahead/behind distinguishable at a glance
+      '0.5': only some of these shown at once, or shown only after the run, or hard to read in motion
+      '0': no run readouts during the descent
+    evidence:
+    - - 03:05
+      - 03:06
+    - - 03:34
+      - 03:41
+  - id: VP2
+    cat: key_moment
+    keyframes:
+    - '03:52.0'
+    - '03:53.0'
+    item: 'Finish payoff: the moment of crossing the finish is set apart, with the final time and the signed gap to the leader shown prominently
+      right at the line'
+    anchors:
+      '1': a distinct finish moment with the final time and the gap to the leader prominently displayed
+      '0.5': final time shown only as plain text, or the gap to the leader missing
+      '0': the run just ends with no finish moment
+    evidence:
+    - - 03:51
+      - 03:53
+play_suggestions:
+  FP1:
+  - 'stand in the start area for a while: does the timer stay at zero?'
+  - leave the start and watch the timer count up; reload or restart and check it resets to zero
+  FP2:
+  - ride the whole course start to finish following the markers
+  - 'try to leave the course sideways: is there a boundary or a reset?'
+  - 'skip a marker or gate: note what happens (the clip shows no penalty, do not penalise either way)'
+  FP3:
+  - compare speed on the steepest section with speed in a turn
+  - 'stop on a flat stretch: can you get going again?'
+  FP4:
+  - 'do one deliberately slow run and one fast run: do the gaps flip from behind to ahead and change colour/sign?'
+  - check a split gap against the reference time by hand
+  - after passing two checkpoints, is the first checkpoint's gap still shown on the progress indicator?
+  FP5:
+  - 'finish slower than the leader: are you ranked below?'
+  - 'finish faster: do you take first place and does the timer stop exactly at the finish line?'
+  FP6:
+  - 'take the jump at full speed: airborne, land, keep going?'
+  - 'take the jump slowly and at an angle: does the landing still keep the run alive?'
+  VP1:
+  - 'take screenshots mid-run on a straight and in a turn: can time, speed, progress and gap all be read?'
+  robustness:
+  - cross the finish without passing the start or a checkpoint (enter from the side)
+  - go back uphill through a checkpoint twice
+  - fall/crash or die mid-run and see whether the run resets cleanly
+  - 'quit mid-run and come back: timer and state sensible?'
+  - 'after a winning run, do another run without restarting the game: is the comparison now against your new time? (unscored, not shown in the
+    clip)'
+v4_map:
+  U1: 'FP1, FP5 (freeze-on-split clause dropped: broadcast display form, not a rule)'
+  U2: CR2, FP4
+  U3: 'CR4, FP5, VP2 (per-sector results table dropped: peripheral, shown once)'
+  U4: 'dropped: mechanism already scored by FP3'
+  U5: 'CR2, FP4 (stored-vs-live clause dropped: not decidable by inspection, and an added live opponent is not penalised; non-monotonic gap follows
+    from FP4 correct gaps)'
+  U6: 'CR1 (blue guide lines dropped: form, not rule)'
+  U7: 'CR3 (top-speed badge dropped: peripheral one-off badge)'
+  FP1: FP1
+  FP2: CR1, FP2
+  FP3: FP3
+  FP4: FP4
+  FP5: FP5
+  FP6: CR1, FP6
+  VP1: CR1
+  VP2: VP1
+  VP3: VP2
+  VP4: 'removed: night-race modify requirement, moved to editing_seed.yaml (editing split, 2026-11-05)'
+provenance:
+  source_yaml: T-VO-vid_c3c33e2729dd.t1.yaml
+  source_sha256: bbed0c4eaaea1c02df5031afb3a01460569e89a1d021c3fd2a4fe5ef2145bc58
+  size_waiver: null
+  size_max: null
+  sources: []

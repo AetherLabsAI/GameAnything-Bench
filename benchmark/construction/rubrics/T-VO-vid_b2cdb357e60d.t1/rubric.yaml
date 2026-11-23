@@ -1,0 +1,233 @@
+# GameAnything-Bench scoring material: never shown to agents during a trial.
+task_id: T-VO-vid_b2cdb357e60d.t1
+source_inventory:
+- 'whole range: one fixed shore-side long-lens view that pans with a single rider (dark wetsuit, light board) on one wave; green-teal water, white
+  foam, other surfers in dark wetsuits lying or sitting on boards; no on-screen text, HUD, score or timer'
+- 00:20-00:21 rider already standing, travelling along the green face with the breaking white section just behind on the right (camera view);
+  the rider moves leftward toward the unbroken face; a surfer lies paddling in the foreground and another sits at the right edge
+- 00:21-00:21.5 a second surfer is on the face just ahead of the rider; the rider passes right next to them with spray
+- 00:22-00:22.5 rider carves on the face, spray behind, then is in the white water facing the camera (turn back toward the break)
+- 00:23-00:24 rider upright high on the face close to the curl; paddler in the foreground below the wave
+- 00:24.5-00:27 rider rides in and just ahead of the whitewater; several surfers paddle in the foreground and one lies on the face to the left
+  of the rider, in the ride path (00:25-00:26.5)
+- 00:27.5 rider turns on the face with arms out
+- 00:28-00:28.5 rider at the lip in a burst of spray (turn off the top), then comes back down inside the foam
+- 00:29-00:32 rider crouches low in the pocket right next to the curling, breaking section; the face ahead is still unbroken
+- 00:32.5-00:33 rider rises and turns with spray in the pocket
+- '00:33.5-00:34.5 hard turn at the breaking section: a large fan of spray thrown up behind the rider'
+- 00:35-00:35.5 rider crouched very low under the curling lip, the lip throwing over beside them
+- 00:36-00:37 rider upright, travelling along the face ahead of the whitewater; turn with arms out and spray at 00:37
+- 00:37.5 rider turns with the board up the face; two surfers sit on boards on the shoulder ahead at the left
+- 00:38-00:38.5 rider launches up off the top of the wave with spray (airborne or near-airborne); a paddler in the foreground
+- 00:39 the face ahead breaks as well (whitewater on both sides of the rider); the rider is on top of the foam at the back of the wave, ride ending
+  (kick-out or fall not clearly resolved)
+- '00:39.5-00:40 cut to a different, wider shot: a lineup of many surfers lying on boards on a green swell, a splash among them, foam in the foreground'
+- 'audio: music only (curator annotation), no speech; transcript empty'
+- 'not visible: no score, judging, timer or result; how the ride started (take-off) is before 00:20; board and wave speed cannot be measured'
+instructions_meta:
+  requirement_groups:
+    wave and its breaking:
+    - CR1
+    - FP1
+    - VP3
+    board riding and manoeuvres:
+    - CR2
+    - FP2
+    - FP3
+    - VP1
+    riding at the break:
+    - FP4
+    end of the ride:
+    - FP5
+    ride readability:
+    - VP2
+  explicit_requirements:
+  - type: keep
+    text: I want the rider to keep climbing up to the lip and snapping back down the face, throwing a big fan of spray on the sharp turns.
+    covers:
+    - FP3
+    - VP1
+rubric:
+  content_realization:
+  - id: CR1
+    item: 'The wave is built with its distinct zones in order along it: an unbroken face open to ride, a section where it breaks (a curling pocket
+      or lip is not required), and white broken water behind the break'
+    anchors:
+      '1': one wave shows all three zones, arranged along its length (open face ahead, a readable breaking section, whitewater behind)
+      '0.5': an open face and whitewater are told apart, but no breaking section is readable between them, or the zones are not arranged along
+        the wave
+      '0': the wave is a uniform slope or block, or there is no wave
+    evidence:
+    - - 00:20
+      - 00:24
+    - - 00:29
+      - 00:32
+    - - 00:35
+      - 00:37
+  - id: CR2
+    item: The player is a rider standing on a board on the wave face (not swimming, walking or in a boat)
+    anchors:
+      '1': a player-controlled rider stands on a board on the wave face
+      '0.5': the player is on the wave but not clearly on a board (e.g. a generic body or vehicle sliding on it)
+      '0': no player rider on the wave
+    evidence:
+    - - 00:20
+      - 00:27
+    - - 00:36
+      - 00:37
+  functions_playability:
+  - id: FP1
+    item: 'The wave breaks progressively: its breaking section advances along the wave''s length during play, so the unbroken part ahead shrinks
+      and broken water spreads behind'
+    anchors:
+      '1': the breaking part visibly advances along the wave during play, with an unbroken rideable part ahead of it
+      '0.5': the wave has a break but it does not advance progressively (static, or breaks all at once)
+      '0': nothing on the wave breaks, or there is no wave
+    evidence:
+    - - 00:20
+      - 00:39
+  - id: FP2
+    item: 'Board riding along the face: the rider is carried by the wave and the player steers to travel sideways along the face, with momentum
+      rather than walking'
+    anchors:
+      '1': the rider is carried along with the wave and the player steers laterally with smooth momentum
+      '0.5': the rider moves on the wave, but is not carried by it, or moves like walking / sliding without control
+      '0': the player cannot ride along the wave
+    evidence:
+    - - 00:20
+      - 00:27
+    - - 00:36
+      - 00:37
+  - id: FP3
+    item: 'Vertical manoeuvres: the player can climb to the top of the wave and turn back down the face, repeatedly, under their own control'
+    anchors:
+      '1': the player can steer up to the top of the wave and turn back down the face at will, several times in one ride
+      '0.5': turning works but only laterally, or the top of the wave cannot be reached
+      '0': no turning on the face
+    evidence:
+    - - '00:27.5'
+      - '00:28.5'
+    - - 00:33
+      - '00:34.5'
+    - - 00:37
+      - 00:38
+  - id: FP4
+    item: 'The breaking section is rideable up close: the player can ride right next to it in the steep pocket and brush through the edge of the
+      foam without the ride ending at once'
+    anchors:
+      '1': the player can ride tight to the break, in the pocket and partly in the foam, and keep riding
+      '0.5': the break exists but the player cannot get near it (blocked, or any touch of foam ends the ride instantly)
+      '0': no breaking section, or it plays no part in the ride
+    evidence:
+    - - 00:22
+      - 00:24
+    - - 00:26
+      - 00:27
+    - - 00:29
+      - 00:35
+  - id: FP5
+    item: 'The ride runs out with the wave: when the wave closes out ahead and no open face is left, the ride ends and the game makes the end
+      clear'
+    anchors:
+      '1': the ride ends when the open face ahead runs out (the wave closes out) and the end is clearly shown; other wave-related ends (wiping
+        out, leaving the wave) may exist as well
+      '0.5': rides end only for other wave-related reasons (wiping out, leaving the wave), never because the wave closes out ahead, or the end
+        is abrupt or unclear
+      '0': the ride never ends, or ends only on a timer or for reasons unrelated to the wave
+    evidence:
+    - - 00:38
+      - 00:39
+  visual_presentation:
+  - id: VP1
+    cat: key_moment
+    keyframes:
+    - '00:28.0'
+    - '00:34.0'
+    - '00:38.0'
+    item: 'The turn off the top: the rider at the lip of the breaking wave with a fan of spray thrown up behind'
+    anchors:
+      '1': a recognisable moment of the rider at the top of the wave with a spray fan
+      '0.5': the rider at the top but no spray, or spray without the rider at the lip
+      '0': none
+    evidence:
+    - - 00:28
+      - '00:28.5'
+    - - 00:34
+      - '00:34.5'
+    - - 00:38
+      - '00:38.5'
+  - id: VP2
+    cat: presentation
+    item: 'The ride stays readable: the view keeps the rider and the breaking section readable together throughout the ride'
+    anchors:
+      '1': the rider and the breaking section stay readable together throughout the ride
+      '0.5': the rider is followed but the break is often out of view, or the face of the wave is hard to read
+      '0': the rider is regularly lost from view
+    evidence:
+    - - 00:20
+      - 00:39
+  - id: VP3
+    cat: style
+    keyframes:
+    - '00:20.0'
+    - '00:31.0'
+    - '00:35.0'
+    item: 'The look of the wave: a readable wave face for the surfer to ride, standing out from the surrounding water; a curling lip throwing over
+      or a dynamically changing breaking shape is not required'
+    anchors:
+      '1': a readable wave face, clearly a wave rising from the water (a curling lip or white foam may add to it but is not needed)
+      '0.5': a wave is there, but its face is hard to read or to tell from the surrounding water
+      '0': no recognisable wave (a flat surface), or no wave
+    evidence:
+    - - 00:20
+      - 00:24
+    - - 00:29
+      - 00:32
+    - - 00:35
+      - '00:35.5'
+play_suggestions:
+  FP1:
+  - 'watch a wave from start to end without riding: does the breaking part move along it?'
+  - check whether the unbroken part ahead shrinks as the wave breaks
+  FP2:
+  - 'release all input mid-ride: are you still carried along?'
+  - 'steer along the wave in both directions: which way is rideable?'
+  FP3:
+  - climb to the very top and turn down; then make a sharp turn at the bottom
+  - make several up-and-down turns in a row in one ride
+  FP4:
+  - ride as close to the break as possible for several seconds
+  - dip briefly into the foam edge and come back out
+  - 'deliberately slow down and let the whitewater catch you: what happens?'
+  FP5:
+  - ride until the wave closes out
+  - steer over the top of the wave
+  - after a ride ends, check whether another ride can start
+  robustness:
+  - try to ride away from the wave onto flat water or toward the shore
+  - spam turns as fast as possible
+  - stand still on the board from the start
+  - leave the board / wave mid-ride and try to get back on
+  - if other surfers are in the water, steer straight at one and weave past several
+v4_map:
+  U1: FP1, FP2
+  U2: FP3, VP1
+  U3: FP5
+  U4: 'CR1 (stance change dropped: form detail, v3.6)'
+  U5: FP4
+  U6: 'dropped: absence item (no score / timer shown); nothing to build'
+  FP1: CR1, FP1
+  FP2: CR2, FP2
+  FP3: FP3
+  FP4: FP4
+  FP5: FP5
+  VP1: VP1
+  VP2: CR1 (zones and arrangement), VP3 (look of the wave)
+  VP3: VP2
+  VP4: VP3
+provenance:
+  source_yaml: T-VO-vid_b2cdb357e60d.t1.yaml
+  source_sha256: 42e694c7ea2a3c0951b6d8ab3a6cff4b4fb1362cf9e35ea15a034792b61a02d6
+  size_waiver: null
+  size_max: null
+  sources: []

@@ -1,0 +1,18 @@
+# GameAnything-Bench task T-IO-0442e0b41e (public part). Instruction: instruction_fine.md.
+task_id: T-IO-0442e0b41e
+version: '0.2'
+category: mechanics_behavior
+modality: image
+domain: other
+track: commercial
+target_game: stardew_valley
+references:
+- img01
+- img02
+- img03
+- img04
+- img05
+provenance:
+  pipeline: reference_curation ga_author (v3 draft -> crosscheck -> reconcile -> instruct -> explicit) -> restructure_v4
+  rules_version: v4.2
+  review_status: pending

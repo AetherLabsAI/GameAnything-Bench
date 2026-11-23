@@ -1,0 +1,2432 @@
+{
+ "what": "Preservation items of the editing rubrics that test the edit itself (they can only pass once the change is made): scored as Edit Success items at evaluation time (gab/eval/edit.py). One-off classification by the judge model, reviewed; 'manual' overrides the model's verdict.",
+ "version": "p-to-es-v1",
+ "model": "claude-sonnet-5-5",
+ "edits": {
+  "E-T-HY-vid_01f55d4c784a.t1.AP": {
+   "items": {
+    "P1": {
+     "edit_dependent": false,
+     "reason": "The mine's original look existed before the change; the unchanged start satisfies it since the mine has no ballista parts.",
+     "item": "The mine keeps its own original look and does not take on any part of the ballista look"
+    },
+    "P2": {
+     "edit_dependent": false,
+     "reason": "Shooters fired along their own row before the change; the unchanged start satisfies this.",
+     "item": "A placed shooter's shots fly along its own row"
+    },
+    "P3": {
+     "edit_dependent": false,
+     "reason": "Shot range along the row is original behaviour; the start trivially matches itself.",
+     "item": "A shooter's shots reach as far along its row as before the change"
+    },
+    "P4": {
+     "edit_dependent": false,
+     "reason": "Hits needed to kill a plain enemy (10) is existing behaviour and the start satisfies it.",
+     "item": "A plain enemy takes the same number of shooter hits to kill as before the change"
+    },
+    "P5": {
+     "edit_dependent": false,
+     "reason": "Fire rate (about 1.4 s per shot) is existing behaviour that the start satisfies.",
+     "item": "The shooter fires at the same rate as before the change"
+    },
+    "P6": {
+     "edit_dependent": false,
+     "reason": "The shooter's cost was already shown in the interface before the change; the start satisfies it.",
+     "item": "During play the shooter's cost stays readable in the interface"
+    }
+   }
+  },
+  "E-T-HY-vid_01f55d4c784a.t1.CS": {
+   "items": {
+    "P1": {
+     "edit_dependent": false,
+     "reason": "The plain enemy's walking look existed before the change and is unchanged; the start satisfies it.",
+     "item": "The plain enemy keeps its original walking look"
+    },
+    "P2": {
+     "edit_dependent": false,
+     "reason": "Mines detonating on tough-tier enemies worked before with the armoured enemy; the start satisfies it (FP3=1).",
+     "item": "A mine goes off when a unit of the tough enemy tier reaches it"
+    },
+    "P3": {
+     "edit_dependent": false,
+     "reason": "The tough tier took more shooter hits before (55 vs 10); the start satisfies it, and the ram replacing it should keep this.",
+     "item": "A unit of the tough enemy tier needs clearly more shooter hits to kill than a plain enemy"
+    },
+    "P4": {
+     "edit_dependent": false,
+     "reason": "Armoured and plain enemies had the same speed at the start; the item is satisfied by the unchanged project.",
+     "item": "A unit of the tough enemy tier advances as slowly as the plain enemy"
+    },
+    "P5": {
+     "edit_dependent": false,
+     "reason": "Tough-tier enemies reaching the base lost the run before the change as well; the start has this behaviour.",
+     "item": "A unit of the tough enemy tier that gets through a lane to the base loses the run"
+    },
+    "P6": {
+     "edit_dependent": false,
+     "reason": "Wave progression after clearing a wave with tough units existed at the start; baseline satisfies it.",
+     "item": "Killing every enemy of a wave that includes tough-tier units leads on to the next wave"
+    }
+   }
+  },
+  "E-T-HY-vid_22c94960e3ee.t1.BF": {
+   "items": {
+    "P1": {
+     "edit_dependent": false,
+     "reason": "Start already lets the school close around a player swimming in at normal pace; protects pre-existing behaviour.",
+     "item": "Swimming into the school at a normal pace still lets it close around the player."
+    },
+    "P2": {
+     "edit_dependent": false,
+     "reason": "School density existed at the start; the unchanged project can satisfy it.",
+     "item": "The school is as dense as it was at the start of the session."
+    },
+    "P3": {
+     "edit_dependent": false,
+     "reason": "School's home area is pre-existing placement; the start satisfies it, though the baseline is somewhat unclear.",
+     "item": "The school stays in its usual part of the site."
+    },
+    "P4": {
+     "edit_dependent": false,
+     "reason": "The turtle did not flee before the change either; the start satisfies it.",
+     "item": "Dashing past the sea turtle does not make it flee."
+    },
+    "P5": {
+     "edit_dependent": false,
+     "reason": "Full-speed swimming away from the school existed before the change; the start satisfies it.",
+     "item": "The player's full-speed swimming stays the same away from the school."
+    }
+   }
+  },
+  "E-T-HY-vid_22c94960e3ee.t1.CS": {
+   "items": {
+    "P1": {
+     "edit_dependent": false,
+     "reason": "The fish school filling the view existed before the change; the start satisfies it. Dolphins are only context, not required for the check.",
+     "item": "With the dolphins in the site, the fish school still fills the view around the player."
+    },
+    "P2": {
+     "edit_dependent": false,
+     "reason": "The turtle's patrol area around wreck and reef wall existed before; the unchanged start satisfies it.",
+     "item": "The sea turtle remains in its usual area."
+    },
+    "P3": {
+     "edit_dependent": false,
+     "reason": "Swimming up to the turtle was an original kept feature; the start already satisfies it.",
+     "item": "The player can still swim right up next to the sea turtle."
+    },
+    "P4": {
+     "edit_dependent": false,
+     "reason": "Reef-to-wreck swimming and interior traversal existed before the change; the start has it (only partly verified).",
+     "item": "The swim from the reef to the wreck and through its interior still works."
+    },
+    "P5": {
+     "edit_dependent": false,
+     "reason": "Open-water and depth lighting existed in the original project; the start satisfies it regardless of dolphins.",
+     "item": "The open water and the depths keep their original light."
+    }
+   }
+  },
+  "E-T-HY-vid_2ab7e1862b31.t1.AP": {
+   "items": {
+    "P1": {
+     "edit_dependent": false,
+     "reason": "The avenue's multi-lane width under the bridge existed before the change; the unchanged start already satisfies it.",
+     "item": "The avenue keeps its full multi-lane width where it passes under the bridge"
+    },
+    "P2": {
+     "edit_dependent": false,
+     "reason": "Red neon strips under the crossing existed in the original project (VP2); it protects prior content, though the start only partly met it.",
+     "item": "Bright red neon strips outline the underside of the crossing and stand out from the teal street"
+    },
+    "P3": {
+     "edit_dependent": false,
+     "reason": "The rail corridor meeting the bridge on both sides is original layout; the unchanged start already has it.",
+     "item": "The rail corridor still meets the bridge on both sides of the avenue"
+    },
+    "P4": {
+     "edit_dependent": false,
+     "reason": "Billboard-and-screen buildings beside the bridge existed before; the start already shows them, and the item only asks that they stay unchanged.",
+     "item": "The tall buildings beside the bridge keep their billboard-and-screen look instead of taking on the brick style"
+    },
+    "P5": {
+     "edit_dependent": false,
+     "reason": "Walking the avenue end to end through the underpass was already possible in the start project.",
+     "item": "The player can walk the avenue end to end through the underpass without interruption"
+    },
+    "P6": {
+     "edit_dependent": false,
+     "reason": "Wet reflective roads around and beneath the bridge existed before the change and are satisfied by the start.",
+     "item": "The road around and beneath the bridge stays wet and mirrors the coloured lights"
+    }
+   }
+  },
+  "E-T-HY-vid_2ab7e1862b31.t1.BF": {
+   "items": {
+    "P1": {
+     "edit_dependent": false,
+     "reason": "Side streets had normal footing before the change; the unchanged start satisfies it, and it protects pre-existing behaviour.",
+     "item": "The narrow side streets keep normal footing"
+    },
+    "P2": {
+     "edit_dependent": false,
+     "reason": "The wet look and light reflections on the avenue road existed before the change, so the start satisfies it.",
+     "item": "The avenue's road keeps its wet look and mirrors the coloured lights"
+    },
+    "P3": {
+     "edit_dependent": false,
+     "reason": "Jump height on the avenue is unchanged baseline behaviour; the start satisfies it.",
+     "item": "The player's jump height on the avenue stays the same"
+    },
+    "P4": {
+     "edit_dependent": false,
+     "reason": "Top run speed on the avenue is baseline behaviour that the unchanged start already has.",
+     "item": "The player's top run speed on the avenue stays the same"
+    },
+    "P5": {
+     "edit_dependent": false,
+     "reason": "End-to-end avenue traversal through the underpass existed before the change; the start satisfies it.",
+     "item": "The player can travel the avenue end to end through the underpass"
+    },
+    "P6": {
+     "edit_dependent": false,
+     "reason": "Passing between avenue and side streets existed before the change; the start satisfies it.",
+     "item": "The player can pass from the avenue into the side streets and back onto the avenue"
+    }
+   }
+  },
+  "E-T-HY-vid_2ab7e1862b31.t1.CS": {
+   "items": {
+    "P1": {
+     "edit_dependent": false,
+     "reason": "Side-street connectivity and return to the avenue existed before the change; the unchanged start satisfies it.",
+     "item": "The player can still move between the side streets and return to the avenue by another way"
+    },
+    "P2": {
+     "edit_dependent": true,
+     "reason": "Refers to the station taking only the corridor's edge; the station doesn't exist in the start, so it can't be satisfied without the change.",
+     "item": "The rail corridor stays broad at the station, which takes up only its edge"
+    },
+    "P3": {
+     "edit_dependent": true,
+     "reason": "Asks about tracks running past the station; with no station in the start, it can only be judged after the change.",
+     "item": "The corridor's tracks run past the station unbroken"
+    },
+    "P4": {
+     "edit_dependent": false,
+     "reason": "The block grid layout away from the station site existed before and is satisfied by the start.",
+     "item": "Away from the station's site, the grid of small blocks keeps its layout"
+    },
+    "P5": {
+     "edit_dependent": false,
+     "reason": "Stacked projecting signs on side-street walls existed before; the start satisfies the sign-preservation part.",
+     "item": "The sign-walled side streets, including any that gains the station entrance, keep their stacked projecting signs apart from the entrance opening"
+    },
+    "P6": {
+     "edit_dependent": false,
+     "reason": "The elevated bridge spanning the avenue with an underpass existed before the change.",
+     "item": "The elevated railway bridge still spans the avenue with the avenue running beneath it"
+    }
+   }
+  },
+  "E-T-HY-vid_b5be7373833d.t1.AP": {
+   "items": {
+    "P1": {
+     "edit_dependent": false,
+     "reason": "Other worlds had their own ground before the change; baseline satisfies it by not having paper/map look.",
+     "item": "The king's world, the businessman's world, the prince's home planet and any other worlds keep their own ground, with no paper or map look"
+    },
+    "P2": {
+     "edit_dependent": false,
+     "reason": "Walking from arrival to the geographer was possible before the change.",
+     "item": "The player can walk from the arrival point on the geographer's world to the geographer"
+    },
+    "P3": {
+     "edit_dependent": false,
+     "reason": "The map table existed on the geographer's world before the change and merely needs to stay in place.",
+     "item": "The map table stays in its place on the geographer's world"
+    },
+    "P4": {
+     "edit_dependent": false,
+     "reason": "Book towers were already visible on the geographer's world at baseline.",
+     "item": "Towers of books still stand on the geographer's world"
+    },
+    "P5": {
+     "edit_dependent": false,
+     "reason": "The world was already a small globe in starry space before the change.",
+     "item": "The geographer's world still reads as a small globe floating in starry space"
+    },
+    "P6": {
+     "edit_dependent": false,
+     "reason": "The geographer already persuaded the prince to go to Earth at baseline.",
+     "item": "In the encounter, the old geographer still persuades the prince to go to Earth next"
+    }
+   }
+  },
+  "E-T-HY-vid_b5be7373833d.t1.BF": {
+   "items": {
+    "P1": {
+     "edit_dependent": false,
+     "reason": "Other worlds were left without any order before the change; the unchanged start satisfies this.",
+     "item": "Every world other than the king's is still left as before, without asking anyone for an order"
+    },
+    "P2": {
+     "edit_dependent": false,
+     "reason": "Playing through to the geographer and moving on to Earth worked before the change.",
+     "item": "The journey can still be played through to the geographer's encounter and the move on to Earth"
+    },
+    "P3": {
+     "edit_dependent": false,
+     "reason": "The king's world was already first in the visit order at baseline.",
+     "item": "The king's world stays first in the order of visits"
+    },
+    "P4": {
+     "edit_dependent": false,
+     "reason": "The king's crown, ermine robe and sceptre existed before the change.",
+     "item": "The king keeps his crown, ermine robe and sceptre"
+    },
+    "P5": {
+     "edit_dependent": false,
+     "reason": "The king's lofty seat of rule existed before the change.",
+     "item": "The king's world keeps its lofty seat of rule"
+    },
+    "P6": {
+     "edit_dependent": true,
+     "reason": "Needs the refusal of impossible orders and the leave barrier, both created by the change; the start has neither.",
+     "item": "After the king refuses an impossible request, leaving his world is still blocked"
+    }
+   }
+  },
+  "E-T-HY-vid_b5be7373833d.t1.CS": {
+   "items": {
+    "P1": {
+     "edit_dependent": false,
+     "reason": "The geographer ending the chain with the move to Earth existed before the change and the starting project satisfies it.",
+     "item": "The journey can still be finished: the geographer's encounter ends the planet chain with the move on to Earth"
+    },
+    "P2": {
+     "edit_dependent": false,
+     "reason": "King first and geographer last held in the original chain, with the businessman between. The start satisfies this.",
+     "item": "The remaining worlds keep their order, with the king first and the geographer last"
+    },
+    "P3": {
+     "edit_dependent": false,
+     "reason": "Short exchanges showing a single trait existed for the king and geographer before the change. The start satisfies this.",
+     "item": "Each remaining inhabitant still has a short exchange showing their single trait, after which the player can move on"
+    },
+    "P4": {
+     "edit_dependent": false,
+     "reason": "Role names shown on arrival existed for the remaining worlds before the change. The start satisfies this.",
+     "item": "Arriving at each remaining world still shows the inhabitant's role name"
+    },
+    "P5": {
+     "edit_dependent": false,
+     "reason": "The king's and geographer's looks existed before the change. The start only partly satisfies this, but nothing in the item needs the edit.",
+     "item": "Each remaining inhabitant keeps the look they had before, such as the king's crown, ermine robe and sceptre or the geographer's magnifier"
+    },
+    "P6": {
+     "edit_dependent": false,
+     "reason": "The king's seat and the geographer's map table existed before the change. The start satisfies this.",
+     "item": "Each remaining world keeps the setting it had before, such as the king's lofty seat of rule or the geographer's map table among towers of books"
+    }
+   }
+  },
+  "E-T-HY-vid_c68b71958bb2.t1.BF": {
+   "items": {
+    "P1": {
+     "edit_dependent": false,
+     "reason": "The original story already had the sisters arriving and repenting; the start satisfies this, and the change only adds a choice leading to it.",
+     "item": "Taking the sisters in leads to their repentance as the story tells it"
+    },
+    "P2": {
+     "edit_dependent": false,
+     "reason": "The sisters already arrived as beggars in the original project; the change only adds a choice at the door.",
+     "item": "The sisters arrive at the castle as poor beggars"
+    },
+    "P3": {
+     "edit_dependent": false,
+     "reason": "The knight's rescue and marriage already preceded the sisters' arrival in the original story.",
+     "item": "The knight's taking the heroine away and marrying her comes before the sisters' arrival"
+    },
+    "P4": {
+     "edit_dependent": false,
+     "reason": "The original story's order up to the castle arrival existed before the change; the start can satisfy it, though the compatibility check was unclear.",
+     "item": "The story from its start up to the castle arrival plays in its original order"
+    }
+   }
+  },
+  "E-T-HY-vid_c68b71958bb2.t1.CS": {
+   "items": {
+    "P1": {
+     "edit_dependent": false,
+     "reason": "Other animals' looks existed before the change; the start satisfies it if such animals exist. Missing content would be a non-dependence reason, not edit dependence.",
+     "item": "Animals other than the magic one keep their original look"
+    },
+    "P2": {
+     "edit_dependent": false,
+     "reason": "The wise woman appearing when Two-eyes weeps while tending the animal worked with the goat already; the start satisfies it.",
+     "item": "The wise woman appears when Two-eyes weeps while tending the animal"
+    },
+    "P3": {
+     "edit_dependent": false,
+     "reason": "The song lulling two eyes so the third sees the charm is original CR3 behaviour; the starting project already satisfies it.",
+     "item": "The song puts only two of Three-eyes' eyes to sleep, so the third sees the charm"
+    },
+    "P4": {
+     "edit_dependent": false,
+     "reason": "The tree's silver leaves and golden fruit existed before; the start already satisfies it.",
+     "item": "The tree that grows from the burial keeps its silver leaves and golden fruit"
+    },
+    "P5": {
+     "edit_dependent": false,
+     "reason": "The tree yielding to the heroine alone is original behaviour (FP3); the start satisfies it to the extent it implemented it.",
+     "item": "The magic tree yields to the heroine alone"
+    },
+    "P6": {
+     "edit_dependent": false,
+     "reason": "Playing the story from start to clear ending in order is original FP1 behaviour; the unchanged project satisfies it.",
+     "item": "The story still plays from start to its clear ending in the original order"
+    }
+   }
+  },
+  "E-T-HY-vid_d12eba90e638.t1.AP": {
+   "items": {
+    "P1": {
+     "edit_dependent": false,
+     "reason": "The player's single energy blade existed before the change and the start satisfies it; the change only touches the opponent's weapon.",
+     "item": "The player's energy blade stays a single blade with its original look"
+    },
+    "P2": {
+     "edit_dependent": false,
+     "reason": "The opponent's blade colour, distinct from the player's, already existed at the start; the item protects it.",
+     "item": "The opponent's blade keeps its original colour, which stays clearly different from the player's"
+    },
+    "P3": {
+     "edit_dependent": false,
+     "reason": "Hits on the player came only from the opponent's attacks before the change, so the start satisfies this.",
+     "item": "The second beam adds no new way to score on the player: hits on the player come only from the opponent's attacks as before"
+    },
+    "P4": {
+     "edit_dependent": false,
+     "reason": "An attack on an uncovered line already landed at the start; the item protects existing scoring behaviour.",
+     "item": "A player attack on a line the opponent has not covered still lands: the second beam does not act as an extra guard"
+    },
+    "P5": {
+     "edit_dependent": false,
+     "reason": "The bright flare where blades meet existed before the change, so the start satisfies it.",
+     "item": "Blades that meet still produce a bright flare at the point of contact"
+    },
+    "P6": {
+     "edit_dependent": false,
+     "reason": "The opponent's autonomous attacks on varying lines existed before the change. The start may not show it clearly, but the item does not depend on the edit.",
+     "item": "The opponent still fights on its own with the same pattern of attacks on varying lines"
+    }
+   }
+  },
+  "E-T-HY-vid_d12eba90e638.t1.BF": {
+   "items": {
+    "P1": {
+     "edit_dependent": false,
+     "reason": "Cuts counted one hit before the change and still should; the unchanged start satisfies it.",
+     "item": "A landed cut to the head, body or legs still counts one hit"
+    },
+    "P2": {
+     "edit_dependent": false,
+     "reason": "At four hits a landed thrust gives five in the start too, ending the bout; the unchanged project satisfies it.",
+     "item": "A point thrust landed by a fighter on four hits still ends the bout"
+    },
+    "P3": {
+     "edit_dependent": false,
+     "reason": "Guarded thrusts scored nothing before the change; the start already satisfies it.",
+     "item": "A thrust met by a guard still scores nothing"
+    },
+    "P4": {
+     "edit_dependent": false,
+     "reason": "The counter/foul-hit rule exists in the start and applies to thrusts landing simultaneously; the start satisfies it.",
+     "item": "A thrust that lands together with the other fighter's hit still follows the bout's counter rule"
+    },
+    "P5": {
+     "edit_dependent": false,
+     "reason": "Both fighters reset to guard after any hit including thrusts in the start; the start satisfies it.",
+     "item": "After a landed thrust both fighters go back on guard, as after any other hit"
+    }
+   }
+  },
+  "E-T-HY-vid_d12eba90e638.t1.CS": {
+   "items": {
+    "P1": {
+     "edit_dependent": false,
+     "reason": "Floor bounds and open space for lunges existed before the change; the unchanged project satisfies this.",
+     "item": "The duelling floor keeps its bounds and usable space, with nothing in the way of lunges or footwork"
+    },
+    "P2": {
+     "edit_dependent": false,
+     "reason": "Fighters were visible during the duel before the change; the item protects existing visibility, though it cites the request as a hint.",
+     "item": "The fighters stay in clear view during the duel"
+    },
+    "P3": {
+     "edit_dependent": false,
+     "reason": "Existing pip score display and running count existed before the change and are satisfied by the start.",
+     "item": "The existing score display stays in place and keeps showing the running count"
+    },
+    "P4": {
+     "edit_dependent": false,
+     "reason": "Bout ending at five hits with a winner already worked before the change.",
+     "item": "The bout still ends when a fighter reaches five scored hits, with a clear winner"
+    },
+    "P5": {
+     "edit_dependent": false,
+     "reason": "Simultaneous hits adding nothing is an existing counter rule in the start project, unrelated to the columns.",
+     "item": "Hits that land together still add nothing to the count"
+    }
+   }
+  },
+  "E-T-IO-1a6ba80e63.AP": {
+   "items": {
+    "P1": {
+     "edit_dependent": false,
+     "reason": "Other houses existed before with their own walls and roofs; the unchanged start satisfies this.",
+     "item": "The other village houses around the church keep their original walls and roofs"
+    },
+    "P2": {
+     "edit_dependent": false,
+     "reason": "The steeple was already pointed before the change; the start satisfies it.",
+     "item": "The church's steeple is still pointed"
+    },
+    "P3": {
+     "edit_dependent": false,
+     "reason": "The steeple already rose above the roofs at its original height in the start project.",
+     "item": "The church's steeple still rises above the village roofs at about its former height"
+    },
+    "P4": {
+     "edit_dependent": false,
+     "reason": "The church's position in the village is the same in the unchanged start.",
+     "item": "The church stands where it stood in the village"
+    },
+    "P5": {
+     "edit_dependent": false,
+     "reason": "Farmhouses beyond the wall existed before and are untouched by the church change; the start satisfies it.",
+     "item": "The farmhouses beyond the wall keep their original look"
+    },
+    "P6": {
+     "edit_dependent": false,
+     "reason": "The tall dark tree already towered over houses and steeple in the start project.",
+     "item": "The tall dark tapering tree on the near side of the village still towers above the houses and the steeple"
+    }
+   }
+  },
+  "E-T-IO-1a6ba80e63.BF": {
+   "items": {
+    "P1": {
+     "edit_dependent": false,
+     "reason": "Other trees and wood/leaf blocks were unclimbable before the change; the starting project satisfies this and it protects existing behaviour.",
+     "item": "Every other tree, including the other dark cypresses, and wood or leaf blocks elsewhere still cannot be climbed"
+    },
+    "P2": {
+     "edit_dependent": false,
+     "reason": "The cypress's dark tapering look existed before the change; the unchanged project already satisfies it.",
+     "item": "The tallest dark cypress beside the village keeps its dark, tapering look"
+    },
+    "P3": {
+     "edit_dependent": false,
+     "reason": "Tree height and position beside the village existed before the change; the start satisfies it.",
+     "item": "The tree keeps its height and its place beside the village"
+    },
+    "P4": {
+     "edit_dependent": false,
+     "reason": "Normal walking and jumping elsewhere worked before the change; the start satisfies it.",
+     "item": "Walking and jumping elsewhere in the place work as before"
+    },
+    "P5": {
+     "edit_dependent": false,
+     "reason": "The village and church with pointed steeple existed before the change; the start satisfies it.",
+     "item": "The village of houses and the church with its pointed steeple stay as they were"
+    },
+    "P6": {
+     "edit_dependent": false,
+     "reason": "The swirling night sky existed in the original project; the start already satisfies it.",
+     "item": "The night look, with the swirling night sky over the tree and village, is still there"
+    }
+   }
+  },
+  "E-T-IO-1a6ba80e63.CS": {
+   "items": {
+    "P2": {
+     "edit_dependent": false,
+     "reason": "The hills' shape and height existed before the change; the unchanged start already satisfies it, and the path is only a narrow addition.",
+     "item": "The hills keep their shape and height; only a narrow path is added"
+    },
+    "P3": {
+     "edit_dependent": false,
+     "reason": "Village houses and church existed at the foot of the hills before the change; the start satisfies this.",
+     "item": "The village houses and church stay where they were, at the foot of the hills"
+    },
+    "P4": {
+     "edit_dependent": false,
+     "reason": "The field, wall and farmhouses existed before the change; the start satisfies this.",
+     "item": "The open field with the wall crossing it and the farmhouses beyond stays intact"
+    },
+    "P5": {
+     "edit_dependent": false,
+     "reason": "Free movement and reaching the landmarks were already true in the starting project, independent of the path.",
+     "item": "The player can still move freely through the place and reach or see its other landmarks"
+    }
+   }
+  },
+  "E-T-IO-43b34cf1fa.AP": {
+   "items": {
+    "P1": {
+     "edit_dependent": false,
+     "reason": "Vehicles stopped at red and went on at green before the change; the start project already satisfies this behaviour.",
+     "item": "The restyled vehicle still stops at a red signal on its track and moves on once the signal turns green"
+    },
+    "P2": {
+     "edit_dependent": false,
+     "reason": "Running over the junction onto either branch existed before the restyle; the unchanged project satisfies it.",
+     "item": "The restyled vehicle still runs over the junction and can continue onto either branch"
+    },
+    "P3": {
+     "edit_dependent": false,
+     "reason": "Following the branch set at the switch control was original behaviour; the baseline already satisfies it.",
+     "item": "The vehicle still follows the branch that is set at the switch from the control"
+    },
+    "P4": {
+     "edit_dependent": false,
+     "reason": "Track layout with junction and both branches existed before; the unchanged start satisfies it.",
+     "item": "The track layout with its junction and both branches is unchanged"
+    },
+    "P5": {
+     "edit_dependent": false,
+     "reason": "Signal red/green readability existed before; the restyled train standing at it is only context, and the baseline is readable with its original train.",
+     "item": "Each signal's red or green state is still clearly readable from the track, including with a restyled train standing at it"
+    }
+   }
+  },
+  "E-T-IO-43b34cf1fa.BF": {
+   "items": {
+    "P1": {
+     "edit_dependent": false,
+     "reason": "Signals no train passed keep their set state in the original project too; nothing changes them.",
+     "item": "Signals the train did not pass keep the state they were set to"
+    },
+    "P2": {
+     "edit_dependent": false,
+     "reason": "An unpassed green signal stays green in the unchanged project, so the start satisfies it.",
+     "item": "A signal set to green that no train has passed stays green"
+    },
+    "P3": {
+     "edit_dependent": false,
+     "reason": "Manual red/green setting from the control place existed before the change.",
+     "item": "Each signal can still be set red or green by hand from its control at the control place"
+    },
+    "P4": {
+     "edit_dependent": false,
+     "reason": "A held train moving on when the signal is set green is original behaviour.",
+     "item": "A train held at red moves on once the player sets the signal green"
+    },
+    "P5": {
+     "edit_dependent": false,
+     "reason": "A train stopping at a manually set red signal is original behaviour.",
+     "item": "A train still stops at a signal the player has set to red by hand"
+    },
+    "P6": {
+     "edit_dependent": true,
+     "reason": "Control showing state after a fallback to red requires the automatic fallback the change creates; the unchanged start has no fallback.",
+     "item": "Each signal's control still shows that signal's actual state, including after a fallback to red"
+    }
+   }
+  },
+  "E-T-IO-43b34cf1fa.CS": {
+   "items": {
+    "P1": {
+     "edit_dependent": false,
+     "reason": "The existing station, platform and station tracks existed before the change; the unchanged start satisfies this item.",
+     "item": "The existing station, its platform and both station tracks are unchanged"
+    },
+    "P2": {
+     "edit_dependent": false,
+     "reason": "Junction signals existed before and show red or green; the baseline already satisfies this.",
+     "item": "The signals at the junction stay in place by their tracks and still show red or green"
+    },
+    "P3": {
+     "edit_dependent": false,
+     "reason": "The switch and its control sending trains to either branch existed before the change.",
+     "item": "The switch, set from its control, still sends the train onto either branch"
+    },
+    "P4": {
+     "edit_dependent": false,
+     "reason": "Stopping at red and moving on at green was original behaviour, unrelated to the new halt.",
+     "item": "A train is still held at the red signal before the junction and moves on at green"
+    },
+    "P5": {
+     "edit_dependent": false,
+     "reason": "Control-place levers acting remotely on switch and signals existed before the change.",
+     "item": "The controls at the control place still act on their switch and signals without going to the track"
+    }
+   }
+  },
+  "E-T-IO-6911566349.BF": {
+   "items": {
+    "P1": {
+     "edit_dependent": false,
+     "reason": "The walkway was already a walkable route before the change; walking along it past shops held at the start (shopfronts open, no shutters).",
+     "item": "The covered walkway can still be walked from one end to the other past the shops, whether their shutters are up or down"
+    },
+    "P2": {
+     "edit_dependent": false,
+     "reason": "Ground floors set back behind pillars existed in the starting project and is unrelated to shutters.",
+     "item": "The ground floors stay set back under the upper floors behind the line of pillars"
+    },
+    "P3": {
+     "edit_dependent": false,
+     "reason": "Signboards were already on the fronts at the start and remain visible; the starting project satisfies this.",
+     "item": "The shop signboards on the fronts remain visible"
+    },
+    "P4": {
+     "edit_dependent": false,
+     "reason": "Different facade colours per unit existed before the change; the starting project satisfies this.",
+     "item": "Neighbouring shophouse units keep their different facade colours"
+    }
+   }
+  },
+  "E-T-IO-6911566349.CS": {
+   "items": {
+    "P1": {
+     "edit_dependent": false,
+     "reason": "The corner shophouse fronting both streets existed before the change; the baseline satisfies it.",
+     "item": "The corner shophouse stays at the junction at its size, fronting onto both streets"
+    },
+    "P2": {
+     "edit_dependent": false,
+     "reason": "Turning the corner between streets was possible in the original project; it protects existing connectivity.",
+     "item": "The player can still turn the corner from one shophouse street into the other"
+    },
+    "P3": {
+     "edit_dependent": false,
+     "reason": "Building rows continuing along both streets to the junction existed in the baseline.",
+     "item": "The shophouse rows still continue along both streets up to the junction"
+    },
+    "P4": {
+     "edit_dependent": false,
+     "reason": "Walking each street end to end was possible before the change.",
+     "item": "Each shophouse street can still be walked from end to end"
+    },
+    "P5": {
+     "edit_dependent": false,
+     "reason": "The covered walkway was already continuous and walkable in the baseline.",
+     "item": "The covered walkway along the rows near the junction remains walkable"
+    }
+   }
+  },
+  "E-T-IO-6c75b47b0a.AP": {
+   "items": {
+    "P1": {
+     "edit_dependent": false,
+     "reason": "Other grounds had no lanterns before the change; the unchanged start satisfies this.",
+     "item": "The other contest grounds (pot throwing, club-and-hole, kicking, archery) have no new lanterns"
+    },
+    "P2": {
+     "edit_dependent": false,
+     "reason": "The field interior was open sand before; the start has no lanterns or supports on it, so it satisfies this.",
+     "item": "The riding space inside the mounted ball ground stays clear, with no lanterns or supports standing on the field"
+    },
+    "P3": {
+     "edit_dependent": false,
+     "reason": "The ground's size and bounds existed before the change; the unchanged start satisfies this.",
+     "item": "The mounted ball ground keeps its size and bounds"
+    },
+    "P4": {
+     "edit_dependent": false,
+     "reason": "Striking the ball on horseback worked before the change; the start satisfies this.",
+     "item": "On horseback, a ball struck with the stick still moves from the strike"
+    },
+    "P5": {
+     "edit_dependent": false,
+     "reason": "Horses, long sticks and ball existed in the original mod; the start satisfies this.",
+     "item": "The mounted ball game still has its horses, long sticks and ball"
+    }
+   }
+  },
+  "E-T-IO-6c75b47b0a.CS": {
+   "items": {
+    "P1": {
+     "edit_dependent": false,
+     "reason": "Existing holes' positions existed before the change; the unchanged start satisfies this.",
+     "item": "The existing holes stay in their places"
+    },
+    "P2": {
+     "edit_dependent": false,
+     "reason": "Existing holes already had markers in the start project; the item protects that preexisting content.",
+     "item": "The existing holes keep their markers"
+    },
+    "P3": {
+     "edit_dependent": false,
+     "reason": "Striking a ball into an existing hole counted before the change; baseline satisfies it.",
+     "item": "Striking the ball along the ground into an existing hole still counts"
+    },
+    "P4": {
+     "edit_dependent": false,
+     "reason": "Raised-border lanes are preexisting layout; the change adds a hole, not lanes. Start satisfies it if it has lanes.",
+     "item": "The course's raised-border lanes keep their layout"
+    }
+   }
+  },
+  "E-T-IO-7ecf78daed.AP": {
+   "items": {
+    "P1": {
+     "edit_dependent": false,
+     "reason": "The carriers' load cycle (take in low, go up loaded, drop at top, return empty) existed in the base lift, so the start satisfies it; only the tower setting is new.",
+     "item": "Inside the new tower the carriers still take items in low, go up loaded, give them off at the outlet at the top and come back down empty"
+    },
+    "P2": {
+     "edit_dependent": false,
+     "reason": "The conveyor frames and supports were blue steel before the change and not lattice, so the unchanged start satisfies this.",
+     "item": "The conveyor line's frames and supports keep their original look and are not restyled as steel lattice"
+    },
+    "P3": {
+     "edit_dependent": false,
+     "reason": "The sorting station's original look exists in the base and is not lattice, so the unchanged start satisfies it.",
+     "item": "The sorting station keeps its original look and is not restyled as steel lattice"
+    },
+    "P4": {
+     "edit_dependent": false,
+     "reason": "The base lift already connects to the feed at the loading point and the onward route at the outlet, so the start satisfies it.",
+     "item": "The lift stays connected to the same line ends: items reach the loading point from the same feed and leave the outlet onto the same onward route"
+    },
+    "P5": {
+     "edit_dependent": false,
+     "reason": "The line's path could already be traced by eye where it enters and leaves the lift in the base, so the start satisfies it.",
+     "item": "The path of the line can still be traced by eye where it enters and leaves the lift"
+    }
+   }
+  },
+  "E-T-IO-7ecf78daed.BF": {
+   "items": {
+    "P1": {
+     "edit_dependent": false,
+     "reason": "The lift cycling loaded up and returning empty existed before; the unchanged start satisfies it when running. The lever mention doesn't create new lift behaviour.",
+     "item": "The lift still works after the lever has been used: it cycles items up loaded and returns empty once the line runs again"
+    },
+    "P2": {
+     "edit_dependent": false,
+     "reason": "Items following the route round bends existed before the change; the unchanged project already satisfies it while running.",
+     "item": "When running, items still follow the original route round the bends onto each new heading"
+    },
+    "P3": {
+     "edit_dependent": false,
+     "reason": "Sorting by kind at the sorter existed before; the start already sends items to the right output. 'After a restart' is just running normally.",
+     "item": "Items that reach the sorter after a restart are still sent to the output for their kind"
+    },
+    "P4": {
+     "edit_dependent": false,
+     "reason": "The line carried items automatically start to end before the change; the start satisfies this in its running state, which is the default.",
+     "item": "With the lever in its running position, the line carries items by itself from start to end without player action"
+    }
+   }
+  },
+  "E-T-IO-7ecf78daed.CS": {
+   "items": {
+    "P1": {
+     "edit_dependent": true,
+     "reason": "Asserts none of the items goes to the new output, which exists only after the change; the start has no new output, so it cannot be satisfied beforehand.",
+     "item": "Raw iron, raw gold, coal and parcels still go each to its own original bin, and none goes to the new output"
+    },
+    "P2": {
+     "edit_dependent": false,
+     "reason": "Sensor reading before the push into bins existed before the change; the start has sensor sorters, though the original wording mismatches. Not tied to the new output.",
+     "item": "Items are still read by the sensor sorters on the line before being pushed off into their bins"
+    },
+    "P3": {
+     "edit_dependent": false,
+     "reason": "The intake's steady stream of items existed before the change and the start satisfies it.",
+     "item": "The intake still delivers a steady stream of items, one after another"
+    },
+    "P4": {
+     "edit_dependent": false,
+     "reason": "Self-moving transport along connected segments and bends existed before the change; the start satisfies it.",
+     "item": "Items still travel by themselves along the connected line, round its bends, from the start to the end"
+    },
+    "P5": {
+     "edit_dependent": false,
+     "reason": "The lift carrying items up loaded and returning empty existed before the change; the start satisfies it.",
+     "item": "The lift still carries items up loaded, gives them off at the top and returns empty"
+    }
+   }
+  },
+  "E-T-IO-83e0f0a96c.AP": {
+   "items": {
+    "P1": {
+     "edit_dependent": false,
+     "reason": "Doorway passage existed before the change; the unchanged start already satisfies it.",
+     "item": "The doorway beside the bar is still open and the player can walk through it into the lit back room and back"
+    },
+    "P2": {
+     "edit_dependent": false,
+     "reason": "Side tables, chairs and billiard table existed before and are unrelated to the bar restyle.",
+     "item": "The side tables, chairs and the billiard table look as they did before the change"
+    },
+    "P3": {
+     "edit_dependent": false,
+     "reason": "Bar position and doorway are pre-existing layout; the start satisfies it (or lacks it for layout reasons, not the edit).",
+     "item": "The bar still stands against the back wall at the far end of the room, on the room's axis behind the billiard table, with the doorway beside it"
+    },
+    "P4": {
+     "edit_dependent": false,
+     "reason": "Walking from entrance past the table to the bar worked before the change.",
+     "item": "The player can still walk from the entrance end past the billiard table up to the front of the bar"
+    },
+    "P5": {
+     "edit_dependent": false,
+     "reason": "Deep red walls under green ceiling existed before; the bar restyle doesn't create it.",
+     "item": "The back wall around the bar is still deep red under the green ceiling"
+    }
+   }
+  },
+  "E-T-IO-83e0f0a96c.BF": {
+   "items": {
+    "P1": {
+     "edit_dependent": false,
+     "reason": "The table was a fixed solid before the change; the start satisfies it. Table stays put when bumped, regardless of the balls becoming dynamic.",
+     "item": "The billiard table stays fixed in the middle of the floor when the player bumps or shoots it"
+    },
+    "P2": {
+     "edit_dependent": false,
+     "reason": "In the start the balls are static on the cloth at load, so it holds already; it protects the initial state.",
+     "item": "When the room loads, the balls lie still on the table's cloth inside the cushions"
+    },
+    "P3": {
+     "edit_dependent": false,
+     "reason": "The cloth was green before the change; baseline satisfies it.",
+     "item": "The billiard table's cloth is still green"
+    },
+    "P4": {
+     "edit_dependent": false,
+     "reason": "Walking around the table and between side tables worked in the original project; the baseline passes.",
+     "item": "The player can still walk around the billiard table and between the side tables without being blocked or trapped"
+    },
+    "P5": {
+     "edit_dependent": false,
+     "reason": "Side tables and chairs were static before; the starting project already satisfies this.",
+     "item": "The side tables and chairs stay where they are and do not start moving when the player walks into them"
+    }
+   }
+  },
+  "E-T-IO-83e0f0a96c.CS": {
+   "items": {
+    "P1": {
+     "edit_dependent": false,
+     "reason": "Café hanging lamps gave warm light before the change; the starting project satisfies this already (baseline_ok).",
+     "item": "Inside the café the hanging lamps still fill the room with warm artificial light; the night lighting does not darken or cool the café"
+    },
+    "P2": {
+     "edit_dependent": false,
+     "reason": "Doorway position beside the bar and its size exist in the starting project and are protected unchanged.",
+     "item": "The doorway keeps its place beside the bar and its size"
+    },
+    "P3": {
+     "edit_dependent": false,
+     "reason": "Bar counter against the back wall existed before and should look the same; the start satisfies it.",
+     "item": "The bar counter still stands against the back wall with its look unchanged"
+    },
+    "P4": {
+     "edit_dependent": false,
+     "reason": "The café was already one enclosed room under a ceiling; the start satisfies it (CR1=1), the outdoor part is only context.",
+     "item": "The café itself is still one enclosed room under its ceiling; only the space beyond the doorway is outdoors"
+    },
+    "P5": {
+     "edit_dependent": false,
+     "reason": "Billiard table and side tables with chairs existed before; the start has them, even if the table is slightly off-center.",
+     "item": "The billiard table still stands in the middle of the floor with small tables and chairs along both side walls"
+    },
+    "P6": {
+     "edit_dependent": true,
+     "reason": "The HANGAR door is in the courtyard wall only after the change; the start has no door there, so it fails before the edit.",
+     "item": "The HANGAR door, now in the courtyard wall, still takes the player to the original hangar level, and the painting in the hangar still leads back to the café"
+    }
+   }
+  },
+  "E-T-IO-bd15cf5893.AP": {
+   "items": {
+    "P1": {
+     "edit_dependent": false,
+     "reason": "Walls and bastions were stone before and stay stone; the unchanged start satisfies this, including a material boundary at the palace base.",
+     "item": "The curtain walls and bastions directly below the palace stay in their stone, with the material boundary where the palace meets the walls"
+    },
+    "P2": {
+     "edit_dependent": false,
+     "reason": "Balconies and screened windows existed with projecting carved form before; the item checks only presence and form, not material.",
+     "item": "The palace's carved balconies and screened windows are still present with their projecting, carved form"
+    },
+    "P3": {
+     "edit_dependent": false,
+     "reason": "Palace shape, storeys and position at one end existed before and are unaffected by the material change.",
+     "item": "The palace keeps its shape, storeys and position packed at one end of the long fort"
+    },
+    "P4": {
+     "edit_dependent": false,
+     "reason": "The mirror hall was already clad in mirror panels and is explicitly unchanged.",
+     "item": "The palace hall's walls and ceiling are still clad in mirror panels"
+    },
+    "P5": {
+     "edit_dependent": false,
+     "reason": "The courtyard enclosure by tall palace buildings existed before; it's about layout, not material.",
+     "item": "The palace courtyard is still enclosed on all sides by the tall palace buildings"
+    }
+   }
+  },
+  "E-T-IO-bd15cf5893.BF": {
+   "items": {
+    "P1": {
+     "edit_dependent": false,
+     "reason": "Lower gateways were open passages before the change; the start satisfies this, and the change only gates the last gateway.",
+     "item": "The lower gateways on the approach route stay open passages with no gate"
+    },
+    "P2": {
+     "edit_dependent": false,
+     "reason": "Climbing from the hill foot into the fort was possible before the change; it protects existing traversal, not the new gate's behaviour.",
+     "item": "The player can climb from the foot of the hill up the approach route into the fort"
+    },
+    "P3": {
+     "edit_dependent": false,
+     "reason": "The route's course through the successive gateways existed before the change and is protected unchanged.",
+     "item": "The approach route keeps its course up the hillside through the same successive gateways"
+    },
+    "P4": {
+     "edit_dependent": false,
+     "reason": "Exploring the enclosure along the ridge from open ground to the palace existed in the baseline, which already satisfies it.",
+     "item": "Once inside, the player can still explore the enclosure along the ridge from the open ground to the palace"
+    }
+   }
+  },
+  "E-T-IO-bd15cf5893.CS": {
+   "items": {
+    "P1": {
+     "edit_dependent": false,
+     "reason": "Open walled ground between palace and tip existed before; the start satisfies it.",
+     "item": "The ground between the palace and the far tip stays open walled ground"
+    },
+    "P2": {
+     "edit_dependent": false,
+     "reason": "Approach climb and gates existed before the change; item protects existing route, independent of pavilion.",
+     "item": "The climb from the foot of the hill up the approach route and through its gates into the fort still works"
+    },
+    "P3": {
+     "edit_dependent": false,
+     "reason": "Walking the enclosure's length was possible before; start satisfies it.",
+     "item": "The player can still walk the whole length of the enclosure along the ridge from the palace to the far end"
+    },
+    "P4": {
+     "edit_dependent": false,
+     "reason": "Wall outline along the cliff existed before; protecting it doesn't require the pavilion.",
+     "item": "The fort's walls still follow the cliff edge with the same long outline, not shortened or reshaped at the tip"
+    },
+    "P5": {
+     "edit_dependent": false,
+     "reason": "Other bastions' existing look and nothing added is satisfied by the unchanged start, which has no extra pavilions on them.",
+     "item": "The other bastions keep their existing look with nothing new added"
+    },
+    "P6": {
+     "edit_dependent": false,
+     "reason": "The white temple existed before and is unchanged in the start; the change does not alter it.",
+     "item": "The white temple at the tip is unchanged"
+    }
+   }
+  },
+  "E-T-IO-c020afada8.AP": {
+   "items": {
+    "P1": {
+     "edit_dependent": false,
+     "reason": "Units entered through gate passages before the change; the start project already satisfies this movement requirement.",
+     "item": "Units can still move from an approach road through each gate passage into the town"
+    },
+    "P2": {
+     "edit_dependent": false,
+     "reason": "Walls beside the gates stopped units before the change; 'gatehouse' only locates them, and the start satisfies it.",
+     "item": "The wall right next to each gatehouse still stops units"
+    },
+    "P3": {
+     "edit_dependent": false,
+     "reason": "Inner wall and bastion stretches away from gates are unchanged; the start has no extra towers or masonry there, so it passes.",
+     "item": "The stretches of inner wall and the pointed bastions away from the gates keep their earlier look: no new towers, gatehouse masonry or extra height spread along them"
+    },
+    "P4": {
+     "edit_dependent": false,
+     "reason": "Low, grass-covered earthworks and broad ditches existed in the starting project, so this is satisfied before any change.",
+     "item": "The defensive belt still looks low and spread out, with grass-covered earthworks and broad ditches"
+    },
+    "P5": {
+     "edit_dependent": false,
+     "reason": "Gates and their approach roads existed before the change; the start already satisfies this.",
+     "item": "Every gate is still there, each reached by its approach road from the surrounding country"
+    },
+    "P6": {
+     "edit_dependent": false,
+     "reason": "Main streets ran straight from the square to the gates before the change; the start satisfies it.",
+     "item": "Each main street still runs straight from the central square to its gate passage"
+    }
+   }
+  },
+  "E-T-IO-c020afada8.CS": {
+   "items": {
+    "P1": {
+     "edit_dependent": false,
+     "reason": "The starting project already has a large open central square; the item protects that pre-existing feature from being filled in.",
+     "item": "The central square stays a large open space, not filled by the church"
+    },
+    "P2": {
+     "edit_dependent": false,
+     "reason": "Gate-to-square street connectivity existed before the change; the item protects existing traversal.",
+     "item": "Units can still move from each gate along its main street into the central square"
+    },
+    "P3": {
+     "edit_dependent": false,
+     "reason": "The existing house blocks are present in the start project; the item only requires them to remain in place.",
+     "item": "The other house blocks around the square and along the street grid remain in place, without being demolished or reshuffled"
+    },
+    "P4": {
+     "edit_dependent": false,
+     "reason": "Dense built-up look with a standing-out open square is a pre-existing property of the start project, not something the cathedral creates.",
+     "item": "The town still looks densely built up, with the open square standing out among packed houses"
+    },
+    "P5": {
+     "edit_dependent": false,
+     "reason": "The two existing churches exist before the change; staying in place and unchanged is satisfied by the unchanged start.",
+     "item": "The two existing churches stay in place and unchanged"
+    }
+   }
+  },
+  "E-T-IO-de407dbd4c.AP": {
+   "items": {
+    "P1": {
+     "edit_dependent": false,
+     "reason": "Retaining walls were bare dry stone before the change; the start satisfies this and it protects existing content.",
+     "item": "The walled terraces' retaining walls stay bare dry stone, without turf spreading onto them"
+    },
+    "P2": {
+     "edit_dependent": false,
+     "reason": "Huts were already round tapering beehive forms before the change; the item protects that existing shape.",
+     "item": "Each hut keeps its round, tapering beehive form under the turf"
+    },
+    "P3": {
+     "edit_dependent": false,
+     "reason": "Lower walls already showed stacked flat stones in the start project; the item protects that existing look.",
+     "item": "The lower walls of each hut still show stacked flat stones"
+    },
+    "P4": {
+     "edit_dependent": false,
+     "reason": "Small dark doorways already existed open and visible in the start project; the change should not obscure them.",
+     "item": "The huts' small dark doorways remain open and visible"
+    },
+    "P5": {
+     "edit_dependent": false,
+     "reason": "Paving between huts was already stone slabs before the change; the start satisfies this.",
+     "item": "The paving between the huts stays stone slabs"
+    },
+    "P6": {
+     "edit_dependent": false,
+     "reason": "Walking the terraces among the huts was already possible in the start project; this protects existing traversal.",
+     "item": "The player can still walk the monastery terraces among the clustered huts"
+    }
+   }
+  },
+  "E-T-IO-de407dbd4c.BF": {
+   "items": {
+    "P1": {
+     "edit_dependent": false,
+     "reason": "The stone-stepped route from landing to monastery existed before the change; the unchanged start satisfies it.",
+     "item": "The stone-stepped path keeps its route from the landing up the slope to the monastery"
+    },
+    "P2": {
+     "edit_dependent": false,
+     "reason": "In the original, any fall returns the player to the landing, so a fall before any resting spot trivially does so already.",
+     "item": "A fall before the first resting spot still returns the player to the landing"
+    },
+    "P3": {
+     "edit_dependent": false,
+     "reason": "A fresh run starting at the landing is original behaviour and unaffected by the change.",
+     "item": "A fresh run still starts at the landing at the waterline"
+    },
+    "P4": {
+     "edit_dependent": false,
+     "reason": "Climbing the stairway with a felt height gain existed in the original project.",
+     "item": "Reaching the monastery still requires climbing the stairway with a felt gain in height"
+    },
+    "P5": {
+     "edit_dependent": false,
+     "reason": "The rough stone stairway look on a steep slope is original appearance, already present at the start.",
+     "item": "The climb still looks like a rough stone stairway on a steep, exposed slope"
+    }
+   }
+  },
+  "E-T-IO-de407dbd4c.CS": {
+   "items": {
+    "P1": {
+     "edit_dependent": false,
+     "reason": "The stone-stepped path from landing to monastery existed before the change; the start satisfies it.",
+     "item": "The stone-stepped path still runs from the landing up the slope to the monastery"
+    },
+    "P2": {
+     "edit_dependent": false,
+     "reason": "Player arriving at the landing at the waterline was true in the starting project.",
+     "item": "The player still arrives at the landing at the waterline at the foot of the rock"
+    },
+    "P3": {
+     "edit_dependent": false,
+     "reason": "Landing appearance is pre-existing content; the unchanged start can satisfy it, regardless of partial match.",
+     "item": "The landing still looks like a small pier at the waterline set tightly at the foot of steep rock"
+    },
+    "P4": {
+     "edit_dependent": false,
+     "reason": "Climbing the stairway to the monastery was already possible before the change.",
+     "item": "The climb up the stairway from the landing to the monastery can still be completed"
+    },
+    "P5": {
+     "edit_dependent": false,
+     "reason": "The island's silhouette from the sea was already a single steep dark rock mass in the start.",
+     "item": "Seen from the sea, the island still looks like a single steep, peaked mass of dark rock"
+    }
+   }
+  },
+  "E-T-TO-txt_11f912532ada.e3.AP": {
+   "items": {
+    "P1": {
+     "edit_dependent": false,
+     "reason": "Churchyard walls, church, piers and viaduct kept their materials before the change; the unchanged start already satisfies this, as nothing was timber.",
+     "item": "Other built structures near the stair keep their own materials: the churchyard walls, the church, the piers and the viaduct are not turned to timber"
+    },
+    "P2": {
+     "edit_dependent": false,
+     "reason": "The stair was walkable up and down before the change; this protects existing traversability.",
+     "item": "The player can walk the whole stair from the town up to the church and back down without getting stuck or falling through"
+    },
+    "P3": {
+     "edit_dependent": false,
+     "reason": "The stair already started in town and ended at the church in the starting project.",
+     "item": "The stair still starts in the town and ends at the church"
+    },
+    "P4": {
+     "edit_dependent": false,
+     "reason": "Length and course are explicitly independent of shape; the start already has the long flight.",
+     "item": "The stair keeps its length and course as before, whatever its shape was"
+    },
+    "P5": {
+     "edit_dependent": false,
+     "reason": "Town, church with graveyard and abbey ruin existed before the change; it does not depend on the edit, though the start may fail it for layout reasons.",
+     "item": "The old town, the parish church with its graveyard and the abbey ruin all still stand where they were on the far side"
+    }
+   }
+  },
+  "E-T-TO-txt_11f912532ada.e3.BF": {
+   "items": {
+    "P1": {
+     "edit_dependent": false,
+     "reason": "The open cliff edge with harbour view existed before the change; the unchanged map already satisfies it.",
+     "item": "The cliff edge stays open: the player can walk right up to it and look out over the harbour, town and bay"
+    },
+    "P2": {
+     "edit_dependent": false,
+     "reason": "Falls from viaduct or pier behaved as before without teleporting to the steps; the unchanged start satisfies this.",
+     "item": "Falls from the viaduct and from the end of the pier on the town side behave as before and do not send the player to the foot of the steps"
+    },
+    "P3": {
+     "edit_dependent": false,
+     "reason": "Walking the long stair without being moved holds in the original map, which had no teleport.",
+     "item": "Walking up and down the long flight of steps between town and church works without the player being moved"
+    },
+    "P4": {
+     "edit_dependent": false,
+     "reason": "Gravestones out to the cliff edge are original content, independent of the change; the start has them or lacks them regardless.",
+     "item": "Gravestones still spread across the cliff top right out to the edge"
+    }
+   }
+  },
+  "E-T-TO-txt_11f912532ada.e3.CS": {
+   "items": {
+    "P1": {
+     "edit_dependent": false,
+     "reason": "The harbour mouth between the two lighthouses existed before the change, so the unchanged project can satisfy it.",
+     "item": "The harbour mouth between the two pier lighthouses stays open: narrow, then widening inside"
+    },
+    "P2": {
+     "edit_dependent": false,
+     "reason": "The other pier and its lighthouse are untouched pre-existing content that the start already has.",
+     "item": "The other pier and its lighthouse are unchanged"
+    },
+    "P3": {
+     "edit_dependent": false,
+     "reason": "The pier and lighthouse existed before the change, so the start satisfies this.",
+     "item": "The pier below the churchyard and its lighthouse keep their form"
+    },
+    "P4": {
+     "edit_dependent": false,
+     "reason": "Pier reachability on foot is pre-existing behaviour that the start already has.",
+     "item": "The pier below the churchyard is as reachable on foot as before"
+    },
+    "P5": {
+     "edit_dependent": false,
+     "reason": "The churchyard lookout over the harbour, town and bay is pre-existing and unrelated to the reef extension.",
+     "item": "From the churchyard edge the player still sees the harbour, town and bay laid out below"
+    },
+    "P6": {
+     "edit_dependent": false,
+     "reason": "The reef already exists and runs out to open sea. This protects its existing orientation, which the start already satisfies.",
+     "item": "The reef still runs out into the open sea, away from the harbour, along its whole length"
+    },
+    "P7": {
+     "edit_dependent": false,
+     "reason": "The bell buoy already sits at the reef's far end in the start project, so this is preservation.",
+     "item": "The bell buoy still sits at the far end of the reef"
+    }
+   }
+  },
+  "E-T-TO-txt_27babbacad50.e1.AP": {
+   "items": {
+    "P1": {
+     "edit_dependent": false,
+     "reason": "Walking the entrance route worked before the change; the start already satisfies it.",
+     "item": "The walk in through the gates, across the main court and the second court, up to the palace stays open"
+    },
+    "P2": {
+     "edit_dependent": false,
+     "reason": "Daytime palace form and facade material existed before; the unchanged start satisfies it.",
+     "item": "By day the palace's form and overall facade material look as before"
+    },
+    "P3": {
+     "edit_dependent": false,
+     "reason": "The start has no new lighting on gardens or canal, so it satisfies this; it protects pre-existing content.",
+     "item": "The gardens behind the palace and the Grand Canal get no new lighting"
+    },
+    "P4": {
+     "edit_dependent": false,
+     "reason": "The start has no new lighting on the Trianons or Menagerie, so it satisfies this; it protects pre-existing content.",
+     "item": "The Grand Trianon, the Petit Trianon and the Menagerie get no new lighting"
+    }
+   }
+  },
+  "E-T-TO-txt_27babbacad50.e1.BF": {
+   "items": {
+    "P1": {
+     "edit_dependent": false,
+     "reason": "Player started outside the gates on the town square before the change; the unchanged project already satisfies this.",
+     "item": "The player still starts outside the gates on the town square"
+    },
+    "P2": {
+     "edit_dependent": false,
+     "reason": "The gates, main court and second court sequence existed before; the unchanged project already has this layout.",
+     "item": "The entrance sequence is unchanged: gates on the town square, the main court, then the second court at the palace's foot"
+    },
+    "P3": {
+     "edit_dependent": false,
+     "reason": "Before the change the walk across both courts to the palace worked; the item protects that existing route, even though it follows the gates opening.",
+     "item": "After the gates open, the walk across the main court and the second court reaches the palace"
+    },
+    "P4": {
+     "edit_dependent": false,
+     "reason": "Protects that other openings and court walls are not newly blocked; the start has them unblocked, so it passes unchanged.",
+     "item": "No other opening into the main court or along the court walls is newly shut or gated"
+    },
+    "P5": {
+     "edit_dependent": false,
+     "reason": "The garden walk from the palace back to the Grand Canal existed before and is unrelated to the gates change.",
+     "item": "The walk from the back of the palace through the gardens to the Grand Canal still works"
+    }
+   }
+  },
+  "E-T-TO-txt_6469bcc4c8d9.e1.AP": {
+   "items": {
+    "P1": {
+     "edit_dependent": false,
+     "reason": "Wood trees were green leaf before the change; the start satisfies this and it protects existing content outside the orchard.",
+     "item": "The big trees of the wood between the Hammersmith market and Piccadilly stay in green leaf, without blossom"
+    },
+    "P2": {
+     "edit_dependent": false,
+     "reason": "Garden trees outside the square were green before; the start already satisfies this.",
+     "item": "The garden trees around the houses on the stretches before and after the orchard square stay in green leaf"
+    },
+    "P3": {
+     "edit_dependent": false,
+     "reason": "The road ran continuously across the square before the change; this is existing behaviour the start satisfies.",
+     "item": "The road still runs continuously across the orchard square"
+    },
+    "P4": {
+     "edit_dependent": false,
+     "reason": "The driving line across the square was readable before; the start satisfies it and it protects existing drivability.",
+     "item": "The driving line across the orchard square stays clearly readable at driving speed"
+    },
+    "P5": {
+     "edit_dependent": false,
+     "reason": "The orchard's square, location and tree spread existed before; the start satisfies it and blossom is not required.",
+     "item": "The orchard keeps its place and planting: the same open square, the same spread of trees, not thinned or moved elsewhere"
+    },
+    "P6": {
+     "edit_dependent": false,
+     "reason": "Trees around the Museum were green before and sit outside the orchard; the start satisfies this.",
+     "item": "The open greenery around the Museum at the end keeps its trees in green leaf"
+    }
+   }
+  },
+  "E-T-TO-txt_6469bcc4c8d9.e1.BF": {
+   "items": {
+    "P1": {
+     "edit_dependent": false,
+     "reason": "The road in the wood was already full speed before the change; the start satisfies it and the change must keep it that way.",
+     "item": "The road through the wood still lets the kart drive at full speed"
+    },
+    "P2": {
+     "edit_dependent": false,
+     "reason": "Meadows off-road behaviour existed before; the unchanged start trivially satisfies 'no more than before'.",
+     "item": "Leaving the road in the Hammersmith meadows slows the kart no more than before"
+    },
+    "P3": {
+     "edit_dependent": false,
+     "reason": "The orchard square's off-road behaviour existed before; the unchanged start satisfies it.",
+     "item": "Leaving the road in the orchard square slows the kart no more than before"
+    },
+    "P4": {
+     "edit_dependent": false,
+     "reason": "The big trees on both sides of the road were already in the original wood; the change does not create them.",
+     "item": "The wood keeps its big trees spreading on either side of the road"
+    },
+    "P5": {
+     "edit_dependent": false,
+     "reason": "The road through the wood was already continuous from market to Piccadilly in the start project.",
+     "item": "The road through the wood stays open from the Hammersmith market to Piccadilly"
+    },
+    "P6": {
+     "edit_dependent": false,
+     "reason": "Leaving the road onto the forest floor was possible before; the start satisfies it if no barrier exists. Compatibility unclear but not change-dependent.",
+     "item": "The kart can still leave the road onto the forest floor in the wood, with no new barrier along the road"
+    }
+   }
+  },
+  "E-T-TO-txt_6469bcc4c8d9.e1.CS": {
+   "items": {
+    "P1": {
+     "edit_dependent": false,
+     "reason": "The great hall existed at the market before the change and the request says to leave it; the start satisfies this.",
+     "item": "The great hall still stands at the Hammersmith market beside the main road"
+    },
+    "P2": {
+     "edit_dependent": false,
+     "reason": "The great hall was already ornate and stood out from the low houses before the change; the start satisfies this.",
+     "item": "The great hall keeps its ornate, handsome look, standing out from the low houses around"
+    },
+    "P3": {
+     "edit_dependent": false,
+     "reason": "The main road was already continuous through the market toward the wood before the change; the start satisfies this.",
+     "item": "The main road through the Hammersmith market leads on toward the wood without a break"
+    },
+    "P4": {
+     "edit_dependent": false,
+     "reason": "The low houses in gardens around the market existed before the change and are to be left as they are.",
+     "item": "The low, modest houses in gardens around the Hammersmith market remain"
+    },
+    "P5": {
+     "edit_dependent": false,
+     "reason": "Piccadilly's public building existed before the change and is unrelated to the theatre removal; the start satisfies this.",
+     "item": "Piccadilly's big public building still stands on its market street"
+    }
+   }
+  },
+  "E-T-TO-txt_6b6b5b7ebb21.e1.AP": {
+   "items": {
+    "P1": {
+     "edit_dependent": false,
+     "reason": "The inn existed before as a big thatched hut, not on stilts; the unchanged start already satisfies this.",
+     "item": "The inn at the crater's rim keeps its own look as before; it is not raised on stilts like the town houses"
+    },
+    "P2": {
+     "edit_dependent": false,
+     "reason": "Kalo patches already lay beside the houses before the change; the start satisfies this.",
+     "item": "The cultivated plots still lie around the town houses, not removed, covered or overrun by stilts or ladders"
+    },
+    "P3": {
+     "edit_dependent": false,
+     "reason": "Houses' count and positions exist in the start; the item only asks they not change.",
+     "item": "The town keeps the same houses in the same places: none added, removed or moved"
+    },
+    "P4": {
+     "edit_dependent": false,
+     "reason": "The route from town through jungle to inn existed at baseline (FP1 satisfied).",
+     "item": "The track out of town is clear and continues on foot into the jungle belt and onward to the inn"
+    },
+    "P5": {
+     "edit_dependent": false,
+     "reason": "Zone order and distinct looks already held in the start project (CR1 satisfied).",
+     "item": "The zones still follow in order: coastal town, jungle belt crossed by the track, then the rising lava plain, each with its own look"
+    }
+   }
+  },
+  "E-T-TO-txt_6b6b5b7ebb21.e1.BF": {
+   "items": {
+    "P1": {
+     "edit_dependent": true,
+     "reason": "Reaching the brink 'by a line around the holes' presupposes holes exist; the unchanged start has no holes, so it can only be satisfied after the change.",
+     "item": "The brink can still be reached on foot from the crater floor by a line around the holes"
+    },
+    "P2": {
+     "edit_dependent": false,
+     "reason": "Wall descent and floor being hole-free and safe held before the change; the baseline already satisfies it.",
+     "item": "The crater wall descent and the crater floor have no such holes and stay safe to walk"
+    },
+    "P3": {
+     "edit_dependent": false,
+     "reason": "The rise climbing to a brink above the lake far from the inn existed before; the baseline satisfies it.",
+     "item": "The rise still climbs from the crater floor to a brink above the lake on the side far from the inn"
+    },
+    "P4": {
+     "edit_dependent": false,
+     "reason": "The lake's fountains, surges and cracked crust seen from the brink existed before the change; the baseline satisfies it.",
+     "item": "From the brink the lake still looks violently alive with glowing fountains, surges and cracked crust"
+    },
+    "P5": {
+     "edit_dependent": false,
+     "reason": "Walking back down the rise, across the floor and up to the inn was possible before the change; the baseline satisfies it.",
+     "item": "From the brink the player can walk back down the rise, across the floor and up to the inn"
+    }
+   }
+  },
+  "E-T-TO-txt_78542cb1c0a7.e1.AP": {
+   "items": {
+    "P1": {
+     "edit_dependent": false,
+     "reason": "Gate and court buildings' gilded lacquered look existed before and is unrelated to the pagoda change; the start has it (partially), so it is not edit-dependent.",
+     "item": "The gate into the first court and the court buildings beyond keep their ornate gilded and lacquered look"
+    },
+    "P2": {
+     "edit_dependent": false,
+     "reason": "Pagoda's position, height and storey count exist in the starting project; the change only alters materials, so the start satisfies this.",
+     "item": "The pagoda stays in its place on the approach, with the same height and number of storeys as before"
+    },
+    "P3": {
+     "edit_dependent": false,
+     "reason": "Torii and bronze lanterns already exist and look as before; the unchanged start satisfies it.",
+     "item": "The great torii and the bronze lanterns on their pedestals keep their look"
+    },
+    "P4": {
+     "edit_dependent": false,
+     "reason": "Order of torii, lanterns, pagoda and gate is already in the starting project; the change doesn't affect it.",
+     "item": "The approach keeps its order: torii, then the long array of lanterns, then the pagoda and the gate"
+    },
+    "P5": {
+     "edit_dependent": false,
+     "reason": "Walkable route from bridge to courts already exists in the start; preserving it does not require the stone pagoda.",
+     "item": "The approach can still be walked from the bridge up past the torii, lanterns and pagoda to the gate and into the courts"
+    },
+    "P6": {
+     "edit_dependent": false,
+     "reason": "Cryptomeria and wooded hills already exist in the start and are unrelated to the pagoda's material.",
+     "item": "The huge dark cryptomeria and the wooded hills around the approach remain"
+    }
+   }
+  },
+  "E-T-TO-txt_78542cb1c0a7.e1.BF": {
+   "items": {
+    "P1": {
+     "edit_dependent": false,
+     "reason": "Gates between courts opened freely before the change; the change only shuts the way out to the tomb stair, so the start satisfies this.",
+     "item": "The gates between the courts up to the gilded enclosure keep opening freely, each court entered from the one before"
+    },
+    "P2": {
+     "edit_dependent": false,
+     "reason": "Walking back down to the approach was open at the start, and the lock does not affect it. The start already satisfies both before and after.",
+     "item": "The way back down from any court to the approach is always open, before and after the chapel is reached"
+    },
+    "P3": {
+     "edit_dependent": false,
+     "reason": "Coming back down the stair into the courts worked in the original project; the start already satisfies it, and the lock concerns going up.",
+     "item": "After visiting the tomb, the player can come back down the stair into the courts"
+    },
+    "P4": {
+     "edit_dependent": false,
+     "reason": "The approach from the bridge to the first court gate existed and was walkable before the change.",
+     "item": "The approach from the bridge past the torii, lanterns and pagoda to the gate into the first court is walked as before"
+    },
+    "P5": {
+     "edit_dependent": false,
+     "reason": "The stair and tomb existed before the change; the item asks only that they stay unchanged, which the start satisfies.",
+     "item": "The long stair up the wooded hill and the tomb above and behind the courts are unchanged"
+    },
+    "P6": {
+     "edit_dependent": false,
+     "reason": "The chapel's dim, nearly empty state existed before the change; the item protects existing content, though the check is unclear, it is not created by the edit.",
+     "item": "The chapel in the gilded enclosure stays dim and nearly empty"
+    }
+   }
+  },
+  "E-T-VO-vid_0885d9e061b2.t1.AP": {
+   "items": {
+    "P1": {
+     "edit_dependent": false,
+     "reason": "Bridge position across the waterfall existed before the change; the start satisfies it.",
+     "item": "The footbridge still crosses in front of the waterfall at its original high position"
+    },
+    "P2": {
+     "edit_dependent": false,
+     "reason": "Walkability from ground up onto and along the bridge was already present in the original project.",
+     "item": "The player can walk from the dome's ground level up onto the footbridge and along its full length"
+    },
+    "P3": {
+     "edit_dependent": false,
+     "reason": "Waterfall falling from roof opening into basin was already in the hero view before the change.",
+     "item": "The hero view from in front still shows the waterfall falling from the roof opening into its basin"
+    },
+    "P4": {
+     "edit_dependent": false,
+     "reason": "The train running past the waterfall base existed before and is unrelated to the bridge restyle.",
+     "item": "The little train still runs along its track past the base of the waterfall"
+    },
+    "P5": {
+     "edit_dependent": false,
+     "reason": "The lattice roof's glass-and-steel look existed before; the change only restyles the bridge.",
+     "item": "The dome's lattice roof keeps its glass-and-steel look"
+    }
+   }
+  },
+  "E-T-VO-vid_0885d9e061b2.t1.BF": {
+   "items": {
+    "P1": {
+     "edit_dependent": false,
+     "reason": "The train already ran back and forth on its own before the change; it is a baseline behaviour that must persist when no one is aboard.",
+     "item": "Whenever the player is not aboard, the little train moves along its track by itself"
+    },
+    "P2": {
+     "edit_dependent": false,
+     "reason": "The track's route low in front of the waterfall base existed in the original project, so the start satisfies it.",
+     "item": "The track keeps its original route low in front of the base of the waterfall"
+    },
+    "P3": {
+     "edit_dependent": false,
+     "reason": "The dense greenery around the track was already in the original dome and the start satisfies it.",
+     "item": "The dense greenery around the track stays in place"
+    },
+    "P4": {
+     "edit_dependent": false,
+     "reason": "Walking the ground level up onto the footbridge was already possible in the original project; it does not depend on riding the train.",
+     "item": "The player can still walk through the dome's ground level up onto the footbridge"
+    },
+    "P5": {
+     "edit_dependent": false,
+     "reason": "The hero view of the waterfall falling into its basin beneath the bridge already existed before the change.",
+     "item": "The hero view from in front still shows the waterfall falling into its basin beneath the footbridge"
+    }
+   }
+  },
+  "E-T-VO-vid_36189d888e0a.t1.AP": {
+   "items": {
+    "P1": {
+     "edit_dependent": false,
+     "reason": "Towers were dark blue glass by day before the change; the unchanged start already satisfies this and baseline_ok confirms it.",
+     "item": "By day the towers still look like dark blue glass, with no glowing or pale white windows"
+    },
+    "P2": {
+     "edit_dependent": false,
+     "reason": "The old city had no lit windows or glow before; the unchanged start satisfies this since the change only targets the towers.",
+     "item": "At night the old low-rise city, the palace and gates and the courtyard quarter in front of the towers are not given lit windows or glow by this change"
+    },
+    "P3": {
+     "edit_dependent": false,
+     "reason": "Tower shapes, heights and positions existed before the change; the start satisfies this.",
+     "item": "The towers keep their shapes, heights and positions directly beside / behind the low-rise traditional city"
+    },
+    "P4": {
+     "edit_dependent": false,
+     "reason": "The daytime hill overview with historic core and modern district existed before the change.",
+     "item": "By day the wide view from the hill still shows the historic core and its main landmark together with the modern district beyond"
+    },
+    "P5": {
+     "edit_dependent": false,
+     "reason": "Red walls with golden roofs and grey brick houses were original content, unchanged by the edit.",
+     "item": "The palace and gates keep red walls under golden tiled roofs and the courtyard houses keep grey brick and grey tile"
+    }
+   }
+  },
+  "E-T-VO-vid_36189d888e0a.t1.BF": {
+   "items": {
+    "P1": {
+     "edit_dependent": false,
+     "reason": "Lanes, house doorways and courtyard-wall openings were passable before the change and at night too; the gates only affect palace walls, so the unchanged start satisfies it.",
+     "item": "At night the courtyard lanes, courtyard-house doorways and courtyard-wall gate openings stay passable"
+    },
+    "P2": {
+     "edit_dependent": false,
+     "reason": "Bridges and the old-quarter-to-towers route were walkable before the change; nothing about the change is needed to satisfy walkability at night.",
+     "item": "At night the bridges and the route from the old quarter into the glass towers can still be walked"
+    },
+    "P3": {
+     "edit_dependent": false,
+     "reason": "Gate passages were open by day and led onto the plaza before the change; the start satisfies this.",
+     "item": "By day the gate passages are open and lead onto the plaza with the halls inside"
+    },
+    "P4": {
+     "edit_dependent": false,
+     "reason": "Red walls under golden tiled roofs on gate buildings existed before the change; it protects prior appearance.",
+     "item": "The gate buildings keep red walls under golden tiled roofs"
+    }
+   }
+  },
+  "E-T-VO-vid_36189d888e0a.t1.CS": {
+   "items": {
+    "P1": {
+     "edit_dependent": false,
+     "reason": "Other houses and lane walls were grey brick/tile before the change; the start satisfies it. It protects existing palette from spreading.",
+     "item": "The other courtyard houses and lane walls keep plain grey brick and grey tile, with no new lanterns, painted eaves or red-and-gold colours beyond what the base already had"
+    },
+    "P2": {
+     "edit_dependent": true,
+     "reason": "Refers to the lane with the teahouse, which exists only after the change; the unchanged start has no teahouse lane.",
+     "item": "The lane with the teahouse can still be walked past the teahouse in both directions"
+    },
+    "P3": {
+     "edit_dependent": true,
+     "reason": "Houses on either side of the teahouse presuppose the teahouse exists; the start has no teahouse to flank.",
+     "item": "The courtyard houses on either side of the teahouse still stand as walled courtyard houses"
+    },
+    "P4": {
+     "edit_dependent": false,
+     "reason": "Grid of courtyard houses and lanes existed before; 'around the teahouse' is only locational. Baseline may lack it for other reasons, so false.",
+     "item": "The courtyard quarter keeps its grid of low courtyard houses and lanes around the teahouse"
+    },
+    "P5": {
+     "edit_dependent": false,
+     "reason": "Routes from the quarter to the palace and towers existed before the change and are unrelated to the teahouse.",
+     "item": "The routes from the courtyard quarter to the palace core and into the towers can still be walked"
+    }
+   }
+  },
+  "E-T-VO-vid_3a02ca02cf88.t1.AP": {
+   "items": {
+    "P1": {
+     "edit_dependent": false,
+     "reason": "Moving traffic trains with lit headlights existed before the change; baseline satisfies it and the change only targets parked cars.",
+     "item": "The moving traffic trains on the running tracks keep their modern look, including lit headlights"
+    },
+    "P2": {
+     "edit_dependent": false,
+     "reason": "Train-top route (climb, run roofs, jump to next track, drop) existed at baseline and passed the compatibility check.",
+     "item": "The player can still climb onto the standing cars and run along their roofs, then jump across to a train on the next track and drop back to the track"
+    },
+    "P3": {
+     "edit_dependent": false,
+     "reason": "Parked car positions are fixed in the starting project; the item checks they remain unchanged.",
+     "item": "The standing cars stay at the same places along the route"
+    },
+    "P4": {
+     "edit_dependent": false,
+     "reason": "Starting cars have a size and footprint; the item checks it is preserved, not something the restyle creates.",
+     "item": "The standing cars keep about the same overall size and footprint"
+    },
+    "P5": {
+     "edit_dependent": false,
+     "reason": "Ramp and ladders onto standing car roofs existed before; baseline failure stems from missing off-track sections, not from the requested restyle.",
+     "item": "The ramp and the ladders at the ends of the boxcars still take the player up onto the roofs of the standing cars"
+    }
+   }
+  },
+  "E-T-VO-vid_3a02ca02cf88.t1.BF": {
+   "items": {
+    "P1": {
+     "edit_dependent": false,
+     "reason": "A runner who keeps moving forward is not caught in the starting project either, since the wall only shoves. It protects existing forward-run behaviour.",
+     "item": "A player who keeps running forward along the course is not caught by the wall of trains"
+    },
+    "P2": {
+     "edit_dependent": false,
+     "reason": "The change request says the wall already creeps up behind the runner, so the start has this behaviour. The baseline_fail note about no wall seems wrong or is a separate matter.",
+     "item": "The wall of trains still starts behind the runner and creeps up during the run"
+    },
+    "P3": {
+     "edit_dependent": false,
+     "reason": "Ordinary traffic trains already behave as before in the starting project and have no catch rule. This protects existing behaviour.",
+     "item": "Ordinary moving trains on the tracks (not the wall) keep their own behaviour toward the runner and are not given the catch-and-restart rule"
+    },
+    "P4": {
+     "edit_dependent": false,
+     "reason": "Barrier jump/slide requirements existed before the change and are unrelated to the wall change.",
+     "item": "Low barriers still need a jump or vault and raised barriers a slide or duck"
+    },
+    "P5": {
+     "edit_dependent": false,
+     "reason": "It concerns barrier collision behaviour, which existed before. Any start failure comes from the barrier's own restart behaviour, not from the requested change.",
+     "item": "Bumping into a barrier does not trigger the caught restart"
+    },
+    "P6": {
+     "edit_dependent": false,
+     "reason": "The train-top route and drop back to the track already worked in the starting project (FP4=1, baseline_ok).",
+     "item": "A run that is not caught can still go on through to the train-top route and drop back to the track"
+    }
+   }
+  },
+  "E-T-VO-vid_3a02ca02cf88.t1.CS": {
+   "items": {
+    "P1": {
+     "edit_dependent": true,
+     "reason": "Refers to 'under the footbridge', which only exists after the change; the start has no footbridge, though trains already ran on every track.",
+     "item": "Trains keep travelling along every track under the footbridge"
+    },
+    "P2": {
+     "edit_dependent": true,
+     "reason": "Tracks 'under and beside the footbridge' presuppose the footbridge; the unchanged start cannot satisfy it, though the tracks were running lanes before.",
+     "item": "The running tracks under and beside the footbridge stay open as running lanes"
+    },
+    "P3": {
+     "edit_dependent": true,
+     "reason": "Readability while approaching, crossing and passing under the footbridge concerns the new bridge; the start lacks it and cannot satisfy this.",
+     "item": "While approaching, crossing and passing under the footbridge, the runner and the trains and barriers ahead stay readable"
+    },
+    "P4": {
+     "edit_dependent": false,
+     "reason": "Protects pre-existing off-track sections (station, roof routes); independent of the footbridge. The start fails only because it lacks some content, which counts as false.",
+     "item": "The existing off-track sections (the station section and the two roof routes, by the ramp and by the boxcar ladders) can still be entered, crossed and left back down to the track"
+    },
+    "P5": {
+     "edit_dependent": false,
+     "reason": "Train-top route existed before the change and the start satisfies it (FP4=1); it does not depend on the footbridge.",
+     "item": "The train-top route still works: climb onto the trains, run along the roofs, jump to the next track's train and drop back to the track"
+    }
+   }
+  },
+  "E-T-VO-vid_4c7cbea650bf.t1.AP": {
+   "items": {
+    "P1": {
+     "edit_dependent": false,
+     "reason": "Hip/pyramid and deck existed before with concrete look; the starting project satisfies it if it has them.",
+     "item": "The hip / pyramid and its deck keep their original concrete look"
+    },
+    "P2": {
+     "edit_dependent": false,
+     "reason": "Rim boxes existed before; the start keeps them unchanged, so it satisfies 'stay as-is' regardless of the cyan paint.",
+     "item": "The surfaces of the raised boxes / decks at the bowl rim stay concrete"
+    },
+    "P3": {
+     "edit_dependent": false,
+     "reason": "Pink edge marking exists in the start and should persist; independent of the bowl restyle.",
+     "item": "The edge marking of the raised boxes / decks at the bowl rim keeps its original colour"
+    },
+    "P4": {
+     "edit_dependent": false,
+     "reason": "Riding behaviour of the bowl existed before the change and the start satisfies it.",
+     "item": "The bowl still rides as before: the player can carve its walls, launch off the edge, land on the transition and keep riding"
+    },
+    "P5": {
+     "edit_dependent": false,
+     "reason": "Layout, shape and depth are pre-existing; the unchanged start satisfies it.",
+     "item": "The park layout is unchanged: the bowl keeps its place, shape and depth, still joined to the hip and rim decks as one rideable park"
+    },
+    "P6": {
+     "edit_dependent": false,
+     "reason": "Aerial rotation above the coping is pre-existing behaviour; it does not require the wood or pipe change, so the start can satisfy it.",
+     "item": "Aerial rotations above the bowl edge still show the rider and board visibly rotating high above the coping"
+    }
+   }
+  },
+  "E-T-VO-vid_4c7cbea650bf.t1.BF": {
+   "items": {
+    "P1": {
+     "edit_dependent": false,
+     "reason": "Best-single-run standing scoring existed before the change (baseline_ok); the change only adds a pre-run message.",
+     "item": "Only the best single run counts in the standings: a weaker later run does not lower or add to the player's standing score"
+    },
+    "P2": {
+     "edit_dependent": false,
+     "reason": "Pre-run standings table with competitors ordered by score already existed at baseline (baseline_ok).",
+     "item": "The standings table before a run still lists the other competitors with their best scores, ordered by score, and can be read before the run starts"
+    },
+    "P3": {
+     "edit_dependent": false,
+     "reason": "Place updating by best score and display after each run existed before the change (baseline_ok).",
+     "item": "After each completed run the player's place still updates by their best score and is shown"
+    },
+    "P4": {
+     "edit_dependent": false,
+     "reason": "Post-run result display with name, all run scores and rank existed at baseline (baseline_ok).",
+     "item": "The result display right after a run still shows the player's name, all run scores side by side and the current rank"
+    },
+    "P5": {
+     "edit_dependent": false,
+     "reason": "Countdown-driven runs 2 and 3 existed before the change (45s countdown, baseline_ok).",
+     "item": "Runs 2 and 3 still start with the visible countdown and end when it runs out"
+    }
+   }
+  },
+  "E-T-VO-vid_4c7cbea650bf.t1.CS": {
+   "items": {
+    "P1": {
+     "edit_dependent": false,
+     "reason": "Other rim boxes existed flat-topped before the change; the unchanged start satisfies this.",
+     "item": "The other raised boxes / decks at the bowl rim stay as they were: flat-topped, same place and look"
+    },
+    "P2": {
+     "edit_dependent": false,
+     "reason": "Bowl, curved walls and contrasting coping existed before; the start already satisfies this look.",
+     "item": "Away from the replaced box, the bowl, its curved walls and its contrasting coping look as before"
+    },
+    "P3": {
+     "edit_dependent": false,
+     "reason": "Hip/pyramid and its deck existed before and remain unchanged; the start satisfies it.",
+     "item": "The hip / pyramid and its deck are unchanged"
+    },
+    "P4": {
+     "edit_dependent": false,
+     "reason": "Carving, airing off the coping and landing worked in the original project elsewhere in the bowl.",
+     "item": "Riding a line through the bowl elsewhere still works: carving walls, airing off the coping, landing and riding on"
+    },
+    "P5": {
+     "edit_dependent": false,
+     "reason": "Air tricks off the coping with distinguishable tricks existed before; the start satisfies it.",
+     "item": "Air tricks off the coping stay under player control and can be told apart as before"
+    }
+   }
+  },
+  "E-T-VO-vid_502243ca1a9b.t1.AP": {
+   "items": {
+    "P1": {
+     "edit_dependent": false,
+     "reason": "Pale blue chains existed before the change and the start already satisfies this; the towers' restyle doesn't affect chain color.",
+     "item": "The suspension chains are still pale blue"
+    },
+    "P2": {
+     "edit_dependent": false,
+     "reason": "Chains running from tower tops to both banks existed before and are unchanged by the restyle.",
+     "item": "The suspension chains still run from the tower tops down to both banks"
+    },
+    "P3": {
+     "edit_dependent": false,
+     "reason": "Walkways joining the towers high up existed before; the start satisfies this.",
+     "item": "The two horizontal walkways still join the two towers high up"
+    },
+    "P4": {
+     "edit_dependent": false,
+     "reason": "Driving along the closed deck through tower openings was already working at the start.",
+     "item": "With the deck closed, a ground unit can still drive along the low road deck through the openings in both towers from one bank to the other"
+    },
+    "P5": {
+     "edit_dependent": false,
+     "reason": "Deck open/close toggle existed before the change and the start satisfies it.",
+     "item": "The two-tower bridge deck can still be opened so ground units cannot cross between the towers, and closed again so they can"
+    },
+    "P6": {
+     "edit_dependent": true,
+     "reason": "Requires towers to show as dark iron lattice towers, which only exists after the requested change; the starting stone towers fail it.",
+     "item": "With the two-tower bridge's deck opened, both towers still show as the dark iron lattice towers"
+    }
+   }
+  },
+  "E-T-VO-vid_502243ca1a9b.t1.BF": {
+   "items": {
+    "P2": {
+     "edit_dependent": false,
+     "reason": "Landmark name announcements existed before the change; the unchanged start already satisfies them.",
+     "item": "The landmark names still appear when the player arrives at or first sees the parliament and the two-tower bridge"
+    },
+    "P3": {
+     "edit_dependent": false,
+     "reason": "Moving units and ending turns worked before the change, including on turns 3, 6, 9; the start satisfies it.",
+     "item": "Turns still pass normally: the player can move units and end the turn every turn, including the bell turns"
+    },
+    "P4": {
+     "edit_dependent": false,
+     "reason": "Bridge deck open/close toggle existed before the change and the baseline satisfies it.",
+     "item": "The two-tower bridge deck can still be opened to stop ground units crossing and closed again to let them cross"
+    },
+    "P5": {
+     "edit_dependent": false,
+     "reason": "Clock tower with clock faces near the top existed before; the change does not create it.",
+     "item": "The clock tower still stands at the end of the parliament with its clock faces near the top"
+    },
+    "P6": {
+     "edit_dependent": false,
+     "reason": "Clock hands advancing each turn and day/night following the clock existed before; the start satisfies it.",
+     "item": "The clock hands still advance each turn and day and night still follow the clock"
+    }
+   }
+  },
+  "E-T-VO-vid_6d84fc825226.t1.AP": {
+   "items": {
+    "P1": {
+     "edit_dependent": false,
+     "reason": "Surrounding streets and terracotta blocks existed before the change and the starting project already satisfies this (VP4=1); it protects pre-existing fabric.",
+     "item": "The streets and low terracotta-roofed blocks right around the amphitheatre are as they were, not overwritten by the completed ring"
+    },
+    "P2": {
+     "edit_dependent": false,
+     "reason": "The elliptical footprint, location among streets and large size already exist in the starting project (CR2=1); the item protects them.",
+     "item": "The amphitheatre keeps its elliptical footprint, its place among the streets and its size, still far larger than the buildings around it"
+    },
+    "P3": {
+     "edit_dependent": false,
+     "reason": "The tour already includes the amphitheatre as stops 16/17 in the starting project; this does not depend on the ring being completed.",
+     "item": "The city tour still leads the player to the amphitheatre as one of its milestones"
+    }
+   }
+  },
+  "E-T-VO-vid_6d84fc825226.t1.BF": {
+   "items": {
+    "P1": {
+     "edit_dependent": false,
+     "reason": "The lion-head fountain existed before and did nothing when items were tossed in; the unchanged start satisfies this.",
+     "item": "The lion-head fountain in front of the temple does not carry the player anywhere when something is tossed into it"
+    },
+    "P2": {
+     "edit_dependent": false,
+     "reason": "Fountain placement in the alleys and basin size existed before the change; the start satisfies it.",
+     "item": "The alley fountain is still wedged into its tight block of narrow alleys, set against the building front, its basin not widened or moved"
+    },
+    "P3": {
+     "edit_dependent": false,
+     "reason": "Turquoise water against the pale facade is pre-existing look; the start has it, if only partially.",
+     "item": "The alley fountain's basin still holds turquoise water against the pale sculpted facade"
+    },
+    "P4": {
+     "edit_dependent": false,
+     "reason": "Temple, portico and lion-head fountain appearance existed before; the unchanged start satisfies it.",
+     "item": "The domed temple with its portico and the lion-head fountain in its square look as they did"
+    },
+    "P5": {
+     "edit_dependent": false,
+     "reason": "Walkable tour, including the alley-to-temple route on foot, existed before; the start already satisfies it.",
+     "item": "The tour can still be followed on foot, including the walk from the alley fountain to the temple stop"
+    }
+   }
+  },
+  "E-T-VO-vid_6d84fc825226.t1.CS": {
+   "items": {
+    "P1": {
+     "edit_dependent": false,
+     "reason": "The alley fountain existed before and is untouched by the temple-square change; the start already satisfies it.",
+     "item": "The fountain squeezed into tight alleys is still a fountain, still set against its building front in the alley block"
+    },
+    "P2": {
+     "edit_dependent": false,
+     "reason": "Alley fountain's turquoise water and pale facade existed before; the change doesn't affect it. Any start shortfall is unrelated to the edit.",
+     "item": "The alley fountain's basin still holds turquoise water against the pale sculpted facade"
+    },
+    "P3": {
+     "edit_dependent": false,
+     "reason": "The temple and portico existed before and the start satisfies it; the change only swaps the fountain in front.",
+     "item": "The domed round temple and its triangular-pediment columned portico are unchanged, still sunk among low roofs"
+    },
+    "P4": {
+     "edit_dependent": false,
+     "reason": "The temple square was walkable before; the start satisfies it, though it names the new centrepiece.",
+     "item": "The square in front of the temple can still be walked: the player can go round the new centrepiece and reach the portico from the surrounding streets"
+    },
+    "P5": {
+     "edit_dependent": false,
+     "reason": "The tour already had a temple stop (station 7/8) before the change, so the start satisfies it.",
+     "item": "The city tour still has its stop at the temple"
+    }
+   }
+  },
+  "E-T-VO-vid_7cbfa34ef827.t1.BF": {
+   "items": {
+    "P1": {
+     "edit_dependent": false,
+     "reason": "Midnight frog outcome existed before the change (FP3=1 at baseline); the deadline stays midnight.",
+     "item": "The deadline is still midnight: the frog outcome triggers at 12:00"
+    },
+    "P2": {
+     "edit_dependent": false,
+     "reason": "Baseline already tracks the deadline; fitting after midnight not giving success is pre-existing behaviour.",
+     "item": "Fitting the slipper after midnight does not give success"
+    },
+    "P3": {
+     "edit_dependent": false,
+     "reason": "Success before midnight was reachable in the original; the item protects that pre-existing success path, even though the shorter window affects it.",
+     "item": "Hurrying straight from the quest, the prince fitting the slipper before midnight is still reachable and leads to the success outcome"
+    },
+    "P4": {
+     "edit_dependent": false,
+     "reason": "Opening event and setup preceding the quest already existed at baseline, in order.",
+     "item": "The opening event and the setup still play before the quest, in their order"
+    },
+    "P5": {
+     "edit_dependent": false,
+     "reason": "Fairy godmother already stated the slipper-before-midnight goal at baseline (CR4=1).",
+     "item": "The fairy godmother still states the goal of the prince putting the slipper on the girl's foot before midnight"
+    },
+    "P6": {
+     "edit_dependent": false,
+     "reason": "The frog-forever penalty statement already existed at baseline (CR4=1).",
+     "item": "The fairy godmother still states the frog-forever penalty for missing midnight"
+    }
+   }
+  },
+  "E-T-VO-vid_7cbfa34ef827.t1.CS": {
+   "items": {
+    "P1": {
+     "edit_dependent": false,
+     "reason": "Midnight deadline with frog-forever penalty existed before the change; the unchanged start already satisfies it.",
+     "item": "Reaching midnight without the fitting still leads to the frog-forever penalty"
+    },
+    "P2": {
+     "edit_dependent": false,
+     "reason": "The palace ball with guests existed before and is unrelated to Cinderella's waiting location; the start satisfies it.",
+     "item": "The ball still takes place in the palace with its guests"
+    },
+    "P3": {
+     "edit_dependent": false,
+     "reason": "The helper's statement of goal and penalty is pre-existing content (CR4) and the start already satisfies it.",
+     "item": "The helper still states the goal of the prince putting the slipper on the girl's foot before midnight and the frog-forever penalty"
+    },
+    "P4": {
+     "edit_dependent": false,
+     "reason": "The frog prince following the player and reverting after the fitting existed before; the start had that behaviour, only the fitting location changes.",
+     "item": "The frog prince still follows the player and turns back into the prince after the fitting"
+    },
+    "P5": {
+     "edit_dependent": false,
+     "reason": "The quest journey across the forest carrying the slipper with the girl and frog existed before the change.",
+     "item": "The heroine still crosses the forest carrying the slipper with the other girl and the frog along"
+    },
+    "P6": {
+     "edit_dependent": true,
+     "reason": "Asks about a forest clearing where the prince now waits; that clearing as a waiting place is created by the change, so the start fails it.",
+     "item": "The forest clearing where the prince now waits keeps its fallen logs, mossy trunks and warm daylight look"
+    },
+    "P7": {
+     "edit_dependent": false,
+     "reason": "The thorn wall and wand choice are existing content; the start satisfies it if it has them, regardless of the change.",
+     "item": "The thorn wall of the Withered Wood and the wand choice are unchanged"
+    }
+   }
+  },
+  "E-T-VO-vid_822a0bfacf16.t1.AP": {
+   "items": {
+    "P1": {
+     "edit_dependent": false,
+     "reason": "Rock cones existed before and were pale/orange; the start has no roofs on them, so it satisfies this.",
+     "item": "The rock cones / spires standing among the town buildings keep their pale rock look, with no roofs or tiles added to them"
+    },
+    "P2": {
+     "edit_dependent": false,
+     "reason": "Pale walls existed before the change; the starting project already has pale town building walls.",
+     "item": "The walls of the town buildings stay pale"
+    },
+    "P3": {
+     "edit_dependent": false,
+     "reason": "Building positions in the valley existed before; the start already satisfies their placement below the lookout.",
+     "item": "The town buildings stay in their places in the valley below the lookout"
+    },
+    "P4": {
+     "edit_dependent": false,
+     "reason": "Low wall height is a pre-existing property of the buildings; the start already satisfies it.",
+     "item": "The walls of the town buildings keep their low height"
+    },
+    "P5": {
+     "edit_dependent": false,
+     "reason": "Open view from the lookout over the valley and balloon sky is pre-existing behaviour, not created by the roofs.",
+     "item": "From the lookout terrace the view out over the valley and the balloon-filled sky stays open and unobstructed"
+    },
+    "P6": {
+     "edit_dependent": false,
+     "reason": "Rock ridges and spires outside the town exist before the change; keeping their shape and colour is satisfied by the start.",
+     "item": "The pale rounded rock ridges and spires outside the town keep their shape and pale colour"
+    }
+   }
+  },
+  "E-T-VO-vid_822a0bfacf16.t1.BF": {
+   "items": {
+    "P1": {
+     "edit_dependent": false,
+     "reason": "Cushions with their look and positions existed before the change; the starting project already satisfies this.",
+     "item": "The cushions keep their look and their places along the railing"
+    },
+    "P2": {
+     "edit_dependent": false,
+     "reason": "Floor, railing, rock face and props were not seats before; the starting project satisfies this trivially.",
+     "item": "Other terrace blocks (floor, railing, rock face, other props) do not become seats"
+    },
+    "P3": {
+     "edit_dependent": false,
+     "reason": "Walking along cushions and stepping to the railing without auto-seating worked before the change; baseline satisfies it.",
+     "item": "The player can still walk along the seating and step up to the railing without being seated automatically"
+    },
+    "P4": {
+     "edit_dependent": false,
+     "reason": "The unobstructed view from the terrace over valley, balloons and hills existed before; the baseline can satisfy it without any seating feature.",
+     "item": "The view from the terrace over the valley, balloons and hills stays unobstructed"
+    }
+   }
+  },
+  "E-T-VO-vid_822a0bfacf16.t1.CS": {
+   "items": {
+    "P1": {
+     "edit_dependent": false,
+     "reason": "Cushions along the railing existed before the change; the starting project already satisfies this.",
+     "item": "The row of floor cushions along the railing stays complete on the terrace"
+    },
+    "P2": {
+     "edit_dependent": false,
+     "reason": "The railing existed at the start; the 'open at most at stair head' clause is a tolerance, so the unchanged project satisfies it.",
+     "item": "The low railing still runs along the terrace's open edge, open at most where the stair head is"
+    },
+    "P3": {
+     "edit_dependent": false,
+     "reason": "The lookout was already high above the town at the start; this protects the existing height difference.",
+     "item": "The lookout still sits high above the town; neither the terrace was lowered nor the town raised"
+    },
+    "P4": {
+     "edit_dependent": false,
+     "reason": "Town buildings existed before the change; the unchanged project already has them.",
+     "item": "The town buildings around the stair landing are still there"
+    },
+    "P5": {
+     "edit_dependent": false,
+     "reason": "Walking along the terrace without falling off the edge was already true at the start (FP2 satisfied).",
+     "item": "Walking along the terrace past the stair head does not drop the player off the terrace edge"
+    },
+    "P6": {
+     "edit_dependent": false,
+     "reason": "The player spawns directly on the terrace at the start, so the original arrival already works.",
+     "item": "The original way of arriving at the lookout still works"
+    }
+   }
+  },
+  "E-T-VO-vid_bb7a508ee81a.t1.AP": {
+   "items": {
+    "P1": {
+     "edit_dependent": false,
+     "reason": "The starting tower already has clock faces near its top on their sides; this protects existing content, independent of brick or spire.",
+     "item": "The clock faces are still near the top of the tower, on every side that had one"
+    },
+    "P2": {
+     "edit_dependent": false,
+     "reason": "The original tower was already slim; the item checks the silhouette is preserved, which the start satisfies.",
+     "item": "The clock tower keeps its slim silhouette"
+    },
+    "P3": {
+     "edit_dependent": false,
+     "reason": "Excluding the spire, the original clock tower already stood below the neighbouring glass towers; the start satisfies this.",
+     "item": "Measured up to the clock section, not counting the new spire, the clock tower still stands below the taller glass towers beside it"
+    },
+    "P4": {
+     "edit_dependent": false,
+     "reason": "The neighbouring glass towers already have glass looks at the start and are not brick or copper, so the start satisfies it.",
+     "item": "The neighbouring glass towers (the dark green curved-base tower and the white grid-facade tower) keep their glass look and are not restyled in brick or copper"
+    },
+    "P5": {
+     "edit_dependent": false,
+     "reason": "The tower's location among glass towers above lower blocks exists at the start; the change does not move it.",
+     "item": "The clock tower stands in the same place, among the glass towers above the dense lower blocks"
+    },
+    "P6": {
+     "edit_dependent": false,
+     "reason": "Protects the existing district palette and lighting; the start either has it or lacks it for other reasons, not because of the change.",
+     "item": "The rest of the district keeps its palette: blue-green glass towers against red/orange brick and cream stone blocks, green river water, warm low golden light"
+    }
+   }
+  },
+  "E-T-VO-vid_bb7a508ee81a.t1.BF": {
+   "items": {
+    "P1": {
+     "edit_dependent": false,
+     "reason": "Non-river falls (ramps, vantage points, elevated railway) behave as before and never teleported to the glass tower in the start project; satisfied by the unchanged project.",
+     "item": "Falls that do not end in the river (off a ramp, a vantage point or the elevated railway) behave as in the base and never send the kart to the glass tower"
+    },
+    "P2": {
+     "edit_dependent": false,
+     "reason": "Crossing a bridge triggered no reset in the starting project; the unchanged mod already satisfies it.",
+     "item": "Driving across a bridge does not trigger any reset; the kart crosses normally"
+    },
+    "P3": {
+     "edit_dependent": false,
+     "reason": "Water was already undrivable and separated the banks before the change; the start satisfies this.",
+     "item": "The river still separates the two banks: the water is not turned into a drivable surface"
+    },
+    "P4": {
+     "edit_dependent": false,
+     "reason": "The glass tower already stood at the far end of the river in the starting project.",
+     "item": "The tall slim glass tower still stands at the far end of the river, closing off the river view"
+    },
+    "P5": {
+     "edit_dependent": false,
+     "reason": "The enclosed river corridor between tower walls existed before the change; the start satisfies it.",
+     "item": "The view along the river still reads as an enclosed corridor of water between tall tower walls"
+    },
+    "P6": {
+     "edit_dependent": false,
+     "reason": "Driving beside the river without entering water caused no reset in the start project; the unchanged mod satisfies it.",
+     "item": "Driving along the roads and banks beside the river, without entering the water, causes no reset"
+    }
+   }
+  },
+  "E-T-VO-vid_bb7a508ee81a.t1.CS": {
+   "items": {
+    "P1": {
+     "edit_dependent": false,
+     "reason": "The round towers stood on the bank before the change; the starting project already satisfies this.",
+     "item": "The pair of round towers still stands on the bank at the same place"
+    },
+    "P2": {
+     "edit_dependent": false,
+     "reason": "Tower form with stacked rings existed before; the start already satisfies it, including the side facing the bridge.",
+     "item": "The round towers keep their form with stacked ring-shaped floors, including the side where the bridge joined"
+    },
+    "P3": {
+     "edit_dependent": false,
+     "reason": "Other low bridges existed before the change; the unchanged start already has them.",
+     "item": "The other low bridges along the river still stand, crossing the river at intervals"
+    },
+    "P4": {
+     "edit_dependent": false,
+     "reason": "The start has multiple bridges that kart can cross; crossing on a remaining bridge already works before the change.",
+     "item": "A kart can still cross the river on one of the remaining bridges, from the streets on one bank to the streets on the other"
+    },
+    "P5": {
+     "edit_dependent": false,
+     "reason": "The tower area was already reachable by driving in the start project; the change doesn't create this.",
+     "item": "The area around the round towers can still be reached from the rest of the district by driving"
+    },
+    "P6": {
+     "edit_dependent": false,
+     "reason": "The river already read as an enclosed corridor between tower walls before the change; the start satisfies it.",
+     "item": "The view along the river still reads as an enclosed corridor of water between tower walls on both banks"
+    }
+   }
+  },
+  "E-T-VO-vid_d921d48cf861.t1.BF": {
+   "items": {
+    "P1": {
+     "edit_dependent": false,
+     "reason": "Boost carrying through a drift without braking existed before the change; the unchanged project satisfies it (baseline_ok).",
+     "item": "Drifting through a bend during a boost, without braking, still keeps the boost going through and out of the drift"
+    },
+    "P2": {
+     "edit_dependent": false,
+     "reason": "Unbraked boost speed burst existed before the change; the starting project already satisfies it.",
+     "item": "Boosting without braking still gives a speed burst as strong as before"
+    },
+    "P3": {
+     "edit_dependent": false,
+     "reason": "Unbraked boost duration is original behaviour; the starting project already satisfies it.",
+     "item": "Boosting without braking still lasts as long as before"
+    },
+    "P4": {
+     "edit_dependent": false,
+     "reason": "Braking outside a boost is original behaviour that the change leaves alone; the start has it, so it is not edit-dependent.",
+     "item": "Braking outside a boost works as before: the car slows with the same strength and response"
+    },
+    "P5": {
+     "edit_dependent": false,
+     "reason": "Flame, trail and speed effects during an unbraked boost existed before the change; the starting project satisfies it.",
+     "item": "While a boost is running unbraked, the exhaust flame / trail and speed effects still show"
+    }
+   }
+  },
+  "E-T-VO-vid_d921d48cf861.t1.CS": {
+   "items": {
+    "P1": {
+     "edit_dependent": true,
+     "reason": "Asks about the changed stretch (the one with the tunnel) keeping its line; the stretch only exists as 'changed' after the edit, so the start cannot satisfy it.",
+     "item": "The changed stretch keeps its line: it stays a fast open stretch with no new corners"
+    },
+    "P2": {
+     "edit_dependent": false,
+     "reason": "Tight-bend sections having no enclosure or lamps is true of the unchanged start; it protects existing content.",
+     "item": "The tight-bend sections are unchanged, with no new enclosure, lamps or geometry"
+    },
+    "P3": {
+     "edit_dependent": false,
+     "reason": "Other open stretches having no added enclosure or lamps holds in the starting project; it protects existing content.",
+     "item": "No other open fast stretch gains a new enclosure or lamps compared with the base"
+    },
+    "P4": {
+     "edit_dependent": false,
+     "reason": "Rivals racing the full lap at competitive pace existed before the change; 'including along the changed stretch' is only a locator.",
+     "item": "Rival cars still race the full lap at competitive pace, including along the changed stretch"
+    },
+    "P5": {
+     "edit_dependent": false,
+     "reason": "Palm jungle with stone temples outside the tunnel is existing setting that the start already shows.",
+     "item": "Outside the tunnel the course still runs through palm jungle with carved stone temples along it"
+    },
+    "P6": {
+     "edit_dependent": false,
+     "reason": "Pre-existing cave or tunnel sections keeping place and length is satisfied by the unchanged start, which has that cave branch.",
+     "item": "Any cave or tunnel section the base already had keeps its place and length"
+    }
+   }
+  },
+  "E-T-VO-vid_ea7efae4bfa5.t1.AP": {
+   "items": {
+    "P1": {
+     "edit_dependent": false,
+     "reason": "Tower and finish block were white snow before the change; the start already satisfies this if they exist as such.",
+     "item": "The stepped tower and the tall block at the finish are still white snow features"
+    },
+    "P2": {
+     "edit_dependent": false,
+     "reason": "The open slope was snow before the change and remains so; the start satisfies it.",
+     "item": "The open slope around the course is still snow, not ice"
+    },
+    "P3": {
+     "edit_dependent": false,
+     "reason": "The red line along the wall's top edge existed before and is visible during the wallride in the unchanged project.",
+     "item": "The red line still runs along the wall's edge and stays clearly visible ahead of the rider during the wallride"
+    },
+    "P4": {
+     "edit_dependent": false,
+     "reason": "Wall shape, length, position and banked face existed before; the unchanged start satisfies it.",
+     "item": "The long wall keeps its shape: same length, position and inclined banked face"
+    },
+    "P5": {
+     "edit_dependent": false,
+     "reason": "Wallride behaviour existed before the change; the unchanged start already supports getting on, riding and exiting.",
+     "item": "The wallride still works: the rider gets onto the face, rides along its length and comes off at its end"
+    },
+    "P6": {
+     "edit_dependent": false,
+     "reason": "Grip and speed on the wall face are baseline behaviour; the start trivially satisfies 'same as before'.",
+     "item": "The rider's grip and speed on the wall face are the same as before, with no new slipping on the ice"
+    }
+   }
+  },
+  "E-T-VO-vid_ea7efae4bfa5.t1.BF": {
+   "items": {
+    "P1": {
+     "edit_dependent": false,
+     "reason": "Rider controllable on the block existed before; the base already had a short hold with control, so the start satisfies it.",
+     "item": "During the hold the rider stays on the board under the player's control, not frozen in place"
+    },
+    "P2": {
+     "edit_dependent": false,
+     "reason": "Passing the tower and reaching the block top by riding was already possible in the base project.",
+     "item": "The rider can still pass the stepped tower and get up onto the top of the tall block by riding"
+    },
+    "P3": {
+     "edit_dependent": false,
+     "reason": "The base already produced a clear success signal after its short hold; the item only asks for the same outcome.",
+     "item": "Once the hold is done, the success signal is the same clear outcome as before"
+    },
+    "P4": {
+     "edit_dependent": false,
+     "reason": "Onlookers near the finish existed before the change; the start satisfies this.",
+     "item": "The onlookers are still present near the finish"
+    }
+   }
+  },
+  "E-T-VO-vid_ea7efae4bfa5.t1.CS": {
+   "items": {
+    "P1": {
+     "edit_dependent": false,
+     "reason": "Success outcome on completing the run existed before; the start already produces a clear success state, and the item doesn't require onlookers.",
+     "item": "Completing the run on top of the tall block still produces a clear success outcome"
+    },
+    "P2": {
+     "edit_dependent": false,
+     "reason": "Tall stepped tower and square block existed before the change; the item protects existing structures, unaffected by removing onlookers.",
+     "item": "The tall stepped tower and the tall square block with its flat top still stand at the finish"
+    },
+    "P3": {
+     "edit_dependent": false,
+     "reason": "Riding up onto the tall block and staying in control is pre-existing behaviour the start already satisfies.",
+     "item": "The rider can still pass the stepped tower, ride up onto the top of the tall block and stay on it in control"
+    }
+   }
+  }
+ }
+}

@@ -1,0 +1,65 @@
+# Reference material: fetched from the HF dataset into $GAB_MEDIA_DIR/<task>/ by `gab media fetch` (sha256 checked).
+# The agent gets the files only (no title, author, caption or source): this file is never shown to it.
+task_id: T-HY-vid_64b16980d5a1.t1
+refs:
+- id: c01
+  kind: video
+  file: clip_01.mp4
+  video_id: vid_64b16980d5a1
+  source:
+    title: 06 - Some day in Japan ｜ Cinematic Travel ｜ Sony A7III & Fx3
+    url: null
+    channel: null
+    youtube_id: null
+  range:
+    start: 0.0
+    end: 26.8
+    text: 0:00.00-0:26.80
+  duration_s: 26.8
+  size_bytes: 3702789
+  format: mp4 H.264 720p, AAC audio
+  hf_path: media/T-HY-vid_64b16980d5a1.t1/clip_01.mp4
+  sha256: de93648357b035287d5dcf6f57a27d192184595fac500bc723d5d830aae45c9f
+  rights_note: null
+- id: img01
+  kind: image
+  file: img01.jpg
+  format: jpg
+  hf_path: media/T-HY-vid_64b16980d5a1.t1/img01.jpg
+  sha256: 277f49220fac6ca1fbad88c94a3ce0c581b0283eaf316dfadd06aca26e1f5407
+  size_bytes: 549484
+- id: img02
+  kind: image
+  file: img02.jpg
+  format: jpg
+  hf_path: media/T-HY-vid_64b16980d5a1.t1/img02.jpg
+  sha256: 0df74cbfdbffe2b998b7059df34b7d52db10f5d1f921b5e4b850b1a0976f1e68
+  size_bytes: 447227
+- id: img03
+  kind: image
+  file: img03.jpg
+  format: jpg
+  hf_path: media/T-HY-vid_64b16980d5a1.t1/img03.jpg
+  sha256: ea6379a00216eb1b7829ccc2dd7baab02f4e82d19cf66b560fd4b0953e45b1dd
+  size_bytes: 541270
+- id: img04
+  kind: image
+  file: img04.jpg
+  format: jpg
+  hf_path: media/T-HY-vid_64b16980d5a1.t1/img04.jpg
+  sha256: 1e5a972096ac84800cce41538b7f3de8893bc715db195b8ffbc097379c74cf32
+  size_bytes: 504613
+- id: img05
+  kind: image
+  file: img05.jpg
+  format: jpg
+  hf_path: media/T-HY-vid_64b16980d5a1.t1/img05.jpg
+  sha256: 374381afa54e11eea086aa3601e4d5e8b9dc1bbfd2a487a08d38548b15c031a6
+  size_bytes: 620572
+- id: img06
+  kind: image
+  file: img06.jpg
+  format: jpg
+  hf_path: media/T-HY-vid_64b16980d5a1.t1/img06.jpg
+  sha256: 17448ac7eccb6e5c46234664a074c74705b303a0030be22a9d2d147b380e9d18
+  size_bytes: 713705

@@ -1,0 +1,6 @@
+#!/bin/sh
+# zenity in front of the real one, ONLY on the Steam launcher's PATH (gab-steam-hub): the Debian launcher's one-time "Steam installer"
+# question (install the proprietary client into ~/.steam) is answered "Install" -- the image was built with STEAM_ACCEPT_SSA=yes,
+# i.e. its builder accepted the Steam Subscriber Agreement. Every other dialog goes to the real zenity.
+for a in "$@"; do case "$a" in --title=Steam\ installer) echo "gab: Steam installer question answered Install (STEAM_ACCEPT_SSA=yes at build)" >&2; exit 0;; esac; done
+exec /usr/bin/zenity "$@"

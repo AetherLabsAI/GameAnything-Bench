@@ -1,0 +1,44 @@
+# Reference material: fetched from the HF dataset into $GAB_MEDIA_DIR/<task>/ by `gab media fetch` (sha256 checked).
+# The agent gets the files only (no title, author, caption or source): this file is never shown to it.
+task_id: T-VO-vid_a54a88754425.t1
+refs:
+- id: c01
+  kind: video
+  file: clip_01.mp4
+  video_id: vid_a54a88754425
+  source:
+    title: Sydney, Australia🇦🇺 - by drone [4K] [Nga4Q-UH8Os]
+    url: https://www.youtube.com/watch?v=Nga4Q-UH8Os
+    channel: null
+    youtube_id: Nga4Q-UH8Os
+  range:
+    start: 15.5
+    end: 82.8
+    text: 0:15.50-1:22.80
+  duration_s: 67.3
+  size_bytes: 15532886
+  format: mp4 H.264 720p, AAC audio
+  hf_path: media/T-VO-vid_a54a88754425.t1/clip_01.mp4
+  sha256: bfcdfb2665e3c221a16ae628e1e9479b29d746370ca5b15db7baf437800a6918
+  rights_note: Third-party travel drone footage with a corner channel watermark and a title overlay; use as a private reference only and do not
+    redistribute. The landmark is a real, publicly known building; the footage itself is copyrighted by its author.
+- id: c02
+  kind: video
+  file: clip_02.mp4
+  video_id: vid_a54a88754425
+  source:
+    title: Sydney, Australia🇦🇺 - by drone [4K] [Nga4Q-UH8Os]
+    url: https://www.youtube.com/watch?v=Nga4Q-UH8Os
+    channel: null
+    youtube_id: Nga4Q-UH8Os
+  range:
+    start: 82.8
+    end: 151.0
+    text: 1:22.80-2:31.00
+  duration_s: 68.2
+  size_bytes: 9006422
+  format: mp4 H.264 720p, AAC audio
+  hf_path: media/T-VO-vid_a54a88754425.t1/clip_02.mp4
+  sha256: 81cd7f76695487ad371ef9897729ffb1406966556ae0bb0babc3cdd024160a81
+  rights_note: Third-party travel drone footage with a corner channel watermark and a title overlay; use as a private reference only and do not
+    redistribute. The landmark is a real, publicly known building; the footage itself is copyrighted by its author.

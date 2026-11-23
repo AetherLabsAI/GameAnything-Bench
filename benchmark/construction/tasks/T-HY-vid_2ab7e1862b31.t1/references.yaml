@@ -1,0 +1,65 @@
+# Reference material: fetched from the HF dataset into $GAB_MEDIA_DIR/<task>/ by `gab media fetch` (sha256 checked).
+# The agent gets the files only (no title, author, caption or source): this file is never shown to it.
+task_id: T-HY-vid_2ab7e1862b31.t1
+refs:
+- id: c01
+  kind: video
+  file: clip_01.mp4
+  video_id: vid_2ab7e1862b31
+  source:
+    title: Cyberpunk 2077： Ultimate Edition — City of Dreams [1gvGn8NtIpE]
+    url: https://www.youtube.com/watch?v=1gvGn8NtIpE
+    channel: null
+    youtube_id: 1gvGn8NtIpE
+  range:
+    start: 65.2
+    end: 86.9
+    text: 1:05.20-1:26.90
+  duration_s: 21.7
+  size_bytes: 3882294
+  format: mp4 H.264 720p, AAC audio
+  hf_path: media/T-HY-vid_2ab7e1862b31.t1/clip_01.mp4
+  sha256: 9b7a51f67e7af0f754ba3d585b44d3eca21e2fcc21e7a098f4be6b37c366e395
+  rights_note: null
+- id: img01
+  kind: image
+  file: img01.jpg
+  format: jpg
+  hf_path: media/T-HY-vid_2ab7e1862b31.t1/img01.jpg
+  sha256: f2605dcfff0174ca2a324afdd75fd768659b67a50011a842ee10d4a0b6f3fa61
+  size_bytes: 550094
+- id: img02
+  kind: image
+  file: img02.jpg
+  format: jpg
+  hf_path: media/T-HY-vid_2ab7e1862b31.t1/img02.jpg
+  sha256: dbf4e6fb9a1d66c4d5ee322e5725a24648f46738a84f564a589da8cb8409e14f
+  size_bytes: 380793
+- id: img03
+  kind: image
+  file: img03.jpg
+  format: jpg
+  hf_path: media/T-HY-vid_2ab7e1862b31.t1/img03.jpg
+  sha256: b72ded0e8b008da4017be6099e5cd7d48c768f7dc16ce3a8892c7e928a896773
+  size_bytes: 787590
+- id: img04
+  kind: image
+  file: img04.jpg
+  format: jpg
+  hf_path: media/T-HY-vid_2ab7e1862b31.t1/img04.jpg
+  sha256: 28fa81289f7da82da4bdc52cd63291608f1fbcf4f0446c56e097acb15e23e99d
+  size_bytes: 759803
+- id: img05
+  kind: image
+  file: img05.jpg
+  format: jpg
+  hf_path: media/T-HY-vid_2ab7e1862b31.t1/img05.jpg
+  sha256: 3ef2ced86bf0a9b1d8bad52285f34754fca7a61fad444bcb84def5620de1d693
+  size_bytes: 399773
+- id: img06
+  kind: image
+  file: img06.jpg
+  format: jpg
+  hf_path: media/T-HY-vid_2ab7e1862b31.t1/img06.jpg
+  sha256: ff10b4cadb27889260175697d4ceea3b719efb5d7eacd74f87abb573c5a62ea0
+  size_bytes: 794519

@@ -1,0 +1,1 @@
+GameAnything-Bench harness: reads the running game's state for the evaluation (inactive unless the harness starts the game). Changes nothing in the game.

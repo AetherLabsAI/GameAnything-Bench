@@ -1,0 +1,24 @@
+# STATE_SPEC self-check (gab selfcheck colobot --state): format in gab/setup/selfcheck.py state_check
+# vanilla: a fresh start = the main menu (no level, no objects): engine fields present, `mod` empty
+vanilla:
+  steps:
+    - {do: wait, seconds: 3}
+  engine: [screen, scene, object_counts, snapshot_age_s, error_lines]
+  mod_allow: []
+# mod: gab_statecheck = a custom level (custom101) with the astronaut, a titanium cube and a grabber running ai/gabstate.txt:
+# program variables gab_quest_stage = 2 / gab_marker = "stage_two", produce() makes a PowerCell (energy 0.42) at runtime,
+# message() shows "GAB TEST HUD: the beacon is near"
+mod:
+  dir: gab_statecheck
+  steps:
+    - {do: wait, seconds: 5}
+  expect:
+    - "mod: gab_quest_stage"
+    - "mod: stage_two"
+    - "mod: PowerCell"
+    - "mod: 0.42"
+    - "mod: Titanium"
+    - "engine: custom/gabstate"
+    - "engine: Me"
+    - "screen_text: GAB TEST HUD"
+    - "screen_text: the beacon is near"

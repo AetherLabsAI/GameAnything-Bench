@@ -1,0 +1,24 @@
+# Reference material: fetched from the HF dataset into $GAB_MEDIA_DIR/<task>/ by `gab media fetch` (sha256 checked).
+# The agent gets the files only (no title, author, caption or source): this file is never shown to it.
+task_id: T-VO-vid_d23381b77428.t2
+refs:
+- id: c01
+  kind: video
+  file: clip_01.mp4
+  video_id: vid_d23381b77428
+  source:
+    title: 17 - Coco - Official US Trailer [xlnPHQ3TLX8]
+    url: https://www.youtube.com/watch?v=xlnPHQ3TLX8
+    channel: null
+    youtube_id: xlnPHQ3TLX8
+  range:
+    start: 59.0
+    end: 80.2
+    text: 0:59.00-1:20.20
+  duration_s: 21.2
+  size_bytes: 3221850
+  format: mp4 H.264 720p, AAC audio
+  hf_path: media/T-VO-vid_d23381b77428.t2/clip_01.mp4
+  sha256: adedd498170601ceb63e6d16f3180d0b9e8b3c03247fda92e2d3972ccc7ecb42
+  rights_note: 'Copyrighted film trailer: use as a private reference only and do not redistribute. Build original or generic assets rather than
+    copying the film''s characters, text or art.'

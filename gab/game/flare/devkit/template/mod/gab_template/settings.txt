@@ -1,0 +1,5 @@
+description=GameAnything-Bench template mod (replace with yours)
+game=flare-game
+version=1.0
+requires=empyrean_campaign
+engine_version_min=1.14.280

@@ -1,0 +1,65 @@
+# Reference material: fetched from the HF dataset into $GAB_MEDIA_DIR/<task>/ by `gab media fetch` (sha256 checked).
+# The agent gets the files only (no title, author, caption or source): this file is never shown to it.
+task_id: T-HY-vid_1d8d10692142.t1
+refs:
+- id: c01
+  kind: video
+  file: clip_01.mp4
+  video_id: vid_1d8d10692142
+  source:
+    title: Paris： The last drone aerials [REDVbTQxMXo]
+    url: https://www.youtube.com/watch?v=REDVbTQxMXo
+    channel: null
+    youtube_id: REDVbTQxMXo
+  range:
+    start: 27.4
+    end: 78.8
+    text: 0:27.40-1:18.80
+  duration_s: 51.4
+  size_bytes: 7850892
+  format: mp4 H.264 720p, AAC audio
+  hf_path: media/T-HY-vid_1d8d10692142.t1/clip_01.mp4
+  sha256: edd9c918fc1ac98d5a048087944edae58c6c7c027913844d22fb23e31303a77f
+  rights_note: null
+- id: img01
+  kind: image
+  file: img01.jpg
+  format: jpg
+  hf_path: media/T-HY-vid_1d8d10692142.t1/img01.jpg
+  sha256: 920f62621f4e9b14fe76d4976f7ec81faf48815ff0282fd78181f1d5a669dc87
+  size_bytes: 416964
+- id: img02
+  kind: image
+  file: img02.jpg
+  format: jpg
+  hf_path: media/T-HY-vid_1d8d10692142.t1/img02.jpg
+  sha256: f31b8794fb99f151cb35f0b8984c4da75d7b28781c0981f4b179bb16726fc73f
+  size_bytes: 185262
+- id: img03
+  kind: image
+  file: img03.jpg
+  format: jpg
+  hf_path: media/T-HY-vid_1d8d10692142.t1/img03.jpg
+  sha256: 4b8dae7fffe6ace30306d48099099dadfffe3fe03033b79dbf586fb79a1dff56
+  size_bytes: 604673
+- id: img04
+  kind: image
+  file: img04.jpg
+  format: jpg
+  hf_path: media/T-HY-vid_1d8d10692142.t1/img04.jpg
+  sha256: 7a1b2f5d6f16176896a6c8bd5e9092ec8f0656ee1254b35fb0bf01a286964447
+  size_bytes: 464287
+- id: img05
+  kind: image
+  file: img05.jpg
+  format: jpg
+  hf_path: media/T-HY-vid_1d8d10692142.t1/img05.jpg
+  sha256: 3a7e1cf01e45c6f80fcb2c46f5043409c76a23d8d4fe8a59cbc8e34fb0363f13
+  size_bytes: 502576
+- id: img06
+  kind: image
+  file: img06.jpg
+  format: jpg
+  hf_path: media/T-HY-vid_1d8d10692142.t1/img06.jpg
+  sha256: 04ae5efb03c1cf0c08f827b386b461eb4582e3e341419bda020c58e74de2a304
+  size_bytes: 803534

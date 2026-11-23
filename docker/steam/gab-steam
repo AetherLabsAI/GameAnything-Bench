@@ -1,0 +1,82 @@
+#!/bin/bash
+# Steam hub helper (inside the hub container, as player; gab/host/steam.py calls it through docker exec; the hub runs the copy of
+# the gab checkout, mounted at /opt/gab-steam, so it always matches the code):
+#   gab-steam status            one JSON line: running, logged_on, account (never a token), remember (auto-login on), login_error,
+#                               client present, apps installed (+ download progress), needs_userns, windows (visible top windows)
+#   gab-steam wait [S]          up to S s (default 120) until Steam runs and is logged on: exit 0 yes, 2 not yet, 1 Steam not running
+#   gab-steam windows           visible windows: "id WxH+X+Y name"
+#   gab-steam shot OUT.png      a screenshot of the hub screen
+#   gab-steam manifest APPID DIR NAME   write steamapps/appmanifest_APPID.acf ("update required"): Steam downloads the app at its next
+#                               start (an app the account owns), no dialog
+#   gab-steam install APPID     ask the running Steam to install an app through steam://install (shows Steam's own dialog)
+#   gab-steam restart           restart the Steam client (the hub's loop starts it again after ~10 s; logs on from the saved token)
+#   gab-steam stop              stop Steam (the hub process stops with it)
+set -u
+S=$HOME/.steam/debian-installation; [ -d "$S" ] || S=$HOME/.local/share/Steam
+CL=$S/logs/connection_log.txt
+main_pid() { local p; p=$(cat $HOME/.steam/steam.pid 2>/dev/null) && [ -n "$p" ] && kill -0 "$p" 2>/dev/null && echo "$p"; }
+last_state() { grep -E '^\[[0-9-]+ [0-9:]+\] ' "$CL" 2>/dev/null | grep -E 'Logged On|Log(ged)? ?Off|Logging off|ConnectionDisconnected|Offline|LogOn|Logon' | tail -1; }
+logged_on() {   # the last connection-log state is "Logged On" and was written after this Steam start
+  local last ts; last=$(last_state); case "$last" in *"[Logged On"*|*"Logged On]"*) ;; *) return 1;; esac
+  ts=$(sed -E 's/^\[([0-9-]+ [0-9:]+)\].*/\1/' <<< "$last")
+  [ "$(date -d "$ts" +%s 2>/dev/null || echo 0)" -ge "$(( $(cat /tmp/gab-steam.started 2>/dev/null || echo 0) - 5 ))" ]
+}
+offline() { grep -q '"Offline"[[:space:]]*"1"' $S/config/loginusers.vdf 2>/dev/null || grep -qi 'offline mode' "$CL" 2>/dev/null; }
+windows() {
+  for w in $(xdotool search --onlyvisible --class '' 2>/dev/null | sort -u); do
+    g=$(xdotool getwindowgeometry "$w" 2>/dev/null | awk '/Position/{p=$2} /Geometry/{g=$2} END{print g"+"p}' | sed 's/,/+/')
+    echo "$w $g $(xdotool getwindowname "$w" 2>/dev/null)"
+  done
+}
+status() {
+  local ns=; [ -f "$S/logs/console-linux.txt" ] && tail -n 40 "$S/logs/console-linux.txt" | grep -q "requires user namespaces" && [ -z "$(main_pid)" ] && ns=1
+  python3 - "$S" "$(main_pid)" "$(logged_on && echo 1)" "$(offline && echo 1)" "$ns" "$(last_state)" "$(windows | head -20)" <<'PY'
+import json, os, re, sys
+s, pid, on, off, ns, last, wins = sys.argv[1:]
+acct = remember = None
+try:
+    t = open(os.path.join(s, "config", "loginusers.vdf"), errors="replace").read()
+    blocks = re.findall(r'"\d+"\s*\{([^}]*)\}', t)
+    cur = next((b for b in blocks if re.search(r'"MostRecent"\s+"1"', b)), blocks[0] if blocks else "")
+    m = re.search(r'"AccountName"\s+"([^"]+)"', cur); acct = m.group(1) if m else None
+    if cur: remember = bool(re.search(r'"(RememberPassword|AllowAutoLogin)"\s+"1"', cur))
+except OSError: pass
+apps = {}
+lib = os.path.join(s, "steamapps")
+for f in (os.listdir(lib) if os.path.isdir(lib) else []):
+    if f.startswith("appmanifest_") and f.endswith(".acf"):
+        t = open(os.path.join(lib, f), errors="replace").read()
+        g = lambda k: (re.search(r'"%s"\s+"([^"]*)"' % k, t) or [None, None])[1]
+        apps[g("appid")] = {"name": g("name"), "dir": g("installdir"), "state": g("StateFlags"), "buildid": g("buildid"),
+                            "installed": g("StateFlags") == "4" and os.path.isdir(os.path.join(lib, "common", g("installdir") or "-")),
+                            "bytes_done": g("BytesDownloaded"), "bytes_total": g("BytesToDownload")}
+err = last if re.search(r"fail|invalid|denied|ratelimit|expired", last, re.I) and "Logged On" not in last else None
+print(json.dumps({"running": bool(pid), "pid": int(pid) if pid else None, "logged_on": bool(on), "offline_mode": bool(off),
+                  "account": acct, "remember": remember, "login_error": err,
+                  "client": os.path.exists(os.path.join(s, "linux64", "steamclient.so")), "apps": apps,
+                  "needs_userns": bool(ns), "windows": [w for w in wins.splitlines() if w.strip()]}))
+PY
+}
+case "${1:-status}" in
+  status) status;;
+  wait)
+    end=$(( $(date +%s) + ${2:-120} )); gone=0
+    while [ "$(date +%s)" -lt "$end" ]; do
+      if [ -n "$(main_pid)" ] && logged_on; then status; exit 0; fi
+      if [ -z "$(main_pid)" ]; then gone=$((gone + 1)); [ $gone -ge 15 ] && { status; exit 1; }; else gone=0; fi
+      sleep 4
+    done
+    status; exit 2;;
+  windows) windows;;
+  shot) ffmpeg -loglevel error -y -f x11grab -i ${DISPLAY:-:101} -frames:v 1 "$2" && echo "$2";;
+  manifest)
+    A=$2; DIR=$3; NAME=$4; mkdir -p "$S/steamapps"; f="$S/steamapps/appmanifest_$A.acf"
+    if [ -f "$f" ] && grep -q '"StateFlags"[[:space:]]*"4"' "$f"; then echo "app $A already installed"; exit 0; fi
+    printf '"AppState"\n{\n\t"appid"\t\t"%s"\n\t"Universe"\t\t"1"\n\t"name"\t\t"%s"\n\t"StateFlags"\t\t"1026"\n\t"installdir"\t\t"%s"\n\t"LastUpdated"\t\t"0"\n\t"SizeOnDisk"\t\t"0"\n\t"buildid"\t\t"0"\n\t"AutoUpdateBehavior"\t\t"0"\n\t"AllowOtherDownloadsWhileRunning"\t\t"0"\n\t"ScheduledAutoUpdate"\t\t"0"\n}\n' "$A" "$NAME" "$DIR" > "$f.tmp" && mv -f "$f.tmp" "$f"
+    echo "manifest for $A ($DIR) written: Steam downloads it at its next start";;
+  install) [ -n "$(main_pid)" ] || { echo "Steam is not running"; exit 1; }
+    setsid nohup /usr/games/steam "steam://install/$2" > /dev/null 2>&1 < /dev/null & echo "install of $2 requested (look: gab-steam shot)";;
+  restart) p=$(main_pid) && { kill "$p"; echo "restarting steam (was pid $p)"; } || echo "steam was not running";;
+  stop) touch $HOME/.gab-stop; p=$(main_pid) && kill "$p"; echo "stopping steam ${p:-}";;
+  *) sed -n 2,16p "$0"; exit 2;;
+esac

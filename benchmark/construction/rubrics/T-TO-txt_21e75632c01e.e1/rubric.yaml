@@ -1,0 +1,314 @@
+# GameAnything-Bench scoring material: never shown to agents during a trial.
+task_id: T-TO-txt_21e75632c01e.e1
+source_inventory:
+- 'c12.p001-c12.p005: Captain Hargrave shows Marchand the navigation instruments of the Orion; the manometer reads the outside water pressure
+  and so gives the depth'
+- 'c12.p006-c12.p016: electricity, made from sodium extracted from sea water, lights, heats and drives everything aboard; it does not supply air
+  (the vessel surfaces for that) but runs the pumps; electric 24-hour clock and speed dial'
+- 'c12.p017-c12.p018: layout of the forward compartments (dining-room, library, drawing-room, cabins, air reservoir), separated by water-tight
+  partitions with hermetic doors'
+- 'c12.p019-c12.p029: a ladder in a central well leads to a small boat set in the hull; it is released and rises to the surface, and the Orion
+  is called back to it by an electric wire'
+- 'c12.p030-c12.p031: crew cabin, electric kitchen with water distillation, bathroom; the crew''s berth-room stays shut'
+- 'c12.p032-c12.p037: engine room in two parts, producing electricity and transmitting it to the screw; Marchand asks how the vessel is steered,
+  sinks, rises and holds its depth'
+- 'c13.p001-c13.p005: dimensions and build: a cigar-shaped cylinder with a double steel hull; weights of hull, keel and fittings'
+- 'c13.p006-c13.p013: afloat, one tenth is above water; filling lower reservoirs of that size submerges it, supplementary reservoirs take it deeper,
+  emptying them brings it back up'
+- 'c13.p014-c13.p018: objection about pumping against great pressure; the electric pumps are strong enough; reservoirs are used only for middle
+  depths, other means for the great depths'
+- 'c13.p019-c13.p022: a rudder steers left and right; movable inclined planes on the sides make it sink or rise diagonally under the screw, level
+  planes keep it level; stopping the screw lets it rise straight up'
+- 'c13.p023-c13.p028: the steersman sits in a raised glazed cage; an electric reflector behind it lights the sea half a mile ahead'
+- 'c13.p029-c13.p034: the collisions with other ships explained; the captain praises the vessel''s safety (no fuel to run short, calm below storms)'
+- 'c13.p035-c13.p045: parts ordered secretly from many countries and assembled on a desert island; cost; the captain''s wealth'
+- 'c14.p001-c14.p004: Marchand''s general account of the oceans and the Pacific'
+- 'c14.p005-c14.p015: the pumps empty the tanks and the manometer shows the ascent; on the low platform: the cigar shape, the embedded boat, the
+  steersman''s and lantern cages; the captain takes the noon sun height'
+- 'c14.p016-c14.p019: course and depth given; Marchand plots the position on the planisphere and reads about the Black River current the vessel
+  follows'
+- 'c14.p020-c14.p025: Tom Harker and Gaspard come in; Tom asks about the crew and escape and complains they sail blind'
+- 'c14.p026-c14.p038: the lights go out, side panels slide open and windows show the electrically lit sea; fish escort the vessel for two hours;
+  the panels close; instruments show course, pressure-depth, speed and time'
+- 'c14.p039-c15.p008: dinner and sleep; days alone in the saloon, the captain absent; Marchand starts his journal'
+- 'c15.p009-c15.p016: the vessel surfaces each morning to renew its air; sunrise on the platform; the mate scans the horizon and says the same
+  unknown phrase every day'
+- 'c15.p017-c15.p033: a note invites Marchand and his companions to a hunt in the forests of the island of Crespo; reactions; the island found
+  on the map'
+- 'c15.p034-c15.p049: next morning at breakfast the captain explains diving: a hose to the ship would tie the diver; instead a back-mounted reservoir
+  of air compressed by the ship''s pumps, with a closed helmet, lasts nine or ten hours'
+- 'c15.p050-c15.p051: a sodium-powered electric lamp, carried on back and belt, gives continuous white light'
+- 'c15.p052-c15.p064: the air-gun: compressed air instead of powder, electric glass projectiles that kill on any touch'
+- 'c15.p065-c16.p012: the wardrobe room; Tom refuses to dress, Gaspard follows Marchand; crew help them into seamless pressure suits with lead-soled
+  boots; the gun has a magazine that reloads itself'
+- 'c16.p013-c16.p021: the vessel rests in shallow water; helmets screwed on, air starts; too heavy to walk aboard, they are pushed into a small
+  room, the door is shut, the room is flooded by a tap, and an outer door opens onto the seabed'
+- 'c16.p022-c16.p025: walking on the seabed, the weight no longer felt; bright sunlight at shallow depth, visibility fading with distance; the
+  vessel recedes, its lantern to guide them back'
+- 'c16.p026-c16.p028: rocks and sea life coloured by refraction; no speech possible in the helmets, Marchand wastes air talking to himself'
+- 'c16.p029-c16.p032: they follow the captain''s signs over sand, ooze and sea-weed; the ground slopes down, the light turns to reddish twilight,
+  lamps not yet needed; the forest of Crespo appears'
+- 'c17.p001-c17.p007: inside the forest of rigid upright plants, darker; its plants and animals'
+- 'c17.p008-c17.p011: the captain signals a halt; rest; the drowsiness that comes to divers; they sleep'
+- 'c17.p012-c17.p013: a large sea-spider is driven off; the walk goes on downhill to a narrow valley at about seventy-five fathoms, below where
+  sunlight reaches; in darkness they turn on the lamps, which light a limited circle'
+- 'c17.p014-c17.p015: deeper, plants thin out; the captain aims his gun but does not fire; a sheer granite wall, the base of the island, ends
+  the walk: the captain stops them and will not go beyond'
+- 'c17.p016: the return by a different, steep road, rising gradually so the pressure falls slowly; a sea-otter is seen'
+- 'c17.p017-c17.p020: shallow sand plains with reflections from the surface above and passing bird shadows; Marchand is exhausted, his air poor
+  in oxygen, when the ship''s lantern appears'
+- 'c17.p021-c17.p024: the captain pushes them to the ground and two sharks pass without seeing them; guided by the light they reach the ship;
+  outer door closed, the cell pumped empty, the inner door opens'
+- 'c17.p025: the suits are taken off; Marchand goes to his room worn out'
+instructions_meta:
+  requirement_groups:
+    vessel steering, depth control, power and instruments:
+    - CR1
+    - FP1
+    - FP2
+    - VP1
+    diver equipment and leaving / re-entering the vessel:
+    - CR2
+    - CR3
+    - FP3
+    - FP4
+    diver life support and its source:
+    - CR2
+    - FP5
+    underwater light and visibility:
+    - FP6
+    - VP3
+    seabed excursion and the way back:
+    - CR4
+    - FP7
+    - VP2
+  explicit_requirements:
+  - type: keep
+    text: I want to keep the chamber the divers go through, which fills with water before the outer door opens and is pumped dry before the inner
+      door lets them back in.
+    covers:
+    - CR3
+    - FP3
+rubric:
+  content_realization:
+  - id: CR1
+    item: The game contains the submarine vessel, whose systems run on electricity it produces aboard
+    anchors:
+      '1': the vessel is present, and the game shows its systems (propulsion, pumps, lights) powered by electricity generated aboard it
+      '0.5': the vessel is present but its power source is not shown, or it runs on power brought in from outside
+      '0': there is no vessel
+    evidence:
+    - c12.p007
+    - - c12.p011
+      - c12.p013
+  - id: CR2
+    item: 'The vessel holds the diving gear: a closed suit with a back-carried air reservoir filled from the vessel, and a lamp the diver carries'
+    anchors:
+      '1': the gear is aboard, and it includes a carried air supply that is charged from the vessel and a carried lamp
+      '0.5': gear is present but lacks the carried air or the lamp, or the air supply has no source in the vessel
+      '0': no diving gear
+    evidence:
+    - - c15.p047
+      - c15.p049
+    - c15.p051
+    - - c15.p065
+      - c16.p012
+  - id: CR3
+    item: Between the vessel's interior and the sea lies a separate chamber with an inner door to the vessel and an outer door to the seabed
+    anchors:
+      '1': a distinct chamber exists, with one door into the vessel and another onto the seabed
+      '0.5': a single door or hatch links the vessel and the sea, with no chamber between
+      '0': no passage between the vessel and the seabed
+    evidence:
+    - - c16.p020
+      - c16.p021
+    - c17.p024
+  - id: CR4
+    item: The seabed slopes from shallow ground where the vessel rests down to markedly deeper ground farther out
+    anchors:
+      '1': a shallow area at the vessel and a clear descent to deeper ground away from it
+      '0.5': depth varies but with no clear descent away from the vessel
+      '0': flat seabed, or no seabed space
+    evidence:
+    - c16.p023
+    - - c16.p029
+      - c16.p031
+    - c17.p012
+    - c17.p014
+  functions_playability:
+  - id: FP1
+    item: 'The vessel changes depth through its ballast: taking water in makes it sink, pumping it out makes it rise'
+    anchors:
+      '1': the player can take the vessel down and back up, and the depth follows filling and emptying its tanks (or an equivalent ballast control)
+      '0.5': depth changes only by a direct up / down control with no ballast logic, or only one direction works
+      '0': the vessel cannot change depth
+    evidence:
+    - - c13.p006
+      - c13.p007
+    - c13.p013
+    - c14.p006
+  - id: FP2
+    item: 'Under way, the vessel is steered: it turns left and right, and it can dive or climb at an angle while moving forward, by a control
+      separate from the ballast'
+    anchors:
+      '1': while moving, the player can turn the vessel left / right and make it dive or climb at an angle under its own propulsion, independently
+        of the ballast
+      '0.5': only turning left / right works, or angled diving / climbing exists only through the ballast control
+      '0': the vessel cannot be steered
+    evidence:
+    - c12.p036
+    - c13.p018
+    - c13.p022
+  - id: FP3
+    item: 'Going out and coming back pass through the chamber: it is flooded before the outer door opens and emptied before the inner door opens'
+    anchors:
+      '1': both exit and re-entry go through the chamber, with the flooding / emptying step, and the inner and outer doors are never open together
+      '0.5': the chamber works in only one direction, or it has no flooding / emptying step
+      '0': the player walks or teleports straight between the vessel and the sea
+    evidence:
+    - - c16.p020
+      - c16.p021
+    - c17.p024
+  - id: FP4
+    item: 'Going out requires the diving gear with its life support: the diver must have it on before leaving, and without it cannot go out or
+      suffers a consequence'
+    anchors:
+      '1': the exit can be used only once the gear is on (put on by the player or by an equivalent preparation step aboard), or going out without
+        it has a consequence (damage such as losing health)
+      '0.5': the game asks for the gear, but going out without it is still possible with no consequence
+      '0': the gear plays no part in going out
+    evidence:
+    - - c15.p065
+      - c16.p012
+    - - c16.p017
+      - c16.p018
+  - id: FP5
+    item: 'The diver''s air is limited: it runs down during the excursion, low air has a consequence, and getting back aboard ends the danger'
+    anchors:
+      '1': a carried air supply drains over the excursion, low or empty air has an effect on the player, and returning aboard makes the diver
+        safe (a refill or reset counts)
+      '0.5': an air value exists but never runs out or has no consequence, or returning aboard does not end the danger
+      '0': no air limit
+    evidence:
+    - - c15.p047
+      - c15.p049
+    - c16.p027
+    - c17.p020
+    - c17.p024
+  - id: FP6
+    item: The diver's carried lamp can be switched on in the dark and lights only a limited area around the diver
+    anchors:
+      '1': in dark deep water the player can switch the carried light on (and off), and it lights a limited radius around the diver
+      '0.5': the lamp cannot be switched, or switching it on lights the whole area rather than a limited circle
+      '0': no usable carried light
+    evidence:
+    - c15.p051
+    - c16.p031
+    - - c17.p012
+      - c17.p013
+  - id: FP7
+    item: 'The excursion is a round trip: it starts by leaving the vessel, goes out over the seabed, and ends once the diver is back aboard'
+    anchors:
+      '1': starts at the vessel, the diver can go out over the seabed and come back, and getting back aboard ends the excursion
+      '0.5': the diver can go out from the vessel, but the excursion ends away from the vessel or there is no way back aboard
+      '0': no excursion outside the vessel
+    evidence:
+    - c16.p021
+    - - c17.p014
+      - c17.p016
+    - c17.p024
+  visual_presentation:
+  - id: VP1
+    cat: presentation
+    item: Aboard, an instrument shows the vessel's current depth, and the reading differs as the vessel dives or rises
+    anchors:
+      '1': the player can read the current depth aboard, and views taken at different depths show different readings
+      '0.5': depth is shown but stays the same, or only vaguely (e.g. only surfaced / submerged)
+      '0': depth is not shown
+    evidence:
+    - - c12.p002
+      - c12.p003
+    - c14.p006
+    - c14.p038
+  - id: VP2
+    cat: presentation
+    item: Out on the seabed, the vessel's light stands out from far off in the dark water and shows where the vessel is
+    anchors:
+      '1': seen from a distance on the seabed, in the dark, a light or equivalent marker on the vessel is clearly visible and marks its position
+      '0.5': the vessel is marked, but the marker can be seen only close by or is lost in the dark
+      '0': nothing marks the vessel's position to the diver
+    evidence:
+    - c14.p010
+    - c16.p025
+    - c17.p020
+    - c17.p024
+  - id: VP3
+    cat: style
+    item: 'The seabed''s light falls with depth: bright, sunlit shallows by the vessel, dimming on the way down, and darkness in the deep ground'
+    anchors:
+      '1': views of the shallows, the slope and the deep ground show a clear gradient from bright to dim to dark
+      '0.5': some difference in light, but no clear gradient with depth (e.g. only two levels, or darkness unrelated to depth)
+      '0': the light is the same everywhere
+    evidence:
+    - c16.p023
+    - c16.p031
+    - c17.p012
+    - c17.p017
+play_suggestions:
+  FP1:
+  - 'dive, then surface: does the depth follow flooding and pumping the tanks?'
+  - try to rise without emptying the tanks
+  FP2:
+  - turn left and right while moving
+  - dive and climb at an angle while moving, with the ballast unchanged
+  - 'stop the vessel: does the angled dive still work?'
+  FP3:
+  - open the outer door before the chamber is flooded
+  - come back and try to open the inner door while the chamber is still full
+  FP4:
+  - 'try to use the exit without the gear on: is it blocked, or does the diver take damage?'
+  - check that the air supply comes with the gear
+  FP5:
+  - 'stay out until the air runs low: what happens?'
+  - 'return aboard with little air left: is the danger over?'
+  FP6:
+  - switch the lamp on and off in the dark
+  - does the lamp light only a circle around the diver?
+  FP7:
+  - 'leave the vessel, go out over the seabed and come back: does arrival aboard end the excursion?'
+  - try to end the excursion away from the vessel
+  robustness:
+  - leave the vessel and come back several times in a row
+  - let the air run out far from the vessel
+  - try to leave the seabed area
+  - change the vessel's depth while divers are outside
+  - 'rise quickly from deep water: is there any effect of the fast pressure drop?'
+v4_map:
+  U1: 'dropped: paired mechanism, scored by FP1'
+  U2: FP2 (under-way steering, with the rudder)
+  U3: CR3 (chamber with two doors) + FP3 (flood / empty sequence)
+  U4: CR2 (carried air charged from the vessel) + FP5 (finite, draining air)
+  U5: VP3 (light falling with depth) + FP6 (carried lamp; its existence in CR2)
+  U6: CR1
+  U7: FP7 (round trip from the vessel) + VP2 (guiding light)
+  FP1: FP1
+  FP2: FP3 (chamber existence split off to CR3)
+  FP3: FP4 (gear existence split off to CR2)
+  FP4: FP5
+  FP5: FP6 (carried lamp) + VP3 (darkening with depth)
+  FP6: FP7 (merged with v3 FP7)
+  FP7: FP7 (merged with v3 FP6; sample placement in deep ground split off to CR4)
+  VP1: VP1
+  VP2: CR4 (spatial layout of the seabed)
+  VP3: VP2
+provenance:
+  source_yaml: T-TO-txt_21e75632c01e.e1.yaml
+  source_sha256: 9257c7612ef077076e1a2610f73ada121119e65963da051b7ec95150531850e4
+  size_waiver: null
+  size_max: null
+  sources:
+  - ref: t01
+    title: Twenty Thousand Leagues under the Sea
+    author: Jules Verne
+    text_id: txt_21e75632c01e
+    excerpt_id: e1

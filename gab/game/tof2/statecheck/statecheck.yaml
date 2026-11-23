@@ -1,0 +1,18 @@
+# STATE_SPEC self-check for Tanks of Freedom II (gab selfcheck tof2 --state; contract in gab/setup/selfcheck.py state_check)
+# vanilla: main menu -> Skirmish -> first stock map (2p_cityscape) -> Next -> Start: the board's engine fields are there, `mod` empty
+# waits: on Mesa llvmpipe (docker, no GPU) the menu runs at 1-2 fps and the map picker opens >3 s after the click
+vanilla:
+  steps: [{do: wait, seconds: 3}, {do: click, x: 640, y: 340}, {do: wait, seconds: 8}, {do: click, x: 415, y: 110}, {do: wait, seconds: 3},
+          {do: click, x: 621, y: 560}, {do: wait, seconds: 6}, {do: click, x: 1072, y: 637}, {do: wait, seconds: 15}]
+  engine: [screen, mode, map, turn, players, current.side, current.ap, units.count, units.nearest, buildings, story.shown, triggers]
+  mod_allow: []
+# mod: gab_statecheck/ (files laid over the project): a skirmish map 0_gab_check (2p_crossroad + a turn-1 story trigger
+# gab_check_turn1 that shows "GAB STATE CHECK: the beacon is near"), and an autoload GabStateCheck (override.cfg; variables
+# gab_marker = 4242, gab_note) that spawns its own entity GabBeacon (script beacon.gd, variable beacon_level) and a HUD label
+# "GAB HUD MARK". Same menu path; 0_gab_check sorts first in the stock map list.
+mod:
+  dir: gab_statecheck
+  steps: [{do: wait, seconds: 3}, {do: click, x: 640, y: 340}, {do: wait, seconds: 8}, {do: click, x: 415, y: 110}, {do: wait, seconds: 3},
+          {do: click, x: 621, y: 560}, {do: wait, seconds: 6}, {do: click, x: 1072, y: 637}, {do: wait, seconds: 15}]
+  expect: ["mod: GabStateCheck", "mod: gab_marker", "mod: 4242", "mod: GabBeacon", "mod: beacon_level", "mod: 0_gab_check",
+           "engine: board", "engine: gab_check_turn1", "engine: GAB STATE CHECK", "screen_text: GAB STATE CHECK", "screen_text: GAB HUD MARK"]
