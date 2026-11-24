@@ -1,0 +1,52 @@
+cff-version: 1.2.0
+message: "If you use GameAnything-Bench, please cite the paper below."
+title: "GameAnything-Bench"
+abstract: >-
+  The benchmark of GameAnything: coding agents take a multimodal reference
+  (video, images, text or a mix) and the development kit of a real game, and
+  build or edit a playable mod that brings the reference into the game.
+type: software
+license: Apache-2.0
+version: 1.0.0
+repository-code: "https://github.com/AetherLabsAI/GameAnything-Bench"
+url: "https://huggingface.co/spaces/GameAnything/GameAnything"
+keywords:
+  - benchmark
+  - coding agents
+  - game development
+  - multimodal
+authors: &authors
+  - given-names: Wenyi
+    family-names: Wu
+    affiliation: "University of California, San Diego"
+  - given-names: Siqi
+    family-names: Liu
+    affiliation: "University of California, San Diego"
+  - given-names: Yuru
+    family-names: Feng
+    affiliation: "University of California, San Diego"
+  - given-names: Zixuan
+    family-names: Song
+    affiliation: "University of California, San Diego"
+  - given-names: Aayush
+    family-names: Salvi
+    affiliation: "University of California, San Diego"
+  - given-names: Sibo
+    family-names: Zhu
+    affiliation: "University of California, San Diego"
+  - given-names: Kun
+    family-names: Zhou
+    affiliation: "Aether AI"
+  - given-names: Biwei
+    family-names: Huang
+    affiliation: "University of California, San Diego; Aether AI"
+preferred-citation:
+  type: article
+  title: "GameAnything: From Any Inspirations to Playable Game Worlds"
+  authors: *authors
+  year: 2026
+  journal: "arXiv preprint"
+  identifiers:
+    - type: other
+      value: "arXiv:2611.29238"
+  url: "https://arxiv.org/abs/2611.29238"

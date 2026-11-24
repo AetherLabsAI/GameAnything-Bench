@@ -9,6 +9,7 @@
 **Coding agents take a film scene, a photograph or a page of fiction and build it into a game that already exists, as something you can play.**
 
 [![Paper](https://img.shields.io/badge/arXiv-2611.29238-b31b1b.svg)](https://arxiv.org/abs/2611.29238)
+[![HF Papers](https://img.shields.io/badge/%F0%9F%A4%97%20Hugging%20Face-Paper-yellow)](https://huggingface.co/papers/2611.29238)
 [![Project Page](https://img.shields.io/badge/Project-Page-blue.svg)](https://huggingface.co/spaces/GameAnything/GameAnything)
 [![Dataset](https://img.shields.io/badge/%F0%9F%A4%97%20Hugging%20Face-Dataset-yellow)](https://huggingface.co/datasets/GameAnything/GameAnything-Bench)
 [![License: Apache-2.0](https://img.shields.io/badge/License-Apache%202.0-green.svg)](LICENSE)
@@ -34,6 +35,7 @@ rubrics.
 
 ## 📰 News
 
+- **2026.11** Paper on [arXiv](https://arxiv.org/abs/2611.29238) and [Hugging Face Papers](https://huggingface.co/papers/2611.29238).
 - **2026.11** Code, tasks and data released.
 
 ## Benchmark at a glance

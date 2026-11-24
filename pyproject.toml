@@ -2,10 +2,28 @@
 name = "gameanything-bench"
 version = "1.0.0"
 description = "GameAnything-Bench: coding agents build and edit game mods from multimodal references"
+readme = "README.md"
 requires-python = ">=3.11"
 license = {text = "Apache-2.0"}
-authors = [{name = "The GameAnything-Bench Authors"}]
+authors = [
+    {name = "Wenyi Wu"},
+    {name = "Siqi Liu"},
+    {name = "Yuru Feng"},
+    {name = "Zixuan Song"},
+    {name = "Aayush Salvi"},
+    {name = "Sibo Zhu"},
+    {name = "Kun Zhou"},
+    {name = "Biwei Huang"},
+]
+keywords = ["benchmark", "coding-agents", "game-development", "multimodal", "llm-evaluation"]
 dependencies = ["PyYAML>=6.0,<7", "jsonschema>=4.19,<5", "huggingface_hub>=0.20", "pillow>=10"]
+
+[project.urls]
+Homepage = "https://huggingface.co/spaces/GameAnything/GameAnything"
+Paper = "https://arxiv.org/abs/2611.29238"
+Dataset = "https://huggingface.co/datasets/GameAnything/GameAnything-Bench"
+Repository = "https://github.com/AetherLabsAI/GameAnything-Bench"
+Issues = "https://github.com/AetherLabsAI/GameAnything-Bench/issues"
 
 [project.optional-dependencies]
 test = ["pytest>=7"]
